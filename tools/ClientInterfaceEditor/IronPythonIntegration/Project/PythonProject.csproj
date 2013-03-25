@@ -1,0 +1,362 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProductVersion>9.0.20912</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>PythonProject</AssemblyName>
+    <RootNamespace>Microsoft.Samples.VisualStudio.IronPythonProject</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <IncrementalBuild>false</IncrementalBuild>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>414</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <IncrementalBuild>false</IncrementalBuild>
+    <NoWarn>414</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE" />
+    <Reference Include="EnvDTE80" />
+    <Reference Include="IronPython" />
+    <Reference Include="Microsoft.Windows.Design.Host" />
+    <Reference Include="Microsoft.Windows.Design.Interaction" />
+    <Reference Include="Microsoft.VisualStudio.Designer.Interfaces" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Package.LanguageService.9.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.9.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop.8.0" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VSLangProj" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VSSDKCSharpIncPath>$(VSSDK90Install)VisualStudioIntegration\Common\Source\CSharp</VSSDKCSharpIncPath>
+    <CommonRegAttributes>$(VSSDKCSharpIncPath)\RegistrationAttributes</CommonRegAttributes>
+    <ProjectBasePath>$(VSSDKCSharpIncPath)\Project</ProjectBasePath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(CommonRegAttributes)\WebSiteProjectAttribute.cs">
+      <Link>RegistrationAttributes\WebSiteProjectAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(CommonRegAttributes)\WebSiteProjectRelatedFilesAttribute.cs">
+      <Link>RegistrationAttributes\WebSiteProjectRelatedFilesAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(CommonRegAttributes)\WAProvideLanguagePropertyAttribute.cs">
+      <Link>RegistrationAttributes\WAProvideLanguagePropertyAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(CommonRegAttributes)\WAProvideProjectFactoryAttribute.cs">
+      <Link>RegistrationAttributes\WAProvideProjectFactoryAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(CommonRegAttributes)\WAProvideProjectFactoryTemplateMappingAttribute.cs">
+      <Link>RegistrationAttributes\WAProvideProjectFactoryTemplateMappingAttribute.cs</Link>
+    </Compile>
+    <Compile Include="$(CommonRegAttributes)\ProvideMSBuildTargetAttribute.cs">
+      <Link>RegistrationAttributes\ProvideMSBuildTargetAttribute.cs</Link>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Automation.cs" />
+    <Compile Include="ConfigurationPropertyPages.cs" />
+    <Compile Include="EditorFactory.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Guids.cs" />
+    <Compile Include="PropertyPages.cs" />
+    <Compile Include="PythonConfigProvider.cs" />    
+    <Compile Include="PythonProjectReferenceNode.cs" />
+    <Compile Include="PythonReferenceContainerNode.cs" />
+    <Compile Include="PythonProjectPackage.cs" />
+    <Compile Include="PythonProjectFactory.cs" />
+    <Compile Include="PythonProjectFileConstants.cs" />
+    <Compile Include="WPFProviders\PythonEventBindingProvider.cs" />
+    <Compile Include="WPFProviders\PythonRuntimeNameProvider.cs" />
+    <Compile Include="PythonFileNode.cs" />
+    <Compile Include="PythonFileNodeProperties.cs" />
+    <Compile Include="PythonMenus.cs" />
+    <Compile Include="PythonProjectNode.cs" />
+    <Compile Include="PythonProjectNodeProperties.cs" />
+    <Compile Include="ProjectDocumentsListenerForMainFileUpdates.cs" />
+    <Compile Include="Resources.cs" />
+    <Compile Include="SelectionElementValueChangedListener.cs" />
+    <Compile Include="VSMDPythonProvider.cs" />
+    <Compile Include="$(CommonRegAttributes)\SingleFileGeneratorSupportRegistrationAttribute.cs">
+      <Link>RegistrationAttributes\SingleFileGeneratorSupportRegistrationAttribute.cs</Link>
+      <Visible>true</Visible>
+    </Compile>
+    <Compile Include="WPFProviders\PythonWPFFlavor.cs" />
+    <Compile Include="WPFProviders\PythonWPFProjectFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <VSCTCompile Include="PkgCmd.vsct">
+      <ResourceName>1000</ResourceName>
+    </VSCTCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <MergeWithCTO>true</MergeWithCTO>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ZipItem Include="Templates\ProjectItems\Class\__TemplateIcon.ico" />
+    <ZipItem Include="Templates\ProjectItems\Class\Class.py" />
+    <ZipItem Include="Templates\ProjectItems\Class\IronPython.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Form\Form.py" />
+    <ZipItem Include="Templates\ProjectItems\Form\UI_WinForm.ico" />
+    <ZipItem Include="Templates\ProjectItems\Form\windowsform.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\ResX\Resource.resX">
+      <SubType>Designer</SubType>
+    </ZipItem>
+    <ZipItem Include="Templates\ProjectItems\ResX\Resource.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\ResX\Resource_Resx.ico" />
+    <ZipItem Include="Templates\ProjectItems\Text\Text.ico" />
+    <ZipItem Include="Templates\ProjectItems\Text\TextFile.txt" />
+    <ZipItem Include="Templates\ProjectItems\Text\TextFile.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\BrowserFile\BrowserFile.Browser" />
+    <ZipItem Include="Templates\ProjectItems\Web\BrowserFile\BrowserFile.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\ContentPage\ContentPage.aspx" />
+    <ZipItem Include="Templates\ProjectItems\Web\ContentPage\ContentPage.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\GlobalAsax\Global.asax" />
+    <ZipItem Include="Templates\ProjectItems\Web\GlobalAsax\GlobalAsax.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\Handler\Handler.ashx" />
+    <ZipItem Include="Templates\ProjectItems\Web\Handler\Handler.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\JScript\JScript.js" />
+    <ZipItem Include="Templates\ProjectItems\Web\JScript\JScript.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\MasterPage\MasterPage.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\MasterPage\Site.Master" />
+    <ZipItem Include="Templates\ProjectItems\Web\NestedWebConfig\NestedWebConfig.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\NestedWebConfig\Web.Config" />
+    <ZipItem Include="Templates\ProjectItems\Web\SiteMap\SiteMap.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\SiteMap\Web.sitemap" />
+    <ZipItem Include="Templates\ProjectItems\Web\SkinFile\SkinFile.skin" />
+    <ZipItem Include="Templates\ProjectItems\Web\SkinFile\SkinFile.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\StyleSheet\StyleSheet.css" />
+    <ZipItem Include="Templates\ProjectItems\Web\StyleSheet\StyleSheet.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebClass\__TemplateIcon.ico" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebClass\Class.py" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebClass\WebClass.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebConfig\Web.Config" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebConfig\WebConfig.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebForm\Default.aspx" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebForm\WebForm.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebHtmlPage\HtmlPage.htm" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebHtmlPage\WebHtmlPage.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebServiceItem\WebService.asmx" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebServiceItem\WebService.vstemplate" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebUserControl\WebUserControl.ascx" />
+    <ZipItem Include="Templates\ProjectItems\Web\WebUserControl\WebuserControl.vstemplate" />
+  </ItemGroup>
+  <ItemGroup>
+    <ZipProject Include="Templates\Projects\ClassLibrary\__TemplateIcon.ico">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\ClassLibrary\Class.py">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\ClassLibrary\IPClassLib.vstemplate">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\ClassLibrary\IronPythonDll.pyproj">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\ConsoleApp\__TemplateIcon.ico">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\ConsoleApp\IPConsoleApp.vstemplate">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\ConsoleApp\IronPythonApp.pyproj">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\ConsoleApp\Program.py">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="$(IntermediateOutputPath)\Projects\Web\WebApplication\Bin\IronMath.dll">
+      <OutputSubPath>Web</OutputSubPath>
+      <RootPath>$(IntermediateOutputPath)\Projects\Web\WebApplication</RootPath>
+      <Visible>false</Visible>
+    </ZipProject>
+    <ZipProject Include="$(IntermediateOutputPath)\Projects\Web\WebApplication\Bin\IronPython.dll">
+      <OutputSubPath>Web</OutputSubPath>
+      <RootPath>$(IntermediateOutputPath)\Projects\Web\WebApplication</RootPath>
+      <Visible>false</Visible>
+    </ZipProject>
+    <ZipProject Include="$(IntermediateOutputPath)\Projects\Web\WebApplication\__TemplateIcon.ico">
+      <OutputSubPath>Web</OutputSubPath>
+      <RootPath>$(IntermediateOutputPath)\Projects\Web\WebApplication</RootPath>
+      <Visible>false</Visible>
+    </ZipProject>
+    <ZipProject Include="$(IntermediateOutputPath)\Projects\Web\WebApplication\Default.aspx">
+      <OutputSubPath>Web</OutputSubPath>
+      <RootPath>$(IntermediateOutputPath)\Projects\Web\WebApplication</RootPath>
+      <Visible>false</Visible>
+    </ZipProject>
+    <ZipProject Include="$(IntermediateOutputPath)\Projects\Web\WebApplication\Web.config">
+      <OutputSubPath>Web</OutputSubPath>
+      <RootPath>$(IntermediateOutputPath)\Projects\Web\WebApplication</RootPath>
+      <Visible>false</Visible>
+    </ZipProject>
+    <ZipProject Include="$(IntermediateOutputPath)\Projects\Web\WebApplication\WebApplication.pyproj">
+      <OutputSubPath>Web</OutputSubPath>
+      <RootPath>$(IntermediateOutputPath)\Projects\Web\WebApplication</RootPath>
+      <Visible>false</Visible>
+    </ZipProject>
+    <ZipProject Include="$(IntermediateOutputPath)\Projects\Web\WebApplication\WebApplication.vstemplate">
+      <OutputSubPath>Web</OutputSubPath>
+      <RootPath>$(IntermediateOutputPath)\Projects\Web\WebApplication</RootPath>
+      <Visible>false</Visible>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\Web\WebService\__TemplateIcon.ico">
+      <OutputSubPath>Web</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\Web\WebService\Service1.asmx">
+      <OutputSubPath>Web</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\Web\WebService\Service1.asmx.py">
+      <OutputSubPath>Web</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\Web\WebService\Web.config">
+      <OutputSubPath>Web</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\Web\WebService\WebService.pyproj">
+      <OutputSubPath>Web</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\Web\WebService\WebService.vstemplate">
+      <OutputSubPath>Web</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\WinformApp\__TemplateIcon.ico">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\WinformApp\Form1.py">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\WinformApp\IPWinformApp.vstemplate">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\WinformApp\IronPythonWinApp.pyproj">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\WinformApp\Program.py">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Templates\Projects\Web\WebApplication\__TemplateIcon.ico" />
+    <None Include="Templates\Projects\Web\WebApplication\Default.aspx" />
+    <None Include="Templates\Projects\Web\WebApplication\Web.config" />
+    <None Include="Templates\Projects\Web\WebApplication\WebApplication.pyproj" />
+    <None Include="Templates\Projects\Web\WebApplication\WebApplication.vstemplate" />
+    <ZipProject Include="Templates\Projects\WPFApp\pyWPFApplication.vstemplate" >
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\WPFApp\Window1.xaml">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\WPFApp\WPFApplication.pyproj" >
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\WPFApp\WPFApp.ico">
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LanguageService\LanguageService.csproj">
+      <Project>{DA16C614-B1B9-42F1-8513-4C9E601041CB}</Project>
+      <Name>LanguageService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Overview.xml" />
+    <ZipItem Include="Templates\ProjectItems\WPFWindow\WPFWindow.ico">
+      <OutputSubPath>WPF</OutputSubPath>
+    </ZipItem>
+    <ZipItem Include="Templates\ProjectItems\WPFWindow\pyWPFWindow.vstemplate">
+      <OutputSubPath>WPF</OutputSubPath>
+    </ZipItem>
+    <EmbeddedResource Include="Resources\PythonImageList.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ZipProject Include="Templates\Projects\WPFApp\Program.py" >
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+    <ZipProject Include="Templates\Projects\WPFApp\Window1.py" >
+      <OutputSubPath>Windows</OutputSubPath>
+    </ZipProject>
+  </ItemGroup>
+  <ItemGroup>
+    <ZipItem Include="Templates\ProjectItems\WPFWindow\Window.py">
+      <OutputSubPath>WPF</OutputSubPath>
+    </ZipItem>
+  </ItemGroup>
+  <ItemGroup>
+    <ZipItem Include="Templates\ProjectItems\WPFWindow\Window.xaml">
+      <OutputSubPath>WPF</OutputSubPath>
+    </ZipItem>
+  </ItemGroup>
+  <PropertyGroup>
+    <TargetRegistryRoot Condition=" '$(TargetRegistryRoot)' == '' ">Software\Microsoft\VisualStudio\9.0Exp</TargetRegistryRoot>
+    <RegisterOutputPackage Condition="'$(RegisterOutputPackage)' == ''">true</RegisterOutputPackage>
+    <RegisterWithCodebase>true</RegisterWithCodebase>
+    <VsTemplateLanguage>IronPython</VsTemplateLanguage>
+  </PropertyGroup>
+  <!-- This imports the files that make up the project base classes. -->
+  <Import Project="$(ProjectBasePath)\ProjectBase.Files" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\VSSDK\Microsoft.VsSDK.targets" />
+  <!--Target that builds the tree of items to ZIP to create a default WEB site-->
+  <Target Name="BuildWebApplicationProjectTree" DependsOnTargets="FindSDKInstallation">
+    <!--Create the directories-->
+    <MakeDir Directories="$(IntermediateOutputPath)\Projects\Web\WebApplication\bin" />
+    <!--Copy the files-->
+    <Copy DestinationFolder="$(IntermediateOutputPath)\Projects\Web\WebApplication" SourceFiles="Templates\Projects\Web\WebApplication\__TemplateIcon.ico;Templates\Projects\Web\WebApplication\Default.aspx;Templates\Projects\Web\WebApplication\WebApplication.vstemplate;Templates\Projects\Web\WebApplication\WebApplication.pyproj;Templates\Projects\Web\WebApplication\Web.config" SkipUnchangedFiles="true" />
+    <Copy DestinationFolder="$(IntermediateOutputPath)\Projects\Web\WebApplication\bin" SourceFiles="$(VsSDKInstall)\VisualStudioIntegration\Common\Assemblies\IronMath.dll;$(VsSDKInstall)\VisualStudioIntegration\Common\Assemblies\IronPython.dll" SkipUnchangedFiles="true" />
+  </Target>
+  <!--Make the ZIP task depend on this one so that it will be executed before zipping the files-->
+  <PropertyGroup>
+    <ZipFilesDependsOn>$(ZipFilesDependsOn);BuildWebApplicationProjectTree</ZipFilesDependsOn>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="AfterBuild">
+    <!--Register the Project output folder so the WPF Designer can find the PythonEventProvider class-->
+    <Exec IgnoreExitCode="true" Command="reg add HKCU\Software\Microsoft\.NETFramework\AssemblyFolders\IronPythonProject /f /ve /d &quot;$(TargetDir)\&quot;" />
+  </Target>
+  <PropertyGroup>
+    <CoreCleanDependsOn>CleanWebSiteTemplates</CoreCleanDependsOn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>REM Building zip files for Web Site Project templates .....
+$(MSBuildBinPath)\msbuild /p:Configuration=$(Configuration) /p:RegisterOutputPackage=$(RegisterOutputPackage) "$(ProjectDir)..\WebSiteProject\WebSiteProject.proj"</PostBuildEvent>
+  </PropertyGroup>
+
+  <!--Call the Clean target for the project that builds the Web Site templates-->
+  <Target Name="CleanWebSiteTemplates">
+    <MSBuild Targets="Clean" Projects="$(ProjectDir)..\WebSiteProject\WebSiteProject.proj" Properties="Configuration=$(Configuration)" />
+  </Target>
+</Project>

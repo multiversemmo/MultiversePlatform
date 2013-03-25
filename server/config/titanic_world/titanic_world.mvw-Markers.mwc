@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="level1" TerrainOffset="15990" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="-6362.055" y="35990" z="104609.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="level2" TerrainOffset="13220" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="-6737.965" y="33220" z="94896.53" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="level3" TerrainOffset="21110" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="8662.23" y="41110" z="72523.26" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="stuck" TerrainOffset="21110" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="8662.23" y="41110" z="72523.26" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

@@ -1,0 +1,13 @@
+<TerrainConfig>
+	<Terrain>terrain.png</Terrain>
+	<WorldTexture>terrain_texture.jpg</WorldTexture>
+	<DetailTexture>terrain_detail.jpg</DetailTexture>
+	<DetailTile>3</DetailTile>
+	<TileSize>17</TileSize>
+	<MaxPixelError>8</MaxPixelError>
+	<ScaleX>1</ScaleX>
+	<ScaleY>0.2</ScaleY>
+	<ScaleZ>1</ScaleZ>
+	<MaxMipMapLevel>5</MaxMipMapLevel>
+	<VertexNormals>yes</VertexNormals>
+</TerrainConfig>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="videoworld" Version="2">
+  <CameraPosition x="-21189.72" y="22000" z="-5994.475" />
+  <CameraOrientation x="0" y="0" z="0" w="1" />
+  <Terrain>
+    <algorithm>HybridMultifractalWithFloor</algorithm>
+    <xOffset>0</xOffset>
+    <yOffset>0</yOffset>
+    <zOffset>0</zOffset>
+    <h>0.25</h>
+    <lacunarity>2</lacunarity>
+    <octaves>8</octaves>
+    <metersPerPerlinUnit>500</metersPerPerlinUnit>
+    <heightScale>0</heightScale>
+    <heightOffset>0</heightOffset>
+    <fractalOffset>0.7</fractalOffset>
+    <heightFloor>20</heightFloor>
+  </Terrain>
+  <TerrainDisplay Type="AutoSplat" UseParams="True" UseGeneratedShadeMask="True" TextureTileSize="5" SandToGrassHeight="50000" GrassToRockHeight="250000" RockToSnowHeight="450000" SandTextureName="splatting_sand.dds" GrassTextureName="splatting_grass.dds" RockTextureName="splatting_rock.dds" SnowTextureName="splatting_snow.dds" ShadeMaskTextureName="" />
+  <Ocean DisplayOcean="True" UseParams="True" WaveHeight="1000" SeaLevel="10000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <GlobalFog Far="1000000" Near="500000">
+    <Color R="0.5" G="0.578125" B="0.7695313" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.8" G="0.8" B="0.8" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="0" Zenith="40">
+    <Direction x="0" y="-0.6427876" z="-0.7660445" />
+    <Diffuse R="0.78125" G="0.7890625" B="0.5859375" />
+    <Specular R="0.875" G="0.953125" B="0.875" />
+  </GlobalDirectionalLight>
+  <WorldCollection Name="main" Filename="video-main.mwc" />
+</World>

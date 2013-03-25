@@ -1,0 +1,12 @@
+Tao.OpenAl 1.0.0.2
+Copyright ©2003-2005 Tao Framework Team
+http://www.taoframework.com
+All rights reserved.
+
+Tao.OpenAl is an OpenAL API binding for .NET, implementing OpenAL 1.0.
+
+
+Change Log:
+
+1.0.0.0 - April 20, 2004:
+    Initial release.

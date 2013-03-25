@@ -1,0 +1,336 @@
+/*
+============================================================================
+This source file is part of the Ogre-Maya Tools.
+Distributed as part of Ogre (Object-oriented Graphics Rendering Engine).
+Copyright (C) 2003 Fifty1 Software Inc.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+or go to http://www.gnu.org/licenses/gpl.txt
+============================================================================
+*/
+
+namespace -add "maya2ogre";
+namespace -set "maya2ogre";
+
+
+// ===== Export
+global proc ExportToOgre()
+{
+	saveFileInfo;
+	
+	// ===== Files and directories
+	string $sceneFile    = `file -query -sceneName`;
+	string $mayaFile     = basename($sceneFile, "");
+	string $sceneDir     = toNativePath(dirname($sceneFile));
+	string $baseFile     = basename($sceneFile, ".mb");
+	string $outputDir    = toNativePath(`textField -query -text OutputDirectory`);
+	string $meshFile     = toNativePath(`textField -query -text ExportMeshFilename`);
+	string $materialFile = toNativePath(`textField -query -text ExportMaterialFilename`);
+	string $skeletonFile = toNativePath(`textField -query -text ExportSkeletonFilename`);
+	
+
+	// ===== Make working copy of Maya file
+	// (Removes need to save before exporting)
+	string $mayaWorkingFile = `internalVar -userScriptDir` + "maya2ogre.mb";
+	file -rename $mayaWorkingFile;
+	file -save -force;
+	file -rename $mayaFile;
+
+	
+	// ===== Options
+	string $options = "";
+	
+	// --- Common params
+	$options += " -in \"" + $mayaWorkingFile + "\"";
+	string $materialPrefix = `textField -query -text MaterialPrefix`;
+	if ($materialPrefix != "") 
+	{
+		$options += " -mprefix " + $materialPrefix;
+	}
+	
+	// --- Mesh export
+	int $exportMesh = `checkBox -query -value ExportMesh`;
+	int $convertMesh = `checkBox -query -value ExportMeshBinary`;
+	if ($exportMesh)
+	{
+		$options += " -mesh \"" + $outputDir + $meshFile + "\"";
+
+		if (`checkBox -query -value ExportMeshVBA`)
+		{
+			$options += " -vba";
+		}
+		if (`checkBox -query -value ExportMeshNormals`)
+		{
+			$options += " -n";
+		}
+		if (`checkBox -query -value ExportMeshColours`)
+		{
+			$options += " -c";
+		}
+		if (`checkBox -query -value ExportMeshUVs`)
+		{
+			$options += " -t";
+		}
+	}
+	
+	// --- Material export
+	int $exportMaterial = `checkBox -query -value ExportMaterial`;
+	if ($exportMaterial)
+	{
+		$options += " -mat \"" + $outputDir + $materialFile + "\"";
+	}
+
+	// --- Skeleton/Animation export
+	int $exportSkeleton = `checkBox -query -value ExportSkeleton`;
+	int $convertSkeleton = `checkBox -query -value ExportSkeletonBinary`;
+	if ($exportSkeleton)
+	{
+		$options += " -skel \"" + $outputDir + $skeletonFile + "\"";
+		
+		if (`checkBox -query -value ExportAnim`)
+		{
+			int $iAnim;
+			string $animNameField;
+			string $animStartField;
+			string $animEndField;
+			string $animStepField;
+
+			for ($iAnim=1; $iAnim<=8; $iAnim++)
+			{
+				$animNameField  = "AnimName0"  + $iAnim;
+				$animStartField = "AnimStart0" + $iAnim;
+				$animEndField   = "AnimEnd0"   + $iAnim;
+				$animStepField  = "AnimStep0"  + $iAnim;
+				
+				if (`textField -query -text $animNameField` != "")
+				{
+					$options += " -anim " + `textField -query -text $animNameField`;
+					$options += " " + `intField -query -value $animStartField`;
+					$options += " " + `intField -query -value $animEndField`;
+					$options += " " + `intField -query -value $animStepField`;
+				}
+			}
+		}
+	}
+	
+	
+	
+	// ===== Export
+	
+	// --- Windows
+	if (`about -windows`) 
+	{
+		string $commands;
+		$commands += "rem ==================" + "\n";
+		$commands += "rem Export to Ogre XML" + "\n";
+		$commands += "rem ==================" + "\n";
+		
+		$commands += "set path=" + toNativePath(`internalVar -userScriptDir`) + ";%path%" + "\n";
+		$commands += "pushd " + $sceneDir + "\n";
+		$commands += "maya2ogre.exe " + $options + "\n";
+		if ($exportMesh && $convertMesh) 
+		{
+			$commands += "rem ======================" + "\n";
+			$commands += "rem Convert Mesh to Binary" + "\n";
+			$commands += "rem ======================" + "\n";
+			$commands += "pushd " + $outputDir + "\n";
+			$commands += "OgreXMLConverter " + $meshFile + "\n";
+			$commands += "popd" + "\n";
+		}
+		if ($exportSkeleton && $convertSkeleton) 
+		{
+			$commands += "rem ==========================" + "\n";
+			$commands += "rem Convert Skeleton to Binary" + "\n";
+			$commands += "rem ==========================" + "\n";
+			$commands += "pushd " + $outputDir + "\n";
+			$commands += "OgreXMLConverter " + $skeletonFile + "\n";
+			$commands += "popd" + "\n";
+		}
+		$commands += "popd" + "\n";
+		$commands += "pause" + "\n";
+		
+		string $commandFile = `internalVar -userScriptDir` + "maya2ogre_mel.bat";
+		$fileID = `fopen $commandFile "w"`;
+		fprint $fileID $commands;
+		fclose $fileID;
+
+		system("start \"" + `toNativePath $commandFile` + "\"");
+	}
+	
+	// --- Linux
+	else if (`about -linux`)
+	{
+		confirmDialog 
+		   -title "Ogre Exporter"
+		   -message "Sorry, but there is no command-line exporter or plug-in available for Linux yet. "
+		   -button "Ok";
+	}
+
+	// --- Mac
+	else if (`about -mac`)
+	{
+		confirmDialog 
+		   -title "Ogre Exporter"
+		   -message "Sorry, but there is no command-line exporter or plug-in available for Mac yet. ";
+	}
+	
+}
+
+
+// ===== Load preferences from fileInfo
+// fileInfo is stored with Maya files so that export preferences
+// are preserved with each source file.
+global proc loadFileInfo()
+{
+	// Common parameters
+	textField -edit -fileName `fileInfo -query "maya2ogre_outputDir"` OutputDirectory;
+	textField -edit -text `fileInfo -query "maya2ogre_matPrefix"` MaterialPrefix;
+
+	// Mesh
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportMesh"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportMesh;
+
+	string $valStrings[] = `fileInfo -query "maya2ogre_convertMesh"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportMeshBinary;
+	
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportMeshNormals"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportMeshNormals;
+
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportMeshColours"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportMeshColours;
+
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportMeshVBA"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportMeshVBA;
+
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportMeshUVs"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportMeshUVs;
+
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportMeshFile"`;
+	if ($valStrings[0] != "") 
+	{
+		textField -edit -text `fileInfo -query "maya2ogre_exportMeshFile"` ExportMeshFilename;
+	}
+	
+	// Material
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportMat"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportMaterial;
+
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportMatFile"`;
+	if ($valStrings[0] != "") 
+	{
+		textField -edit -text `fileInfo -query "maya2ogre_exportMatFile"` ExportMaterialFilename;
+	}
+
+	// Skeleton	
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportSkel"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportSkeleton;
+
+	string $valStrings[] = `fileInfo -query "maya2ogre_convertSkel"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportSkeletonBinary;
+
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportSkelFile"`;
+	if ($valStrings[0] != "") 
+	{
+		textField -edit -text `fileInfo -query "maya2ogre_exportSkelFile"` ExportSkeletonFilename;
+	}
+	
+	// Animation
+	string $valStrings[] = `fileInfo -query "maya2ogre_exportAnim"`;
+	checkBox -edit -value `gmatch $valStrings[0] "1"` ExportAnim;
+
+	int $iAnim;
+	string $animNameField;
+	string $animFileInfoKey;
+	string $animFileInfoValue[];
+	string $animStartField;
+	string $animEndField;
+	string $animStepField;
+	for ($iAnim=1; $iAnim<=8; $iAnim++)
+	{
+		$animFileInfoKey = "maya2ogre_anim0" + $iAnim;
+		$animNameField   = "AnimName0"  + $iAnim;
+		$animStartField  = "AnimStart0" + $iAnim;
+		$animEndField    = "AnimEnd0"   + $iAnim;
+		$animStepField   = "AnimStep0"  + $iAnim;
+		
+		$animFileInfoValue = `fileInfo -query $animFileInfoKey`;
+		string $animFileInfoDetails[];
+		tokenize $animFileInfoValue[0] "," $animFileInfoDetails;
+		
+		string $animName = $animFileInfoDetails[0];
+		if ($animName == "!") $animName = "";
+		textField -edit -text $animName $animNameField;
+		int $start = (int)$animFileInfoDetails[1];
+		int $end   = (int)$animFileInfoDetails[2];
+		int $step  = (int)$animFileInfoDetails[3];
+		intField -edit -value $start $animStartField;
+		intField -edit -value $end $animEndField;
+		intField -edit -value $step $animStepField;
+	}
+}
+
+
+// ===== Save preferences to fileInfo
+global proc saveFileInfo()
+{
+	// Common parameters
+	fileInfo "maya2ogre_outputDir" `textField -query -fileName OutputDirectory`;
+	fileInfo "maya2ogre_matPrefix" `textField -query -text MaterialPrefix`;
+
+	// Mesh
+	fileInfo "maya2ogre_exportMesh" `checkBox -query -value ExportMesh`;
+	fileInfo "maya2ogre_convertMesh" `checkBox -query -value ExportMeshBinary`; 
+	fileInfo "maya2ogre_exportMeshNormals" `checkBox -query -value ExportMeshNormals`;
+	fileInfo "maya2ogre_exportMeshColours" `checkBox -query -value ExportMeshColours`;
+	fileInfo "maya2ogre_exportMeshVBA" `checkBox -query -value ExportMeshVBA`;
+	fileInfo "maya2ogre_exportMeshUVs" `checkBox -query -value ExportMeshUVs`;
+	fileInfo "maya2ogre_exportMeshFile" `textField -query -text ExportMeshFilename`;
+	
+	// Material
+	fileInfo "maya2ogre_exportMat" `checkBox -query -value ExportMaterial`;
+	fileInfo "maya2ogre_exportMatFile" `textField -query -text ExportMaterialFilename`;
+	
+	// Skeleton	
+	fileInfo "maya2ogre_exportSkel" `checkBox -query -value ExportSkeleton`;
+	fileInfo "maya2ogre_convertSkel" `checkBox -query -value ExportSkeletonBinary`; 
+	fileInfo "maya2ogre_exportSkelFile" `textField -query -text ExportSkeletonFilename`;
+	
+	// Animation
+	fileInfo "maya2ogre_exportAnim" `checkBox -query -value ExportAnim`;
+	int $iAnim;
+	string $animNameField;
+	string $animFileInfoKey;
+	string $animFileInfoValue;
+	string $animStartField;
+	string $animEndField;
+	string $animStepField;
+	for ($iAnim=1; $iAnim<=8; $iAnim++)
+	{
+		$animFileInfoKey = "maya2ogre_anim0" + $iAnim;
+		$animNameField   = "AnimName0"  + $iAnim;
+		$animStartField  = "AnimStart0" + $iAnim;
+		$animEndField    = "AnimEnd0"   + $iAnim;
+		$animStepField   = "AnimStep0"  + $iAnim;
+		
+		string $animName = `textField -query -text $animNameField`;
+		if ($animName == "") $animName = "!";
+		$animFileInfoValue = $animName;
+		$animFileInfoValue += ", " + `intField -query -value $animStartField`;
+		$animFileInfoValue += ", " + `intField -query -value $animEndField`;
+		$animFileInfoValue += ", " + `intField -query -value $animStepField`;
+		
+		fileInfo $animFileInfoKey $animFileInfoValue;
+	}
+}

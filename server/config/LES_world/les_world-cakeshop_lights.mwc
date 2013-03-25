@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <PointLight Name="coffee_area_01" AttenuationRange="1000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="169681.5" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="34922.2" y="169681.5" z="-1199392" />
+    <Specular R="0.9490196" G="0.8823529" B="0.7411765" />
+    <Diffuse R="0.7882353" G="0.7058824" B="0.5215687" />
+  </PointLight>
+  <PointLight Name="record_area_01" AttenuationRange="1000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="169581.5" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="36322.2" y="169581.5" z="-1205892" />
+    <Specular R="0.9490196" G="0.8784314" B="0.7411765" />
+    <Diffuse R="0.7686275" G="0.5372549" B="0.3843137" />
+  </PointLight>
+  <PointLight Name="DJbooth_area_01" AttenuationRange="1000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="165281.5" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="38522.2" y="165281.5" z="-1194292" />
+    <Specular R="0.9098039" G="0.7098039" B="0.9843137" />
+    <Diffuse R="0.4862745" G="0.4862745" B="0.7294118" />
+  </PointLight>
+  <PointLight Name="CakeBar_area_01" AttenuationRange="1000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="165281.5" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="31722.2" y="165281.5" z="-1199692" />
+    <Specular R="0.7058824" G="0.9686275" B="0.9882353" />
+    <Diffuse R="0.7058824" G="0.9058824" B="0.9607843" />
+  </PointLight>
+  <PointLight Name="CakeStage_area_01" AttenuationRange="1000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="164981.5" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="35422.2" y="164981.5" z="-1207492" />
+    <Specular R="0.9764706" G="0.7176471" B="0.7372549" />
+    <Diffuse R="0.8352941" G="0.4352941" B="0.4235294" />
+  </PointLight>
+  <PointLight Name="entry_area_01" AttenuationRange="1000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="168581.5" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="35622.2" y="168581.5" z="-1193192" />
+    <Specular R="0.9372549" G="0.8470588" B="0.6705883" />
+    <Diffuse R="0.8156863" G="0.8" B="0.6745098" />
+  </PointLight>
+  <PointLight Name="Copy of entry_area_01" AttenuationRange="1000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="169581.5" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="36622.2" y="169581.5" z="-1190192" />
+    <Specular R="0.945098" G="0.945098" B="0.9294118" />
+    <Diffuse R="0.9098039" G="0.9058824" B="0.8588235" />
+  </PointLight>
+</WorldObjectCollection>

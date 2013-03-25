@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="barrel1" Mesh="barrel.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-10000" y="20000" z="-9890.831" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_open-mesh.0" MaterialName="barrel.barrel" Show="True" />
+      <SubMeshInfo Name="barrel_lid-mesh.0" MaterialName="barrel.barrel" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="instanceFlags" Value="pop" Type="String" />
+      <NameValuePair Name="instancePortal" Value="Right click to return" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="videobox" Mesh="unit_box.mesh" TerrainOffest="5404.91" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-29" Zenith="90">
+    <Position x="-9203.5" y="25404.91" z="788.7" />
+    <Scale x="5" y="5" z="5" />
+    <Orientation x="0" y="-0.25038" z="0" w="0.9681476" />
+    <SubMeshes>
+      <SubMeshInfo Name="unit_box-mesh.0" MaterialName="wallvideo.wall" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="videowall" Mesh="LogWallMovieScreen.mesh" TerrainOffest="2117.4" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-26" Zenith="79">
+    <Position x="-11315.6" y="22117.4" z="-23328" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0.09338923" y="-0.2239154" z="0.0215606" w="0.9698843" />
+    <SubMeshes>
+      <SubMeshInfo Name="objhuman_town_wall_straight-mesh.0" MaterialName="wallvideo.wall" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="browserbox" Mesh="unit_box.mesh" TerrainOffest="3180.35" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-1432.2" y="23180.35" z="-10550.2" />
+    <Scale x="2.6" y="2.6" z="2.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="unit_box-mesh.0" MaterialName="wallbrowser.wall" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawn" TerrainOffset="0" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="89" Zenith="90">
+    <Position x="-21189.72" y="20000" z="-10183.48" />
+    <Orientation x="0" y="0.7009093" z="0" w="0.7132505" />
+  </Waypoint>
+</WorldObjectCollection>

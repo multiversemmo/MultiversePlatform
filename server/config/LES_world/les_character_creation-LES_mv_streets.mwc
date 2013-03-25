@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="streets_mv_layout" Mesh="LES_streets_all.mesh" TerrainOffest="166434.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="26611.07" y="166434.5" z="-1181748" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_streets_all-lib.0" MaterialName="LES_streets_all.LES_street_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="dopple_box-lib.0" MaterialName="LES_streets_all.LES_street_macro_diffuse" Show="False" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

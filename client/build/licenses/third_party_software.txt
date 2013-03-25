@@ -1,0 +1,44 @@
+Third Party Software:
+
+This document contains notices and acknowledgements as requested or required by third party software providers whose software is used by the Multiverse Client
+
+Axiom
+  LGPL 2.1
+  lgpl2.1.txt
+
+DevIL
+  LGPL 2.1
+  lgpl2.1.txt
+
+OpenAL (unused)
+  LGPL 2.1
+  lgpl2.1.txt
+
+IronPython
+  CPL 1.0
+  cpl1.0.txt
+
+Tao
+  MIT
+  Tao.*.License.txt
+
+ICSharpCode.SharpZipLib
+  GPL with lib exception
+  ICSharpCode.SharpZipLib.License.txt
+
+vorbis (unused)
+  BSD style
+  vorbis_license.txt
+
+ogg (unused)
+  BSD style
+  ogg_license.txt
+
+cg
+nvparse
+  NVIDIA (similar to MIT)
+  nvidia_license.txt
+
+log4net
+  Apache
+  apache2.0.txt

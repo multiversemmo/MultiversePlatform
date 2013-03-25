@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="TatLocation" TerrainOffset="162729.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="11894.24" y="162729.5" z="-1157316" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <Waypoint Name="JukeLocation" TerrainOffset="162662.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="20444.24" y="162662.5" z="-1151216" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <Waypoint Name="club_entrance" TerrainOffset="166574.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="11973.29" y="166574.5" z="-1180550" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <StaticObject Name="les_mv_club" Mesh="LES_mvclub.mesh" TerrainOffest="166590.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="7671.56" y="166590.5" z="-1161470" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="mvclub_entry-mesh.0" MaterialName="LES_mvclub.mvclub_entry" Show="True" />
+      <SubMeshInfo Name="mvclub_exterior-mesh.0" MaterialName="LES_mvclub.mvclub_exterior" Show="True" />
+      <SubMeshInfo Name="mvclub_interior-mesh.0" MaterialName="LES_mvclub.mvclub_interior" Show="True" />
+      <SubMeshInfo Name="mvclub_chairstables-mesh.0" MaterialName="LES_mvclub.mvclub_chairstables" Show="True" />
+      <SubMeshInfo Name="mvclub_DJbooth-mesh.0" MaterialName="LES_mvclub.mvclub_DJbooth" Show="True" />
+      <SubMeshInfo Name="mvclub_stage-mesh.0" MaterialName="LES_mvclub.mvclub_stage" Show="True" />
+      <SubMeshInfo Name="mvclub_graffiti-mesh.0" MaterialName="LES_mvclub.mvclub_graffiti" Show="True" />
+      <SubMeshInfo Name="mvclub_barAlpha-mesh.0" MaterialName="LES_mvclub.mvclub_barAlpha" Show="True" />
+      <SubMeshInfo Name="mvclub_bar-mesh.0" MaterialName="LES_mvclub.mvclub_bar" Show="True" />
+      <SubMeshInfo Name="mvclub_entry_objects-mesh.0" MaterialName="LES_mvclub.mvclub_entry_objects" Show="True" />
+      <SubMeshInfo Name="mvclub_chairstables_upstairs-mesh.0" MaterialName="LES_mvclub.mvclub_chairstables_upstairs" Show="True" />
+      <SubMeshInfo Name="mvclub_tables-mesh.0" MaterialName="LES_mvclub.mvclub_tables" Show="True" />
+      <SubMeshInfo Name="mvclub_bar_upstairs-mesh.0" MaterialName="LES_mvclub.mvclub_bar_upstairs" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="LightControl" Value="mvclub" Type="String" />
+      <NameValuePair Name="LightControl_Regions" Value="InClubEntry, InClubStairs, InClubInterior, InClubBackroom" Type="String" />
+      <NameValuePair Name="LightControl_Lights" Value="club_light_01, club_light_02, club_light_03, bar_light_low_01, club_light_entry, club_light_center" Type="String" />
+      <NameValuePair Name="LightControl_State" Value="on" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="vid_screen_02" Mesh="LES_vid_screen.mesh" TerrainOffest="164232.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="22394.24" y="164232.5" z="-1154416" />
+    <Scale x="1.331" y="1.331" z="1.331" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="vid_case-mesh.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+      <SubMeshInfo Name="vid_screen-mesh.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="vid_screen_03" Mesh="LES_vid_screen.mesh" TerrainOffest="163232.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-59" Zenith="90">
+    <Position x="19394.24" y="163232.5" z="-1142716" />
+    <Scale x="2" y="2" z="2" />
+    <Orientation x="0" y="-0.4924236" z="0" w="0.8703557" />
+    <SubMeshes>
+      <SubMeshInfo Name="vid_case-mesh.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+      <SubMeshInfo Name="vid_screen-mesh.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="dancer01" TerrainOffset="162629.5" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="14094.24" y="162629.5" z="-1146216" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="dancer02" TerrainOffset="162629.5" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="16194.24" y="162629.5" z="-1147216" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="dancer03" TerrainOffset="162659.5" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="17274.24" y="162659.5" z="-1148916" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="bouncer01" TerrainOffset="166574.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="13094.24" y="166574.5" z="-1169716" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <Waypoint Name="bar01" TerrainOffset="162659.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="15094.24" y="162659.5" z="-1156416" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <Waypoint Name="dj01" TerrainOffset="163649.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="21536.24" y="163649.5" z="-1149893" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <Waypoint Name="star01" TerrainOffset="162881" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="18028.27" y="162881" z="-1144282" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <StaticObject Name="entry_vid_screen" Mesh="LES_vid_screen.mesh" TerrainOffest="168274.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="2994.24" y="168274.5" z="-1169416" />
+    <Scale x="0.8264462" y="0.8264462" z="0.8264462" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="vid_case-mesh.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+      <SubMeshInfo Name="vid_screen-mesh.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

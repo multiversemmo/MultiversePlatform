@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="nyts" Version="2">
+  <CameraPosition x="111849.4" y="27804.05" z="-434087.8" />
+  <CameraOrientation x="0.01250425" y="-0.9868858" z="-0.09497694" w="-0.1299216" />
+  <Terrain>
+    <algorithm>HybridMultifractalWithFloor</algorithm>
+    <xOffset>0</xOffset>
+    <yOffset>0</yOffset>
+    <zOffset>0</zOffset>
+    <h>0.25</h>
+    <lacunarity>2</lacunarity>
+    <octaves>8</octaves>
+    <metersPerPerlinUnit>500</metersPerPerlinUnit>
+    <heightScale>0</heightScale>
+    <heightOffset>0</heightOffset>
+    <fractalOffset>0.7</fractalOffset>
+    <heightFloor>20</heightFloor>
+  </Terrain>
+  <TerrainDisplay Type="AutoSplat" UseParams="True" UseGeneratedShadeMask="True" TextureTileSize="5" SandToGrassHeight="50000" GrassToRockHeight="250000" RockToSnowHeight="450000" SandTextureName="splatting_sand.dds" GrassTextureName="splatting_grass.dds" RockTextureName="splatting_rock.dds" SnowTextureName="splatting_snow.dds" ShadeMaskTextureName="" />
+  <Ocean DisplayOcean="False" UseParams="True" WaveHeight="1000" SeaLevel="10000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <Skybox Name="eve_skybox" />
+  <GlobalFog Far="200000" Near="50000">
+    <Color R="0.0627451" G="0.05882353" B="0.08235294" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.1333333" G="0.145098" B="0.1921569" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="1" Zenith="52">
+    <Direction x="-0.01074477" y="-0.7880108" z="-0.6155677" />
+    <Diffuse R="0.254902" G="0.2117647" B="0.3607843" />
+    <Specular R="0.7372549" G="0.7843137" B="0.854902" />
+  </GlobalDirectionalLight>
+  <WorldCollection Name="TimesSquare" Filename="nyts-TimesSquare.mwc" />
+  <WorldCollection Name="StageMainTimesSquare" Filename="nyts-StageMainTimesSquare.mwc" />
+  <WorldCollection Name="StageReutersTimesSquare" Filename="nyts-StageReutersTimesSquare.mwc" />
+  <WorldCollection Name="Stage1TimesSquare" Filename="nyts-Stage1TimesSquare.mwc" />
+  <WorldCollection Name="skylineBuildings" Filename="nyts.mvw-skylineBuildings.mwc" />
+  <WorldCollection Name="TS_pointLights" Filename="nyts.mvw-TS_pointLights.mwc" />
+  <WorldCollection Name="PedestrianWaypoints" Filename="nyts.mvw-PedestrianWaypoints.mwc" />
+  <WorldCollection Name="TS_ambientParticles" Filename="nyts.mvw-TS_ambientParticles.mwc" />
+</World>

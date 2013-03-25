@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="skylineNear_01" Mesh="nyts_skylineNear.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="90" Zenith="90">
+    <Position x="225365.1" y="20000" z="-325484.8" />
+    <Scale x="0.9" y="0.9" z="0.9" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineNear_building-lib.0" MaterialName="nyts_skylineNear.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineNear_02" Mesh="nyts_skylineNear.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="-90" Zenith="90">
+    <Position x="280839.6" y="20000" z="-245563.1" />
+    <Scale x="0.9" y="0.9" z="0.9" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineNear_building-lib.0" MaterialName="nyts_skylineNear.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineNear_03" Mesh="nyts_skylineNear.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="90" Zenith="90">
+    <Position x="-23069.2" y="20000" z="-249501.6" />
+    <Scale x="0.8" y="0.8" z="0.8" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineNear_building-lib.0" MaterialName="nyts_skylineNear.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineNear_04" Mesh="nyts_skylineNear.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-47072.68" y="20000" z="-406329.8" />
+    <Scale x="0.8" y="0.8" z="0.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineNear_building-lib.0" MaterialName="nyts_skylineNear.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineFar_01" Mesh="nyts_skylineFar.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1E+07" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-180273.1" y="20000" z="-316887" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineFar_building-lib.0" MaterialName="nyts_skylineFar.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineFar_02" Mesh="nyts_skylineFar.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1E+07" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="407511.5" y="20000" z="-309208.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineFar_building-lib.0" MaterialName="nyts_skylineFar.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineFar_04" Mesh="nyts_skylineFar.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1E+07" CastShadows="True" Azimuth="90" Zenith="90">
+    <Position x="167636.5" y="20000" z="14906.69" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineFar_building-lib.0" MaterialName="nyts_skylineFar.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineFar_05" Mesh="nyts_skylineFar.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1E+07" CastShadows="True" Azimuth="-180" Zenith="90">
+    <Position x="78276.93" y="20000" z="-778467.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineFar_building-lib.0" MaterialName="nyts_skylineFar.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineNear_05" Mesh="nyts_skylineNear.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="-90" Zenith="90">
+    <Position x="-24616.15" y="20000" z="-325521.6" />
+    <Scale x="0.85" y="0.85" z="0.85" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineNear_building-lib.0" MaterialName="nyts_skylineNear.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineNear_06" Mesh="nyts_skylineNear.mesh" TerrainOffest="-300" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="248549.1" y="19700" z="-487785.1" />
+    <Scale x="0.85" y="0.85" z="0.85" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineNear_building-lib.0" MaterialName="nyts_skylineNear.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

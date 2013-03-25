@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerrainAssembler", "TerrainAssembler\TerrainAssembler.csproj", "{3A5EF53F-1280-497B-B00B-DAC8A63DDF56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageGrid", "..\..\Lib\ImageGrid\ImageGrid.csproj", "{E9A060C1-454C-4192-9590-088213AEBB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldMap", "..\..\Lib\WorldMap\WorldMap.csproj", "{6919D6BA-859C-4957-9EF9-C150E4649309}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coordinates", "..\..\Lib\Coordinates\Coordinates.csproj", "{45F1D86B-D2FB-4F8F-A6A1-54D0349F2950}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.Engine", "..\..\Axiom\Engine\Axiom.Engine.csproj", "{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.MathLib", "..\..\Axiom\MathLib\Axiom.MathLib.csproj", "{48EAC066-47F2-44A5-9454-DFA718DCB55E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A5EF53F-1280-497B-B00B-DAC8A63DDF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5EF53F-1280-497B-B00B-DAC8A63DDF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5EF53F-1280-497B-B00B-DAC8A63DDF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5EF53F-1280-497B-B00B-DAC8A63DDF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A060C1-454C-4192-9590-088213AEBB15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A060C1-454C-4192-9590-088213AEBB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A060C1-454C-4192-9590-088213AEBB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A060C1-454C-4192-9590-088213AEBB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6919D6BA-859C-4957-9EF9-C150E4649309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6919D6BA-859C-4957-9EF9-C150E4649309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6919D6BA-859C-4957-9EF9-C150E4649309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6919D6BA-859C-4957-9EF9-C150E4649309}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45F1D86B-D2FB-4F8F-A6A1-54D0349F2950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45F1D86B-D2FB-4F8F-A6A1-54D0349F2950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45F1D86B-D2FB-4F8F-A6A1-54D0349F2950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45F1D86B-D2FB-4F8F-A6A1-54D0349F2950}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

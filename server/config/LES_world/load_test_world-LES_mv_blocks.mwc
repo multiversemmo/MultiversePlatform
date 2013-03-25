@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="spawn2" TerrainOffset="166574.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="25133.77" y="166574.5" z="-1195304" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <StaticObject Name="40_50_B_01" Mesh="LES_building_40x50_B.mesh" TerrainOffest="166474.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="-129169.6" y="166474.5" z="-1152526" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="40_50_B_02" Mesh="LES_building_40x50_B.mesh" TerrainOffest="165764.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="131" Zenith="90">
+    <Position x="190946.6" y="165764.5" z="-1170086" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9099613" z="0" w="0.4146933" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_30_B_01" Mesh="LES_building_25x30_B.mesh" TerrainOffest="166585.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="10173.44" y="166585.5" z="-1211274" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_25x30_B_decals-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="20_50_C_01" Mesh="LES_building_20x50_C.mesh" TerrainOffest="166674.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="90" Zenith="90">
+    <Position x="37085.9" y="166674.5" z="-1230200" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="40_30_B_01" Mesh="LES_building_40x30_B.mesh" TerrainOffest="166604.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="180" Zenith="90">
+    <Position x="-22552.97" y="166604.5" z="-1151802" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x30_B-lib.0" MaterialName="LES_building_40x30_B.LES_building_40x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_40x30_B_decal-lib.0" MaterialName="LES_building_40x30_B.LES_building_40x30_B_macro_diffuse_decal" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_50_B_01" Mesh="LES_building_25x50_B.mesh" TerrainOffest="166590.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="180" Zenith="90">
+    <Position x="122582.5" y="166590.5" z="-1152116" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x50_B-lib.0" MaterialName="LES_building_25x50_B.LES_building_25x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_50_B_02" Mesh="LES_building_25x50_B.mesh" TerrainOffest="166474.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="-124731.5" y="166474.5" z="-1210414" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x50_B-lib.0" MaterialName="LES_building_25x50_B.LES_building_25x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_30_B_02" Mesh="LES_building_25x30_B.mesh" TerrainOffest="166474.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="180" Zenith="90">
+    <Position x="45183.58" y="166474.5" z="-1081276" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_25x30_B_decals-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="20_50_C_02" Mesh="LES_building_20x50_C.mesh" TerrainOffest="166594.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="90" Zenith="90">
+    <Position x="-3406.84" y="166594.5" z="-1091286" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="20_20_B_02" Mesh="LES_building_20x20_B.mesh" TerrainOffest="166474.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="-90" Zenith="90">
+    <Position x="-82308.95" y="166474.5" z="-1161296" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x20_B-lib.0" MaterialName="LES_building_20x20_B.LES_building_20x20_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_20x20_B_decals-lib.0" MaterialName="LES_building_20x20_B.LES_building_20x20_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_30_B_03" Mesh="LES_building_25x30_B.mesh" TerrainOffest="166594.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="90" Zenith="90">
+    <Position x="-82302.64" y="166594.5" z="-1133766" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_25x30_B_decals-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="20_50_C_03" Mesh="LES_building_20x50_C.mesh" TerrainOffest="166274.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="88109.29" y="166274.5" z="-1262186" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_30_B_04" Mesh="LES_building_25x30_B.mesh" TerrainOffest="166594.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="180" Zenith="90">
+    <Position x="-74815" y="166594.5" z="-1081262" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_25x30_B_decals-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="20_50_C_04" Mesh="LES_building_20x50_C.mesh" TerrainOffest="166584.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="90" Zenith="90">
+    <Position x="97674.55" y="166584.5" z="-1091278" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="40_50_B_03" Mesh="LES_building_40x50_B.mesh" TerrainOffest="166594.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="133524.5" y="166594.5" z="-1211265" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="20_20_B_04" Mesh="LES_building_20x20_B.mesh" TerrainOffest="166610.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="90" Zenith="90">
+    <Position x="-22328.36" y="166610.5" z="-1201266" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x20_B-lib.0" MaterialName="LES_building_20x20_B.LES_building_20x20_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_20x20_B_decals-lib.0" MaterialName="LES_building_20x20_B.LES_building_20x20_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_50_B_03" Mesh="LES_building_25x50_B.mesh" TerrainOffest="165884.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="-40866.23" y="165884.5" z="-1276596" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x50_B-lib.0" MaterialName="LES_building_25x50_B.LES_building_25x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_30_B_05" Mesh="LES_building_25x30_B.mesh" TerrainOffest="166474.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="-90" Zenith="90">
+    <Position x="97193.75" y="166474.5" z="-1203769" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_25x30_B_decals-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_30_C_05" Mesh="LES_building_25x30_B.mesh" TerrainOffest="166594.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="90" Zenith="90">
+    <Position x="-82296.23" y="166594.5" z="-1203772" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_25x30_B_decals-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="10_20_B_01" Mesh="LES_building_10x20_A.mesh" TerrainOffest="166584.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="52678.83" y="166584.5" z="-1151289" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_10x20_A-lib.0" MaterialName="LES_building_10x20_A.LES_building_10x20_A_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_10x20_A_decals-lib.0" MaterialName="LES_building_10x20_A.LES_building_10x20_A_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="30_10_A_01" Mesh="LES_building_30x10_A.mesh" TerrainOffest="166585.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="30177.87" y="166585.5" z="-1151646" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_30x10_A-lib.0" MaterialName="LES_building_30x10_A.LES_building_30x10_A_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="10_20_B_02" Mesh="LES_building_10x20_A.mesh" TerrainOffest="166640.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True" Azimuth="90" Zenith="90">
+    <Position x="37770.4" y="166640.5" z="-1196199" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_10x20_A-lib.0" MaterialName="LES_building_10x20_A.LES_building_10x20_A_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_10x20_A_decals-lib.0" MaterialName="LES_building_10x20_A.LES_building_10x20_A_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_30_B_06" Mesh="LES_building_25x30_B.mesh" TerrainOffest="166294.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True" Azimuth="57" Zenith="90">
+    <Position x="-173395.2" y="166294.5" z="-1198194" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.4771588" z="0" w="0.8788171" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_25x30_B_decals-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="terrain1" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-866" y="0" z="-1185304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt0" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="58633" y="166593.8" z="-1172604" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt1" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="59133" y="166593.8" z="-1166304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt2" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="60633" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt3" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="58633" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt4" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="40433" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt5" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="38833" y="166593.8" z="-1175204" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt6" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="37333" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt7" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="31133" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt8" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="21133" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt9" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="11433" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt10" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="10133" y="166593.8" z="-1175204" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt11" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="8833" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt12" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-7867" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt13" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-12867" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt14" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-21367" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt15" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-26367" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt16" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-32367" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt17" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-45367" y="166593.8" z="-1174304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt18" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-44367" y="166593.8" z="-1166304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt19" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-43767" y="166593.8" z="-1172904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt20" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-42867" y="166593.8" z="-1172904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt21" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-16867" y="166593.8" z="-1173304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt22" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-14867" y="166593.8" z="-1173304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt23" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-9867" y="166593.8" z="-1173304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt24" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="15133" y="166593.8" z="-1173304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt25" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="24033" y="166593.8" z="-1173304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt26" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="27133" y="166593.8" z="-1173304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path0_pt27" TerrainOffset="166593.8" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="51433" y="166593.8" z="-1173304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt0" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="58833" y="166587" z="-1188404" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt1" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="59133" y="166587" z="-1196304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt2" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="61233" y="166587" z="-1190004" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt3" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="58133" y="166587" z="-1190104" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt4" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="45133" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt5" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="35133" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt6" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="34133" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt7" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="31133" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt8" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="14233" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt9" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="12133" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt10" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="9133" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt11" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="9133" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt12" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-7867" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt13" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-12867" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt14" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-20867" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt15" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-26867" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt16" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-32867" y="166587" z="-1189904" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt17" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-43567" y="166587" z="-1190304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt18" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-44367" y="166587" z="-1196304" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt19" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-45367" y="166587" z="-1188404" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt20" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-43367" y="166587" z="-1188404" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt21" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-16867" y="166587" z="-1188404" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt22" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-14867" y="166587" z="-1187704" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt23" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-12867" y="166587" z="-1188404" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt24" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="10133" y="166587" z="-1188404" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt25" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="15633" y="166587" z="-1188404" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt26" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="25633" y="166587" z="-1188404" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="path1_pt27" TerrainOffset="166587" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="53133" y="166587" z="-1188404" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <StaticObject Name="40_50_B_03" Mesh="LES_building_40x50_B.mesh" TerrainOffest="166174.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-182347.6" y="166174.5" z="-1157196" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of 20_50_C_03" Mesh="LES_building_20x50_C.mesh" TerrainOffest="167274.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="48195.13" y="167274.5" z="-1266392" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of 40_50_B_02" Mesh="LES_building_40x50_B.mesh" TerrainOffest="165764.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="False" Azimuth="-28" Zenith="90">
+    <Position x="67112.63" y="165764.5" z="-1323943" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.2419219" z="0" w="0.9702957" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of 25_50_B_03" Mesh="LES_building_25x50_B.mesh" TerrainOffest="165884.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="False" Azimuth="-114" Zenith="90">
+    <Position x="-28435.71" y="165884.5" z="-1034307" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.8386706" z="0" w="0.5446391" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x50_B-lib.0" MaterialName="LES_building_25x50_B.LES_building_25x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of Copy of 25_50_B_03" Mesh="LES_building_25x50_B.mesh" TerrainOffest="165884.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="False" Azimuth="53" Zenith="90">
+    <Position x="-73174.8" y="165884.5" z="-1026307" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.4461978" z="0" w="0.8949344" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x50_B-lib.0" MaterialName="LES_building_25x50_B.LES_building_25x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of Copy of 20_50_C_03" Mesh="LES_building_20x50_C.mesh" TerrainOffest="166574.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="False" Azimuth="-89" Zenith="90">
+    <Position x="146313.3" y="166574.5" z="-1093341" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7009093" z="0" w="0.7132505" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of 40_50_B_03" Mesh="LES_building_40x50_B.mesh" TerrainOffest="166174.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="123" Zenith="90">
+    <Position x="188537.8" y="166174.5" z="-1118247" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.8788171" z="0" w="0.4771588" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of 40_50_B_03" Mesh="LES_building_40x50_B.mesh" TerrainOffest="164174.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-42" Zenith="90">
+    <Position x="-84517.64" y="164174.5" z="-1281545" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.3583679" z="0" w="0.9335804" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of 40_50_B_03" Mesh="LES_building_40x50_B.mesh" TerrainOffest="152174.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="125" Zenith="90">
+    <Position x="23583.36" y="152174.5" z="-1341405" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.8870109" z="0" w="0.4617486" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of Copy of 40_50_B_03" Mesh="LES_building_40x50_B.mesh" TerrainOffest="166174.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="119537.8" y="166174.5" z="-1258960" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="1 Copy of Copy of 40_50_B_03" Mesh="LES_building_40x50_B.mesh" TerrainOffest="152174.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-17723.82" y="152174.5" z="-1309560" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of 40_50_B_03" Mesh="LES_building_40x50_B.mesh" TerrainOffest="153174.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="23" Zenith="90">
+    <Position x="66462.73" y="153174.5" z="-1056560" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.1993679" z="0" w="0.9799247" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building_40x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawn2-teleporter-loc" TerrainOffset="166474.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="25406.51" y="166474.5" z="-1201180" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <StaticObject Name="Copy of 20_50_C_02" Mesh="LES_building_20x50_C.mesh" TerrainOffest="166594.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="-122462.2" y="166594.5" z="-1090647" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of Copy of 20_50_C_02" Mesh="LES_building_20x50_C.mesh" TerrainOffest="166594.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="False" Azimuth="89" Zenith="90">
+    <Position x="16912.63" y="166594.5" z="-1058064" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7009093" z="0" w="0.7132505" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="1 Copy of Copy of 20_50_C_02" Mesh="LES_building_20x50_C.mesh" TerrainOffest="166594.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="-170462.2" y="166594.5" z="-1114023" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="2 Copy of Copy of 20_50_C_02" Mesh="LES_building_20x50_C.mesh" TerrainOffest="166594.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="-122462.2" y="166594.5" z="-1240748" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

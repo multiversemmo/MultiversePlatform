@@ -1,0 +1,17 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# WowAddonStudio Solution File, Format Version 10.00
+Project("{E6E1D386-69D8-4755-9E61-0950293915FC}") = "RSSFeedReader", "RSSFeedReader.wowproj", "{8D6A2D14-4971-44BD-8DA8-762B1D9C04C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Any CPU = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D6A2D14-4971-44BD-8DA8-762B1D9C04C5}.Default|Any CPU.ActiveCfg = Default|Any CPU
+		{8D6A2D14-4971-44BD-8DA8-762B1D9C04C5}.Default|Any CPU.Build.0 = Default|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

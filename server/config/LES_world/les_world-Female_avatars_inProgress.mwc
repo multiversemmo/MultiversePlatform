@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="Avatar1" Mesh="Avatar.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-32722.74" y="166274.5" z="-39680.8" />
+    <Scale x="0.4240975" y="0.4240975" z="0.4240975" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.0" MaterialName="Avatar.head" Show="True" />
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.1" MaterialName="Avatar.Material__30" Show="True" />
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.2" MaterialName="Avatar.lowerbody" Show="True" />
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.3" MaterialName="Avatar.Material__14" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Avatar2" Mesh="Avatar.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-8079.957" y="166274.5" z="521.8272" />
+    <Scale x="0.4240975" y="0.4240975" z="0.4240975" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.0" MaterialName="Avatar.head" Show="True" />
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.1" MaterialName="Avatar.Material__30" Show="True" />
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.2" MaterialName="Avatar.lowerbody" Show="True" />
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.3" MaterialName="Avatar.Material__14" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Avatar3" Mesh="Avatar.mesh" TerrainOffest="886.2813" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-44690.03" y="162493" z="48423.66" />
+    <Scale x="0.4240975" y="0.4240975" z="0.4240975" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.0" MaterialName="Avatar.head" Show="True" />
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.1" MaterialName="Avatar.Material__30" Show="True" />
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.2" MaterialName="Avatar.lowerbody" Show="True" />
+      <SubMeshInfo Name="Adult_female_WithShorts_LODCS03-lib.3" MaterialName="Avatar.Material__14" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

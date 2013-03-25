@@ -1,0 +1,211 @@
+ 
+ End User License Agreement
+ 
+ BY INSTALLING OR USING THE SOFTWARE, YOU AND THE ENTITY OR COMPANY THAT
+ USES THE SOFTWARE ("YOU") ARE UNCONDITIONALLY CONSENTING TO BE BOUND BY
+ AND ARE BECOMING A PARTY TO THIS LICENSE AGREEMENT ("AGREEMENT"). YOUR
+ USE OF THE SOFTWARE ALSO SHALL CONSTITUTE ASSENT TO THE TERMS OF THIS
+ AGREEMENT. IF YOU DO NOT UNCONDITIONALLY AGREE TO ALL OF THE TERMS OF
+ THIS AGREEMENT YOU WILL NOT HAVE ANY RIGHT TO USE THE SOFTWARE. THE 
+ MULTIVERSE NETWORK, INC.'S ("MULTIVERSE") ACCEPTANCE IS EXPRESSLY 
+ CONDITIONED UPON YOUR ASSENT TO ALL THE TERMS AND CONDITIONS OF THIS 
+ AGREEMENT, TO THE EXCLUSION OF  ALL OTHER TERMS; IF THESE TERMS ARE 
+ CONSIDERED AN OFFER, ACCEPTANCE IS EXPRESSLY LIMITED TO THESE TERMS.
+ 
+1.  License. Subject to your full compliance with all the terms and
+    conditions of this Agreement, Multiverse grants You a personal,
+    nontransferable, nonsublicensable, nonexclusive license to use the
+    software you will receive through this download (the Multiverse 
+    Client and Platform), the accompanying documentation, and any tool or
+    additional software that may be made available by Multiverse from 
+    time to time (collectively "Software") for your personal use only, 
+    in object code form only, and only in accordance with the 
+    accompanying documentation. This Agreement allows You to run the 
+    Software only as received at the time of download and to install the
+    Software only on a single central processing unit. You will comply 
+    with all requirements imposed upon Multiverse by third party service
+    providers and licensors, including, without limitation, Interactive
+    Data Visualization, Inc.
+ 
+2.  Restrictions. You shall not, nor permit anyone else to, directly or
+    indirectly: (i) copy, modify, or distribute the Software; (ii) reverse
+    engineer, disassemble, decompile or otherwise attempt to discover the
+    source code or structure, sequence and organization of all or any part
+    of the Software (except that this restriction shall not apply to the
+    limited extent restrictions on reverse engineering are prohibited by
+    applicable local law); or (iii) rent, lease, or use the Software for
+    timesharing or service bureau purposes, or otherwise use the Software
+    for any commercial purpose.  You shall maintain and not remove or
+    obscure any proprietary notices on the Software, and shall reproduce
+    such notices exactly on all permitted copies of the Software. As
+    between the parties, Multiverse shall own all title, ownership rights,
+    and intellectual property rights in and to the Software, and any
+    copies or portions thereof.  You understand that Multiverse or its
+    licensors may modify or discontinue offering the Software at any
+    time. This Agreement does not give You any rights not expressly and
+    unambiguously granted herein.
+ 
+3.  Intellectual Property; Content. As a condition to Your use of the
+    Software, You represent, warrant and covenant that You will not use
+    the Software: (i) to infringe the intellectual property or proprietary
+    rights, or rights of publicity or privacy, of any third party; (ii) to
+    violate any applicable law, statute, ordinance or regulation; (iii) to
+    disseminate, transfer or store information or materials in any form or
+    format ("Content") that are harmful, threatening, abusive, harassing,
+    tortuous, defamatory, vulgar, obscene, libelous, or otherwise
+    objectionable or that otherwise violate any law or right of any third
+    party; (iv) to disseminate any software viruses or any other computer
+    code, files or programs that may interrupt, destroy or limit the
+    functionality of any computer software or hardware or
+    telecommunications equipment, or violate the security of any computer
+    network; or (v) to run Maillist, Listserv, "bots," "robots," any form
+    of auto-responder, or "spam," or any processes that run or are
+    activated while You are not logged in.  You, not Multiverse, remain
+    solely responsible for all Content that You upload, post, e-mail,
+    transmit, or otherwise disseminate using, or in connection with, the
+    Software. You acknowledge that all Content You access through use of
+    the Software is accessed at your own risk and You will be solely
+    responsible for any damage or liability to any party resulting from
+    such access.
+ 
+4.  Support; Equipment.  This Agreement does not entitle You to any
+    support, upgrades, patches, enhancements, or fixes (collectively,
+    "Support") for the Software. Any such Support for the Software that
+    may be made available by Multiverse, in its sole discretion, shall
+    become part of the Software and subject to this Agreement. You shall
+    be responsible for obtaining and maintaining any equipment or
+    ancillary services needed to connect to, access, or otherwise use the
+    Software, including, without limitation, modems, hardware, software,
+    and long distance or local telephone service.  You shall be
+    responsible for ensuring that such equipment or ancillary services are
+    compatible with the Software.
+    
+5.  Warranty Disclaimer. THE SOFTWARE IS PROVIDED "AS IS".  MULTIVERSE
+    MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, AND MULTIVERSE
+    EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING WITHOUT LIMITATION, ANY
+    IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+    PURPOSE AND NONINFRINGEMENT.  FURTHER, MULTIVERSE DOES NOT WARRANT
+    RESULTS OF USE OR THAT THE SOFTWARE IS BUG FREE OR ERROR FREE OR THAT
+    ITS USE WILL BE UNINTERRUPTED. THIS DISCLAIMER OF WARRANTY
+    CONSTITUTES AN ESSENTIAL PART OF THIS AGREEMENT.  ALL THE FOREGOING
+    DISCLAIMERS ALSO APPLY IN FULL WITH RESPECT TO MULTIVERSE'S LICENSORS,
+    SUPPLIERS, DISTRIBUTORS, CONTRACTORS AND AGENTS.  SOME STATES DO NOT
+    ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE LIMITATIONS
+    MAY NOT APPLY TO YOU.
+    
+6.  Limitation of Remedies and Damages. UNDER NO CIRCUMSTANCES AND UNDER
+    NO LEGAL THEORY, INCLUDING, BUT NOT LIMITED TO, TORT, CONTRACT,
+    NEGLIGENCE, STRICT LIABILITY, OR OTHERWISE, SHALL MULTIVERSE BE LIABLE
+    TO YOU OR ANY OTHER PERSON (I) FOR ANY INDIRECT, SPECIAL, INCIDENTAL,
+    OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER OR (II) FOR ANY MATTER
+    BEYOND ITS REASONABLE CONTROL. MULTIVERSE'S LIABILITY FOR DAMAGES OF
+    ANY KIND WHATSOEVER ARISING OUT OF THIS AGREEMENT SHALL BE LIMITED TO
+    THE LESSER OF THE TOTAL FEES PAID BY YOU TO MULTIVERSE (IF ANY) OR $10
+    (U.S.), EXCEPT WHERE NOT PERMITTED BY APPLICABLE LAW, IN WHICH CASE
+    MULTIVERSE'S LIABILITY SHALL BE LIMITED TO THE MINIMUM AMOUNT
+    PERMITTED BY SUCH APPLICABLE LAW.  ALL THE FOREGOING LIMITATIONS SHALL
+    APPLY EVEN IF MULTIVERSE HAS BEEN INFORMED OF THE POSSIBILITY OF SUCH
+    DAMAGES.  ALL THE FOREGOING LIMITATIONS ALSO APPLY WITH RESPECT TO
+    MULTIVERSE'S SUPPLIERS, LICENSORS, DISTRIBUTORS, CONTRACTORS AND
+    AGENTS.  SOME STATES DO NOT ALLOW THE EXCLUSION OR LIMITATION OF
+    INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION AND
+    EXCLUSION MAY NOT APPLY TO YOU.
+    
+7.  Indemnity. You agree that Multiverse and its licensors,
+    distributors, contractors and agents shall have no liability
+    whatsoever for any use You make of the Software. You shall indemnify
+    and hold harmless Multiverse and its licensors, suppliers,
+    distributors, contractors and agents from any claims, damages,
+    liabilities, costs and fees (including reasonable attorney fees)
+    arising from your use of the Software as well as from your failure to
+    comply with any term of this Agreement.  To the maximum extent
+    permitted by applicable law, You hereby release, and waive all claims
+    against, Multiverse and its licensors, suppliers, employees and agents
+    from any and all liability for claims, damages (actual and
+    consequential), costs and expenses (including litigation costs and
+    attorneys' fees) of every kind and nature, arising out of or in any
+    way connected with use of the Software.  If you are a California
+    resident, you waive your rights under California Civil Code § 1542,
+    which states, "A general release does not extend to claims which the
+    creditor does not know or suspect to exist in his favor at the time of
+    executing the release, which if known by him must have materially
+    affected his settlement with the debtor."  Residents of other states
+    and nations waive their rights under all analogous laws, statutes or
+    regulations.
+    
+8.  Termination.  This Agreement shall continue until terminated as set
+    forth in this section.  You many terminate this Agreement at any
+    time. Your rights under this Agreement will terminate automatically
+    without notice from Multiverse if You fail to comply with any term(s)
+    of this Agreement, including any attempt to transfer a copy of the
+    Software to another party except as provided in this Agreement.  Upon
+    termination, the Agreement granted hereunder shall terminate and You
+    shall immediately discontinue all use of the Software, but the terms
+    of this Agreement will otherwise remain in effect.
+    
+9.  Export Law Assurances.  In connection with the Software, you agree
+    to comply with all export laws and restrictions and regulations of the
+    Department of Commerce, the United States Department of Treasury
+    Office of Foreign Assets Control ("OFAC"), or other United States or
+    foreign agency or authority, and you agree not to export, or allow the
+    export or re-export of the Software in violation of any such
+    restrictions, laws or regulations. By using the Software, You agree to
+    the foregoing and represent and warrant that You are not located in,
+    under the control of, or a national or resident of any restricted
+    country.
+
+10. Interactive Data Visualization, Inc.  You acknowledge and agree that 
+    You are not a third party beneficiary of any agreements between 
+    Multiverse and its third party service providers and licensors, 
+    including, without limitation, IDV.  You acknowledge and agree that 
+    IDV is and shall be a third party beneficiary of this License 
+    Agreement. In the event You wish to charge a license or other fee, or 
+    benefit commercially or financially in any way from any creation 
+    developed using or created with the assistance of the Software and 
+    which includes any portion, excerpt, derivative (or otherwise) of 
+    SpeedTree, You will license SpeedTree directly from IDV at IDV's then 
+    current license fee(s). You understand that Multiverse will provide 
+    information necessary for contacting IDV for the purposes of licensing 
+    SpeedTree.
+    
+11. Miscellaneous.  No agency, partnership, joint venture, or
+    employment is created as a result of this Agreement and you do not
+    have any authority of any kind to bind Multiverse in any respect
+    whatsoever. The failure of either party to exercise in any respect any
+    right provided for herein shall not be deemed a waiver of any further
+    rights hereunder.  If any provision of this Agreement is found to be
+    unenforceable or invalid, that provision shall be limited or
+    eliminated to the minimum extent necessary so that this Agreement
+    shall otherwise remain in full force and effect and enforceable. This
+    Agreement is not assignable, transferable or sublicensable by you
+    except with Multiverse’s prior written consent. Multiverse may
+    transfer, assign or delegate this Agreement and its rights and
+    obligations without consent.  This Agreement shall be governed by and
+    construed in accordance with the laws of the state of California, as
+    if made within California between two residents thereof, and the
+    parties submit to the exclusive jurisdiction of the Superior Court of
+    San Francisco County and the United States District Court for the
+    Northern District of California.  Notwithstanding the foregoing
+    sentence, (but without limiting Multiverse’s right to seek injunctive
+    or other equitable relief in any court of competent jurisdiction), any
+    disputes arising with respect to this Agreement shall be referred to
+    an arbitrator affiliated with the Judicial Arbitration and Mediation
+    Services, Inc. ("JAMS").  The arbitrator shall be selected by joint
+    agreement of the parties.  In the event the parties cannot agree on an
+    arbitrator within thirty (30) days of the initiating party providing
+    the other party with written notice that it plans to seek arbitration,
+    the parties shall each select an arbitrator affiliated with JAMS,
+    which arbitrators shall jointly select a third such arbitrator to
+    resolve the dispute.  The written decision of the arbitrator shall be
+    final and binding on the parties.  The arbitration proceeding shall be
+    carried on and heard in San Francisco, California using the English
+    language and pursuant to the rules of (and administered by) JAMS.  In
+    any action or proceeding to enforce rights under this Agreement, the
+    prevailing party will be entitled to recover costs and attorneys'
+    fees.  Both parties agree that this Agreement is the complete and
+    exclusive statement of the mutual understanding of the parties and
+    supersedes and cancels all previous written and oral agreements,
+    communications and other understandings relating to the subject matter
+    of this Agreement and, except as otherwise provided herein, that all
+    modifications must be in a writing signed by both parties.
+    

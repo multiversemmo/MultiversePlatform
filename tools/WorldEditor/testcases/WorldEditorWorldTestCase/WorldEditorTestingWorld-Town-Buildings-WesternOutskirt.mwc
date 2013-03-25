@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="Abraham Burn's house" Mesh="human_shack_tall.mesh" TerrainOffest="0.015625" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="273.281" Zenith="90">
+    <Position x="-451524.8" y="152198.9" z="317372.8" />
+    <Scale x="0.8220566" y="0.8220566" z="0.8220566" />
+    <Orientation x="0" y="0.6865739" z="0" w="-0.72706" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_shack_tallshape-obj.0" MaterialName="human_shack_tall.human_shack_tall_texture" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Abraham's Blacksmith Shop" Mesh="BlackSmithFilled.mesh" TerrainOffest="-0.03125" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-427524.8" y="153145.4" z="298534.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="Blacksmith_ShopShape-lib.0" MaterialName="BlackSmithFilled.Blacksmith_Shop_Lambert" Show="True" />
+      <SubMeshInfo Name="barrel1_pasted__barrel_open_pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel2_pasted__barrel_closed_pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel2_pasted__barrel_open_pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel3_pasted__barrel_closed_pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel3_pasted__barrel_open_pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel5_pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel5_pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel6_pasted__pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="anvilShape-lib.0" MaterialName="BlackSmithFilled.anvil_material" Show="True" />
+      <SubMeshInfo Name="barrel6_pasted__pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel7_pasted__pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel7_pasted__pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel8_pasted__pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel8_pasted__pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel9_pasted__pasted__pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel9_pasted__pasted__pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel10_pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel10_pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel11_pasted__pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="Bellows_LargeShape-lib.0" MaterialName="BlackSmithFilled.BellowsLambert" Show="True" />
+      <SubMeshInfo Name="barrel11_pasted__pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel12_pasted__pasted__pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel12_pasted__pasted__pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel13_pasted__pasted__pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel13_pasted__pasted__pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel14_pasted__pasted__pasted__pasted__pasted__barrel_closed_pasted__pasted__pasted__pasted__pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel14_pasted__pasted__pasted__pasted__pasted__barrel_open_pasted__pasted__pasted__pasted__pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel_half_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="waterShape-lib.0" MaterialName="BlackSmithFilled.water_material" Show="True" />
+      <SubMeshInfo Name="Forge_SmallShape-lib.0" MaterialName="BlackSmithFilled.Forge_material" Show="True" />
+      <SubMeshInfo Name="barrel_half_broken_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="shieldShape-lib.0" MaterialName="BlackSmithFilled.shield_material" Show="True" />
+      <SubMeshInfo Name="wall_Shield_03_pasted__shieldShape-lib.0" MaterialName="BlackSmithFilled.shield_material" Show="True" />
+      <SubMeshInfo Name="large_ShieldShape-lib.0" MaterialName="BlackSmithFilled.shield_material" Show="True" />
+      <SubMeshInfo Name="wall_shield_01_pasted__shieldShape-lib.0" MaterialName="BlackSmithFilled.shield_material" Show="True" />
+      <SubMeshInfo Name="wall__Shield_02_pasted__shieldShape-lib.0" MaterialName="BlackSmithFilled.shield_material" Show="True" />
+      <SubMeshInfo Name="wall_Shield_05_pasted__shieldShape-lib.0" MaterialName="BlackSmithFilled.shield_material" Show="True" />
+      <SubMeshInfo Name="wall_AxeShape-lib.0" MaterialName="BlackSmithFilled.axe_material" Show="True" />
+      <SubMeshInfo Name="wall_Spear_02Shape-lib.0" MaterialName="BlackSmithFilled.spear_material" Show="True" />
+      <SubMeshInfo Name="wallSpear_01Shape-lib.0" MaterialName="BlackSmithFilled.spear_material" Show="True" />
+      <SubMeshInfo Name="wall2handed_02Shape-lib.0" MaterialName="BlackSmithFilled.SwordTwoHanded_material" Show="True" />
+      <SubMeshInfo Name="barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="wall_Spear_04Shape-lib.0" MaterialName="BlackSmithFilled.spear_material" Show="True" />
+      <SubMeshInfo Name="wall_SwordShape-lib.0" MaterialName="BlackSmithFilled.swordOneHanded_material" Show="True" />
+      <SubMeshInfo Name="wall_2handedShape-lib.0" MaterialName="BlackSmithFilled.SwordTwoHanded_material" Show="True" />
+      <SubMeshInfo Name="wall_Sword02Shape-lib.0" MaterialName="BlackSmithFilled.swordOneHanded_material" Show="True" />
+      <SubMeshInfo Name="wall_Sword_05Shape-lib.0" MaterialName="BlackSmithFilled.swordOneHanded_material" Show="True" />
+      <SubMeshInfo Name="wall_Sword_04Shape-lib.0" MaterialName="BlackSmithFilled.swordOneHanded_material" Show="True" />
+      <SubMeshInfo Name="wallSpear_03Shape-lib.0" MaterialName="BlackSmithFilled.spear_material" Show="True" />
+      <SubMeshInfo Name="wall_Sword_03Shape-lib.0" MaterialName="BlackSmithFilled.swordOneHanded_material" Show="True" />
+      <SubMeshInfo Name="sword_waterShape-lib.0" MaterialName="BlackSmithFilled.swordOneHanded_material" Show="True" />
+      <SubMeshInfo Name="barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel_pasted__barrel_closed_pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel_pasted__barrel_open_pasted__barrel_openShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel1_pasted__barrel_closed_pasted__barrel_closedShape-lib.0" MaterialName="BlackSmithFilled.barrel_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="metalroom" Mesh="FRW_metalroom.mesh" TerrainOffest="10" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="121596.9" y="20010" z="-213118.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="metal-lib.0" MaterialName="FRW_metalroom.purple" Show="True" />
+      <SubMeshInfo Name="objtorso_leotard-lib.0" MaterialName="BaseWhite" Show="True" />
+      <SubMeshInfo Name="objhead_asian_01-lib.0" MaterialName="BaseWhite" Show="True" />
+      <SubMeshInfo Name="objlegs_capris-lib.0" MaterialName="BaseWhite" Show="True" />
+      <SubMeshInfo Name="objhair_pony-lib.0" MaterialName="BaseWhite" Show="True" />
+      <SubMeshInfo Name="Box02-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box03-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box16-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box35-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box42-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box43-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box44-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box45-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box46-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box47-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box48-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Cylinder01-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Cylinder02-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box49-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box50-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box51-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box52-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box53-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box54-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box55-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box56-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box57-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box58-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box59-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box60-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box61-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box63-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box01-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box64-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box65-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Box66-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+      <SubMeshInfo Name="Object01-lib.0" MaterialName="FRW_metalroom.wood" Show="True" />
+      <SubMeshInfo Name="Object03-lib.0" MaterialName="FRW_metalroom.brownDark" Show="True" />
+      <SubMeshInfo Name="Object04-lib.0" MaterialName="FRW_metalroom.black" Show="True" />
+      <SubMeshInfo Name="Object06-lib.0" MaterialName="FRW_metalroom.red" Show="True" />
+      <SubMeshInfo Name="Object05-lib.0" MaterialName="FRW_metalroom.floor" Show="True" />
+      <SubMeshInfo Name="Box67-lib.0" MaterialName="FRW_metalroom.graymesh" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawnPt" TerrainOffset="20" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="128045.8" y="20020" z="-217680.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="stuck" TerrainOffset="20" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="128045.8" y="20020" z="-217680.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

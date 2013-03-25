@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="str_20_50_06" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-93593.96" y="166274.5" z="-88417.17" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_100_01" Mesh="LES_str_20x100.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-94294.27" y="166274.5" z="76789.91" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x100-lib.0" MaterialName="LES_str_20x100.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_02" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-94018.34" y="166274.5" z="-18210.09" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_01" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-59351.14" y="166274.5" z="16789.91" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_04" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-58905.58" y="166274.5" z="-53417.17" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_03" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-129041.3" y="166274.5" z="16532.88" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_05" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-128989.8" y="166274.5" z="-53417.17" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_01" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-94301.04" y="166274.5" z="16841.04" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_07" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-24814" y="166274.5" z="-18433.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_100_02" Mesh="LES_str_20x100.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-25063.18" y="166274.5" z="77204.12" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x100-lib.0" MaterialName="LES_str_20x100.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_08" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-23324.68" y="166274.5" z="-88433.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_02" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-94017.8" y="166274.5" z="-53433.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_03" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-23434.41" y="166274.5" z="-53433.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_04" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-25063.18" y="166274.5" z="16864.84" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_05" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-25063.18" y="166274.5" z="136520.8" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_06" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-94017.36" y="166274.5" z="136566.6" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_100_03" Mesh="LES_str_20x100.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="36936.82" y="166274.5" z="-53236.25" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x100-lib.0" MaterialName="LES_str_20x100.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_100_04" Mesh="LES_str_20x100.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-226063.2" y="166274.5" z="-53854.71" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x100-lib.0" MaterialName="LES_str_20x100.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_09" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="9936.821" y="166274.5" z="17103.09" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_07" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-22771.39" y="166274.5" z="-123433.4" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_08" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-93512.56" y="166274.5" z="-123433.4" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_09" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-164601" y="166274.5" z="-53433.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="intersection_10" Mesh="LES_str_int20x4.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-164063.2" y="166274.5" z="16166.4" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_int20x4-lib.0" MaterialName="LES_str_int20x4.LES_str_int20x4" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_10" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-58178.34" y="166274.5" z="-123433.4" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="str_20_50_11" Mesh="LES_str_20x50.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-164442" y="166274.5" z="-18433.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_str_20x50-lib.0" MaterialName="LES_str_20x50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

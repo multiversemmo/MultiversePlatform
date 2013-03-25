@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldSettings>
+  <ZoneSettings zoneName="Tom's Paradise">
+    <AutoSplatRules>
+      <long name="minHeight" value="0" />
+      <long name="maxHeight" value="450000" />
+      <textures>
+        <texture>
+          <string name="name" value="splatting_sand.dds" />
+          <int name="textureIndex" value="0" />
+        </texture>
+        <texture>
+          <string name="name" value="splatting_grass.dds" />
+          <int name="textureIndex" value="1" />
+        </texture>
+        <texture>
+          <string name="name" value="splatting_rock.dds" />
+          <int name="textureIndex" value="2" />
+        </texture>
+        <texture>
+          <string name="name" value="splatting_snow.dds" />
+          <int name="textureIndex" value="3" />
+        </texture>
+      </textures>
+      <heightRanges>
+        <heightRange>
+          <long name="height" value="0" />
+          <slopes>
+            <slope>
+              <float name="angleDegrees" value="0" />
+              <int name="textureIndex" value="0" />
+            </slope>
+            <slope>
+              <float name="angleDegrees" value="32.70422" />
+              <int name="textureIndex" value="0" />
+            </slope>
+            <slope>
+              <float name="angleDegrees" value="90" />
+              <int name="textureIndex" value="2" />
+            </slope>
+          </slopes>
+        </heightRange>
+        <heightRange>
+          <long name="height" value="50000" />
+          <slopes>
+            <slope>
+              <float name="angleDegrees" value="0" />
+              <int name="textureIndex" value="1" />
+            </slope>
+            <slope>
+              <float name="angleDegrees" value="32.70422" />
+              <int name="textureIndex" value="1" />
+            </slope>
+            <slope>
+              <float name="angleDegrees" value="90" />
+              <int name="textureIndex" value="2" />
+            </slope>
+          </slopes>
+        </heightRange>
+        <heightRange>
+          <long name="height" value="250000" />
+          <slopes>
+            <slope>
+              <float name="angleDegrees" value="0" />
+              <int name="textureIndex" value="2" />
+            </slope>
+            <slope>
+              <float name="angleDegrees" value="90" />
+              <int name="textureIndex" value="2" />
+            </slope>
+          </slopes>
+        </heightRange>
+        <heightRange>
+          <long name="height" value="450000" />
+          <slopes>
+            <slope>
+              <float name="angleDegrees" value="0" />
+              <int name="textureIndex" value="3" />
+            </slope>
+            <slope>
+              <float name="angleDegrees" value="32.70422" />
+              <int name="textureIndex" value="3" />
+            </slope>
+            <slope>
+              <float name="angleDegrees" value="90" />
+              <int name="textureIndex" value="2" />
+            </slope>
+          </slopes>
+        </heightRange>
+      </heightRanges>
+    </AutoSplatRules>
+  </ZoneSettings>
+</WorldSettings>

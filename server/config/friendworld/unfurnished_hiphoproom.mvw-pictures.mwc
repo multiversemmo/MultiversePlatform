@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="Profile_01" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="1581" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="20003.45" y="21581" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_02" Mesh="FRW_pict_hiphop_profile_02.mesh" TerrainOffest="2290" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="18520.45" y="22290" z="-231788.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_02.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_03" Mesh="FRW_pict_hiphop_profile_03.mesh" TerrainOffest="2290" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="19263.45" y="22290" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_03.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_04" Mesh="FRW_pict_hiphop_profile_04.mesh" TerrainOffest="2290" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="20003.45" y="22290" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_04.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_05" Mesh="FRW_pict_hiphop_profile_05.mesh" TerrainOffest="1581" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="18520.45" y="21581" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_05.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_06" Mesh="FRW_pict_hiphop_profile_06.mesh" TerrainOffest="1581" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="19263.45" y="21581" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_06.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_07" Mesh="FRW_pict_hiphop_profile_07.mesh" TerrainOffest="3715" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="20003.45" y="23715" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_07.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_08" Mesh="FRW_pict_hiphop_profile_08.mesh" TerrainOffest="3007" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="20003.45" y="23007" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_08.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_09" Mesh="FRW_pict_hiphop_profile_09.mesh" TerrainOffest="3006" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="19263.45" y="23006" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_09.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_10" Mesh="FRW_pict_hiphop_profile_10.mesh" TerrainOffest="3003" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="18520.45" y="23003" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_10.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_11" Mesh="FRW_pict_hiphop_profile_11.mesh" TerrainOffest="3712" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="19263.45" y="23712" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_11.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Profile_12" Mesh="FRW_pict_hiphop_profile_12.mesh" TerrainOffest="3716" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="18520.45" y="23716" z="-231790.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_12.profiles" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

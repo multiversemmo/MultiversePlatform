@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../Axiom" />
+    <content url="file://$MODULE_DIR$/../../Lib" />
+    <content url="file://$MODULE_DIR$/../../MultiverseClient">
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/_ReSharper.Multiverse" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/_ReSharper.MultiverseClient" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/bin/Debug" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/bin/Release" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/obj" />
+    </content>
+    <content url="file://$MODULE_DIR$/..">
+      <sourceFolder url="file://$MODULE_DIR$/.." isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../AssetImporter/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../AssetImporter/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../AssetPackager/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../AssetPackager/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../AxiomTester/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../BaseAssetPackager/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../BaseAssetPackager/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../ConversionTool/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../ConversionTool/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../Launcher/Launcher/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../Launcher/Launcher/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../MVImportTool/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../MVImportTool/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../MVSMTest/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../MapTool/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../ModelViewer/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../ModelViewer/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../MosaicCreator/MosaicCreator/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../MosaicCreator/MosaicCreator/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../NormalBump/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../NormalBump/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../TerrainAssembler/TerrainAssembler/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../TerrainGenerator/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../TerrainGenerator/obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../ToolTemplate/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../Toolbox/Bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../Toolbox/Obj" />
+      <excludeFolder url="file://$MODULE_DIR$/../Toolbox/_ReSharper.Toolbox" />
+      <excludeFolder url="file://$MODULE_DIR$/../WorldEditor/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../WorldEditor/obj" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../multiverse">
+      <sourceFolder url="file://$MODULE_DIR$/../../multiverse/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/../../multiverse/build" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../mvsm">
+      <excludeFolder url="file://$MODULE_DIR$/../../mvsm/_ReSharper.Axiom.SceneManagers.Multiverse" />
+      <excludeFolder url="file://$MODULE_DIR$/../../mvsm/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/../../mvsm/obj" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/javaee.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntryProperties />
+  </component>
+</module>
+

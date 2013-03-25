@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PythonProject.UnitTest", "PythonProject.UnitTest.csproj", "{9B3A2789-281F-403F-9877-108E56213BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PythonProject", "..\PythonProject.csproj", "{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageService", "..\..\LanguageService\LanguageService.csproj", "{DA16C614-B1B9-42F1-8513-4C9E601041CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC2A6AAF-7525-40D7-8009-18CB677D35DC}"
+	ProjectSection(SolutionItems) = preProject
+		localtestrun.testrunconfig = localtestrun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9B3A2789-281F-403F-9877-108E56213BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3A2789-281F-403F-9877-108E56213BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3A2789-281F-403F-9877-108E56213BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3A2789-281F-403F-9877-108E56213BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,503 @@
+Index: Engine/Core/BillboardSet.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Engine/Core/BillboardSet.cs,v
+retrieving revision 1.26
+diff -u -b -r1.26 BillboardSet.cs
+--- Engine/Core/BillboardSet.cs	25 Nov 2004 04:28:59 -0000	1.26
++++ Engine/Core/BillboardSet.cs	13 Dec 2004 01:31:23 -0000
+@@ -50,6 +50,7 @@
+     ///		by other classes to create effects.
+     /// </remarks>
+     public class BillboardSet : SceneObject, IRenderable {
++
+         #region Fields
+ 
+         /// <summary>Bounds of all billboards in this set</summary>
+@@ -121,7 +122,7 @@
+         /// <summary>
+         ///		Public constructor.  Should not be created manually, must be created using a SceneManager.
+         /// </summary>
+-        internal BillboardSet( string name, int poolSize) {
++        protected internal BillboardSet( string name, int poolSize) {
+             this.name = name;
+             this.PoolSize = poolSize;
+ 
+Index: Engine/Core/Entity.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Engine/Core/Entity.cs,v
+retrieving revision 1.32
+diff -u -b -r1.32 Entity.cs
+--- Engine/Core/Entity.cs	26 Nov 2004 22:12:33 -0000	1.32
++++ Engine/Core/Entity.cs	13 Dec 2004 01:31:25 -0000
+@@ -188,6 +188,7 @@
+ 			if(mesh.HasSkeleton && mesh.Skeleton != null) {
+ 				skeletonInstance = new SkeletonInstance(mesh.Skeleton);
+ 				skeletonInstance.Load();
++				Trace.TraceInformation("Loaded skeleton instance");
+ 			}
+ 
+ 			BuildSubEntities();
+@@ -195,11 +196,15 @@
+ 			// init the AnimationState, if the mesh is animated
+ 			if(mesh.HasSkeleton) {
+ 				mesh.InitAnimationState(animationState);
++				Trace.TraceInformation("Initialized animation state");
+ 				numBoneMatrices = skeletonInstance.BoneCount;
+ 				boneMatrices = new Matrix4[numBoneMatrices];
++				Trace.TraceInformation("Preparing temp blended buffers");
+ 				PrepareTempBlendedBuffers();
++				Trace.TraceInformation("Prepared temp blended buffers");
+ 			}
+ 
++
+ 			EvaluateHardwareSkinning();
+ 
+ 			// LOD default settings
+@@ -391,7 +396,7 @@
+ 		/// <param name="sceneObject">Reference to the object to attach.</param>
+ 		/// <param name="offsetOrientation">An adjustment to the orientation of the attached object, relative to the bone.</param>
+ 		public TagPoint AttachObjectToBone(string boneName, SceneObject sceneObject, Quaternion offsetOrientation) {
+-			return AttachObjectToBone(boneName, sceneObject, Quaternion.Identity, Vector3.UnitScale);
++			return AttachObjectToBone(boneName, sceneObject, Quaternion.Identity, Vector3.Zero);
+ 		}
+ 
+ 		/// <summary>
+@@ -438,6 +443,36 @@
+ 			sceneObject.NotifyAttached(tagPoint, true);
+ 		}
+ 
++		public void DetachObjectFromBone(string boneName, TagPoint tagPoint) {
++			SceneObject sceneObject = tagPoint.ChildObject;
++
++			if (!sceneObject.IsAttached) {
++				throw new AxiomException("SceneObject '{0}' is not already attached", sceneObject.Name);
++			}
++
++			if (!this.HasSkeleton) {
++				throw new AxiomException("Entity '{0}' has no skeleton to attach an object to.", this.name);
++			}
++
++			Bone bone = skeletonInstance.GetBone(boneName);
++
++			if (bone == null) {
++				throw new AxiomException("Entity '{0}' does not have a skeleton with a bone named '{1}'.", this.name, boneName);
++			}
++			skeletonInstance.RemoveTagPointFromBone(bone, tagPoint);
++			DetachObjectImpl(sceneObject);
++		}
++
++		/// <summary>
++		///		Internal implementation of detaching a 'child' object from this entity and 
++		///		clearing the assignment of the parent node to the child entity.
++		/// </summary>
++		/// <param name="sceneObject">Object to detach.</param>
++		protected void DetachObjectImpl(SceneObject sceneObject) {
++			sceneObject.NotifyAttached(null, false);
++			childObjectList.Remove(sceneObject);
++		}
++
+ 		/// <summary>
+ 		///		Used to build a list of sub-entities from the meshes located in the mesh.
+ 		/// </summary>
+@@ -816,13 +851,22 @@
+ 				UpdateAnimation();
+ 
+ 				// Update render queue with child objects (tag points)
+-				for(int i = 0; i < childObjectList.Count; i++) {
++				for (int i = 0; i < childObjectList.Count; i++) {
+ 					SceneObject child = childObjectList[i];
+ 					child.UpdateRenderQueue(queue);
+ 				}
+ 			}
+ 
+ 			// TODO: Add skeleton itself to the render queue
++			// HACK to display bones
++			// This won't work if the entity is not centered at the origin
++			// TODO work out a way to allow bones to be rendered when Entity not centered
++			if (displaySkeleton && this.HasSkeleton) {
++				for (ushort b = 0; b < numBoneMatrices; ++b) {
++					Bone bone = skeletonInstance.GetBone(b);
++					queue.AddRenderable(bone, RenderQueue.DEFAULT_PRIORITY, renderQueueID);
++				}
++			}
+ 		}
+ 
+ 		/// <summary>
+Index: Engine/Core/Mesh.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Engine/Core/Mesh.cs,v
+retrieving revision 1.33
+diff -u -b -r1.33 Mesh.cs
+--- Engine/Core/Mesh.cs	8 Sep 2004 00:25:04 -0000	1.33
++++ Engine/Core/Mesh.cs	13 Dec 2004 01:31:27 -0000
+@@ -54,7 +54,7 @@
+     ///    <p/>
+     ///    Multiple world objects can (indeed should) be created from a
+     ///    single mesh object - see the Entity class for more info.
+-    ///    The mesh object will have it's own default
++    ///    The mesh object will have its own default
+     ///    material properties, but potentially each world instance may
+     ///    wish to customize the materials from the original. When the object
+     ///    is instantiated into a scene node, the mesh material properties
+@@ -65,7 +65,7 @@
+     ///    As described above, because the mesh may have sections of differing
+     ///    material properties, a mesh is inherently a compound contruct,
+     ///    consisting of one or more SubMesh objects.
+-    ///    However, it strongly 'owns' it's SubMeshes such that they
++    ///    However, it strongly 'owns' its SubMeshes such that they
+     ///    are loaded / unloaded at the same time. This is contrary to
+     ///    the approach taken to hierarchically related (but loosely owned)
+     ///    scene nodes, where data is loaded / unloaded separately. Note
+@@ -584,8 +584,8 @@
+ 				bindIndex = bind.NextIndex;
+ 			}
+ 
+-			int bufferSize = Marshal.SizeOf(typeof(byte)) * 4;
+-			bufferSize += Marshal.SizeOf(typeof(float)) * numBlendWeightsPerVertex; 
++			int bufferSize = Marshal.SizeOf(typeof(byte)) * 4; // 4 bone indices
++			bufferSize += Marshal.SizeOf(typeof(float)) * numBlendWeightsPerVertex; // numBlendWeights boneWeights
+ 
+ 			HardwareVertexBuffer vbuf = 
+ 				HardwareBufferManager.Instance.CreateVertexBuffer(
+@@ -594,6 +594,7 @@
+ 					BufferUsage.StaticWriteOnly,
+ 					true); // use shadow buffer
+ 	                
++			
+ 			// bind new buffer
+ 			bind.SetBinding(bindIndex, vbuf);
+ 	        
+@@ -601,6 +602,8 @@
+ 
+ 			// add new vertex elements
+ 			// Note, insert directly after position to abide by pre-Dx9 format restrictions
++			VertexElement tmp = decl.GetElement(0);
++
+ 			if(decl.GetElement(0).Semantic == VertexElementSemantic.Position) {
+ 				idxElem = decl.InsertElement(1, bindIndex, 0, VertexElementType.UByte4, 
+ 					VertexElementSemantic.BlendIndices);
+@@ -619,43 +622,63 @@
+ 					VertexElementSemantic.BlendWeights);
+ 			}
+ 
+-			// get the bone assignment enumerator and move to the first one in the list
+-			IEnumerator i = boneAssignments.GetEnumerator();
+-			i.MoveNext();
+-
+ 			// Assign data
+ 			IntPtr ptr = vbuf.Lock(BufferLocking.Discard);
+ 
++			// DEBUG
++			int vertexSize = vbuf.VertexSize;
++			int vertexCount = vbuf.VertexCount;
++
+ 			unsafe {
+ 				byte* pBase = (byte*)ptr.ToPointer();
+ 
++				// DEBUG
++				byte* pOrig = pBase;
++
+ 				// Iterate by vertex
+ 				float* pWeight;
+ 				byte* pIndex;
+-				bool end = false;
++				// bool end = false;
+ 
+ 				for (int v = 0; v < targetVertexData.vertexCount; v++) {
+ 					/// Convert to specific pointers
+ 					pWeight = (float*)((byte*)pBase + weightElem.Offset);
+ 					pIndex = pBase + idxElem.Offset;
+ 
+-					for (int bone = 0; bone < numBlendWeightsPerVertex; bone++) {
+-						Pair result = (Pair)i.Current;
+-						VertexBoneAssignment ba = (VertexBoneAssignment)result.second;
++					Debug.Assert((byte*)pWeight - pOrig <= (vertexSize * vertexCount) - sizeof(float), "Read past end of bounds");
++					Debug.Assert(pIndex - pOrig <= (vertexSize * vertexCount) - sizeof(byte), "Read past end of bounds");
++
++					IList vbaList = boneAssignments.FindBucket(v);
++					int bone = 0;
++//					while ( 0; bone < numBlendWeightsPerVertex; bone++) {
++					foreach (VertexBoneAssignment ba in vbaList) {
++						Debug.Assert(ba.vertexIndex == v, "Mismatched vertex index");
+ 
+-						// Do we still have data for this vertex?
+-						if (ba.vertexIndex == v && !end) {
+ 							// If so, write weight
++						Debug.Assert((byte*)pWeight - pOrig <= (vertexSize * vertexCount) - 4, "wrote past end of bounds");
++						Debug.Assert(pIndex - pOrig <= (vertexSize * vertexCount) - 1, "wrote past end of bounds");
++
++//						Trace.TraceInformation(string.Format("Processing bone {0}/{1} for vertex {2}/{3} with pWeight of {4}", bone, vbaList.Count, v, vertexCount, (int)pWeight));
++
+ 							*pWeight++ = ba.weight;
+ 							*pIndex++ = (byte)ba.boneIndex;
+ 
+-							end = !i.MoveNext();
++						bone++;
++						if (bone >= numBlendWeightsPerVertex)
++							break;
+ 						}
+-						else {
++					while (bone < numBlendWeightsPerVertex) {
+ 							// Ran out of assignments for this vertex, use weight 0 to indicate empty
++
++						Debug.Assert((byte*)pWeight - pOrig <= (vertexSize * vertexCount) - 4, "wrote past end of bounds");
++						Debug.Assert(pIndex - pOrig <= (vertexSize * vertexCount) - 1, "wrote past end of bounds");
++
++						// Trace.TraceInformation(string.Format("Processing null bone {0}/{1} for vertex {2}/{3} with pWeight of {4}", bone, vbaList.Count, v, vertexCount, (int)pWeight));
++
+ 							*pWeight++ = 0.0f;
+ 							*pIndex++ = 0;
+-						}
++
++						bone++;
+ 					}
+ 
+ 					pBase += vbuf.VertexSize;
+@@ -663,6 +686,7 @@
+ 			}
+ 
+ 			vbuf.Unlock();
++
+         }
+ 
+         /// <summary>
+@@ -783,12 +807,16 @@
+         public void InitAnimationState(AnimationStateCollection animSet) {
+             Debug.Assert(skeleton != null, "Skeleton not present.");
+ 
++			Trace.TraceInformation("Initializing animation state");
+             // delegate the animation set to the skeleton
+             skeleton.InitAnimationState(animSet);
++			Trace.TraceInformation("Initialized animation state");
+ 
+             // Take the opportunity to update the compiled bone assignments
+             if(boneAssignmentsOutOfDate) {
++				Trace.TraceInformation("compiling bone assignments");
+                 CompileBoneAssignments();
++				Trace.TraceInformation("compiled bone assignments");
+             }
+ 
+             // compile bone assignments for each sub mesh
+@@ -796,7 +824,9 @@
+                 SubMesh subMesh = subMeshList[i];
+ 
+                 if(subMesh.boneAssignmentsOutOfDate) {
++					Trace.TraceInformation("compiling bone assignments for submesh {0} of {1}", i, subMeshList.Count);
+                     subMesh.CompileBoneAssignments();
++					Trace.TraceInformation("compiled bone assignments for submesh {0} of {1}", i, subMeshList.Count);
+                 }
+             } // for
+         }
+@@ -811,7 +841,7 @@
+         /// </remarks>
+         /// <param name="skeleton"></param>
+         public void NotifySkeleton(Skeleton skeleton) {
+-            skeleton = skeleton;
++            this.skeleton = skeleton;
+             skeletonName = skeleton.Name;
+         }
+ 
+@@ -872,51 +902,51 @@
+             int maxBones = 0;
+             int currentBones = 0;
+ 
+-            for(int i = 0; i < vertexCount; i++) {
++            for (int i = 0; i < vertexCount; i++) {
++				// Get the vertex bone assignment list for this vertex
++				ArrayList vbaList = (ArrayList)assignments.FindBucket(i);
+                 // gets the numbers of assignments for the current vertex
+-                currentBones = assignments.Count(i);
++                currentBones = vbaList.Count;
+ 
+                 // Deal with max bones update 
+                 // (note this will record maxBones even if they exceed limit)
+-                if(maxBones < currentBones) {
++                if (maxBones < currentBones) {
+                     maxBones = currentBones;
+                 }
+ 
+                 // does the number of bone assignments exceed limit?
+-                if(currentBones > Config.MaxBlendWeights) {
+-                    // TODO: Handle balancing of too many weights
++                if (currentBones > Config.MaxBlendWeights) {
++					string msg =
++						string.Format("WARNING: Mesh '{0}' bone assigment weights for vertex {1} exceed maximum of {2}", name, i, Config.MaxBlendWeights);
++					Trace.WriteLine(msg);
++					vbaList.Sort(new VertexBoneAssignmentWeightComparer());
++					vbaList.RemoveRange(Config.MaxBlendWeights, currentBones - Config.MaxBlendWeights);
++					Debug.Assert(false, "in here");
+                 }
+ 
+-                float totalWeight = 0.0f;
+-
+                 // Make sure the weights are normalised
+                 // Do this irrespective of whether we had to remove assignments or not
+                 //   since it gives us a guarantee that weights are normalised
+                 //  We assume this, so it's a good idea since some modellers may not
+-                IEnumerator iter = assignments.Find(i);
+ 
+-                if(iter == null) {
+-                    continue;
+-                }
+-
+-                while(iter.MoveNext()) {
+-                    VertexBoneAssignment vba = (VertexBoneAssignment)iter.Current;
++				float totalWeight = 0.0f;
++				foreach (VertexBoneAssignment vba in vbaList)
+                     totalWeight += vba.weight;
+-                }
+ 
+                 // Now normalise if total weight is outside tolerance
+                 if(!MathUtil.FloatEqual(totalWeight, 1.0f)) {
+-					// TODO: This is not correct, shouldn't be advancing the current iterator
+-					// Need to have another one that starts at the same position as the current
+-                    while(iter.MoveNext()) {
+-                        VertexBoneAssignment vba = (VertexBoneAssignment)iter.Current;
++					string msg =
++						string.Format("WARNING: Mesh '{0}' bone assigment weights for vertex {1} add up to: {2}", name, i, totalWeight);
++					Trace.WriteLine(msg);
++					foreach (VertexBoneAssignment vba in vbaList)
+                         vba.weight /= totalWeight;
+                     }
+                 }
+-            }
+ 
+-            // Warn that we've reduced bone assignments
+-            if(maxBones > Config.MaxBlendWeights) {
++			Trace.TraceInformation("Done rationalizing");
++
++			// Warn that we've reduced bone assignmentss
++            if (maxBones > Config.MaxBlendWeights) {
+                 string msg = 
+                     string.Format("WARNING: Mesh '{0}' includes vertices with more than {1} bone assignments.  The lowest weighted assignments beyond this limit have been removed.", name, Config.MaxBlendWeights);
+                 Trace.WriteLine(msg);
+@@ -1247,30 +1277,32 @@
+             if(!isManuallyDefined) {
+                 // get the resource data from MeshManager
+                 Stream data = MeshManager.Instance.FindResourceData(name);
+-
+-                // instantiate a mesh reader and pass in the stream data
+-                OgreMeshReader meshReader = new OgreMeshReader(data);
+-
+                 string extension = Path.GetExtension( name );
+ 
+-                if(extension != ".mesh") {
+-                    data.Close();
+-
+-                    throw new AxiomException("Unsupported mesh format '{0}'", extension);
+-                }
+-
+                 // mesh loading stats
+                 int before, after;
+ 
+                 // get the tick count before loading the mesh
+                 before = Environment.TickCount;
+ 
++				if (extension == ".mesh") {
++					// instantiate a mesh reader and pass in the stream data
++					OgreMeshReader meshReader = new OgreMeshReader(data);
+                 // import the .mesh file
+                 meshReader.Import(this);
++				} else if (extension == ".xml") {
++					OgreXmlMeshReader meshReader = new OgreXmlMeshReader(data);
++					// import the .mesh file
++					meshReader.Import(this);
++				} else {
++                    data.Close();
++                    throw new AxiomException("Unsupported mesh format '{0}'", extension);
++                }
+ 				
+                 // get the tick count after loading the mesh
+                 after = Environment.TickCount;
+ 
++
+                 // record the time elapsed while loading the mesh
+                 System.Diagnostics.Trace.WriteLine(string.Format("Mesh: Loaded '{0}', took {1}ms", this.name,  (after - before)));
+ 
+Index: Engine/Core/Root.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Engine/Core/Root.cs,v
+retrieving revision 1.5
+diff -u -b -r1.5 Root.cs
+--- Engine/Core/Root.cs	19 Nov 2004 04:13:18 -0000	1.5
++++ Engine/Core/Root.cs	13 Dec 2004 01:31:28 -0000
+@@ -248,13 +248,26 @@
+ 		/// <param name="autoCreateWindow"></param>
+ 		/// <returns></returns>
+ 		public RenderWindow Initialize(bool autoCreateWindow) {			
++			return this.Initialize(autoCreateWindow, null);
++		}
++
++		/// <summary>
++		/// 
++		/// </summary>
++		/// <param name="autoCreateWindow"></param>
++		/// <returns></returns>
++		public RenderWindow Initialize(bool autoCreateWindow, string windowName) {
+ 			Debug.Assert(activeRenderSystem != null, "Engine cannot be initialized if a valid RenderSystem is not also initialized.");
+ 
+ 			// initialize the current render system
+-			RenderWindow window = activeRenderSystem.Initialize(autoCreateWindow);
++			RenderWindow window;
++			if (windowName != null)
++				window = activeRenderSystem.Initialize(autoCreateWindow, windowName);
++			else
++				window = activeRenderSystem.Initialize(autoCreateWindow);
+ 
+ 			// if they chose to auto create a window, also initialize several subsystems
+-			if(autoCreateWindow) {
++			if (autoCreateWindow) {
+ 				OneTimePostWindowInit();
+ 			}
+ 
+Index: Engine/Core/SubMesh.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Engine/Core/SubMesh.cs,v
+retrieving revision 1.14
+diff -u -b -r1.14 SubMesh.cs
+--- Engine/Core/SubMesh.cs	31 Mar 2004 03:07:45 -0000	1.14
++++ Engine/Core/SubMesh.cs	13 Dec 2004 01:31:28 -0000
+@@ -129,12 +129,11 @@
+             int maxBones = parent.RationalizeBoneAssignments(vertexData.vertexCount, boneAssignmentList);
+ 
+             // no bone assignments?  get outta here
+-            if(maxBones == 0) {
++            if (maxBones == 0) {
+                 return;
+             }
+ 
+ 			parent.CompileBoneAssignments(boneAssignmentList, maxBones, vertexData);
+-
+             boneAssignmentsOutOfDate = false;
+         }
+ 
+@@ -143,6 +142,14 @@
+         #region Properties
+ 
+         /// <summary>
++		///		Gets/Sets the name of this SubMesh.
++		/// </summary>
++		public string Name {
++			get { return name; }
++			set { name = value; }
++		}
++		
++		/// <summary>
+         ///		Gets/Sets the name of the material this SubMesh will be using.
+         /// </summary>
+         public string MaterialName {
+@@ -199,6 +206,14 @@
+             get { return isMaterialInitialized; }
+         }
+ 
++		/// <summary>
++		///		Gets bone assigment list
++		/// </summary>
++		internal Map BoneAssignmentList {
++			get { return boneAssignmentList; }
++		}
++
++
+         #endregion
+     }
+ }

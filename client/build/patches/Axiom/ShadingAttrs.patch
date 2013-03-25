@@ -1,0 +1,25 @@
+Index: Engine/Graphics/Enums.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Engine/Graphics/Enums.cs,v
+retrieving revision 1.21
+diff -b -u -r1.21 Enums.cs
+--- Engine/Graphics/Enums.cs	3 Dec 2004 15:08:16 -0000	1.21
++++ Engine/Graphics/Enums.cs	13 Dec 2004 01:17:03 -0000
+@@ -898,14 +898,17 @@
+ 		/// <summary>
+ 		///		Draw with a single color.
+ 		///	 </summary>
++		[ScriptEnum("flat")]
+ 		Flat,
+ 		/// <summary>
+ 		///		Interpolate color across primitive vertices.
+ 		///	 </summary>
++		[ScriptEnum("gouraud")]
+ 		Gouraud,
+ 		/// <summary>
+ 		///		Draw everything (2 sided geometry).
+ 		///	 </summary>
++		[ScriptEnum("phong")]
+ 		Phong
+ 	}
+ 

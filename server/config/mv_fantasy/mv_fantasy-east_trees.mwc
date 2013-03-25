@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Boundary Name="east_trees" Priority="50">
+    <PointCollection>
+      <Point x="-254094" y="7015.937" z="3918359" />
+      <Point x="-307917.3" y="3527.7" z="3896473" />
+      <Point x="-504784.9" y="5746.409" z="3886706" />
+      <Point x="-760195.3" y="127215.6" z="3954764" />
+      <Point x="-885195.3" y="155667.1" z="4042392" />
+      <Point x="-897195.3" y="144081.4" z="4170904" />
+      <Point x="-840195.3" y="140987" z="4256345" />
+      <Point x="-755195.3" y="144390.9" z="4303210" />
+      <Point x="-651195.3" y="132280.5" z="4350332" />
+      <Point x="-362195.3" y="62970.03" z="4470787" />
+      <Point x="-365265.3" y="17399.22" z="4639947" />
+      <Point x="-66265.23" y="3517.106" z="4597237" />
+      <Point x="-173195.3" y="13127.33" z="4283496" />
+      <Point x="-151057" y="7711.051" z="4200486" />
+      <Point x="-206499.6" y="1492.12" z="4107486" />
+    </PointCollection>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Beech" Instances="12" Scale="10000" ScaleVariance="1000" Filename="Beech_RT.tre" />
+      <Tree Name="Beech - Fall" Instances="30" Scale="10000" ScaleVariance="1000" Filename="Beech_RT_Fall.tre" />
+      <Tree Name="Venus Tree" Instances="50" Scale="10000" ScaleVariance="1000" Filename="VenusTree_RT.tre" />
+      <Tree Name="Weeping Willow" Instances="12" Scale="10000" ScaleVariance="1000" Filename="WeepingWillow_RT.tre" />
+    </Forest>
+    <Grass Name="grass_01">
+      <PlantType Name="Colorized Grass 2" ImageName="grass2" Instances="500" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.8" G="0.8509804" B="0.8156863" />
+      <PlantType Name="Colorized Grass 1" ImageName="grass1" Instances="150" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.6" G="0.8588235" B="0.682353" />
+      <PlantType Name="Pampas Grass" ImageName="pampas" Instances="300" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="east_trees_02" Priority="50">
+    <PointCollection>
+      <Point x="-83613.31" y="5063.038" z="4598658" />
+      <Point x="-140613.3" y="2623.267" z="4712054" />
+      <Point x="-247737.5" y="-1275.253" z="4794958" />
+      <Point x="-525627.1" y="2026.26" z="5032958" />
+      <Point x="-812733.3" y="66987.41" z="4667368" />
+      <Point x="-784713.1" y="141796.7" z="4363368" />
+      <Point x="-576883.3" y="64079.52" z="4225631" />
+      <Point x="-387613.3" y="57593.81" z="4391592" />
+    </PointCollection>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Beech" Instances="75" Scale="10000" ScaleVariance="1000" Filename="Beech_RT.tre" />
+      <Tree Name="Venus Tree" Instances="30" Scale="10000" ScaleVariance="1000" Filename="VenusTree_RT.tre" />
+    </Forest>
+    <Grass Name="grass_02">
+      <PlantType Name="Colorized Grass 1" ImageName="grass1" Instances="300" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.6666667" G="0.8" B="0.6745098" />
+    </Grass>
+    <Grass Name="grass_07">
+      <PlantType Name="Pampas Grass" ImageName="pampas" Instances="200" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Road Name="east_trees_road" HalfWidth="2">
+    <PointCollection>
+      <Point x="-898780.9" y="142910.5" z="3494816" />
+      <Point x="-846427.8" y="148818.9" z="3476259" />
+      <Point x="-788572.6" y="144134.2" z="3415420" />
+      <Point x="-748669.5" y="147571" z="3346959" />
+      <Point x="-703094.1" y="139353.1" z="3263959" />
+      <Point x="-664482.3" y="123230.2" z="3207959" />
+      <Point x="-605437" y="94766.29" z="3177769" />
+      <Point x="-499437" y="45334.99" z="3152319" />
+      <Point x="-396437" y="18233.2" z="3163541" />
+      <Point x="-302437" y="24003.47" z="3213807" />
+      <Point x="-181437" y="24110.06" z="3356889" />
+      <Point x="-43437" y="156.4423" z="3506895" />
+      <Point x="103563" y="6375.531" z="3542035" />
+    </PointCollection>
+  </Road>
+  <StaticObject Name="spear_torch_03" Mesh="spear.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="600" AllowHeightAdjustment="True">
+    <Position x="-865579.9" y="153587.2" z="3519247" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1.1" y="1.1" z="1.1" />
+    <SubMeshes>
+      <SubMeshInfo Name="spear_polySurfaceShape1-lib.0/spear____Default____Standard__" MaterialName="spear.spear____Default____Standard__" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spear_torch_03" TerrainOffset="-0.125" AllowHeightAdjustment="True">
+    <Position x="-899867.8" y="142055.4" z="3491816" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <ParticleEffect ParticleEffectName="smoke" ParticleScale="1" VelocityScale="1" />
+  </Waypoint>
+  <StaticObject Name="east_Tom's_road_statue" Mesh="st_m_lean_drk_full.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1179.688" AllowHeightAdjustment="True">
+    <Position x="-899747.3" y="141291.6" z="3493867" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="2" y="2" z="2" />
+    <SubMeshes>
+      <SubMeshInfo Name="stb_m_lean_drk-lib.0" MaterialName="st_m_lean_drk_full.marble" Show="True" />
+      <SubMeshInfo Name="st_m_lean_drk-lib.0" MaterialName="st_m_lean_drk_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

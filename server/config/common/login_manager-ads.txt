@@ -1,0 +1,8 @@
+# Agent message type advertisements
+# See: http://update.multiverse.net/wiki/index.php/Multiverse_Messaging_System#Advertisements
+
+mv.REGISTER_TEMPLATE
+mv.GET_MARKER
+mv.GENERATE_OBJECT
+mv.SAVE_OBJECT
+mv.GET_INSTANCE_INFO

@@ -1,0 +1,32 @@
+proc showSkeleton(string $rootNode) {
+    string $childs[] = `listRelatives -fullPath -children 
+                        -type joint -allDescendents $rootNode`;
+    for ($child in $childs) {
+    	setAttr($child + ".visibility", on);
+    }
+   	setAttr($rootNode + ".visibility", on);
+};
+
+proc scaleSkeleton(string $rootNode) {
+    string $childs[] = `listRelatives -fullPath -children 
+                        -type joint -allDescendents $rootNode`;
+    for ($child in $childs) {
+    	setAttr($child + ".scaleX", 1.0);
+    	setAttr($child + ".scaleY", 1.0);
+    	setAttr($child + ".scaleZ", 1.0);
+    }
+   	setAttr($rootNode + ".scaleX", 1.0);
+   	setAttr($rootNode + ".scaleY", 1.0);
+   	setAttr($rootNode + ".scaleZ", 1.0);
+};
+
+proc showAllJoints() {
+  string $joints[] = `ls -type joint`;
+    for ($joint in $joints) {
+    	setAttr($joint + ".visibility", on);
+    }
+}  
+
+showAllJoints();
+currentUnit -l millimeter -a degree -t ntsc;
+

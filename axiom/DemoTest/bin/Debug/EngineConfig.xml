@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<EngineConfig xmlns="http://tempuri.org/EngineConfig.xsd">
+	<FilePath type="Folder" src="c:/Downloads/ogre1.4.9/Samples/Media/fonts"/>
+	<FilePath type="Folder" src="c:/Downloads/ogre1.4.9/Samples/Media/gui"/>
+	<FilePath type="Folder" src="c:/Downloads/ogre1.4.9/Samples/Media/materials/programs"/>
+	<FilePath type="Folder" src="c:/Downloads/ogre1.4.9/Samples/Media/materials/scripts"/>
+	<FilePath type="Folder" src="c:/Downloads/ogre1.4.9/Samples/Media/materials/textures"/>
+	<FilePath type="Folder" src="c:/Downloads/ogre1.4.9/Samples/Media/models"/>
+	<FilePath type="Folder" src="c:/Downloads/ogre1.4.9/Samples/Media/overlays"/>
+	<FilePath type="Folder" src="c:/Downloads/ogre1.4.9/Samples/Media/packs"/>
+	<FilePath type="Folder" src="c:/Downloads/ogre1.4.9/Samples/Media/particle"/>
+</EngineConfig>
+ 

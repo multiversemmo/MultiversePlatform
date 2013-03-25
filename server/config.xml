@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<server>
+  <!-- each name must be unique even if going to same handler -->
+  <messagehandlers>
+    <handler>
+      <id>1</id>
+      <name>LoginHandler</name>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>2</id>
+      <name>DirLocHandler</name>
+      <msgclass>multiverse.server.msghandlers.DirLocHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>3</id>
+      <name>ComHandler</name>
+      <msgclass>multiverse.server.msghandlers.ComHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>4</id>
+      <name>LoginResponse</name>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>5</id>
+      <name>LogoutHandler</name>
+      <msgclass>multiverse.server.msghandlers.LogoutHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>6</id>
+      <name>TerrainMessage</name>
+      <comment>server sends this to client to tell it what the terrain is</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>7</id>
+      <name>SkyboxMessage</name>
+      <comment>server sends this message to client to tell it what skybox to use</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>8</id>
+      <name>NewObjectMessage</name>
+      <comment>server sends this message when there is a new object</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>9</id>
+      <name>OrientHandler</name>
+      <msgclass>multiverse.server.msghandlers.OrientHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>10</id>
+      <name>FreeObject</name>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>11</id>
+      <name>AcquireObject</name>
+      <msgclass>multiverse.server.msghandlers.AcquireHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>12</id>
+      <name>AcquireResponse</name>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>13</id>
+      <name>CommandMessage</name>
+      <msgclass>multiverse.server.msghandlers.CommandHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>14</id>
+      <name>MarsEquipHandler</name>
+      <msgclass>multiverse.mars.msghandlers.EquipHandler</msgclass>
+    </handler>
+    
+    <handler>
+      <id>15</id>
+      <name>EquipResponseHandler</name>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>16</id>
+      <name>UnequipMessage</name>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>17</id>
+      <name>UnequipResponse</name>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>18</id>
+      <name>AttachMessage</name>
+      <comment>Server sends to client as a result of equpping an item</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>19</id>
+      <name>DetachMessage</name>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>20</id>
+      <name>CombatMessage</name>
+      <comment>client is telling us about a combat action its taking</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>21</id>
+      <name>AutoAttackMessage</name>
+      <comment>client is attacking some object and wishes to repeat</comment>
+      <msgclass>multiverse.server.msghandlers.AutoAttackHandler</msgclass>
+    </handler>
+
+<!--
+    <handler>
+      <id>22</id>
+      <name>StatusUpdateMessage</name>
+      <comment>server is telling the client its current stats</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+-->
+
+    <handler>
+      <id>23</id>
+      <name>MarsDamageMessage</name>
+      <comment>server is telling the client that something/one is doing dmg and the amount of dmg</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>24</id>
+      <name>DropMessage</name>
+      <comment>User is dropping an item</comment>
+      <msgclass>multiverse.server.msghandlers.DropHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>25</id>
+      <name>DropResponseMessage</name>
+      <comment>User is dropping an item</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>26</id>
+      <name>PlayAnimation</name>
+      <comment>server is telling client to play an animation</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>27</id>
+      <name>PlaySound</name>
+      <comment>server is telling client to play a sound for an object</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>28</id>
+      <name>PlayAmbientSound</name>
+      <comment>server is telling client to play an ambient sound</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>29</id>
+      <name>FollowTerrain</name>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>30</id>
+      <name>Portal</name>
+      <comment>the server is telling the client that it is going to another server</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>31</id>
+      <name>AmbientLightMessage</name>
+      <comment>the server is telling the client about the ambient lighting it should use</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>32</id>
+      <name>LightMessage</name>
+      <comment>the server is telling the client the list of lights for an obj</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>33</id>
+      <name>TradeRequestMessage</name>
+      <comment>requester wants to trade with trade partner</comment>
+      <msgclass>multiverse.mars.msghandlers.TradeRequestHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>34</id>
+      <name>TradeEstablishedMessage</name>
+      <comment>server is letting entity know trade has been established</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>35</id>
+      <name>TradeAcceptedMessage</name>
+      <comment>an entity has accepted the trade</comment>
+      <msgclass>multiverse.mars.msghandlers.TradeAcceptedHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>36</id>
+      <name>TradeEndedMessage</name>
+      <comment>trade session is over</comment>
+      <msgclass>multiverse.server.msghandlers.DummyHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>1024</id>
+      <name>ServerHandler</name>
+      <msgclass>multiverse.server.msghandlers.ServerHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>1025</id>
+      <name>RegisterEntityMessage</name>
+      <comment>proxy server to world server msg, attempt to register an entity</comment>
+      <msgclass>multiverse.server.msghandlers.RegisterEntityHandler</msgclass>
+    </handler>
+
+    <handler>
+      <id>1026</id>
+      <name>RegisterEntityResponse</name>
+      <comment>response</comment>
+      <msgclass>multiverse.server.msghandlers.RegisterEntityResponse</msgclass>
+    </handler>
+
+    <handler>
+      <id>1027</id>
+      <name>ConResetMessage</name>
+      <comment>when a user disconnects - proxy sends this to world server</comment>
+      <msgclass>multiverse.server.msghandlers.ConResetHandler</msgclass>
+    </handler>
+
+
+  </messagehandlers>
+
+  <!-- map events to their event handlers -->
+  <eventhandlers>
+    <handler>
+      <handlerclass>multiverse.server.npcmodule.NpcEventHandler</handlerclass>
+      <event>multiverse.server.events.ComEvent</event>
+      <event>multiverse.server.events.LocEvent</event>
+      <event>multiverse.server.events.TimerEvent</event>
+      <event>multiverse.server.events.DeathEvent</event>
+      <event>multiverse.mars.events.MarsDamageEvent</event>
+      <event>multiverse.server.events.DirLocEvent</event>
+      <event>multiverse.server.events.FreeObjectEvent</event>
+      <event>multiverse.server.events.ScriptEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.TimerHandler</handlerclass>
+      <event>multiverse.server.events.TimerEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.PortalHandler</handlerclass>
+      <event>multiverse.server.events.PortalEvent</event>
+    </handler>
+   
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.ComHandler</handlerclass>
+      <event>multiverse.server.events.ComEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.MarsDirLocHandler</handlerclass>
+      <event>multiverse.server.events.DirLocEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.LoginHandler</handlerclass>
+      <event>multiverse.server.events.LoginEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.LogoutHandler</handlerclass>
+      <event>multiverse.server.events.LogoutEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.MarsNewObjectHandler</handlerclass>
+      <event>multiverse.server.events.NotifyNewObjectEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.NewObjectHandler</handlerclass>
+      <event>multiverse.server.events.NewObjectEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.OrientHandler</handlerclass>
+      <event>multiverse.server.events.OrientEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.FreeObjectHandler</handlerclass>
+      <event>multiverse.server.events.FreeObjectEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.AcquireHandler</handlerclass>
+      <event>multiverse.server.events.AcquireEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.MarsCommandHandler</handlerclass>
+      <event>multiverse.server.events.CommandEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.MarsEquipHandler</handlerclass>
+      <event>multiverse.mars.events.EquipEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.EquipResponseHandler</handlerclass>
+      <event>multiverse.server.events.EquipResponseEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.AttachHandler</handlerclass>
+      <event>multiverse.server.events.AttachEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.MarsAutoAttackHandler</handlerclass>
+      <event>multiverse.server.events.AutoAttackEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.CombatHandler</handlerclass>
+      <event>multiverse.mars.events.CombatEvent</event>
+    </handler>
+
+<!--
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.StatusUpdateHandler</handlerclass>
+      <event>multiverse.mars.events.StatusUpdateEvent</event>
+    </handler>
+-->
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.MarsDamageHandler</handlerclass>
+      <event>multiverse.mars.events.MarsDamageEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.DropHandler</handlerclass>
+      <event>multiverse.server.events.DropEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.DetachHandler</handlerclass>
+      <event>multiverse.server.events.DetachEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.UnequipHandler</handlerclass>
+      <event>multiverse.server.events.UnequipEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.DropResponseHandler</handlerclass>
+      <event>multiverse.mars.events.DropResponseEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.NotifyPlayAnimationHandler</handlerclass>
+      <event>multiverse.server.events.NotifyPlayAnimationEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.NotifyPlaySoundHandler</handlerclass>
+      <event>multiverse.server.events.NotifyPlaySoundEvent</event>
+    </handler>
+
+<!--
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.ServerHandler</handlerclass>
+      <event>multiverse.server.events.ServerEvent</event>
+    </handler>
+-->
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.RegisterEntityHandler</handlerclass>
+      <event>multiverse.server.events.RegisterEntityEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.RegisterEntityResponse</handlerclass>
+      <event>multiverse.server.events.RegisterEntityResponseEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.ConResetHandler</handlerclass>
+      <event>multiverse.server.events.ConResetEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.TradeRequestHandler</handlerclass>
+      <event>multiverse.mars.events.TradeRequestEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.mars.eventhandlers.TradeAcceptedHandler</handlerclass>
+      <event>multiverse.mars.events.TradeAcceptedEvent</event>
+    </handler>
+
+    <handler>
+      <handlerclass>multiverse.server.eventhandlers.JScriptHandler</handlerclass>
+      <event>multiverse.server.events.JScriptEvent</event>
+    </handler>
+
+  </eventhandlers>
+</server>

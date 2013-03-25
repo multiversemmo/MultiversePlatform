@@ -1,0 +1,35 @@
+<NameValueTemplate>
+ <ObjectTypes><!-- This lists the types of objects that this Template would be appropriate for -->
+   <StaticObject/>
+   <Marker/>
+   <Region/>
+   <Road/>
+ </ObjectTypes>
+ <Name>Mob</Name>
+ <Properties>
+   <Property>
+     <Name>Mob Name</Name>
+     <Type>String</Type>
+   </Property>
+   <Property>
+     <Name>Mesh Name</Name>
+     <Type>String</Type>
+   </Property>
+   <Property>
+     <Name>Scale</Name>
+     <Type>Float</Type>
+     <Default>1.0</Default>
+   </Property>
+   <Property>
+     <Name>Behaviour</Name>
+     <Type>Enum</Type>
+     <Enums>
+       <Value>Sentry</Value>
+       <Value>Roaming</Value>
+       <Value>Agro</Value>
+       <Value>Passive</Value>
+     </Enums>
+     <Default>Sentry</Default>
+   </Property>
+ </Properties>
+</NameValueTemplate> 

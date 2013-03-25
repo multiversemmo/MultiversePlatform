@@ -1,0 +1,50 @@
+# where is the multiverse directory where the tarfile was unpacked
+# linux looks something like MV_HOME="/home/cedeno/multiverse"
+export MV_HOME="c:\cygwin\multiverse"
+
+# world id
+export MV_WORLDNAME="sampleworld"
+
+# this should match the database entry (5040 by default)
+export MV_WORLDMGRPORT="5040"
+
+# the messaging server port
+export MV_MSGSVR_HOSTNAME="localhost"
+export MV_MSGSVR_PORT="20374"
+
+# you should change this to where the proxy server is running
+export MV_PROXYSERVER="localhost"
+export MV_PROXYPORT="5050"
+
+# you MUST set this to where you put JDBC
+export JDBC="c:\mysql-connector-java-3.1.14\mysql-connector-java-3.1.14-production-bin.jar"
+
+# set this for windows so that windows can access java jre
+# linux should probably already have in the path
+export JAVA_HOME="c:\Program Files\Java\jdk1.5.0_05"
+
+# set this for windows so that windows can access the mysql client
+# linux should probably already have in the path
+export MYSQL_HOME="c:\Program Files\MySQL\MySQL Server 4.1"
+
+export DB_NAME="multiverse"
+export DB_USER="root"
+export DB_PASSWORD="test"
+export DB_HOST="localhost"
+
+if [ $(uname -o) == "Cygwin" ]; then
+    export PATH=`cygpath "$JAVA_HOME"/bin`:`cygpath "$MYSQL_HOME"`/bin:.:$PATH
+    export JYTHON=$MV_HOME\\other\\jython_2_1.jar
+    export RHINO=$MV_HOME\\other\\rhino1_5R5\\js.jar
+    export GETOPT=$MV_HOME\\other\\java-getopt-1.0.11.jar
+    export MV_JAR=$MV_HOME\\dist\\lib\\multiverse.jar
+    export MARS_JAR=$MV_HOME\\dist\\lib\\mars.jar
+    export CLASSPATH="${RHINO};${JDBC};${MV_JAR};${MARS_JAR};${GETOPT};${JYTHON};."
+else
+    export JYTHON="$MV_HOME/other/jython_2_1.jar"
+    export RHINO="$MV_HOME/other/rhino1_5R5/js.jar"
+    export GETOPT="$MV_HOME/other/java-getopt-1.0.11.jar"
+    export MV_JAR="$MV_HOME/dist/lib/multiverse.jar"
+    export MARS_JAR="$MV_HOME/dist/lib/mars.jar"
+    export CLASSPATH="${RHINO}:${JDBC}:${MV_JAR}:${MARS_JAR}:${GETOPT}:${JYTHON}:."
+fi

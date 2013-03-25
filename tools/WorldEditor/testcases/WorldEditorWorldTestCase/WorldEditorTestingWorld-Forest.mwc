@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Boundary Name="Forest" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-686354.6" y="140327.7" z="164003.4" />
+      <Point WorldViewSelect="True" x="-501354.6" y="133834.8" z="-23022.62" />
+      <Point WorldViewSelect="True" x="-349354.6" y="145442.5" z="42432.96" />
+      <Point WorldViewSelect="True" x="-361354.6" y="152458.2" z="162458" />
+    </PointCollection>
+    <Grass Name="vegies">
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Marigold" ImageName="marigold" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Colorized Grass 1" ImageName="grass1" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="0" G="0.5019608" B="0" />
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Sunflower" ImageName="sunflower" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Colorized Grass 2" ImageName="grass2" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="0" G="0.5019608" B="0.2509804" />
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Bird of Paradise" ImageName="birdofparadise" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Cattail" ImageName="cattail" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Pampas Grass" ImageName="pampas" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Rose" ImageName="rose" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Beech - Fall" Filename="Beech_RT_Fall.tre" Scale="10000" ScaleVariance="1000" Instances="50" />
+      <Tree Name="Azalea - Pink" Filename="Azalea_RT_Pink.tre" Scale="10000" ScaleVariance="1000" Instances="50" />
+      <Tree Name="Red Delicious Apple - Apples" Filename="RDApple_RT_Apples.tre" Scale="10000" ScaleVariance="1000" Instances="50" />
+    </Forest>
+  </Boundary>
+  <StaticObject Name="Lookout Tower #1" Mesh="tower.mesh" TerrainOffest="0.03125" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="154.6478" Zenith="90">
+    <Position x="-404341.8" y="146661.2" z="110777.3" />
+    <Scale x="1.029375" y="1.029375" z="1.029375" />
+    <Orientation x="0" y="0.9756261" z="0" w="0.2194396" />
+    <SubMeshes>
+      <SubMeshInfo Name="watchtowerShape-lib.0" MaterialName="tower.lambert1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="WolfSpawn1" TerrainOffset="0" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="-420843" y="140532.4" z="36446.12" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <StaticObject Name="Tom Smith's House" Mesh="human_house.mesh" TerrainOffest="-0.046875" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="251.9952" Zenith="90">
+    <Position x="-204992.4" y="155509.5" z="314901.1" />
+    <Scale x="1.151792" y="1.151792" z="1.151792" />
+    <Orientation x="0" y="0.8090419" z="0" w="-0.5877511" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="c_road_01" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="45552.18" y="67200" z="317476" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_02" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="27687.61" y="67200" z="317476" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_03" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="9821.4" y="67200" z="317496" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_04" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-8042.91" y="67200" z="317476" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_05" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="10306.38" y="67200" z="281556" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_06" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="28188.83" y="67200" z="281556" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_07" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-7622.762" y="67200" z="281556" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_08" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="46059.45" y="67200" z="281556" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_09" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-25517.82" y="67200" z="281556" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_10" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-25917.79" y="67200" z="317496" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Boundary Name="walk_treeline_south" Priority="50">
+    <PointCollection>
+      <Point x="53063.7" y="71000" z="326336.9" />
+      <Point x="52063.7" y="71000" z="330413.8" />
+      <Point x="-77064.17" y="71000" z="328899.1" />
+      <Point x="-77645.38" y="71000" z="322899.1" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Red Delicious Apple - Spring" Filename="RDApple_RT_Spring.tre" Scale="10000" ScaleVariance="1000" Instances="15" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="walk_treeline_north" Priority="50">
+    <PointCollection>
+      <Point x="52863.18" y="71000" z="276167.3" />
+      <Point x="52092.26" y="71000" z="272367.3" />
+      <Point x="-82285.83" y="71000" z="273621.9" />
+      <Point x="-82996.09" y="71000" z="279167.3" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Red Delicious Apple - Spring" Filename="RDApple_RT_Spring.tre" Scale="10000" ScaleVariance="1000" Instances="15" />
+    </Forest>
+  </Boundary>
+  <Waypoint Name="spawn2" TerrainOffset="0.703125" AllowHeightAdjustment="True">
+    <Position x="63505.45" y="71222.45" z="300303" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Road Name="promenade_yello" HalfWidth="4">
+    <PointCollection>
+      <Point x="-28983.37" y="71000" z="298778.6" />
+      <Point x="62016.63" y="71078.34" z="299927.1" />
+    </PointCollection>
+  </Road>
+  <StaticObject Name="c_road_11" Mesh="colonnade.mesh" TerrainOffest="-3900" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-43355.16" y="67100" z="281485" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_12" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-43783.37" y="67200" z="317478.6" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_13" Mesh="colonnade.mesh" TerrainOffest="-3900" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-61233.37" y="67100" z="281487.8" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="c_road_14" Mesh="colonnade.mesh" TerrainOffest="-3800" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-61663.37" y="67200" z="317454.5" />
+    <Scale x="2" y="2" z="2" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Road Name="christopher lane" HalfWidth="2">
+    <PointCollection>
+      <Point x="261109.2" y="71000" z="295593.1" />
+      <Point x="63742.53" y="71244.63" z="299991.3" />
+    </PointCollection>
+  </Road>
+  <Road Name="promenade wide" HalfWidth="12">
+    <PointCollection>
+      <Point x="-22439.7" y="71000" z="298271.3" />
+      <Point x="-87350.61" y="71000" z="299271.3" />
+    </PointCollection>
+  </Road>
+  <Boundary Name="hilltop trees" Priority="50">
+    <PointCollection>
+      <Point x="-374885.2" y="71000" z="564793.6" />
+      <Point x="-527499.5" y="86862.39" z="485793.6" />
+      <Point x="-477701.7" y="126574.8" z="264484.6" />
+      <Point x="-535544.3" y="108957.7" z="82793.63" />
+      <Point x="-371112.7" y="71000" z="52793.63" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Beech" Filename="Beech_RT.tre" Scale="10000" ScaleVariance="1000" Instances="45" />
+    </Forest>
+  </Boundary>
+  <StaticObject Name="demo2building" Mesh="demo2building.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1E+07" CastShadows="True">
+    <Position x="-145560.6" y="71000" z="299812" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="91" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="bar-mesh.0" MaterialName="demo2building.wood_mat" Show="True" />
+      <SubMeshInfo Name="carpet_trim2-mesh.0" MaterialName="demo2building.brass_rail_mat" Show="True" />
+      <SubMeshInfo Name="stairs_front-mesh.0" MaterialName="demo2building.stairs_exterior_mat" Show="True" />
+      <SubMeshInfo Name="seating_conference-mesh.0" MaterialName="demo2building.wood_mat" Show="False" />
+      <SubMeshInfo Name="tables_alcove-mesh.0" MaterialName="demo2building.wood_mat" Show="True" />
+      <SubMeshInfo Name="tables_bar-mesh.0" MaterialName="demo2building.wood_mat" Show="True" />
+      <SubMeshInfo Name="railings-mesh.0" MaterialName="demo2building.brass_rail_mat" Show="True" />
+      <SubMeshInfo Name="alcove_dividers-mesh.0" MaterialName="demo2building.divider_mat" Show="True" />
+      <SubMeshInfo Name="tables_bar_legs-mesh.0" MaterialName="demo2building.brass_rail_mat" Show="True" />
+      <SubMeshInfo Name="tables_alcove_legs-mesh.0" MaterialName="demo2building.brass_rail_mat" Show="True" />
+      <SubMeshInfo Name="alcoves-mesh.0" MaterialName="demo2building.alcove_walls_mat" Show="True" />
+      <SubMeshInfo Name="alcoves-mesh.1" MaterialName="demo2building.alcove_trim_mat" Show="True" />
+      <SubMeshInfo Name="entrance-mesh.0" MaterialName="demo2building.entrance_wall_mat" Show="True" />
+      <SubMeshInfo Name="entrance-mesh.1" MaterialName="demo2building.entrance_waterdrop_mat" Show="True" />
+      <SubMeshInfo Name="entrance-mesh.2" MaterialName="demo2building.entrance_brass_mat" Show="True" />
+      <SubMeshInfo Name="upper_floors-mesh.0" MaterialName="demo2building.waterdrop_mat" Show="True" />
+      <SubMeshInfo Name="upper_floors-mesh.1" MaterialName="demo2building.floor_carpet_mat" Show="True" />
+      <SubMeshInfo Name="upper_floors-mesh.2" MaterialName="demo2building.interior_walls_mat" Show="True" />
+      <SubMeshInfo Name="building-mesh.0" MaterialName="demo2building.exterior_wall_mat" Show="True" />
+      <SubMeshInfo Name="building-mesh.1" MaterialName="demo2building.exterior_wall_trim_mat" Show="True" />
+      <SubMeshInfo Name="building-mesh.2" MaterialName="demo2building.floor_mat" Show="True" />
+      <SubMeshInfo Name="building-mesh.3" MaterialName="demo2building.floor_trim_mat" Show="True" />
+      <SubMeshInfo Name="building-mesh.4" MaterialName="demo2building.floor_accent_mat" Show="True" />
+      <SubMeshInfo Name="building-mesh.5" MaterialName="demo2building.floor_carpet_mat2" Show="True" />
+      <SubMeshInfo Name="building-mesh.6" MaterialName="demo2building.floor_dance_mat" Show="True" />
+      <SubMeshInfo Name="building-mesh.7" MaterialName="demo2building.interior_walls_mat2" Show="True" />
+      <SubMeshInfo Name="fountain-mesh.0" MaterialName="demo2building.tile_work" Show="True" />
+      <SubMeshInfo Name="fountain-mesh.1" MaterialName="demo2building.tile_accent" Show="True" />
+      <SubMeshInfo Name="fountain-mesh.2" MaterialName="demo2building.wood_seat" Show="True" />
+      <SubMeshInfo Name="bar_stage-mesh.0" MaterialName="demo2building.bar_floor" Show="True" />
+      <SubMeshInfo Name="bar_stage-mesh.1" MaterialName="demo2building.bar_step" Show="True" />
+      <SubMeshInfo Name="bar_stair-mesh.0" MaterialName="demo2building.bar_floor" Show="True" />
+      <SubMeshInfo Name="bar_stair-mesh.1" MaterialName="demo2building.bar_step" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="perceptionRadius" Value="10000000" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <Waypoint Name="interior_fountain_02" TerrainOffset="2000" AllowHeightAdjustment="True">
+    <Position x="-131581.1" y="73000" z="299766.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="waterfountain" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Boundary Name="interior_fountain" Priority="50">
+    <PointCollection>
+      <Point x="-128583.9" y="71000" z="298889.4" />
+      <Point x="-128483.9" y="71000" z="300602.8" />
+      <Point x="-129283.9" y="71000" z="302085.3" />
+      <Point x="-130783.9" y="71000" z="302754.4" />
+      <Point x="-132283.9" y="71000" z="302881.1" />
+      <Point x="-133785.3" y="71000" z="302171.6" />
+      <Point x="-134683.9" y="71000" z="300809" />
+      <Point x="-134783.9" y="71000" z="299159.3" />
+      <Point x="-133883.9" y="71000" z="297479.4" />
+      <Point x="-132583.9" y="71000" z="296693.4" />
+      <Point x="-130883.9" y="71000" z="296579.4" />
+      <Point x="-129183.9" y="71000" z="297408.6" />
+    </PointCollection>
+    <Water Height="73400" />
+    <Sound Filename="waterflow.wav" Type="Ambient" Gain="0" Loop="False" />
+  </Boundary>
+  <Waypoint Name="spawn3" TerrainOffset="0" AllowHeightAdjustment="True">
+    <Position x="-57471.36" y="71000" z="298699.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Boundary Name="dance_floor_music" Priority="50">
+    <PointCollection>
+      <Point x="-169805.7" y="71000" z="289717.8" />
+      <Point x="-152472.5" y="71000" z="282298.9" />
+      <Point x="-140201.3" y="71000" z="282298.9" />
+      <Point x="-128905.7" y="71000" z="294446.8" />
+      <Point x="-128905.7" y="71000" z="308826.2" />
+      <Point x="-140526.6" y="71000" z="320298.9" />
+      <Point x="-153905.7" y="71000" z="320143.3" />
+      <Point x="-169905.7" y="71000" z="311974.1" />
+    </PointCollection>
+    <Sound Filename="stage.ogg" Type="Ambient" Gain="0" Loop="False" />
+  </Boundary>
+  <Waypoint Name="spawn4" TerrainOffset="20800" AllowHeightAdjustment="True">
+    <Position x="-112679.7" y="91800" z="325631.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Boundary Name="fountain_sound" Priority="60">
+    <PointCollection>
+      <Point x="-133146" y="71000" z="288849.6" />
+      <Point x="-144645.6" y="71000" z="299849.6" />
+      <Point x="-130798.2" y="71000" z="308849.6" />
+      <Point x="-118581.1" y="71000" z="306113.6" />
+      <Point x="-118260.5" y="71000" z="291849.6" />
+    </PointCollection>
+    <Sound Filename="waterflow.wav" Type="Ambient" Gain="0" Loop="False" />
+  </Boundary>
+</WorldObjectCollection>

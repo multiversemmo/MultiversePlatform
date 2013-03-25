@@ -1,0 +1,1007 @@
+global proc UpdateGUI()
+{
+	// mesh controls
+	string $xml_val = `checkBox -query -v meshExportXML`;
+	
+	if($xml_val == "1")
+	{
+		checkBox -edit -en true meshBoneAssign;
+		checkBox -edit -en true meshNormals;
+		checkBox -edit -en true meshDiffuseColor;
+		checkBox -edit -en true meshTexCoords;
+		checkBox -edit -en true meshSub;
+		checkBox -edit -en true meshBinary;
+	}
+	else
+	{
+		checkBox -edit -en false meshBoneAssign;
+		checkBox -edit -en false meshNormals;
+		checkBox -edit -en false meshDiffuseColor;
+		checkBox -edit -en false meshTexCoords;
+		checkBox -edit -en false meshSub;
+		checkBox -edit -en false meshBinary;
+	}
+	
+	// material controls
+	//string $mat_val = `checkBox -query -v materialExport`;
+	
+	//if($mat_val == "1")
+	//{
+	//	text -edit -en true materialLbl;
+	//	textField -edit -en true materialTxt;
+	//}
+	//else
+	//{
+	//	text -edit -en false materialLbl;
+	//	textField -edit -en false materialTxt;
+	//}
+	
+	// animation controls
+	string $anim_val = `checkBox -query -v animExport`;
+	
+	if($anim_val == "1")
+	{
+		checkBox -edit -en true animBinary;
+		checkBox -edit -en true animAnims;
+	}
+	else
+	{
+		checkBox -edit -en false animBinary;
+		checkBox -edit -en false animAnims;
+	}
+	
+	string $anim_in_val = `checkBox -query -v animAnims`;
+	string $anim_val = `checkBox -query -en animAnims`;
+	
+	if($anim_val == "1" && $anim_in_val == "1")
+	{
+		text -edit -en true animDefsLbl;
+		textScrollList -edit -en true animDefLst;
+	
+		text -edit -en true animAddLbl;
+		text -edit -en true animNameLbl;
+		textField -edit -en true animNameTxt;
+		text -edit -en true animStart;
+		textField -edit -en true animStartTxt;
+		text -edit -en true animEnd;
+		textField -edit -en true animEndTxt;
+		text -edit -en true animSkip;
+		textField -edit -en true animSkipTxt;
+		button -edit -en true animBttn;
+	}
+	else
+	{
+		text -edit -en false animDefsLbl;
+		textScrollList -edit -en false animDefLst;
+	
+		text -edit -en false animAddLbl;
+		text -edit -en false animNameLbl;
+		textField -edit -en false animNameTxt;
+		text -edit -en false animStart;
+		textField -edit -en false animStartTxt;
+		text -edit -en false animEnd;
+		textField -edit -en false animEndTxt;
+		text -edit -en false animSkip;
+		textField -edit -en false animSkipTxt;
+		button -edit -en false animBttn;
+	}
+}
+
+global proc AddAnim()
+{
+	string $name = `textField -query -text animNameTxt`;
+	
+	if($name != "")
+	{
+		int $num_items = `textScrollList -query -numberOfItems animDefLst`;
+		
+		int $i;
+		for($i = 0; $i < $num_items; $i++)
+		{
+			int $s = $i + 1;
+			textScrollList -edit -sii $s animDefLst;
+			string $anims[] = `textScrollList -query -si animDefLst`;
+			string $buffer[];
+			tokenize $anims[$i] "\" " $buffer;
+			int $compare = `strcmp $name $buffer[0]`;
+			if($compare == 0)
+			{
+				textScrollList -edit -da animDefLst;
+				textScrollList -edit -da animDefLst;
+				error -sl false "Animation name has to be unique";
+			}
+		}
+		
+		string $step_val = `textField -query -text animSkipTxt`;
+		string $start_val = `textField -query -text animStartTxt`;
+		string $end_val = `textField -query -text animEndTxt`;
+		
+		if($step_val == "")
+			error -sl false "Step value cannot be Zero";
+			
+		string $new_anim = "\"" + $name + " " + $start_val + " " + $end_val + " " + $step_val + "\"";
+		textScrollList -edit -append $new_anim -da animDefLst;
+		
+		textField -edit -text "" animNameTxt;
+		textField -edit -text "1" animSkipTxt;
+		textField -edit -text "0" animStartTxt;
+		textField -edit -text "0" animEndTxt;
+		
+		button -edit -en false animRBttn;	
+		textScrollList -edit -da animDefLst;	
+	}
+	else
+		error -sl false "No Name for the animation specified";	
+}
+
+global proc PreRemoveAnim()
+{
+	string $obj[] = `textScrollList -query -si animDefLst`;
+	
+	if($obj[0] != "")
+		button -edit -en true animRBttn;
+	else
+		button -edit -en true animRBttn;
+}
+
+global proc RemoveAnim()
+{
+	string $obj[] = `textScrollList -query -si animDefLst`;
+	textScrollList -edit -ri $obj[0] animDefLst;
+	button -edit -en false animRBttn;	
+	textScrollList -edit -da animDefLst;
+}
+
+global proc GetOutputDir()
+{
+	string $directory = `OgreGetFolder`;
+	$directory = fromNativePath($directory);
+	$directory += "/";
+	textField -edit -text $directory exportOutputTxt;
+}
+
+global proc WriteSettings()
+{
+	// Export parameters
+	fileInfo "Ogre_OutputDir" `textField -query -fileName exportOutputTxt`;
+	fileInfo "Ogre_OutputFile" `textField -query -fileName exportXMLTxt`;
+	fileInfo "Ogre_ExportOption" `radioButton -query -sl exportEverything`;
+	
+	// Advanced options
+	fileInfo "Ogre_TexCoords" `radioButton -query -sl normUVs`;
+	//fileInfo "Ogre_Triangulate" `checkBox -query -v advTriangulate`;
+		
+	// Animation
+	fileInfo "Ogre_Skeleton" `checkBox -query -v animExport`;
+	fileInfo "Ogre_SkeletonBin" `checkBox -query -v animBinary`; 
+	fileInfo "Ogre_IncludeAnims" `checkBox -query -v animAnims`;
+	
+	int $num_items = `textScrollList -query -numberOfItems animDefLst`;
+	string $animations;	
+	int $i;
+	for($i = 0; $i < $num_items; $i++)
+	{
+		int $s = $i + 1;
+		textScrollList -edit -sii $s animDefLst;
+		string $anims[] = `textScrollList -query -si animDefLst`;
+		string $buffer[];
+		int $numTokens = `tokenize $anims[0] "\"" $buffer`;
+		$animations += $buffer[0] + ".";			
+	}
+	fileInfo "Ogre_Animations" $animations;
+	
+	// Material
+	fileInfo "Ogre_Material" `checkBox -query -v materialExport`;
+	
+	// Mesh
+	fileInfo "Ogre_Mesh" `checkBox -query -v meshExportXML`;
+	fileInfo "Ogre_Bone" `checkBox -query -v meshBoneAssign`; 
+	fileInfo "Ogre_Normals" `checkBox -query -v meshNormals`;
+	fileInfo "Ogre_Colors" `checkBox -query -v meshDiffuseColor`;
+	fileInfo "Ogre_UVS" `checkBox -query -v meshTexCoords`;
+	fileInfo "Ogre_SubMesh" `checkBox -query -v meshBinary`;
+	fileInfo "Ogre_MeshBin" `checkBox -query -v meshSub`;		
+}
+
+global proc ReadSettings()
+{
+	// Export parameters
+	
+	string $value[] = `fileInfo -q "Ogre_OutputDir"`;
+	if($value[0] != "")
+		textField -edit -text $value[0] exportOutputTxt;
+	
+	$value = `fileInfo -q "Ogre_OutputFile"`;
+	if($value[0] != "")
+		textField -edit -text $value[0] exportXMLTxt;
+	
+	$value = `fileInfo -q "Ogre_ExportOption"`;
+	
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			radioButton -edit -sl exportEverything;
+		else
+			radioButton -edit -sl exportSelected;
+	}
+		
+	// Advanced options
+	
+	$value = `fileInfo -q "Ogre_TexCoords"`;
+	
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			radioButton -edit -sl normUVs;
+		else
+			radioButton -edit -sl mayaUVs;
+	}
+		
+	//$value = `fileInfo -q "Ogre_Triangulate"`;
+	
+	//if($value[0] != "")
+	//{
+	//	if($value[0] == 1)
+	//		checkBox -edit -v true advTriangulate;
+	//	else
+	//		checkBox -edit -v false advTriangulate;
+	//}
+			
+	// Animation
+	$value = `fileInfo -q "Ogre_Skeleton"`;
+	
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true animExport;
+		else
+			checkBox -edit -v false animExport;
+	}
+		
+	$value = `fileInfo -q "Ogre_SkeletonBin"`;
+	
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true animBinary;
+		else
+			checkBox -edit -v false animBinary;
+	}		
+	
+	$value = `fileInfo -q "Ogre_IncludeAnims"`;
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true animAnims;
+		else
+			checkBox -edit -v false animAnims;
+	}
+		
+	$value = `fileInfo -q "Ogre_Animations"`;
+	
+	if($value[0] != "")
+	{
+		string $buffer[];
+		int $numTokens = `tokenize $value[0] "." $buffer`;	
+		int $i;
+		for($i = 0; $i < $numTokens; $i++)
+		{
+			string $entry = "\"" + $buffer[$i] + "\"";
+			textScrollList -edit -append $entry animDefLst;			
+		}
+	}
+		
+	// Material
+	$value = `fileInfo -q "Ogre_Material"`;
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true materialExport;
+		else
+			checkBox -edit -v false materialExport;
+	}
+	
+	// Mesh
+	$value = `fileInfo -q "Ogre_Mesh"`;
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true meshExportXML;
+		else
+			checkBox -edit -v false meshExportXML;
+	}
+	
+	$value = `fileInfo -q "Ogre_Bone"`;
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true meshBoneAssign;
+		else
+			checkBox -edit -v false meshBoneAssign;
+	}
+	
+	$value = `fileInfo -q "Ogre_Normals"`;
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true meshNormals;
+		else
+			checkBox -edit -v false meshNormals;
+	}
+	
+	$value = `fileInfo -q "Ogre_Colors"`;
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true meshDiffuseColor;
+		else
+			checkBox -edit -v false meshDiffuseColor;
+	}
+		
+	$value = `fileInfo -q "Ogre_UVS"`;
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true meshTexCoords;
+		else
+			checkBox -edit -v false meshTexCoords;
+	}
+	
+	$value = `fileInfo -q "Ogre_SubMesh"`;
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true meshBinary;
+		else
+			checkBox -edit -v false meshBinary;
+	}
+	
+	$value = `fileInfo -q "Ogre_MeshBin"`;
+	if($value[0] != "")
+	{
+		if($value[0] == 1)
+			checkBox -edit -v true meshSub;
+		else
+			checkBox -edit -v false meshSub;
+	}
+	
+	UpdateGUI();
+}
+
+global proc Export()
+{
+	// flags to pass
+	// -msh (whether to export mesh or not) - done
+	// -bin (whether to export mesh to binary or not) - done
+	// -bsk (whether to export skeletion to binary or not) - done
+	// -sn  (whether to include submesh name or not) - done
+	// -mat (whether to export material or not) - done
+	// -skl (whether to export skeleton or not) - done
+	// -nrm (whether to export normals or not) - done
+	// -uv  (whether to export uvs or not) - done
+	// -col (whether to export colors or not) - done
+	// -vba (whether to export vertex bone assignments) - done
+	// -fuv (whether to flip uvs or not) - done
+	// -n (name of exported file) - done
+	// -dir (directory to export to) - done
+	// -ani (animations to export, can be many of these) - done
+	
+	// write out settings to scene file
+	WriteSettings();
+	
+	// check to see if we need to triangulate
+	//string $triangulate = `checkBox -query -v advTriangulate`;
+	
+	//if($triangulate == "1")
+	//	polyTriangulate;
+	
+	// start command
+	string $command = "OgreExport";
+	
+	// get the output file directory
+	string $dir_text = `textField -query -text exportOutputTxt`;
+	
+	if($dir_text != "")
+	{
+		$dir_text = fromNativePath($dir_text);
+		$command += " -dir \"" + $dir_text + "\"";
+	}
+	else
+		error -sl false "No Output Directory specified under Export Options";
+	
+	// get the output file name
+	string $file_text = `textField -query -text exportXMLTxt`;
+	
+	if($file_text != "")
+		$command += " -n \"" + $file_text + "\"";
+	else
+		error -sl false "No XML Filename specified under Export Options";
+	
+	// see whether or not to export mesh out	
+	string $mesh_bool = `checkBox -query -v meshExportXML`;
+	
+	// see whether or not to export materials
+	string $mat_bool = `checkBox -query -v materialExport`;
+	
+	if($mesh_bool == 1)
+	{	
+		$command += " -msh " + $mesh_bool;
+		
+		$command += " -mat " + $mat_bool;
+	
+		// see whether or not to export skeleton
+		string $skel_bool = `checkBox -query -v animExport`;
+	
+		$command += " -skl " + $skel_bool;
+	
+		// see whether or not to export normals
+		string $norm_bool = `checkBox -query -v meshNormals`;
+	
+		$command += " -nrm " + $norm_bool;
+	
+		// see whether or not to export uvs
+		string $uv_bool = `checkBox -query -v meshTexCoords`;
+	
+		$command += " -uvs " + $uv_bool;
+	
+		// see whether or not to flip uvs
+		string $uv_flip_bool = `radioButton -query -sl normUVs`;
+	
+		$command += " -fuv " + $uv_flip_bool;
+	
+		// see whether or not to export color
+		string $diff_color_bool = `checkBox -query -v meshDiffuseColor`;
+	
+		$command += " -col " + $diff_color_bool;
+	
+		// see whether or not to export bone assignments
+		string $bone_bool = `checkBox -query -v meshBoneAssign`;
+	
+		$command += " -vba " + $bone_bool;
+	
+		// see whether or not to export submeshes
+		string $subMeshes = `checkBox -query -v meshSub`;
+	
+		$command += " -sn " + $subMeshes;
+	}
+	
+	// see whether to export animation stuff
+	string $anim_exp = `checkBox -q -v animExport`;
+	
+	if($anim_exp == 1)
+	{
+		// see whether or not to include animations
+		string $anim_check = `checkBox -query -v animAnims`;
+		
+		if($anim_check == 1)
+		{
+			// check for animations to export
+			string $valid = `textScrollList -query -en animDefLst`;
+			
+			string $animations = "\"";
+			if($valid == "1")
+			{
+				int $num_items = `textScrollList -query -numberOfItems animDefLst`;
+		
+				int $i;
+				for($i = 0; $i < $num_items; $i++)
+				{
+					int $s = $i + 1;
+					textScrollList -edit -sii $s animDefLst;
+					string $anims[] = `textScrollList -query -si animDefLst`;
+					string $buffer[];
+					int $numTokens = `tokenize $anims[0] "\"" $buffer`;
+					$animations += $buffer[0] + " ";			
+				}
+			}
+			$animations += "\"";
+			$command += " -ani " + $animations;
+		}
+	}
+	
+	// call and end command	
+	evalEcho($command);
+	
+	string $file_path = `file -q -loc OgreExporter.mel`;
+	string $buffer[];
+	int $numTokens = `tokenize $file_path "//" $buffer`;
+	int $i;
+	$file_path = "";
+	for($i = 0; $i < $numTokens-2; $i++)
+	{
+		$file_path += $buffer[$i] + "/";		
+	}
+	
+	$file_path = fromNativePath($file_path);
+	$file_path = $file_path + "temp/";
+		
+	// see whether or not to export to binary
+	string $binary = `checkBox -query -v meshBinary`;
+	
+	if($mesh_bool && $binary)
+	{
+		//$command += " -bin " + $binary;
+		system("start " + $file_path + "OgreXMLConverter.exe " + "\"" + $dir_text + $file_text + ".mesh.xml\"");
+	}
+	
+	// see whether or not to export skeletion to binary
+	string $skl_binary = `checkBox -query -v animBinary`;
+	
+	if($anim_exp && $skl_binary)
+	{	
+		//$command += " -bsk " + $skl_binary;
+		system("start " + $file_path + "OgreXMLConverter.exe " + "\"" + $dir_text + $file_text + ".skeleton.xml\"");
+	}
+	
+	// call the material upgrader
+	if($mat_bool == 1)
+	{
+		system("start " + $file_path + "OgreMaterialUpgrade.exe " + "\"" + $dir_text + $file_text + ".material\"");
+	}
+		
+	//if($triangulate == "1")
+	//{
+		//undo;
+		//undo;
+	//}
+	
+	textScrollList -edit -da animDefLst;
+}
+
+global proc Preview()
+{
+	// write out settings to scene file
+	WriteSettings();
+	
+	// check to see if we need to triangulate
+	//string $triangulate = `checkBox -query -v advTriangulate`;
+	
+	//if($triangulate == "1")
+	//	polyTriangulate;
+	
+	// start command
+	string $command = "OgreExport";
+	
+	// get the output file directory
+	string $file_path = `file -q -loc OgreExporter.mel`;
+	string $buffer[];
+	int $numTokens = `tokenize $file_path "//" $buffer`;
+	int $i;
+	$file_path = "";
+	for($i = 0; $i < $numTokens-2; $i++)
+	{
+		$file_path += $buffer[$i] + "/";		
+	}
+	string $dir_text = $file_path;
+	
+	if($dir_text != "")
+	{
+		$dir_text = fromNativePath($dir_text);
+		$dir_text = $dir_text + "temp/";
+		$command += " -dir \"" + $dir_text + "\"";
+	}
+	else
+		error -sl false "No Output Directory specified under Export Options";
+		
+	// get the output file name
+	string $file_text = "default";
+		
+	if($file_text != "")
+		$command += " -n \"" + $file_text + "\"";
+	else
+		error -sl false "No XML Filename specified under Export Options";
+	
+	// see whether or not to export mesh out	
+	string $mesh_bool = `checkBox -query -v meshExportXML`;
+	
+	// see whether or not to export materials
+	string $mat_bool = `checkBox -query -v materialExport`;
+	
+	if($mesh_bool == 1)
+	{	
+		$command += " -msh " + $mesh_bool;
+		
+		$command += " -mat " + $mat_bool;
+	
+		// see whether or not to export skeleton
+		string $skel_bool = `checkBox -query -v animExport`;
+	
+		$command += " -skl " + $skel_bool;
+	
+		// see whether or not to export normals
+		string $norm_bool = `checkBox -query -v meshNormals`;
+	
+		$command += " -nrm " + $norm_bool;
+	
+		// see whether or not to export uvs
+		string $uv_bool = `checkBox -query -v meshTexCoords`;
+	
+		$command += " -uvs " + $uv_bool;
+	
+		// see whether or not to flip uvs
+		string $uv_flip_bool = `radioButton -query -sl normUVs`;
+	
+		$command += " -fuv " + $uv_flip_bool;
+	
+		// see whether or not to export color
+		string $diff_color_bool = `checkBox -query -v meshDiffuseColor`;
+	
+		$command += " -col " + $diff_color_bool;
+	
+		// see whether or not to export bone assignments
+		string $bone_bool = `checkBox -query -v meshBoneAssign`;
+	
+		$command += " -vba " + $bone_bool;
+	
+		// see whether or not to export submeshes
+		string $subMeshes = `checkBox -query -v meshSub`;
+	
+		$command += " -sn " + $subMeshes;
+	}
+	
+	// see whether to export animation stuff
+	string $anim_exp = `checkBox -q -v animExport`;
+	
+	if($anim_exp == 1)
+	{
+		// see whether or not to include animations
+		string $anim_check = `checkBox -query -v animAnims`;
+		
+		if($anim_check == 1)
+		{
+			// check for animations to export
+			string $valid = `textScrollList -query -en animDefLst`;
+			
+			string $animations = "\"";
+			if($valid == "1")
+			{
+				int $num_items = `textScrollList -query -numberOfItems animDefLst`;
+		
+				int $i;
+				for($i = 0; $i < $num_items; $i++)
+				{
+					int $s = $i + 1;
+					textScrollList -edit -sii $s animDefLst;
+					string $anims[] = `textScrollList -query -si animDefLst`;
+					string $buffer[];
+					int $numTokens = `tokenize $anims[0] "\"" $buffer`;
+					$animations += $buffer[0] + " ";			
+				}
+			}
+			$animations += "\"";
+			$command += " -ani " + $animations;
+		}
+	}
+	
+	// tell the exporter that we are previewing and to copy the texture files
+	$command += " -p \"" + $dir_text + "\"";
+	
+	textScrollList -edit -da animDefLst;
+	
+	string $files[] = `getFileList -fld $dir_text -fs "*.jpg"`;
+	int $num_files = size($files);
+	
+	int $i;
+	for($i = 0; $i < $num_files; $i++)
+	{
+		string $file_to_delete = $dir_text + $files[$i];
+		sysFile -delete $file_to_delete;
+	}
+	
+	string $files[] = `getFileList -fld $dir_text -fs "*.bmp"`;
+	$num_files = size($files);
+	
+	for($i = 0; $i < $num_files; $i++)
+	{
+		string $file_to_delete = $dir_text + $files[$i];
+		sysFile -delete $file_to_delete;
+	}
+	
+	string $files[] = `getFileList -fld $dir_text -fs "*.gif"`;
+	$num_files = size($files);
+	
+	for($i = 0; $i < $num_files; $i++)
+	{
+		string $file_to_delete = $dir_text + $files[$i];
+		sysFile -delete $file_to_delete;
+	}
+	
+	string $files[] = `getFileList -fld $dir_text -fs "*.png"`;
+	$num_files = size($files);
+	
+	for($i = 0; $i < $num_files; $i++)
+	{
+		string $file_to_delete = $dir_text + $files[$i];
+		sysFile -delete $file_to_delete;
+	}
+	
+	string $files[] = `getFileList -fld $dir_text -fs "*.tga"`;
+	$num_files = size($files);
+	
+	for($i = 0; $i < $num_files; $i++)
+	{
+		string $file_to_delete = $dir_text + $files[$i];
+		sysFile -delete $file_to_delete;
+	}
+	
+	// call and end command	
+	evalEcho($command);
+	
+	// call the material upgrader
+	if($mat_bool == 1)
+	{
+		system("start " + $dir_text + "OgreMaterialUpgrade.exe " + "\"" + $dir_text + $file_text + ".material\"");
+	}
+	
+	// see whether or not to export to binary
+	string $binary = `checkBox -query -v meshBinary`;
+	
+	if($mesh_bool && $binary)
+	{
+		//$command += " -bin " + $binary;
+		// call the xml convertor	
+		system("start " + $dir_text + "OgreXMLConverter.exe " + "\"" + $dir_text + $file_text + ".mesh.xml\"");
+	}
+	
+	// see whether or not to export skeletion to binary
+	string $skl_binary = `checkBox -query -v animBinary`;
+	
+	if($anim_exp && $skl_binary)
+	{	
+		//$command += " -bsk " + $skl_binary;
+		system("start " + $dir_text + "OgreXMLConverter.exe " + "\"" + $dir_text + $file_text + ".skeleton.xml\"");
+	}
+	
+	// call the viewer
+	system("start " + $dir_text + "OgreViewerClient.exe " + "\"" + $dir_text + $file_text + ".mesh\"");
+}
+
+global proc OgreExporter()
+{
+	if( `window -exists OgreWindow` )
+		deleteUI -window OgreWindow;
+		
+	if( !`window -exists OgreWindow` )
+	{
+		// the main window
+		string $window = `window -title "Ogre Exporter"
+			-iconName "Ogre Exporter"
+        		-width 450
+			-height 500
+			-resizeToFitChildren false
+			-minimizeButton false
+			-maximizeButton false
+			-sizeable false 
+			OgreWindow`;
+		
+		// the main layout for window to aloow for scrolling
+		string $mainLayout = `scrollLayout -childResizable false -p $window`;
+		
+		// the main layout ontop of the scroll layout
+		string $mainInsideLayout = `formLayout -numberOfDivisions 100 -width 413 -p $mainLayout`;
+		
+		// the frame layouts
+		string $materialFrame = `frameLayout -collapsable true -label "Materials" -collapse true -width 413 -labelVisible true -p $mainInsideLayout`;
+		string $animationFrame = `frameLayout -collapsable true -label "Animation" -collapse true -width 413 -labelVisible true -p $mainInsideLayout`;
+		string $meshFrame = `frameLayout -collapsable true -label "Mesh" -collapse true -width 413 -labelVisible true -p $mainInsideLayout`;
+		string $advancedFrame = `frameLayout -collapsable true -label "Advanced Options" -collapse true -width 413 -labelVisible true -p $mainInsideLayout`;
+		string $exportFrame = `frameLayout -collapsable true -label "Export" -collapse true -width 413 -labelVisible true -p $mainInsideLayout`;
+		
+		// formlayouts on the framelayouts
+		string $exportFormLayout = `formLayout -numberOfDivisions 100 -p $exportFrame`;
+		string $advancedFormLayout = `formLayout -numberOfDivisions 100 -p $advancedFrame`;
+		string $materialFormLayout = `formLayout -numberOfDivisions 100 -p $materialFrame`;
+		string $meshFormLayout = `formLayout -numberOfDivisions 100 -p $meshFrame`;
+		string $animationFormLayout = `formLayout -numberOfDivisions 100 -p $animationFrame`;
+		
+		// mesh controls
+		string $meshExportToXML = `checkBox -label "Export mesh to Ogre .xml file format" -cc("UpdateGUI()") -p $meshFormLayout meshExportXML`;
+		string $meshBoneAssignment = `checkBox -label "Include vertex bone assignments" -en false -p $meshFormLayout meshBoneAssign`;
+		string $meshVertexNormals = `checkBox -label "Include vertex normals" -en false -p $meshFormLayout meshNormals`;
+		string $meshDiffuseColor = `checkBox -label "Include diffuse vertex colors" -en false -p $meshFormLayout meshDiffuseColor`;
+		string $meshTextureCoords = `checkBox -label "Include texture coordinates" -en false -p $meshFormLayout meshTexCoords`;
+		string $meshToBinary = `checkBox -label "Also create binary .mesh file" -en false -p $meshFormLayout meshBinary`;
+		string $meshSubmeshNames = `checkBox -label "Include Submesh names" -en false -p $meshFormLayout meshSub`;
+		
+		// material controls
+		string $materialExportToMaterial = `checkBox -label "Export materials to Ogre .material file format" -cc("UpdateGUI()") -p $materialFormLayout materialExport`;
+		//string $materialMaterialLabel = `text -label "Material Filename:" -en false -p $materialFormLayout materialLbl`;
+		//string $materialMaterialText = `textField -width 300 -en false -p $materialFormLayout materialTxt`;
+		
+		// animation controls
+		string $animationExportToXML = `checkBox -label "Export skeleton to Ogre .xml file format" -cc("UpdateGUI()") -p $animationFormLayout animExport`;
+		string $animationToBinary = `checkBox -label "Also create binary .skeleton file" -en false -p $animationFormLayout animBinary`;
+		string $animationAnimations = `checkBox -label "Include Animations" -en false -cc("UpdateGUI()") -p $animationFormLayout animAnims`;
+				
+		string $animationDefsLabel = `text -label "Animation Definitions:" -en false -p $animationFormLayout animDefsLbl`;
+		string $animationDefsLst = `textScrollList -allowMultiSelection false -numberOfRows 10 -w 400 -en false -sc("PreRemoveAnim()") -p $animationFormLayout animDefLst`;
+		
+		string $animationAddLabel = `text -label "Add a new animation:" -en false -p $animationFormLayout animAddLbl`;
+		string $animationAddAnimName = `text -label "Name" -en false -p $animationFormLayout animNameLbl`;
+		string $animationAddAnimNameTxt = `textField -width 175 -en false -p $animationFormLayout animNameTxt`;
+		string $animationAddAnimStart = `text -label "Start Time" -en false -p$animationFormLayout animStart`;
+		string $animationAddAnimStartTxt = `textField -width 50 -text "0" -en false -p $animationFormLayout animStartTxt`;
+		string $animationAddAnimEnd = `text -label "End Time" -en false -p $animationFormLayout animEnd`;
+		string $animationAddAnimEndTxt = `textField -width 50 -text "0" -en false -p $animationFormLayout animEndTxt`;
+		string $animationAddAnimSkip = `text -label "Step" -en false -p $animationFormLayout animSkip`;
+		string $animationAddAnimSkipTxt = `textField -width 25 -text "1" -en false -p $animationFormLayout animSkipTxt`;
+		string $aniamtionAddAnimBttn = `button -label "Add" -w 35 -en false -p $animationFormLayout -command("AddAnim()") animBttn`;
+		string $aniamtionRemoveAnimBttn = `button -label "Remove" -w 50 -en false -p $animationFormLayout -command("RemoveAnim()") animRBttn`;
+		
+		
+		// advanced controls
+		string $advancedRadioCollection = `radioCollection -p $advancedFormLayout`;
+		string $advancedMayaUVs = `radioButton -label "Maya UVs:" -select -cl $advancedRadioCollection -p $advancedFormLayout mayaUVs`;
+		string $advancedNormUVs = `radioButton -label "Normal UVs:" -cl $advancedRadioCollection -p $advancedFormLayout normUVs`;
+		
+		// get the path to the script file for relative paths to the .bmps
+		string $file_path = `file -q -loc OgreExporter.mel`;
+		string $buffer[];
+		int $numTokens = `tokenize $file_path "//" $buffer`;
+		int $i;
+		$file_path = "";
+		for($i = 0; $i < $numTokens-2; $i++)
+		{
+			$file_path += $buffer[$i] + "/";		
+		}
+		string $norm_uv_bmp = $file_path + "normalUVs.bmp";
+		string $maya_uv_bmp = $file_path + "mayaUVs.bmp";
+		
+		// advanced control continued....
+		string $advancedNormImage = `image -image $norm_uv_bmp -w 32 -h 32 -p $advancedFormLayout`;
+		string $advancedMayaImage = `image -image $maya_uv_bmp -w 32 -h 32 -p $advancedFormLayout`;
+		//string $advancedMatOptLabel = `text -label "Material Prefix:" -p $advancedFormLayout`;
+		//string $advancedMatOptTxt = `textField -width 300 -p $advancedFormLayout`;
+		//string $advancedTriangulate = `checkBox -label "Triangulate Geometry" -p $advancedFormLayout advTriangulate`;
+		//string $advancedOptimize = `checkBox -label "Optimize Geometry" -p $advancedFormLayout advOptimize`;
+		
+		// export controls
+		string $exportOutLabel = `text -label "Output Directory:" -p $exportFormLayout`;
+		string $exportOutTxt = `textField -width 380 -p $exportFormLayout exportOutputTxt`;
+		string $exportDirLocation = `button -label "...." -p $exportFormLayout -command("GetOutputDir()")`;
+		
+		string $exportXMLLabel = `text -label "XML Filename for Mesh and Skeleton(without extension):" -en true -p $exportFormLayout exportXMLLbl`;
+		string $exportXMLText = `textField -width 300 -en true -p $exportFormLayout exportXMLTxt`;
+		
+		string $exportOptionLabel = `text -label "Export Options:" -p $exportFormLayout`;
+		
+		string $exportRadioCollection = `radioCollection -p $advancedFormLayout`;
+		string $radioExportEverything = `radioButton -label "Everything" -recomputeSize true -select -cl $exportRadioCollection -p $exportFormLayout exportEverything`;
+		string $radioExportSelected = `radioButton -label "Selected" -recomputeSize true -enable false -cl $exportRadioCollection -p $exportFormLayout exportSelected`;
+		
+		string $exportViewButton = `button -label "Preview" -p $exportFormLayout -command("Preview()")`;
+		string $exportButton = `button -label "Export" -p $exportFormLayout -command("Export()")`;
+		
+		// edit animation form
+		formLayout -edit
+			-attachPosition $animationExportToXML "left" 5 0
+			-attachPosition $animationExportToXML "top" 5 0
+			-attachControl $animationToBinary "top" 1 $animationExportToXML
+			-attachPosition $animationToBinary "left" 5 0
+						
+			-attachControl $animationAnimations "top" 2 $animationToBinary
+			-attachPosition $animationAnimations "left" 5 0	
+			-attachControl $animationDefsLabel "top" 1 $animationAnimations
+			-attachPosition $animationDefsLabel "left" 5 0
+			-attachControl $animationDefsLst "top" 1 $animationDefsLabel
+			-attachPosition $animationDefsLst "left" 5 0
+			-attachControl $animationAddLabel "top" 2 $animationDefsLst
+			-attachPosition $animationAddLabel "left" 5 0
+			
+			-attachControl $animationAddAnimName "top" 2 $animationAddLabel
+			-attachPosition $animationAddAnimName "left" 5 0
+			-attachControl $animationAddAnimNameTxt "top" 1 $animationAddAnimName
+			-attachPosition $animationAddAnimNameTxt "left" 5 0
+			-attachControl $animationAddAnimStart "top" 1 $animationAddLabel
+			-attachControl $animationAddAnimStart "left" 150 $animationAddAnimName
+			-attachControl $animationAddAnimStartTxt "top" 1 $animationAddAnimName
+			-attachControl $animationAddAnimStartTxt "left" 5 $animationAddAnimNameTxt
+			-attachControl $animationAddAnimEnd "top" 1 $animationAddLabel
+			-attachControl $animationAddAnimEnd "left" 5 $animationAddAnimStart
+			-attachControl $animationAddAnimEndTxt "top" 1 $animationAddAnimEnd
+			-attachControl $animationAddAnimEndTxt "left" 5 $animationAddAnimStartTxt
+			-attachControl $animationAddAnimSkip "top" 1 $animationAddLabel
+			-attachControl $animationAddAnimSkip "left" 8 $animationAddAnimEnd
+			-attachControl $animationAddAnimSkipTxt "top" 1 $animationAddAnimSkip
+			-attachControl $animationAddAnimSkipTxt "left" 5 $animationAddAnimEndTxt
+			-attachControl $aniamtionAddAnimBttn "top" 1 $animationAddAnimName
+			-attachControl $aniamtionAddAnimBttn "left" 1 $animationAddAnimSkipTxt
+			-attachControl $aniamtionRemoveAnimBttn "left" 1 $aniamtionAddAnimBttn
+			-attachControl $aniamtionRemoveAnimBttn "top" 1 $animationAddAnimName
+		$animationFormLayout;
+		
+		// edit form layout or frames
+		formLayout -edit
+			-attachPosition $meshFrame "top" 5 0
+			-attachPosition $meshFrame "left" 5 0
+			-attachPosition $meshFrame "right" 5 100
+			-attachControl $materialFrame "top" 1 $meshFrame
+			-attachPosition $materialFrame "left" 5 0
+			-attachPosition $materialFrame "right" 5 100
+			-attachControl $animationFrame "top" 1 $materialFrame
+			-attachPosition $animationFrame "left" 5 0
+			-attachPosition $animationFrame "right" 5 100
+			-attachControl $advancedFrame "top" 1 $animationFrame
+			-attachPosition $advancedFrame "left" 5 0
+			-attachPosition $advancedFrame "right" 5 100
+			-attachControl $exportFrame "top" 1 $advancedFrame
+			-attachPosition $exportFrame "left" 5 0
+			-attachPosition $exportFrame "right" 5 100
+		$mainInsideLayout;
+		
+		// edit mesh form
+		formLayout -edit
+			-attachPosition $meshExportToXML "top" 5 0
+			-attachPosition $meshExportToXML "left" 5 0
+			-attachControl $meshBoneAssignment "top" 1 $meshExportToXML
+			-attachPosition $meshBoneAssignment "left" 5 0
+			-attachControl $meshVertexNormals "top" 1 $meshBoneAssignment
+			-attachPosition $meshVertexNormals "left" 5 0
+			-attachControl $meshDiffuseColor "top" 1 $meshVertexNormals
+			-attachPosition $meshDiffuseColor "left" 5 0
+			-attachControl $meshTextureCoords "top" 1 $meshDiffuseColor
+			-attachPosition $meshTextureCoords "left" 5 0
+			-attachControl $meshSubmeshNames "top" 1 $meshTextureCoords
+			-attachPosition $meshSubmeshNames "left" 5 0
+			-attachControl $meshToBinary "top" 1 $meshSubmeshNames
+			-attachPosition $meshToBinary "left" 5 0
+		$meshFormLayout;
+		
+		// edit material form
+		formLayout -edit
+			-attachPosition $materialExportToMaterial "top" 5 0
+			-attachPosition $materialExportToMaterial "left" 5 0
+		$materialFormLayout;
+		
+		
+		
+		// edit advanced form
+		formLayout -edit
+			-attachPosition $advancedMayaUVs "top" 5 0
+			-attachPosition $advancedMayaUVs "left" 5 0
+			-attachControl $advancedNormUVs "left" 15 $advancedMayaUVs
+			-attachPosition $advancedNormUVs "top" 5 0
+			-attachControl $advancedMayaImage "top" 1 $advancedMayaUVs
+			-attachPosition $advancedMayaImage "left" 25 0
+			-attachControl $advancedNormImage "left" 60 $advancedMayaImage
+			-attachControl $advancedNormImage "top" 1 $advancedNormUVs
+		$advancedFormLayout;
+		
+		// edit export form
+		formLayout -edit
+			-attachPosition $exportOutLabel "top" 5 0
+			-attachPosition $exportOutLabel "left" 5 0
+			-attachControl $exportOutTxt "top" 1 $exportOutLabel
+			-attachPosition $exportOutTxt "left" 5 0
+			-attachControl $exportDirLocation "left" 1 $exportOutTxt
+			-attachControl $exportDirLocation "top" 1 $exportOutLabel
+			
+			-attachControl $exportXMLLabel "top" 1 $exportDirLocation
+			-attachPosition $exportXMLLabel "left" 5 0
+			-attachControl $exportXMLText "top" 1 $exportXMLLabel
+			-attachPosition $exportXMLText "left" 5 0
+			
+			-attachControl $exportOptionLabel "top" 5 $exportXMLText
+			-attachPosition $exportOptionLabel "left" 5 0
+			-attachControl $radioExportEverything "top" 1 $exportOptionLabel
+			-attachPosition $radioExportEverything "left" 5 0
+			-attachControl $radioExportSelected "left" 1 $radioExportEverything
+			-attachControl $radioExportSelected "top" 1 $exportOptionLabel
+			-attachControl $exportViewButton "top" 5 $radioExportEverything
+			-attachPosition $exportViewButton "left" 5 0
+			-attachPosition $exportViewButton "right" 5 100
+			-attachControl $exportButton "top" 5 $exportViewButton
+			-attachPosition $exportButton "left" 5 0
+			-attachPosition $exportButton "right" 5 100
+		$exportFormLayout;
+		
+		// set parent for main window
+    		setParent ..;
+    		
+    		// script job for deleting window from windowPref
+    		scriptJob -uiDeleted $window ("windowPref -remove " + $window);
+    		    	
+    		showWindow $window;
+    		ReadSettings();    		
+    	}
+}

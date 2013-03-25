@@ -1,0 +1,7 @@
+bin\Debug\Launcher.exe
+bin\Debug\Launcher.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Launcher.Properties.Resources.resources
+obj\Debug\Launcher.csproj.GenerateResource.Cache
+obj\Debug\Launcher.exe
+obj\Debug\Launcher.pdb

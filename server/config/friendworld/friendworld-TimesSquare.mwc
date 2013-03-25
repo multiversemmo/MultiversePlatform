@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="spawnPt" TerrainOffset="5510" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="-32" Zenith="90">
+    <Position x="93840" y="25510" z="-325265" />
+    <Orientation x="0" y="-0.2756374" z="0" w="0.9612617" />
+  </Waypoint>
+  <Waypoint Name="stuck" TerrainOffset="5510" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="-32" Zenith="90">
+    <Position x="93840" y="25510" z="-325265" />
+    <Orientation x="0" y="-0.2756374" z="0" w="0.9612617" />
+  </Waypoint>
+  <StaticObject Name="times square streets" Mesh="nyts_streets.mesh" TerrainOffest="5000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="True" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="127105.6" y="25000" z="-319948.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_lines-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_streets-lib.0" MaterialName="nyts_streets.asphalt" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_paramount-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_reuters-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_viacom-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_millenium-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_edelmann-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_condeNast-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_army-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_1timesSquare-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_timesTower-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_streets_south-lib.0" MaterialName="nyts_streets.asphalt" Show="True" />
+      <SubMeshInfo Name="nyts_streets_north-lib.0" MaterialName="nyts_streets.asphalt" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="oneTimesSquare" Mesh="nyts_oneTimesSquare.mesh" TerrainOffest="5000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="133605.5" y="25000" z="-234915.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="oneTimesSquare_building-lib.0" MaterialName="nyts_oneTimesSquare.building" Show="True" />
+      <SubMeshInfo Name="oneTimesSquare_billboards-lib.0" MaterialName="nyts_oneTimesSquare.billboard" Show="True" />
+      <SubMeshInfo Name="oneTimesSquare_scrolling-lib.0" MaterialName="nyts_oneTimesSquare.scrolling" Show="True" />
+      <SubMeshInfo Name="oneTimesSquare_windows-lib.0" MaterialName="nyts_oneTimesSquare.windows" Show="True" />
+      <SubMeshInfo Name="oneTimesSquare_video01-lib.0" MaterialName="nyts_oneTimesSquare.video01" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="movie_texture" Value="oneTimesSquare_Video" Type="String" />
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="condeNast" Mesh="nyts_condeNast.mesh" TerrainOffest="5100" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="193788.6" y="25100" z="-245018.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="condeNast_ticker-lib.0" MaterialName="nyts_condeNast.ticker" Show="True" />
+      <SubMeshInfo Name="condeNast_building-lib.0" MaterialName="nyts_condeNast.building" Show="True" />
+      <SubMeshInfo Name="condeNast_windows-lib.0" MaterialName="nyts_condeNast.windows" Show="True" />
+      <SubMeshInfo Name="condeNast_billboards-lib.0" MaterialName="nyts_condeNast.billboards" Show="True" />
+      <SubMeshInfo Name="condeNast_video-lib.0" MaterialName="nyts_condeNast.video" Show="True" />
+      <SubMeshInfo Name="condeNast_anim_billboards-lib.0" MaterialName="nyts_condeNast.anim_billboard" Show="True" />
+      <SubMeshInfo Name="condeNast_glass-lib.0" MaterialName="nyts_condeNast.glass" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="movie_texture" Value="condeNast_Video" Type="String" />
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="reuters" Mesh="nyts_reuters.mesh" TerrainOffest="4961" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="71123.63" y="24961" z="-250289" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_reuters_window-lib.0" MaterialName="nyts_reuters.window" Show="True" />
+      <SubMeshInfo Name="nyts_reuters_window-lib.1" MaterialName="nyts_reuters.windows" Show="True" />
+      <SubMeshInfo Name="nyts_reuters_video-lib.0" MaterialName="nyts_reuters.video" Show="True" />
+      <SubMeshInfo Name="nyts_reuters_building-lib.0" MaterialName="nyts_reuters.building" Show="True" />
+      <SubMeshInfo Name="nyts_reuters_billboard-lib.0" MaterialName="nyts_reuters.billboard" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="movie_texture" Value="reuters_Video" Type="String" />
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="paramount" Mesh="nyts_paramount.mesh" TerrainOffest="5132" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="73259.94" y="25132" z="-325948" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_paramount_building-lib.0" MaterialName="nyts_paramount.building" Show="True" />
+      <SubMeshInfo Name="nyts_paramount_anim_billboards-lib.0" MaterialName="nyts_paramount.anim_billboards" Show="True" />
+      <SubMeshInfo Name="nyts_paramount_windows-lib.0" MaterialName="nyts_paramount.windows" Show="True" />
+      <SubMeshInfo Name="nyts_paramount_billboards-lib.0" MaterialName="nyts_paramount.billboards" Show="True" />
+      <SubMeshInfo Name="nyts_paramount_entrance-lib.0" MaterialName="nyts_paramount.building" Show="True" />
+      <SubMeshInfo Name="nyts_paramount_entrance_window-lib.0" MaterialName="nyts_paramount.windows" Show="True" />
+      <SubMeshInfo Name="nyts_paramount_building_text-lib.0" MaterialName="nyts_paramount.building" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="viacom" Mesh="nyts_viacom.mesh" TerrainOffest="5000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="46859.25" y="25000" z="-405389.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_viacom_billboards-lib.0" MaterialName="nyts_viacom.billboards" Show="True" />
+      <SubMeshInfo Name="nyts_viacom_windows-lib.0" MaterialName="nyts_viacom.windows" Show="True" />
+      <SubMeshInfo Name="nyts_viacom_anim_billboard-lib.0" MaterialName="nyts_viacom.anim_billboard" Show="True" />
+      <SubMeshInfo Name="nyts_viacom_building-lib.0" MaterialName="nyts_viacom.building" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="edelmann" Mesh="nyts_edelmann.mesh" TerrainOffest="5091" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="173786.1" y="25091" z="-325880.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_edelmann_windows-lib.0" MaterialName="nyts_edelmann.windows" Show="True" />
+      <SubMeshInfo Name="nyts_edelmann_building-lib.0" MaterialName="nyts_edelmann.building" Show="True" />
+      <SubMeshInfo Name="nyts_edelmann_scrolling-lib.0" MaterialName="nyts_edelmann.scrolling" Show="True" />
+      <SubMeshInfo Name="nyts_edelmann_billboard-lib.0" MaterialName="nyts_edelmann.billboard" Show="True" />
+      <SubMeshInfo Name="nyts_edelmann_anim_billboard-lib.0" MaterialName="nyts_edelmann.anim_billboard" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="movie_texture" Value="edelmann_Video" Type="String" />
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="milleniumBroadway" Mesh="nyts_milleniumBroadway.mesh" TerrainOffest="5000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="187547.8" y="25000" z="-404511.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="millennium_windows-lib.0" MaterialName="nyts_milleniumBroadway.windows" Show="True" />
+      <SubMeshInfo Name="millennium_billboards-lib.0" MaterialName="nyts_milleniumBroadway.billboards" Show="True" />
+      <SubMeshInfo Name="millennium_building-lib.0" MaterialName="nyts_milleniumBroadway.building" Show="True" />
+      <SubMeshInfo Name="millennium_anim_billboards-lib.0" MaterialName="nyts_milleniumBroadway.video" Show="True" />
+      <SubMeshInfo Name="millennium_window-lib.0" MaterialName="nyts_milleniumBroadway.window" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="knickerbocker" Mesh="nyts_knickerbocker.mesh" TerrainOffest="5000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="197714" y="25000" z="-161173.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_knickerbocker_building-lib.0" MaterialName="nyts_knickerbocker.building" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="timesSquareTower" Mesh="nyts_timesSquareTower.mesh" TerrainOffest="5000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="148463.6" y="25000" z="-158562.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_timesSquareTower-lib.0" MaterialName="nyts_timesSquareTower.timesSquareTower" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="ernstYoung" Mesh="nyts_ernstYoung.mesh" TerrainOffest="5000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="79774.96" y="25000" z="-155785.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_ernstYoung_building-lib.0" MaterialName="nyts_ernstYoung.building" Show="True" />
+      <SubMeshInfo Name="nyts_ernstYoung_billboard-lib.0" MaterialName="nyts_ernstYoung.billboard" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="bertelsmann" Mesh="nyts_bertelsmann.mesh" TerrainOffest="5100" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="157400.8" y="25100" z="-486060.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="video-lib.0" MaterialName="nyts_bertelsmann.video" Show="True" />
+      <SubMeshInfo Name="billboards-lib.0" MaterialName="nyts_bertelsmann.billboards" Show="True" />
+      <SubMeshInfo Name="windows-lib.0" MaterialName="nyts_bertelsmann.windows" Show="True" />
+      <SubMeshInfo Name="building-lib.0" MaterialName="nyts_bertelsmann.building" Show="True" />
+      <SubMeshInfo Name="anim_billboards-lib.0" MaterialName="nyts_bertelsmann.anim_billboards" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="marriot" Mesh="nyts_marriot.mesh" TerrainOffest="5000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="33621.38" y="25000" z="-486521.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="marriott_building-lib.0" MaterialName="nyts_marriot.building" Show="True" />
+      <SubMeshInfo Name="marriott_billboards-lib.0" MaterialName="nyts_marriot.billboards" Show="True" />
+      <SubMeshInfo Name="marriott_windows-lib.0" MaterialName="nyts_marriot.windows" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="times square streets2" Mesh="nyts_streets.mesh" TerrainOffest="5000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="-180" Zenith="90" Targetable="False">
+    <Position x="99754.5" y="25000" z="-571698" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_lines-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_streets-lib.0" MaterialName="nyts_streets.asphalt" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_paramount-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_reuters-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_viacom-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_millenium-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_edelmann-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_condeNast-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_army-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_1timesSquare-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_sidewalk_timesTower-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+      <SubMeshInfo Name="nyts_streets_south-lib.0" MaterialName="nyts_streets.asphalt" Show="True" />
+      <SubMeshInfo Name="nyts_streets_north-lib.0" MaterialName="nyts_streets.asphalt" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_01" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="5080" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="226468.8" y="25080" z="-445824.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_02" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="5080" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="19492.97" y="25080" z="-445826.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_03" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="5080" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="-565.83" y="25080" z="-365486.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_04" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="5080" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="240997.2" y="25080" z="-365483.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_05" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="5080" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="254863.8" y="25080" z="-285976.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_06" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="5080" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="-607.05" y="25080" z="-286301" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_4Lane_01" Mesh="nyts_streets_4Lane.mesh" TerrainOffest="5080" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="112404.7" y="25080" z="-154670" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_4Lane-lib.0" MaterialName="nyts_streets_4Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_4Lane_02" Mesh="nyts_streets_4Lane.mesh" TerrainOffest="5080" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="63390.92" y="25080" z="-200153.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_4Lane-lib.0" MaterialName="nyts_streets_4Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_4Lane_03" Mesh="nyts_streets_4Lane.mesh" TerrainOffest="5080" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="214604.1" y="25080" z="-199547.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_4Lane-lib.0" MaterialName="nyts_streets_4Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="streets_4Lane_04" Mesh="nyts_streets_4Lane.mesh" TerrainOffest="5060" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="-80" Zenith="90" Targetable="False">
+    <Position x="176688.6" y="25060" z="-153078.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.6427876" z="0" w="0.7660444" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_4Lane-lib.0" MaterialName="nyts_streets_4Lane.streets" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="police" Mesh="nyts_police.mesh" TerrainOffest="5170" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="128560.5" y="25170" z="-265015.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_police_windows-lib.0" MaterialName="nyts_police.windows" Show="True" />
+      <SubMeshInfo Name="nyts_police_building-lib.0" MaterialName="nyts_police.building" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="army" Mesh="nyts_army.mesh" TerrainOffest="5420" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="100000" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="124738.3" y="25420" z="-304349.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_army_anim_billboards-lib.0" MaterialName="nyts_army.anim_billboards" Show="True" />
+      <SubMeshInfo Name="nyts_army_windows-lib.0" MaterialName="nyts_army.windows" Show="True" />
+      <SubMeshInfo Name="nyts_army_building-lib.0" MaterialName="nyts_army.building" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="lobby_door_01" Mesh="FRW_lobby_door.mesh" TerrainOffest="5541.699" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="86424.03" y="25541.7" z="-319293.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_lobby_door.apartment" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="transport_menu" Type="String" />
+      <NameValuePair Name="tooltip" Value="Elevator: Right click to access the transport menu." Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="lobby_door_02" Mesh="FRW_lobby_door.mesh" TerrainOffest="5541.699" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="86427.78" y="25541.7" z="-326001.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_lobby_door.apartment" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="ClickHookName" Value="transport_menu" Type="String" />
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="tooltip" Value="Elevator: Right click to access the transport menu." Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="lobby_door_04" Mesh="FRW_lobby_door.mesh" TerrainOffest="5541.699" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="89663.84" y="25541.7" z="-316808.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_lobby_door.apartment" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="ClickHookName" Value="transport_menu" Type="String" />
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="tooltip" Value="Elevator: Right click to access the transport menu." Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="lobby_door_05" Mesh="FRW_lobby_door.mesh" TerrainOffest="5541.699" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="86430.28" y="25541.7" z="-322649.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_lobby_door.apartment" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="ClickHookName" Value="transport_menu" Type="String" />
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="tooltip" Value="Elevator: Right click to access the transport menu." Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="lobby" Mesh="FRW_lobby.mesh" TerrainOffest="5132.34" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="73257.47" y="25132.34" z="-325948.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="lights-lib.0" MaterialName="FRW_lobby.apartment" Show="True" />
+      <SubMeshInfo Name="lobby-lib.0" MaterialName="FRW_lobby.apartment" Show="True" />
+      <SubMeshInfo Name="plant-lib.0" MaterialName="FRW_lobby.plant" Show="True" />
+      <SubMeshInfo Name="storefronts-lib.0" MaterialName="FRW_lobby.storefronts" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Sign" Mesh="FRW_sign.mesh" TerrainOffest="9816.699" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="101033.9" y="29816.7" z="-331473.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="sign-lib.0" MaterialName="FRW_sign.sign" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="lobby_door_03" Mesh="FRW_lobby_door.mesh" TerrainOffest="5541.699" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="94316.73" y="25541.7" z="-316795.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_lobby_door.apartment" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="ClickHookName" Value="transport_menu" Type="String" />
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="tooltip" Value="Elevator: Right click to access the transport menu." Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+</WorldObjectCollection>

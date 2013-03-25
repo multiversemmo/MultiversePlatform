@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="hiphop_furn_hiphop_bed" Mesh="FRW_furn_hiphop_bed.mesh" TerrainOffest="855" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="99773.02" y="20855" z="-192426.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="bed-lib.0" MaterialName="FRW_furn_hiphop_bed.sheet" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="chair_menu" Type="String" />
+      <NameValuePair Name="Transition" Value="ntrl_sit_50cm" Type="String" />
+      <NameValuePair Name="Idle" Value="ntrl_sit_50cm_idle_loop" Type="String" />
+      <NameValuePair Name="StartSocket" Value="sit50a_end" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_furn_hiphop_carpet_a" Mesh="FRW_furn_hiphop_carpet_a.mesh" TerrainOffest="820" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="100173" y="20820" z="-192403.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="carpet_a-lib.0" MaterialName="FRW_furn_hiphop_carpet_a.carpet" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_furn_hiphop_carpet_d" Mesh="FRW_furn_hiphop_carpet_d.mesh" TerrainOffest="650" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="115039.9" y="20650" z="-204663.8" />
+    <Scale x="1.158657" y="1.158657" z="1.158657" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="carpet_d-lib.0" MaterialName="FRW_furn_hiphop_carpet_d.carpet" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_furn_hiphop_door_sliding_01" Mesh="FRW_furn_hiphop_door_sliding.mesh" TerrainOffest="848" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="100731.9" y="20848" z="-184726.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_furn_hiphop_door_sliding.wood" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_furn_hiphop_dvdplayer" Mesh="FRW_furn_hiphop_dvdplayer.mesh" TerrainOffest="876" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="115110.1" y="20876" z="-208514.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="electronics_tv-lib.0" MaterialName="FRW_furn_hiphop_dvdplayer.electronics" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_electronics" Mesh="FRW_furn_hiphop_electronics.mesh" TerrainOffest="831" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="111247.1" y="20831" z="-202098" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="electronics-lib.0" MaterialName="FRW_furn_hiphop_electronics.electronics" Show="True" />
+      <SubMeshInfo Name="speakers-lib.0" MaterialName="FRW_furn_hiphop_electronics.speaker_mesh" Show="True" />
+      <SubMeshInfo Name="electronics_stand_shelves-lib.0" MaterialName="FRW_furn_hiphop_electronics.granite_alternate" Show="True" />
+      <SubMeshInfo Name="electronics_stand_base-lib.0" MaterialName="FRW_furn_hiphop_electronics.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="music_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_guestbook" Mesh="FRW_furn_hiphop_guestbook.mesh" TerrainOffest="1464" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="155" Zenith="90" Targetable="False">
+    <Position x="107206.4" y="21464" z="-206770.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.976296" z="0" w="0.2164396" />
+    <SubMeshes>
+      <SubMeshInfo Name="guestbook-lib.0" MaterialName="FRW_furn_hiphop_guestbook.guestbook" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="guestbook_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_lamp_01" Mesh="FRW_furn_hiphop_lamp.mesh" TerrainOffest="1428" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="97849.68" y="21428" z="-189803" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="lamp-lib.0" MaterialName="FRW_furn_hiphop_lamp.lamp" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_lamp_tall_01" Mesh="FRW_furn_hiphop_lamp_tall.mesh" TerrainOffest="858" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="97783.59" y="20858" z="-197025.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="lamp-lib.0" MaterialName="FRW_furn_hiphop_lamp_tall.lightTall" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_loveseat" Mesh="FRW_furn_hiphop_loveseat.mesh" TerrainOffest="829" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-23" Zenith="90" Targetable="False">
+    <Position x="98953.59" y="20829" z="-197655" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.1993679" z="0" w="0.9799247" />
+    <SubMeshes>
+      <SubMeshInfo Name="loveseat-lib.0" MaterialName="FRW_furn_hiphop_loveseat.loveseat" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="chair_menu" Type="String" />
+      <NameValuePair Name="Transition" Value="ntrl_sit_50cm" Type="String" />
+      <NameValuePair Name="Idle" Value="ntrl_sit_50cm_idle_loop" Type="String" />
+      <NameValuePair Name="StartSocket" Value="sit50a_end" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_multimedia" Mesh="FRW_furn_hiphop_shelves_multimedia.mesh" TerrainOffest="648" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="115113.5" y="20648" z="-208537.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_multimedia-lib.0" MaterialName="FRW_furn_hiphop_shelves_multimedia.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_sofa" Mesh="FRW_furn_hiphop_sofa.mesh" TerrainOffest="830" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="104503" y="20830" z="-199280" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="sofa-lib.0" MaterialName="FRW_furn_hiphop_sofa.leather_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="chair_menu" Type="String" />
+      <NameValuePair Name="Transition" Value="ntrl_sit_50cm" Type="String" />
+      <NameValuePair Name="Idle" Value="ntrl_sit_50cm_idle_loop" Type="String" />
+      <NameValuePair Name="StartSocket" Value="sit50a_end" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_speakers_a_01" Mesh="FRW_furn_hiphop_speaker_a.mesh" TerrainOffest="658" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="117506.4" y="20658" z="-208780.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="speaker_a-lib.0" MaterialName="FRW_furn_hiphop_speaker_a.speaker_mesh" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_table_01" Mesh="FRW_furn_hiphop_table.mesh" TerrainOffest="829" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="97782.78" y="20829" z="-200255.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="table-lib.0" MaterialName="FRW_furn_hiphop_table.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="collectible_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_table_coffee_01" Mesh="FRW_furn_hiphop_table_coffee.mesh" TerrainOffest="852" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="107108.9" y="20852" z="-206776.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="table_coffee-lib.0" MaterialName="FRW_furn_hiphop_table_coffee.table" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_tank" Mesh="FRW_furn_hiphop_tank.mesh" TerrainOffest="826" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="106611" y="20826" z="-199381" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="tank_trim-lib.0" MaterialName="FRW_furn_hiphop_tank.lightTall" Show="True" />
+      <SubMeshInfo Name="tank_shelves-lib.0" MaterialName="FRW_furn_hiphop_tank.granite_alternate" Show="True" />
+      <SubMeshInfo Name="tank_interior-lib.0" MaterialName="FRW_furn_hiphop_tank.tank" Show="True" />
+      <SubMeshInfo Name="glass_tank-lib.0" MaterialName="FRW_furn_hiphop_tank.glass" Show="True" />
+      <SubMeshInfo Name="tank_base-lib.0" MaterialName="FRW_furn_hiphop_tank.granite_black" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_speakers_a_02" Mesh="FRW_furn_hiphop_speaker_a.mesh" TerrainOffest="658" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="112856.6" y="20658" z="-208770.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="speaker_a-lib.0" MaterialName="FRW_furn_hiphop_speaker_a.speaker_mesh" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_table_coffee_02" Mesh="FRW_furn_hiphop_table_coffee.mesh" TerrainOffest="828" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="97877.6" y="20828" z="-194998.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="table_coffee-lib.0" MaterialName="FRW_furn_hiphop_table_coffee.table" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_table_coffee_03" Mesh="FRW_furn_hiphop_table_coffee.mesh" TerrainOffest="828" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="97878.16" y="20828" z="-189815.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="table_coffee-lib.0" MaterialName="FRW_furn_hiphop_table_coffee.table" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_lamp_02" Mesh="FRW_furn_hiphop_lamp.mesh" TerrainOffest="1428" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="97876.71" y="21428" z="-194984.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="lamp-lib.0" MaterialName="FRW_furn_hiphop_lamp.lamp" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_blinds" Mesh="FRW_furn_hiphop_blinds.mesh" TerrainOffest="1657" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="98552.95" y="21657" z="-201661.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="blinds-lib.0" MaterialName="FRW_furn_hiphop_blinds.blinds" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_magic_mirror" Mesh="FRW_furn_hiphop_magicmirror.mesh" TerrainOffest="828" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="117191.4" y="20828" z="-190931" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="magicmirror_screen-lib.0" MaterialName="FRW_furn_hiphop_magicmirror.magicmirror" Show="True" />
+      <SubMeshInfo Name="magicmirror-lib.0" MaterialName="FRW_furn_hiphop_magicmirror.wood" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="clothes_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_furn_hiphop_door_sliding_02" Mesh="FRW_furn_hiphop_door_sliding.mesh" TerrainOffest="848" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="102723" y="20848" z="-184734.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_furn_hiphop_door_sliding.wood" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_tv_standing" Mesh="FRW_furn_hiphop_tv_standing.mesh" TerrainOffest="1322.529" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="115138.4" y="21322.53" z="-208636.4" />
+    <Scale x="1.21" y="1.21" z="1.21" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="tv_sitting-lib.0" MaterialName="FRW_furn_hiphop_tv_standing.plastic" Show="True" />
+      <SubMeshInfo Name="tv_sitting_screen-lib.0" MaterialName="FRW_furn_hiphop_tv_standing.screen" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="tv_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_i" Mesh="FRW_furn_hiphop_shelves_i.mesh" TerrainOffest="835.8008" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="111066.9" y="20835.8" z="-188824.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_i-lib.0" MaterialName="FRW_furn_hiphop_shelves_i.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="collectible_menu" Type="String" />
+      <NameValuePair Name="ItemCount" Value="0" Type="Int" />
+      <NameValuePair Name="MaxCount" Value="1" Type="Int" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_j_01" Mesh="FRW_furn_hiphop_shelves_j.mesh" TerrainOffest="3282.529" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="116042.5" y="23282.53" z="-193270.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_j-lib.0" MaterialName="FRW_furn_hiphop_shelves_j.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="collectible_menu" Type="String" />
+      <NameValuePair Name="ItemCount" Value="0" Type="Int" />
+      <NameValuePair Name="MaxCount" Value="3" Type="Int" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_k_01" Mesh="FRW_furn_hiphop_shelves_k.mesh" TerrainOffest="832.5293" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="116174.8" y="20832.53" z="-193111" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_k-lib.0" MaterialName="FRW_furn_hiphop_shelves_k.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_k_02" Mesh="FRW_furn_hiphop_shelves_k.mesh" TerrainOffest="832.5293" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="116112.2" y="20832.53" z="-188954.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_k-lib.0" MaterialName="FRW_furn_hiphop_shelves_k.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_j_02" Mesh="FRW_furn_hiphop_shelves_j.mesh" TerrainOffest="3282.529" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="116081.9" y="23282.53" z="-188816" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_j-lib.0" MaterialName="FRW_furn_hiphop_shelves_j.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="collectible_menu" Type="String" />
+      <NameValuePair Name="ItemCount" Value="0" Type="Int" />
+      <NameValuePair Name="MaxCount" Value="3" Type="Int" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_clothes_01" Mesh="FRW_furn_hiphop_clothes.mesh" TerrainOffest="829.5293" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="114099.5" y="20829.53" z="-188984.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="clothes-lib.0" MaterialName="FRW_furn_hiphop_clothes.clothes" Show="True" />
+      <SubMeshInfo Name="rack-lib.0" MaterialName="FRW_furn_hiphop_clothes.wood" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_clothes_02" Mesh="FRW_furn_hiphop_clothes.mesh" TerrainOffest="829.5293" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="114129.7" y="20829.53" z="-193098.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="clothes-lib.0" MaterialName="FRW_furn_hiphop_clothes.clothes" Show="True" />
+      <SubMeshInfo Name="rack-lib.0" MaterialName="FRW_furn_hiphop_clothes.wood" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_door" Mesh="FRW_furn_hiphop_door.mesh" TerrainOffest="482.5293" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="108779.7" y="20482.53" z="-214811" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_furn_hiphop_door.wood" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="ClickHookName" Value="door_menu" Type="String" />
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_boxes" Mesh="FRW_furn_hiphop_boxes.mesh" TerrainOffest="835.8008" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-21" Zenith="90" Targetable="False">
+    <Position x="111052.7" y="20835.8" z="-192948.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.1822355" z="0" w="0.9832549" />
+    <SubMeshes>
+      <SubMeshInfo Name="boxes-lib.0" MaterialName="FRW_furn_hiphop_boxes.boxes" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_friendwall" Mesh="FRW_furn_hiphop_friendwall.mesh" TerrainOffest="2505.65" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="0" Targetable="False">
+    <Position x="107596.7" y="22505.65" z="-196842.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0.5" y="0.5" z="-0.5" w="0.5" />
+    <SubMeshes>
+      <SubMeshInfo Name="friendwall-lib.0" MaterialName="FRW_furn_hiphop_friendwall.friendwall" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_bookshelves" Mesh="FRW_furn_hiphop_bookshelves.mesh" TerrainOffest="1389" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="100198.1" y="21389" z="-188261.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="book_shelves-lib.0" MaterialName="FRW_furn_hiphop_bookshelves.book_shelves" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_j_03" Mesh="FRW_furn_hiphop_shelves_j.mesh" TerrainOffest="3282.529" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="113255.7" y="23282.53" z="-193268" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_j-lib.0" MaterialName="FRW_furn_hiphop_shelves_j.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="collectible_menu" Type="String" />
+      <NameValuePair Name="ItemCount" Value="0" Type="Int" />
+      <NameValuePair Name="MaxCount" Value="3" Type="Int" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_j_04" Mesh="FRW_furn_hiphop_shelves_j.mesh" TerrainOffest="3282.529" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="113295.5" y="23282.53" z="-188815.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_j-lib.0" MaterialName="FRW_furn_hiphop_shelves_j.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="collectible_menu" Type="String" />
+      <NameValuePair Name="ItemCount" Value="0" Type="Int" />
+      <NameValuePair Name="MaxCount" Value="3" Type="Int" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_j_05" Mesh="FRW_furn_hiphop_shelves_j.mesh" TerrainOffest="3282.529" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="117161.7" y="23282.53" z="-191015.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_j-lib.0" MaterialName="FRW_furn_hiphop_shelves_j.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="collectible_menu" Type="String" />
+      <NameValuePair Name="ItemCount" Value="0" Type="Int" />
+      <NameValuePair Name="MaxCount" Value="3" Type="Int" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_junk_01" Mesh="FRW_furn_hiphop_junk.mesh" TerrainOffest="3602.65" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="117155.5" y="23602.65" z="-191053" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="junk-lib.0" MaterialName="FRW_furn_hiphop_junk.junk" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_junk_02" Mesh="FRW_furn_hiphop_junk.mesh" TerrainOffest="3602.65" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="115849.1" y="23602.65" z="-193333.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="junk-lib.0" MaterialName="FRW_furn_hiphop_junk.junk" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_junk_03" Mesh="FRW_furn_hiphop_junk.mesh" TerrainOffest="3602.65" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="113222.2" y="23602.65" z="-193331.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="junk-lib.0" MaterialName="FRW_furn_hiphop_junk.junk" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_junk_04" Mesh="FRW_furn_hiphop_junk.mesh" TerrainOffest="3602.65" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="116189.9" y="23602.65" z="-188749.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="junk-lib.0" MaterialName="FRW_furn_hiphop_junk.junk" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_chair_01" Mesh="FRW_furn_hiphop_chair.mesh" TerrainOffest="820" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="102" Zenith="90" Targetable="False">
+    <Position x="117154.9" y="20820" z="-197525.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7771459" z="0" w="0.6293204" />
+    <SubMeshes>
+      <SubMeshInfo Name="chair-lib.0" MaterialName="FRW_furn_hiphop_chair.leather_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="chair_menu" Type="String" />
+      <NameValuePair Name="Transition" Value="ntrl_sit_50cm" Type="String" />
+      <NameValuePair Name="Idle" Value="ntrl_sit_50cm_idle_loop" Type="String" />
+      <NameValuePair Name="StartSocket" Value="sit50a_end" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_chair_02" Mesh="FRW_furn_hiphop_chair.mesh" TerrainOffest="820" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="70" Zenith="90" Targetable="False">
+    <Position x="113753.6" y="20820" z="-197561.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.5735765" z="0" w="0.8191521" />
+    <SubMeshes>
+      <SubMeshInfo Name="chair-lib.0" MaterialName="FRW_furn_hiphop_chair.leather_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="chair_menu" Type="String" />
+      <NameValuePair Name="Transition" Value="ntrl_sit_50cm" Type="String" />
+      <NameValuePair Name="Idle" Value="ntrl_sit_50cm_idle_loop" Type="String" />
+      <NameValuePair Name="StartSocket" Value="sit50a_end" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_table_a" Mesh="FRW_furn_hiphop_table_a.mesh" TerrainOffest="830" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="115469.2" y="20830" z="-197793.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="table_a-lib.0" MaterialName="FRW_furn_hiphop_table_a.table" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_sofa_a" Mesh="FRW_furn_hiphop_sofa_a.mesh" TerrainOffest="640" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="115020.1" y="20640" z="-203025.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="sofa_a-lib.0" MaterialName="FRW_furn_hiphop_sofa_a.leather_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="chair_menu" Type="String" />
+      <NameValuePair Name="Transition" Value="ntrl_sit_50cm" Type="String" />
+      <NameValuePair Name="Idle" Value="ntrl_sit_50cm_idle_loop" Type="String" />
+      <NameValuePair Name="StartSocket" Value="sit50a_end" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="cute_switch_01" Mesh="FRW_furn_hiphop_switch.mesh" TerrainOffest="2012.289" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="108093.6" y="22012.29" z="-206392.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="switch-lib.0" MaterialName="FRW_furn_hiphop_switch.switch" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="room_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="cute_switch_02" Mesh="FRW_furn_hiphop_switch.mesh" TerrainOffest="2012.289" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="108110.1" y="22012.29" z="-206222.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="switch-lib.0" MaterialName="FRW_furn_hiphop_switch.switch" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="room_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="cute_switch_03" Mesh="FRW_furn_hiphop_switch.mesh" TerrainOffest="2012.289" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="102966.8" y="22012.29" z="-196638.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="switch-lib.0" MaterialName="FRW_furn_hiphop_switch.switch" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="room_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="cute_switch_04" Mesh="FRW_furn_hiphop_switch.mesh" TerrainOffest="2012.289" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="110510.6" y="22012.29" z="-192179.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="switch-lib.0" MaterialName="FRW_furn_hiphop_switch.switch" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="room_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_table_02" Mesh="FRW_furn_hiphop_table.mesh" TerrainOffest="832" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="111260.2" y="20832" z="-208968.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="table-lib.0" MaterialName="FRW_furn_hiphop_table.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="collectible_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_shelves_multimedia_02" Mesh="FRW_furn_hiphop_shelves_multimedia.mesh" TerrainOffest="828" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="111257.2" y="20828" z="-204567.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="shelves_multimedia-lib.0" MaterialName="FRW_furn_hiphop_shelves_multimedia.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_loveseat_02" Mesh="FRW_furn_hiphop_loveseat.mesh" TerrainOffest="829" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="131" Zenith="90" Targetable="False">
+    <Position x="109000.5" y="20829" z="-195556.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9099613" z="0" w="0.4146933" />
+    <SubMeshes>
+      <SubMeshInfo Name="loveseat-lib.0" MaterialName="FRW_furn_hiphop_loveseat.loveseat" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="chair_menu" Type="String" />
+      <NameValuePair Name="Transition" Value="ntrl_sit_50cm" Type="String" />
+      <NameValuePair Name="Idle" Value="ntrl_sit_50cm_idle_loop" Type="String" />
+      <NameValuePair Name="StartSocket" Value="sit50a_end" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_chair_03" Mesh="FRW_furn_hiphop_chair.mesh" TerrainOffest="820" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-57" Zenith="90" Targetable="False">
+    <Position x="106751.1" y="20820" z="-195896.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.4771588" z="0" w="0.8788171" />
+    <SubMeshes>
+      <SubMeshInfo Name="chair-lib.0" MaterialName="FRW_furn_hiphop_chair.leather_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="chair_menu" Type="String" />
+      <NameValuePair Name="Transition" Value="ntrl_sit_50cm" Type="String" />
+      <NameValuePair Name="Idle" Value="ntrl_sit_50cm_idle_loop" Type="String" />
+      <NameValuePair Name="StartSocket" Value="sit50a_end" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_chair_04" Mesh="FRW_furn_hiphop_chair.mesh" TerrainOffest="820" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="127" Zenith="90" Targetable="False">
+    <Position x="109151.1" y="20820" z="-193135.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.8949344" z="0" w="0.4461978" />
+    <SubMeshes>
+      <SubMeshInfo Name="chair-lib.0" MaterialName="FRW_furn_hiphop_chair.leather_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="chair_menu" Type="String" />
+      <NameValuePair Name="Transition" Value="ntrl_sit_50cm" Type="String" />
+      <NameValuePair Name="Idle" Value="ntrl_sit_50cm_idle_loop" Type="String" />
+      <NameValuePair Name="StartSocket" Value="sit50a_end" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_g" Mesh="FRW_furn_hiphop_plant_g.mesh" TerrainOffest="1447" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="111232.3" y="21447" z="-207945.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_g-lib.0" MaterialName="FRW_furn_hiphop_plant_g.PlantsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_l" Mesh="FRW_furn_hiphop_plant_l.mesh" TerrainOffest="1441" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="111230.4" y="21441" z="-209928.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_l-lib.0" MaterialName="FRW_furn_hiphop_plant_l.PlantsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_table_03" Mesh="FRW_furn_hiphop_table.mesh" TerrainOffest="832" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="102711" y="20832" z="-205824.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="table-lib.0" MaterialName="FRW_furn_hiphop_table.wood_white" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="collectible_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_c" Mesh="FRW_furn_hiphop_plant_c.mesh" TerrainOffest="1440" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="97793.5" y="21440" z="-199256.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_c-lib.0" MaterialName="FRW_furn_hiphop_plant_c.plant" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_g" Mesh="FRW_furn_hiphop_plant_g.mesh" TerrainOffest="1450" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="101611" y="21450" z="-205820.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_g-lib.0" MaterialName="FRW_furn_hiphop_plant_g.PlantsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_h" Mesh="FRW_furn_hiphop_plant_h.mesh" TerrainOffest="1440" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="103711" y="21440" z="-205735.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_h-lib.0" MaterialName="FRW_furn_hiphop_plant_h.PlantsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_l" Mesh="FRW_furn_hiphop_plant_l.mesh" TerrainOffest="1440" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="97811" y="21440" z="-201269.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_l-lib.0" MaterialName="FRW_furn_hiphop_plant_l.PlantsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_lamp_03" Mesh="FRW_furn_hiphop_lamp.mesh" TerrainOffest="1510" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="111211" y="21510" z="-203465.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="lamp-lib.0" MaterialName="FRW_furn_hiphop_lamp.lamp" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_lamp_04" Mesh="FRW_furn_hiphop_lamp.mesh" TerrainOffest="1440" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="102661" y="21440" z="-205815.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="lamp-lib.0" MaterialName="FRW_furn_hiphop_lamp.lamp" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_b" Mesh="FRW_furn_hiphop_plant_b.mesh" TerrainOffest="830" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="42" Zenith="90" Targetable="False">
+    <Position x="100045.9" y="20830" z="-205357.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.3583679" z="0" w="0.9335804" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_b-lib.0" MaterialName="FRW_furn_hiphop_plant_b.plant" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_d" Mesh="FRW_furn_hiphop_plant_d.mesh" TerrainOffest="1510" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="112" Zenith="90" Targetable="False">
+    <Position x="111211" y="21510" z="-205758.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.8290375" z="0" w="0.5591929" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_d-lib.0" MaterialName="FRW_furn_hiphop_plant_d.plant" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_e" Mesh="FRW_furn_hiphop_plant_e.mesh" TerrainOffest="820" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="138" Zenith="90" Targetable="False">
+    <Position x="105614.4" y="20820" z="-201379.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9335804" z="0" w="0.358368" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_e-lib.0" MaterialName="FRW_furn_hiphop_plant_e.PlantsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_lamp_tall_02" Mesh="FRW_furn_hiphop_lamp_tall.mesh" TerrainOffest="858" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="111456.5" y="20858" z="-196983.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="lamp-lib.0" MaterialName="FRW_furn_hiphop_lamp_tall.lightTall" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_lamp_tall_03" Mesh="FRW_furn_hiphop_lamp_tall.mesh" TerrainOffest="858" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="110164.8" y="20858" z="-196457.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="lamp-lib.0" MaterialName="FRW_furn_hiphop_lamp_tall.lightTall" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="furniture_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_a" Mesh="FRW_furn_hiphop_plant_a.mesh" TerrainOffest="840" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="109673.7" y="20840" z="-193850.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_a-lib.0" MaterialName="FRW_furn_hiphop_plant_a.plant" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_f" Mesh="FRW_furn_hiphop_plant_f.mesh" TerrainOffest="830" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="125" Zenith="90" Targetable="False">
+    <Position x="109803.7" y="20830" z="-189125.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.8870109" z="0" w="0.4617486" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_f-lib.0" MaterialName="FRW_furn_hiphop_plant_f.PlantsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_g_02" Mesh="FRW_furn_hiphop_plant_g.mesh" TerrainOffest="2060" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-180" Zenith="90" Targetable="False">
+    <Position x="98206.06" y="22060" z="-188338.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_g-lib.0" MaterialName="FRW_furn_hiphop_plant_g.PlantsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_plant_h_02" Mesh="FRW_furn_hiphop_plant_h.mesh" TerrainOffest="2060" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="157" Zenith="90" Targetable="False">
+    <Position x="102195.6" y="22060" z="-188349.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9799247" z="0" w="0.1993679" />
+    <SubMeshes>
+      <SubMeshInfo Name="plant_h-lib.0" MaterialName="FRW_furn_hiphop_plant_h.PlantsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_dvds_01" Mesh="FRW_furn_hiphop_shelves_dvds.mesh" TerrainOffest="824" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="115114" y="20824" z="-208334.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="dvd_03-lib.0" MaterialName="FRW_furn_hiphop_shelves_dvds.dvds" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_dvds_02" Mesh="FRW_furn_hiphop_shelves_dvds.mesh" TerrainOffest="1004" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="111036.5" y="21004" z="-204567.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="dvd_03-lib.0" MaterialName="FRW_furn_hiphop_shelves_dvds.dvds" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_exit_sign" Mesh="FRW_exit_sign.mesh" TerrainOffest="4410" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-47" Zenith="90" Targetable="False">
+    <Position x="110563.7" y="24410" z="-205101.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.3987491" z="0" w="0.9170601" />
+    <SubMeshes>
+      <SubMeshInfo Name="exit_sign-lib.0" MaterialName="FRW_exit_sign.exit_sign" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

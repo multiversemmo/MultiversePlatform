@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRDPClient", "TestRDPClient\TestRDPClient.csproj", "{05B64CC5-DFD6-4E50-BE05-F726A60278B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRDPServer", "TestRDPServer\TestRDPServer.csproj", "{05B64CC5-DFD6-4E50-BE05-F726A60278B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiverse.Base", "..\..\Base\Multiverse.Base.csproj", "{14A1A669-E474-4C8A-99AC-DC15705E395C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.Engine", "..\..\..\Axiom\Engine\Axiom.Engine.csproj", "{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiverse.Config", "..\..\Config\Multiverse.Config.csproj", "{A885B41B-BDA3-42F7-968D-D471A5B156A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiverse.MathLib", "..\..\MathLib\Multiverse.MathLib.csproj", "{9F78B40B-536B-4D4C-9B2A-2D17246CC670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.MathLib", "..\..\..\Axiom\MathLib\Axiom.MathLib.csproj", "{48EAC066-47F2-44A5-9454-DFA718DCB55E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05B64CC5-DFD6-4E50-BE05-F726A60278B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B64CC5-DFD6-4E50-BE05-F726A60278B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B64CC5-DFD6-4E50-BE05-F726A60278B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B64CC5-DFD6-4E50-BE05-F726A60278B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B64CC5-DFD6-4E50-BE05-F726A60278B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B64CC5-DFD6-4E50-BE05-F726A60278B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B64CC5-DFD6-4E50-BE05-F726A60278B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B64CC5-DFD6-4E50-BE05-F726A60278B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14A1A669-E474-4C8A-99AC-DC15705E395C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14A1A669-E474-4C8A-99AC-DC15705E395C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14A1A669-E474-4C8A-99AC-DC15705E395C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14A1A669-E474-4C8A-99AC-DC15705E395C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A885B41B-BDA3-42F7-968D-D471A5B156A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A885B41B-BDA3-42F7-968D-D471A5B156A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A885B41B-BDA3-42F7-968D-D471A5B156A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A885B41B-BDA3-42F7-968D-D471A5B156A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F78B40B-536B-4D4C-9B2A-2D17246CC670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F78B40B-536B-4D4C-9B2A-2D17246CC670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F78B40B-536B-4D4C-9B2A-2D17246CC670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F78B40B-536B-4D4C-9B2A-2D17246CC670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

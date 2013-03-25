@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Road Name="Main St." HalfWidth="2">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-384757.3" y="152257.4" z="312030.1" />
+      <Point WorldViewSelect="True" x="-169954.7" y="158130.7" z="328414.5" />
+    </PointCollection>
+  </Road>
+  <Road Name="Broadway" HalfWidth="2">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-262328.4" y="154996.1" z="262062.6" />
+      <Point WorldViewSelect="True" x="-283464.6" y="138242.1" z="591723.9" />
+    </PointCollection>
+  </Road>
+</WorldObjectCollection>

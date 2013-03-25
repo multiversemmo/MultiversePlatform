@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="les_world" Version="2">
+  <CameraPosition x="26030.48" y="168112.2" z="-1194469" />
+  <CameraOrientation x="-0.03897141" y="0.8457515" z="0.0623673" w="0.5284847" />
+  <Terrain Type="HeightfieldMosaic" MosaicName="LES_world_terrain" PreloadRadius="1" OutsideHeight="0" />
+  <TerrainDisplay Type="AutoSplat" UseParams="True" UseGeneratedShadeMask="True" TextureTileSize="5" SandToGrassHeight="50000" GrassToRockHeight="250000" RockToSnowHeight="450000" SandTextureName="splatting_sand.dds" GrassTextureName="les_base_asphalt.dds" RockTextureName="splatting_rock.dds" SnowTextureName="splatting_snow.dds" ShadeMaskTextureName="" />
+  <Ocean DisplayOcean="False" UseParams="True" WaveHeight="1000" SeaLevel="10000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <Skybox Name="LES_skybox" />
+  <GlobalFog Far="230000" Near="9000">
+    <Color R="0" G="0" B="0" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.1686275" G="0.1333333" B="0.1176471" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="-140" Zenith="-66">
+    <Direction x="0.2614453" y="0.9135455" z="0.3115784" />
+    <Diffuse R="0.08627451" G="0.7137255" B="0.7450981" />
+    <Specular R="0.9764706" G="0.9215686" B="0.9960784" />
+  </GlobalDirectionalLight>
+  <WorldCollection Name="LES_mv_streets" Filename="les_character_creation-LES_mv_streets.mwc" />
+  <WorldCollection Name="LES_mv_blocks" Filename="les_character_creation-LES_mv_blocks.mwc" />
+  <WorldCollection Name="LES_mv_int_club" Filename="les_character_creation-LES_mv_int_club.mwc" />
+  <WorldCollection Name="test_objects" Filename="les_character_creation-test_objects.mwc" />
+</World>

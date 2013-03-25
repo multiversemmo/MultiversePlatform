@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="car_civ_A_01" Mesh="LES_car_civilian_A.mesh" TerrainOffest="166424.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="49898.34" y="166424.5" z="-1176486" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="car_civilian_A-lib.0" MaterialName="LES_car_civilian_A.car_civilian_A" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="car_civ_B_01" Mesh="LES_car_civilian_B.mesh" TerrainOffest="166424.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-180" Zenith="90">
+    <Position x="39898.34" y="166424.5" z="-1186486" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="car_civilian_B-lib.0" MaterialName="LES_car_civilian_B.car_civilian_B" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="car_police_01" Mesh="LES_car_police.mesh" TerrainOffest="166424.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-180" Zenith="90">
+    <Position x="21898.34" y="166424.5" z="-1186486" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="car_police-lib.0" MaterialName="LES_car_police.police" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="car_taxi_01" Mesh="LES_car_taxi.mesh" TerrainOffest="166424.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-101.66" y="166424.5" z="-1176486" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="car_taxi-lib.0" MaterialName="LES_car_taxi.taxi" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="street_fill_01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="176984" y="166374.5" z="-1207792" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of street_fill_01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="68475.3" y="166374.5" z="-1266066" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="1 Copy of street_fill_01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="67595.5" y="166374.5" z="-1316066" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of 1 Copy of street_fill_01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166274.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-53147.96" y="166274.5" z="-1026978" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of street_fill_01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-101900.1" y="166374.5" z="-1263543" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="1 Copy of street_fill_01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166574.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-11865.53" y="166574.5" z="-1262642" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="2 Copy of street_fill_01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-54639.84" y="166374.5" z="-1262642" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of street_fill_01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="23362.69" y="166374.5" z="-1262592" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="streets_nocol" Mesh="LES_streets_nocol.mesh" TerrainOffest="166434.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="67611.07" y="166434.5" z="-1181448" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_streets_nocol-lib.0" MaterialName="LES_streets_nocol.LES_street_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

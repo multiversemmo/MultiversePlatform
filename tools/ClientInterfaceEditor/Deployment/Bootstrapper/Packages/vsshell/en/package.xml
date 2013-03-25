@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+
+<Package
+  xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"
+  Name="DisplayName"
+  Culture="Culture"
+  LicenseAgreement="license.txt"
+>
+
+  <PackageFiles>
+    <PackageFile Name="license.txt"/>
+  </PackageFiles>
+
+  <!-- Defines a localizable string table for error messages and url's  -->
+  <Strings>
+    <String Name="DisplayName">Microsoft Visual Studio 2008 Shell (Isolated Mode)</String>
+    <String Name="Culture">en</String>
+    <String Name="DotNetFxRequired">Installation of Microsoft Visual Studio 2008 Shell (Isolated Mode) requires Microsoft .NET Framework 3.5.</String>
+    <String Name="InvalidPlatformWin9x">Installation of Microsoft Visual Studio 2008 Shell (Isolated Mode) is not supported on Windows 95. Contact your application vendor.</String>
+    <String Name="InvalidPlatformWinNT">Installation of Microsoft Visual Studio 2008 Shell (Isolated Mode) is not supported on Windows NT 4.0. Contact your application vendor.</String>
+    <String Name="GeneralFailure">A fatal error occurred during the installation of Microsoft Visual Studio 2008 Shell (Isolated Mode).</String>
+    <String Name="AdminRequired">You do not have the permissions required to install this application.  Please contact your administrator.</String>
+  </Strings>
+</Package>

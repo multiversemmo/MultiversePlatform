@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="Hilltop Watch Tower #1" Mesh="tower.mesh" TerrainOffest="-0.03125" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="232644.3" y="246712.3" z="38511.63" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="watchtowerShape-lib.0" MaterialName="tower.lambert1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Hilltop Watch Tower #2" Mesh="tower.mesh" TerrainOffest="-0.015625" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="65.92942" Zenith="90">
+    <Position x="225686.7" y="208962.7" z="470901.8" />
+    <Scale x="0.8489529" y="0.8489529" z="0.8489529" />
+    <Orientation x="0" y="0.5441223" z="0" w="0.8390059" />
+    <SubMeshes>
+      <SubMeshInfo Name="watchtowerShape-lib.0" MaterialName="tower.lambert1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Hilltop Watch Tower #3" Mesh="tower.mesh" TerrainOffest="0.015625" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="281639.7" y="235360.4" z="997690.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="watchtowerShape-lib.0" MaterialName="tower.lambert1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Hilltop Watch Tower #4" Mesh="tower.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="150186.6" y="235483.8" z="1354460" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="watchtowerShape-lib.0" MaterialName="tower.lambert1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Hilltop Watch Tower #5" Mesh="tower.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="204.9532" Zenith="90">
+    <Position x="-27047.64" y="218069.2" z="1176541" />
+    <Scale x="1.127587" y="1.127587" z="1.127587" />
+    <Orientation x="0" y="0.9763843" z="0" w="-0.2160407" />
+    <SubMeshes>
+      <SubMeshInfo Name="watchtowerShape-lib.0" MaterialName="tower.lambert1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

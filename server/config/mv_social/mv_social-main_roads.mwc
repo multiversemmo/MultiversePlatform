@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Road Name="circle_road" HalfWidth="1">
+    <PointCollection>
+      <Point x="335009.2" y="71000" z="274052.8" />
+      <Point x="280109.2" y="71000" z="274190" />
+      <Point x="261009.2" y="71000" z="295543.9" />
+      <Point x="280109.2" y="71000" z="316112.2" />
+      <Point x="335909.2" y="71000" z="313734.8" />
+      <Point x="336293" y="71000" z="354946.3" />
+      <Point x="381945.7" y="71000" z="356246.3" />
+      <Point x="409332.9" y="71000" z="349246.3" />
+      <Point x="424109.2" y="71000" z="329422.4" />
+      <Point x="429109.2" y="71000" z="311926.4" />
+      <Point x="430109.2" y="71000" z="284080.4" />
+      <Point x="425109.2" y="71000" z="262294.3" />
+      <Point x="413054.3" y="71000" z="244246.3" />
+      <Point x="391601.4" y="71000" z="232246.3" />
+      <Point x="335664.2" y="71000" z="232846.3" />
+      <Point x="335009.2" y="71000" z="274013.6" />
+    </PointCollection>
+  </Road>
+  <Boundary Name="rose_01" Priority="50">
+    <PointCollection>
+      <Point x="195963.2" y="72287.56" z="363960.8" />
+      <Point x="262963.2" y="71000" z="362162.6" />
+      <Point x="307963.2" y="71000" z="355588" />
+      <Point x="331963.2" y="71000" z="345699" />
+      <Point x="332963.2" y="71000" z="321342.3" />
+      <Point x="277963.2" y="71000" z="323874.5" />
+      <Point x="256963.2" y="71000" z="303155.8" />
+      <Point x="194963.2" y="71000" z="307572.3" />
+      <Point x="192963.2" y="71356.1" z="347082.9" />
+    </PointCollection>
+    <Grass Name="rose_01">
+      <PlantType Instances="500" ColorMultHi="1" ColorMultLow="1" Name="Rose" ImageName="rose" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="rose_02" Priority="50">
+    <PointCollection>
+      <Point x="256419" y="71000" z="289720.1" />
+      <Point x="204419" y="71000" z="285648.9" />
+      <Point x="205419" y="71550.97" z="233084.1" />
+      <Point x="217419" y="71528.04" z="217782.8" />
+      <Point x="229419" y="71000" z="214959.2" />
+      <Point x="308419" y="71000" z="224955.4" />
+      <Point x="328419" y="71000" z="236559.8" />
+      <Point x="331419" y="71000" z="268344.1" />
+      <Point x="278419" y="71000" z="269950.5" />
+    </PointCollection>
+    <Grass Name="rose_02">
+      <PlantType Instances="600" ColorMultHi="1" ColorMultLow="1" Name="Rose" ImageName="rose" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="rose_03" Priority="50">
+    <PointCollection>
+      <Point x="263817" y="71000" z="296880.4" />
+      <Point x="263817" y="71000" z="294315.7" />
+      <Point x="280817" y="71000" z="279823.7" />
+      <Point x="309817" y="71000" z="280312.8" />
+      <Point x="308817" y="71000" z="308653" />
+      <Point x="282817" y="71000" z="310827.9" />
+    </PointCollection>
+    <Grass Name="rose_03">
+      <PlantType Instances="300" ColorMultHi="1" ColorMultLow="1" Name="Rose" ImageName="rose" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="inner_grass_01" Priority="50">
+    <PointCollection>
+      <Point x="400288.2" y="71000" z="266762.2" />
+      <Point x="418288.2" y="71000" z="269459.7" />
+      <Point x="419288.2" y="71000" z="295228.6" />
+      <Point x="416288.2" y="71000" z="322493.8" />
+      <Point x="401288.2" y="71000" z="321489.7" />
+      <Point x="395288.2" y="71000" z="343592.9" />
+      <Point x="387288.2" y="71000" z="328416.2" />
+      <Point x="379663.5" y="71000" z="346027.2" />
+      <Point x="354490.3" y="71000" z="336027.2" />
+      <Point x="346288.2" y="71000" z="315586" />
+      <Point x="345358.6" y="71000" z="274027.2" />
+      <Point x="356078.7" y="71000" z="253027.2" />
+      <Point x="376095.5" y="71000" z="242027.2" />
+      <Point x="383288.2" y="71000" z="260839.6" />
+      <Point x="393288.2" y="71000" z="244520.5" />
+      <Point x="405288.2" y="71000" z="251064.7" />
+    </PointCollection>
+    <Grass Name="inner_grass">
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Rose" ImageName="rose" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+      <PlantType Instances="1000" ColorMultHi="1" ColorMultLow="1" Name="Colorized Grass 1" ImageName="grass1" ScaleWidthLow="500" ScaleWidthHi="500" ScaleHeightLow="500" ScaleHeightHi="500" WindMagnitude="100" R="0.3843137" G="0.5686275" B="0.5176471" />
+    </Grass>
+  </Boundary>
+</WorldObjectCollection>

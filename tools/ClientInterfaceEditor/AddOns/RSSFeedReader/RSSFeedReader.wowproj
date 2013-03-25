@@ -1,0 +1,48 @@
+﻿<Project DefaultTargets="Deploy" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>RSSFeedReader</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8d6a2d14-4971-44bd-8da8-762b1d9c04c5}</ProjectGuid>
+    <WowPath>D:\World of Warcraft\</WowPath>
+    <AssemblyName>RSSFeedReader</AssemblyName>
+    <RootNamespace>RSSFeedReader</RootNamespace>
+    <SavedVariables>COMMON_FEED_LIST_FEEDS</SavedVariables>
+  </PropertyGroup>
+  <PropertyGroup>
+    <InterfaceVersion>20200</InterfaceVersion>
+    <AddonTitle>RSS Feed Reader</AddonTitle>
+    <AddonNotes>RSS Feed Reader so you don't have to leave WoW anymore :)</AddonNotes>
+    <AddonVersion>1.0</AddonVersion>
+    <Author>Gabor Ratky</Author>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WowAddonStudio\1.0\WowAddonStudio.targets" />
+  <ItemGroup>
+    <Content Include="Code.lua">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="RSSFeedReader.toc">
+      <SubType>TableOfContents</SubType>
+    </Content>
+    <Content Include="Frame.xml">
+      <SubType>Frame</SubType>
+    </Content>
+    <Content Include="Frame.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>Frame.xml</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it. 
+		
+	<Target Name="BeforeClean"></Target>
+	<Target Name="AfterClean"></Target>
+	<Target Name="BeforeRebuild"></Target>
+	<Target Name="AfterRebuild"></Target>
+	<Target Name="BeforeDeploy"></Target>
+	<Target Name="AfterDeploy"></Target>
+	-->
+</Project>

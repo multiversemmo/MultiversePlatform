@@ -1,0 +1,33 @@
+# Agent message type advertisements
+# See: http://update.multiverse.net/wiki/index.php/Multiverse_Messaging_System#Advertisements
+
+mv.PERCEIVER_REGIONS
+mv.PROPERTY
+mv.MOB_PATH
+mv.UPDATEWNODE
+mv.SAVE_OBJECT_DATA
+mv.COM
+mv.DESPAWNED
+mv.FOG
+mv.WNODECORRECT
+mv.ROAD
+mv.SET_AMBIENT
+mv.NEW_DIRLIGHT
+mv.DISPLAY_CONTEXT
+mv.SPAWNED
+mv.SOUND
+mv.TARGETED_PROPERTY
+mv.PERCEPTION_INFO
+mv.PERCEPTION
+mv.MOB_PATH_CORRECTION
+mv.TRANSFER_OBJECT
+mv.NEW_REMOTE_OBJ
+mv.FREE_REMOTE_OBJ
+mv.FREE_OBJECT
+mv.FREE_ROAD
+mv.EXTENSION
+
+# for InstanceEntryRegionTrigger
+mv.GET_INSTANCE_INFO
+mv.GET_MARKER
+mv.INSTANCE_ENTRY_REQ

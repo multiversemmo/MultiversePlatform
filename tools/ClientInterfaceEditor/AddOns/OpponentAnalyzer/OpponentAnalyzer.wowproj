@@ -1,0 +1,57 @@
+﻿<Project DefaultTargets="Deploy" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>OpponentAnalyzer</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{729e494f-3287-487c-870d-cbc22fbc9f59}</ProjectGuid>
+    <WowPath>D:\World of Warcraft</WowPath>
+    <AssemblyName>OpponentAnalyzer</AssemblyName>
+    <RootNamespace>OpponentAnalyzer</RootNamespace>
+    <AuthorEmail>rgabo@rgabostyle.com</AuthorEmail>
+    <SavedVariablesPerCharacter>killLog</SavedVariablesPerCharacter>
+  </PropertyGroup>
+  <PropertyGroup>
+    <InterfaceVersion>20200</InterfaceVersion>
+    <AddonTitle>Opponent Analyzer</AddonTitle>
+    <AddonNotes>Analyzes the selected target and gives visual feedback.</AddonNotes>
+    <AddonVersion>1.0</AddonVersion>
+    <Author>Gabor Ratky</Author>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WowAddonStudio\1.0\WowAddonStudio.targets" />
+  <ItemGroup>
+    <Folder Include="Sounds" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\doublekill.mp3" />
+    <Content Include="Sounds\killfrenzy.mp3" />
+    <Content Include="Sounds\killimanjaro.mp3" />
+    <Content Include="OpponentAnalyzer.toc">
+      <SubType>TableOfContents</SubType>
+    </Content>
+    <Content Include="Frame.xml">
+      <SubType>Frame</SubType>
+    </Content>
+    <Content Include="Frame.lua">
+      <SubType>Code</SubType>
+      <DependentUpon>Frame.xml</DependentUpon>
+    </Content>
+    <Content Include="even.tga" />
+    <Content Include="pumpkin.tga" />
+    <Content Include="squirrel.tga" />
+    <Content Include="doublekill.tga" />
+    <Content Include="triplekill.tga" />
+  </ItemGroup>
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it. 
+		
+	<Target Name="BeforeClean"></Target>
+	<Target Name="AfterClean"></Target>
+	<Target Name="BeforeRebuild"></Target>
+	<Target Name="AfterRebuild"></Target>
+	<Target Name="BeforeDeploy"></Target>
+	<Target Name="AfterDeploy"></Target>
+	-->
+</Project>

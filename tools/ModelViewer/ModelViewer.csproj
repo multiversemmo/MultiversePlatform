@@ -1,0 +1,186 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{87D85661-59C5-4E11-B74C-BBF0EC81A063}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModelViewer</RootNamespace>
+    <AssemblyName>ModelViewer</AssemblyName>
+    <ApplicationIcon>ModelViewer.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Axiom\Dependencies\Managed\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoneDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoneDisplay.Designer.cs">
+      <DependentUpon>BoneDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LODSpec.cs" />
+    <Compile Include="MaterialSchemeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaterialSchemeDialog.Designer.cs">
+      <DependentUpon>MaterialSchemeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModelViewer.Designer.cs">
+      <DependentUpon>ModelViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BoneDisplay.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BoneDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaterialSchemeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaterialSchemeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModelViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ModelViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveMaxFPSDialog.resx">
+      <DependentUpon>SaveMaxFPSDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetAssetRepositoryDialog.resx">
+      <DependentUpon>SetAssetRepositoryDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SaveMaxFPSDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveMaxFPSDialog.Designer.cs">
+      <DependentUpon>SaveMaxFPSDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetAssetRepositoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAssetRepositoryDialog.designer.cs">
+      <DependentUpon>SetAssetRepositoryDialog.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Axiom\Engine\Axiom.Engine.csproj">
+      <Project>{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}</Project>
+      <Name>Axiom.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\MathLib\Axiom.MathLib.csproj">
+      <Project>{48EAC066-47F2-44A5-9454-DFA718DCB55E}</Project>
+      <Name>Axiom.MathLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\Platforms\Win32\Axiom.Platforms.Win32.csproj">
+      <Project>{5E123EF9-47A1-49BA-BF0A-57B32156B2A1}</Project>
+      <Name>Axiom.Platforms.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\Plugins\CgProgramManager\Axiom.Plugins.CgProgramManager.csproj">
+      <Project>{519EF06F-12B1-43C4-AB84-765EAB4E5B59}</Project>
+      <Name>Axiom.Plugins.CgProgramManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\Plugins\ParticleFX\Axiom.Plugins.ParticleFX.csproj">
+      <Project>{E763AAC7-530A-48CF-A846-5423A83FA669}</Project>
+      <Name>Axiom.Plugins.ParticleFX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\RenderSystems\DirectX9\Axiom.RenderSystems.DirectX9.csproj">
+      <Project>{CB7A661F-83B9-416D-B204-C1096DC7CF75}</Project>
+      <Name>Axiom.RenderSystems.DirectX9</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\AssetRepository\Multiverse.AssetRepository.csproj">
+      <Project>{A938BCF5-10B9-45A2-9553-550B2BDBF7CF}</Project>
+      <Name>Multiverse.AssetRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Generator\Multiverse.Generator.csproj">
+      <Project>{61BBF284-FC72-4D15-9783-263CE4BB940C}</Project>
+      <Name>Multiverse.Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\LogUtil\Multiverse.Lib.LogUtil.csproj">
+      <Project>{68B78196-2567-4E0F-99E6-F577B2CAAB9A}</Project>
+      <Name>Multiverse.Lib.LogUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MultiverseClient\CollisionLib\Multiverse.CollisionLib.csproj">
+      <Project>{EB687263-4BFD-4EC0-A987-055148C056DD}</Project>
+      <Name>Multiverse.CollisionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MultiverseClient\Serialization\Multiverse.Serialization.csproj">
+      <Project>{AE280269-9891-428E-A2E0-8774F2BEAF24}</Project>
+      <Name>Multiverse.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\mvsm\Axiom.SceneManagers.Multiverse.csproj">
+      <Project>{1634B8A5-A73F-4814-809D-CD8E107D2C65}</Project>
+      <Name>Axiom.SceneManagers.Multiverse</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelViewer.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilePad", "TilePad\TilePad.csproj", "{9345A797-170C-4071-AFCF-807E4F1C6368}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDSFile", "..\..\Lib\DDSFile\DDSFile.csproj", "{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9345A797-170C-4071-AFCF-807E4F1C6368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9345A797-170C-4071-AFCF-807E4F1C6368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9345A797-170C-4071-AFCF-807E4F1C6368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9345A797-170C-4071-AFCF-807E4F1C6368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

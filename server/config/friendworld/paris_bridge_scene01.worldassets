@@ -1,0 +1,6 @@
+Mesh:brickTerrace.mesh
+Texture:pavmentGeneric.dds
+Texture:pavmentGeneric.dds
+Texture:splatting_rock.dds
+Texture:splatting_snow.dds
+Material:fbm_skybox01

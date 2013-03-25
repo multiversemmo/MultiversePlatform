@@ -1,0 +1,551 @@
+diff -Naur cegui-sharp.cvs/CrayzEdsGui.Base/Font.cs cegui-sharp/CrayzEdsGui.Base/Font.cs
+--- cegui-sharp.cvs/CrayzEdsGui.Base/Font.cs	2004-11-14 17:08:38.406250000 -0800
++++ cegui-sharp/CrayzEdsGui.Base/Font.cs	2004-11-14 17:09:00.828125000 -0800
+@@ -44,6 +44,7 @@
+ 	///		the <see cref="Renderer"/> object.
+ 	///		
+ 	///		Based on the font generation code found in the Axiom Engine (http://axiomengine.sf.net).
++	///	 This was last merged with version 1.15 of CEGUIFont.cpp
+ 	/// </remarks>
+ 	public class Font {
+ 		#region Constants
+@@ -53,6 +54,9 @@
+ 		/// </summary>
+ 		public static readonly Color DefaultColor = new Color(1, 1, 1, 1);
+ 
++		// Amount of spacing to put between glyphs in the font bitmap.
++		// This padding prevents portions of one glyph from showing up in 
++		// other glyphs.  It must be a whole number.
+ 		const float InterGlyphPadSpace = 2.0f;
+ 
+ 		/// <summary>
+@@ -245,7 +249,7 @@
+ 					case HorizontalTextFormat.Center:
+ 						DrawTextLine(
+ 							currentLine, 
+-							new Vector3(drawArea.left + ((tmpDrawArea.Width - GetTextExtent(currentLine)) * 0.5f), baseY, z), 
++							new Vector3(drawArea.left + (float)Math.Floor((tmpDrawArea.Width - GetTextExtent(currentLine)) * 0.5f), baseY, z), 
+ 							clipRect, colors);
+ 						
+ 						thisCount = 1;
+@@ -271,7 +275,7 @@
+ 						throw new InvalidRequestException("Unknown text format option '{0}'", format);
+ 				}
+ 
+-				lineCount = thisCount;
++				lineCount += thisCount;
+ 			}
+ 
+ 			return lineCount;
+@@ -519,7 +523,7 @@
+ 					}
+ 				}
+ 
+-				return count;
++				return count + 1;
+ 			}
+ 
+ 			// wrapping cases
+@@ -540,7 +544,7 @@
+ 
+ 				// get the first word
+ 				thisLine = TextUtil.GetNextWord(sourceLine, 0);
+-				currentPos += thisLine.Length;
++				currentPos = thisLine.Length;
+ 
+ 				// while there are words left in the string
+ 				while(TextUtil.IndexNotOf(sourceLine, whitespace, currentPos) != -1) {
+@@ -569,6 +573,110 @@
+ 
+ 			return lineCount;
+ 		}
++		/// <summary>
++		///   Return the horizontal pixel extent given text would be formatted to.
++		/// </summary>
++		/// <param name="text"></param>
++		/// <param name="formatArea"></param>
++		/// <param name="format"></param>
++		/// <returns></returns>
++		  public float GetFormattedTextExtent(string text, Rect formatArea, HorizontalTextFormat format) 
++		  {
++			float lineWidth;
++			float widest = 0;
++			int lineStart = 0, lineEnd = 0;
++			string currLine;
++
++			Rect tmpDrawArea = formatArea;
++
++			while (lineEnd < text.Length) {
++				if ((lineEnd = text.IndexOf('\n', lineStart)) == -1)
++					  lineEnd = text.Length;
++				  currLine = text.Substring(lineStart, lineEnd - lineStart);
++				  lineStart = lineEnd + 1;		// +1 to skip \n char
++
++				switch (format) {	  
++					case HorizontalTextFormat.Center:
++					case HorizontalTextFormat.Right:
++					case HorizontalTextFormat.Left:
++						  lineWidth = GetTextExtent(currLine);
++						  break;
++
++					case HorizontalTextFormat.WordWrapLeft:
++					case HorizontalTextFormat.WordWrapRight:
++					  case HorizontalTextFormat.WordWrapCentered:
++						  lineWidth = GetWrappedTextExtent(currLine, formatArea.Width);
++						  break;
++
++					  default:
++						  throw new InvalidRequestException("Font.GetFormattedTextExtent - Unknown or unsupported TextFormatting value specified.");
++				  }
++
++				  if (lineWidth > widest)
++					  widest = lineWidth;
++			}
++
++			  return widest;
++		  }
++	
++	   
++		/// <summary>
++		///   Returns extent of widest line of wrapped text.
++		/// </summary>
++		/// <param name="text"></param>
++		/// <param name="wrapWidth"></param>
++		/// <returns></returns>
++		public float GetWrappedTextExtent(string text, float wrapWidth)
++		{
++			// wrapping cases
++			int lineStart = 0, lineEnd = 0;
++			string whitespace = TextUtil.DefaultWhitespace;
++			string thisWord;
++			float lineWidth, wordWidth;
++			float widest = 0;
++			int currentPos = 0;
++			
++			while (lineEnd < text.Length) {
++				if ((lineEnd = text.IndexOf("\n", lineStart)) == -1) {
++					lineEnd = text.Length;
++				}
++			}
++
++			// get the first word of the string
++			thisWord = TextUtil.GetNextWord(text, currentPos);
++			currentPos += thisWord.Length;
++			lineWidth = GetTextExtent(thisWord);
++			
++			// while there are words left in the string
++			while(TextUtil.IndexNotOf(text, whitespace, currentPos) != -1) {
++				// get the next word of the string
++				thisWord = TextUtil.GetNextWord(text, currentPos);
++				currentPos += thisWord.Length;
++			
++				// if the new word would make the string too long
++				wordWidth = GetTextExtent(thisWord);
++				// if the new word would make the string too long
++				if ((lineWidth + wordWidth) > wrapWidth) {
++					if (lineWidth > widest)
++						widest = lineWidth;
++
++					// remove whitespace from next word - it will form start of next line
++					thisWord = thisWord.Substring(TextUtil.IndexNotOf(thisWord, whitespace, 0));
++					wordWidth = GetTextExtent(thisWord);
++
++					// reset for a new line.
++					lineWidth = 0;
++				}
++
++				// add the next word to the line
++				lineWidth += wordWidth;
++			}
++
++			if (lineWidth > widest)
++				widest = lineWidth;
++			
++			return widest;
++		}
+ 
+ 		/// <summary>
+ 		///		Return whether this Font can currently draw the specified code-point.
+@@ -619,9 +727,8 @@
+ 			StringFormat format = (StringFormat)StringFormat.GenericTypographic.Clone();
+ 			format.FormatFlags = StringFormatFlags.MeasureTrailingSpaces;
+ 
+-			// TODO: Magic numbers, ah!
+-			float height = font.FontFamily.GetLineSpacing(FontStyle.Regular) / 64;
+-			ySpacing = font.FontFamily.GetEmHeight(FontStyle.Regular) / 96;
++			ySpacing = (float)Math.Ceiling(font.GetHeight(g));
++			float height = ySpacing;
+ 
+ 			// loop through each character in the glyph string and draw it to the bitmap
+ 			for(int i = 0; i < glyphs.Length; i++) {
+@@ -630,13 +737,12 @@
+ 				// measure the width and height of 'A' for reference
+ 				SizeF metrics = g.MeasureString(c.ToString(), font, 1024, format);
+ 
+-				// TODO: Magic number
+-				float width = metrics.Width + 0.7f;
++				float width = (float)Math.Ceiling(metrics.Width);
+ 
+ 				// are we gonna wrap?
+ 				if(x + width > bitmapWidth) {
+ 					// increment the y coord and reset x to move to the beginning of next line
+-					y += height;
++					y += (height + InterGlyphPadSpace);
+ 					x = 0;
+ 				}
+ 
+@@ -669,8 +775,7 @@
+ 				glyphImages.DefineImage(c.ToString(), rect, new Point(0, 0));
+ 
+ 				glyphData[i].Image = glyphImages.GetImage(c.ToString());
+-				// TODO: Hack for testing
+-				glyphData[i].HorizontalAdvance = width * .95f;
++				glyphData[i].HorizontalAdvance = width;
+ 				glyphData[i].Glyph = c;
+ 
+ 				// increment X by the width of the current char
+diff -Naur cegui-sharp.cvs/CrayzEdsGui.Base/Widgets/StaticText.cs cegui-sharp/CrayzEdsGui.Base/Widgets/StaticText.cs
+--- cegui-sharp.cvs/CrayzEdsGui.Base/Widgets/StaticText.cs	2004-11-14 17:08:38.687500000 -0800
++++ cegui-sharp/CrayzEdsGui.Base/Widgets/StaticText.cs	2004-11-14 17:09:00.843750000 -0800
+@@ -32,10 +32,11 @@
+ 	///		Base class for a static text widget.
+ 	/// </summary>
+ 	/// <remarks>
+-	///		This base class performs it's own rendering.  There is no need to override this widget to perform rendering
+-	///		of static texts.
++	///		This base class performs it's own rendering.  
++	///	 This widget will need to be overriden to provide scrollbar objects.
++	///	 This was last synced with version 1.5 of CEGUIStaticText.cpp
+ 	/// </remarks>
+-	public class StaticText : Static {
++	public abstract class StaticText : Static {
+ 		#region Fields
+ 
+ 		/// <summary>
+@@ -46,6 +47,17 @@
+ 		///		Vertical text formatting.
+ 		/// </summary>
+ 		protected VerticalTextFormat vertFormatting;
++		
++		protected Scrollbar vertScrollbar;
++		protected bool enableVertScrollbar = false;
++
++		protected Scrollbar horzScrollbar;
++		protected bool enableHorzScrollbar = false;
++
++		// Desired sizes for scrollbars
++		protected float vertScrollbarWidth;
++		protected float horzScrollbarHeight;
++
+ 		/// <summary>
+ 		///		Colors to use for rendering the text of this widget.
+ 		/// </summary>
+@@ -172,7 +184,7 @@
+ 
+ 			// render text
+ 
+-			Rect absRect = UnclippedInnerRect;
++			Rect absRect = TextRenderArea;
+ 			Rect clipper = absRect.GetIntersection(PixelRect);
+ 
+ 			Font textFont = this.Font;
+@@ -180,14 +192,44 @@
+ 			// get total pixel height of the text based on its format
+ 			float textHeight = textFont.GetFormattedLineCount(text, absRect, horzFormatting) * textFont.LineSpacing;
+ 
++			// see if we may need to adjust horizontal position
++			if (horzScrollbar.Visible) {
++				switch (horzFormatting) {
++					case HorizontalTextFormat.Left:
++					case HorizontalTextFormat.WordWrapLeft:
++						absRect.Offset(new Point(-horzScrollbar.ScrollPosition, 0));
++						break;
++
++					case HorizontalTextFormat.Center:
++					case HorizontalTextFormat.WordWrapCentered:
++						absRect.Width = horzScrollbar.DocumentSize;
++						absRect.Offset(new Point(-horzScrollbar.ScrollPosition, 0));
++						break;
++
++					case HorizontalTextFormat.Right:
++					case HorizontalTextFormat.WordWrapRight:
++						absRect.Offset(new Point(horzScrollbar.ScrollPosition, 0));
++						break;
++				}
++
++			}
+ 			// adjust y positioning according to formatting options
+-			switch(vertFormatting) {
++			switch (vertFormatting) {
++				case VerticalTextFormat.Top:
++					absRect.top -= vertScrollbar.ScrollPosition;
++					break;
+ 				case VerticalTextFormat.Centered:
+-					absRect.top += ((absRect.Height - textHeight) * 0.5f);
++					// if scroll bar is in use, act like TopAligned
++					if (vertScrollbar.Visible)
++						absRect.top -= vertScrollbar.ScrollPosition;
++					// no scroll bar, so centre text instead.
++					else
++						absRect.top += (float)Math.Floor((absRect.Height - textHeight) * 0.5f);
+ 					break;
+ 
+ 				case VerticalTextFormat.Bottom:
+ 					absRect.top = absRect.bottom - textHeight;
++					absRect.top += vertScrollbar.ScrollPosition;
+ 					break;
+ 			}
+ 
+@@ -203,5 +245,252 @@
+ 		}
+ 
+ 		#endregion Window Members
++
++		/// <summary>
++		///   Perform initialisation for the widget.
++		/// </summary>
++		public override void Initialize()
++		{
++			base.Initialize();
++
++			// create the component sub-widgets
++			vertScrollbar = CreateVertScrollbar();
++			horzScrollbar = CreateHorzScrollbar();
++
++			vertScrollbarWidth = vertScrollbar.AbsoluteWidth;
++			horzScrollbarHeight = horzScrollbar.AbsoluteHeight;
++
++			vertScrollbar.Hide();
++			horzScrollbar.Hide();
++
++			AddChild(vertScrollbar);
++			AddChild(horzScrollbar);
++
++			LayoutComponentWidgets();
++
++			// event subscription
++			vertScrollbar.ScrollPositionChanged += 
++				new WindowEventHandler(HandleScrollbarChange);
++			horzScrollbar.ScrollPositionChanged +=
++				new WindowEventHandler(HandleScrollbarChange);
++		}
++
++		/// <summary>
++		///   Return a Rect object describing, in un-clipped pixels, the window
++		///   relative area that the text should be rendered in to.
++		/// </summary>
++		/// <value></value>
++		public Rect TextRenderArea
++		{
++			get {
++				Rect area = UnclippedInnerRect;
++
++				if (horzScrollbar.Visible)
++					area.bottom -= horzScrollbar.AbsoluteHeight;
++
++				if (vertScrollbar.Visible)
++					area.right -= vertScrollbar.AbsoluteWidth;
++
++				if (FrameEnabled)
++				{
++					area.top += topHeight;
++					area.bottom -= bottomHeight;
++					area.left += leftWidth;
++					area.right -= rightWidth;
++				}
++
++				return area;
++			}
++		}
++
++		/// <summary>
++		///   Setup size and position for the component widgets attached to this
++		///   StaticText
++		/// </summary>
++		protected void LayoutComponentWidgets()
++		{
++			Size vSize = new Size(1.0f, 1.0f); 
++			Size hSize = new Size(1.0f, 1.0f);
++
++			// get the actual size used for vertical scroll bar.
++			vSize.width = AbsoluteToRelativeX(vertScrollbarWidth);
++
++			// set desired size for horizontal scroll-bar
++			hSize.height = AbsoluteToRelativeY(horzScrollbarHeight);
++
++			// adjust length to consider width of vertical scroll bar if that is visible
++			if (vertScrollbar.Visible)
++				hSize.width -= vSize.width;
++			if (isFrameEnabled) {
++				hSize.width -= AbsoluteToRelativeX(leftWidth + rightWidth);
++				vSize.height -= AbsoluteToRelativeX(topHeight + bottomHeight);
++			}
++			// get actual size used
++			vertScrollbar.Size = vSize;
++			horzScrollbar.Size = hSize;
++
++			// position vertical scroll bar
++			Point position;
++			position = new Point(1.0f, 0.0f);
++			if (isFrameEnabled)
++				position.x -= AbsoluteToRelativeX(rightWidth) + vertScrollbar.Size.width;
++			vertScrollbar.Position = position;
++
++			// position horizontal scroll bar
++			position = new Point(0.0f, 1.0f);
++			if (isFrameEnabled)
++				position.y -= AbsoluteToRelativeY(bottomHeight) + horzScrollbar.Size.height;
++			horzScrollbar.Position = position;
++		}
++
++		/// <summary>
++		///   Display required integrated scroll bars according to current state
++		///   of the edit box and update their values.
++		/// </summary>
++		protected void ConfigureScrollbars() {
++			Font textFont = this.Font;
++
++			Rect renderArea = TextRenderArea;
++
++			float totalHeight = textFont.GetFormattedLineCount(text, renderArea, horzFormatting) * textFont.LineSpacing;
++			float widestItem = textFont.GetFormattedTextExtent(text, renderArea, horzFormatting);
++			
++			//
++			// First show or hide the scroll bars as needed (or requested)
++			//
++			// show or hide vertical scroll bar as required (or as specified by option)
++			if ((totalHeight > renderArea.Height) && enableVertScrollbar) {
++				vertScrollbar.Show();
++				// show or hide horizontal scroll bar as required (or as specified by option)
++				if ((widestItem > renderArea.Width) && enableHorzScrollbar)
++					horzScrollbar.Show();
++				else
++					horzScrollbar.Hide();
++			} else {
++				// show or hide horizontal scroll bar as required (or as specified by option)
++				if ((widestItem > renderArea.Width) && enableHorzScrollbar) {
++					horzScrollbar.Show();
++					// show or hide vertical scroll bar as required (or as specified by option)
++					if ((totalHeight > renderArea.Height) && enableVertScrollbar)
++						vertScrollbar.Show();
++					else
++						vertScrollbar.Hide();
++				} else {
++					vertScrollbar.Hide();
++					horzScrollbar.Hide();
++				}
++			}
++
++			//
++			// Set up scroll bar values
++			//
++			vertScrollbar.DocumentSize = totalHeight;
++			vertScrollbar.PageSize = renderArea.Height;
++			vertScrollbar.StepSize = renderArea.Height / 10.0f;
++			if (vertScrollbar.StepSize < 1.0f)
++				vertScrollbar.StepSize = 1.0f;
++			// updates the scrollbar to check new limits and stuff
++			vertScrollbar.ScrollPosition = vertScrollbar.ScrollPosition;
++
++			horzScrollbar.DocumentSize = widestItem;
++			horzScrollbar.PageSize = renderArea.Width;
++			horzScrollbar.StepSize = renderArea.Width / 10.0f;
++			if (horzScrollbar.StepSize < 1.0f)
++				horzScrollbar.StepSize = 1.0f;
++			// updates the scrollbar to check new limits and stuff
++			horzScrollbar.ScrollPosition = horzScrollbar.ScrollPosition;
++		}
++
++		public bool VerticalScrollbarEnabled {
++			get {
++				return enableVertScrollbar;
++			}
++			set {
++				enableVertScrollbar = value;
++				ConfigureScrollbars();
++				LayoutComponentWidgets();
++			}
++		}
++
++		public bool HorizontalScrollbarEnabled {
++			get {
++				return enableHorzScrollbar;
++			}
++			set {
++				enableHorzScrollbar = value;
++				ConfigureScrollbars();
++				LayoutComponentWidgets();
++			}
++		}
++
++		protected internal override void OnTextChanged(WindowEventArgs e) {
++			base.OnTextChanged(e);
++
++			ConfigureScrollbars();
++			RequestRedraw();
++		}
++
++		protected internal override void OnSized(GuiEventArgs e) {
++			base.OnSized(e);
++
++			LayoutComponentWidgets();
++			ConfigureScrollbars();
++			RequestRedraw();
++		}
++
++		protected internal override void OnFontChanged(GuiEventArgs e) {
++			base.OnFontChanged(e);
++
++			ConfigureScrollbars();
++			RequestRedraw();
++		}
++
++		protected abstract Scrollbar CreateHorzScrollbar();
++		protected abstract Scrollbar CreateVertScrollbar();
++		
++		/// <summary>
++		///	  Event trigger method for the <see cref="MouseWheel"/> event.
++		/// </summary>
++		/// <param name="e">Event information.</param>
++		protected internal override void OnMouseWheel(MouseEventArgs e) {
++			base.OnMouseWheel(e);
++			if (vertScrollbar.Visible && 
++				(vertScrollbar.DocumentSize > vertScrollbar.PageSize))
++				vertScrollbar.ScrollPosition += vertScrollbar.StepSize * -e.WheelDelta;
++			else if (horzScrollbar.Visible && 
++				(horzScrollbar.DocumentSize > horzScrollbar.PageSize))
++				horzScrollbar.ScrollPosition += horzScrollbar.StepSize * -e.WheelDelta;
++			e.Handled = true;
++		}
++
++		/*************************************************************************
++			 Handler called when the scroll bar positions change
++		*************************************************************************/
++		protected void HandleScrollbarChange(object sender, WindowEventArgs e) {
++			RequestRedraw();
++		}
++
++		/// <summary>
++		///		overridden so scroll bars are not partially clipped when active
++		/// </summary>
++		// public override Rect UnclippedInnerRect {
++		// 	get {
++				// In order to get the version that is not trimmed (Static trims), I call
++				// the UnclippedPixelRect instead, which is the more raw rectangle.
++				// return UnclippedPixelRect;
++				// return base.UnclippedInnerRect;
++		//	}
++		//}
++
++		public Scrollbar VertScrollbar {
++			get {
++				return vertScrollbar;
++			}
++		}
++		public Scrollbar HorzScrollbar {
++			get {
++				return horzScrollbar;
++			}
++		}
+ 	}
+ }

@@ -1,0 +1,15 @@
+<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Class</Name>
+    <Description>An empty Class</Description>
+    <ProjectType>Web</ProjectType>
+    <ProjectSubType>IronPython</ProjectSubType>
+    <SortOrder>70</SortOrder>
+    <SupportsLanguageDropdown>true</SupportsLanguageDropdown>
+    <DefaultName>Class.py</DefaultName>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectItem ReplaceParameters="true">Class.py</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,221 @@
+Release Date: September 5, 2006
+
+Changes:
+
+Message.cpp:
+  -- Fixed property messages to correctly handle the type code
+  
+Session.cpp:
+  -- Removed some output (commented out) so that I could watch for the log
+     info I was looking for
+
+SampleBridgeClient.cpp:
+  -- Changed the way that the sample works, so that it will cause a mob to
+     set the orientation to track another object - the oids of these objects
+     should be set toward the top of the file to see this in a demo
+
+
+Release Date: September 4, 2006
+
+Changes:
+
+stdafx.h:
+stdafx.h:
+  -- Changed both the SampleBridgeClient and BridgeInterface versions of 
+     stdafx.h to include math.h for trig functions
+
+Message.h:
+Message.cpp:
+  -- Fixed a cut and paste error that prevented handling of PropertyMessage
+     objects
+  -- Moved SetPropertyMessage from the OA_Messages to these files
+  -- Added ResponseMessage type and the derivative classes including
+     ObjInfoRespMessage and PropertyRespMessage
+  -- Added methods to MessageBuffer to read and write Vector, IntVector and 
+     Quaternion objects, and changed code to use these when appropriate
+  -- Added some utility methods to Quaternion to set the rotations
+  -- Changed the old ObjectInfoMessage to be a PropertyResponseMessage, and
+     implemented a new ObjInfoRespMessage to better match the server naming
+     convention
+ 
+Session.h:
+Session.cpp:
+  -- Keep track of what kind of request we last sent out, so that we
+     can parse and construct the response message object
+  -- Added QueueMessageForUserThread method so that artificial events
+     can be inserted to cause processing in the UserMessageThread
+  
+OA_Messages.h:
+OA_Messages.cpp:
+  -- Moved SetPropertyMessage out of these headers
+
+SampleBridgeClient.cpp:
+  -- Changed the sample GetPropertyMessage to use the PropertyRespMessage 
+     instead of ObjectInfoMessage as the response message type
+  -- Fixed the sample topic filter for the subscription to DirLoc messages
+  -- Added the GetFacingFromPosition method that will get the quaternion 
+     needed to make one object face another
+  -- Modified the NewObjectMessageCallback to store the second new object
+     so that we can use this as the sample look target
+  -- Modified the DirLocMessageCallback to store the session, cache the
+     location of the first object, and when the second object moves, send
+     an update request for the first object that will turn to face the
+     second object
+
+
+Release Date: August 27, 2006
+
+Changes:
+
+Message.h
+Message.cpp
+  -- Added ComReqMessage and ComMessage objects to handle communication
+  -- Added UpdateWorldNodeReqMessage object to directly specify the desired
+     location, direction and orientation of an object.
+  -- Added AnimationCommandReqMessage object to play an animation
+
+
+Release Date: August 25, 2006
+
+Changes:
+
+Session.h
+Session.cpp
+  -- Fixed the Session::Request method to correctly lock around requests
+  
+Message.h
+Message.cpp
+  -- Added several message types
+
+
+Release Date: August 24, 2006
+
+Changes:
+
+I reorganized the files so that some are in the BridgeInterface folder 
+(for the dll), and some are in the SampleBridgeClient folder (for the 
+executable).
+
+MessageException.h
+Message.h
+Thread.h
+Socket.h
+Session.h
+  -- Changed classes to be exported from the dll
+
+Message.h
+Message.cpp
+  -- Added the PropertyMessage class for getting property update messages
+     from the server.  Right now the bridge server doesn't pass this 
+     information to the bridge client, but when it does, we should be able
+     to parse and process it.
+  
+BridgeInterface.cpp
+  -- New code to handle being a dll
+
+SampleBridgeClient.cpp
+  -- No longer initialize the sockets library, since we will do this from 
+     the load of the BridgeInterface.dll
+  -- Modified the NewObjectMessageCallback class to set a property on the
+     object (if it is a MarsMob) when it gets a NewObjectMessage.
+  -- Added code to handle the PropertyMessage in the UserRunThread::Run method
+  -- Added another subscription to listen for PropertyMessage messages
+     
+OA_Messages.h
+OA_Messages.cpp
+  -- Modified these to better fit my updated code by making some methods const
+
+==============================================
+Release Date: August 23, 2006
+
+Known Issues:
+
+I'm not certain that my changes to make various Message and MessageCallback 
+methods const will always be appropriate.
+
+I'd like to have a MessageFactory object that can take in a MessageBuffer 
+object and return me one of the BaseMessage derived classes.  Right now,
+it isn't clear to me what the right approach is here, since these derived
+classes are generally defined by users (such as OnlineAlchemy), so that
+would entail them having to modify this MessageFactory object whenever they
+add a new message type.  Right now, this is done in the UserMessageThread::Run
+method, where we fetch a MessageBuffer with session->GetNextMessageBuffer and
+then pull out the message code and topic, and use the topic to decide what
+sort of message object to construct.  If there were a MessageFactory, 
+the session->GetNextMessageBuffer could be replaced with a 
+session->GetNextMessage method instead that has already done this ugly stuff, 
+and the UserMessageThread could be folded into the session object instead.
+
+
+Changes:
+
+Thread.h
+  -- Removed Interrupt from the interface, since there isn't a clean way 
+     to implement this
+
+Message.h
+Message.cpp
+  -- Made the GetXXX and WriteMessage methods const
+
+SampleBridgeInterface.cpp
+  -- Moved MessageReadThread out of this file
+  -- Correctly marked UserMessageThread::Run as virtual 
+  -- Handle a NULL response from Session::GetNextMessageBuffer 
+     This can happen if we are shutting down
+  -- Handle the case where the subscription callback is NULL
+     This will happen for response subscriptions where we do not
+     want the user thread to be dealing with the messages.
+     This probably isn't necessary, but it is safer.
+  -- Made MessageCallback::HandleMessage method const
+     I'm not sure if this is appropriate or not.  I liked the idea of
+     the api specifying that the message callback is not modified, but
+     perhaps some people will want to maintain state in the callback object.
+  -- Changed MessageCallback::HandleMessage to use the new Session::Request 
+     api, which takes a BaseMessage object.
+  -- Changed MessageCallback::HandleMessage to delete the response from
+     Session::Request
+  -- Changed DoTest to allocate filter and callback objects, since these
+     will be owned (and freed) by the subscription.
+  -- Changed DoTest to not start up the UserMessageThread (now started by the 
+     main method before the connect call) or the MessageReadThread (now called 
+     in the Session::Startup method).  Also changed to not Join these threads 
+     (done in main and by the Session::Shutdown method respectively)
+  -- Changed DoTest to not delete the subscription objects, since these will
+     be deleted by the call to Session::CloseSubscription
+  -- Changed _tmain to start up, join and delete the UserMessageThread.
+
+Session.h
+  -- Changed WriteMessage and ReadMessage to be private
+  -- Modified the Session::Request method to take a BaseMessage object
+     instead of a MessageBuffer object.
+  -- Better comments about object ownership
+  -- Removed ResponseMessageCallback, since we don't really use a callback
+     for these messages.
+  -- Added a field for the MessageReadThread (since we own this thread).
+  -- Changed Filter classes to have const Write and Matches methods
+ 
+Session.cpp
+  -- Modified the Subscription object to own the filter and callback,
+     and to free these in the destructor
+  -- Modified the Session::Startup method to create and start the 
+     MessageReadThread thread.  Also modified the Shutdown method
+     to join and free the MessageReadThread thread.
+  -- Modified the Session object's WriteData, ReadData, WriteMessage, 
+     CloseSubscription, CreateSubscription and Request methods to check 
+     to see if we are shutting down, and if so, to return.
+     This does not currently handle shutting down while we are blocked in 
+     the lower level io calls.
+  -- Modified the Session::Request method to take a BaseMessage argument.
+     This method will get the MessageBuffer from the BaseMessage, and
+     will free the MessageBuffer when it has been sent.
+  -- Modified the Session::CloseSubscription method to handle being
+     passed a NULL subscription (it will ignore this), and also to check to
+     see if we are shutting down.
+  -- Moved the MessageReadThread code to this file.
+  -- Changed the Session::pending_subscriptions map to just contain 
+     Subscription objects instead of a subset of that data.  This lets me
+     simply move the objects from one map to the other when the subscription
+     gets a response.
+  -- Changed the way the response messages are handled.  In the previous 
+     version these messages were delegated to the callback, but now that
+     logic happens inline (since this only adds 3 lines)

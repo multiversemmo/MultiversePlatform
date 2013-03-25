@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="1">
+  <Boundary Name="American Boxwood - Cluster_1">
+    <PointCollection>
+      <Point x="112324.4" y="40000" z="258931.7" />
+      <Point x="55261.68" y="40000" z="263931.7" />
+      <Point x="81231.25" y="40000" z="240931.7" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="AmericanBoxwoodCluster_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="American Boxwood_3">
+    <PointCollection>
+      <Point x="-5514.516" y="40000" z="280379.8" />
+      <Point x="-69824.34" y="40000" z="272754.8" />
+      <Point x="-33824.34" y="40000" z="245493.9" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="AmericanBoxwood_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Azalea - Cluster_5">
+    <PointCollection>
+      <Point x="158156.6" y="40000" z="236289.2" />
+      <Point x="137601" y="40000" z="258289.2" />
+      <Point x="184686.7" y="40000" z="263609.2" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="AzaleaPatch_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Azalea - Pink - Cluster_7">
+    <PointCollection>
+      <Point x="336484.8" y="40000" z="278804.7" />
+      <Point x="314844.9" y="40000" z="259804.7" />
+      <Point x="295345.2" y="40000" z="276804.7" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="AzaleaPatch_RT_Pink.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Azalea_9">
+    <PointCollection>
+      <Point x="240779.8" y="40000" z="250929.8" />
+      <Point x="256779.8" y="40000" z="270615.7" />
+      <Point x="219779.8" y="40000" z="266938.3" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="Azalea_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Azalea - Pink_11">
+    <PointCollection>
+      <Point x="397641.4" y="40000" z="264892.7" />
+      <Point x="371502.8" y="40000" z="284657.3" />
+      <Point x="427621.9" y="40000" z="285892.7" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="Azalea_RT_Pink.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Beech_13">
+    <PointCollection>
+      <Point x="693601.8" y="40000" z="257760.8" />
+      <Point x="719601.8" y="40000" z="288565.3" />
+      <Point x="673379.8" y="40000" z="292631.6" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="Beech_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Beech - Fall_14">
+    <PointCollection>
+      <Point x="824601.8" y="40000" z="297746.3" />
+      <Point x="770601.8" y="40000" z="291427.5" />
+      <Point x="796362.8" y="40000" z="262510.1" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="Beech_RT_Fall.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Beech - Winter_17">
+    <PointCollection>
+      <Point x="898672.9" y="40000" z="302650.2" />
+      <Point x="865656" y="40000" z="264650.2" />
+      <Point x="849992.1" y="40000" z="300650.2" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="Beech_RT_Winter.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Curly Palm_18">
+    <PointCollection>
+      <Point x="587309.3" y="40000" z="254868" />
+      <Point x="623309.3" y="40000" z="292176.4" />
+      <Point x="558096.6" y="40000" z="297293.2" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="CurlyPalm_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Curly Palm - Cluster_20">
+    <PointCollection>
+      <Point x="498651.2" y="40000" z="257229.8" />
+      <Point x="526651.2" y="40000" z="296696.8" />
+      <Point x="465629.1" y="40000" z="292657.3" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="CurlyPalmCluster_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Fraser Fir_27">
+    <PointCollection>
+      <Point x="932520.4" y="40000" z="303978.7" />
+      <Point x="962520.4" y="40000" z="274848.2" />
+      <Point x="978856.6" y="40000" z="308148.1" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="FraserFir_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Fraser Fir - Cluster_28">
+    <PointCollection>
+      <Point x="1028690" y="40000" z="312490.3" />
+      <Point x="1056916" y="40000" z="282889.4" />
+      <Point x="1086916" y="40000" z="321347.3" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="FraserFirCluster_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Fraser Fir - Snow_31">
+    <PointCollection>
+      <Point x="1125871" y="40000" z="336591.3" />
+      <Point x="1159871" y="40000" z="304865.6" />
+      <Point x="1188891" y="40000" z="348175.2" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="FraserFir_RT_Snow.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Fraser Fir - Snow - Cluster_33">
+    <PointCollection>
+      <Point x="1219743" y="40000" z="358175.2" />
+      <Point x="1253871" y="40000" z="328976.8" />
+      <Point x="1286871" y="40000" z="374652.9" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="FraserFirCluster_RT_Snow.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Red Delicious Apple_35">
+    <PointCollection>
+      <Point x="1332332" y="40000" z="382940.8" />
+      <Point x="1390857" y="40000" z="346055.3" />
+      <Point x="1428043" y="40000" z="402940.8" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="RDApple_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Red Delicious Apple - Apples_37">
+    <PointCollection>
+      <Point x="1454650" y="40000" z="410507.2" />
+      <Point x="1538541" y="40000" z="372507.2" />
+      <Point x="1601546" y="40000" z="443507.2" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="RDApple_RT_Apples.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Red Delicious Apple - Spring_39">
+    <PointCollection>
+      <Point x="1636844" y="40000" z="453058.2" />
+      <Point x="1708327" y="40000" z="409800.3" />
+      <Point x="1763692" y="40000" z="477800.3" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="RDApple_RT_Spring.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Red Delicious Apple - Winter_41">
+    <PointCollection>
+      <Point x="1814099" y="40000" z="485084.8" />
+      <Point x="1883704" y="40000" z="432084.8" />
+      <Point x="1930836" y="40000" z="499084.8" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="RDApple_RT_Winter.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Sugar Pine_43">
+    <PointCollection>
+      <Point x="1959979" y="40000" z="506505.7" />
+      <Point x="2048617" y="40000" z="460973.3" />
+      <Point x="2097640" y="40000" z="523436.4" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="SugarPine_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Sugar Pine - Winter_45">
+    <PointCollection>
+      <Point x="2163065" y="40000" z="540206.6" />
+      <Point x="2259605" y="40000" z="488206.6" />
+      <Point x="2347412" y="40000" z="580206.6" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="SugarPine_RT_Winter.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Umbrella Thorn_47">
+    <PointCollection>
+      <Point x="2390461" y="40000" z="566689.6" />
+      <Point x="2512979" y="40000" z="496270.3" />
+      <Point x="2607841" y="40000" z="619270.3" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="UmbrellaThorn_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Umbrella Thorn - Dead_50">
+    <PointCollection>
+      <Point x="2676052" y="40000" z="633922.3" />
+      <Point x="2849990" y="40000" z="567171.3" />
+      <Point x="2992990" y="40000" z="709522.1" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="UmbrellaThorn_RT_Dead.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Umbrella Thorn - Flowers_52">
+    <PointCollection>
+      <Point x="3034943" y="40000" z="720032.3" />
+      <Point x="3195943" y="40000" z="642983.8" />
+      <Point x="3332943" y="40000" z="791523.9" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="UmbrellaThorn_RT_Flowers.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Venus Tree_54">
+    <PointCollection>
+      <Point x="3353813" y="40000" z="799916.9" />
+      <Point x="3507025" y="40000" z="717642.2" />
+      <Point x="3570214" y="40000" z="860642.2" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="VenusTree_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Weeping Willow_56">
+    <PointCollection>
+      <Point x="3596625" y="40000" z="867588.9" />
+      <Point x="3716833" y="40000" z="791173.1" />
+      <Point x="3759191" y="40000" z="906173.1" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="WeepingWillow_RT.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Weeping Willow - Fall_58">
+    <PointCollection>
+      <Point x="3786350" y="40000" z="914143.3" />
+      <Point x="3879002" y="40000" z="884143.3" />
+      <Point x="3908790" y="40000" z="956143.3" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="Tree - 0" Filename="WeepingWillow_RT_Fall.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="Weeping Willow - Winter_60">
+    <PointCollection>
+      <Point x="3935891" y="40000" z="963245.1" />
+      <Point x="4029253" y="40000" z="921245.1" />
+      <Point x="4068754" y="40000" z="1006642" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="1" y="0" z="0" />
+      <Tree Name="Tree - 0" Filename="WeepingWillow_RT_Winter.spt" Scale="10000" ScaleVariance="1000" Instances="1" />
+    </Forest>
+  </Boundary>
+  <Waypoint Name="American Boxwood - Cluster" Sound="">
+    <Position x="54972.85" y="40000" z="280931.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="American Boxwood" Sound="">
+    <Position x="-67824.34" y="40000" z="285999.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Azalea - Cluster" Sound="">
+    <Position x="138826.1" y="40000" z="272419.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Azalea - Pink - Cluster" Sound="">
+    <Position x="296356.3" y="40000" z="292804.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Azalea" Sound="">
+    <Position x="215779.8" y="40000" z="287053.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Azalea - Pink" Sound="">
+    <Position x="372733" y="40000" z="298892.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Beech" Sound="">
+    <Position x="672218.6" y="40000" z="308504.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Beech - Fall" Sound="">
+    <Position x="770620.1" y="40000" z="303504.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Curly Palm" Sound="">
+    <Position x="557071.9" y="40000" z="310892.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Curly Palm - Cluster" Sound="">
+    <Position x="465828" y="40000" z="304892.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Beech - Winter" Sound="">
+    <Position x="848591.6" y="40000" z="315504.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Fraser Fir" Sound="">
+    <Position x="934302.6" y="40000" z="313567.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Fraser Fir - Cluster" Sound="">
+    <Position x="1027867" y="40000" z="320490.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Fraser Fir - Snow" Sound="">
+    <Position x="1122839" y="40000" z="344175.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Fraser Fir - Snow - Cluster" Sound="">
+    <Position x="1221165" y="40000" z="366175.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Red Delicious Apple" Sound="">
+    <Position x="1329901" y="40000" z="396940.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Red Delicious Apple - Apples" Sound="">
+    <Position x="1449520" y="40000" z="426507.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Red Delicious Apple - Spring" Sound="">
+    <Position x="1628844" y="40000" z="472773.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Red Delicious Apple - Winter" Sound="">
+    <Position x="1809195" y="40000" z="503126.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Sugar Pine" Sound="">
+    <Position x="1957617" y="40000" z="515810.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Sugar Pine - Winter" Sound="">
+    <Position x="2159855" y="40000" z="549206.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Umbrella Thorn" Sound="">
+    <Position x="2379461" y="40000" z="591007.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Umbrella Thorn - Dead" Sound="">
+    <Position x="2672648" y="40000" z="641460.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Umbrella Thorn - Flowers" Sound="">
+    <Position x="3028943" y="40000" z="727145.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Venus Tree" Sound="">
+    <Position x="3345813" y="40000" z="818035.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Weeping Willow" Sound="">
+    <Position x="3595084" y="40000" z="876698.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Weeping Willow - Fall" Sound="">
+    <Position x="3783163" y="40000" z="928143.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Weeping Willow - Winter" Sound="">
+    <Position x="3934210" y="40000" z="972304.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

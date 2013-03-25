@@ -1,0 +1,483 @@
+Tasks / Loose Ends Required For Shipment of Voice
+
+* Test large-scale loads on the voice plugin.  The starting
+  architecture is one voice bot process running N voice bot
+  connections; shark running the server; and piranha running
+  simpleclients.  Initially we'll run the bots on Steve's extra
+  Windows machine, but ultimately, we may need to run the bots on
+  Linux in Java.
+
+* Implement echo detection.  This isn't really necessary for the first
+  release, but it's a good thing, and theoretically all the support
+  needed from Speex is already in place.
+
+******************************************************************
+
+The hangs are figured out and fixed: the problem was that I was
+acquiring the usingFmod lock in the VoiceChannelPCMRead callback.
+Eliminating that lock operation make things run with no hangs!
+
+******************************************************************
+
+Now I'm sure all messages are being queued and processed in the
+OnFrameStarted() thread.  Still, it's hanging.  The main thread is
+doing a voice FMOD.Sound.Release(), called from
+BasicChannel.Dispose(), called from DeallocateVoice(), called from
+HandleMessage(), called from Tick().  The only other thread in
+VoiceManager is waiting on usingFmod lock in
+VoiceChannel.VoiceChannelReadPCM(), called from FMOD itself.
+
+So is the lesson that I must not try to acquire the FMOD lock in FMOD
+callbacks?  That looks like it.
+
+******************************************************************
+
+I moved handling of incoming messages from the voice server into the
+Tick() thread, so that now all the handling is in a single thread, and
+still I get the lockup.  In the case I'm looking at, the main thread
+is hanging in FMOD.Sound.Release(), called from
+BasicChannel.Dispose(), called from DeallocateVoice(), called from
+HandleMessage(), called from Tick().  The competing thread is also in
+BasicChannel.Dispose(), from an alloc.  But no!  I see I left one
+branch of the conversion to queuing undone.
+
+******************************************************************
+
+Deadlock in client.  When it happens, we see that the main thread is
+in VoiceChannel.MovePositionalSound, called by
+WorlManager.MoveMobNode(), ultimately called by
+WorldManager.OnFrameStarted().  All the other threads are hung on
+lock(voiceMgr.usingFmod) except one.
+
+That one thread is inside a usingFmod lock; that thread is in
+FMOD_System_PlaySound(), called by BasicChannel.StartChannel(), called
+by BasicChannel.Activate(), called by HandleMessage(), called by
+OnTcpDataReceived().
+
+There are a _ton_ of threads in
+MicrophoneChannel.MicHandlingTimerTick()!
+
+******************************************************************
+
+Caught a set of deadlock backtraces against another non-returning fmod
+call in the client.  When it happens, as with the previous one, we see
+that the main thread is in VoiceChannel.MovePositionalSound, called by
+WorlManager.MoveMobNode(), ultimately called by
+WorldManager.OnFrameStarted().  All the other threads are hung on
+lock(voiceMgr.usingFmod) except one, and that one is hung in
+FMOD.Sound.release(), called by BasicChannel.Dispose(), called by 
+HandleMessage(), called by OnTcpDataReceived().
+
+In this case, there are no threads in
+MicrophoneChannel.MicHandlingTimerTick().
+
+******************************************************************
+
+Shelved Tasks:
+
+Client/Library tasks:
+
+* Straighten out the issues with wide-band vs. narrow-band: message
+  order; relation between wide-band quality numbers vs. narrow-band
+  quality numbers.  Finish by testing wide-band codecs.
+
+Server tasks:
+
+* New task: Add the capability for players to be in more than one
+  group, and share the voice streams among them.  The rationale: Bob
+  Moore's notions of being in positional chat when an in-game "cell
+  phone" call comes in.  And it's not really that hard: I need to
+  extract the general voice stream mapping mechanism I have in
+  PositionalGroupMember into GroupMember; change
+  NonpositionalVoiceGroup to use that mechanism instead of the current
+  one; and provide a priority system to apportion voice streams among
+  the groups.
+
+* Implement ClientUDPConnection.  Mostly done at this point.  But my
+  recommendation is that we _not_ make use of it in the first release,
+  but require voice connection over TCP.
+
+******************************************************************
+
+Completed Tasks:	
+	
+    * Add support for choosing the playback device.
+Done.
+
+    * Add "positional_range" VoiceParm.
+Done.
+
+    * Add "max_saved_frames" VoiceParm.
+Done.
+
+    * Fix the hang when many players are speaking.
+Done; the gory details are above.
+
+	* Generalize the VoiceBot system so it talks to the server to learn
+	  when players log in and out, and if their oids are in a certain
+	  range, allocate a voice bot for them when they log in and remove it
+	  when they log out.
+Done.
+
+	* Thoroughly test the positional voice group cases for more than 2
+	  players.
+Done.
+
+	* Add a software "preamp" operating on the PCM samples gotten from the
+	  decodec before handing those samples off to FMOD.
+Done.
+
+	* Create a VoiceBot project, containing an executable that is capable
+	  of simulating many voice connections.  For each connection, joins a
+	  specified non-positional group, listening to group voices, and it
+	  periodically plays back a recorded Speex file as if the connection
+	  were "speaking" that file.
+Done, for non-positional groups.
+
+    * Generalize VoiceManager so that we can create many of them in a
+	  single process, in preparation for voice bot support.
+Done.
+
+    * Add support for timeout of the TCP connect, and a parameter
+	  tcp_connect_timeout that specifies the timeout.
+Done.
+
+	* Thoroughly test the non-positional voice group cases.  This requires
+	  one helper initially, and several as the bugs get squashed.  And I'm
+	  sure there are bugs.
+Done.
+
+	* Provide a way for the server to register a permissions callback,
+	  in Python or Java, when a player joins a group.
+Done.
+
+	* Try all the narrow-band codecs, but for now, ignore the wide-band
+	  codecs.
+Done.
+
+	* Document the VoiceGroup API.
+Done.
+
+    * Document the VoiceManager API.
+Done.
+
+    * Don't blast the voice server connection just because the group
+	  oid changed.
+Done.
+
+	* Provide a real implementation of authenticationMatchesOid(), since
+	  the current version only tests that the auth token and the oid are
+	  non-zero.  Find out from Jeff what should be done.
+No authentication needed for now, since that's what the proxy does.
+
+	* Should Multiverse itself provide persistent voice groups?  Probably
+	  we should provide persistence for non-positional groups, if only as
+	  an example.
+The consensus seems to be that we should not provide persistent
+groups; that when they are needed, they have have to be maintained at
+a higher level, and in any case they are rare.
+
+	* Provide API to set voice playback levels.  Do we also need to
+	  provide a "pre-amp"?
+Done.
+
+	* Provide Voice lib API to provide the caller with a list of the
+	  recent speakers, and callbacks when they start and stop speaking.
+Done.
+
+	* Provide an API to pick a microphone, needed if there are multiple
+	  recording devices.
+Done.
+
+    * Change the client to use the API for initiating a voice connection.
+Done.
+
+	* Provide voice group support for positional groups like we want in
+	  FriendWorld, in additional to the presentation and "raid group"
+	  voice groups already supported.
+Done.
+
+	* Provide packet handling and transmission of opcodeAggregatedData
+	  packets.
+Done.
+
+	* Change ObjectTracker so that it maintains the perceiver->perceived
+	  map, or create a replacement for ObjectTracker that does so.
+Other changes made to ObjectTracker; this one wasn't needed.
+
+	* Provide data frame aggregator generating AggregatedData packets,
+	  supporting a target transmission rate of 8/sec.
+Done.
+
+	* Provide client API to blacklist a particular speaker.  Someone else
+	  will provide the UI.
+Done.
+
+	* Define server APIs to create and maintain voice chat groups.
+Done, at least for non-positional groups.
+
+	* Define server APIs to change who players listen to, in response to
+	  particular players starting or stopping talking. 
+Done.
+
+	* Change proxy plugin to respond to an extension message from a client
+	  asking for the information necessary to log in to the voice server:
+	  host, port and authentication token.
+Done.
+
+	* Act on Jeff's idea of giving each member of a chat group a priority
+	  that determines if they will be heard in preference to other
+	  clients.
+Done.
+
+	* Add player perception filters to the voice plugin so it can track
+	  where players are, and run interpolators for them.  We've decided
+	  that this will be done using the ObjectTracker.
+Done, by including ObjectTracker.
+
+	* Define and implement Voice lib API to support client "push to talk"
+	  functionality.  Someone else will implement the client UI to enter
+	  and exit the push to talk state.
+Done.
+
+	* The Voice lib API already exists to establish a voice link; someone
+	  else will provide client-side UI to allow the player to establish a
+	  voice link.
+Done.
+
+	* Provide client-side API to allow microphones to change the
+	  codec parameters.  The task for me is to define the set of
+	  parameters, and provide the Voice lib API.  Someone else will
+	  implement the client UI to whack the parameters.
+Done.
+
+	* Provide more sensible settings for the voice activity detection
+	  start probability and stop probability, because with the Speex
+	  defaults, it's way too likely to start up when no one is speaking.
+Done.
+
+	* Cause the Voice library to pay attention to the top bit of the
+	  opcode, and create a positional sound if it's set.  This requires
+	  handing FMOD the position and velocity for the OID object, and
+	  updating that information periodically.  There can't be done until
+	  voice is running inside the client.
+Done.
+
+01/29/08 11:43
+
+Tasks for 3d sounds:
+
+   * VoiceManager respecting positional field in opcode.
+Done.
+
+   * VoicePlugin respecting positional field in opcode.
+one.
+
+* New attribute of (I guess) mobnode, saying it's a positional
+  mobnode.
+
+* In SetLocation
+
+
+
+
+******************************************************************
+
+	* Make sure that the client and server agree on the number of voices a
+	  particular client should be playing, and limit that number to 4.
+Done.
+
+	* In the client, detect when xxx seconds of frames have gone by with no
+	  voice activity (detected by the 1-byte frames), and then send a
+	  DeallocateVoice message.  When voice activity starts again, send the
+	  AllocateVoice message.
+Done.
+
+    * Use the jitter buffer when receiving frames in the client.
+Done.
+
+******************************************************************
+
+The stuff below is overly complicated and obsolete.  Look at the
+actual code to see how it came out.
+
+******************************************************************
+
+The set of opcodes has way more transitions that it should; for
+example, opcodeAllocateVoice should contain the codec parameters, as
+should opcodeReconfirm.
+
+Right now we have:
+
+    //     VoiceUnallocated -> Allocate*
+    //     Allocated* -> DecodecParameters*
+    //     DecodecParameters* -> Data*
+    //     Data* -> Data* | Deallocate* | Reconfirm*
+    //     Deallocate* -> VoiceUnallocated
+    //     Reconfirm* -> Data*
+
+Can we make this simpler?  How about:
+
+	//     VoiceUnallocated -> AllocateCodec* (Server sends AllocCodec
+    //     message, containing voice number and codec parameters)
+	//     AllocateCodec* -> Data*
+    //     Data* -> Data* | Deallocate* | ReconfirmCodec*
+    //     Deallocate* -> VoiceUnallocated
+    //     Reconfirm* -> Data*
+
+Also, we should eliminate the _format_ change from positional to
+non-positional.  Instead, we should always send an OID in the
+allocate/reconfirm packets, and carry positional or non-positional as
+the top bit of the opcode byte.
+
+
+******************************************************************
+
+Next steps:
+
+   Provide a command-line name/value interface to VoiceManager, and
+   support setting all the attributes.  The names will actually be enum
+   value names.
+Done.
+
+Sometime, change the VoiceChannel so it creates and updates
+positional sounds
+
+CODEC FORMATS
+
+The frame format parameters (complexity, quality, VAD, AGC, etc) are
+determined entirely by the source of the sound.  In our case, the
+MicrophoneChannel instance that holds the codec.  Any codec can
+decode any Speex-formatted frame.  In principle, we'll support all the
+Speex formats.
+
+How will the user determine the format?  There must be UI provided to
+do so.  The codec parameter changes, and any preprocessor changes,
+must take place at a frame boundary, and this will require
+reinitializing the codec instance.
+
+Codec Parameters:
+
+  o Sampling rate.  For Speex audio, this is either 8000 or 16000.
+    Default is 8000.
+
+  o Quality.  A number from 0 to 10.  Default is 5.
+
+  o Complexity.  A number from 1 to 10.  Default is 4.
+
+  o Variable Bit Rate.  For now, we won't support VBR.
+
+  o Average Bit Rate.  For now, we won't support ABR.
+
+  o Discontinuous Transmission.  This setting stops transmitting
+    completely when the background noise is stationary.  Default is
+	off; we'll change the default to on..
+
+PREPROCESSOR CAPABILITIES
+
+The preprocessor has the following capabilities, all of which should
+be controlled by the user interface:
+
+  o Denoise.  Turned on by default. Integer parameters:
+       Noise_Suppress: Setmaximumattenuation of the noise in dB.
+
+  o AGC.  Turned on by default.  Integer parameters:
+       AGC_level: Automatic Gain Control level (in dB?)
+       AGC_Increment: maximal gain increase in dB/second
+       AGC_Decrement: maximal gain decrease in dB/second
+       AGC_Max_Gain: maximal gain in dB
+
+  o VAD, or voice activity detection.  Turned on by default.
+    Parameters, all integer percents: 
+	   Prob_Start: probability required for the VAD to go from silence to
+	   voice
+	   Prob_Continue: probability required for the VAD to stay in the
+	   voice state
+
+  o Echo suppression.  Turned on by default; in addition to on/off,
+    there is an integer echo_noise setting and an integer
+	residual_echo setting.  Requires feeding what's coming out of the
+	sound card into the preprocessor.
+       Echo_Suppress: maximum attenuation of the residual echo in
+	   dB (negative number) 
+	   Echo_Suppress_Active: maximum attenuation of the residual echo
+	   in dB when near end is active (negative number) 
+  
+  o Derverb.  This is not supported in Speex.
+
+JITTER BUFFER
+
+The Speex jitter buffer is a queue for incoming frames.  All frames
+received by the VoiceChannel will be run through the jitter buffer
+before decoding.
+
+NETWORK MESSAGE FORMAT
+
+What do we need to convey in voice network packets?
+
+o Since we're sharing a single connection for multiple voices,
+  all data and control network messages must identify the voice
+  number to which they apply.
+  
+o We must have messages that initiates a voice; suspend a voice when
+  it's not currently in use; and terminate a voice.
+
+o The message format must accommodate the short form of a Speex
+  packet, which is sent when the voice activity detector logic
+  determines that there is only "background noise".
+
+o In the client, we must be able to assign the voice number a
+  location and velocity.  So the message format must supply
+  the oid of the entity.  The actual location and velocity come
+  from the existing mechanisms that interpolate positions of
+  objects with oids.
+
+The "opcodes" we need to represent the different messages are:
+
+   - AllocateVoice: allocate the voice with the given number to be
+     associated with the OID supplied.  The voice must have been
+	 previously unused.
+
+   - ReallocateVoice: dissociate the voice from it's current OID, and
+     allocate the voice with the given number to be associated with the
+     OID supplied.  The voice must have been previously in use.
+
+   - TerminateVoice: dissociate the voice from it's current OID.  The
+     voice with the given number is now unused.
+
+   - ReconfirmVoice: reconfirm that the given voice specified by the
+     number is associated with the given OID.  Because RTP packets may
+	 be lost, we send this every second or so for each running voice.
+
+   - VoiceData: contains a voice number and a frame of data.
+
+We will use TerminateVoice and AllocateVoice pairs when a given voice
+is no longer playing live audio, as determined by the Speex voice
+activity detector.
+
+The connection setup starts with the client contacting the server,
+using an IP/port number and a connect protocol (UDP or TCP), supplied
+by the initial hello packet from the login server.  The sequence is:
+
+  - "Connect" from the client.
+
+  - Hello from the server, containing the maximum voice number the
+    client will ever see.
+
+  - Client intermittently sends voice packets from the user's
+    microphone to the server.  For now we're assuming that the user
+	has exactly one microphone, and voice number in the packets is 0.
+
+  - The server periodically sends voice packets, intermingled by
+    control messages supplying opcodes and parameters.
+
+If RTP is used, then we set the SSID to be the voice id (1-4 or
+something), and we must use the Extension facility for the other
+state.  Note, though, that this is a perversion of SSID, because SSID
+usually refers to the _source_ of the transmission, and we'll be 
+using it to refer to the destinaion.
+
+Even if RTP is used, we'll need some enveloping, at least in the TCP
+case, in order to know where message boundaries occur.  So it may make
+sense to have every message enveloped with an 8-bit opcode and a
+16-bit length.

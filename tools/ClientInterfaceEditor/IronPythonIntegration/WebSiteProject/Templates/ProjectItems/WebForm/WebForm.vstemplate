@@ -1,0 +1,24 @@
+﻿<VSTemplate Version="2.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name Package="{39c9c826-8ef8-4079-8c95-428f5b1c323f}" ID="3062"/>
+		<Description Package="{39c9c826-8ef8-4079-8c95-428f5b1c323f}" ID="3063"/>
+		<Icon Package="{39c9c826-8ef8-4079-8c95-428f5b1c323f}" ID="4533"/>
+		<ProjectType>Web</ProjectType>
+		<ProjectSubType>IronPython</ProjectSubType>
+		<SortOrder>10</SortOrder>
+		<SupportsLanguageDropdown>true</SupportsLanguageDropdown>
+		<SupportsCodeSeparation>true</SupportsCodeSeparation>
+		<SupportsMasterPage>true</SupportsMasterPage>
+		<DefaultName>Default.aspx</DefaultName>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem>WebForm.aspx</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$">WebForm_cb.aspx</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$">ContentPage.aspx</ProjectItem>
+		<ProjectItem ReplaceParameters="true" TargetFileName="$fileinputname$.$fileinputextension$">ContentPage_cb.aspx</ProjectItem>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>IronPythonWebSiteCustomWizard</Assembly>
+		<FullClassName>Microsoft.Samples.VisualStudio.IronPythonWebSiteCustomWizard.WebFormCustomWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

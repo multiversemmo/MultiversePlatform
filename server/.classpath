@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="multiverse/testclient/|multiverse/webapps/" kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="other/mysql-jdbc/mysql-connector-java-3.0.14-production-bin.jar"/>
+	<classpathentry exported="true" kind="lib" path="other/rhino1_5R5/js.jar"/>
+	<classpathentry exported="true" kind="lib" path="other/java-getopt-1.0.11.jar"/>
+	<classpathentry exported="true" kind="lib" path="other/jython.jar"/>
+	<classpathentry exported="true" kind="lib" path="other/log4j-1.2.14.jar"/>
+	<classpathentry exported="true" kind="lib" path="other/bcel-5.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="other/servlet-api.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry path="C:/Program Files/Java/jdk1.6.0_06/lib/tools.jar" kind="lib"/>
+	<classpathentry kind="output" path="build"/>
+</classpath>

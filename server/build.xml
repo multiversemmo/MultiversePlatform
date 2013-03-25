@@ -1,0 +1,191 @@
+<project name="multiverse" default="dist" basedir=".">
+    <description>
+        builds all multiverse server components
+    </description>
+
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="inject" location="inject"/>
+  <property name="dist"  location="dist"/>
+  <property name="bin" location="bin"/>
+  <property name="dist-external"  location="dist-external"/>
+  <property name="build.fork"  value="yes"/>
+
+  <path id="build.classpath">
+    <pathelement path="other/rhino1_5R5/js.jar"/>
+    <pathelement path="other/mysql-jdbc/mysql-connector-java-3.0.14-production-bin.jar"/>
+    <pathelement path="other/java-getopt-1.0.11.jar"/>
+    <pathelement path="other/jython.jar"/>
+    <pathelement path="other/log4j-1.2.14.jar"/>
+    <pathelement path="other/bcel-5.2.jar"/>
+    <pathelement path="other/servlet-api.jar"/>
+    <pathelement path="other/jsp-api.jar"/>
+  </path>
+
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+    <mkdir dir="${inject}"/>
+    <mkdir dir="${dist}"/>
+    <mkdir dir="${dist-external}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" 
+           destdir="${build}"
+           excludes="multiverse/webapps/**,multiverse/testclient/**,multiverse/**/eventhandlers/**"
+           listfiles="yes"
+	   compiler="modern"
+	   fork="${build.fork}"
+	   classpathref="build.classpath"
+           debug="true">
+<!--      <compilerarg value="-Xlint"/> -->
+    </javac>
+    <!-- <rmic classname="multiverse.server.engine.GroupManagerImpl" base="${build}"/> -->
+  </target>
+
+  <target name="testclient" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" 
+           destdir="${build}"
+           excludes="multiverse/webapps/**"
+           listfiles="yes"
+	   compiler="modern"
+	   fork="${build.fork}"
+	   classpathref="build.classpath"
+           debug="false">
+      <compilerarg value=""/>
+    </javac>
+  </target>
+
+  <target name="webapps" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}/multiverse/webapps" 
+           destdir="${build}"
+	   fork="${build.fork}"
+           debug="false"/>
+  </target>
+
+  <target name="buildjars" depends="compile"
+        description="build jar files" >
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib"/>
+    <mkdir dir="${dist-external}/multiverse/dist/lib"/>
+
+    <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
+<!--
+    <jar jarfile="${dist}/lib/multiverse.jar" 
+         basedir="${build}"/>
+-->
+
+    <jar destfile="${dist}/lib/multiverse.jar"
+       basedir="${build}/"
+       includes="multiverse/**"
+       excludes="multiverse/mars/**,multiverse/example/**"
+    />
+
+    <jar destfile="${dist}/lib/mars.jar"
+       basedir="${build}/"
+       includes="multiverse/mars/**"
+    />
+    <jar destfile="${dist-external}/multiverse/dist/lib/multiverse.jar"
+       basedir="${build}/"
+       includes="multiverse/**"
+       excludes="multiverse/mars/**,multiverse/example/**,multiverse/server/engine/JukeboxWebEngine.class,multiverse/server/plugins/JukeboxWebPlugin.class,multiverse/server/engine/JukeboxWebEngineThread.class,multiverse/server/engine/MasterDatabase*.class,multiverse/server/engine/MasterServer*.class"
+    />
+
+    <jar destfile="${dist-external}/multiverse/dist/lib/mars.jar"
+       basedir="${build}/"
+       includes="multiverse/mars/**"
+    />
+
+    <uptodate property="dont_need_inject" targetfile="${dist}/lib/injected.jar">
+       <srcfiles dir   = "${dist}/lib" includes="m*.jar" />
+    </uptodate>
+
+  </target>
+  <target name="dist" depends="buildjars" unless="dont_need_inject"
+        description="generate the distribution" >
+    <exec dir="${bin}" os="Windows XP" executable="cmd">
+      <arg value="/c"/>
+      <arg value="performinjection.bat"/>
+    </exec>
+    <exec dir="${bin}" os="Windows Vista" executable="cmd">
+      <arg value="/c"/>
+      <arg value="performinjection.bat"/>
+    </exec>
+    <exec dir="${bin}" os="Linux" executable="bash">
+      <arg value="performinjection.sh"/>
+    </exec>
+
+    <jar destfile="${dist}/lib/injected.jar"
+       basedir="${inject}/"
+       includes="**"
+    />
+
+    <jar destfile="${dist-external}/multiverse/dist/lib/injected.jar"
+       basedir="${inject}/"
+       includes="**"
+    />
+  </target>
+
+  <target name="tar">
+    <tar destfile="server.tgz" compression="gzip">
+      <tarfileset dir=".." mode="755"
+        includes="multiverse/bin/*.sh,multiverse/bin/*.py,multiverse/bin/mvm,multiverse/bin/check_mvplugin,multiverse/bin/service_script"
+      	excludes="multiverse/bin/keygen.sh,multiverse/bin/master.sh,multiverse/bin/create_account.sh,multiverse/bin/create_character.sh,multiverse/bin/create_default_chars.sh,multiverse/bin/clear_obj_store.sh,multiverse/bin/old-multiverse.sh,multiverse/bin/master_server.py,multiverse/bin/shell.sh,multiverse/bin/domain.sh"
+      />
+      <tarfileset dir=".." mode="644"
+        includes="multiverse/README.txt,multiverse/build_mars.xml,multiverse/licenses/**,multiverse/bin/**,multiverse/install/**,multiverse/config/sampleworld/**,multiverse/config/common/**,multiverse/config/mv_fantasy/**,multiverse/other/**,multiverse/src/multiverse/mars/**/*.java"
+        excludes="multiverse/bin/*.sh,multiverse/bin/*.py,multiverse/bin/mvm,multiverse/bin/check_mvplugin,multiverse/bin/service_script,multiverse/bin/master.sql,multiverse/bin/save.js,multiverse/bin/reset.js,multiverse/bin/sample_bashrc,multiverse/bin/cachedir/**,multiverse/config/mv_social/**,multiverse/other/mysql-jdbc/**,multiverse/**/*~,multiverse/**/*.pid,multiverse/bin/run/**"
+      />
+      <tarfileset dir="dist-external" mode="644"
+        includes="multiverse/dist/**"
+      />
+    </tar>
+  </target>
+
+  <target name="zip">
+    <zip destfile="server.zip">
+      <zipfileset dir=".." filemode="755"
+        includes="multiverse/bin/*.sh,multiverse/bin/*.py,multiverse/bin/mvm,multiverse/bin/check_mvplugin,multiverse/bin/service_script"
+      	excludes="multiverse/bin/keygen.sh,multiverse/bin/master.sh,multiverse/bin/create_account.sh,multiverse/bin/create_character.sh,multiverse/bin/create_default_chars.sh,multiverse/bin/clear_obj_store.sh,multiverse/bin/old-multiverse.sh,multiverse/bin/master_server.py,multiverse/bin/shell.sh,multiverse/bin/domain.sh"
+      />
+      <zipfileset dir=".." filemode="644"
+        includes="multiverse/README.txt,multiverse/build_mars.xml,multiverse/licenses/**,multiverse/bin/**,multiverse/install/**,multiverse/config/sampleworld/**,multiverse/config/common/**,multiverse/config/mv_fantasy/**,multiverse/other/**,multiverse/src/multiverse/mars/**/*.java"
+        excludes="multiverse/bin/*.sh,multiverse/bin/*.py,multiverse/bin/mvm,multiverse/bin/check_mvplugin,multiverse/bin/service_script,multiverse/bin/master.sql,multiverse/bin/save.js,multiverse/bin/reset.js,multiverse/bin/sample_bashrc,multiverse/bin/cachedir/**,multiverse/config/mv_social/**,multiverse/other/mysql-jdbc/**,multiverse/**/*~,multiverse/**/*.pid,multiverse/bin/run/**"
+      />
+      <zipfileset dir="dist-external" filemode="644"
+        includes="multiverse/dist/**"
+      />
+    </zip>
+  </target>
+
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${inject}"/>
+    <delete dir="${dist}"/>
+    <delete dir="${dist-external}"/>
+  </target>
+
+  <target name="tags">
+    <delete file="TAGS"/>
+    <apply executable="etags">
+      <arg value="-a"/>
+      <arg value="-oTAGS"/>
+      <arg value="-ljava"/>
+      <fileset dir="${src}" casesensitive="yes">
+        <include name="**/*.java"/>
+      </fileset>
+    </apply>
+  </target>
+</project>

@@ -1,0 +1,32 @@
+? Platforms/Win32/Axiom.Platforms.Win32.csproj
+? Platforms/Win32/Axiom.Platforms.Win32.csproj.user
+? Platforms/Win32/Properties
+? Platforms/Win32/bin
+? Platforms/Win32/obj
+Index: Platforms/Win32/Win32InputReader.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Platforms/Win32/Win32InputReader.cs,v
+retrieving revision 1.4
+diff -u -b -r1.4 Win32InputReader.cs
+--- Platforms/Win32/Win32InputReader.cs	5 Dec 2004 00:17:53 -0000	1.4
++++ Platforms/Win32/Win32InputReader.cs	13 Dec 2004 01:15:43 -0000
+@@ -816,6 +816,9 @@
+ 				case KeyCodes.NumPad9:
+ 					dinputKey = DInput.Key.NumPad9;
+ 					break;
++				case KeyCodes.NumLock:
++					dinputKey = DInput.Key.Numlock;
++					break;
+ 			}
+ 
+ 			return dinputKey;
+@@ -1107,6 +1110,9 @@
+ 				case DInput.Key.NumPad9:
+ 					axiomKey = Axiom.Input.KeyCodes.NumPad9;
+ 					break;
++				case DInput.Key.Numlock:
++					axiomKey = Axiom.Input.KeyCodes.NumLock;
++					break;
+ 			}
+ 
+ 			return axiomKey;

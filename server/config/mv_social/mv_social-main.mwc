@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="colonnade_57" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="32" Zenith="90">
+    <Position x="406796.7" y="69000" z="339673.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.2756374" z="0" w="0.9612617" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_59" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-150" Zenith="90">
+    <Position x="360894.3" y="69000" z="245959.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.9659258" z="0" w="0.2588191" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_61" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="91" Zenith="90">
+    <Position x="422654.9" y="69000" z="300021.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7132505" z="0" w="0.7009093" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_63" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-70" Zenith="90">
+    <Position x="417602.4" y="69000" z="261658" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.5735765" z="0" w="0.8191521" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_65" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-28" Zenith="90">
+    <Position x="403129" y="69000" z="246847.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.2419219" z="0" w="0.9702957" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_81" Mesh="colonnade.mesh" TerrainOffest="-84481.57" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="140" Zenith="90">
+    <Position x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9396926" z="0" w="0.3420202" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_85" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-165" Zenith="90">
+    <Position x="371595.4" y="69000" z="241847.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.9914448" z="0" w="0.1305262" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_86" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-17" Zenith="90">
+    <Position x="366731.8" y="69000" z="345847.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.1478094" z="0" w="0.9890159" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_87" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="174" Zenith="90">
+    <Position x="375929.9" y="69000" z="347847.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9986295" z="0" w="0.05233597" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_88" Mesh="colonnade.mesh" TerrainOffest="-1400" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="351735.6" y="69600" z="311638.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_122" Mesh="colonnade.mesh" TerrainOffest="-1500" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="351896.3" y="69500" z="277516.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_123" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="178" Zenith="90">
+    <Position x="380900.8" y="69000" z="240947.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9998477" z="0" w="0.01745238" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_124" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-114" Zenith="90">
+    <Position x="415196.7" y="69000" z="329720.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.8386706" z="0" w="0.5446391" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_125" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-9" Zenith="90">
+    <Position x="390196.8" y="69000" z="241847.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.0784591" z="0" w="0.9969173" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_126" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-155" Zenith="90">
+    <Position x="398435.6" y="69000" z="344383.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.976296" z="0" w="0.2164396" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_127" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="119" Zenith="90">
+    <Position x="348811.7" y="69000" z="331268.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.8616291" z="0" w="0.5075384" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_dagger_lt_full_226" Mesh="st_f_dagger_lt_full.mesh" TerrainOffest="-600" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="85" Zenith="90">
+    <Position x="344254.7" y="70400" z="315416.3" />
+    <Scale x="1.4641" y="1.4641" z="1.4641" />
+    <Orientation x="0" y="0.6755902" z="0" w="0.7372773" />
+    <SubMeshes>
+      <SubMeshInfo Name="stb_f_dagger_lt-lib.0" MaterialName="st_f_dagger_lt_full.marble" Show="True" />
+      <SubMeshInfo Name="st_f_dagger_lt-lib.0" MaterialName="st_f_dagger_lt_full.female_marble" Show="True" />
+      <SubMeshInfo Name="st_f_dagger_lt-lib.1" MaterialName="st_f_dagger_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_dance_lt_full_232" Mesh="st_f_dance_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-74" Zenith="90">
+    <Position x="285779.3" y="71000" z="295164.2" />
+    <Scale x="16" y="16" z="16" />
+    <Orientation x="0" y="-0.601815" z="0" w="0.7986355" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_f_dance_lt-lib.0" MaterialName="st_f_dance_lt_full.female_marble" Show="True" />
+      <SubMeshInfo Name="stb_f_dance_lt-lib.0" MaterialName="st_f_dance_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_m_lean_lt_full_247" Mesh="st_m_lean_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="344154.7" y="71000" z="273766.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_m_lean_lt-lib.0" MaterialName="st_m_lean_lt_full.marble" Show="True" />
+      <SubMeshInfo Name="stb_m_lean_lt-lib.0" MaterialName="st_m_lean_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_sword_lt_full_248" Mesh="st_f_sword_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-55" Zenith="90">
+    <Position x="329246.7" y="71000" z="238925.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.4617486" z="0" w="0.8870108" />
+    <SubMeshes>
+      <SubMeshInfo Name="stb_f_sword_lt-lib.0" MaterialName="st_f_sword_lt_full.marble" Show="True" />
+      <SubMeshInfo Name="st_f_sword_lt-lib.0" MaterialName="st_f_sword_lt_full.female_marble" Show="True" />
+      <SubMeshInfo Name="st_f_sword_lt-lib.1" MaterialName="st_f_sword_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_lean_lt_full_249" Mesh="st_f_lean_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="392154.7" y="71000" z="346875.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_f_lean_lt-lib.0" MaterialName="st_f_lean_lt_full.marble" Show="True" />
+      <SubMeshInfo Name="st_f_lean_lt-lib.1" MaterialName="st_f_lean_lt_full.female_marble" Show="True" />
+      <SubMeshInfo Name="st_f_lean_lt-lib.2" MaterialName="st_f_lean_lt_full.female_face_marble" Show="True" />
+      <SubMeshInfo Name="stb_f_lean_lt-lib.0" MaterialName="st_f_lean_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_dance_lt_full_251" Mesh="st_f_dance_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="397154.7" y="71000" z="244075.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_f_dance_lt-lib.0" MaterialName="st_f_dance_lt_full.female_marble" Show="True" />
+      <SubMeshInfo Name="stb_f_dance_lt-lib.0" MaterialName="st_f_dance_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_cdance_lt_full_253" Mesh="st_f_cdance_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="419874.3" y="71000" z="295335.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="stb_f_cdance_lt-lib.0" MaterialName="st_f_cdance_lt_full.marble" Show="True" />
+      <SubMeshInfo Name="st_f_cdance_lt-lib.0" MaterialName="st_f_cdance_lt_full.female_marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_256" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-106" Zenith="90">
+    <Position x="418435.6" y="69000" z="321035.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7986355" z="0" w="0.601815" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_257" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-116" Zenith="90">
+    <Position x="350894.3" y="69000" z="257861" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.8480481" z="0" w="0.5299193" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_258" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-174" Zenith="90">
+    <Position x="384983.4" y="69000" z="347847.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.9986295" z="0" w="0.05233597" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_260" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-34" Zenith="90">
+    <Position x="358340.5" y="69000" z="341742.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.2923717" z="0" w="0.9563048" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_261" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-76" Zenith="90">
+    <Position x="345532.6" y="69000" z="322531.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.6156615" z="0" w="0.7880108" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_262" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-44" Zenith="90">
+    <Position x="410802.4" y="69000" z="252389" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.3746066" z="0" w="0.9271839" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_263" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-78" Zenith="90">
+    <Position x="420435.6" y="69000" z="270670.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.6293204" z="0" w="0.7771459" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_264" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-89" Zenith="90">
+    <Position x="422635.6" y="69000" z="290212.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7009093" z="0" w="0.7132505" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_265" Mesh="colonnade.mesh" TerrainOffest="-2000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-110" Zenith="90">
+    <Position x="346954.6" y="69000" z="266730.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.8191521" z="0" w="0.5735765" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_m_lean_lt_full_272" Mesh="st_m_lean_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-148" Zenith="90">
+    <Position x="327246.7" y="71000" z="268921.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.9612617" z="0" w="0.2756374" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_m_lean_lt-lib.0" MaterialName="st_m_lean_lt_full.marble" Show="True" />
+      <SubMeshInfo Name="stb_m_lean_lt-lib.0" MaterialName="st_m_lean_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_sword_lt_full_273" Mesh="st_f_sword_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-129" Zenith="90">
+    <Position x="328246.7" y="71000" z="318590.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.9025853" z="0" w="0.4305111" />
+    <SubMeshes>
+      <SubMeshInfo Name="stb_f_sword_lt-lib.0" MaterialName="st_f_sword_lt_full.marble" Show="True" />
+      <SubMeshInfo Name="st_f_sword_lt-lib.0" MaterialName="st_f_sword_lt_full.female_marble" Show="True" />
+      <SubMeshInfo Name="st_f_sword_lt-lib.1" MaterialName="st_f_sword_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_sword_lt_full_274" Mesh="st_f_sword_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="329246.7" y="71000" z="348811.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="stb_f_sword_lt-lib.0" MaterialName="st_f_sword_lt_full.marble" Show="True" />
+      <SubMeshInfo Name="st_f_sword_lt-lib.0" MaterialName="st_f_sword_lt_full.female_marble" Show="True" />
+      <SubMeshInfo Name="st_f_sword_lt-lib.1" MaterialName="st_f_sword_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="gazebo_green_278" Mesh="gazebo_green.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="89" Zenith="90">
+    <Position x="335630.2" y="71000" z="232445.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7009093" z="0" w="0.7132505" />
+    <SubMeshes>
+      <SubMeshInfo Name="gazebo_green-lib.0" MaterialName="gazebo_green.gazebo_b_texture" Show="True" />
+      <SubMeshInfo Name="gazebo_green-lib.1" MaterialName="gazebo_green.gazebo_b_floor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="gazebo_green_279" Mesh="gazebo_green.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="2" Zenith="90">
+    <Position x="336482" y="71000" z="355004.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.01745241" z="0" w="0.9998477" />
+    <SubMeshes>
+      <SubMeshInfo Name="gazebo_green-lib.0" MaterialName="gazebo_green.gazebo_b_texture" Show="True" />
+      <SubMeshInfo Name="gazebo_green-lib.1" MaterialName="gazebo_green.gazebo_b_floor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="gazebo_sand_280" Mesh="gazebo_sand.mesh" TerrainOffest="-40" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="377982.2" y="70960" z="252598.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="gazebo_a-lib.0" MaterialName="gazebo_sand.gazebo_a_texture" Show="True" />
+      <SubMeshInfo Name="gazebo_a-lib.1" MaterialName="gazebo_sand.gazebo_floor_texture" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="gazebo_green_281" Mesh="gazebo_green.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="49" Zenith="90">
+    <Position x="404757.4" y="71000" z="262681.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.4146932" z="0" w="0.9099613" />
+    <SubMeshes>
+      <SubMeshInfo Name="gazebo_green-lib.0" MaterialName="gazebo_green.gazebo_b_texture" Show="True" />
+      <SubMeshInfo Name="gazebo_green-lib.1" MaterialName="gazebo_green.gazebo_b_floor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="gazebo_green_282" Mesh="gazebo_green.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="378115.9" y="71000" z="336254.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="gazebo_green-lib.0" MaterialName="gazebo_green.gazebo_b_texture" Show="True" />
+      <SubMeshInfo Name="gazebo_green-lib.1" MaterialName="gazebo_green.gazebo_b_floor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="gazebo_sand_283" Mesh="gazebo_sand.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="49" Zenith="90">
+    <Position x="405288.2" y="71000" z="325858.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.4146932" z="0" w="0.9099613" />
+    <SubMeshes>
+      <SubMeshInfo Name="gazebo_a-lib.0" MaterialName="gazebo_sand.gazebo_a_texture" Show="True" />
+      <SubMeshInfo Name="gazebo_a-lib.1" MaterialName="gazebo_sand.gazebo_floor_texture" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="stage_285" Mesh="stage.mesh" TerrainOffest="-520" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-91" Zenith="90">
+    <Position x="383989.8" y="70480" z="294064.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7132505" z="0" w="0.7009093" />
+    <SubMeshes>
+      <SubMeshInfo Name="stageShape-lib.0" MaterialName="stage.stage_phong" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_dance_drk_full_314" Mesh="st_f_dance_drk_full.mesh" TerrainOffest="20" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="44" Zenith="90">
+    <Position x="343480.7" y="71020" z="230652.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.3746066" z="0" w="0.9271839" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_f_dance_drk-lib.0" MaterialName="st_f_dance_drk_full.female_marble" Show="True" />
+      <SubMeshInfo Name="stb_f_dance_drk-lib.0" MaterialName="st_f_dance_drk_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="pool_336" Mesh="pool.mesh" TerrainOffest="910" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="89" Zenith="90">
+    <Position x="407358.3" y="71910" z="295261.4" />
+    <Scale x="0.6830133" y="0.6830133" z="0.6830133" />
+    <Orientation x="0" y="0.7009093" z="0" w="0.7132505" />
+    <SubMeshes>
+      <SubMeshInfo Name="pool-lib.0" MaterialName="pool.pool_marble" Show="True" />
+    </SubMeshes>
+    <Sound Filename="waterflow.wav" Type="Positional" Gain="1" Loop="True" MinAttenuationDistance="1000" MaxAttenuationDistance="1000000" />
+  </StaticObject>
+  <StaticObject Name="st_m_throw_drk_full_341" Mesh="st_m_throw_drk_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-93" Zenith="90">
+    <Position x="381915.2" y="71000" z="402768.3" />
+    <Scale x="16" y="16" z="16" />
+    <Orientation x="0" y="-0.7253743" z="0" w="0.6883546" />
+    <SubMeshes>
+      <SubMeshInfo Name="stb_m_throw_drk-lib.0" MaterialName="st_m_throw_drk_full.marble" Show="True" />
+      <SubMeshInfo Name="st_m_throw_drk-lib.0" MaterialName="st_m_throw_drk_full.male_marble" Show="True" />
+      <SubMeshInfo Name="st_m_throw_drk-lib.1" MaterialName="st_m_throw_drk_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_lean_drk_full_342" Mesh="st_f_lean_drk_full.mesh" TerrainOffest="-7000" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="385865.1" y="64000" z="193424.5" />
+    <Scale x="16" y="16" z="16" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="stb_f_lean_drk-lib.0" MaterialName="st_f_lean_drk_full.marble" Show="True" />
+      <SubMeshInfo Name="st_f_lean_drk-lib.0" MaterialName="st_f_lean_drk_full.marble" Show="True" />
+      <SubMeshInfo Name="st_f_lean_drk-lib.1" MaterialName="st_f_lean_drk_full.female_marble" Show="True" />
+      <SubMeshInfo Name="st_f_lean_drk-lib.2" MaterialName="st_f_lean_drk_full.female_face_marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Colonnade_372" Mesh="colonnade.mesh" TerrainOffest="-1400" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="91" Zenith="90">
+    <Position x="343708.9" y="69600" z="307989.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7132505" z="0" w="0.7009093" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_m_lean_lt_full_384" Mesh="st_m_lean_lt_full.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-91" Zenith="90">
+    <Position x="471915.2" y="71000" z="294813.3" />
+    <Scale x="16" y="16" z="16" />
+    <Orientation x="0" y="-0.7132505" z="0" w="0.7009093" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_m_lean_lt-lib.0" MaterialName="st_m_lean_lt_full.marble" Show="True" />
+      <SubMeshInfo Name="stb_m_lean_lt-lib.0" MaterialName="st_m_lean_lt_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_sword_lt_409" Mesh="st_f_sword_lt.mesh" TerrainOffest="4990" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="81" Zenith="90">
+    <Position x="343763.9" y="75990" z="284939.7" />
+    <Scale x="1.988518" y="1.988518" z="1.988518" />
+    <Orientation x="0" y="0.649448" z="0" w="0.760406" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_f_sword_lt-lib.0" MaterialName="st_f_sword_lt.female_marble" Show="True" />
+      <SubMeshInfo Name="st_f_sword_lt-lib.1" MaterialName="st_f_sword_lt.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_m_throw_lt_410" Mesh="st_m_throw_lt.mesh" TerrainOffest="5470" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="169" Zenith="90">
+    <Position x="343563.9" y="76470" z="304438.3" />
+    <Scale x="2" y="2" z="2" />
+    <Orientation x="0" y="0.9953962" z="0" w="0.09584576" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_m_throw_lt-lib.0" MaterialName="st_m_throw_lt.male_marble" Show="True" />
+      <SubMeshInfo Name="st_m_throw_lt-lib.1" MaterialName="st_m_throw_lt.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="st_f_dance_drk_full_411" Mesh="st_f_dance_drk_full.mesh" TerrainOffest="1100" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="-70" Zenith="90">
+    <Position x="389647.3" y="72100" z="294137.1" />
+    <Scale x="1.652892" y="1.652892" z="1.652892" />
+    <Orientation x="0" y="-0.5735765" z="0" w="0.8191521" />
+    <SubMeshes>
+      <SubMeshInfo Name="st_f_dance_drk-lib.0" MaterialName="st_f_dance_drk_full.female_marble" Show="True" />
+      <SubMeshInfo Name="stb_f_dance_drk-lib.0" MaterialName="st_f_dance_drk_full.marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Boundary Name="reflect_pool_c_339" Priority="0">
+    <PointCollection>
+      <Point x="417471.8" y="71000" z="301593.5" />
+      <Point x="418041.1" y="71000" z="289326.3" />
+      <Point x="397041.1" y="71000" z="289596.9" />
+      <Point x="396672.6" y="71000" z="300593.5" />
+    </PointCollection>
+    <Water Height="71920" />
+  </Boundary>
+  <Boundary Name="north_trees_346" Priority="0">
+    <PointCollection>
+      <Point x="570463.4" y="84582.58" z="174564.7" />
+      <Point x="131900.7" y="83901.33" z="174564.7" />
+      <Point x="86516.35" y="96725.97" z="-4388.625" />
+      <Point x="689597.6" y="125420.3" z="-22435.35" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.9" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="CurlyPalmCluster_RT.tre" Scale="10000" ScaleVariance="1000" Instances="75" />
+      <Tree Name="Curly Palm" Filename="CurlyPalm_RT.tre" Scale="10000" ScaleVariance="1000" Instances="75" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="north_pool_edge_405" Priority="0">
+    <PointCollection>
+      <Point x="424349.2" y="71000" z="378406.4" />
+      <Point x="422349.2" y="71000" z="214900.5" />
+      <Point x="468349.2" y="71000" z="193409.1" />
+      <Point x="470349.2" y="71000" z="404213.3" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="CurlyPalm_RT.tre" Scale="10000" ScaleVariance="1000" Instances="23" />
+    </Forest>
+  </Boundary>
+  <Boundary Name="east_outer_tree" Priority="0">
+    <PointCollection>
+      <Point x="640067.1" y="116570.8" z="566248.3" />
+      <Point x="473342.6" y="89498.11" z="554635.6" />
+      <Point x="473067.1" y="71000" z="229092.2" />
+      <Point x="441067.1" y="71813.3" z="104016.5" />
+      <Point x="639827.6" y="109845.8" z="108778.9" />
+      <Point x="713827.6" y="103095.6" z="286192.6" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="forestName_treeNum" Filename="CurlyPalm_RT.tre" Scale="10000" ScaleVariance="1000" Instances="133" />
+    </Forest>
+  </Boundary>
+  <Waypoint Name="spawn" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="368917" y="71000" z="294579.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="spring01" TerrainOffset="300" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="354227.7" y="71300" z="285212.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="waterfountain" VelocityScale="1.5" ParticleScale="2.5" />
+  </Waypoint>
+  <Waypoint Name="spring02" TerrainOffset="300" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="354316.8" y="71300" z="302700.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="waterfountain" VelocityScale="1.5" ParticleScale="2.5" />
+  </Waypoint>
+  <Waypoint Name="spring03" TerrainOffset="300" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="403327.1" y="71300" z="295255.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <StaticObject Name="colonnade_128" Mesh="colonnade.mesh" TerrainOffest="-1520" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="89" Zenith="90">
+    <Position x="343836.5" y="69480" z="281348" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7009093" z="0" w="0.7132505" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="west_pool" Mesh="pool.mesh" TerrainOffest="1200" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="354772.4" y="72200" z="294584.4" />
+    <Scale x="1.1" y="1.1" z="1.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="pool-lib.0" MaterialName="pool.pool_marble" Show="True" />
+    </SubMeshes>
+    <Sound Filename="waterflow.wav" Type="Positional" Gain="1" Loop="True" MinAttenuationDistance="1000" MaxAttenuationDistance="1000000" />
+  </StaticObject>
+  <StaticObject Name="circle_dance_fountain" Mesh="st_f_cdance_drk_full.mesh" TerrainOffest="900" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="344960" y="71900" z="294406.4" />
+    <Scale x="1.61051" y="1.61051" z="1.61051" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="stb_f_cdance_drk-lib.0" MaterialName="st_f_cdance_drk_full.marble" Show="True" />
+      <SubMeshInfo Name="st_f_cdance_drk-lib.0" MaterialName="st_f_cdance_drk_full.female_marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="west_pool_2" Mesh="pool.mesh" TerrainOffest="1230" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="91" Zenith="90">
+    <Position x="329329.6" y="72230" z="294314.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7132505" z="0" w="0.7009093" />
+    <SubMeshes>
+      <SubMeshInfo Name="pool-lib.0" MaterialName="pool.pool_marble" Show="True" />
+    </SubMeshes>
+    <Sound Filename="waterflow.wav" Type="Positional" Gain="1" Loop="True" MinAttenuationDistance="1000" MaxAttenuationDistance="1000000" />
+  </StaticObject>
+  <Boundary Name="upper_west_pool" Priority="50">
+    <PointCollection>
+      <Point x="343874.7" y="71000" z="302630.9" />
+      <Point x="314153.1" y="71000" z="302730.9" />
+      <Point x="313500" y="71000" z="285730.9" />
+      <Point x="344482.6" y="71000" z="285031.3" />
+    </PointCollection>
+    <Water Height="72250" />
+  </Boundary>
+  <Boundary Name="lower_west_pool" Priority="50">
+    <PointCollection>
+      <Point x="345275.4" y="71000" z="312059.1" />
+      <Point x="346482.6" y="71000" z="277526.3" />
+      <Point x="364482.6" y="71000" z="277393.3" />
+      <Point x="364298" y="71000" z="311730.9" />
+    </PointCollection>
+    <Water Height="72190" />
+  </Boundary>
+  <Waypoint Name="spring_04" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="407953.8" y="71000" z="295265.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="waterfountain" VelocityScale="1.5" ParticleScale="1.5" />
+  </Waypoint>
+  <Waypoint Name="spring_05" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="412553.8" y="71000" z="295170.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

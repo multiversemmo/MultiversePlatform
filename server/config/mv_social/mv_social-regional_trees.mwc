@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Boundary Name="north_promenade" Priority="50">
+    <PointCollection>
+      <Point x="-349924.1" y="97167.48" z="250398.6" />
+      <Point x="54376.63" y="71000" z="272759.9" />
+      <Point x="134108.5" y="74533.59" z="270759.9" />
+      <Point x="199883.5" y="71000" z="256759.9" />
+      <Point x="297419" y="71000" z="209667.6" />
+      <Point x="259416.7" y="82134.38" z="57772.38" />
+      <Point x="120411.4" y="98009.84" z="12772.38" />
+      <Point x="-389972.4" y="71000" z="13925.01" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Beech - Fall" Filename="Beech_RT_Fall.tre" Scale="10000" ScaleVariance="1000" Instances="25" />
+      <Tree Name="Beech" Filename="Beech_RT.tre" Scale="10000" ScaleVariance="1000" Instances="30" />
+      <Tree Name="Red Delicious Apple - Spring" Filename="RDApple_RT_Spring.tre" Scale="10000" ScaleVariance="1000" Instances="10" />
+    </Forest>
+    <Grass Name="n_prom_grass_01">
+      <PlantType Instances="290" ColorMultHi="1" ColorMultLow="1" Name="Bird of Paradise" ImageName="birdofparadise" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="0" />
+      <PlantType Instances="900" ColorMultHi="1" ColorMultLow="1" Name="Colorized Grass 1" ImageName="grass1" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="0.4901961" G="0.7529412" B="0.4784314" />
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Rose" ImageName="rose" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="south_promenade" Priority="50">
+    <PointCollection>
+      <Point x="-132133.9" y="71000" z="349815" />
+      <Point x="151451.3" y="73437.51" z="319166.3" />
+      <Point x="163354.7" y="75009.56" z="360916.5" />
+      <Point x="203432.9" y="79733.44" z="431871.1" />
+      <Point x="244288.4" y="90813.56" z="530166.4" />
+      <Point x="155458.6" y="113806.2" z="580166.4" />
+      <Point x="14942.1" y="110559.8" z="603166.4" />
+      <Point x="-276580.3" y="71000" z="612841.8" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Red Delicious Apple - Spring" Filename="RDApple_RT_Spring.tre" Scale="10000" ScaleVariance="1000" Instances="20" />
+      <Tree Name="Beech" Filename="Beech_RT.tre" Scale="10000" ScaleVariance="1000" Instances="23" />
+      <Tree Name="Beech - Fall" Filename="Beech_RT_Fall.tre" Scale="10000" ScaleVariance="1000" Instances="45" />
+    </Forest>
+    <Grass Name="s_prom_grass_01">
+      <PlantType Instances="700" ColorMultHi="1" ColorMultLow="1" Name="Bird of Paradise" ImageName="birdofparadise" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="0.9411765" G="0.8901961" B="0.5333334" />
+      <PlantType Instances="900" ColorMultHi="1" ColorMultLow="0.5" Name="Colorized Grass 2" ImageName="grass2" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="0.4392157" G="0.7058824" B="0.4509804" />
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Rose" ImageName="rose" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="south_palm_outer" Priority="50">
+    <PointCollection>
+      <Point x="560634.4" y="117064.9" z="630690.8" />
+      <Point x="398278.1" y="80247.05" z="847690.7" />
+      <Point x="248615.9" y="112659.6" z="681690.7" />
+      <Point x="102017.1" y="126651.6" z="653690.7" />
+      <Point x="187670.5" y="79302.84" z="416690.7" />
+      <Point x="266576.2" y="71000" z="372690.7" />
+      <Point x="381385.7" y="71000" z="368690.7" />
+      <Point x="446413.2" y="71000" z="399690.7" />
+      <Point x="565347.9" y="94687.77" z="491690.7" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Curly Palm - Cluster" Filename="CurlyPalmCluster_RT.tre" Scale="10000" ScaleVariance="1000" Instances="25" />
+      <Tree Name="Curly Palm" Filename="CurlyPalm_RT.tre" Scale="10000" ScaleVariance="1000" Instances="99" />
+    </Forest>
+    <Grass Name="south_outer_grass">
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Rose" ImageName="rose" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+      <PlantType Instances="900" ColorMultHi="1" ColorMultLow="1" Name="Colorized Grass 1" ImageName="grass1" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="0.3137255" G="0.4862745" B="0.4509804" />
+    </Grass>
+  </Boundary>
+</WorldObjectCollection>

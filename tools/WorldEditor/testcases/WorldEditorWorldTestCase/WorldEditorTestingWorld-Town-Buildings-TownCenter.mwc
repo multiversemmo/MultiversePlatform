@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="Town Hall" Mesh="hall.mesh" TerrainOffest="-0.046875" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-253306.8" y="152420.3" z="310474" />
+    <Scale x="0.8079482" y="0.8079482" z="0.8079482" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="roof_beam_end_piece_tallShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="side_windows_human_meeting_houseShape-lib.0" MaterialName="hall.windows_hall_material" Show="True" />
+      <SubMeshInfo Name="roof_beam_end_piece_shortShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="human_meeting_houseShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_long_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_mid_long_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_mid_short_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_short_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="windowsShape-lib.0" MaterialName="hall.windows_hall_material" Show="True" />
+      <SubMeshInfo Name="inside_human_meeting_houseShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Jane Jone's House" Mesh="human_shack_tall.mesh" TerrainOffest="-0.0625" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="241.9824" Zenith="90">
+    <Position x="-281481.3" y="150351.3" z="332073.5" />
+    <Scale x="1.060383" y="1.060383" z="1.060383" />
+    <Orientation x="0" y="0.8572463" z="0" w="-0.5149066" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_shack_tallshape-obj.0" MaterialName="human_shack_tall.human_shack_tall_texture" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

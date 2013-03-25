@@ -1,0 +1,48 @@
+<Machinima Name="postcard_tangoStep" World="friendworld2">
+  <Render Width="1600" Height="1200" FPS="25" />
+ 
+  <Scene length="0.04">
+    <CameraMarker>cameraPostcard</CameraMarker>
+  
+    <MobileObject id="character01">
+      <Name>Character</Name>
+      <Mesh>hmn_m_01_machinima.mesh</Mesh>
+      <SpawnPoint>postcardSlot01</SpawnPoint>
+      <Animation name="poseTangoStepLead" />
+      <Property name="Sex" value="male" />
+      <Property name="SkinColor" value="warm-tan" />      
+      <Property name="HeadShape" value="euro_01" />
+      <Property name="HairStyle" value="bald" />
+      <Property name="HairColor" value="brown" />
+      <Property name="UpperBodyType" value="thin" />
+      <Property name="LowerBodyType" value="thin" />
+      <Property name="ClothesTorso" value="bare" />
+      <Property name="ClothesLegs" value="bare" />
+      <Property name="Footwear" value="bare" />
+      <Property name="AppearanceOverride" value="avatar" />
+      <Property name="MaterialOverride" value="LayeredAvatar.flatcolor" />
+      <Property name="ShaderParam.SurfaceColor" value="#FF3300" />
+    </MobileObject>
+    
+    <MobileObject id="character02">
+      <Name>Character</Name>
+      <Mesh>hmn_m_01_machinima.mesh</Mesh>
+      <SpawnPoint>postcardSlot02</SpawnPoint>
+      <Animation name="poseTangoStepFollow" />
+      <Property name="Sex" value="male" />
+      <Property name="SkinColor" value="warm-tan" />      
+      <Property name="HeadShape" value="euro_01" />
+      <Property name="HairStyle" value="bald" />
+      <Property name="HairColor" value="brown" />
+      <Property name="UpperBodyType" value="thin" />
+      <Property name="LowerBodyType" value="thin" />
+      <Property name="ClothesTorso" value="bare" />
+      <Property name="ClothesLegs" value="bare" />
+      <Property name="Footwear" value="bare" />
+      <Property name="AppearanceOverride" value="avatar" />
+      <Property name="MaterialOverride" value="LayeredAvatar.flatcolor" />
+      <Property name="ShaderParam.SurfaceColor" value="#FFCC00" />
+    </MobileObject>
+
+  </Scene>
+</Machinima>

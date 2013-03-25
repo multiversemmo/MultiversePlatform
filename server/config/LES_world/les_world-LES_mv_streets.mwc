@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="streets_mv_layout" Mesh="LES_streets_all.mesh" TerrainOffest="166434.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="67611.07" y="166434.5" z="-1181448" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_streets_all-lib.0" MaterialName="LES_streets_all.LES_street_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="dopple_box-lib.0" MaterialName="LES_streets_all.LES_street_macro_diffuse" Show="False" />
+    </SubMeshes>
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_01" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_02" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_03" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="2" AttachmentPoint="light_04" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_05" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1.5" AttachmentPoint="light_06" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_07" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="2" AttachmentPoint="light_09" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_10" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_11" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_12" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_13" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_14" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_15" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_17" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_18" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_19" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_20" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_21" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_22" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_23" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_24" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_25" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_26" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_27" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_28" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_29" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_30" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_31" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_32" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_33" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_34" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_35" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_36" />
+    <ParticleEffect ParticleEffectName="LES_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="light_37" />
+  </StaticObject>
+  <StaticObject Name="car_civ_A_01" Mesh="LES_car_civilian_A.mesh" TerrainOffest="166424.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="49898.34" y="166424.5" z="-1176486" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="car_civilian_A-lib.0" MaterialName="LES_car_civilian_A.car_civilian_A" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="car_civ_B_01" Mesh="LES_car_civilian_B.mesh" TerrainOffest="166424.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-180" Zenith="90">
+    <Position x="33898.34" y="166424.5" z="-1186486" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="car_civilian_B-lib.0" MaterialName="LES_car_civilian_B.car_civilian_B" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="car_police_01" Mesh="LES_car_police.mesh" TerrainOffest="166424.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-180" Zenith="90">
+    <Position x="21898.34" y="166424.5" z="-1186486" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="car_police-mesh.0" MaterialName="LES_car_police.police" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="car_taxi_01" Mesh="LES_car_taxi.mesh" TerrainOffest="166424.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-101.66" y="166424.5" z="-1176486" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="car_taxi-lib.0" MaterialName="LES_car_taxi.taxi" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="street_fill_01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="176984" y="166374.5" z="-1207792" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="street_fill_02" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="68475.3" y="166374.5" z="-1266066" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="street_fill_03" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="67595.5" y="166374.5" z="-1316066" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="street_fill_04" Mesh="LES_alley_50_50.mesh" TerrainOffest="166274.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-53147.96" y="166274.5" z="-1026978" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="street_fill_05" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-101900.1" y="166374.5" z="-1263543" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="street_fill_06" Mesh="LES_alley_50_50.mesh" TerrainOffest="166574.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-11865.53" y="166574.5" z="-1262642" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="street_fill_07" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-54639.84" y="166374.5" z="-1262642" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="street_fill_08" Mesh="LES_alley_50_50.mesh" TerrainOffest="166374.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="23362.69" y="166374.5" z="-1262592" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="Exterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="street_objects" Mesh="LES_street_stuff.mesh" TerrainOffest="166454.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-52288.93" y="166454.5" z="-1181448" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="dopple_box-lib.0" MaterialName="LES_street_stuff.street_stuff" Show="False" />
+      <SubMeshInfo Name="street_stuff-lib.0" MaterialName="LES_street_stuff.street_stuff" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

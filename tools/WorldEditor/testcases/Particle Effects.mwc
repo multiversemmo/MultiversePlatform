@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="1">
+  <Waypoint Name="Aureola" Sound="">
+    <Position x="136346.5" y="20000" z="-236636" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="aureola" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Blast" Sound="">
+    <Position x="144266.1" y="20000" z="-236542.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="blast" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Blast2" Sound="">
+    <Position x="153326.1" y="20000" z="-236142.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="blast2" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Downpour" Sound="">
+    <Position x="161813.7" y="26000" z="-234777.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="downpour" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Eruption" Sound="">
+    <Position x="172489.1" y="20000" z="-234357.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="eruption" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Floaty Greeny" Sound="">
+    <Position x="182172.1" y="20000" z="-232922.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="floatyGreeny" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Fountain" Sound="">
+    <Position x="189754.9" y="20000" z="-230564.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="fountain" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Greeny Nimbus" Sound="">
+    <Position x="198552.7" y="20000" z="-231234.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="greenyNimbus" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Jet Engine 1" Sound="">
+    <Position x="208525.5" y="20000" z="-231842.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="jetengine1" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Jet Engine 2" Sound="">
+    <Position x="219068.3" y="20000" z="-231394.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="jetengine2" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Pentagram" Sound="">
+    <Position x="227283.5" y="20000" z="-230034.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="pentagram" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Rain" Sound="">
+    <Position x="237192.3" y="42700" z="-228615.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="rain" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Ring Of Fire" Sound="">
+    <Position x="247049.9" y="20000" z="-231245.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="ringOfFire" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Smoke" Sound="">
+    <Position x="255611.1" y="20000" z="-228855.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="smoke" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Space" Sound="">
+    <Position x="264138.1" y="20000" z="-228547.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="space" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="Waterfall" Sound="">
+    <Position x="276181" y="23200" z="-231377" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="waterfall" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+</WorldObjectCollection>

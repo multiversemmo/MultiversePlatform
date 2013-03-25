@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<job_chain orders_recoverable="yes"
+           distributed="yes"
+           visible="yes">
+  <job_chain_node state="1"
+                    job="renderscene"
+                    next_state="2"
+                    error_state="3"/>
+    <job_chain_node state="2"/>
+    <job_chain_node state="3"/>
+</job_chain>

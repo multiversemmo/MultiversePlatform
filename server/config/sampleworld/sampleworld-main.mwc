@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="mypond" TerrainOffset="413.6045" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="-336512" y="15560" z="-257324" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Boundary Name="mypondregion" Priority="0">
+    <NameValuePairs>
+      <NameValuePair Name="onEnter" Value="enterMessage" Type="String" />
+      <NameValuePair Name="onLeave" Value="leaveMessage" Type="String" />
+      <NameValuePair Name="messageClass" Value="extension" Type="String" />
+      <NameValuePair Name="messageRegionProperties" Value="ALL" Type="String" />
+      <NameValuePair Name="messageObjectProperties" Value="ALL" Type="String" />
+    </NameValuePairs>
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-357136.9" y="23126.32" z="-335038.6" />
+      <Point WorldViewSelect="True" x="-276487.4" y="17706.43" z="-263368.3" />
+      <Point WorldViewSelect="True" x="-330487.4" y="20783.22" z="-172597.9" />
+      <Point WorldViewSelect="True" x="-429665.8" y="18202.04" z="-206894.3" />
+      <Point WorldViewSelect="True" x="-441330.8" y="22633.59" z="-314884.9" />
+    </PointCollection>
+    <Water Height="15000" />
+  </Boundary>
+  <StaticObject Name="zombiehut" Mesh="human_house_wishbone.mesh" TerrainOffest="1781.363" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="125" Zenith="90">
+    <Position x="-385224.1" y="17672.52" z="-282169.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.8870109" z="0" w="0.4617486" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_wishbone_houseshape-obj.0" MaterialName="human_house_wishbone._01_-_Default" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="zombiemarker" TerrainOffset="-0.0078125" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="-357792" y="16919.81" z="-296496.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <NameValuePairs>
+      <NameValuePair Name="Property1" Value="value1" Type="String" />
+      <NameValuePair Name="Property2" Value="value2" Type="String" />
+    </NameValuePairs>
+  </Waypoint>
+  <Boundary Name="zombieforest" Priority="0">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-315286.8" y="16933.76" z="-2291.125" />
+      <Point WorldViewSelect="True" x="-133320.9" y="27774.17" z="-327291.1" />
+      <Point WorldViewSelect="True" x="-342324.7" y="60245.05" z="-526291.1" />
+      <Point WorldViewSelect="True" x="-606612.3" y="24571.75" z="-166291.1" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Beech - Winter" Filename="Beech_RT_Winter.spt" Scale="10000" ScaleVariance="1000" Instances="50" />
+    </Forest>
+  </Boundary>
+  <Waypoint Name="spawn" TerrainOffset="0.001953125" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="-135343.1" y="28492.58" z="-202945" />
+    <Orientation x="0" y="0.8" z="0" w="0.59" />
+  </Waypoint>
+  <Waypoint Name="npcmarker" TerrainOffset="17.625" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="-21" Zenith="90">
+    <Position x="-95944.9" y="31743.41" z="-209464.4" />
+    <Orientation x="0" y="-0.1822355" z="0" w="0.9832549" />
+  </Waypoint>
+  <Road Name="zombieroad" HalfWidth="2">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-377578.5" y="16321.75" z="-289145.9" />
+      <Point WorldViewSelect="True" x="-312578.5" y="15982.85" z="-265016.3" />
+      <Point WorldViewSelect="True" x="-260578.5" y="18347.52" z="-254497.6" />
+      <Point WorldViewSelect="True" x="-202578.5" y="22400" z="-220565.7" />
+      <Point WorldViewSelect="True" x="-131578.5" y="28333.94" z="-208103" />
+    </PointCollection>
+  </Road>
+  <Boundary Name="zombiefogregion" Priority="0">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-516931" y="24737.9" z="-132061.8" />
+      <Point WorldViewSelect="True" x="-538931" y="41413.2" z="-425273.2" />
+      <Point WorldViewSelect="True" x="-220031" y="34656.97" z="-362604.4" />
+      <Point WorldViewSelect="True" x="-185931" y="30885.49" z="-139614.4" />
+    </PointCollection>
+    <Fog Far="20000" Near="1">
+      <Color R="0.07843138" G="0.1882353" B="0.2313726" />
+    </Fog>
+  </Boundary>
+  <StaticObject Name="myhouse" Mesh="human_house_open.mesh" TerrainOffest="2000.004" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="78" Zenith="90">
+    <Position x="-140399.4" y="31227.94" z="-189022.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.6293204" z="0" w="0.7771459" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_house_open_porchshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_open_rampshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_openshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Boundary Name="greenforest" Priority="0">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-116367" y="20654.71" z="142233.7" />
+      <Point WorldViewSelect="True" x="-92126.95" y="36874.55" z="-391766.3" />
+      <Point WorldViewSelect="True" x="218040.4" y="66564.17" z="-430766.3" />
+      <Point WorldViewSelect="True" x="290814.6" y="38969.14" z="136233.7" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Red Delicious Apple - Apples" Filename="RDApple_RT_Apples.spt" Scale="10000" ScaleVariance="1000" Instances="200" />
+    </Forest>
+  </Boundary>
+  <Waypoint Name="wolfmarker" TerrainOffset="92.41406" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="-73944.9" y="35543.41" z="-206464.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <StaticObject Name="meetinghouse" Mesh="human_meeting_house.mesh" TerrainOffest="1200.012" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-135846.5" y="28009.72" z="-228595.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="roof_beam_end_piece_tallShape-obj.0" MaterialName="human_meeting_house._01_-_Default" Show="True" />
+      <SubMeshInfo Name="roof_beam_end_piece_shortShape-obj.0" MaterialName="human_meeting_house._01_-_Default" Show="True" />
+      <SubMeshInfo Name="support_pillar_long_endShape-obj.0" MaterialName="human_meeting_house._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_meeting_houseshape-obj.0" MaterialName="human_meeting_house._01_-_Default" Show="True" />
+      <SubMeshInfo Name="support_pillar_mid_long_endShape-obj.0" MaterialName="human_meeting_house._01_-_Default" Show="True" />
+      <SubMeshInfo Name="support_pillar_mid_short_endShape-obj.0" MaterialName="human_meeting_house._01_-_Default" Show="True" />
+      <SubMeshInfo Name="support_pillar_short_endShape-obj.0" MaterialName="human_meeting_house._01_-_Default" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <TerrainDecal Name="decal1" ImageName="red-circle-gradient.png" PositionX="-123163" PositionZ="-202953.6" SizeX="1200" SizeZ="1200" Rotation="0" Priority="1" PerceptionRadius="0" />
+  <StaticObject Name="barrel1" Mesh="barrel.mesh" TerrainOffest="0.02929688" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-123160.2" y="29151.9" z="-202954" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_open-mesh.0" MaterialName="barrel.barrel" Show="True" />
+      <SubMeshInfo Name="barrel_lid-mesh.0" MaterialName="barrel.barrel" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="instancePortal" Value="Right click for video instance" Type="String" />
+      <NameValuePair Name="instanceName" Value="video" Type="String" />
+      <NameValuePair Name="instanceFlags" Value="push" Type="String" />
+      <NameValuePair Name="locMarker" Value="spawn" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="barrel2" Mesh="barrel.mesh" TerrainOffest="-31.65234" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-140682.7" y="26823.79" z="-221784" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_open-mesh.0" MaterialName="barrel.barrel" Show="True" />
+      <SubMeshInfo Name="barrel_lid-mesh.0" MaterialName="barrel.barrel" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="instancePortal" Value="Right click for bigbrother instance" Type="String" />
+      <NameValuePair Name="instanceName" Value="bigbrother" Type="String" />
+      <NameValuePair Name="instanceFlags" Value="push" Type="String" />
+      <NameValuePair Name="locMarker" Value="spawn" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <Boundary Name="meetinghouse_region" Priority="50">
+    <NameValuePairs>
+      <NameValuePair Name="onEnter" Value="instanceEntry" Type="String" />
+      <NameValuePair Name="instanceName" Value="bigbrother" Type="String" />
+      <NameValuePair Name="locMarker" Value="spawn" Type="String" />
+    </NameValuePairs>
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-129738.5" y="27106.59" z="-230839.7" />
+      <Point WorldViewSelect="True" x="-129738.5" y="27462.46" z="-223681.4" />
+      <Point WorldViewSelect="True" x="-141738.5" y="26655.54" z="-223881.8" />
+      <Point WorldViewSelect="True" x="-141738.5" y="26296.51" z="-230646.2" />
+    </PointCollection>
+  </Boundary>
+  <Waypoint Name="bigbrother_portal" TerrainOffset="800.0039" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="-132148.2" y="28109.45" z="-223721.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="greenyNimbus" VelocityScale="2" ParticleScale="2" />
+  </Waypoint>
+  <Waypoint Name="WESpawn" TerrainOffset="0" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="-113815.2" y="30853.78" z="-186284.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <NameValuePairs>
+      <NameValuePair Name="Behaviors" Value="BaseBehavior,RadiusRoamBehavior" Type="String" />
+      <NameValuePair Name="corpseDespawnTime" Value="30000" Type="String" />
+    </NameValuePairs>
+    <SpawnGen TemplateName="Brax" RespawnTime="5000" NumSpawns="1" SpawnRadius="10000" />
+  </Waypoint>
+  <StaticObject Name="barrel3" Mesh="barrel.mesh" TerrainOffest="-31.65039" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-131709.4" y="29274.46" z="-193801" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_open-mesh.0" MaterialName="barrel.barrel" Show="True" />
+      <SubMeshInfo Name="barrel_lid-mesh.0" MaterialName="barrel.barrel" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="instancePortal" Value="Right click for frontier instance" Type="String" />
+      <NameValuePair Name="instanceName" Value="frontier" Type="String" />
+      <NameValuePair Name="instanceFlags" Value="push" Type="String" />
+      <NameValuePair Name="locMarker" Value="spawn" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <Boundary Name="bot1" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-60959.76" y="37752.06" z="-226168.2" />
+      <Point WorldViewSelect="True" x="-100898.9" y="30276.08" z="-227464.4" />
+      <Point WorldViewSelect="True" x="-100430.4" y="32883.93" z="-163464.4" />
+      <Point WorldViewSelect="True" x="-58426.73" y="37840.22" z="-165464.4" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="bot2" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-117780.3" y="31140.11" z="-173464.4" />
+      <Point WorldViewSelect="True" x="-119401.1" y="32365.87" z="-122464.4" />
+      <Point WorldViewSelect="True" x="-197960.1" y="30788.68" z="-136002.1" />
+      <Point WorldViewSelect="True" x="-179960.1" y="26283.07" z="-196670.2" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="bot3" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-170960.1" y="23758.54" z="-238774.2" />
+      <Point WorldViewSelect="True" x="-101169.8" y="29840.92" z="-240464.4" />
+      <Point WorldViewSelect="True" x="-106451.2" y="28554.75" z="-292464.4" />
+      <Point WorldViewSelect="True" x="-172339.5" y="24324.59" z="-294464.4" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="bot4" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="12192.05" y="39136.23" z="-345598.8" />
+      <Point WorldViewSelect="True" x="-13853.88" y="47327.08" z="-430134" />
+      <Point WorldViewSelect="True" x="76220.93" y="55965.34" z="-476134" />
+      <Point WorldViewSelect="True" x="122192" y="48664" z="-365369.2" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="bot5" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="53192.05" y="49769.24" z="-218891.4" />
+      <Point WorldViewSelect="True" x="164192" y="57904.39" z="-233986.7" />
+      <Point WorldViewSelect="True" x="194192" y="64669.94" z="-135581.2" />
+      <Point WorldViewSelect="True" x="77192.05" y="51153.06" z="-108641" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="bot6" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="53086.39" y="58427.43" z="43865.98" />
+      <Point WorldViewSelect="True" x="190192" y="58156.19" z="51075.19" />
+      <Point WorldViewSelect="True" x="234171.6" y="15702.57" z="247866" />
+      <Point WorldViewSelect="True" x="39028.57" y="26965.56" z="219866" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="bot7" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-102995.6" y="23031.11" z="118866" />
+      <Point WorldViewSelect="True" x="-103804.7" y="34963.28" z="-38134.02" />
+      <Point WorldViewSelect="True" x="-210807" y="25743.15" z="-39134.02" />
+      <Point WorldViewSelect="True" x="-244421.8" y="13001.41" z="100866" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="bot8" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-79668.45" y="40590.46" z="-415134" />
+      <Point WorldViewSelect="True" x="-206797.5" y="44710.21" z="-421134" />
+      <Point WorldViewSelect="True" x="-206960.4" y="55228.44" z="-499134" />
+      <Point WorldViewSelect="True" x="-85040.7" y="47668.76" z="-482134" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="bot9" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="307192.1" y="66324.7" z="-208348" />
+      <Point WorldViewSelect="True" x="308192.1" y="67265.96" z="-103157.3" />
+      <Point WorldViewSelect="True" x="390192.1" y="65138.22" z="-103438.1" />
+      <Point WorldViewSelect="True" x="390192.1" y="63065.46" z="-205128.6" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="bot10" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="307192.1" y="65717.41" z="-308446.9" />
+      <Point WorldViewSelect="True" x="396192" y="63148.86" z="-309024.1" />
+      <Point WorldViewSelect="True" x="395192.1" y="67546.66" z="-393386.4" />
+      <Point WorldViewSelect="True" x="308192.1" y="68251.84" z="-393890.1" />
+    </PointCollection>
+  </Boundary>
+</WorldObjectCollection>

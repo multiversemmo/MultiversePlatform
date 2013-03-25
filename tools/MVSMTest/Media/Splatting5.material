@@ -1,0 +1,215 @@
+
+vertex_program Splatcg/VP cg
+{
+	source Splat.cg
+	entry_point main_vp
+	profiles vs_2_0 arbvp1
+}
+
+fragment_program Splatcg/FP cg
+{
+	source Splat.cg
+	entry_point main_fp
+	profiles ps_2_0 arbfp1
+}
+
+material SplattingMaterial5
+{
+    technique
+	{
+		pass
+		{
+			lighting off
+
+			vertex_program_ref Splatcg/VP
+			{
+                param_named_auto worldViewProj      worldviewproj_matrix
+
+               	// Config settings are;
+               	//     sand-grass
+               	//     grass-rock
+               	//     rock
+               	//     snow
+               	// param_named configSettings float4 2500.0 3500.0 5500.0 0.0
+//               	param_named configSettings float4 500.0 2500.0 4500.0 0.0
+               	param_named configSettings float4 50000.0 300000.0 350000.0 0.0
+
+                // Fog settings are;
+                //     start
+                //     end
+                //     scale (e.g. 0.0 to switch off)
+               	param_named fogSettings float4 500.0 1000.0 1.0 0.0
+
+                // Fog colour
+               	param_named fogColour float4 0.93, 0.86, 0.76 1.0
+			}
+
+
+			fragment_program_ref Splatcg/FP
+			{
+                //param_named_auto lightDirection     light_direction_object_space 0
+               	//param_named_auto ambientLight       ambient_light_colour
+
+			}
+			texture_unit
+			{
+				texture splatting_sand.jpg
+				tex_address_mode mirror
+			}
+			texture_unit
+			{
+				texture splatting_grass.jpg
+				tex_address_mode mirror
+			}
+			texture_unit
+			{
+				texture splatting_rock.jpg
+				tex_address_mode mirror
+			}
+			texture_unit
+			{
+				texture splatting_snow.jpg
+				tex_address_mode mirror
+			}
+		}
+	}
+}
+
+material SplattingMaterial5old
+{
+	lod_distances 28000
+    technique
+	{
+		lod_index 0
+		pass
+		{
+			lighting off
+
+			fragment_program_ref splatarb
+			{
+			}
+			texture_unit
+			{
+				texture none
+				filtering point point none
+			}
+			texture_unit
+			{
+				texture splat3d.dds
+				filtering point point none
+				scale 0.05 0.05
+				tex_address_mode mirror
+			}
+		}
+	}
+	technique
+	{
+		lod_index 1
+		pass
+		{
+
+			lighting off
+			// base
+			texture_unit
+			{
+				texture none
+			}
+			texture_unit
+			{
+				// Light map
+				texture none
+				tex_address_mode clamp
+				colour_op_ex modulate_x2 src_current src_texture
+				//colour_op modulate
+				tex_coord_set 0
+			}
+		}
+	}
+}
+
+material SplattingMaterial5bis
+{
+	lod_distances 28000
+    technique
+	{
+		lod_index 0
+		pass
+		{
+			lighting off
+
+			fragment_program_ref splatarb
+			{
+			}
+			texture_unit
+			{
+				texture none
+				filtering point point none
+			}
+			texture_unit
+			{
+				texture splat3d.dds
+				filtering point point none
+				scale 0.05 0.05
+				tex_address_mode mirror
+			}
+		}
+	}
+	technique
+	{
+		lod_index 0
+		pass
+		{
+			lighting off
+
+			fragment_program_ref splat3arb
+			{
+			}
+			// coverage
+			texture_unit
+			{
+				texture none
+			}
+			texture_unit
+			{
+				texture splatting_rock.jpg
+				scale 0.05 0.05
+				tex_address_mode mirror
+			}
+			texture_unit
+			{
+				texture splatting_grass.jpg
+				scale 0.05 0.05
+				tex_address_mode mirror
+			}
+			texture_unit
+			{
+				texture splatting_snow.jpg
+				scale 0.05 0.05
+				tex_address_mode mirror
+			}
+		}
+	}
+	technique
+	{
+		lod_index 1
+		pass
+		{
+
+			lighting off
+			// base
+			texture_unit
+			{
+				texture none
+			}
+			texture_unit
+			{
+				// Light map
+				texture none
+				tex_address_mode clamp
+				colour_op_ex modulate_x2 src_current src_texture
+				//colour_op modulate
+				tex_coord_set 0
+			}
+		}
+	}
+}

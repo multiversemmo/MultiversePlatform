@@ -1,0 +1,30 @@
+<Machinima Name="hiphopRoomEmote" World="friendworld2">
+  <Render Width="380" Height="700" FPS="25"/>
+  <Encode BitRate="1500"/>
+ 
+  <Scene length="5.0">
+    <CameraMarker>pictureWallCamera</CameraMarker>
+
+    <MobileObject id="SceneObject01">
+      <Name>Lily</Name>
+      <Mesh>hmn_f_01_base.mesh</Mesh>
+      <SpawnPoint>pictureWallSpawn</SpawnPoint>
+      <Animation name="ntrl_laugh" delay="1.0" />
+      <Property name="Sex" value="female" />
+      <Property name="HeadShape" value="euro_01" />
+      <Property name="HeadDetail" value="" />
+      <Property name="HairStyle" value="bob" />
+      <Property name="HairColor" value="red" />
+      <Property name="ClothesTorso" value="hiphop_a_n" />
+      <Property name="ClothesLegs" value="hiphop_a_n" />
+      <Property name="Footwear" value="hiphop_a" />
+      <Property name="TorsoTattoo" value="sunburst" />
+      <Property name="TorsoTattooSite" value="upper_back" />
+      <Property name="LegTattoo" value="butterfly" />
+      <Property name="LegTattooSite" value="pubic" />
+      <Property name="AppearanceOverride" value="avatar" />
+    </MobileObject>
+  </Scene>
+
+</Machinima>
+

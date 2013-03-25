@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="spawn1-teleporter-loc" TerrainOffset="166474.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="-14732.22" y="166474.5" z="1085354" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <Waypoint Name="spawn1" TerrainOffset="166474.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="-15046.18" y="166474.5" z="1070904" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <StaticObject Name="Block08" Mesh="MV_les_block08_full.mesh" TerrainOffest="166474.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="-41705.62" y="166474.5" z="1033354" />
+    <Scale x="1.1" y="1.1" z="1.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="MV_les_block08_full-lib.0.0" MaterialName="MV_les_block08_full.material_1" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.1.0" MaterialName="MV_les_block08_full.material_4" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.2.0" MaterialName="MV_les_block08_full.material_6" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.3.0" MaterialName="MV_les_block08_full.material_9" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.4.0" MaterialName="MV_les_block08_full.material_8" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.5.0" MaterialName="MV_les_block08_full.material_10" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.6.0" MaterialName="MV_les_block08_full.material_2" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.7.0" MaterialName="MV_les_block08_full.material_5" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.8.0" MaterialName="MV_les_block08_full.material_3" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.9.0" MaterialName="MV_les_block08_full.material_7" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.10.0" MaterialName="MV_les_block08_full.material_24" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.11.0" MaterialName="MV_les_block08_full.material_11" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.12.0" MaterialName="MV_les_block08_full.material_25" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.13.0" MaterialName="MV_les_block08_full.material_19" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.14.0" MaterialName="MV_les_block08_full.material_23" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.15.0" MaterialName="MV_les_block08_full.material_22" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.16.0" MaterialName="MV_les_block08_full.material_18" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.17.0" MaterialName="MV_les_block08_full.material_189" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.18.0" MaterialName="MV_les_block08_full.material_14" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.19.0" MaterialName="MV_les_block08_full.material_17" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.20.0" MaterialName="MV_les_block08_full.material_13" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.21.0" MaterialName="MV_les_block08_full.material_27" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.22.0" MaterialName="MV_les_block08_full.material_26" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.23.0" MaterialName="MV_les_block08_full.material_21" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.24.0" MaterialName="MV_les_block08_full.material_15" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.25.0" MaterialName="MV_les_block08_full.material_16" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.26.0" MaterialName="MV_les_block08_full.material_28" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.27.0" MaterialName="MV_les_block08_full.material_12" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.28.0" MaterialName="MV_les_block08_full.material_20" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.29.0" MaterialName="MV_les_block08_full.material_36" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.30.0" MaterialName="MV_les_block08_full.material_30" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.31.0" MaterialName="MV_les_block08_full.material_29" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.32.0" MaterialName="MV_les_block08_full.material_31" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.33.0" MaterialName="MV_les_block08_full.material_33" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.34.0" MaterialName="MV_les_block08_full.material_34" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.35.0" MaterialName="MV_les_block08_full.material_35" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.36.0" MaterialName="MV_les_block08_full.material_32" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.37.0" MaterialName="MV_les_block08_full.material_154" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.38.0" MaterialName="MV_les_block08_full.material_39" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.39.0" MaterialName="MV_les_block08_full.material_38" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.40.0" MaterialName="MV_les_block08_full.material_40" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.41.0" MaterialName="MV_les_block08_full.material_37" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.42.0" MaterialName="MV_les_block08_full.material_50" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.43.0" MaterialName="MV_les_block08_full.material_48" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.44.0" MaterialName="MV_les_block08_full.material_49" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.45.0" MaterialName="MV_les_block08_full.material_65" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.46.0" MaterialName="MV_les_block08_full.material_62" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.47.0" MaterialName="MV_les_block08_full.material_61" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.48.0" MaterialName="MV_les_block08_full.material_60" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.49.0" MaterialName="MV_les_block08_full.material_57" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.50.0" MaterialName="MV_les_block08_full.material_53" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.51.0" MaterialName="MV_les_block08_full.material_85" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.52.0" MaterialName="MV_les_block08_full.material_75" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.53.0" MaterialName="MV_les_block08_full.material_67" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.54.0" MaterialName="MV_les_block08_full.material_66" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.55.0" MaterialName="MV_les_block08_full.material_46" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.56.0" MaterialName="MV_les_block08_full.material_59" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.57.0" MaterialName="MV_les_block08_full.material_64" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.58.0" MaterialName="MV_les_block08_full.material_80" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.59.0" MaterialName="MV_les_block08_full.material_74" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.60.0" MaterialName="MV_les_block08_full.material_63" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.61.0" MaterialName="MV_les_block08_full.material_58" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.62.0" MaterialName="MV_les_block08_full.material_55" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.63.0" MaterialName="MV_les_block08_full.material_87" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.64.0" MaterialName="MV_les_block08_full.material_56" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.65.0" MaterialName="MV_les_block08_full.material_73" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.66.0" MaterialName="MV_les_block08_full.material_82" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.67.0" MaterialName="MV_les_block08_full.material_54" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.68.0" MaterialName="MV_les_block08_full.material_76" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.69.0" MaterialName="MV_les_block08_full.material_68" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.70.0" MaterialName="MV_les_block08_full.material_72" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.71.0" MaterialName="MV_les_block08_full.material_71" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.72.0" MaterialName="MV_les_block08_full.material_70" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.73.0" MaterialName="MV_les_block08_full.material_69" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.74.0" MaterialName="MV_les_block08_full.material_52" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.75.0" MaterialName="MV_les_block08_full.material_42" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.76.0" MaterialName="MV_les_block08_full.material_77" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.77.0" MaterialName="MV_les_block08_full.material_45" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.78.0" MaterialName="MV_les_block08_full.material_79" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.79.0" MaterialName="MV_les_block08_full.material_43" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.80.0" MaterialName="MV_les_block08_full.material_81" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.81.0" MaterialName="MV_les_block08_full.material_41" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.82.0" MaterialName="MV_les_block08_full.material_78" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.83.0" MaterialName="MV_les_block08_full.material_83" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.84.0" MaterialName="MV_les_block08_full.material_84" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.85.0" MaterialName="MV_les_block08_full.material_86" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.86.0" MaterialName="MV_les_block08_full.material_47" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.87.0" MaterialName="MV_les_block08_full.material_88" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.88.0" MaterialName="MV_les_block08_full.material_91" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.89.0" MaterialName="MV_les_block08_full.material_89" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.90.0" MaterialName="MV_les_block08_full.material_90" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.91.0" MaterialName="MV_les_block08_full.material_92" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.92.0" MaterialName="MV_les_block08_full.material_97" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.93.0" MaterialName="MV_les_block08_full.material_93" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.94.0" MaterialName="MV_les_block08_full.material_51" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.95.0" MaterialName="MV_les_block08_full.material_94" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.96.0" MaterialName="MV_les_block08_full.material_98" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.97.0" MaterialName="MV_les_block08_full.material_95" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.98.0" MaterialName="MV_les_block08_full.material_96" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.99.0" MaterialName="MV_les_block08_full.material_44" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.100.0" MaterialName="MV_les_block08_full.material_99" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.101.0" MaterialName="MV_les_block08_full.material_100" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.102.0" MaterialName="MV_les_block08_full.material_147" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.103.0" MaterialName="MV_les_block08_full.material_116" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.104.0" MaterialName="MV_les_block08_full.material_118" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.105.0" MaterialName="MV_les_block08_full.material_159" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.106.0" MaterialName="MV_les_block08_full.material_101" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.107.0" MaterialName="MV_les_block08_full.material_122" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.108.0" MaterialName="MV_les_block08_full.material_153" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.109.0" MaterialName="MV_les_block08_full.material_107" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.110.0" MaterialName="MV_les_block08_full.material_133" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.111.0" MaterialName="MV_les_block08_full.material_111" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.112.0" MaterialName="MV_les_block08_full.material_130" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.113.0" MaterialName="MV_les_block08_full.material_128" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.114.0" MaterialName="MV_les_block08_full.material_157" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.115.0" MaterialName="MV_les_block08_full.material_120" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.116.0" MaterialName="MV_les_block08_full.material_156" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.117.0" MaterialName="MV_les_block08_full.material_158" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.118.0" MaterialName="MV_les_block08_full.material_142" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.119.0" MaterialName="MV_les_block08_full.material_129" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.120.0" MaterialName="MV_les_block08_full.material_123" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.121.0" MaterialName="MV_les_block08_full.material_148" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.122.0" MaterialName="MV_les_block08_full.material_143" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.123.0" MaterialName="MV_les_block08_full.material_149" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.124.0" MaterialName="MV_les_block08_full.material_160" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.125.0" MaterialName="MV_les_block08_full.material_109" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.126.0" MaterialName="MV_les_block08_full.material_113" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.127.0" MaterialName="MV_les_block08_full.material_112" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.128.0" MaterialName="MV_les_block08_full.material_162" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.129.0" MaterialName="MV_les_block08_full.material_108" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.130.0" MaterialName="MV_les_block08_full.material_144" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.131.0" MaterialName="MV_les_block08_full.material_106" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.132.0" MaterialName="MV_les_block08_full.material_145" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.133.0" MaterialName="MV_les_block08_full.material_117" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.134.0" MaterialName="MV_les_block08_full.material_119" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.135.0" MaterialName="MV_les_block08_full.material_126" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.136.0" MaterialName="MV_les_block08_full.material_155" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.137.0" MaterialName="MV_les_block08_full.material_151" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.138.0" MaterialName="MV_les_block08_full.material_104" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.139.0" MaterialName="MV_les_block08_full.material_161" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.140.0" MaterialName="MV_les_block08_full.material_105" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.141.0" MaterialName="MV_les_block08_full.material_103" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.142.0" MaterialName="MV_les_block08_full.material_121" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.143.0" MaterialName="MV_les_block08_full.material_146" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.144.0" MaterialName="MV_les_block08_full.material_110" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.145.0" MaterialName="MV_les_block08_full.material_115" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.146.0" MaterialName="MV_les_block08_full.material_114" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.147.0" MaterialName="MV_les_block08_full.material_125" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.148.0" MaterialName="MV_les_block08_full.material_137" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.149.0" MaterialName="MV_les_block08_full.material_139" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.150.0" MaterialName="MV_les_block08_full.material_141" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.151.0" MaterialName="MV_les_block08_full.material_150" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.152.0" MaterialName="MV_les_block08_full.material_134" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.153.0" MaterialName="MV_les_block08_full.material_138" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.154.0" MaterialName="MV_les_block08_full.material_132" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.155.0" MaterialName="MV_les_block08_full.material_172" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.156.0" MaterialName="MV_les_block08_full.material_102" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.157.0" MaterialName="MV_les_block08_full.material_136" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.158.0" MaterialName="MV_les_block08_full.material_135" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.159.0" MaterialName="MV_les_block08_full.material_127" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.160.0" MaterialName="MV_les_block08_full.material_131" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.161.0" MaterialName="MV_les_block08_full.material_140" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.162.0" MaterialName="MV_les_block08_full.material_124" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.163.0" MaterialName="MV_les_block08_full.material_163" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.164.0" MaterialName="MV_les_block08_full.material_164" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.165.0" MaterialName="MV_les_block08_full.material_152" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.166.0" MaterialName="MV_les_block08_full.material_166" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.167.0" MaterialName="MV_les_block08_full.material_167" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.168.0" MaterialName="MV_les_block08_full.material_168" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.169.0" MaterialName="MV_les_block08_full.material_165" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.170.0" MaterialName="MV_les_block08_full.material_170" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.171.0" MaterialName="MV_les_block08_full.material_171" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.172.0" MaterialName="MV_les_block08_full.material_169" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.173.0" MaterialName="MV_les_block08_full.material_174" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.174.0" MaterialName="MV_les_block08_full.material_173" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.175.0" MaterialName="MV_les_block08_full.material_178" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.176.0" MaterialName="MV_les_block08_full.material_175" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.177.0" MaterialName="MV_les_block08_full.material_176" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.178.0" MaterialName="MV_les_block08_full.material_177" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.179.0" MaterialName="MV_les_block08_full.material_185" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.180.0" MaterialName="MV_les_block08_full.material_181" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.181.0" MaterialName="MV_les_block08_full.material_182" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.182.0" MaterialName="MV_les_block08_full.material_180" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.183.0" MaterialName="MV_les_block08_full.material_179" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.184.0" MaterialName="MV_les_block08_full.material_188" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.185.0" MaterialName="MV_les_block08_full.material_184" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.186.0" MaterialName="MV_les_block08_full.material_183" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.187.0" MaterialName="MV_les_block08_full.material_186" Show="True" />
+      <SubMeshInfo Name="MV_les_block08_full-lib.188.0" MaterialName="MV_les_block08_full.material_187" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="spawn1-teleporter-object" Mesh="unit_cylinder.mesh" TerrainOffest="166094.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-14732.22" y="166094.5" z="1085354" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="unit_cylinder-mesh.0" MaterialName="unit_cylinder.unit_cylinder" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="alley01" Mesh="LES_alley_50_50.mesh" TerrainOffest="166274.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-39064.7" y="166274.5" z="1024042" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="alley02" Mesh="LES_alley_50_50.mesh" TerrainOffest="165474.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="-39170.76" y="165474.5" z="1073375" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_alley_50_50-lib.0" MaterialName="LES_alley_50_50.LES_street_Macro" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="spawnPt" TerrainOffset="830" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="108850.1" y="20830" z="-209839.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="stuck" TerrainOffset="830" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="108850.1" y="20830" z="-209839.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

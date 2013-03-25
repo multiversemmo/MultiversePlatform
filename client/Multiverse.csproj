@@ -1,0 +1,277 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.40607</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{68567BA9-01EE-4320-9518-76646265BB77}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Multiverse</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Multiverse</RootNamespace>
+    <StartupObject>Multiverse.MultiverseClient</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>False</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>True</Optimize>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>False</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>False</Optimize>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <Name>ICSharpCode.SharpZipLib</Name>
+      <Private>True</Private>
+      <HintPath>..\Axiom\Dependencies\Managed\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ode">
+      <Name>ode</Name>
+      <Private>True</Private>
+      <HintPath>..\Axiom\Dependencies\Native\ode.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+    </Reference>
+    <Reference Include="Tao.DevIl">
+      <Name>Tao.DevIl</Name>
+      <Private>True</Private>
+      <HintPath>..\Axiom\Dependencies\Managed\Tao.DevIl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LoginForm.resx">
+      <SubType>Code</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LoginForm1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigDialog.Designer.cs">
+      <DependentUpon>ConfigDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\MultiverseRenderer.cs" />
+    <Compile Include="Gui\NameManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Gui\TextWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GuiTest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\InputHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoginForm1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginForm.resx</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MathLib\IntVector3.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MathLib\MathUtil.cs" />
+    <Compile Include="MathLib\OrientedBox.cs" />
+    <Compile Include="MeshUtility.cs" />
+    <Compile Include="MobNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\IncomingMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\INetworkHelper.cs" />
+    <Compile Include="Network\LoopbackNetworkHelper.cs" />
+    <Compile Include="Network\MessageTypes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\NetworkHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\OutgoingMessage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Rdp\RdpConnection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Rdp\RdpConnectionManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\Rdp\RdpPacket.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Network\TestClass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Player.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReadWriteLock.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\FontMaker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tools\PerlinNoise.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\Monitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorldManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Axiom\Engine\Axiom.Engine.csproj">
+      <Project>{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Axiom\MathLib\Axiom.MathLib.csproj">
+      <Project>{48EAC066-47F2-44A5-9454-DFA718DCB55E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.MathLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Axiom\Platforms\Win32\Axiom.Platforms.Win32.csproj">
+      <Project>{5E123EF9-47A1-49BA-BF0A-57B32156B2A1}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Platforms.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Axiom\Plugins\CgProgramManager\Axiom.Plugins.CgProgramManager.csproj">
+      <Project>{519EF06F-12B1-43C4-AB84-765EAB4E5B59}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Plugins.CgProgramManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Axiom\Plugins\ParticleFX\Axiom.Plugins.ParticleFX.csproj">
+      <Project>{E763AAC7-530A-48CF-A846-5423A83FA669}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Plugins.ParticleFX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Axiom\RenderSystems\DirectX9\Axiom.RenderSystems.DirectX9.csproj">
+      <Project>{CB7A661F-83B9-416D-B204-C1096DC7CF75}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.RenderSystems.DirectX9</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Axiom\RenderSystems\OpenGL\Axiom.RenderSystems.OpenGL.csproj">
+      <Project>{FA1AE24F-7A68-4218-8C22-DD3D49820551}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.RenderSystems.OpenGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Axiom\SceneManagers\Landscape\Axiom.SceneManagers.PagingLandscape.csproj">
+      <Project>{F7668D00-EA76-4376-A784-C659041002D1}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.SceneManagers.PagingLandscape</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Axiom\SceneManagers\Octree\Axiom.SceneManagers.Octree.csproj">
+      <Project>{17CFC742-A764-4F7B-8188-CDE1FCF4D292}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.SceneManagers.Octree</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cegui-sharp\CrayzEdsGui.Base\CrayzEdsGui.Base.csproj">
+      <Project>{1793E237-A358-468A-B179-A148A7DD98AF}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>CrayzEdsGui.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cegui-sharp\CrayzEdsGui.Renderers.Axiom\CrayzEdsGui.Renderers.Axiom.csproj">
+      <Project>{96B6948A-6C78-4C76-9B72-4B22A73E100F}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>CrayzEdsGui.Renderers.Axiom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MARS\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

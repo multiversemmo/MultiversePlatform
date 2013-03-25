@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="south_orc_area_spawn" TerrainOffset="0.03125" AllowHeightAdjustment="True">
+    <Position x="-745631.9" y="147191.2" z="4318895" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <StaticObject Name="south_orc_tent" Mesh="orc_house.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1975.125" AllowHeightAdjustment="True">
+    <Position x="-824819.6" y="141071.1" z="4304704" />
+    <Orientation w="0.5877853" x="0" y="-0.809017" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape10-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape11-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape12-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape13-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape14-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape15-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape16-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape17-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape18-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape19-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape20-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape21-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape22-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape23-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape3-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape4-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape5-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape6-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape7-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape8-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape9-lib.0/sadasd" MaterialName="orc_house.sadasd" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="south_orc_fire" TerrainOffset="-16.5625" AllowHeightAdjustment="True">
+    <Position x="-826079.1" y="142937.8" z="4303879" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <ParticleEffect ParticleEffectName="smoke" ParticleScale="1" VelocityScale="3" />
+  </Waypoint>
+  <StaticObject Name="south_orc_tent_02" Mesh="orc_house.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1000" AllowHeightAdjustment="True">
+    <Position x="-699162.1" y="146605.3" z="4371665" />
+    <Orientation w="-4.371139E-08" x="0" y="1" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape10-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape11-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape12-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape13-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape14-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape15-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape16-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape17-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape18-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape19-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape20-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape21-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape22-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape23-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape3-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape4-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape5-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape6-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape7-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape8-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape9-lib.0/sadasd" MaterialName="orc_house.sadasd" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="south_orc_area__spwan_02" TerrainOffset="0.046875" AllowHeightAdjustment="True">
+    <Position x="-703773.3" y="147593.4" z="4375772" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Boundary Name="south_orc_forest" Priority="50">
+    <PointCollection>
+      <Point x="-959250.6" y="129552.6" z="4232076" />
+      <Point x="-876993.3" y="140598.7" z="4204076" />
+      <Point x="-736921.3" y="121090.7" z="4213076" />
+      <Point x="-651452.8" y="110732.2" z="4261145" />
+      <Point x="-628075.9" y="121483.7" z="4329556" />
+      <Point x="-675075.9" y="138240.2" z="4440719" />
+      <Point x="-775075.9" y="133243.2" z="4448297" />
+      <Point x="-880075.9" y="98540.09" z="4432820" />
+      <Point x="-954075.9" y="85870.16" z="4382651" />
+      <Point x="-965897.1" y="109344.1" z="4288145" />
+    </PointCollection>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Weeping Willow" Instances="4" Scale="10000" ScaleVariance="1000" Filename="WeepingWillow_RT.tre" />
+      <Tree Name="Weeping Willow - Winter" Instances="3" Scale="10000" ScaleVariance="1000" Filename="WeepingWillow_RT_Winter.tre" />
+      <Tree Name="Weeping Willow - Winter" Instances="3" Scale="10000" ScaleVariance="1000" Filename="WeepingWillow_RT_Winter.tre" />
+      <Tree Name="Venus Tree" Instances="15" Scale="10000" ScaleVariance="1000" Filename="VenusTree_RT.tre" />
+    </Forest>
+    <Grass Name="south_orc_grass_01">
+      <PlantType Name="Bird of Paradise" ImageName="birdofparadise" Instances="300" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="2000" ScaleWidthLow="1000" ScaleWidthHi="2000" ColorMultHi="1" ColorMultLow="1" R="1" G="1" B="1" />
+      <PlantType Name="Colorized Grass 2" ImageName="grass2" Instances="900" WindMagnitude="70" ScaleHeightLow="800" ScaleHeightHi="900" ScaleWidthLow="800" ScaleWidthHi="900" ColorMultHi="1" ColorMultLow="1" R="0.4196078" G="0.6784314" B="0.6196079" />
+    </Grass>
+    <Fog Far="500000" Near="50000">
+      <Color R="0.7098039" G="0.7176471" B="0.4588235" />
+    </Fog>
+  </Boundary>
+  <Road Name="zombie_lane" HalfWidth="2">
+    <PointCollection>
+      <Point x="-563826.8" y="56198.84" z="4219735" />
+      <Point x="-583666.3" y="58380.71" z="4197641" />
+      <Point x="-621546.3" y="66879.87" z="4155641" />
+      <Point x="-661541" y="75262.74" z="4101641" />
+      <Point x="-666826.8" y="89322.84" z="4166679" />
+      <Point x="-661826.8" y="100974.7" z="4223977" />
+      <Point x="-656826.8" y="117617.2" z="4275119" />
+      <Point x="-664826.8" y="129107.5" z="4302818" />
+      <Point x="-707826.8" y="124670.7" z="4249143" />
+      <Point x="-758826.8" y="122963.4" z="4186481" />
+      <Point x="-743223.9" y="148064.9" z="4323348" />
+    </PointCollection>
+  </Road>
+  <StaticObject Name="swamp_road_collonade" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1636.469" AllowHeightAdjustment="True">
+    <Position x="-738602.5" y="140503.1" z="4286018" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="swamp_road_collonade_02" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-821.25" AllowHeightAdjustment="True">
+    <Position x="-751134.1" y="140220.7" z="4285932" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

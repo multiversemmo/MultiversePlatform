@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\SpeedTree\SpeedTreeRT_SDK_v1_Evaluation]
+"Serial Number"=hex(4):52,54,2d,30,36,32,33,2d,38,33,36,38,30,33,32,65,30,61,63,36

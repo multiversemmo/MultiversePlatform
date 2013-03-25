@@ -1,0 +1,4 @@
+The Multiverse Server uses 3rd party software.  Here is a listing of them, and their corresponding license.
+
+gnu getopt: lgpl.txt
+rhino1.5r5: NPL-1.1.txt

@@ -1,0 +1,7 @@
+Font characters are not clipped to be contained in the gui element
+Key repeat not implemented
+Need to draw cursor
+Set horizontal scroll of the input bar based on the cursor instead of end of line
+Fix up speed for movement, and move a node
+Send movement events to the server and honor move events from the serve
+Get or build terrain information (GIS data? - 10 meter)

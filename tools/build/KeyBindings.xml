@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandBindings>
+  <CommandBinding Event="axiomOnCameraOnPlane" Modifier="none" Key="P" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomOffCameraOnPlane" Modifier="none" Key="P" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomCameraMoveSpeedUp" Modifier="none" Key="." Activity="down" Context="world view" />
+  <CommandBinding Event="axiomCameraMoveSpeedDown" Modifier="none" Key="," Activity="down" Context="world view" />
+  <CommandBinding Event="axiomToggleAccelerate" Modifier="none" Key="/" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraForward" Modifier="none" Key="UP" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraBack" Modifier="none" Key="S" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraBack" Modifier="none" Key="K" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraBack" Modifier="none" Key="DOWN" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraLeft" Modifier="none" Key="A" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraLeft" Modifier="none" Key="J" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraLeft" Modifier="none" Key="LEFT" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraForward" Modifier="none" Key="W" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraForward" Modifier="none" Key="I" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraRight" Modifier="none" Key="D" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraRight" Modifier="none" Key="L" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraRight" Modifier="none" Key="RIGHT" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomDeleteObject" Modifier="none" Key="DELETE" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomCameraAccelerateUp" Modifier="none" Key="ADD" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomCameraAccelerateDown" Modifier="none" Key="SUBSTRACT" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMouseSelectMultipleObject" Modifier="Ctrl" Key="LBUTTON" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMouseSelectObject" Modifier="none" Key="LBUTTON" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMouseTurnCamera" Modifier="none" Key="RBUTTON" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomCopy" Modifier="Ctrl" Key="C" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomCut" Modifier="Ctrl" Key="X" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomPaste" Modifier="Ctrl" Key="V" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraToSelectedMarker" Modifier="none" Key="E" Activity="down" Context="world view" />
+  <CommandBinding Event="worldEditorUndo" Modifier="Ctrl" Key="Z" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorRedo" Modifier="Ctrl" Key="Y" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorNewWorld" Modifier="Ctrl" Key="N" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorLoadWorld" Modifier="Ctrl" Key="O" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorExit" Modifier="Ctrl" Key="Q" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorSaveWorld" Modifier="Ctrl" Key="S" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorControlMappingEditor" Modifier="Ctrl" Key="M" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorEditPreferences" Modifier="Ctrl" Key="P" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorToggleLockCameraToObject" Modifier="Ctrl" Key="L" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorTreeViewSearch" Modifier="Ctrl" Key="F" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorTakeScreenShotOn" Modifier="none" Key="F3" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorTakeScreenShotOff" Modifier="none" Key="F3" Activity="up" Context="global" />
+  <CommandBinding Event="treeViewMoveToNextNode" Modifier="none" Key="DOWN" Activity="down" Context="treeView" />
+  <CommandBinding Event="treeViewMoveToPrevNode" Modifier="none" Key="UP" Activity="down" Context="treeView" />
+  <CommandBinding Event="treeViewExpandSelectedNode" Modifier="none" Key="ADD" Activity="down" Context="treeView" />
+  <CommandBinding Event="treeViewExpandAllSelectedNode" Modifier="Shift" Key="ADD" Activity="down" Context="treeView" />
+  <CommandBinding Event="treeViewCollapseSelectedNode" Modifier="none" Key="SUBSTRACT" Activity="down" Context="treeView" />
+  <CommandBinding Event="treeViewDeleteObject" Modifier="none" Key="DELETE" Activity="down" Context="treeView" />
+  <CommandBinding Event="treeViewCopy" Modifier="Ctrl" Key="C" Activity="down" Context="treeView" />
+  <CommandBinding Event="treeViewCut" Modifier="Ctrl" Key="X" Activity="down" Context="treeView" />
+  <CommandBinding Event="treeViewPaste" Modifier="Ctrl" Key="V" Activity="down" Context="treeView" />
+  <CommandBinding Event="axiomMoveCameraLeftStop" Modifier="none" Key="A" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraLeftStop" Modifier="none" Key="J" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraLeftStop" Modifier="none" Key="LEFT" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraForwardStop" Modifier="none" Key="UP" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraForwardStop" Modifier="none" Key="W" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraForwardStop" Modifier="none" Key="I" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraBackStop" Modifier="none" Key="S" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraBackStop" Modifier="none" Key="K" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraBackStop" Modifier="none" Key="DOWN" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraRightStop" Modifier="none" Key="D" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraRightStop" Modifier="none" Key="L" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraRightStop" Modifier="none" Key="RIGHT" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomMoveCameraStop" Modifier="none" Key="X" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomTurnCameraLeft" Modifier="none" Key="C" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomTurnCameraLeftStop" Modifier="none" Key="C" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomTurnCameraRight" Modifier="none" Key="B" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomTurnCameraRightStop" Modifier="none" Key="B" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomTurnCameraDown" Modifier="none" Key="F" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomTurnCameraDownStop" Modifier="none" Key="F" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomTurnCameraUp" Modifier="none" Key="V" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomTurnCameraUpStop" Modifier="none" Key="V" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomCameraAccelerateUpStop" Modifier="none" Key="ADD" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomCameraAccelerateDownStop" Modifier="none" Key="SUBTRACT" Activity="up" Context="world view" />
+  <CommandBinding Event="axiomCameraMoveSpeedDownStop" Modifier="none" Key="," Activity="up" Context="world view" />
+  <CommandBinding Event="axiomCameraMoveSpeedUpStop" Modifier="none" Key="." Activity="up" Context="world view" />
+  <CommandBinding Event="axiomSetCameraSpeedPreset1" Modifier="none" Key="1" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetCameraSpeedPreset2" Modifier="none" Key="2" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetCameraSpeedPreset3" Modifier="none" Key="3" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetCameraSpeedPreset4" Modifier="none" Key="4" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetAccelPreset1" Modifier="Ctrl" Key="1" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetAccelPreset2" Modifier="Ctrl" Key="2" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetAccelPreset3" Modifier="Ctrl" Key="3" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetAccelPreset4" Modifier="Ctrl" Key="4" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetPresetMWM1" Modifier="Alt" Key="1" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetPresetMWM2" Modifier="Alt" Key="2" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetPresetMWM3" Modifier="Alt" Key="3" Activity="down" Context="world view" />
+  <CommandBinding Event="axiomSetPresetMWM4" Modifier="Alt" Key="4" Activity="down" Context="world view" />
+  <CommandBinding Event="worldEditorDisplayPointLightCircles" Modifier="Ctrl" Key="/" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraForward" Modifier="none" Key="NUMPAD8" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraForward" Modifier="Alt" Key="W" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraForward" Modifier="Alt" Key="I" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraForwardStop" Modifier="none" Key="NUMPAD8" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraForwardStop" Modifier="Alt" Key="W" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraForwardStop" Modifier="Alt" Key="I" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraBack" Modifier="none" Key="NUMPAD2" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraBack" Modifier="Alt" Key="S" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraBack" Modifier="Alt" Key="K" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraBackStop" Modifier="Alt" Key="K" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraBackStop" Modifier="Alt" Key="S" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraBackStop" Modifier="none" Key="NUMPAD2" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraLeft" Modifier="none" Key="NUMPAD4" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraLeft" Modifier="Alt" Key="A" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraLeft" Modifier="Alt" Key="J" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraLeftStop" Modifier="Alt" Key="J" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraLeftStop" Modifier="Alt" Key="A" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraLeftStop" Modifier="none" Key="NUMPAD4" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraRight" Modifier="none" Key="NUMPAD6" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraRight" Modifier="Alt" Key="D" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraRight" Modifier="Alt" Key="L" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraRightStop" Modifier="Alt" Key="L" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraRightStop" Modifier="Alt" Key="D" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraRightStop" Modifier="none" Key="NUMPAD6" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraUp" Modifier="none" Key="PAGEUP" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraUpStop" Modifier="none" Key="PAGEUP" Activity="up" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraDown" Modifier="none" Key="PAGEDOWN" Activity="down" Context="global" />
+  <CommandBinding Event="worldEditorMoveCameraDownStop" Modifier="none" Key="PAGEDOWN" Activity="up" Context="global" />
+</CommandBindings>

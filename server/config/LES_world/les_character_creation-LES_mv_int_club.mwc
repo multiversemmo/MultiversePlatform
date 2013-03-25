@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="vid_screen_03" Mesh="LES_vid_screen.mesh" TerrainOffest="171232.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="-2805.76" y="171232.5" z="-1168716" />
+    <Scale x="2" y="2" z="2" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="vid_case-mesh.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+      <SubMeshInfo Name="vid_screen-mesh.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <PointLight Name="club_light_02" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="170474.5" AllowHeightAdjustment="True">
+    <Position x="-26905.76" y="170474.5" z="-1174016" />
+    <Specular R="0.9843137" G="0.7843137" B="0.5843138" />
+    <Diffuse R="0.7921569" G="0.8588235" B="0.3176471" />
+  </PointLight>
+  <PointLight Name="ext_street_light" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="169000" AllowHeightAdjustment="True">
+    <Position x="28900" y="169000" z="-1191204" />
+    <Specular R="0.945098" G="0.9960784" B="0.9294118" />
+    <Diffuse R="0.9529412" G="0.9490196" B="0.7450981" />
+  </PointLight>
+  <PointLight Name="club_light_01" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="170474.5" AllowHeightAdjustment="True">
+    <Position x="4193.128" y="170474.5" z="-1037206" />
+    <Specular R="0" G="0" B="0" />
+    <Diffuse R="0" G="0" B="0" />
+  </PointLight>
+</WorldObjectCollection>

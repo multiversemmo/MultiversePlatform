@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<job title="Render a machinima scene"
+     order="yes"
+     timeout="00:05"
+     tasks="4"
+     min_tasks="4">
+    <script language="javascript">
+        <![CDATA[
+function spooler_process() {
+var jobID = spooler_task.order.id;
+spooler_log.info("start of javascript: " + jobID);
+var machinimaDir = "C:\\Multiverse\\Machinima\\";
+var treeDir = "C:\\Multiverse\\tree\\";
+var tmpDir = machinimaDir + "Jobs\\";
+var toolDir = treeDir + "Tools\\Machinima\\";
+var jobDir = tmpDir + jobID;
+var jobScript = toolDir + "processJob.py";
+var pythonExe = "C:\\Python25\\python.exe";
+
+try
+{
+  var jobDirFile = new java.io.File(jobDir);
+  ret = jobDirFile.mkdir();
+  if ( ret == false )
+  {
+    spooler_log.error("error creating job directory: " + jobDir);
+  }
+}
+catch(x)
+{
+  spooler_log.error("error creating job directory: " + jobDir + " : " + x.toString());
+}
+
+var stream = null;
+
+try
+{
+  var filename = jobDir + "\\args.xml";
+  stream = new java.io.PrintStream(filename);
+  stream.println(spooler_task.order.xml_payload);
+}
+catch (x)
+{
+  spooler_log.error("error writing file" + x.toString());
+}
+finally
+{
+  try
+  {
+    if ( stream != null ) 
+    {
+      stream.close();
+    }
+  }
+  catch(x)
+  {
+  }
+}
+
+try
+{
+  var proc = spooler_task.create_subprocess();
+  var command = pythonExe + " " + jobScript + " " + jobID;
+  spooler_log.info("before running jobscript: " + jobID);
+  proc.start(command);
+  spooler_log.info("after running jobscript: " + jobID);
+  proc.wait_for_termination()
+  spooler_log.info("after jobscript termination: " + jobID);
+}
+catch (x)
+{
+  spooler_log.error("error running job");
+}
+
+return true;
+}
+        ]]>
+    </script>
+    <run_time let_run="no">
+        <holidays/>
+    </run_time>
+</job>

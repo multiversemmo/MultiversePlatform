@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Boundary Name="interior_fog_01" Priority="50">
+    <PointCollection>
+      <Point x="-189124.7" y="71000" z="256566.7" />
+      <Point x="-109072.2" y="71000" z="265566.7" />
+      <Point x="-108685.9" y="71000" z="337630.7" />
+      <Point x="-192686" y="71000" z="339221.4" />
+    </PointCollection>
+    <Fog Far="199000" Near="5000">
+      <Color R="0.5019608" G="0.5254902" B="0.7568628" />
+    </Fog>
+    <AmbientLight>
+      <Color R="0.2705882" G="0.2901961" B="0.3215686" />
+    </AmbientLight>
+    <DirectionalLight Azimuth="100" Zenith="42">
+      <Direction x="-0.7318548" y="-0.6691306" z="0.1290457" />
+      <Diffuse R="0.8392157" G="0.8078431" B="0.627451" />
+      <Specular R="0.6784314" G="0.6470588" B="0.4117647" />
+    </DirectionalLight>
+  </Boundary>
+  <Boundary Name="promenade_fog_01" Priority="50">
+    <PointCollection>
+      <Point x="-85080.25" y="71000" z="265578.2" />
+      <Point x="153036.1" y="73768.48" z="270571.9" />
+      <Point x="152036.1" y="73988.99" z="334753.8" />
+      <Point x="-86080.25" y="71000" z="331763.1" />
+    </PointCollection>
+    <Fog Far="400000" Near="50000">
+      <Color R="0.2705882" G="0.3176471" B="0.4156863" />
+    </Fog>
+  </Boundary>
+</WorldObjectCollection>

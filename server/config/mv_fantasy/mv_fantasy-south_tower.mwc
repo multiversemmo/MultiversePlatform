@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="south_marker" TerrainOffset="0.09765625" AllowHeightAdjustment="True">
+    <Position x="-640520.2" y="4445.226" z="5073741" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <StaticObject Name="tower_01" Mesh="tower.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="999.9688" AllowHeightAdjustment="True">
+    <Position x="-932863.5" y="166641.4" z="3990862" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="watchtowerShape-lib.0" MaterialName="tower.lambert1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Road Name="village way" HalfWidth="2">
+    <PointCollection>
+      <Point x="-932265.2" y="166031.3" z="3995347" />
+      <Point x="-873710.9" y="142222.5" z="4172347" />
+      <Point x="-744850.8" y="147659.4" z="4321347" />
+      <Point x="-729253.7" y="147287.9" z="4375727" />
+      <Point x="-667311.7" y="137452.4" z="4440070" />
+      <Point x="-668820.3" y="119660.5" z="4557949" />
+      <Point x="-670820.3" y="89621.78" z="4686740" />
+      <Point x="-700820.3" y="75528.69" z="4720925" />
+      <Point x="-689820.3" y="50957.36" z="4832232" />
+      <Point x="-641820.3" y="5135.547" z="5070209" />
+    </PointCollection>
+  </Road>
+  <Boundary Name="hilltop_trees_01" Priority="50">
+    <PointCollection>
+      <Point x="-1272998" y="83510.04" z="4120025" />
+      <Point x="-1308147" y="109329.9" z="3986025" />
+      <Point x="-1285724" y="151075.3" z="3813025" />
+      <Point x="-1073218" y="135213.5" z="3711025" />
+      <Point x="-763352.1" y="150428.3" z="3579025" />
+      <Point x="-512464" y="55447.27" z="3486025" />
+      <Point x="-544387" y="21556.44" z="3742025" />
+      <Point x="-797102.1" y="129529" z="4145062" />
+      <Point x="-870102.1" y="141629.5" z="4181973" />
+      <Point x="-1180803" y="88555.88" z="4138025" />
+    </PointCollection>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Venus Tree" Instances="25" Scale="10000" ScaleVariance="1000" Filename="VenusTree_RT.tre" />
+      <Tree Name="Umbrella Thorn - Dead" Instances="12" Scale="10000" ScaleVariance="1000" Filename="UmbrellaThorn_RT_Dead.tre" />
+      <Tree Name="Beech" Instances="24" Scale="10000" ScaleVariance="1000" Filename="Beech_RT.tre" />
+    </Forest>
+    <Grass Name="hilltop_grass_01">
+      <PlantType Name="Colorized Grass 1" ImageName="grass1" Instances="500" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.6039216" G="0.6745098" B="0.4588235" />
+      <PlantType Name="Colorized Grass 2" ImageName="grass2" Instances="500" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.454902" G="0.6705883" B="0.5411765" />
+      <PlantType Name="Pampas Grass" ImageName="pampas" Instances="100" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.8431373" G="0.8745098" B="0.7333333" />
+    </Grass>
+    <Fog Far="1400000" Near="5000">
+      <Color R="0.7764706" G="0.772549" B="0.5568628" />
+    </Fog>
+  </Boundary>
+  <Boundary Name="orc_fog_light" Priority="50">
+    <PointCollection>
+      <Point x="-1140499" y="156395.6" z="2970316" />
+      <Point x="-1110903" y="153078.3" z="2926681" />
+      <Point x="-1041513" y="147500.5" z="2878681" />
+      <Point x="-969862.3" y="143130.2" z="2891681" />
+      <Point x="-929761.4" y="139871.5" z="2941681" />
+      <Point x="-935515.7" y="149799.4" z="3056681" />
+      <Point x="-990498.9" y="146980.4" z="3108853" />
+      <Point x="-1045499" y="136545.8" z="3113701" />
+      <Point x="-1123499" y="134542.4" z="3120856" />
+      <Point x="-1155499" y="153876.8" z="3042685" />
+    </PointCollection>
+    <Fog Far="400000" Near="5000">
+      <Color R="0.7490196" G="0.7607843" B="0.4862745" />
+    </Fog>
+  </Boundary>
+</WorldObjectCollection>

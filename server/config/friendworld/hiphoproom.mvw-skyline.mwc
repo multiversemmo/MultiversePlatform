@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="hiphop_skyline_far_01" Mesh="nyts_skylineFar.mesh" TerrainOffest="-97000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="142" Zenith="90" Targetable="False">
+    <Position x="-16835.03" y="-77000" z="-299186.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9455186" z="0" w="0.3255681" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineFar_building-lib.0" MaterialName="nyts_skylineFar.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_skyline_far_02" Mesh="nyts_skylineFar.mesh" TerrainOffest="-95000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="171130.3" y="-75000" z="-419580.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineFar_building-lib.0" MaterialName="nyts_skylineFar.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_skyline_far_03" Mesh="nyts_skylineFar.mesh" TerrainOffest="-94000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="350590.8" y="-74000" z="-173851.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineFar_building-lib.0" MaterialName="nyts_skylineFar.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_skyline_far_04" Mesh="nyts_skylineFar.mesh" TerrainOffest="-94000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="114052.3" y="-74000" z="-28392.07" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineFar_building-lib.0" MaterialName="nyts_skylineFar.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_skyline_rooms" Mesh="FRW_skyline_rooms.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="79228.31" y="20000" z="-235112.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="windows_light-lib.0" MaterialName="FRW_skyline_rooms.windows" Show="True" />
+      <SubMeshInfo Name="windows_dark-lib.0" MaterialName="FRW_skyline_rooms.windows" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

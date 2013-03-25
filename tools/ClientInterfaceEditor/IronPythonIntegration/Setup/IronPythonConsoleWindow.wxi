@@ -1,0 +1,34 @@
+<Include>
+
+  <?define VisualStudioRegistryRoot = "Software\Microsoft\VisualStudio\9.0" ?>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\InstalledProducts\PythonConsolePackage" Value="#100" Type="string">
+    <Registry Name="Package" Value="{068980a2-def8-4422-adc4-76af7a935e7e}" Type="string" />
+    <Registry Name="ProductDetails" Value="#102" Type="string" />
+    <Registry Name="PID" Value="1.0" Type="string" />
+    <Registry Name="LogoID" Value="#0" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Packages\{068980a2-def8-4422-adc4-76af7a935e7e}" Value="Microsoft.Samples.VisualStudio.IronPythonConsole.PythonConsolePackage, IronPythonConsoleWindow, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string">
+    <Registry Name="InprocServer32" Value="[SystemFolder]mscoree.dll" Type="string" />
+    <Registry Name="Class" Value="Microsoft.Samples.VisualStudio.IronPythonConsole.PythonConsolePackage" Type="string" />
+    <Registry Name="CodeBase" Value="[#File_IronPythonConsoleWindow.dll]" Type="string" />
+    <Registry Name="ID" Value="1" Type="integer" />
+    <Registry Name="MinEdition" Value="standard" Type="string" />
+    <Registry Name="ProductVersion" Value="1.0" Type="string" />
+    <Registry Name="ProductName" Value="Visual Studio Integration of IronPython Console Window" Type="string" />
+    <Registry Name="CompanyName" Value="Microsoft Corporation" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Menus">
+    <Registry Name="{068980a2-def8-4422-adc4-76af7a935e7e}" Value=", 1000, 1" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Services\{1106288e-9740-40ee-bab5-1e4e1c5f7252}" Value="{068980a2-def8-4422-adc4-76af7a935e7e}" Type="string">
+    <Registry Name="Name" Value="IPythonEngineProvider" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\ToolWindows\{5f50e2df-8fd8-4a07-ac79-829ee3dc7c7c}" Value="{068980a2-def8-4422-adc4-76af7a935e7e}" Type="string">
+    <Registry Name="Name" Value="Microsoft.Samples.VisualStudio.IronPythonConsole.ConsoleWindow" Type="string" />
+  </Registry>
+</Include>

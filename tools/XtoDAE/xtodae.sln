@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C# Express 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xtodae", "xtodae.csproj", "{D1B1EC26-C529-45BD-B063-2506A3A47BA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Cup", "CS_Cup\CS_Cup.csproj", "{4C939D26-7254-44D4-9A9C-FFE7512C498F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CS_Lex", "CS_Lex\CS_Lex.csproj", "{1C02A6C7-F00A-44B1-B57D-98573083DB58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1B1EC26-C529-45BD-B063-2506A3A47BA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B1EC26-C529-45BD-B063-2506A3A47BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B1EC26-C529-45BD-B063-2506A3A47BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B1EC26-C529-45BD-B063-2506A3A47BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C939D26-7254-44D4-9A9C-FFE7512C498F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C939D26-7254-44D4-9A9C-FFE7512C498F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C939D26-7254-44D4-9A9C-FFE7512C498F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C939D26-7254-44D4-9A9C-FFE7512C498F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C02A6C7-F00A-44B1-B57D-98573083DB58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C02A6C7-F00A-44B1-B57D-98573083DB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C02A6C7-F00A-44B1-B57D-98573083DB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C02A6C7-F00A-44B1-B57D-98573083DB58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

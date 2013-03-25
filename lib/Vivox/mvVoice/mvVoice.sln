@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mvVoiceCLR", "mvVoiceCLR\mvVoiceCLR.vcproj", "{FA830377-1F39-495E-A18B-E709AF309700}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mvVoiceApp", "mvVoiceApp\mvVoiceApp.vcproj", "{61DC8DE9-3175-42D4-8204-BD720594949F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mvVoiceCBL", "mvVoiceCBL\mvVoiceCBL.vcproj", "{0A3370E1-E480-4D0D-958F-21FB3B7DD5AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA830377-1F39-495E-A18B-E709AF309700}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FA830377-1F39-495E-A18B-E709AF309700}.Debug|Win32.Build.0 = Debug|Win32
+		{FA830377-1F39-495E-A18B-E709AF309700}.Release|Win32.ActiveCfg = Release|Win32
+		{FA830377-1F39-495E-A18B-E709AF309700}.Release|Win32.Build.0 = Release|Win32
+		{61DC8DE9-3175-42D4-8204-BD720594949F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{61DC8DE9-3175-42D4-8204-BD720594949F}.Debug|Win32.Build.0 = Debug|Win32
+		{61DC8DE9-3175-42D4-8204-BD720594949F}.Release|Win32.ActiveCfg = Release|Win32
+		{61DC8DE9-3175-42D4-8204-BD720594949F}.Release|Win32.Build.0 = Release|Win32
+		{0A3370E1-E480-4D0D-958F-21FB3B7DD5AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0A3370E1-E480-4D0D-958F-21FB3B7DD5AF}.Debug|Win32.Build.0 = Debug|Win32
+		{0A3370E1-E480-4D0D-958F-21FB3B7DD5AF}.Release|Win32.ActiveCfg = Release|Win32
+		{0A3370E1-E480-4D0D-958F-21FB3B7DD5AF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

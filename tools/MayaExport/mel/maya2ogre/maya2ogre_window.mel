@@ -1,0 +1,353 @@
+/*
+============================================================================
+This source file is part of the Ogre-Maya Tools.
+Distributed as part of Ogre (Object-oriented Graphics Rendering Engine).
+Copyright (C) 2003 Fifty1 Software Inc.
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+or go to http://www.gnu.org/licenses/gpl.txt
+============================================================================
+*/
+
+namespace -add "maya2ogre";
+namespace -set "maya2ogre";
+
+// ===== Format UI
+// (Primarily enabling/disabling controls)
+global proc formatUI()
+{
+	// --- Common parameters
+
+	// --- Mesh Export
+	int $exportMesh = `checkBox -query -value ExportMesh`;
+	checkBox -edit -enable $exportMesh ExportMeshVBA;
+	checkBox -edit -enable $exportMesh ExportMeshNormals;
+	checkBox -edit -enable $exportMesh ExportMeshColours;
+	checkBox -edit -enable $exportMesh ExportMeshUVs;
+	checkBox -edit -enable $exportMesh ExportMeshBinary;
+	text -edit -enable $exportMesh ExportMeshFilenameLabel;
+	textField -edit -enable $exportMesh ExportMeshFilename;
+	
+	// --- Material Export
+	int $exportMaterial = `checkBox -query -value ExportMaterial`;
+	text -edit -enable $exportMaterial ExportMaterialFilenameLabel;
+	textField -edit -enable $exportMaterial ExportMaterialFilename;
+	
+	// --- Skeleton Export
+	int $exportSkeleton = `checkBox -query -value ExportSkeleton`;
+	checkBox -edit -enable $exportSkeleton ExportSkeletonBinary;
+	checkBox -edit -enable $exportSkeleton ExportAnim;
+	text -edit -enable $exportSkeleton ExportSkeletonFilenameLabel;
+	textField -edit -enable $exportSkeleton ExportSkeletonFilename;
+
+	// --- Animation Export
+	int $exportAnimation = `checkBox -query -value ExportAnim`;
+	if ($exportAnimation) {
+		frameLayout -edit -collapse false AnimationFrame;
+	} else {
+		frameLayout -edit -collapse true AnimationFrame;
+	}
+
+}
+
+// ===== Initialization code
+// Initializes parameters that are not stored in fileInfo
+// Also provides defaults for params that may not yet be stored in fileInfo
+global proc initUI()
+{
+	// --- Common parameters
+	string $sceneFile = `file -query -sceneName`;
+	string $sceneDir = dirname($sceneFile);
+	string $baseFile = basename($sceneFile, ".mb");
+	textField -edit -fileName $sceneDir SceneDirectory;
+	
+	// --- Mesh Export
+	string $meshFile = $baseFile + ".mesh.xml";
+	textField -edit -fileName $meshFile ExportMeshFilename;
+	
+	// --- Material Export
+	string $matFile = $baseFile + ".material";
+	textField -edit -fileName $matFile ExportMaterialFilename;
+	
+	// --- Skeleton and Animation Export
+	string $skelFile = $baseFile + ".skeleton.xml";
+	string $animFile = $baseFile + ".anim";
+	textField -edit -fileName $skelFile ExportSkeletonFilename;
+}
+
+// ===== Define UI
+global proc defineUIView()
+{
+
+	// --- Main window for Ogre exporter
+	if (`window -exists OgreExportWindow`)
+	{
+	deleteUI OgreExportWindow;
+	}
+	window 
+	-title "Ogre Exporter" 
+		OgreExportWindow;
+	scrollLayout 
+	OgreExportScrollLayout;
+	columnLayout
+	OgreExportLayout;
+
+		// --- Common Parameters Frame
+		frameLayout 
+		-label "Common Parameters" 
+		-collapsable true
+			CommonFrame;
+
+			columnLayout 
+			-columnAttach "left" 20
+				CommonLayout;
+
+				text     
+				-label "Export which objects:"
+					ExportWhichLabel;
+				radioCollection
+					ExportWhichRadios;
+					radioButton
+					-label "Export Everything"
+					-select
+						ExportAllRadio;
+					radioButton
+					-label "Export Selection"
+					-enable false
+						ExportSelectedRadio;
+
+				text     
+				-label "Material Name Prefix"
+					MaterialPrefixLabel;
+				textField 
+				-width 305
+					MaterialPrefix;
+
+				text     
+				-label "Scene Directory"
+					SceneDirectoryLabel;
+				textField 
+				-width 305
+				-editable false
+					SceneDirectory;
+
+				text     
+				-label "Output Directory (relative to Scene Directory)"
+					OutputDirectoryLabel;
+				textField 
+				-width 305
+					OutputDirectory;
+
+				setParent ..;
+			setParent..;
+
+
+		// --- Mesh
+		frameLayout 
+		-collapsable true
+		-label "Mesh" 
+			MeshFrame;
+
+			columnLayout 
+			-columnAttach "left" 20
+				MeshLayout;
+				checkBox
+				-value false 
+				-changeCommand "formatUI"
+				-label "Export mesh to Ogre XML format"
+					ExportMesh;
+				checkBox
+				-value true  
+				-enable false
+				-label "Include vertex bone assignments"
+					ExportMeshVBA;
+				checkBox
+				-value true  
+				-enable false
+				-label "Include vertex normals"
+					ExportMeshNormals;
+				checkBox
+				-value true  
+				-enable false
+				-label "Include diffuse vertex colours"
+					ExportMeshColours;
+				checkBox
+				-value true  
+				-enable false
+				-label "Include texture coordinates"
+					ExportMeshUVs;
+				checkBox
+				-value false 
+				-enable false
+				-label "Create binary .mesh file (in addition to XML)"
+					ExportMeshBinary;
+				text     
+				-label "XML Mesh Filename"
+				-enable false
+					ExportMeshFilenameLabel;
+				textField 
+				-width 305
+				-enable false
+					ExportMeshFilename;
+				setParent ..;
+			setParent ..;
+
+
+		// --- Materials
+		frameLayout 
+		   -collapsable true
+		   -label "Materials" 
+			MaterialFrame;
+
+			columnLayout 
+			-columnAttach "left" 20
+				MaterialLayout;
+				checkBox
+				   -value false 
+				   -changeCommand "formatUI"
+				   -label "Export materials to Ogre .material file"
+					ExportMaterial;
+				text     
+				   -label "Material Filename"
+				   -enable false
+					ExportMaterialFilenameLabel;
+				textField 
+				   -width 305
+				   -enable false
+					ExportMaterialFilename;
+
+				setParent ..;
+			setParent..;
+
+
+		// --- Skeleton and Animations
+		frameLayout 
+		-collapsable true
+		-label "Skeleton & Animations" 
+			SkeletonFrame;
+			columnLayout 
+			-columnAttach "left" 20
+				SkeletonLayout;
+				checkBox
+				   -value false 
+				   -changeCommand "formatUI"
+				   -label "Export skeleton to Ogre XML format"
+					ExportSkeleton;
+				checkBox
+				   -value false
+				   -enable false
+				   -label "Create binary .skeleton file (in addition to XML)"
+					ExportSkeletonBinary;
+				checkBox
+				   -value false
+				   -enable false
+				   -changeCommand "formatUI"
+				   -label "Include animation (define details below)"
+					ExportAnim;
+				text     
+				   -label "XML Skeleton Filename"
+				   -enable false
+					ExportSkeletonFilenameLabel;
+				textField 
+				   -width 305
+				   -enable false
+					ExportSkeletonFilename;
+
+				// Animation details
+				frameLayout 
+				-label "Animation Details" 
+				-collapsable true
+				-collapse true
+					AnimationFrame;
+					
+					columnLayout
+					AnimationLayout;
+
+						rowColumnLayout 
+						-numberOfColumns 4
+						-columnAttach 1 "left" 20
+						-columnWidth 1 150
+						-columnWidth 2  50
+						-columnWidth 3  50
+						-columnWidth 4  50
+							AnimationDetailsLayout;
+
+							text -label "Name"; 
+							text -label "Start"; 
+							text -label "End"; 
+							text -label "Skip";
+
+							textField -width 125 AnimName01;
+							intField -min 0 -max 1000 -value 1    AnimStart01;
+							intField -min 0 -max 1000 -value 100  AnimEnd01;
+							intField -min 0 -max 100  -value 1    AnimStep01;
+
+							textField -width 125 AnimName02;
+							intField -min 0 -max 1000 -value 1    AnimStart02;
+							intField -min 0 -max 1000 -value 100  AnimEnd02;
+							intField -min 0 -max 100  -value 1    AnimStep02;
+
+							textField -width 125 AnimName03;
+							intField -min 0 -max 1000 -value 1    AnimStart03;
+							intField -min 0 -max 1000 -value 100  AnimEnd03;
+							intField -min 0 -max 100  -value 1    AnimStep03;
+
+							textField -width 125 AnimName04;
+							intField -min 0 -max 1000 -value 1    AnimStart04;
+							intField -min 0 -max 1000 -value 100  AnimEnd04;
+							intField -min 0 -max 100  -value 1    AnimStep04;
+
+							textField -width 125 AnimName05;
+							intField -min 0 -max 1000 -value 1    AnimStart05;
+							intField -min 0 -max 1000 -value 100  AnimEnd05;
+							intField -min 0 -max 100  -value 1    AnimStep05;
+
+							textField -width 125 AnimName06;
+							intField -min 0 -max 1000 -value 1    AnimStart06;
+							intField -min 0 -max 1000 -value 100  AnimEnd06;
+							intField -min 0 -max 100  -value 1    AnimStep06;
+
+							textField -width 125 AnimName07;
+							intField -min 0 -max 1000 -value 1    AnimStart07;
+							intField -min 0 -max 1000 -value 100  AnimEnd07;
+							intField -min 0 -max 100  -value 1    AnimStep07;
+
+							textField -width 125 AnimName08;
+							intField -min 0 -max 1000 -value 1    AnimStart08;
+							intField -min 0 -max 1000 -value 100  AnimEnd08;
+							intField -min 0 -max 100  -value 1    AnimStep08;
+
+							setParent ..;
+						
+						setParent ..;
+					setParent ..;
+				
+				setParent ..;
+			setParent..;
+
+		// --- Export!
+		separator -style "none" -height 10;
+		button 
+		   -label "EXPORT" 
+		   -command "ExportToOgre"
+		   -width 325
+			ButtonExport;
+		setParent ..;
+	setParent ..;
+	setParent ..;
+
+	// --- Show the Window
+	showWindow OgreExportWindow;
+}

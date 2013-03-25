@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="barrel2" Mesh="barrel.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="1891.967" y="20000" z="9983.72" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_open-mesh.0" MaterialName="barrel.barrel" Show="True" />
+      <SubMeshInfo Name="barrel_lid-mesh.0" MaterialName="barrel.barrel" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="instancePortal" Value="Right click to return" Type="String" />
+      <NameValuePair Name="instanceFlags" Value="pop" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <Waypoint Name="spawn" TerrainOffset="0" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="-42" Zenith="90">
+    <Position x="891.9669" y="20000" z="9983.72" />
+    <Orientation x="0" y="-0.3583679" z="0" w="0.9335804" />
+  </Waypoint>
+  <StaticObject Name="brother4" Mesh="human_male.mesh" TerrainOffest="-17000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="60">
+    <Position x="-17910.37" y="3000" z="9622.71" />
+    <Scale x="16" y="16" z="16" />
+    <Orientation x="0.1830127" y="0.6830127" z="-0.1830127" w="0.6830127" />
+    <SubMeshes>
+      <SubMeshInfo Name="cloth_a_apronShape-lib.0" MaterialName="human_male.apron_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_mantleShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_tunicShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_b_tunicShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_bootsShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_glovesShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_helmetShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_armband_leftShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_armband_rightShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="plate_a_pantsShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_armorShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_beltShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_bootsShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_glovesShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_helmetShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="hair_cShape-lib.0" MaterialName="human_male.hair_b_material" Show="False" />
+      <SubMeshInfo Name="hair_eShape-lib.0" MaterialName="human_male.hair_b_material" Show="False" />
+      <SubMeshInfo Name="facial_hair_aShape-lib.0" MaterialName="human_male.facial_hair_a_material" Show="True" />
+      <SubMeshInfo Name="hair_bShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="hair_aShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="hair_dShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_bootsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="head_aShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="head_dShape-lib.0" MaterialName="human_male.head_a_material" Show="True" />
+      <SubMeshInfo Name="head_cShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="head_bShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="bodyShape-lib.0" MaterialName="human_male.skin_material" Show="True" />
+      <SubMeshInfo Name="leather_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_shirtShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="cloth_a_boxersShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="leather_b_pantsShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_a_beltShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_glovesShape-lib.0" MaterialName="human_male.leather_a_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="brother3" Mesh="human_male.mesh" TerrainOffest="-17000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="60">
+    <Position x="1000" y="3000" z="-8000" />
+    <Scale x="16" y="16" z="16" />
+    <Orientation x="0.258819" y="0" z="0" w="0.9659258" />
+    <SubMeshes>
+      <SubMeshInfo Name="cloth_a_apronShape-lib.0" MaterialName="human_male.apron_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_mantleShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_tunicShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_b_tunicShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_bootsShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_glovesShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_helmetShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_armband_leftShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_armband_rightShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="plate_a_pantsShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_armorShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_beltShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_bootsShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_glovesShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_helmetShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="hair_cShape-lib.0" MaterialName="human_male.hair_b_material" Show="False" />
+      <SubMeshInfo Name="hair_eShape-lib.0" MaterialName="human_male.hair_b_material" Show="False" />
+      <SubMeshInfo Name="facial_hair_aShape-lib.0" MaterialName="human_male.facial_hair_a_material" Show="True" />
+      <SubMeshInfo Name="hair_bShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="hair_aShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="hair_dShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_bootsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="head_aShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="head_dShape-lib.0" MaterialName="human_male.head_a_material" Show="True" />
+      <SubMeshInfo Name="head_cShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="head_bShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="bodyShape-lib.0" MaterialName="human_male.skin_material" Show="True" />
+      <SubMeshInfo Name="leather_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_shirtShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="cloth_a_boxersShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="leather_b_pantsShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_a_beltShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_glovesShape-lib.0" MaterialName="human_male.leather_a_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="brother2" Mesh="human_male.mesh" TerrainOffest="-17000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-180" Zenith="60">
+    <Position x="1218.861" y="3000" z="27709.94" />
+    <Scale x="16" y="16" z="16" />
+    <Orientation x="-1.131334E-08" y="-0.9659258" z="0.258819" w="-4.222196E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="cloth_a_apronShape-lib.0" MaterialName="human_male.apron_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_mantleShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_tunicShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_b_tunicShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_bootsShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_glovesShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_helmetShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_armband_leftShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_armband_rightShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="plate_a_pantsShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_armorShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_beltShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_bootsShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_glovesShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_helmetShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="hair_cShape-lib.0" MaterialName="human_male.hair_b_material" Show="False" />
+      <SubMeshInfo Name="hair_eShape-lib.0" MaterialName="human_male.hair_b_material" Show="False" />
+      <SubMeshInfo Name="facial_hair_aShape-lib.0" MaterialName="human_male.facial_hair_a_material" Show="True" />
+      <SubMeshInfo Name="hair_bShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="hair_aShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="hair_dShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_bootsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="head_aShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="head_dShape-lib.0" MaterialName="human_male.head_a_material" Show="True" />
+      <SubMeshInfo Name="head_cShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="head_bShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="bodyShape-lib.0" MaterialName="human_male.skin_material" Show="True" />
+      <SubMeshInfo Name="leather_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_shirtShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="cloth_a_boxersShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="leather_b_pantsShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_a_beltShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_glovesShape-lib.0" MaterialName="human_male.leather_a_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="brother1" Mesh="human_male.mesh" TerrainOffest="-17000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="60">
+    <Position x="19673.68" y="3000" z="9419.88" />
+    <Scale x="16" y="16" z="16" />
+    <Orientation x="0.1830127" y="-0.6830127" z="0.1830127" w="0.6830127" />
+    <SubMeshes>
+      <SubMeshInfo Name="cloth_a_apronShape-lib.0" MaterialName="human_male.apron_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_mantleShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_tunicShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_b_tunicShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_bootsShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_glovesShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_helmetShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_armband_leftShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_b_armband_rightShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="plate_a_pantsShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_armorShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_beltShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_bootsShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_glovesShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="plate_a_helmetShape-lib.0" MaterialName="human_male.plate_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="hair_cShape-lib.0" MaterialName="human_male.hair_b_material" Show="False" />
+      <SubMeshInfo Name="hair_eShape-lib.0" MaterialName="human_male.hair_b_material" Show="False" />
+      <SubMeshInfo Name="facial_hair_aShape-lib.0" MaterialName="human_male.facial_hair_a_material" Show="True" />
+      <SubMeshInfo Name="hair_bShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="hair_aShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="hair_dShape-lib.0" MaterialName="human_male.hair_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_bootsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="head_aShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="head_dShape-lib.0" MaterialName="human_male.head_a_material" Show="True" />
+      <SubMeshInfo Name="head_cShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="head_bShape-lib.0" MaterialName="human_male.head_a_material" Show="False" />
+      <SubMeshInfo Name="bodyShape-lib.0" MaterialName="human_male.skin_material" Show="True" />
+      <SubMeshInfo Name="leather_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="cloth_a_shirtShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="cloth_a_boxersShape-lib.0" MaterialName="human_male.cloth_a_material" Show="False" />
+      <SubMeshInfo Name="leather_b_pantsShape-lib.0" MaterialName="human_male.leather_b_material" Show="False" />
+      <SubMeshInfo Name="leather_a_beltShape-lib.0" MaterialName="human_male.leather_a_material" Show="False" />
+      <SubMeshInfo Name="leather_a_glovesShape-lib.0" MaterialName="human_male.leather_a_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

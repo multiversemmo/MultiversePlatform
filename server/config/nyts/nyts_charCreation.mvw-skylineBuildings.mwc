@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="skylineNear_01" Mesh="nyts_skylineNear.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="90" Zenith="90">
+    <Position x="225365.1" y="20000" z="-325484.8" />
+    <Scale x="0.9" y="0.9" z="0.9" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineNear_building-lib.0" MaterialName="nyts_skylineNear.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="skylineFar_02" Mesh="nyts_skylineFar.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1E+07" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="407511.5" y="20000" z="-309208.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_skylineFar_building-lib.0" MaterialName="nyts_skylineFar.building" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="lit_2" TerrainOffset="3300" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-172098.5" y="74300" z="300332.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="lit_1" TerrainOffset="4000" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-131577.9" y="75000" z="299732.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="lit_3" TerrainOffset="25600" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-171890.3" y="96600" z="300349" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="lit_4" TerrainOffset="21000" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-177290.3" y="92000" z="278081.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="lit_5" TerrainOffset="2600" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-117220.7" y="73600" z="277905.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="hiphoproom" Version="2">
+  <CameraPosition x="94011.79" y="32559.07" z="-204673.1" />
+  <CameraOrientation x="-0.1398934" y="-0.853604" z="-0.2932877" w="0.4071516" />
+  <Terrain>
+    <algorithm>HybridMultifractalWithFloor</algorithm>
+    <xOffset>0</xOffset>
+    <yOffset>0</yOffset>
+    <zOffset>0</zOffset>
+    <h>0.25</h>
+    <lacunarity>2</lacunarity>
+    <octaves>8</octaves>
+    <metersPerPerlinUnit>500</metersPerPerlinUnit>
+    <heightScale>0</heightScale>
+    <heightOffset>0</heightOffset>
+    <fractalOffset>0.7</fractalOffset>
+    <heightFloor>20</heightFloor>
+  </Terrain>
+  <TerrainDisplay Type="AutoSplat" UseParams="True" UseGeneratedShadeMask="True" TextureTileSize="5" SandToGrassHeight="50000" GrassToRockHeight="250000" RockToSnowHeight="450000" SandTextureName="splatting_sand.dds" GrassTextureName="splatting_grass.dds" RockTextureName="splatting_rock.dds" SnowTextureName="splatting_snow.dds" ShadeMaskTextureName="" />
+  <Ocean DisplayOcean="False" UseParams="True" WaveHeight="1000" SeaLevel="10000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <Skybox Name="eve_skybox" />
+  <GlobalFog Far="1E+07" Near="800000">
+    <Color R="0.2666667" G="0" B="0.5411765" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.3607843" G="0.3607843" B="0.3607843" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="-32" Zenith="42">
+    <Direction x="0.3938068" y="-0.6691306" z="-0.6302226" />
+    <Diffuse R="0.08235294" G="0.08235294" B="0.08235294" />
+    <Specular R="0.2470588" G="0.2470588" B="0.2470588" />
+  </GlobalDirectionalLight>
+  <WorldCollection Name="room_hiphop" Filename="hiphoproom.mvw-room_hiphop.mwc" />
+  <WorldCollection Name="furniture" Filename="hiphoproom.mvw-furniture.mwc" />
+  <WorldCollection Name="pictures" Filename="hiphoproom.mvw-pictures.mwc" />
+  <WorldCollection Name="machinima" Filename="hiphoproom.mvw-machinima.mwc" />
+  <WorldCollection Name="room_lights" Filename="hiphoproom.mvw-room_lights.mwc" />
+  <WorldCollection Name="bot_regions" Filename="hiphoproom.mvw-bot_regions.mwc" />
+</World>

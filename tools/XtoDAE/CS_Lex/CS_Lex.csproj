@@ -1,0 +1,73 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C02A6C7-F00A-44B1-B57D-98573083DB58}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TUVienna.CS_Lex</RootNamespace>
+    <AssemblyName>CS_Lex</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CAccept.cs" />
+    <Compile Include="CAcceptAnchor.cs" />
+    <Compile Include="CAlloc.cs" />
+    <Compile Include="CBunch.cs" />
+    <Compile Include="CDfa.cs" />
+    <Compile Include="CDTrans.cs" />
+    <Compile Include="CEmit.cs" />
+    <Compile Include="CError.cs" />
+    <Compile Include="CInput.cs" />
+    <Compile Include="CLexGen.cs" />
+    <Compile Include="CMakeNfa.cs" />
+    <Compile Include="CMinimize.cs" />
+    <Compile Include="CNfa.cs" />
+    <Compile Include="CNfa2Dfa.cs" />
+    <Compile Include="CNfaPair.cs" />
+    <Compile Include="CSet.cs" />
+    <Compile Include="CSimplifyNfa.cs" />
+    <Compile Include="CSpec.cs" />
+    <Compile Include="CS_Lex.cs" />
+    <Compile Include="CUtility.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="mEnum.cs" />
+    <Compile Include="SparseBitSet.cs" />
+    <Compile Include="Vector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

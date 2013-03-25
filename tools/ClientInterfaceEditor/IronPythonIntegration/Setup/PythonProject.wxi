@@ -1,0 +1,87 @@
+<Include>
+  
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Packages\{38f7eba3-a5c6-4e32-b2c9-b6456f31b129}" Value="Microsoft.Samples.VisualStudio.IronPythonProject.PythonProjectPackage, PythonProject, Version=8.0.2373.36482, Culture=neutral, PublicKeyToken=null" Type="string">
+    <Registry Name="InprocServer32" Value="[SystemFolder]mscoree.dll" Type="string" />
+    <Registry Name="Class" Value="Microsoft.Samples.VisualStudio.IronPythonProject.PythonProjectPackage" Type="string" />
+    <Registry Name="CodeBase" Value="[#File_PythonProject.dll]" Type="string" />
+    <Registry Name="ID" Value="1" Type="integer" />
+    <Registry Name="MinEdition" Value="standard" Type="string" />
+    <Registry Name="ProductVersion" Value="1.0" Type="string" />
+    <Registry Name="ProductName" Value="Visual Studio Integration of IronPython Project System" Type="string" />
+    <Registry Name="CompanyName" Value="Microsoft Corporation" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Editors\{f26a6ee9-3ce6-4885-b62d-382f4dd3a50e}">
+    <Registry Name="Package" Value="{38f7eba3-a5c6-4e32-b2c9-b6456f31b129}" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Editors\{f26a6ee9-3ce6-4885-b62d-382f4dd3a50e}\Extensions">
+    <Registry Name="py" Value="32" Type="integer" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Editors\{f26a6ee9-3ce6-4885-b62d-382f4dd3a50e}\LogicalViews">
+    <Registry Name="{7651a701-06e5-11d1-8ebd-00a0c90f26ea}"  />    
+    <Registry Name="{7651a702-06e5-11d1-8ebd-00a0c90f26ea}"  />  
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Menus">
+    <Registry Name="{38f7eba3-a5c6-4e32-b2c9-b6456f31b129}" Value=", 1000, 1" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\CLSID\{b7406511-3c20-407a-abf8-03965e5025eb}" Value="Microsoft.Samples.VisualStudio.IronPythonProject.GeneralPropertyPage" Type="string">
+    <Registry Name="InprocServer32" Value="[SystemFolder]mscoree.dll" Type="string" />
+    <Registry Name="Class" Value="Microsoft.Samples.VisualStudio.IronPythonProject.GeneralPropertyPage" Type="string" />
+    <Registry Name="CodeBase" Value="[#File_PythonProject.dll]" Type="string" />
+    <Registry Name="ThreadingModel" Value="Both" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\CLSID\{87ec20f2-2c4b-488c-91ae-76826e660cf0}" Value="Microsoft.Samples.VisualStudio.IronPythonProject.IronPythonBuildPropertyPage" Type="string">
+    <Registry Name="InprocServer32" Value="[SystemFolder]mscoree.dll" Type="string" />
+    <Registry Name="Class" Value="Microsoft.Samples.VisualStudio.IronPythonProject.IronPythonBuildPropertyPage" Type="string" />
+    <Registry Name="CodeBase" Value="[#File_PythonProject.dll]" Type="string" />
+    <Registry Name="ThreadingModel" Value="Both" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Projects\{af48b115-53db-4e4f-a04c-cf2b83c29ee3}" Value="PythonProjectFactory" Type="string">
+    <Registry Name="DisplayName" Value="IronPython" Type="string" />
+    <Registry Name="DisplayProjectFileExtensions" Value="IronPython Project Files (*.pyproj);*.pyproj" Type="string" />
+    <Registry Name="Package" Value="{38f7eba3-a5c6-4e32-b2c9-b6456f31b129}" Type="string" />
+    <Registry Name="DefaultProjectExtension" Value="pyproj" Type="string" />
+    <Registry Name="PossibleProjectExtensions" Value="pyproj" Type="string" />
+    <Registry Name="ProjectTemplatesDir" Value="[$ComponentPath]\.\NullPath" Type="string" />
+    <Registry Name="Language(VsTemplate)" Value="IronPython" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Projects\{0c1e5196-4828-499e-9f72-98268b955b28}" Value="IronPython Web Application Project Templates" Type="string">
+    <Registry Name="Package" Value="{38f7eba3-a5c6-4e32-b2c9-b6456f31b129}" Type="string" />
+    <Registry Name="Language(VsTemplate)" Value="IronPython" Type="string" />
+    <Registry Name="ShowOnlySpecifiedTemplates(VsTemplate)" Value="0" Type="integer" />
+    <Registry Name="TemplateGroupIDs(VsTemplate)" Value="Web" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Projects\{0c1e5196-4828-499e-9f72-98268b955b28}\WebApplicationProperties">
+    <Registry Name="CodeBehindCodeGenerator" Value="{00000000-0000-0000-0000-000000000000}" Type="string" />
+    <Registry Name="CodeFileExtension" Value=".py" Type="string" />
+    <Registry Name="TemplateFolder" Value="IronPython" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Projects\{349c5851-65df-11da-9384-00065b846f21}\LanguageTemplates">
+    <Registry Name="{AF48B115-53DB-4e4f-A04C-CF2B83C29EE3}" Value="{0c1e5196-4828-499e-9f72-98268b955b28}" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Projects\{E24C65DC-7377-472B-9ABA-BC803B73C61A}\ProjectSubType(VsTemplate)\IronPython" Value="Iron Python" Type="string" />
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\NewProjectTemplates\TemplateDirs\{38f7eba3-a5c6-4e32-b2c9-b6456f31b129}\/1" Value="IronPython" Type="string">
+    <Registry Name="SortPriority" Value="100" Type="integer" />
+    <Registry Name="TemplatesDir" Value="[$Comp_Project]\.\NullPath" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\NewProjectTemplates\TemplateDirs\{39c9c826-8ef8-4079-8c95-428f5b1c323f}\IronPython" Value="Iron Python" Type="string">
+    <Registry Name="NewProjectDialogExOnly" Value="1" Type="integer" />
+    <Registry Name="SortPriority" Value="300" Type="integer" />
+    <Registry Name="TemplatesDir" Value="[VS_DIR]Web\.\WebProjects\IronPython" Type="string" />
+    <Registry Name="DeveloperActivity" Value="IronPython" Type="string" />
+  </Registry>
+
+  <Registry Root="HKLM" Key="$(var.VisualStudioRegistryRoot)\Generators\{af48b115-53db-4e4f-a04c-cf2b83c29ee3}" />
+</Include>

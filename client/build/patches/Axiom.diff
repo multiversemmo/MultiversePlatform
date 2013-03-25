@@ -1,0 +1,1170 @@
+diff -Naur Axiom.cvs/DemoTest/Demos/Water.cs Axiom/DemoTest/Demos/Water.cs
+--- Axiom.cvs/DemoTest/Demos/Water.cs	2004-11-14 17:03:16.687500000 -0800
++++ Axiom/DemoTest/Demos/Water.cs	2004-11-14 17:03:41.906250000 -0800
+@@ -812,8 +812,8 @@
+ 			// Ogre Wave Generation Logic - scale pressure according to time passed
+ 			for(int addx = (int)fx; addx <= (int)fx + 1; addx++) {
+ 				for(int addy = (int)fy; addy <= (int)fy + 1; addy++) {
+-					float diffy = fy - (float)Math.Floor(addy);
+-					float diffx = fx - (float)Math.Floor(addx);
++					float diffy = fy - (float)Math.Floor((double)addy);
++					float diffx = fx - (float)Math.Floor((double)addx);
+ 					float dist= (float) Math.Sqrt(diffy * diffy + diffx * diffx);
+ 					float power = 1 - dist ;
+ 
+@@ -831,8 +831,8 @@
+ 			// Ogre Wave Generation Logic - scale pressure according to time passed
+ 			for(int addx = (int)fx; addx <= (int)fx + 1; addx++) {
+ 				for(int addy = (int)fy; addy <= (int)fy + 1; addy++) {
+-					float diffy = fy - (float)Math.Floor(addy);
+-					float diffx = fx - (float)Math.Floor(addx);
++					float diffy = fy - (float)Math.Floor((double)addy);
++					float diffx = fx - (float)Math.Floor((double)addx);
+ 					float dist= (float) Math.Sqrt(diffy*diffy + diffx*diffx);
+ 					float power = (1 - dist) * cmplxAdj * speed;
+ 
+diff -Naur Axiom.cvs/Engine/Animating/Bone.cs Axiom/Engine/Animating/Bone.cs
+--- Axiom.cvs/Engine/Animating/Bone.cs	2004-11-14 17:03:19.750000000 -0800
++++ Axiom/Engine/Animating/Bone.cs	2004-11-14 17:03:41.906250000 -0800
+@@ -194,4 +194,34 @@
+         public ushort boneIndex;
+         public float weight;
+     }
++
++	public class VertexBoneAssignmentWeightComparer : System.Collections.IComparer
++	{
++		/// <summary>Compares two objects and returns a value indicating whether one is less than, equal to or greater than the other.</summary>
++		/// <returns>Value Condition Less than zero x is less than y. Zero x equals y. Greater than zero x is greater than y. </returns>
++		/// <param name="y">Second object to compare. </param>
++		/// <param name="x">First object to compare. </param>
++		/// <filterpriority>2</filterpriority>
++		public int Compare(object x, object y) {
++			VertexBoneAssignment xVba = null;
++			VertexBoneAssignment yVba = null;
++			if (x is VertexBoneAssignment)
++				xVba = (VertexBoneAssignment)x;
++			if (y is VertexBoneAssignment)
++				yVba = (VertexBoneAssignment)y;
++			if (xVba == null && yVba == null)
++				return 0;
++			else if (xVba == null)
++				return -1;
++			else if (yVba == null)
++				return 1;
++			else if (xVba.weight == yVba.weight)
++				return 0;
++			else if (xVba.weight < yVba.weight)
++				return -1;
++			else // if (xVba.weight > yVba.weight)
++				return 1;
++		}
++		
++	}
+ }
+diff -Naur Axiom.cvs/Engine/Animating/Skeleton.cs Axiom/Engine/Animating/Skeleton.cs
+--- Axiom.cvs/Engine/Animating/Skeleton.cs	2004-11-14 17:03:19.796875000 -0800
++++ Axiom/Engine/Animating/Skeleton.cs	2004-11-14 17:03:41.921875000 -0800
+@@ -567,20 +567,21 @@
+             // load the skeleton file
+             Stream data = SkeletonManager.Instance.FindResourceData(name);
+             
+-            // instantiate a new skeleton reader
+-            OgreSkeletonReader reader = new OgreSkeletonReader(data);
+ 
+             string extension = Path.GetExtension( name );
+ 
+             if(extension == ".skeleton") {
++				// instantiate a new skeleton reader
++				OgreSkeletonReader reader = new OgreSkeletonReader(data);
+                 reader.Import(this);
+-            }
+-            else {
++			} else if (extension == ".xml") {
++				// instantiate a new skeleton reader
++				OgreXmlSkeletonReader reader = new OgreXmlSkeletonReader(data);
++				reader.Import(this);
++			} else {
+                 data.Close();
+-
+                 throw new Exception("Unsupported skeleton file format '" + extension + "'");
+             }
+-
+             data.Close();
+         }
+ 
+diff -Naur Axiom.cvs/Engine/Core/BillboardSet.cs Axiom/Engine/Core/BillboardSet.cs
+--- Axiom.cvs/Engine/Core/BillboardSet.cs	2004-11-14 17:03:20.531250000 -0800
++++ Axiom/Engine/Core/BillboardSet.cs	2004-11-14 17:03:41.937500000 -0800
+@@ -50,6 +50,7 @@
+     ///		by other classes to create effects.
+     /// </remarks>
+     public class BillboardSet : SceneObject, IRenderable {
++
+         #region Fields
+ 
+         /// <summary>Bounds of all billboards in this set</summary>
+@@ -120,7 +121,7 @@
+         /// <summary>
+         ///		Public constructor.  Should not be created manually, must be created using a SceneManager.
+         /// </summary>
+-        internal BillboardSet( string name, int poolSize) {
++        protected internal BillboardSet( string name, int poolSize) {
+             this.name = name;
+             this.PoolSize = poolSize;
+ 
+diff -Naur Axiom.cvs/Engine/Core/Mesh.cs Axiom/Engine/Core/Mesh.cs
+--- Axiom.cvs/Engine/Core/Mesh.cs	2004-11-14 17:03:20.593750000 -0800
++++ Axiom/Engine/Core/Mesh.cs	2004-11-14 17:03:42.000000000 -0800
+@@ -54,7 +54,7 @@
+     ///    <p/>
+     ///    Multiple world objects can (indeed should) be created from a
+     ///    single mesh object - see the Entity class for more info.
+-    ///    The mesh object will have it's own default
++    ///    The mesh object will have its own default
+     ///    material properties, but potentially each world instance may
+     ///    wish to customize the materials from the original. When the object
+     ///    is instantiated into a scene node, the mesh material properties
+@@ -65,7 +65,7 @@
+     ///    As described above, because the mesh may have sections of differing
+     ///    material properties, a mesh is inherently a compound contruct,
+     ///    consisting of one or more SubMesh objects.
+-    ///    However, it strongly 'owns' it's SubMeshes such that they
++    ///    However, it strongly 'owns' its SubMeshes such that they
+     ///    are loaded / unloaded at the same time. This is contrary to
+     ///    the approach taken to hierarchically related (but loosely owned)
+     ///    scene nodes, where data is loaded / unloaded separately. Note
+@@ -811,7 +811,7 @@
+         /// </remarks>
+         /// <param name="skeleton"></param>
+         public void NotifySkeleton(Skeleton skeleton) {
+-            skeleton = skeleton;
++            this.skeleton = skeleton;
+             skeletonName = skeleton.Name;
+         }
+ 
+@@ -873,8 +873,10 @@
+             int currentBones = 0;
+ 
+             for(int i = 0; i < vertexCount; i++) {
++				// Get the vertex bone assignment list for this vertex
++				IList vbaList = assignments.FindBucket(i);
+                 // gets the numbers of assignments for the current vertex
+-                currentBones = assignments.Count(i);
++                currentBones = vbaList.Count;
+ 
+                 // Deal with max bones update 
+                 // (note this will record maxBones even if they exceed limit)
+@@ -884,7 +886,19 @@
+ 
+                 // does the number of bone assignments exceed limit?
+                 if(currentBones > Config.MaxBlendWeights) {
+-                    // TODO: Handle balancing of too many weights
++					ArrayList vbaArray;
++					if (vbaList is ArrayList)
++						vbaArray = (ArrayList)vbaList;
++					else
++						vbaArray = new ArrayList(vbaList);
++					vbaArray.Sort(new VertexBoneAssignmentWeightComparer());
++					vbaArray.RemoveRange(Config.MaxBlendWeights, currentBones - Config.MaxBlendWeights);
++					vbaList = vbaArray;
++					string msg =
++						string.Format("WARNING: Mesh '{0}' bone assigment weights for vertex {1} exceed maximum of {2}", name, i, Config.MaxBlendWeights);
++					Trace.WriteLine(msg);
++					Debug.Assert(false, "in here");
++
+                 }
+ 
+                 float totalWeight = 0.0f;
+@@ -893,7 +907,7 @@
+                 // Do this irrespective of whether we had to remove assignments or not
+                 //   since it gives us a guarantee that weights are normalised
+                 //  We assume this, so it's a good idea since some modellers may not
+-                IEnumerator iter = assignments.Find(i);
++				IEnumerator iter = vbaList.GetEnumerator();
+ 
+                 if(iter == null) {
+                     continue;
+@@ -906,12 +920,14 @@
+ 
+                 // Now normalise if total weight is outside tolerance
+                 if(!MathUtil.FloatEqual(totalWeight, 1.0f)) {
+-					// TODO: This is not correct, shouldn't be advancing the current iterator
+-					// Need to have another one that starts at the same position as the current
+-                    while(iter.MoveNext()) {
++					iter = vbaList.GetEnumerator();
++					while (iter.MoveNext()) {
+                         VertexBoneAssignment vba = (VertexBoneAssignment)iter.Current;
+                         vba.weight /= totalWeight;
+                     }
++					string msg =
++						string.Format("WARNING: Mesh '{0}' bone assigment weights for vertex {1} add up to: {2}", name, i, totalWeight);
++					Trace.WriteLine(msg);
+                 }
+             }
+ 
+@@ -1247,30 +1263,32 @@
+             if(!isManuallyDefined) {
+                 // get the resource data from MeshManager
+                 Stream data = MeshManager.Instance.FindResourceData(name);
+-
+-                // instantiate a mesh reader and pass in the stream data
+-                OgreMeshReader meshReader = new OgreMeshReader(data);
+-
+                 string extension = Path.GetExtension( name );
+ 
+-                if(extension != ".mesh") {
+-                    data.Close();
+-
+-                    throw new AxiomException("Unsupported mesh format '{0}'", extension);
+-                }
+-
+                 // mesh loading stats
+                 int before, after;
+ 
+                 // get the tick count before loading the mesh
+                 before = Environment.TickCount;
+ 
++				if (extension == ".mesh") {
++					// instantiate a mesh reader and pass in the stream data
++					OgreMeshReader meshReader = new OgreMeshReader(data);
+                 // import the .mesh file
+                 meshReader.Import(this);
++				} else if (extension == ".xml") {
++					OgreXmlMeshReader meshReader = new OgreXmlMeshReader(data);
++					// import the .mesh file
++					meshReader.Import(this);
++				} else {
++                    data.Close();
++                    throw new AxiomException("Unsupported mesh format '{0}'", extension);
++                }
+ 				
+                 // get the tick count after loading the mesh
+                 after = Environment.TickCount;
+ 
++
+                 // record the time elapsed while loading the mesh
+                 System.Diagnostics.Trace.WriteLine(string.Format("Mesh: Loaded '{0}', took {1}ms", this.name,  (after - before)));
+ 
+diff -Naur Axiom.cvs/Engine/Core/SceneManager.cs Axiom/Engine/Core/SceneManager.cs
+--- Axiom.cvs/Engine/Core/SceneManager.cs	2004-11-14 17:03:20.640625000 -0800
++++ Axiom/Engine/Core/SceneManager.cs	2004-11-14 17:03:42.046875000 -0800
+@@ -448,9 +448,13 @@
+ 
+             Mesh mesh = MeshManager.Instance.Load(meshName);
+ 
++			Trace.TraceInformation("Loaded mesh: " + meshName);
++
+             // create a new entitiy
+             Entity entity = new Entity(name, mesh, this);
+ 
++			Trace.TraceInformation("Constructed entity: " + name);
++
+             // add it to our local list
+             entityList.Add(entity);
+ 
+diff -Naur Axiom.cvs/Engine/Graphics/Enums.cs Axiom/Engine/Graphics/Enums.cs
+--- Axiom.cvs/Engine/Graphics/Enums.cs	2004-11-14 17:03:21.437500000 -0800
++++ Axiom/Engine/Graphics/Enums.cs	2004-11-14 17:03:42.062500000 -0800
+@@ -868,14 +868,17 @@
+         /// <summary>
+         ///		Draw with a single color.
+         ///	 </summary>
++		[ScriptEnum("flat")]
+         Flat,
+         /// <summary>
+         ///		Interpolate color across primitive vertices.
+         ///	 </summary>
++		[ScriptEnum("gouraud")]
+         Gouraud,
+         /// <summary>
+         ///		Draw everything (2 sided geometry).
+         ///	 </summary>
++		[ScriptEnum("phong")]
+         Phong
+     }
+ 
+diff -Naur Axiom.cvs/Engine/Graphics/MaterialManager.cs Axiom/Engine/Graphics/MaterialManager.cs
+--- Axiom.cvs/Engine/Graphics/MaterialManager.cs	2004-11-14 17:03:21.562500000 -0800
++++ Axiom/Engine/Graphics/MaterialManager.cs	2004-11-14 17:03:42.062500000 -0800
+@@ -296,7 +296,7 @@
+         /// <returns></returns>
+         public override Resource Create(string name) {
+             if(resourceList[name] != null)
+-                throw new AxiomException(string.Format("Cananot create a duplicate material named '{0}'.", name));
++                throw new AxiomException(string.Format("Cannot create a duplicate material named '{0}'.", name));
+ 
+             // create a material
+             Material material = new Material(name);
+@@ -935,7 +935,7 @@
+ 
+         [AttributeParser("cull_software", PASS)]
+         public static void ParseCullSoftware(string[] values, Pass pass) {
+-            if(values.Length != 1) {
++			if (values.Length != 1) {
+                 ParseHelper.LogParserError("cull_software", pass.Parent.Name, "Invalid enum value");
+                 return;
+             }
+@@ -944,11 +944,29 @@
+             object val = ScriptEnumAttribute.Lookup(values[0], typeof(ManualCullingMode));
+ 
+             // if a value was found, assign it
+-            if(val != null)
++			if (val != null)
+                 pass.ManualCullMode = (ManualCullingMode)val;
+             else
+                 ParseHelper.LogParserError("cull_software", pass.Parent.Name, "Invalid enum value");
+         }
++
++
++		[AttributeParser("shading", PASS)]
++		public static void ParseShading(string[] values, Pass pass) {
++			if (values.Length != 1) {
++				ParseHelper.LogParserError("shading", pass.Parent.Name, "Invalid enum value");
++				return;
++			}
++
++			// lookup the real enum equivalent to the script value
++			object val = ScriptEnumAttribute.Lookup(values[0], typeof(Shading));
++
++			// if a value was found, assign it
++			if (val != null)
++				pass.ShadingMode = (Shading)val;
++			else
++				ParseHelper.LogParserError("shading", pass.Parent.Name, "Invalid enum value");
++		}
+         #endregion
+ 
+         #region Texture unit attribute parser methods
+diff -Naur Axiom.cvs/Engine/Serialization/OgreXmlMeshReader.cs Axiom/Engine/Serialization/OgreXmlMeshReader.cs
+--- Axiom.cvs/Engine/Serialization/OgreXmlMeshReader.cs	1969-12-31 16:00:00.000000000 -0800
++++ Axiom/Engine/Serialization/OgreXmlMeshReader.cs	2004-11-14 17:04:05.984375000 -0800
+@@ -0,0 +1,492 @@
++#region LGPL License
++/*
++Axiom Game Engine Library
++Copyright (C) 2003  Axiom Project Team
++
++The overall design, and a majority of the core engine and rendering code 
++contained within this library is a derivative of the open source Object Oriented 
++Graphics Engine OGRE, which can be found at http://ogre.sourceforge.net.  
++Many thanks to the OGRE team for maintaining such a high quality project.
++
++This library is free software; you can redistribute it and/or
++modify it under the terms of the GNU Lesser General Public
++License as published by the Free Software Foundation; either
++version 2.1 of the License, or (at your option) any later version.
++
++This library is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++Lesser General Public License for more details.
++
++You should have received a copy of the GNU Lesser General Public
++License along with this library; if not, write to the Free Software
++Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
++*/
++#endregion
++
++using System;
++using System.Diagnostics;
++using System.IO;
++using System.Text;
++using System.Xml;
++using System.Collections.Generic;
++
++using Axiom.Animating;
++using Axiom.Core;
++using Axiom.MathLib;
++using Axiom.Graphics;
++
++namespace Axiom.Serialization
++{
++	/// <summary>
++	/// 	Summary description for OgreMeshReader.
++	/// </summary>
++	public class OgreXmlMeshReader
++	{
++		#region Member variables
++
++		protected Mesh mesh;
++		protected bool isSkeletallyAnimated;
++		protected int subMeshAutoNumber = 0;
++		protected Dictionary<int, string> submeshNames = new Dictionary<int, string>();
++
++		protected Stream stream;
++
++		#endregion
++
++		#region Constructors
++
++		public OgreXmlMeshReader(Stream data) {
++			stream = data;
++		}
++
++		#endregion
++
++		#region Methods
++
++		public void Import(Mesh mesh) {
++			// store a local reference to the mesh for modification
++			this.mesh = mesh;
++
++			XmlDocument document = new XmlDocument();
++			document.Load(stream);
++			foreach (XmlNode childNode in document.ChildNodes) {
++				switch (childNode.Name) {
++					case "mesh":
++						ReadMesh(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadMesh(XmlNode node) {
++			// First try to read submesh names
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "submeshnames":
++						ReadSubmeshNames(childNode);
++						break;
++					default:
++						break;
++				}
++			}
++			// Next read submeshes and skeleton link
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "submeshes":
++						ReadSubmeshes(childNode);
++						break;
++					case "skeletonlink":
++						ReadSkeletonLink(childNode);
++						break;
++					case "submeshnames":
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadSubmeshes(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "submesh":
++						ReadSubmesh(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadSkeletonLink(XmlNode node) {
++			foreach (XmlAttribute attr in node.Attributes) {
++				switch (attr.Name) {
++					case "name":
++						mesh.SkeletonName = attr.Value;
++						break;
++					default:
++						DebugMessage(node, attr);
++						break;
++				}
++			}
++		}
++
++		protected void ReadSubmeshNames(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "submeshname":
++						ReadSubmeshName(childNode);
++						break;
++					default:
++						DebugMessage(node);
++						break;
++				}
++			}
++		}
++
++		protected void ReadSubmesh(XmlNode node) {
++			if (!submeshNames.ContainsKey(subMeshAutoNumber))
++				submeshNames[subMeshAutoNumber] = "SubMesh" + subMeshAutoNumber;
++			string submeshName = submeshNames[subMeshAutoNumber];
++			subMeshAutoNumber++;
++			ReadSubmesh(node, submeshName);
++		}
++
++		protected void ReadSubmesh(XmlNode node, string subMeshName) {
++			SubMesh subMesh = mesh.CreateSubMesh(subMeshName);
++
++			Trace.TraceInformation("Parsing submesh: " + subMeshName);
++			Trace.Flush();
++
++			// does this use 32 bit index buffer
++			IndexType indexType = IndexType.Size16;
++			subMesh.useSharedVertices = false;
++
++			foreach (XmlAttribute attr in node.Attributes) {
++				switch (attr.Name) {
++					case "material":
++						subMesh.MaterialName = attr.Value;
++						break;
++					case "usesharedvertices":
++						// use shared vertices?
++						if (attr.Value == "true")
++							subMesh.useSharedVertices = true;
++						break;
++					case "use32bitindexes":
++						if (attr.Value == "true")
++							indexType = IndexType.Size32;
++						break;
++					default:
++						DebugMessage(node, attr);
++						break;
++				}
++			}
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "faces":
++						ReadFaces(childNode, subMesh, indexType);
++						break;
++					case "geometry":
++						ReadGeometry(childNode, subMesh);
++						break;
++					case "boneassignments":
++						ReadBoneAssignments(childNode, subMesh);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++			Trace.TraceInformation("Parsed submesh: " + subMeshName);
++			Trace.Flush();
++		}
++
++		protected void ReadSubmeshName(XmlNode node) {
++			int index = int.Parse(node.Attributes["index"].Value);
++			submeshNames[index] = node.Attributes["name"].Value;
++		}
++
++		protected void ReadFaces(XmlNode node, SubMesh subMesh, IndexType indexType) {
++			int faceCount = int.Parse(node.Attributes["count"].Value);
++
++			int faceIndex = 0;
++			int[,] data = new int[faceCount, 3];
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "face":
++						ReadFace(childNode, data, faceIndex++);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++
++			int count = data.GetLength(1);
++			subMesh.indexData.indexStart = 0;
++			subMesh.indexData.indexCount = data.GetLength(0) * data.GetLength(1);
++
++			HardwareIndexBuffer idxBuffer = null;
++
++			// create the index buffer
++			idxBuffer =
++				HardwareBufferManager.Instance.
++				CreateIndexBuffer(
++				indexType,
++				subMesh.indexData.indexCount,
++				mesh.IndexBufferUsage,
++				mesh.UseIndexShadowBuffer);
++
++			IntPtr indices = idxBuffer.Lock(BufferLocking.Discard);
++
++			if (indexType == IndexType.Size32) {
++				// read the ints into the buffer data
++				unsafe {
++					int* pInts = (int*)indices.ToPointer();
++					for (int i = 0; i < faceCount; ++i)
++						for (int j = 0; j < count; ++j)
++							pInts[i * count + j] = data[i, j];
++				}
++			} else {
++				// read the shorts into the buffer data
++				unsafe {
++					short* pShorts = (short*)indices.ToPointer();
++					for (int i = 0; i < faceCount; ++i)
++						for (int j = 0; j < count; ++j)
++							pShorts[i * count + j] = (short)data[i, j];
++				}
++			}
++			// unlock the buffer to commit
++			idxBuffer.Unlock();
++
++			// save the index buffer
++			subMesh.indexData.indexBuffer = idxBuffer;
++		}
++
++		protected void ReadGeometry(XmlNode node, SubMesh subMesh) {
++			if (subMesh.useSharedVertices)
++				throw new Exception("I don't support shared vertices");
++			
++			VertexData vertexData = new VertexData();
++			subMesh.vertexData = vertexData;
++
++			vertexData.vertexStart = 0;
++			vertexData.vertexCount = int.Parse(node.Attributes["vertexcount"].Value);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "vertexbuffer":
++						ReadVertexBuffer(childNode, subMesh.vertexData);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadBoneAssignments(XmlNode node, SubMesh subMesh) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "vertexboneassignment":
++						ReadVertexBoneAssigment(childNode, subMesh);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadFace(XmlNode node, int[,] buffer, int faceIndex) {
++			buffer[faceIndex, 0] = int.Parse(node.Attributes["v1"].Value);
++			buffer[faceIndex, 1] = int.Parse(node.Attributes["v2"].Value);
++			buffer[faceIndex, 2] = int.Parse(node.Attributes["v3"].Value);
++		}
++
++		protected void ReadVertexBuffer(XmlNode node, VertexData vertexData) {
++			bool positions = false;
++			bool normals = false;
++			bool colours_diffuse = false;
++			int texture_coords = 0;
++			short bindIdx = 0;
++
++			foreach (XmlAttribute attr in node.Attributes) {
++				switch (attr.Name) {
++					case "positions":
++						if (attr.Value == "true")
++							positions = true;
++						break;
++					case "normals":
++						if (attr.Value == "true")
++							normals = true;
++						break;
++					case "colours_diffuse":
++						if (attr.Value == "true")
++							colours_diffuse = true;
++						break;
++					case "texture_coords":
++						texture_coords = int.Parse(attr.Value);
++						break;
++					default:
++						DebugMessage(node, attr);
++						break;
++				}
++			}
++
++			float[,] positionData = new float[vertexData.vertexCount, 3];
++			float[,] normalData = new float[vertexData.vertexCount, 3];
++			float[][,] multiTexData = new float[texture_coords][,];
++			for (int i = 0; i < texture_coords; ++i)
++				multiTexData[i] = new float[vertexData.vertexCount, 2];
++
++			int vertexIndex = 0;
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "vertex":
++						ReadVertex(childNode, positionData, normalData, multiTexData, vertexIndex++);
++						break;
++					case "colours_diffuse":
++						// TODO
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++
++			if (positions)
++				AllocateBuffer(vertexData, VertexElementType.Float3,
++							   VertexElementSemantic.Position, bindIdx++, 0, positionData);
++			if (normals)
++				AllocateBuffer(vertexData, VertexElementType.Float3, 
++							   VertexElementSemantic.Normal, bindIdx++, 0, normalData);
++//			if (colours_diffuse)
++//				AllocateBuffer(vertexData, 
++//							   VertexElementSemantic.Diffuse, bindIdx++, 0, colorData);
++			for (int i = 0; i < texture_coords; ++i)
++				AllocateBuffer(vertexData,
++							   VertexElement.MultiplyTypeCount(VertexElementType.Float1, 2),
++							   VertexElementSemantic.TexCoords, bindIdx++, i, multiTexData[i]);
++
++		}
++
++		private void AllocateBuffer(VertexData vertexData, VertexElementType type, 
++									VertexElementSemantic semantic,
++									short bindIdx, int index, float[,] data)
++		{
++			// vertex buffers
++			vertexData.vertexDeclaration.AddElement(bindIdx, 0, type, semantic, index);
++			HardwareVertexBuffer vBuffer = HardwareBufferManager.Instance.
++				CreateVertexBuffer(vertexData.vertexDeclaration.GetVertexSize(bindIdx),
++				vertexData.vertexCount, mesh.VertexBufferUsage, mesh.UseVertexShadowBuffer);
++
++			int count = data.GetLength(1);
++			IntPtr bufData = vBuffer.Lock(BufferLocking.Discard);
++
++			unsafe {
++				float* pFloats = (float*)bufData.ToPointer();
++				for (int i = 0; i < vertexData.vertexCount; ++i)
++					for (int j = 0; j < count; ++j)
++						pFloats[i * count + j] = data[i, j];
++			}
++
++			// unlock the buffer
++			vBuffer.Unlock();
++
++			// bind the position data
++			vertexData.vertexBufferBinding.SetBinding(bindIdx, vBuffer);
++		}
++
++		protected void ReadVertexBoneAssigment(XmlNode node, SubMesh subMesh) {
++			VertexBoneAssignment assignment = new VertexBoneAssignment();
++
++			// read the data from the file
++			assignment.vertexIndex = int.Parse(node.Attributes["vertexindex"].Value);
++			assignment.boneIndex = ushort.Parse(node.Attributes["boneindex"].Value); ;
++			assignment.weight = float.Parse(node.Attributes["weight"].Value); ;
++
++			// add the assignment to the mesh
++			subMesh.AddBoneAssignment(ref assignment);
++		}
++
++		protected void ReadVertex(XmlNode node, float[,] positionData, 
++								  float[,] normalData, float[][,] multiTexData,
++								  int vertexIndex)
++		{
++			int textureIndex = 0;
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "position":
++						ReadPosition(childNode, positionData, vertexIndex);
++						break;
++					case "normal":
++						ReadNormal(childNode, normalData, vertexIndex);
++						break;
++					case "colour_diffuse":
++						// ReadColorDiffuse(childNode);
++						// TODO -- add support for this?
++						break;
++					case "texcoord":
++						ReadTexCoord(childNode, multiTexData[textureIndex++], vertexIndex);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadPosition(XmlNode node, float[,] buffer, int vertexIndex) {
++			buffer[vertexIndex, 0] = float.Parse(node.Attributes["x"].Value);
++			buffer[vertexIndex, 1] = float.Parse(node.Attributes["y"].Value);
++			buffer[vertexIndex, 2] = float.Parse(node.Attributes["z"].Value);
++		}
++
++		protected void ReadNormal(XmlNode node, float[,] buffer, int vertexIndex) {
++			buffer[vertexIndex, 0] = float.Parse(node.Attributes["x"].Value);
++			buffer[vertexIndex, 1] = float.Parse(node.Attributes["y"].Value);
++			buffer[vertexIndex, 2] = float.Parse(node.Attributes["z"].Value);
++		}
++
++//		protected void ReadColorDiffuse(XmlNode node) {
++//			foreach (XmlAttribute attr in node.Attributes) {
++//				switch (attr.Name) {
++//					case "value":
++//						// TODO
++//						break;
++//					default:
++//						DebugMessage(node, attr);
++//						break;
++//				}
++//			}
++//		}
++
++		protected void ReadTexCoord(XmlNode node, float[,] buffer, int vertexIndex) {
++			buffer[vertexIndex, 0] = float.Parse(node.Attributes["u"].Value);
++			buffer[vertexIndex, 1] = float.Parse(node.Attributes["v"].Value);
++		}
++
++		protected void DebugMessage(XmlNode node) {
++			Trace.TraceWarning("Unhandled node type: " + node.Name +
++							   " with parent of " + node.ParentNode.Name);
++		}
++
++		protected void DebugMessage(XmlNode node, XmlAttribute attr) {
++			Trace.TraceWarning("Unhandled node attribute: " + attr.Name +
++							   " with parent node of " + node.Name);
++		}
++
++		#endregion
++
++		#region Properties
++
++		#endregion
++	}
++}
+diff -Naur Axiom.cvs/Engine/Serialization/OgreXmlSkeletonReader.cs Axiom/Engine/Serialization/OgreXmlSkeletonReader.cs
+--- Axiom.cvs/Engine/Serialization/OgreXmlSkeletonReader.cs	1969-12-31 16:00:00.000000000 -0800
++++ Axiom/Engine/Serialization/OgreXmlSkeletonReader.cs	2004-11-14 17:04:06.000000000 -0800
+@@ -0,0 +1,292 @@
++using System;
++using System.Diagnostics;
++using System.IO;
++using System.Text;
++using System.Xml;
++using Axiom.Animating;
++using Axiom.Core;
++using Axiom.MathLib;
++using Axiom.Graphics;
++
++namespace Axiom.Serialization {
++    /// <summary>
++    /// 	Summary description for OgreXmlSkeletonReader.
++    /// </summary>
++    public class OgreXmlSkeletonReader {
++        #region Member variables
++		
++        private Skeleton skeleton;
++		protected Stream stream;
++
++		#endregion
++		
++        #region Constructors
++		
++        public OgreXmlSkeletonReader(Stream data) {
++			stream = data;
++        }
++		
++        #endregion
++		
++        #region Methods
++
++		protected void DebugMessage(XmlNode node) {
++			Trace.TraceWarning("Unhandled node type: " + node.Name +
++							   " with parent of " + node.ParentNode.Name);
++			Debug.Assert(false, "ack");
++		}
++
++		protected void DebugMessage(XmlNode node, XmlAttribute attr) {
++			Trace.TraceWarning("Unhandled node attribute: " + attr.Name +
++							   " with parent node of " + node.Name);
++		}
++
++        public void Import(Skeleton skeleton) {
++			// store a local reference to the skeleton for modification
++			this.skeleton = skeleton;
++
++			XmlDocument document = new XmlDocument();
++			document.Load(stream);
++			foreach (XmlNode childNode in document.ChildNodes) {
++				switch (childNode.Name) {
++					case "skeleton":
++						ReadSkeleton(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++			skeleton.SetBindingPose();
++		}
++
++        /// <summary>
++        ///    Reads bone information from the file.
++        /// </summary>
++		protected void ReadSkeleton(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "bones":
++						ReadBones(childNode);
++						break;
++					case "bonehierarchy":
++						ReadBoneHierarchy(childNode);
++						break;
++					case "animations":
++						ReadAnimations(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadBones(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "bone":
++						ReadBone(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadBoneHierarchy(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "boneparent":
++						ReadBoneParent(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadAnimations(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "animation":
++						ReadAnimation(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		/// <summary>
++        ///    Reads bone information from the file.
++        /// </summary>
++        protected void ReadBone(XmlNode node) {
++            // bone name
++			string name = node.Attributes["name"].Value;
++			ushort handle = ushort.Parse(node.Attributes["id"].Value);
++
++            // create a new bone
++            Bone bone = skeleton.CreateBone(name, handle);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "position":
++						ReadPosition(childNode, bone);
++						break;
++					case "rotation":
++						ReadRotation(childNode, bone);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++        /// <summary>
++        ///    Reads bone parent information from the file.
++        /// </summary>
++		protected void ReadBoneParent(XmlNode node) {
++			string childName = node.Attributes["bone"].Value;
++			string parentName = node.Attributes["parent"].Value;
++			// get references to father and son bones
++			Bone child = skeleton.GetBone(childName);
++			Bone parent = skeleton.GetBone(parentName);
++			// attach the child to the parent
++			parent.AddChild(child);
++		}
++
++		protected void ReadAnimation(XmlNode node) {
++			string name = node.Attributes["name"].Value;
++			float length = float.Parse(node.Attributes["length"].Value);
++			// create an animation from the skeleton
++			Animation anim = skeleton.CreateAnimation(name, length);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "tracks":
++						ReadTracks(childNode, anim);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected Vector3 ReadVector3(XmlNode node) {
++			Vector3 vec;
++			vec.x = float.Parse(node.Attributes["x"].Value);
++			vec.y = float.Parse(node.Attributes["y"].Value);
++			vec.z = float.Parse(node.Attributes["z"].Value);
++			return vec;
++		}
++
++		protected void ReadPosition(XmlNode node, Bone bone) {
++			bone.Position = ReadVector3(node);
++		}
++
++		protected void ReadRotation(XmlNode node, Bone bone) {
++			float angle = float.Parse(node.Attributes["angle"].Value);
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "axis":
++						Vector3 axis = ReadVector3(childNode);
++						bone.Orientation = Quaternion.FromAngleAxis(angle, axis);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadTracks(XmlNode node, Animation anim) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "track":
++						ReadTrack(childNode, anim);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadTrack(XmlNode node, Animation anim) {
++			string boneName = node.Attributes["bone"].Value;
++			// get a reference to the target bone
++			Bone targetBone = skeleton.GetBone(boneName);
++			// create an animation track for this bone
++			AnimationTrack track = anim.CreateTrack((short)targetBone.Handle, targetBone);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "keyframes":
++						ReadKeyFrames(childNode, track);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadKeyFrames(XmlNode node, AnimationTrack track) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "keyframe":
++						ReadKeyFrame(childNode, track);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadKeyFrame(XmlNode node, AnimationTrack track) {
++			float time = float.Parse(node.Attributes["time"].Value);
++			// create a new keyframe with the specified length
++			KeyFrame keyFrame = track.CreateKeyFrame(time);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "translate":
++						keyFrame.Translate = ReadVector3(childNode);
++						break;
++					case "rotate":
++						ReadRotate(childNode, keyFrame);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadRotate(XmlNode node, KeyFrame keyFrame) {
++			float angle = float.Parse(node.Attributes["angle"].Value);
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "axis":
++						Vector3 axis = ReadVector3(childNode);
++						keyFrame.Rotation = Quaternion.FromAngleAxis(angle, axis);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++
++        #endregion Methods
++    }
++}
++
+diff -Naur Axiom.cvs/RenderSystems/DirectX9/D3DWindow.cs Axiom/RenderSystems/DirectX9/D3DWindow.cs
+--- Axiom.cvs/RenderSystems/DirectX9/D3DWindow.cs	2004-11-14 17:03:24.437500000 -0800
++++ Axiom/RenderSystems/DirectX9/D3DWindow.cs	2004-11-14 17:03:42.140625000 -0800
+@@ -283,7 +283,7 @@
+ 			// CMH - End
+ 
+ 			// save the surface to disk
+-			SurfaceLoader.Save(file, ImageFileFormat.Jpg, surface);
++			SurfaceLoader.Save(file, ImageFileFormat.Png, surface);
+ 
+ 			// dispose of the surface
+ 			surface.Dispose();
+diff -Naur Axiom.cvs/SceneManagers/Octree/OctreeCamera.cs Axiom/SceneManagers/Octree/OctreeCamera.cs
+--- Axiom.cvs/SceneManagers/Octree/OctreeCamera.cs	2004-11-14 17:03:25.125000000 -0800
++++ Axiom/SceneManagers/Octree/OctreeCamera.cs	2004-11-14 17:03:42.140625000 -0800
+@@ -29,11 +29,11 @@
+ using Axiom;
+ using Axiom.Core;
+ using Axiom.MathLib;
+-using Axiom.Physics;
++// using Axiom.Physics;
+ using Axiom.Scripting;
+ using Axiom.Utility;
+ using Axiom.ParticleSystems;
+-using Axiom.Gui;
++// using Axiom.Gui;
+ using Axiom.Input;
+ using Axiom.Graphics;
+ using Axiom.Collections;
+diff -Naur Axiom.cvs/SceneManagers/Octree/OctreePlugin.cs Axiom/SceneManagers/Octree/OctreePlugin.cs
+--- Axiom.cvs/SceneManagers/Octree/OctreePlugin.cs	2004-11-14 17:03:25.203125000 -0800
++++ Axiom/SceneManagers/Octree/OctreePlugin.cs	2004-11-14 17:03:42.156250000 -0800
+@@ -32,7 +32,7 @@
+ 	public class OctreePlugin : IPlugin { 
+ 		public void Start() { 
+ 			//Engine.Instance.SceneManagers[SceneType.Generic] = new OctreeSceneManager(); 
+-            Engine.Instance.SceneManagers[SceneType.ExteriorClose] = new TerrainSceneManager();
++            Root.Instance.SceneManagers[SceneType.ExteriorClose] = new TerrainSceneManager();
+ 		} 
+ 
+ 		public void Stop() { 

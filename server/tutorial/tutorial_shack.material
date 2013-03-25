@@ -1,0 +1,53 @@
+material tutorial_shack.shack_mat
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  1.00000 1.00000 1.00000 1.00000
+            specular 0.00784 0.00784 0.00784 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+            texture_unit
+            {
+                texture tutorial_shack_texture.dds
+                tex_coord_set 0
+            }
+        }
+    }
+}
+material tutorial_shack.scene_material
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.30000 0.30000 0.30000 1.00000
+            diffuse  0.70000 0.70000 0.70000 1.00000
+            specular 1.00000 1.00000 1.00000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+        }
+    }
+}
+material tutorial_shack.collision_volume_lambert
+{
+    technique
+    {
+        pass
+        {
+            shading phong
+
+            ambient  0.58824 0.58824 0.58824 1.00000
+            diffuse  0.58824 0.58824 0.58824 1.00000
+            specular 0.90000 0.90000 0.90000 1.00000 1.00000
+            emissive 0.00000 0.00000 0.00000 1.00000
+
+        }
+    }
+}

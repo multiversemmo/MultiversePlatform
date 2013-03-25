@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="mv_social" Version="2">
+  <CameraPosition x="2803377" y="211340" z="670888.6" />
+  <CameraOrientation x="0.09330165" y="-0.5626806" z="-0.06410967" w="-0.8188881" />
+  <Terrain>
+    <algorithm>HybridMultifractalWithFloor</algorithm>
+    <xOffset>0</xOffset>
+    <yOffset>0</yOffset>
+    <zOffset>0</zOffset>
+    <h>0.25</h>
+    <lacunarity>2</lacunarity>
+    <octaves>2</octaves>
+    <metersPerPerlinUnit>500</metersPerPerlinUnit>
+    <heightScale>40</heightScale>
+    <heightOffset>1</heightOffset>
+    <fractalOffset>0.7</fractalOffset>
+    <heightFloor>71</heightFloor>
+  </Terrain>
+  <TerrainDisplay Type="AutoSplat" UseParams="True" UseGeneratedShadeMask="True" TextureTileSize="5" SandToGrassHeight="50000" GrassToRockHeight="250000" RockToSnowHeight="450000" SandTextureName="splatting_sand.dds" GrassTextureName="splatting_grass.dds" RockTextureName="splatting_rock.dds" SnowTextureName="splatting_snow.dds" ShadeMaskTextureName="" />
+  <Ocean DisplayOcean="True" UseParams="True" WaveHeight="1000" SeaLevel="10000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <Skybox Name="Multiverse/d2w_skyBox" />
+  <GlobalFog Far="400000" Near="9000">
+    <Color R="0.3686275" G="0.4431373" B="0.5764706" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.5529412" G="0.6235294" B="0.6784314" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="64" Zenith="-52">
+    <Direction x="-0.5533528" y="-0.7880108" z="-0.2698882" />
+    <Diffuse R="0.3803922" G="0.3803922" B="0.5372549" />
+    <Specular R="0.6705883" G="0.6078432" B="0.7019608" />
+  </GlobalDirectionalLight>
+  <WorldCollection Name="main" Filename="mv_social-main.mwc" />
+  <WorldCollection Name="meeting hall" Filename="mv_social-meeting hall.mwc" />
+  <WorldCollection Name="fog areas" Filename="mv_social-fog areas.mwc" />
+  <WorldCollection Name="regional_trees" Filename="mv_social-regional_trees.mwc" />
+  <WorldCollection Name="main_area_particle" Filename="mv_social-main_area_particle.mwc" />
+  <WorldCollection Name="surround_forest_01" Filename="mv_social-surround_forest_01.mwc" />
+  <WorldCollection Name="fountain_particle_02" Filename="mv_social-fountain_particle_02.mwc" />
+  <WorldCollection Name="main_roads" Filename="mv_social-main_roads.mwc" />
+  <WorldCollection Name="main_sound_areas" Filename="mv_social-main_sound_areas.mwc" />
+  <WorldCollection Name="gazebo point lights" Filename="mv_social-gazebo point lights.mwc" />
+  <WorldCollection Name="int_lit_path_points" Filename="mv_social-int_lit_path_points.mwc" />
+  <WorldCollection Name="groups" Filename="mv_social-groups.mwc" />
+</World>

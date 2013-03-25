@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="Baptina Oswalds house" Mesh="human_house_stilt_a.mesh" TerrainOffest="0.03125" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="19.0919" Zenith="90">
+    <Position x="-219895" y="165136.1" z="107292.7" />
+    <Scale x="0.9549795" y="0.9549795" z="0.9549795" />
+    <Orientation x="0" y="0.1658386" z="0" w="0.9861529" />
+    <SubMeshes>
+      <SubMeshInfo Name="polymshShape-lib.0/lambert2" MaterialName="human_house_stilt_a.lambert2" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.7/cylinder3_Scene_Material9" MaterialName="human_house_stilt_a.cylinder3_Scene_Material9" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.8/cylinder2_Scene_Material10" MaterialName="human_house_stilt_a.cylinder2_Scene_Material10" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.9/cylinder19_Scene_Material25" MaterialName="human_house_stilt_a.cylinder19_Scene_Material25" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.10/cylinder18_Scene_Material24" MaterialName="human_house_stilt_a.cylinder18_Scene_Material24" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.11/cylinder12_Scene_Material11" MaterialName="human_house_stilt_a.cylinder12_Scene_Material11" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.12/cylinder6_Scene_Material7" MaterialName="human_house_stilt_a.cylinder6_Scene_Material7" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.13/cylinder10_Scene_Material12" MaterialName="human_house_stilt_a.cylinder10_Scene_Material12" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.14/cylinder11_Scene_Material13" MaterialName="human_house_stilt_a.cylinder11_Scene_Material13" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.15/cylinder7_Scene_Material14" MaterialName="human_house_stilt_a.cylinder7_Scene_Material14" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.16/cylinder8_Scene_Material16" MaterialName="human_house_stilt_a.cylinder8_Scene_Material16" Show="True" />
+      <SubMeshInfo Name="polymsh_extracted1Shape-lib.0/lambert3" MaterialName="human_house_stilt_a.lambert3" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.17/cylinder9_Scene_Material15" MaterialName="human_house_stilt_a.cylinder9_Scene_Material15" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.18/cylinder16_Scene_Material20" MaterialName="human_house_stilt_a.cylinder16_Scene_Material20" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.19/cylinder17_Scene_Material21" MaterialName="human_house_stilt_a.cylinder17_Scene_Material21" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.20/cylinder15_Scene_Material22" MaterialName="human_house_stilt_a.cylinder15_Scene_Material22" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.21/cylinder14_Scene_Material23" MaterialName="human_house_stilt_a.cylinder14_Scene_Material23" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.22/cylinder13_Scene_Material19" MaterialName="human_house_stilt_a.cylinder13_Scene_Material19" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.23/cylinder24_Scene_Material18" MaterialName="human_house_stilt_a.cylinder24_Scene_Material18" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.24/cylinder23_Scene_Material17" MaterialName="human_house_stilt_a.cylinder23_Scene_Material17" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.0/cylinder_Scene_Material4" MaterialName="human_house_stilt_a.cylinder_Scene_Material4" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.1/cylinder20_Scene_Material26" MaterialName="human_house_stilt_a.cylinder20_Scene_Material26" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.2/cylinder21_Scene_Material27" MaterialName="human_house_stilt_a.cylinder21_Scene_Material27" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.3/cylinder22_Scene_Material28" MaterialName="human_house_stilt_a.cylinder22_Scene_Material28" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.4/cylinder1_Scene_Material5" MaterialName="human_house_stilt_a.cylinder1_Scene_Material5" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.5/cylinder4_Scene_Material6" MaterialName="human_house_stilt_a.cylinder4_Scene_Material6" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.6/cylinder5_Scene_Material8" MaterialName="human_house_stilt_a.cylinder5_Scene_Material8" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Boundary Name="Baptina's Apple Orchard" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="-198848.8" y="167010.7" z="76820.77" />
+      <Point WorldViewSelect="True" x="-258657.8" y="158346.4" z="77820.77" />
+      <Point WorldViewSelect="True" x="-241260.3" y="159067" z="36708.47" />
+      <Point WorldViewSelect="True" x="-202475.1" y="164313.2" z="29820.77" />
+    </PointCollection>
+    <Forest Name="Forest" Filename="demoWind.ini" WindSpeed="0.3" Seed="0">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Red Delicious Apple - Apples" Filename="RDApple_RT_Apples.tre" Scale="10000" ScaleVariance="1000" Instances="300" />
+    </Forest>
+  </Boundary>
+</WorldObjectCollection>

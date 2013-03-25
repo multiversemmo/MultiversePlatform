@@ -1,0 +1,201 @@
+/* Reset and base font: base font = Arial 11px/1.22em, #555555 (scale: 10px = 90%; 12px = 109%; 14px = 127%; 16px = 145%) */
+body,div,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,th,td {margin:0;padding:0;} table {border-collapse:collapse;border-spacing:0;} fieldset,img {border:0;} ol,ul {list-style:none;} h1,h2,h3,h4,h5,h6 {font-size:100%;} 
+body {color:#555555;font:11px arial,helvetica,sans-serif;} table {font-size:inherit;font:100%;} select,input,textarea {font:99% arial,helvetica,sans-serif;} /*body * {line-height:1.22em;}*/ *img {vertical-align:bottom;}
+
+/* Default link styles */
+a:link, a:visited, a:active, a:hover { text-decoration: none; color: #17728F; }
+a:hover { text-decoration: underline; color: #17728F; }
+a.action:link, a.action:visited, a.action:hover, a.action:active { color: #FF4400; }
+
+/* Default header styles */
+h1 { width: auto; font-size: 109%; color: #17728F; }
+h2 { width: auto; font-size: 109%; color: #17728F; }
+
+/* Utility styles */
+p { margin-bottom: 10px; }
+.inlinert { display: inline; margin-left: 5px; }
+.inlinelt { display: inline; margin-right: 5px; }
+.clearLeftNoHeight { clear: left; font-size: 0px; line-height: 0px; margin: 0px; padding: 0px; }
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+  /* fixie \*/* html .clearfix { height: 1%; }/**/
+.center { text-align: center; }
+.strong { font-weight: bold; }
+.normal { font-weight: normal; }
+.right { float: right; display: inline; }
+.left { float: right; display: inline; }
+.shim, .shim td { font-size: 0px; }
+.disabled, a.disabled { color: #999999; }
+.fakeLink { cursor: pointer; }
+
+/* Page layouts */
+/* body { z-index: 0; text-align: center; }
+#shimrow { height: 10px; }
+/* table#flo_wrapper { margin: 0 auto 10px auto; z-index: 0; }
+table#flo1t { margin: 10px 25px; z-index: 1; }
+table#flo1t td.ltd { z-index: 2; }
+table#flo1t td.rtd { z-index: 3; }
+table#flo1t td.ctd { z-index: 4; }
+
+/* Photo/Data layouts */
+/* 2 column layouts */
+td.itd { text-align: center; vertical-align: top; }
+td.dtd { padding-left: 10px; }
+td.fullwidth { width: 100% }
+/* grid layouts */
+.flogrid75, .flogridp { zoom: 1; }
+.flogrid75:after, .flogridp:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.flogrid75, .flogrid50 { margin-right: -17px; margin-left: 5px; }
+.flogridp { margin-right: -13px; margin-left: 8px; }
+.flogriditem { float: left; display: inline; margin-right: 17px; margin-bottom: 10px; }
+.flogridp .flogriditem { margin-right: 13px; width: 101px; overflow: hidden;}
+.photoitem { height: 87px; background: url(http://images.friendster.com/images/pf.gif) no-repeat; }
+.albumitem { height: auto; background: url(http://images.friendster.com/images/albums/albumThumbBgSmall.png) no-repeat; }
+.flogrid75 .flogriditem { width: 75px; }
+.ir { background: none; text-align: center; overflow: hidden; }
+.dr { text-align: center; background: #E6F1F3; padding: 3px 0; border-top: 1px solid #FFFFFF; white-space: nowrap;}
+.flogridp .ir { width: auto; margin: 2px 0 0 0; overflow: hidden; } 
+.flogridp .ir a { width: 99px; display: block; text-align: center; }
+.flogridp .ir img { margin: 5px auto auto auto; height: 55px; border: 1px solid #c5c5c5; } 
+.flogridp ul#album-details { text-align: center; margin: 10px 0 0 0; padding: 0; }
+.flogridp ul#album-details li { width: 101px; overflow: hidden; }
+.flogrid75 .ir { width: 75px; height: 75px; }
+.flogrid75 .ir img { margin: 0 auto; height: 75px; }
+/* square photo blocks */
+.imgblock200 { width: 200px; background: #FFFFFF; border: 1px solid #76B5C6; text-align: center; margin-bottom: 5px; }
+.imgblock200 img { margin: 0 auto; }
+.imgblock160 { width: 160px; height: 160px; background: #FFFFFF; overflow: hidden; }
+.imgblock160 img { height: 160px; margin: 0 auto; }
+.imgblock75 { width: 75px; height: 75px; background: #FFFFFF; overflow: hidden; }
+.imgblock75 img { height: 75px; margin: 0 auto; }
+
+/* Buttons */
+.buttonRow a, .buttonList a, a.greenButton, a.dkBlueButton, a.dkRedButton { white-space: nowrap; border: 1px solid #8BB716; background: #E8F1D0; margin: 6px 0; padding: 3px 9px; font-weight: bold; color: #587F02; }
+a.dkBlueButton { color: #086989; background: #B4D2DB; border-color: #086989; }
+a.dkRedButton { color: #990000; background: #F1DDDD; border-color: #990000; }
+ul.buttonRow, ul.buttonList { margin: 6px 0; }
+ul.buttonRow li { display: inline; }
+ul.buttonList li { margin-bottom: 13px; }
+a.bookmarkButton { background: url(http://images.friendster.com/images/bookmark_button.gif) no-repeat 4px 50% #B4D2DB; padding-left: 18px; color: #17728F !important; text-transform: none !important; font-size: 11px; float: right; margin: 1px 1px 0 0; }
+
+/* Data styles */
+ul.data li, ul.entries p { margin-bottom: 3px; }
+ul.questions li { margin-bottom: 10px; }
+ul.entries li { background: url(http://images.friendster.com/images/blue_arrow_rt.gif) no-repeat 0 2px; padding-left: 8px; margin-bottom: 5px; }
+.q, .strong, .title { font-weight: bold; }
+.evenrow { background-color: #F5F5F5; }
+
+/* Commonbox styles */
+.commonbox, .commonbox_noborder { margin-bottom: 10px; background: #e3e3e3; width: auto; }
+/* \*/* html .commonbox { height: 1%; } /* */
+.commonbox h1, .commonbox h2 { background-color: #E6F1F3; height: 24px; line-height: 24px; padding-left: 11px; }
+.commonbox .viewall, .commonbox .editlink { padding: 4px 11px; font-weight: bold; }
+.commonbox .editlink { float: right; }
+.boxcontent, .fitem1wrapper { padding: 6px 11px; }
+.standalonebox .boxcontent { padding: 0px !important; margin-bottom: 10px !important;}
+
+/* Notificationbox styles */
+.statusmessagebox { border: 1px solid #D7D7D7; background: none; padding: 3px; margin: 0 0 10px 0 !important; }
+.errorbox, .notificationbox, .confirmbox { position: relative; background-color: #F0F0F0 !important; padding: 10px 10px 10px 42px; }
+.errorbox { background: url(http://images.friendster.com/images/msg_error.gif) 5px center no-repeat; }
+.notificationbox { background: url(http://images.friendster.com/images/msg_check.gif) 5px center no-repeat; }
+.confirmbox { background: url(http://images.friendster.com/images/msg_info.gif) 5px center no-repeat; }  
+.errorbox h2, .notificationbox h2, .confirmbox h2 { padding: 0; line-height: 18px; font-size: 140%; }
+.errorbox h2 { color: #EB0000; }
+.notificationbox h2 { color: #2B8902; }
+.confirmbox h2 { color: #0477AB; }
+.errorbox .boxcontent, .notificationbox .boxcontent, .confirmbox .boxcontent { padding: 5px 0 5px 0; font-size: 110%; }
+.confirmbox span.buttonBox { padding-left: 10px; }
+.confirmbox span.buttonBox a { font-size: 95%; }  
+.confirmbox div.buttonBox { margin: 7px 0 0 0; }
+
+/* - - END NOTIFICATION AND STATUS BOXES - - */
+
+/* MODULE: control panel */
+.controlpanel td { vertical-align:top; }
+.controlpanel ul.data, .minicontrolpanel ul.data { font-weight: bold; margin-bottom: 15px; }
+.controlpanel ul.data li, .minicontrolpanel ul.data li { margin-bottom: 5px; }
+.controlpanel a.more, .minicontrolpanel a.more { font-weight: bold; background: url(http://images.friendster.com/images/blue_arrow_rt.gif) no-repeat 0 50%; padding-left: 8px; margin-top: -5px; }
+.controlpanel .so, .minicontrolpanel .so { margin: 0 -20px 10px 0; width: 257px; position: relative; background:url(http://images.friendster.com/images/sot.gif) repeat-y top left; color: #17728F; font-weight: bold; }
+.controlpanel .so a, .minicontrolpanel .so a { color: #FF4400; }
+.controlpanel .so div#cpShoutoutBox, .controlpanel .so div#cpShoutoutEditBox, .minicontrolpanel .so div#cpShoutoutBox, .minicontrolpanel .so div#cpShoutoutEditBox { padding: 7px 7px 5px 7px; margin: 0; }
+.controlpanel .so div#cpShoutoutEditBox, .minicontrolpanel .so div#cpShoutoutEditBox { display: none; }
+.controlpanel .sol, .minicontrolpanel .sol { position: absolute; left: -5px; top: 8px; width: 6px; height: 11px; background:url(http://images.friendster.com/images/sol.gif) no-repeat; }
+.controlpanel .sob, .minicontrolpanel .sob { width: 257px; height: 2px; background:url(http://images.friendster.com/images/sob.gif) no-repeat; line-height: 0; font-size: 0; }
+.controlpanel .label, .minicontrolpanel .label { text-align: left; font-weight: bold; margin: 10px 0 3px 0; color: #17728F; }
+.miniControlPanelPhotoFrame { width: 230px !important; width: 270px; padding: 10px; border-left: 1px solid #CCC; border-top: 1px solid #CCC; border-right: 2px solid #666; border-bottom: 2px solid #666; text-align: center; margin: auto; background-color: white !important;}
+#miniControlPanelButtons { width: 90px; padding-right: 2px;}
+#miniControlPanelButtons li { display: inline; }
+#miniControlPanelButtons a, #miniControlPanelButtons a:link, #miniControlPanelButtons a:visited { width: 88px; text-align: center; float:left; display: inline; background: #D1E6E9; border: 1px solid #E6F1F3; margin: 0 -1px -1px 0; padding: 6px 0; }
+#controlPanelButtons a:hover { color: #FFFFFF; background: #17728F; }
+#controlPanelButtons { width: 200px; margin-top: 3px; padding-bottom: 1px; }
+#controlPanelButtons li { display: inline; }
+#controlPanelButtons a, #controlPanelButtons a:link, #controlPanelButtons a:visited { width: 98px; height: 25px; text-align: center; float:left; display: inline; background: #D1E6E9; border: 1px solid #E6F1F3; margin: 0 -1px -1px 0; padding: 3px 0px;}
+*html #controlPanelButtons a, #controlPanelButtons a:link, #controlPanelButtons a:visited  {height: 33px; padding: 3px 0px;}
+#controlPanelButtons a:hover { color: #FFFFFF; background: #17728F; }
+.controlpanel .reportabuse { width: 200px; }
+.controlpanel .reportabuse div { border: 1px solid #e3e3e3; margin-top: 5px; padding: 4px 7px; background: #FFFFFF; color: #333333 !important; text-align: left; }
+.controlpanel .reportabuse div a { color: red !important; }
+.badge { background: #FFFFFF; }
+.warning { font-size: 145%; font-weight: bold; color: #993330; display: block; }
+
+/* MODULE: blogs */
+.blogs { float: none !important; }
+.fanof { float: none !important; }
+
+/* MODULE: friends */
+.friends { float: none !important; }
+
+/* - - NAVBAR FIXES FOR USER - - */
+.globnav_inputbtn { margin-bottom: -7px; }
+#navigation { height: auto !important; }
+#logo img { margin-top: 5px; }
+#subnav { margin-top: 6px; }
+
+/* - - FOOTER - - */
+#footer_container { width: 800px; margin: 0 auto; background: transparent; }
+#footer { font-size: 10px; line-height: 1em; padding: 10px 0; margin: 10px auto; text-align: center; color: #666666; }
+#footer a { color: #666666; }
+
+/* - - SPONSORED LINKS - - */
+#sponsorsAd { background: #FFFFFF !important; border: 1px solid #b8b8b8 !important; position: relative; margin: 0 0 10px 0; }
+.sponsorsAd { padding: 0 0 5px 0; }
+.sponsorsAd h2 { color: #000000 !important; font-size: 93% !important; text-transform: lowercase; font-weight: lighter; margin: 5px 5px 0 5px; padding: 0; }
+.sponsorsAd h3 { font-size: 100%; font-weight: bold; margin: 5px 5px 0 5px; line-height: 100%; }
+.sponsorsAd h3 a { color: #0000FF !important; text-decoration: underline; }
+.sponsorsAd p { font-size: 93%; margin: 0; padding: 0; line-height: 1em; margin: 3px 5px 0 5px; }
+.slfooterGrey a { color: #555555 !important; text-decoration: none; }
+.slfooterGreen a { color: #339933 !important; text-decoration: none; }
+
+/* - - MEET TRAIL - - */
+#meettrail {}
+#meettrail a:hover {text-decoration: none;}
+#meettrail .commonbox h2 {height: 65px; line-height: normal; padding: 1px; }
+#meettrail .commonbox h2 .commonbox {height: 65px; color: #555; padding:0px; margin: 0px;}
+#meettrail .commonbox h2 .commonbox h2 {height: 15px; color: #3779ad; float: left; display: inline; background: none; padding: 2px 0px 0px 10px;}
+#meettrail .viewall {float :right; display: inline; font-size: 12px; padding: 2px 10px 0px;}
+#meettrail .bottom { margin: 5px; text-align: center; font-size: 11px; font-weight: normal;}
+#meettrail .bottom IMG {margin: 0px 10px;}
+*html #meettrail .bottom IMG {margin-bottom: 3px;}
+#meettrail .boldtext {font-weight: bold;}
+#meettrail .nodetails { text-align: center; padding: 5px; }
+#meettrail .badgebg { width:300px; height: 65px; background: url(http://images.friendster.com/images/mt_badge_2.jpg) 0 0 no-repeat; }
+#meettrail .badgebg .badgetext { margin: 0; padding:0; line-height: 65px; letter-spacing: 0.1em; color: #555; font-size: 18px; font-weight: bold; text-align: center; }
+#meettrail a#getyourown { cursor: pointer !important; display: block; }
+#meettrail .getyourown { margin:0; padding: 0 5px 2px 0; text-align: right; vertical-align: top; }
+#meettrail .getyourown a { font-weight: normal; font-size: 1em !important; color: #528BC0 !important; }
+#meettrail .officialprofile { background:transparent url(http://images.friendster.com/images/mt_gradient.gif) repeat-x scroll left top; height:65px;}
+#meettrail .officialprofile td {font-size: 1.5em; font-weight: bold; padding: 10px 5px;} 
+
+.user_tracker {width: 100%; background: white; border: 1px solid #c4c4c4; color:#555555; }
+.user_tracker ul li a, .user_tracker ul li a:link, .user_tracker ul li a:active, .user_tracker ul li a:hover, .user_tracker ul li a:visited {margin-left: 5px; font-weight: bold; color: #17728F; }
+.user_tracker ul li i {margin-left: 5px; color: #555555; }
+
+a:hover { text-decoration: underline; color: #17728F; }
+.featuredModule { background-image: url(http://images.friendster.com/images/star_rtpad.gif) !important; background-repeat: no-repeat; background-position: right;}
+
+
+#widgetModule .moduleTitle {float:left; width:80%}
+#widgetModule .moduleMenu  {float:right; width:15%; text-align: right}
+#widgetModule .moduleMenu IMG {margin: 3px 3px 0 0; padding:1px; border:0;}
+#widgetModule .moduleMenu IMG:hover, #widgetModule .moduleMenu a:hover {background: #fff;}
+#widgetModule .grabLink{margin-right: 5px; padding:0 5px; background: #f5f5f5;}

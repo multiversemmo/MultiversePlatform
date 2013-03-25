@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="streetProps" Mesh="nyts_props.mesh" TerrainOffest="5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="True" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="127070.5" y="20005" z="-320026" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="streetProps-lib.0" MaterialName="nyts_props.streetProps" Show="True" />
+      <SubMeshInfo Name="streetLights-lib.0" MaterialName="nyts_props.streetLights" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <PointLight Name="TS_44_01" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="103198.8" y="26651.29" z="-374254.2" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_44_02" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="1651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="124852.2" y="21651.29" z="-357154.2" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_44_03" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="125782.9" y="24651.29" z="-354154.2" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_44_04" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="91640.05" y="26651.29" z="-360475.2" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <Waypoint Name="glowy_01" TerrainOffset="4820.551" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="144104.5" y="24820.55" z="-344830.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="glowy_02" TerrainOffset="4820.551" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="145205.9" y="24820.55" z="-352964.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="glowy_03" TerrainOffset="4820.551" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="143405.9" y="24820.55" z="-347530" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="glowy_04" TerrainOffset="4820.551" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="147405.9" y="24820.55" z="-355133.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="glowy_05" TerrainOffset="4520.551" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="145305.9" y="24520.55" z="-353790.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+</WorldObjectCollection>

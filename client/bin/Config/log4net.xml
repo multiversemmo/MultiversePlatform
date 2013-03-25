@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+
+    <appender name="RollingFile" type="log4net.Appender.RollingFileAppender">
+        <file value="../Logs/MultiverseClient.log" />
+        <appendToFile value="false" />
+        <maximumFileSize value="100MB" />
+        <maxSizeRollBackups value="2" />
+
+        <layout type="log4net.Layout.PatternLayout">
+            <conversionPattern value="%-5p [%d{ISO8601}] %-20.20c{1} %m%n" />
+        </layout>
+    </appender>
+    
+    <appender name="TraceAppender" type="log4net.Appender.TraceAppender">
+        <layout type="log4net.Layout.PatternLayout">
+            <conversionPattern value="%-5p %m%n" />
+        </layout>
+    </appender>
+
+    <root>
+        <level value="INFO" />
+        <appender-ref ref="RollingFile" />
+        <appender-ref ref="TraceAppender" />
+    </root>
+    <logger name="Network Information">
+        <level value="INFO" />
+    </logger>
+    <logger name="Rdp Connection">
+        <level value="INFO" />
+    </logger>
+</log4net>

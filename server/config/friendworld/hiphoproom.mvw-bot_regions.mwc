@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Boundary Name="bot1" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="98504.05" y="20000" z="-189126.4" />
+      <Point WorldViewSelect="True" x="98460.38" y="20000" z="-196026.4" />
+      <Point WorldViewSelect="True" x="109172.1" y="20000" z="-196118.2" />
+      <Point WorldViewSelect="True" x="109572.1" y="20000" z="-189595" />
+    </PointCollection>
+  </Boundary>
+</WorldObjectCollection>

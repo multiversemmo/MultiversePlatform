@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="perf1" TerrainOffset="166474.5" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="170236.2" y="166474.5" z="-1105392" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="perf2" TerrainOffset="166474.5" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="-38060" y="166474.5" z="-1186327" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="perf3" TerrainOffset="162736.5" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="73511.18" y="162736.5" z="-1346337" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="perf4" TerrainOffset="166474.5" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="66898.34" y="166474.5" z="-1185310" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

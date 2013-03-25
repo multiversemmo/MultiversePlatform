@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="Hip Hop Environment" Mesh="FRW_hiphopEnvironment.mesh" TerrainOffest="300" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="167728.9" y="20300" z="-100000" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="environment_07-lib.0" MaterialName="FRW_hiphopEnvironment.shops" Show="True" />
+      <SubMeshInfo Name="environment_08-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_09-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_10-lib.0" MaterialName="FRW_hiphopEnvironment.apartments" Show="True" />
+      <SubMeshInfo Name="environment_11-lib.0" MaterialName="FRW_hiphopEnvironment.objects" Show="True" />
+      <SubMeshInfo Name="environment_12-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_13-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_14-lib.0" MaterialName="FRW_hiphopEnvironment.clubs" Show="True" />
+      <SubMeshInfo Name="environment_15-lib.0" MaterialName="FRW_hiphopEnvironment.objects" Show="True" />
+      <SubMeshInfo Name="environment_03-lib.0" MaterialName="FRW_hiphopEnvironment.objects" Show="True" />
+      <SubMeshInfo Name="environment_01-lib.0" MaterialName="FRW_hiphopEnvironment.roads" Show="True" />
+      <SubMeshInfo Name="environment_02-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_16-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_17-lib.0" MaterialName="FRW_hiphopEnvironment.roads" Show="True" />
+      <SubMeshInfo Name="environment_18-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_04-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_19-lib.0" MaterialName="FRW_hiphopEnvironment.roads" Show="True" />
+      <SubMeshInfo Name="environment_20-lib.0" MaterialName="FRW_hiphopEnvironment.roads" Show="True" />
+      <SubMeshInfo Name="environment_05-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_06-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_21-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_22-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_23-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_00-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_24-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_26-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_27-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_28-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_25-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_29-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_30-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_33-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_34-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_31-lib.0" MaterialName="FRW_hiphopEnvironment.shops" Show="True" />
+      <SubMeshInfo Name="environment_32-lib.0" MaterialName="FRW_hiphopEnvironment.shops" Show="True" />
+      <SubMeshInfo Name="Object01-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="car_taxi-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi01-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi02-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi03-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi04-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi05-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi06-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi07-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi08-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi09-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi10-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi11-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi12-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi13-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi14-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi15-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi16-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi17-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi18-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi19-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_37-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_39-lib.0" MaterialName="FRW_hiphopEnvironment.objects" Show="True" />
+      <SubMeshInfo Name="environment_40-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_41-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_43-lib.0" MaterialName="FRW_hiphopEnvironment.objects" Show="True" />
+      <SubMeshInfo Name="environment_44-lib.0" MaterialName="FRW_hiphopEnvironment.objects" Show="True" />
+      <SubMeshInfo Name="environment_45-lib.0" MaterialName="FRW_hiphopEnvironment.roads" Show="True" />
+      <SubMeshInfo Name="environment_46-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_47-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_48-lib.0" MaterialName="FRW_hiphopEnvironment.roads" Show="True" />
+      <SubMeshInfo Name="environment_49-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_50-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_51-lib.0" MaterialName="FRW_hiphopEnvironment.roads" Show="True" />
+      <SubMeshInfo Name="environment_52-lib.0" MaterialName="FRW_hiphopEnvironment.roads" Show="True" />
+      <SubMeshInfo Name="environment_53-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_54-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_55-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_56-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_57-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_58-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_59-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_60-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_61-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_62-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_63-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_64-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_65-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="environment_68-lib.0" MaterialName="FRW_hiphopEnvironment.shops" Show="True" />
+      <SubMeshInfo Name="environment_69-lib.0" MaterialName="FRW_hiphopEnvironment.shops" Show="True" />
+      <SubMeshInfo Name="Object02-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="car_taxi20-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi21-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi22-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi23-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi24-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi25-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi26-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi27-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi28-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi29-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi30-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi31-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi32-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi33-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi34-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi35-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi36-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi37-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi38-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi39-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="Object03-lib.0" MaterialName="FRW_hiphopEnvironment.unused" Show="True" />
+      <SubMeshInfo Name="Cylinder01-lib.0" MaterialName="FRW_hiphopEnvironment.objects" Show="True" />
+      <SubMeshInfo Name="environment_42-lib.0" MaterialName="FRW_hiphopEnvironment.clubs" Show="True" />
+      <SubMeshInfo Name="environment_75-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_82-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_83-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_84-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_85-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_86-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_87-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_88-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_89-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_90-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="environment_91-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi40-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi41-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi42-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi43-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+      <SubMeshInfo Name="car_taxi44-lib.0" MaterialName="FRW_hiphopEnvironment.train" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawnPt" TerrainOffset="10900" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="166597.7" y="30900" z="-492000" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="stuck" TerrainOffset="10900" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="166597.7" y="30900" z="-492000" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="square" TerrainOffset="10909" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="165" Zenith="90">
+    <Position x="179019.4" y="30909" z="-503546.2" />
+    <Orientation x="0" y="0.9914448" z="0" w="0.1305262" />
+  </Waypoint>
+  <StaticObject Name="Club" Mesh="FRW_club.mesh" TerrainOffest="10879" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90">
+    <Position x="119831.1" y="30879" z="-499037.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="stage-lib.0" MaterialName="FRW_club.stage_mat" Show="True" />
+      <SubMeshInfo Name="djbooth-lib.0" MaterialName="FRW_club.djbooth" Show="True" />
+      <SubMeshInfo Name="entry-lib.0" MaterialName="FRW_club.entry_mat" Show="True" />
+      <SubMeshInfo Name="walls-lib.0" MaterialName="FRW_club.walls_mat" Show="True" />
+      <SubMeshInfo Name="chairstablesbooths-lib.0" MaterialName="FRW_club.chairstablesbooths_mat" Show="True" />
+      <SubMeshInfo Name="bar-lib.0" MaterialName="FRW_club.bar_mat" Show="True" />
+      <SubMeshInfo Name="lounge-lib.0" MaterialName="FRW_club.lounge_mat" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="club" TerrainOffset="10891" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="115" Zenith="90">
+    <Position x="143299.1" y="30891" z="-518244.4" />
+    <Orientation x="0" y="0.8433915" z="0" w="0.5372996" />
+  </Waypoint>
+  <Waypoint Name="transit" TerrainOffset="15050" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="115" Zenith="90">
+    <Position x="223587.8" y="35050" z="-526102.7" />
+    <Orientation x="0" y="0.8433915" z="0" w="0.5372996" />
+  </Waypoint>
+  <Waypoint Name="apartment" TerrainOffset="14521" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="-180" Zenith="90">
+    <Position x="129967.6" y="34521" z="-468967.7" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+  </Waypoint>
+  <Waypoint Name="shops" TerrainOffset="7710" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="-90" Zenith="90">
+    <Position x="129446.2" y="27710" z="-562480.7" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+  </Waypoint>
+  <StaticObject Name="ShopFashion" Mesh="FRW_hiphopShopFashion.mesh" TerrainOffest="7690" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="115521.9" y="27690" z="-576710.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="shop_fashion-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object06-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="objlegs_bare03-lib.0" MaterialName="BaseWhite" Show="True" />
+      <SubMeshInfo Name="Object10-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object11-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object12-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object13-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object14-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object15-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object16-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object17-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object18-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object19-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object20-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object21-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object22-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="environment_35-lib.0" MaterialName="FRW_hiphopShopFashion.collision" Show="True" />
+      <SubMeshInfo Name="Object23-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object24-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object25-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+      <SubMeshInfo Name="Object26-lib.0" MaterialName="FRW_hiphopShopFashion.purple" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="ShopTattoo" Mesh="FRW_hiphopShopTattoo.mesh" TerrainOffest="7540" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="139214.9" y="27540" z="-549917.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="environment_35-lib.0" MaterialName="FRW_hiphopShopTattoo.shops" Show="True" />
+      <SubMeshInfo Name="Object06-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object16-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object17-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object18-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object19-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object21-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object22-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object01-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object25-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object26-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object27-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object28-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object29-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object30-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="Object31-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+      <SubMeshInfo Name="ShopTattoo-lib.0" MaterialName="FRW_hiphopShopTattoo.purple" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="ShopCollectibles" Mesh="FRW_hiphopShopCollectibles.mesh" TerrainOffest="7689" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="150042" y="27689" z="-576981.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="shopCollectible-lib.0" MaterialName="FRW_hiphopShopCollectibles.purple" Show="True" />
+      <SubMeshInfo Name="objlegs_bare03-lib.0" MaterialName="BaseWhite" Show="True" />
+      <SubMeshInfo Name="Object10-lib.0" MaterialName="FRW_hiphopShopCollectibles.purple" Show="True" />
+      <SubMeshInfo Name="environment_35-lib.0" MaterialName="FRW_hiphopShopCollectibles.shops" Show="True" />
+      <SubMeshInfo Name="Object11-lib.0" MaterialName="FRW_hiphopShopCollectibles.purple" Show="True" />
+      <SubMeshInfo Name="Object12-lib.0" MaterialName="FRW_hiphopShopCollectibles.purple" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="apartment lobby" Mesh="FRW_hiphopApartment.mesh" TerrainOffest="14513" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="152" Zenith="90">
+    <Position x="137004.9" y="34513" z="-449262.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9702957" z="0" w="0.2419219" />
+    <SubMeshes>
+      <SubMeshInfo Name="electricMeter-lib.0" MaterialName="FRW_hiphopApartment.meter" Show="True" />
+      <SubMeshInfo Name="AC-lib.0" MaterialName="FRW_hiphopApartment.ac" Show="True" />
+      <SubMeshInfo Name="exterior-lib.0" MaterialName="FRW_hiphopApartment.apartment_exterior" Show="True" />
+      <SubMeshInfo Name="stairs-lib.0" MaterialName="FRW_hiphopApartment.purple" Show="True" />
+      <SubMeshInfo Name="apartment-lib.0" MaterialName="FRW_hiphopApartment.apartment" Show="True" />
+      <SubMeshInfo Name="lights-lib.0" MaterialName="FRW_hiphopApartment.apartment" Show="True" />
+      <SubMeshInfo Name="windows-lib.0" MaterialName="FRW_hiphopApartment.window" Show="True" />
+      <SubMeshInfo Name="signs-lib.0" MaterialName="FRW_hiphopApartment.apartment_exterior" Show="True" />
+      <SubMeshInfo Name="storefronts-lib.0" MaterialName="FRW_hiphopApartment.storefronts" Show="True" />
+      <SubMeshInfo Name="plant-lib.0" MaterialName="FRW_hiphopApartment.plant" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

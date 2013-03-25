@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<EngineConfig xmlns="http://tempuri.org/EngineConfig.xsd">
+  <FilePath type="Folder" src="..\Media\GpuPrograms"/>
+  <FilePath type="Folder" src="..\Media\Textures"/>
+  <FilePath type="Folder" src="..\Media\Imagefiles"/>
+  <FilePath type="Folder" src="..\Media\Icons"/>
+  <FilePath type="Folder" src="..\Media\Meshes"/>
+  <FilePath type="Folder" src="..\Media\Skeletons"/>
+  <FilePath type="Folder" src="..\Media\Materials"/>
+  <FilePath type="Folder" src="..\Media\SpeedTree"/>
+  <FilePath type="Folder" src="..\Media\Sounds"/>
+</EngineConfig>
+ 

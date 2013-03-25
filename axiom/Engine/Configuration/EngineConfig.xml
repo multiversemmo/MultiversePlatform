@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<EngineConfig xmlns="http://tempuri.org/EngineConfig.xsd">
+	<FilePath src="E:\GameProgramming\Media\Textures"/>
+	<FilePath src="E:\GameProgramming\Media\Sounds"/>
+	<FilePath src="E:\GameProgramming\Media\Meshes"/>
+</EngineConfig>
+ 

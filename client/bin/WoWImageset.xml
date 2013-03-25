@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<Imageset Name="WoWInterface" Imagefile="WoWInterface.png" NativeHorzRes="2048" NativeVertRes="256" AutoScaled="false">
+    <Image Name="white" XPos="0" YPos="0" Width="8" Height="8" />
+    <Image Name="default" XPos="8" YPos="0" Width="8" Height="8" />
+    <Image Name="UI-TargetingFrame" XPos="16" YPos="0" Width="256" Height="128" />
+    <Image Name="UI-MainMenuBar-Dwarf" XPos="272" YPos="0" Width="256" Height="256" />
+    <Image Name="UI-MainMenuBar-PerformanceBar" XPos="528" YPos="0" Width="16" Height="64" />
+    <Image Name="UI-StatusBar" XPos="544" YPos="0" Width="64" Height="8" />
+    <Image Name="UI-MainMenuBar-EndCap-Dwarf" XPos="608" YPos="0" Width="128" Height="128" />
+    <Image Name="UI-Player-Status" XPos="736" YPos="0" Width="256" Height="128" />
+    <Image Name="UI-QuestTitleHighlight" XPos="992" YPos="0" Width="128" Height="16" />
+    <Image Name="UI-CheckBox-Check" XPos="1120" YPos="0" Width="32" Height="32" />
+</Imageset>
+

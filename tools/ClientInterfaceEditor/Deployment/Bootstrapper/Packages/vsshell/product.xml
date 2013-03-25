@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Product
+  xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"
+  ProductCode="Microsoft.VSShell.9.0"
+>
+  <!-- Defines list of files to be copied on build -->
+  <PackageFiles CopyAllPackageFiles="true">
+    <PackageFile Name="vs_shell.msi" />
+    <PackageFile Name="vs_shell.cab" />
+  </PackageFiles>
+
+  <RelatedProducts>
+    <DependsOnProduct Code="Microsoft.Net.Framework.3.5" />
+  </RelatedProducts>
+
+  <InstallChecks>
+    <RegistryCheck Property="VSINSTALLDIR" Key="HKLM\SOFTWARE\Microsoft\VisualStudio\9.0" Value="InstallDir"/>
+  </InstallChecks>
+
+  <Commands Reboot="Defer">
+    <Command PackageFile="vs_shell.msi"
+	     Arguments=""
+	     EstimatedInstalledBytes="50000000"
+	     EstimatedInstallSeconds="300">
+
+      <!-- These checks determine whether the package is to be installed -->
+
+      <InstallConditions>
+		<!-- Bypass if already installed -->
+		<BypassIf Property="VSINSTALLDIR" Compare="ValueNotEqualTo" Value="" />
+		
+        <!-- Block install if user does not have admin privileges -->
+        <FailIf Property="AdminUser" Compare="ValueEqualTo" Value="false" String="AdminRequired"/>
+
+        <!-- Block install on Win95 -->
+        <FailIf Property="Version9x" Compare="VersionLessThan" Value="4.10" String="InvalidPlatformWin9x"/>
+
+        <!-- Block install on NT 4 or less -->
+        <FailIf Property="VersionNT" Compare="VersionLessThan" Value="5.00" String="InvalidPlatformWinNT"/>
+      </InstallConditions>
+
+      <ExitCodes>
+        <ExitCode Value="0" Result="Success"/>
+        <DefaultExitCode Result="Fail" FormatMessageFromSystem="true" String="GeneralFailure" />
+      </ExitCodes>
+    </Command>
+  </Commands>
+</Product>

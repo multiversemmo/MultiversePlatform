@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../../Common/Overview.xsl" type="text/xsl"?>
+<VSSDKSample>
+  <ImagePath>../../../Common</ImagePath>
+  <Status>
+    <Accessibility>true</Accessibility>
+    <ArchitectureDiagram>false</ArchitectureDiagram>
+    <Comments>true</Comments>
+    <Documentation>true</Documentation>
+    <ErrorHandling>true</ErrorHandling>
+    <FollowSDKCodingStandards>true</FollowSDKCodingStandards>
+    <Localizable>true</Localizable>
+    <Overview>true</Overview>
+    <ScenarioTests>false</ScenarioTests>
+    <Supported>true</Supported>
+    <UnitTests>false</UnitTests>
+    <Style>Example</Style>
+  </Status>
+  <Overview>
+    <ShortName>C# Example.IronPythonLanguage</ShortName>
+    <LongName>IronPython Language Service</LongName>
+    <Phrase>Integrating a language service for IronPython.</Phrase>
+  </Overview>
+  <Introduction>
+    <Summary>
+      This sample is a component of the IronPython integration inside Visual Studio.
+      This sample defines a language service that demonstrates how to add statement completion, colorization, Code Snippets, various context menu items, 
+      and syntax checking (i.e. squiggles).
+    </Summary>
+    <Goal>Adding statement completion </Goal>
+    <Goal>Adding Iron Python code Snippets and the context-menus options </Goal>
+    <Goal>Adding colorization </Goal>
+    <Goal>Adding various context menu items </Goal>
+    <Goal>Adding Syntax checking (i.e. squiggles) </Goal>
+    <Image width="400" height="400">LanguageService.jpg</Image>
+  </Introduction>
+  <SampleInfo>
+    <State>
+    </State>
+    <Type>Example</Type>
+    <Complexity>2</Complexity>
+    <Screenshot>LanguageService.jpg</Screenshot>
+    <Area>Iron Python</Area>
+    <Language>C#</Language>
+    <Folder>VisualStudioIntegration\Samples\IronPythonIntegration\</Folder>
+    <SampleSolution>LanguageService\LanguageService.sln</SampleSolution>
+    <FolderUnitTest>
+    </FolderUnitTest>
+    <UnitTestStartup>
+    </UnitTestStartup>
+    <Doc>ms-help://MS.VSCC.v90/MS.VSIPCC.v90/MS.VSSDK.v90/dv_vsintegration/html/951b394a-38b9-449f-99df-e7a67af75c65.htm</Doc>
+    <Keywords>
+      <Keyword>Iron Python</Keyword>
+      <Keyword>Language</Keyword>
+      <Keyword>Service</Keyword>
+      <Keyword>Colorization</Keyword>
+      <Keyword>Statement completion</Keyword>
+      <Keyword>context menu items</Keyword>
+      <Keyword>Syntax checking</Keyword>
+      <Keyword>squiggles</Keyword>
+    </Keywords>
+  </SampleInfo>
+  <GettingStarted>
+    <Paragraph>
+      The current version of this service implements various features.  Statement completion, colorization, Code Snippets, various context menu items, squiggles,
+ 
+    </Paragraph>
+    <Paragraph>
+      The implementation of code snippets involves enabling the "Insert snippet..." and "Surround with..." context menu items of the code editor context menu.  This is done through the QueryCommandStatus function and the handling code is in the PythonViewFilter class.  The items are also added to the statement completion window in the GetDeclarations of the PythonScope class.  There is an index that is reference from the registry that points to the directory of the snippets.  Adding new snippets can be done by adding more files in the same directory where existing snippets are.  The Snippet Manager shows the new Python category as soon as the registration under
+HKLM\SOFTWARE\Microsoft\VisualStudio\8.0\Languages\CodeExpansions is done.
+    </Paragraph>
+  </GettingStarted>
+  <AdditionalResources>
+    <Resource>
+      <Title>Visual Studio SDK Website</Title>
+      <URL>http://msdn.microsoft.com/vstudio/extend</URL>
+    </Resource>
+  </AdditionalResources>
+  <UnitTests>
+    <Test>
+      Create an instance and make sure the instance implements IVsPackage
+    </Test>
+    <Test>
+	    Make sure that the Language colors key words.
+    </Test>
+  </UnitTests>
+  <FunctionalTests>
+    <Test>
+	    Make sure that the Language colors key words.
+    </Test>
+    <Test>
+	    Make sure that the Language completes key words.
+    </Test>
+    <Test>
+	    Make sure that the Language inserts snippets.
+    </Test>
+  </FunctionalTests>
+  <LanguageFiles>
+    <File>
+      <Name>PythonLanguage.cs</Name>
+      <Description>
+        This file contains the definition of three classes related to the IronPython Language 
+			The package
+			The Language factory and 
+			The Language node.
+      </Description>
+    </File>
+    <File>
+      <Name>.cs</Name>
+      <Description>
+        To be described....
+      </Description>
+    </File>
+  </LanguageFiles>
+  <History>
+    <Change>
+      <Date>2006-02-21</Date>
+      <Description>Created this sample for the Visual Studio 2005 SDK.</Description>
+    </Change>
+  </History>
+</VSSDKSample>

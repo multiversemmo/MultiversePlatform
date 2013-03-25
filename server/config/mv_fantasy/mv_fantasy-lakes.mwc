@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Boundary Name="lake_weinstein_01" Priority="50">
+    <PointCollection>
+      <Point x="-1434117" y="142645.1" z="3464067" />
+      <Point x="-1393637" y="189327.8" z="3189740" />
+      <Point x="-873676.4" y="137149.3" z="2989683" />
+      <Point x="-691114.8" y="136262.6" z="3304837" />
+      <Point x="-1006006" y="147392.7" z="3744522" />
+      <Point x="-1315566" y="139850.8" z="3854306" />
+      <Point x="-1472566" y="149677.9" z="3598811" />
+    </PointCollection>
+    <Water Height="129000" />
+    <Grass Name="grass_03">
+      <PlantType Name="Pampas Grass" ImageName="pampas" Instances="199" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.6156863" G="0.7176471" B="0.5568628" />
+      <PlantType Name="Colorized Grass 1" ImageName="grass1" Instances="300" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.6470588" G="0.772549" B="0.7019608" />
+    </Grass>
+  </Boundary>
+  <Waypoint Name="lake_center_spawn" TerrainOffset="0.0625" AllowHeightAdjustment="True">
+    <Position x="-1191689" y="115805.1" z="3457756" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <StaticObject Name="orc tent 1" Mesh="tent_orc.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1199.953" AllowHeightAdjustment="True">
+    <Position x="-1067871" y="136698.4" z="3015280" />
+    <Orientation w="0.7132505" x="0" y="-0.7009093" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="groundShape-lib.0" MaterialName="tent_orc.ground_material" Show="True" />
+      <SubMeshInfo Name="shieldBackShape-lib.0" MaterialName="tent_orc.shield_material" Show="True" />
+      <SubMeshInfo Name="tent_orc_insideShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.0" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.1" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.2" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.3" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.4" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.5" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.6" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.7" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="weaponRackShape-lib.0" MaterialName="tent_orc.shield_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.8" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.9" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.10" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.11" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.12" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.13" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="fireSkullsShape-lib.0" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="shieldRopeShape-lib.0" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="shieldRopeShape-lib.1" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="orcTentShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="cotShape-lib.0" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="awningFrontShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="fireRingShape-lib.0" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="awningBackShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="awningBottomShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="shieldFrontShape-lib.0" MaterialName="tent_orc.shield_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Boundary Name="orc_area_01" Priority="50">
+    <PointCollection>
+      <Point x="-1117178" y="134074.1" z="3115974" />
+      <Point x="-1184189" y="152717.6" z="3070849" />
+      <Point x="-1167423" y="170483.3" z="2947693" />
+      <Point x="-1088380" y="142074.6" z="2950443" />
+      <Point x="-1046081" y="145967.1" z="3085849" />
+    </PointCollection>
+    <Grass Name="orc_grass_01">
+      <PlantType Name="Bird of Paradise" ImageName="birdofparadise" Instances="100" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.854902" G="0.8235294" B="0.4392157" />
+      <PlantType Name="Colorized Grass 1" ImageName="grass1" Instances="1500" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1700" ScaleWidthLow="1000" ScaleWidthHi="1900" ColorMultHi="2" ColorMultLow="1" R="0.3019608" G="0.5019608" B="0.3803922" />
+    </Grass>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Umbrella Thorn - Dead" Instances="9" Scale="10000" ScaleVariance="1000" Filename="UmbrellaThorn_RT_Dead.tre" />
+      <Tree Name="Weeping Willow - Winter" Instances="7" Scale="10000" ScaleVariance="1000" Filename="WeepingWillow_RT_Winter.tre" />
+      <Tree Name="Venus Tree" Instances="3" Scale="10000" ScaleVariance="1000" Filename="VenusTree_RT.tre" />
+    </Forest>
+  </Boundary>
+  <Waypoint Name="orc_spawn_01" TerrainOffset="0.03125" AllowHeightAdjustment="True">
+    <Position x="-1060521" y="138012.3" z="3004469" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <StaticObject Name="tower_02" Mesh="tower.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="1199.906" AllowHeightAdjustment="True">
+    <Position x="-1306400" y="148348.1" z="3819483" />
+    <Orientation w="0.9588197" x="0" y="0.2840154" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="watchtowerShape-lib.0" MaterialName="tower.lambert1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <PointLight Name="tower_01_light" TerrainOffset="11624.42" AllowHeightAdjustment="True" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" AttenuationRange="1000000">
+    <Position x="-1306609" y="158717.8" z="3819593" />
+    <Diffuse R="0.8862745" G="0.7607843" B="0.2705882" />
+    <Specular R="0.9333333" G="0.8196079" B="0.3764706" />
+  </PointLight>
+  <StaticObject Name="orc tent 2" Mesh="orc_house.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-899.9688" AllowHeightAdjustment="True">
+    <Position x="-1054302" y="136747.5" z="2992280" />
+    <Orientation w="0.1478095" x="0" y="0.9890159" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape10-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape11-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape12-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape13-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape14-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape15-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape16-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape17-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape18-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape19-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape20-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape21-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape22-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape23-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape3-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape4-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape5-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape6-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape7-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape8-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape9-lib.0/sadasd" MaterialName="orc_house.sadasd" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Boundary Name="orc_area_02" Priority="50">
+    <PointCollection>
+      <Point x="-1119184" y="167768.7" z="2886273" />
+      <Point x="-983160.9" y="144129.8" z="2873784" />
+      <Point x="-990093.3" y="142188" z="3008746" />
+      <Point x="-1147423" y="158267.2" z="2994757" />
+    </PointCollection>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Umbrella Thorn - Dead" Instances="12" Scale="10000" ScaleVariance="1000" Filename="UmbrellaThorn_RT_Dead.tre" />
+      <Tree Name="Venus Tree" Instances="12" Scale="10000" ScaleVariance="1000" Filename="VenusTree_RT.tre" />
+      <Tree Name="Weeping Willow - Winter" Instances="3" Scale="10000" ScaleVariance="1000" Filename="WeepingWillow_RT_Winter.tre" />
+    </Forest>
+    <Grass Name="orc_grass_02">
+      <PlantType Name="Bird of Paradise" ImageName="birdofparadise" Instances="100" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.854902" G="0.8235294" B="0.4392157" />
+      <PlantType Name="Colorized Grass 1" ImageName="grass1" Instances="1500" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1700" ScaleWidthLow="1000" ScaleWidthHi="1900" ColorMultHi="1" ColorMultLow="1" R="0.3294118" G="0.5176471" B="0.282353" />
+    </Grass>
+  </Boundary>
+  <StaticObject Name="orc_tent_03" Mesh="tent_orc.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1199.984" AllowHeightAdjustment="True">
+    <Position x="-1047434" y="136963" z="3014970" />
+    <Orientation w="0.8870108" x="0" y="0.4617486" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="groundShape-lib.0" MaterialName="tent_orc.ground_material" Show="True" />
+      <SubMeshInfo Name="shieldBackShape-lib.0" MaterialName="tent_orc.shield_material" Show="True" />
+      <SubMeshInfo Name="tent_orc_insideShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.0" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.1" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.2" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.3" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.4" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.5" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.6" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.7" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="weaponRackShape-lib.0" MaterialName="tent_orc.shield_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.8" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.9" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.10" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.11" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.12" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="SkullShape-lib.13" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="fireSkullsShape-lib.0" MaterialName="tent_orc.skull_material" Show="True" />
+      <SubMeshInfo Name="shieldRopeShape-lib.0" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="shieldRopeShape-lib.1" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="orcTentShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="cotShape-lib.0" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="awningFrontShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="fireRingShape-lib.0" MaterialName="tent_orc.wood_rope_material" Show="True" />
+      <SubMeshInfo Name="awningBackShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="awningBottomShape-lib.0" MaterialName="tent_orc.orc_tent_material" Show="True" />
+      <SubMeshInfo Name="shieldFrontShape-lib.0" MaterialName="tent_orc.shield_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Boundary Name="orc_area_03" Priority="50">
+    <PointCollection>
+      <Point x="-1084120" y="144895" z="3064786" />
+      <Point x="-969086.8" y="140610.7" z="2912858" />
+      <Point x="-887119.6" y="137608" z="2995255" />
+      <Point x="-1022120" y="136315.2" z="3127911" />
+    </PointCollection>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Umbrella Thorn - Dead" Instances="7" Scale="10000" ScaleVariance="1000" Filename="UmbrellaThorn_RT_Dead.tre" />
+      <Tree Name="Venus Tree" Instances="6" Scale="10000" ScaleVariance="1000" Filename="VenusTree_RT.tre" />
+      <Tree Name="Weeping Willow - Winter" Instances="4" Scale="10000" ScaleVariance="1000" Filename="WeepingWillow_RT_Winter.tre" />
+    </Forest>
+    <Grass Name="orc_grass_03">
+      <PlantType Name="Bird of Paradise" ImageName="birdofparadise" Instances="100" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.854902" G="0.8235294" B="0.4392157" />
+      <PlantType Name="Colorized Grass 1" ImageName="grass1" Instances="1500" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1700" ScaleWidthLow="1000" ScaleWidthHi="1900" ColorMultHi="1" ColorMultLow="1" R="0.3294118" G="0.5176471" B="0.282353" />
+    </Grass>
+  </Boundary>
+  <Waypoint Name="lake_spawn_02" TerrainOffset="12000.01" AllowHeightAdjustment="True">
+    <Position x="-1246106" y="129432.7" z="3569640" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="lake_spawn_03" TerrainOffset="0.015625" AllowHeightAdjustment="True">
+    <Position x="-1041891" y="87986.52" z="3307617" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <ParticleEffect ParticleEffectName="aureola2" ParticleScale="1" VelocityScale="1" />
+  </Waypoint>
+  <Boundary Name="lake_fog" Priority="50">
+    <PointCollection>
+      <Point x="-1428106" y="135201.3" z="3594166" />
+      <Point x="-1438106" y="141092.4" z="3402613" />
+      <Point x="-1310007" y="149253.8" z="3307547" />
+      <Point x="-1276106" y="148021.7" z="3301042" />
+      <Point x="-1133923" y="144903.6" z="3081617" />
+      <Point x="-971012.8" y="139178.7" z="3148617" />
+      <Point x="-849293.5" y="139006.5" z="3273617" />
+      <Point x="-906106" y="143240.2" z="3501772" />
+      <Point x="-986704.9" y="147079" z="3599147" />
+      <Point x="-1158106" y="140561.4" z="3763531" />
+      <Point x="-1400106" y="130665.2" z="3729393" />
+    </PointCollection>
+    <Fog Far="120000" Near="5000">
+      <Color R="0.7215686" G="0.7333333" B="0.4509804" />
+    </Fog>
+  </Boundary>
+  <Boundary Name="south_lake_fog" Priority="50">
+    <PointCollection>
+      <Point x="-1099705" y="138845.8" z="3769478" />
+      <Point x="-978021.4" y="145276.6" z="3879793" />
+      <Point x="-828021.4" y="168849.1" z="3860625" />
+      <Point x="-680191.1" y="107098.5" z="3680433" />
+      <Point x="-496060.8" y="56917.4" z="3476433" />
+      <Point x="-572142.3" y="110602" z="3266433" />
+      <Point x="-658176.3" y="126590.6" z="3095433" />
+      <Point x="-873603.7" y="136578.5" z="2878975" />
+      <Point x="-1019711" y="133513.1" z="3140188" />
+      <Point x="-837865.8" y="143151.3" z="3279682" />
+      <Point x="-904704.9" y="143138.6" z="3500811" />
+      <Point x="-984704.9" y="147314.5" z="3599520" />
+    </PointCollection>
+    <Fog Far="450000" Near="10000">
+      <Color R="0.5921569" G="0.7254902" B="0.6" />
+    </Fog>
+    <Grass Name="s_lake_grass">
+      <PlantType Name="Rose" ImageName="rose" Instances="55" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="1" G="1" B="1" />
+      <PlantType Name="Cattail" ImageName="cattail" Instances="12" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="1" G="1" B="1" />
+      <PlantType Name="Colorized Grass 1" ImageName="grass1" Instances="200" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1000" ScaleWidthLow="1000" ScaleWidthHi="1000" ColorMultHi="1" ColorMultLow="1" R="0.3294118" G="0.5176471" B="0.282353" />
+    </Grass>
+  </Boundary>
+  <StaticObject Name="broken_barrel" Mesh="barrel_broken.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="0.0234375" AllowHeightAdjustment="True">
+    <Position x="-1028795" y="87725.97" z="3318044" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_half_broken_openShape-lib.0" MaterialName="barrel_broken.barrel_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="shield" Mesh="shield.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="57.30469" AllowHeightAdjustment="True">
+    <Position x="-1028795" y="87761.55" z="3317641" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0/phong1" MaterialName="shield.phong1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="loot_marker" TerrainOffset="0.0078125" AllowHeightAdjustment="True">
+    <Position x="-1028795" y="87728.7" z="3318095" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <ParticleEffect ParticleEffectName="downpour" ParticleScale="3" VelocityScale="3" />
+  </Waypoint>
+  <StaticObject Name="sword" Mesh="sword.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="0.015625" AllowHeightAdjustment="True">
+    <Position x="-1028795" y="87717.77" z="3317892" />
+    <Orientation w="0.7880108" x="0" y="0.6156615" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0/Material__45____Standard__" MaterialName="sword.Material__45____Standard__" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="old_fountain" Mesh="fountainEmpty.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-0.015625" AllowHeightAdjustment="True">
+    <Position x="-922253.6" y="154221.8" z="3739997" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1.21" y="1.21" z="1.21" />
+    <SubMeshes>
+      <SubMeshInfo Name="fountainShape-lib.0" MaterialName="fountainEmpty.lambert3" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Road Name="lakeside_lane" HalfWidth="2">
+    <PointCollection>
+      <Point x="-932918.4" y="154008.5" z="3084841" />
+      <Point x="-884748.8" y="149478" z="3151078" />
+      <Point x="-847583.8" y="143292.8" z="3243658" />
+      <Point x="-836397.9" y="146409.1" z="3356658" />
+      <Point x="-898505.9" y="142987.1" z="3494816" />
+      <Point x="-953805" y="146472" z="3553576" />
+      <Point x="-974117.9" y="152696.6" z="3628575" />
+    </PointCollection>
+  </Road>
+  <StaticObject Name="colonnade" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1000.063" AllowHeightAdjustment="True">
+    <Position x="-936348.9" y="150939.1" z="3064841" />
+    <Orientation w="0.9975641" x="0" y="-0.06975647" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_05" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-2000" AllowHeightAdjustment="True">
+    <Position x="-947981.3" y="150947.5" z="3081841" />
+    <Orientation w="0.7986355" x="0" y="-0.601815" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_06" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1200.047" AllowHeightAdjustment="True">
+    <Position x="-949588.6" y="150650.8" z="3067841" />
+    <Orientation w="0.8703557" x="0" y="0.4924236" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="lake_orc" Mesh="orc.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="0.078125" AllowHeightAdjustment="True">
+    <Position x="-989290.7" y="137622.6" z="3145726" />
+    <Orientation w="0.6883546" x="0" y="0.7253743" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="Body_gggShape" MaterialName="orc.BODY" Show="True" />
+      <SubMeshInfo Name="Eyes_gggShape" MaterialName="orc.FACE" Show="True" />
+      <SubMeshInfo Name="Head_gggShape" MaterialName="orc.FACE" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="lake_zombie" Mesh="zombie.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="0.09375" AllowHeightAdjustment="True">
+    <Position x="-989046.4" y="138589.4" z="3141726" />
+    <Orientation w="0.4924236" x="0" y="0.8703557" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="Zombie_Body2-obj.0" MaterialName="zombie.Zombie_Body" Show="True" />
+      <SubMeshInfo Name="Zombie_Clothes2-obj.0" MaterialName="zombie.Zombie_Clothes" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="lake_zombie_02" Mesh="zombie.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="0.21875" AllowHeightAdjustment="True">
+    <Position x="-1142256" y="161117.8" z="2942891" />
+    <Orientation w="0.976296" x="0" y="-0.2164396" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="Zombie_Body2-obj.0" MaterialName="zombie.Zombie_Body" Show="True" />
+      <SubMeshInfo Name="Zombie_Clothes2-obj.0" MaterialName="zombie.Zombie_Clothes" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Boundary Name="mountain trees" Priority="50">
+    <PointCollection>
+      <Point x="-1616693" y="129853.1" z="3322143" />
+      <Point x="-1356756" y="178142" z="3212226" />
+      <Point x="-1189447" y="166828.9" z="3002733" />
+      <Point x="-1189562" y="134644.3" z="3191123" />
+      <Point x="-1261259" y="142961.6" z="3311243" />
+      <Point x="-1358421" y="151919" z="3317243" />
+      <Point x="-1453906" y="150077.2" z="3532462" />
+    </PointCollection>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Venus Tree" Instances="45" Scale="10000" ScaleVariance="1000" Filename="VenusTree_RT.tre" />
+    </Forest>
+  </Boundary>
+</WorldObjectCollection>

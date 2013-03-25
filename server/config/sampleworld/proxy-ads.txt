@@ -1,0 +1,9 @@
+# Additional message types published by the proxy
+# See: http://update.multiverse.net/wiki/index.php/Multiverse_Messaging_System#Advertisements
+
+mv.DELETE_INSTANCE
+mv.LOAD_INSTANCE
+mv.UNLOAD_INSTANCE
+mv.CREATE_INSTANCE
+mv.SEARCH
+mv.GET_REGION

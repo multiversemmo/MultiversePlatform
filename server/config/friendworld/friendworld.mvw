@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="friendworld" Version="2">
+  <CameraPosition x="110781.1" y="36901.54" z="-333008" />
+  <CameraOrientation x="-0.1332764" y="0.8279707" z="0.2218084" w="0.4974967" />
+  <Terrain>
+    <algorithm>HybridMultifractalWithFloor</algorithm>
+    <xOffset>0</xOffset>
+    <yOffset>0</yOffset>
+    <zOffset>0</zOffset>
+    <h>0.25</h>
+    <lacunarity>2</lacunarity>
+    <octaves>8</octaves>
+    <metersPerPerlinUnit>500</metersPerPerlinUnit>
+    <heightScale>0</heightScale>
+    <heightOffset>0</heightOffset>
+    <fractalOffset>0.7</fractalOffset>
+    <heightFloor>20</heightFloor>
+  </Terrain>
+  <TerrainDisplay Type="AutoSplat" UseParams="True" UseGeneratedShadeMask="True" TextureTileSize="5" SandToGrassHeight="50000" GrassToRockHeight="250000" RockToSnowHeight="450000" SandTextureName="splatting_sand.dds" GrassTextureName="splatting_grass.dds" RockTextureName="splatting_rock.dds" SnowTextureName="splatting_snow.dds" ShadeMaskTextureName="" />
+  <Ocean DisplayOcean="False" UseParams="True" WaveHeight="1000" SeaLevel="10000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <Skybox Name="eve_skybox" />
+  <GlobalFog Far="200000" Near="50000">
+    <Color R="0.0627451" G="0.05882353" B="0.08235294" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.3294118" G="0.3686275" B="0.5882353" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="1" Zenith="52">
+    <Direction x="-0.01074477" y="-0.7880108" z="-0.6155677" />
+    <Diffuse R="0.3607843" G="0.2941177" B="0.5058824" />
+    <Specular R="0.7372549" G="0.7843137" B="0.854902" />
+  </GlobalDirectionalLight>
+  <WorldCollection Name="TimesSquare" Filename="friendworld-TimesSquare.mwc" />
+  <WorldCollection Name="skylineBuildings" Filename="friendworld.mvw-skylineBuildings.mwc" />
+  <WorldCollection Name="TS_pointLights" Filename="friendworld.mvw-TS_pointLights.mwc" />
+  <WorldCollection Name="PedestrianWaypoints" Filename="friendworld.mvw-PedestrianWaypoints.mwc" />
+  <WorldCollection Name="TS_ambientParticles" Filename="friendworld.mvw-TS_ambientParticles.mwc" />
+  <WorldCollection Name="FRW_club" Filename="friendworld.mvw-FRW_club.mwc" />
+</World>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="Marissa May's house" Mesh="human_house.mesh" TerrainOffest="0.015625" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="262.0078" Zenith="90">
+    <Position x="-289851.9" y="138411" z="632458.5" />
+    <Scale x="1.030199" y="1.030199" z="1.030199" />
+    <Orientation x="0" y="0.7546647" z="0" w="-0.6561106" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Marissa's House and Garden Store" Mesh="human_house_wishbone.mesh" TerrainOffest="0.03125" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="199.7384" Zenith="90">
+    <Position x="-281851.9" y="138289.3" z="601051.5" />
+    <Scale x="1.08596" y="1.08596" z="1.08596" />
+    <Orientation x="0" y="0.9852015" z="0" w="-0.1713998" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_wishbone_houseshape-obj.0" MaterialName="human_house_wishbone._01_-_Default" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

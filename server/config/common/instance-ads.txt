@@ -1,0 +1,14 @@
+# Agent message type advertisements
+# See: http://update.multiverse.net/wiki/index.php/Multiverse_Messaging_System#Advertisements
+
+mv.GENERATE_OBJECT
+mv.SPAWN_REQ
+mv.NEW_REGION
+mv.CREATE_SPAWN_GEN
+mv.REGISTER_INSTANCE_TEMPLATE
+mv.CREATE_INSTANCE
+mv.SAVE_OBJECT_DATA
+mv.LOAD_OBJECT
+mv.LOAD_INSTANCE_CONTENT
+mv.HOST_INSTANCE
+mv.UNLOAD_INSTANCE

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="sportsroom" Mesh="FRW_sportsroom.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="114380" y="20000" z="-216079.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="bed-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="cabinet-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion1-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion2-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion3-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion4-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion5-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion6-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion7-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion8-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion9-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion10-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion11-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion12-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion13-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion14-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion15-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion16-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion17-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion18-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion19-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion20-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion21-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="couch_cushion22-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="endtable-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="endtable1-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="endtable2-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="fakeWall-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="lamp1-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic1-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic10-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic11-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic12-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic13-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic14-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic15-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic16-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic17-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic18-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="pic19-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picel-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picl-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picl9-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picl10-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picl11-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picl12-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picl13-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picl14-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picl15-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="picl16-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="rug-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="rug1-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="shelf_rnd-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="tv_livingroom-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="tv_screen-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="sportsroom-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="lamp02-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="sportsroom_door-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+      <SubMeshInfo Name="cabinet01-mesh.0" MaterialName="FRW_sportsroom.FRW_sportsroom_mat" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawnPt" TerrainOffset="10" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="122171.5" y="20010" z="-222105.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="stuck" TerrainOffset="10" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="122171.5" y="20010" z="-222105.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

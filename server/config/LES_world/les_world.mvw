@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="les_world" Version="2">
+  <CameraPosition x="59312.55" y="170076.3" z="-1182003" />
+  <CameraOrientation x="0.148258" y="-0.6855997" z="-0.145693" w="-0.6976719" />
+  <Terrain Type="HeightfieldMosaic" MosaicName="LES_world_terrain" PreloadRadius="1" OutsideHeight="0" />
+  <TerrainDisplay Type="AutoSplat" UseParams="True" UseGeneratedShadeMask="True" TextureTileSize="5" SandToGrassHeight="50000" GrassToRockHeight="250000" RockToSnowHeight="450000" SandTextureName="splatting_sand.dds" GrassTextureName="les_base_asphalt.dds" RockTextureName="splatting_rock.dds" SnowTextureName="splatting_snow.dds" ShadeMaskTextureName="" />
+  <Ocean DisplayOcean="False" UseParams="True" WaveHeight="1000" SeaLevel="10000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <Skybox Name="LES_skybox" />
+  <GlobalFog Far="170000" Near="9000">
+    <Color R="0" G="0" B="0" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.3921569" G="0.5137255" B="0.7098039" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="-157" Zenith="16">
+    <Direction x="0.3755949" y="-0.2756374" z="0.884846" />
+    <Diffuse R="0.5607843" G="0.4156863" B="0.6509804" />
+    <Specular R="0.7019608" G="0.6156863" B="0.7764706" />
+  </GlobalDirectionalLight>
+  <WorldCollection Name="LES_migrated_blocks" Filename="les_world-LES_migrated_blocks.mwc" />
+  <WorldCollection Name="LES_mv_streets" Filename="les_world-LES_mv_streets.mwc" />
+  <WorldCollection Name="LES_mv_blocks" Filename="les_world-LES_mv_blocks.mwc" />
+  <WorldCollection Name="LES_mv_int_club" Filename="les_world-LES_mv_int_club.mwc" />
+  <WorldCollection Name="test_objects" Filename="les_world-test_objects.mwc" />
+  <WorldCollection Name="LES_street_objects" Filename="les_world-LES_street_objects.mwc" />
+  <WorldCollection Name="club_lights" Filename="les_world-club_lights.mwc" />
+  <WorldCollection Name="LES_cakeshop" Filename="les_world-LES_cakeshop.mwc" />
+  <WorldCollection Name="cakeshop_lights" Filename="les_world-cakeshop_lights.mwc" />
+</World>

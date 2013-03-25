@@ -1,0 +1,6 @@
+Mesh:TW_Titanic.mesh
+Texture:splatting_sand.dds
+Texture:splatting_grass.dds
+Texture:splatting_rock.dds
+Texture:splatting_snow.dds
+Material:Multiverse/SceneSkyBoxSunset

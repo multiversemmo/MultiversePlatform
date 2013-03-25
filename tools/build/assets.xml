@@ -1,0 +1,95 @@
+<Assets>
+  <Model name="Gate" assetName="gate.mesh" subType="Wall"/>
+  <Model name="Barrel" assetName="barrel.mesh" subType="Props"/>
+  <Model name="Broken Barrel" assetName="barrel_broken.mesh" subType="Props"/>
+  <Model name="Half open Barrel" assetName="barrel_half_open.mesh" subType="Props"/>
+  <Model name="House Tall" assetName="house_tall.mesh" subType="Building"/>
+  <Model name="Wishbone House" assetName="house_wishbone.mesh" subType="Building"/>
+  <Model name="Rock 1" assetName="rock_group_01.mesh" subType="Props"/>
+  <Model name="Rock 2" assetName="rock_group_02.mesh" subType="Props"/>
+  <Model name="Wall" assetName="wall.mesh" subType="Wall" />
+  <Model name="Wall Corner" assetName="wall_corner.mesh" subType="Wall"/>
+  <Model name="Wall with Walkway" assetName="wall_walkway.mesh" subType="Wall"/>
+  <Model name="Wall Corner with Walkway" assetName="wall_corner_walkway.mesh" subType="Wall"/>
+  <Model name="Hall" assetName="hall.mesh" subType="Building"/>
+  <Model name="Stilt House" assetName="house_stilt.mesh" subType="Building"/>
+  <Model name="Shack" assetName="shack.mesh" subType="Building"/>
+  <Model name="Watch Tower" assetName="tower.mesh" subType="Building"/>
+  <Model name="Boundary Marker" assetName="directional_marker.mesh" subType="Props"/>
+  <Model name="Axe" assetName="axe.mesh" subType="Props"/>
+  <Model name="Brax" assetName="brax.mesh" subType="Creatures"/>
+  <Model name="Corral01" assetName="corral_01.mesh" subType="Props"/>
+  <Model name="Corral02" assetName="corral_02.mesh" subType="Props"/>
+  <Model name="Corral03" assetName="corral_03.mesh" subType="Props"/>
+  <Model name="Empty Fountain" assetName="fountainEmpty.mesh" subType="Props"/>
+  <Model name="House Open" assetName="house_open.mesh" subType="Building"/>
+  <Model name="Human Female" assetName="human_female.mesh" subType="Characters"/>
+  <Model name="Human Male" assetName="human_male.mesh" subType="Characters"/>
+  <Model name="Orc" assetName="orc.mesh" subType="Creatures"/>
+  <Model name="Orc House" assetName="orc_house.mesh" subType="Building"/>
+  <Model name="Pick" assetName="pick.mesh" subType="Props"/>
+  <Model name="Shield" assetName="shield.mesh" subType="Props"/>
+  <Model name="Spear" assetName="spear.mesh" subType="Props"/>
+  <Model name="Sword" assetName="sword.mesh" subType="Props"/>
+  <Model name="Wolf" assetName="wolf.mesh" subType="Creatures"/>
+  <Model name="Zombie" assetName="zombie.mesh" subType="Creatures"/>
+  <Model name="Human Shack Tall" assetName="human_shack_tall.mesh" subType="Building"/>
+  <Model name="Human House Wishbone" assetName="human_house_wishbone.mesh" subType="Building"/>
+  <Model name="Human Meeting House" assetName="human_meeting_house.mesh" subType="Building"/>
+  <Model name="Human House Open" assetName="human_house_open.mesh" subType="Building"/>
+  <Skybox name="Sunset" assetName="Multiverse/SceneSkyBoxSunset" />
+  <ParticleFX name="Aureola" assetName="aureola" />
+  <ParticleFX name="Blast" assetName="blast" />
+  <ParticleFX name="Blast2" assetName="blast2" />
+  <ParticleFX name="Downpour" assetName="downpour" />
+  <ParticleFX name="Eruption" assetName="eruption" />
+  <ParticleFX name="Floaty Greeny" assetName="floatyGreeny" />
+  <ParticleFX name="Fountain" assetName="fountain" />
+  <ParticleFX name="Greeny Nimbus" assetName="greenyNimbus" />
+  <ParticleFX name="Jet Engine 1" assetName="jetengine1" />
+  <ParticleFX name="Jet Engine 2" assetName="jetengine2" />
+  <ParticleFX name="Pentagram" assetName="pentagram" />
+  <ParticleFX name="Rain" assetName="rain" />
+  <ParticleFX name="Ring Of Fire" assetName="ringOfFire" />
+  <ParticleFX name="Smoke" assetName="smoke" />
+  <ParticleFX name="Space" assetName="space" />
+  <ParticleFX name="Waterfall" assetName="waterfall" />
+  <Sound name="Ambient Hills Day" assetName="ambient_hills_day.ogg" />
+  <SpeedTree name="American Boxwood - Cluster" assetName="AmericanBoxwoodCluster_RT.spt" />
+  <SpeedTree name="American Boxwood" assetName="AmericanBoxwood_RT.spt" />
+  <SpeedTree name="Azalea - Cluster" assetName="AzaleaPatch_RT.spt" />
+  <SpeedTree name="Azalea - Pink - Cluster" assetName="AzaleaPatch_RT_Pink.spt" />
+  <SpeedTree name="Azalea" assetName="Azalea_RT.spt" />
+  <SpeedTree name="Azalea - Pink" assetName="Azalea_RT_Pink.spt" />
+  <SpeedTree name="Beech" assetName="Beech_RT.spt" />
+  <SpeedTree name="Beech - Fall" assetName="Beech_RT_Fall.spt" />
+  <SpeedTree name="Beech - Winter" assetName="Beech_RT_Winter.spt" />
+  <SpeedTree name="Curly Palm" assetName="CurlyPalm_RT.spt" />
+  <SpeedTree name="Curly Palm - Cluster" assetName="CurlyPalmCluster_RT.spt" />
+  <SpeedTree name="Fraser Fir" assetName="FraserFir_RT.spt" />
+  <SpeedTree name="Fraser Fir - Cluster" assetName="FraserFirCluster_RT.spt" />
+  <SpeedTree name="Fraser Fir - Snow" assetName="FraserFir_RT_Snow.spt" />
+  <SpeedTree name="Fraser Fir - Snow - Cluster" assetName="FraserFirCluster_RT_Snow.spt" />
+  <SpeedTree name="Red Delicious Apple" assetName="RDApple_RT.spt" />
+  <SpeedTree name="Red Delicious Apple - Apples" assetName="RDApple_RT_Apples.spt" />
+  <SpeedTree name="Red Delicious Apple - Spring" assetName="RDApple_RT_Spring.spt" />
+  <SpeedTree name="Red Delicious Apple - Winter" assetName="RDApple_RT_Winter.spt" />
+  <SpeedTree name="Sugar Pine" assetName="SugarPine_RT.spt" />
+  <SpeedTree name="Sugar Pine - Winter" assetName="SugarPine_RT_Winter.spt" />
+  <SpeedTree name="Umbrella Thorn" assetName="UmbrellaThorn_RT.spt" />
+  <SpeedTree name="Umbrella Thorn - Dead" assetName="UmbrellaThorn_RT_Dead.spt" />
+  <SpeedTree name="Umbrella Thorn - Flowers" assetName="UmbrellaThorn_RT_Flowers.spt" />
+  <SpeedTree name="Venus Tree" assetName="VenusTree_RT.spt" />
+  <SpeedTree name="Weeping Willow" assetName="WeepingWillow_RT.spt" />
+  <SpeedTree name="Weeping Willow - Fall" assetName="WeepingWillow_RT_Fall.spt" />
+  <SpeedTree name="Weeping Willow - Winter" assetName="WeepingWillow_RT_Winter.spt" />
+  <SpeedWind name="Demo Wind" assetName="demoWind.ini" />
+  <Vegitation name="Colorized Grass 1" assetName="grass1" />
+  <Vegitation name="Colorized Grass 2" assetName="grass2" />
+  <Vegitation name="Bird of Paradise" assetName="birdofparadise" />
+  <Vegitation name="Cattail" assetName="cattail" />
+  <Vegitation name="Sun Flower" assetName="sunflower" />
+  <Vegitation name="Rose" assetName="rose" />
+  <Vegitation name="Marigold" assetName="marigold" />
+  <Vegitation name="Pampas Grass" assetName="pampas" />
+</Assets>

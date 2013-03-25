@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <PointLight Name="gaz_01" AttenuationRange="9790" AttenuationConstant="1" AttenuationLinear="1E-05" AttenuationQuadratic="0" TerrainOffset="3400" AllowHeightAdjustment="True">
+    <Position x="335903.6" y="74400" z="232645.9" />
+    <Specular R="1" G="0" B="0.5019608" />
+    <Diffuse R="1" G="0" B="0.5019608" />
+  </PointLight>
+  <PointLight Name="gaz_02" AttenuationRange="15790" AttenuationConstant="3" AttenuationLinear="1E-05" AttenuationQuadratic="0" TerrainOffset="3300" AllowHeightAdjustment="True">
+    <Position x="377170.8" y="74300" z="251644.6" />
+    <Specular R="0" G="1" B="1" />
+    <Diffuse R="0" G="1" B="0" />
+  </PointLight>
+  <PointLight Name="gaz_03" AttenuationRange="17790" AttenuationConstant="1" AttenuationLinear="1E-05" AttenuationQuadratic="0" TerrainOffset="3500" AllowHeightAdjustment="True">
+    <Position x="404814.2" y="74500" z="262591.7" />
+    <Specular R="0" G="0" B="0.627451" />
+    <Diffuse R="0.5019608" G="0" B="1" />
+  </PointLight>
+  <PointLight Name="gaz_04" AttenuationRange="15790" AttenuationConstant="1" AttenuationLinear="1E-05" AttenuationQuadratic="0" TerrainOffset="3600" AllowHeightAdjustment="True">
+    <Position x="405419.7" y="74600" z="325787.8" />
+    <Specular R="1" G="0.5019608" B="0" />
+    <Diffuse R="1" G="0" B="0" />
+  </PointLight>
+  <PointLight Name="gaz_05" AttenuationRange="17790" AttenuationConstant="1.5" AttenuationLinear="1E-05" AttenuationQuadratic="0" TerrainOffset="3600" AllowHeightAdjustment="True">
+    <Position x="378161.4" y="74600" z="336299.4" />
+    <Specular R="0.4901961" G="0.8352941" B="0.6941177" />
+    <Diffuse R="0.3960784" G="0.7686275" B="0.3764706" />
+  </PointLight>
+  <PointLight Name="gaz_06" AttenuationRange="10900" AttenuationConstant="1" AttenuationLinear="1E-05" AttenuationQuadratic="0" TerrainOffset="3400" AllowHeightAdjustment="True">
+    <Position x="336540.8" y="74400" z="354981" />
+    <Specular R="0.5019608" G="0" B="0.2509804" />
+    <Diffuse R="0.5019608" G="0" B="0.5019608" />
+  </PointLight>
+  <PointLight Name="trio_statue_light" AttenuationRange="15700" AttenuationConstant="1" AttenuationLinear="1E-05" AttenuationQuadratic="0" TerrainOffset="0" AllowHeightAdjustment="True">
+    <Position x="344781.3" y="71000" z="294638.7" />
+    <Specular R="0.9019608" G="0.6705883" B="0.9960784" />
+    <Diffuse R="0.945098" G="0.1137255" B="0.3215686" />
+  </PointLight>
+  <PointLight Name="dance_floor_statue_light" AttenuationRange="15700" AttenuationConstant="1" AttenuationLinear="1E-05" AttenuationQuadratic="0" TerrainOffset="0" AllowHeightAdjustment="True">
+    <Position x="386771.4" y="71000" z="294168.9" />
+    <Specular R="0.5764706" G="0.972549" B="0.9921569" />
+    <Diffuse R="0.007843138" G="0.7921569" B="0.4196078" />
+  </PointLight>
+</WorldObjectCollection>

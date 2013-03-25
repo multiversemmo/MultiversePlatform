@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SampleBridgeClient", "SampleBridgeClient\SampleBridgeClient.vcproj", "{C595151C-AB76-4411-BE60-986537C16FF1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FBC52843-2D8B-4EF4-9BF3-1533A7FA97FC} = {FBC52843-2D8B-4EF4-9BF3-1533A7FA97FC}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BridgeInterface", "BridgeInterface\BridgeInterface.vcproj", "{FBC52843-2D8B-4EF4-9BF3-1533A7FA97FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C595151C-AB76-4411-BE60-986537C16FF1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C595151C-AB76-4411-BE60-986537C16FF1}.Debug|Win32.Build.0 = Debug|Win32
+		{C595151C-AB76-4411-BE60-986537C16FF1}.Release|Win32.ActiveCfg = Release|Win32
+		{C595151C-AB76-4411-BE60-986537C16FF1}.Release|Win32.Build.0 = Release|Win32
+		{FBC52843-2D8B-4EF4-9BF3-1533A7FA97FC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FBC52843-2D8B-4EF4-9BF3-1533A7FA97FC}.Debug|Win32.Build.0 = Debug|Win32
+		{FBC52843-2D8B-4EF4-9BF3-1533A7FA97FC}.Release|Win32.ActiveCfg = Release|Win32
+		{FBC52843-2D8B-4EF4-9BF3-1533A7FA97FC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

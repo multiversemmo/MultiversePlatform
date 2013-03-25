@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <PointLight Name="movie_room_01" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="3364.689" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="115228" y="23364.69" z="-199975" />
+    <Specular R="0.8862745" G="0.9490196" B="0.9529412" />
+    <Diffuse R="0.7568628" G="0.8156863" B="0.8588235" />
+  </PointLight>
+  <PointLight Name="tv_room_light_01" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="3712.529" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="109568.2" y="23712.53" z="-203965.1" />
+    <Specular R="0.9333333" G="0.9686275" B="0.9098039" />
+    <Diffuse R="0.8078431" G="0.8156863" B="0.7686275" />
+  </PointLight>
+  <PointLight Name="tv_room_light_02" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="4312.529" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="105043.3" y="24312.53" z="-200367.3" />
+    <Specular R="0.9686275" G="0.9686275" B="0.9568627" />
+    <Diffuse R="0.7450981" G="0.7333333" B="0.654902" />
+  </PointLight>
+  <PointLight Name="tv_room_light_03" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="3550.73" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="98896.3" y="23550.73" z="-204125.8" />
+    <Specular R="0.9529412" G="0.9529412" B="0.9215686" />
+    <Diffuse R="0.8352941" G="0.854902" B="0.8117647" />
+  </PointLight>
+  <PointLight Name="tv_room_light_04" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="3465.801" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="99056.41" y="23465.8" z="-195063.8" />
+    <Specular R="0.8745098" G="0.8078431" B="0.8745098" />
+    <Diffuse R="0.7411765" G="0.6705883" B="0.772549" />
+  </PointLight>
+  <PointLight Name="bedroom_light_05" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="1612.529" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="97915" y="21612.53" z="-189799" />
+    <Specular R="0.9098039" G="0.8078431" B="0.8901961" />
+    <Diffuse R="0.654902" G="0.5843138" B="0.6745098" />
+  </PointLight>
+  <PointLight Name="movie_room_02" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="3364.689" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="115330.4" y="23364.69" z="-206189" />
+    <Specular R="0.7450981" G="0.7137255" B="0.8392157" />
+    <Diffuse R="0.454902" G="0.5490196" B="0.6039216" />
+  </PointLight>
+  <PointLight Name="closet_room_01" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="3364.689" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="112432.4" y="23364.69" z="-191020" />
+    <Specular R="0.854902" G="0.8823529" B="0.8941177" />
+    <Diffuse R="0.8784314" G="0.8823529" B="0.8941177" />
+  </PointLight>
+  <PointLight Name="tv_room_light_05" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="3550.73" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="98498" y="23550.73" z="-199019.7" />
+    <Specular R="0.8627451" G="0.8901961" B="0.8941177" />
+    <Diffuse R="0.7058824" G="0.7921569" B="0.8392157" />
+  </PointLight>
+  <PointLight Name="entry_room_01" AttenuationRange="7000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="3712.529" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="108648.5" y="23712.53" z="-209071" />
+    <Specular R="0.8196079" G="0.9254902" B="0.9803922" />
+    <Diffuse R="0.8352941" G="0.8509804" B="0.8509804" />
+  </PointLight>
+  <PointLight Name="bedroom_light_06" AttenuationRange="9000" AttenuationConstant="1" AttenuationLinear="0.0005" AttenuationQuadratic="1.041667E-07" TerrainOffset="3500" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="109600.5" y="23500" z="-195959.1" />
+    <Specular R="1" G="1" B="1" />
+    <Diffuse R="1" G="1" B="1" />
+  </PointLight>
+  <Waypoint Name="room_light_01" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="108436.2" y="24380" z="-193765.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_02" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="108436.2" y="24380" z="-190136.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_03" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="104776.3" y="24380" z="-190136.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_04" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="104776.3" y="24380" z="-193765.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_05" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="101117.1" y="24380" z="-193765.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_06" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="101117.1" y="24380" z="-190136.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="lamp_light_01" TerrainOffset="3761" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="109615.9" y="23761" z="-195895.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="lamp_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="lamp_light_02" TerrainOffset="3491" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="109361.6" y="23491" z="-196512.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="lamp_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="lamp_light_03" TerrainOffset="3031" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="110213" y="23031" z="-195632.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="lamp_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="room_light_07" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="99864.7" y="24380" z="-198531.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_08" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="99863.71" y="24380" z="-202158.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_09" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="103497.3" y="24380" z="-202158.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_10" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="107192.5" y="24380" z="-202158.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_11" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="103497.3" y="24380" z="-198531.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_12" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="107192.5" y="24380" z="-198531.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_13" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="110909.9" y="24380" z="-202164.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_14" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="110909.9" y="24380" z="-198531.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="lamp_light_04" TerrainOffset="3761" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="110909.3" y="23761" z="-197539.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="lamp_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="lamp_light_05" TerrainOffset="3491" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="111502.3" y="23491" z="-197783.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="lamp_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="lamp_light_06" TerrainOffset="3031" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="110629.6" y="23031" z="-196936.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="lamp_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="room_light_15" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="113359.5" y="24380" z="-198580.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_16" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="117031.3" y="24380" z="-198580.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_17" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="117031.3" y="24380" z="-205852" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_18" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="113359.5" y="24380" z="-205852" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_19" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="110887.6" y="24380" z="-207156.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_20" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="106447.2" y="24380" z="-207156.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_21" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="106447.2" y="24380" z="-210546.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="room_light_22" TerrainOffset="4380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="110887.6" y="24380" z="-210546.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1.2" />
+  </Waypoint>
+  <Waypoint Name="lamp_light_07" TerrainOffset="3761" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="98335.59" y="23761" z="-197594.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="lamp_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="lamp_light_08" TerrainOffset="3491" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="98575.59" y="23491" z="-196972.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="lamp_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="lamp_light_09" TerrainOffset="3031" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="97735.59" y="23031" z="-197837.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="lamp_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+</WorldObjectCollection>

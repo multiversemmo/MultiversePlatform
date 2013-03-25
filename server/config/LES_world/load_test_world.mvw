@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="les_world" Version="2">
+  <CameraPosition x="7598.771" y="241721.3" z="-1163469" />
+  <CameraOrientation x="-0.499975" y="-0.500025" z="-0.499975" w="0.500025" />
+  <Terrain Type="HeightfieldMosaic" MosaicName="LES_world_terrain" PreloadRadius="1" OutsideHeight="0" />
+  <TerrainDisplay Type="AutoSplat" UseParams="True" UseGeneratedShadeMask="True" TextureTileSize="5" SandToGrassHeight="50000" GrassToRockHeight="250000" RockToSnowHeight="450000" SandTextureName="splatting_sand.dds" GrassTextureName="les_base_asphalt.dds" RockTextureName="splatting_rock.dds" SnowTextureName="splatting_snow.dds" ShadeMaskTextureName="" />
+  <Ocean DisplayOcean="False" UseParams="True" WaveHeight="1000" SeaLevel="10000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <Skybox Name="LES_skybox" />
+  <GlobalFog Far="170000" Near="9000">
+    <Color R="0" G="0" B="0" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.3176471" G="0.3215686" B="0.2470588" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="116" Zenith="-49">
+    <Direction x="-0.589662" y="0.7547096" z="0.2875973" />
+    <Diffuse R="0.4627451" G="0.372549" B="0.4235294" />
+    <Specular R="0.8823529" G="0.8431373" B="0.8666667" />
+  </GlobalDirectionalLight>
+  <WorldCollection Name="LES_migrated_blocks" Filename="load_test_world-LES_migrated_blocks.mwc" />
+  <WorldCollection Name="LES_mv_streets" Filename="load_test_world-LES_mv_streets.mwc" />
+  <WorldCollection Name="LES_mv_blocks" Filename="load_test_world-LES_mv_blocks.mwc" />
+  <WorldCollection Name="LES_mv_int_club" Filename="load_test_world-LES_mv_int_club.mwc" />
+  <WorldCollection Name="test_objects" Filename="load_test_world-test_objects.mwc" />
+  <WorldCollection Name="LES_street_objects" Filename="load_test_world-LES_street_objects.mwc" />
+  <WorldCollection Name="club lights" Filename="load_test_world-club lights.mwc" />
+</World>

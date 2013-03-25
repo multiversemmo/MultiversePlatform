@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="1">
+  <StaticObject Name="zombie_test" Mesh="zombie.mesh" Sound="">
+    <Position x="116243.4" y="92486.03" z="470983.2" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="57" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="Zombie_Body2-obj.0" MaterialName="zombie.Zombie_Body" Show="True" />
+      <SubMeshInfo Name="Zombie_Clothes2-obj.0" MaterialName="zombie.Zombie_Clothes" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

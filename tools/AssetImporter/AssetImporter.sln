@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiverse.AssetRepository", "..\..\Lib\AssetRepository\Multiverse.AssetRepository.csproj", "{A938BCF5-10B9-45A2-9553-550B2BDBF7CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetImporter", "AssetImporter.csproj", "{06922CCB-A47E-433D-9BD8-4D8569D5C2A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A938BCF5-10B9-45A2-9553-550B2BDBF7CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A938BCF5-10B9-45A2-9553-550B2BDBF7CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A938BCF5-10B9-45A2-9553-550B2BDBF7CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A938BCF5-10B9-45A2-9553-550B2BDBF7CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06922CCB-A47E-433D-9BD8-4D8569D5C2A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06922CCB-A47E-433D-9BD8-4D8569D5C2A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06922CCB-A47E-433D-9BD8-4D8569D5C2A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06922CCB-A47E-433D-9BD8-4D8569D5C2A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="village_spawn" TerrainOffset="-0.03125" AllowHeightAdjustment="True">
+    <Position x="-915761.4" y="164909.3" z="3977318" />
+    <Orientation w="1" x="0" y="-0.33" z="0" />
+  </Waypoint>
+  <StaticObject Name="human_house_01" Mesh="human_house_open.mesh" PerceptionRadius="1000000" CastShadows="True" TerrainOffest="1210.484" AllowHeightAdjustment="True">
+    <Position x="-917360.4" y="166590.3" z="4007427" />
+    <Orientation w="0.2419219" x="0" y="-0.9702957" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_house_open_porchshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_open_rampshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_openshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="human_house_02" Mesh="human_house_open.mesh" PerceptionRadius="1000000" CastShadows="True" TerrainOffest="765.6875" AllowHeightAdjustment="True">
+    <Position x="-908092.4" y="164569.1" z="3994896" />
+    <Orientation w="0.8870108" x="0" y="-0.4617486" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_house_open_porchshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_open_rampshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_openshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="tall_shack_01" Mesh="human_shack_tall.mesh" PerceptionRadius="1000000" CastShadows="True" TerrainOffest="600.0313" AllowHeightAdjustment="True">
+    <Position x="-925290.4" y="165367.5" z="3968427" />
+    <Orientation w="0.9271839" x="0" y="-0.3746066" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <ParticleEffect ParticleEffectName="smoke" ParticleScale="2" VelocityScale="1.5" AttachmentPoint="chimney" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_shack_tallshape-obj.0" MaterialName="human_shack_tall.human_shack_tall_texture" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="wishbone_house_01" Mesh="human_house_wishbone.mesh" PerceptionRadius="1000000" CastShadows="True" TerrainOffest="1322.641" AllowHeightAdjustment="True">
+    <Position x="-936535.4" y="166201" z="3978427" />
+    <Orientation w="0.8788171" x="0" y="0.4771588" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_wishbone_houseshape-obj.0" MaterialName="human_house_wishbone._01_-_Default" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <PointLight Name="fireplace" TerrainOffset="1368" AllowHeightAdjustment="True" AttenuationConstant="1" AttenuationLinear="1E-05" AttenuationQuadratic="0" AttenuationRange="1000000">
+    <Position x="-924919.5" y="166009.6" z="3965172" />
+    <Diffuse R="0.8941177" G="0.5333334" B="0.3803922" />
+    <Specular R="0.8235294" G="0.6901961" B="0.282353" />
+  </PointLight>
+  <StaticObject Name="spear_torch_01" Mesh="spear.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="1759.484" AllowHeightAdjustment="True">
+    <Position x="-934082.1" y="166885" z="3982582" />
+    <Orientation w="0.8788171" x="0" y="0.4771588" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="spear_polySurfaceShape1-lib.0/spear____Default____Standard__" MaterialName="spear.spear____Default____Standard__" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="spear_torch_02" Mesh="spear.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="1746.078" AllowHeightAdjustment="True">
+    <Position x="-931742.1" y="166926.5" z="3979144" />
+    <Orientation w="0.9455186" x="0" y="0.3255681" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="spear_polySurfaceShape1-lib.0/spear____Default____Standard__" MaterialName="spear.spear____Default____Standard__" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="torch_01" TerrainOffset="2710.5" AllowHeightAdjustment="True">
+    <Position x="-933998.1" y="167845.1" z="3982628" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="torch_02" TerrainOffset="2949.234" AllowHeightAdjustment="True">
+    <Position x="-931708.1" y="168135" z="3979236" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Road Name="thomas boulevard" HalfWidth="2">
+    <PointCollection>
+      <Point x="-973525.3" y="152850.1" z="3629575" />
+      <Point x="-934891" y="157843.3" z="3715999" />
+      <Point x="-940369.8" y="155102.6" z="3734736" />
+      <Point x="-935369.8" y="151934.2" z="3756061" />
+      <Point x="-919773.6" y="152579.2" z="3768999" />
+      <Point x="-929445.8" y="147133.7" z="3806999" />
+      <Point x="-947871.5" y="144174.2" z="3828999" />
+      <Point x="-953302.2" y="147881.6" z="3872999" />
+      <Point x="-943223.7" y="159023.6" z="3927746" />
+      <Point x="-934223.7" y="163406" z="3953221" />
+      <Point x="-936223.7" y="164641.7" z="3968037" />
+    </PointCollection>
+  </Road>
+  <Waypoint Name="village_spawn_02" TerrainOffset="0" AllowHeightAdjustment="True">
+    <Position x="-797685.1" y="169346.3" z="3840462" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <StaticObject Name="village_column_ruin" Mesh="colonnade.mesh" PerceptionRadius="1000000" CastShadows="True" TerrainOffest="-3397.234" AllowHeightAdjustment="True">
+    <Position x="-925509.6" y="152320.4" z="3732290" />
+    <Orientation w="0.9862856" x="0" y="0.1650476" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="village_column_ruin_02" Mesh="colonnade.mesh" PerceptionRadius="1000000" CastShadows="True" TerrainOffest="-2299.922" AllowHeightAdjustment="True">
+    <Position x="-910726.2" y="152730.9" z="3741290" />
+    <Orientation w="0.7880108" x="0" y="0.6156615" z="0" />
+    <Scale x="1.21" y="1.21" z="1.21" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="village_column_ruin_03" Mesh="colonnade.mesh" PerceptionRadius="1000000" CastShadows="True" TerrainOffest="-1399.938" AllowHeightAdjustment="True">
+    <Position x="-927446" y="152866.2" z="3742290" />
+    <Orientation w="0.6293204" x="0" y="0.7771459" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="village_tele_01" Mesh="gazebo_sand.mesh" PerceptionRadius="1000000" CastShadows="True" TerrainOffest="500.0313" AllowHeightAdjustment="True">
+    <Position x="-912187" y="163660" z="3943478" />
+    <Orientation w="0.7071068" x="0" y="0.7071068" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="gazebo_a-lib.0" MaterialName="gazebo_sand.gazebo_a_texture" Show="True" />
+      <SubMeshInfo Name="gazebo_a-lib.1" MaterialName="gazebo_sand.gazebo_floor_texture" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="village_column_spawn" TerrainOffset="0.046875" AllowHeightAdjustment="True">
+    <Position x="-921414.1" y="154756.6" z="3736290" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="village_tele" TerrainOffset="0.03125" AllowHeightAdjustment="True">
+    <Position x="-912187" y="163160" z="3943478" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <ParticleEffect ParticleEffectName="teleporter" ParticleScale="1" VelocityScale="1" />
+  </Waypoint>
+  <Waypoint Name="village_tele_dest" TerrainOffset="-0.734375" AllowHeightAdjustment="True">
+    <Position x="-912225" y="163530" z="3954492" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="village_mob_1" TerrainOffset="0.015625" AllowHeightAdjustment="True">
+    <Position x="-978094.3" y="156413.4" z="3944592" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="village_npc_1" TerrainOffset="-32.28125" AllowHeightAdjustment="True">
+    <Position x="-930654.4" y="165287.4" z="3981889" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="village_npc_2" TerrainOffset="714.8281" AllowHeightAdjustment="True">
+    <Position x="-917513.4" y="165796.4" z="3993387" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="village_npc_3" TerrainOffset="1735.203" AllowHeightAdjustment="True">
+    <Position x="-914857" y="166827" z="4007961" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="village_npc_4" TerrainOffset="-0.921875" AllowHeightAdjustment="True">
+    <Position x="-934708" y="165791" z="3994339" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="village_npc_5" TerrainOffset="-0.78125" AllowHeightAdjustment="True">
+    <Position x="-935285" y="165265" z="3987467" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="village_mob_1" TerrainOffset="1409999" AllowHeightAdjustment="True">
+    <Position x="-995117" y="1561174" z="3926486" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="village_mob_2" TerrainOffset="-0.40625" AllowHeightAdjustment="True">
+    <Position x="-918183" y="154362" z="3740437" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+</WorldObjectCollection>

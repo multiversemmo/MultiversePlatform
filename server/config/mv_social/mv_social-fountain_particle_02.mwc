@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="fountain_09" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="354469.8" y="71000" z="293951.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="fountain_10" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="317569.8" y="71000" z="299751.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="fountain_11" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="316569.8" y="71000" z="288571.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="fountain_12" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="324182.6" y="71000" z="288363.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="fountain_13" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="332469.8" y="71000" z="288197" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="fountain_14" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="340569.8" y="71000" z="287952.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="founatin_15" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="333069.8" y="71000" z="300280.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="fountain_16" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="340869.8" y="71000" z="300210.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="fountain_17" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="324660.5" y="71000" z="299728.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

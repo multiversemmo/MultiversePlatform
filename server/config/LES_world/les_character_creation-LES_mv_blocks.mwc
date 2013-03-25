@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="cam_position_01" TerrainOffset="166474.5" AllowHeightAdjustment="False" Azimuth="0" Zenith="0">
+    <Position x="26133.77" y="166474.5" z="-1193304" />
+    <Orientation x="0.7071068" y="0" z="0" w="0.7071068" />
+  </Waypoint>
+  <StaticObject Name="25_30_B_01" Mesh="LES_building_25x30_B.mesh" TerrainOffest="166585.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="0" Zenith="90">
+    <Position x="4173.44" y="166585.5" z="-1211274" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_25x30_B_decals-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="40_30_B_01" Mesh="LES_building_40x30_B.mesh" TerrainOffest="166604.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="180" Zenith="90">
+    <Position x="-22552.97" y="166604.5" z="-1151802" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x30_B-lib.0" MaterialName="LES_building_40x30_B.LES_building_40x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_40x30_B_decal-lib.0" MaterialName="LES_building_40x30_B.LES_building_40x30_B_macro_diffuse_decal" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_30_B_05" Mesh="LES_building_25x30_B.mesh" TerrainOffest="166474.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="False" Azimuth="-90" Zenith="90">
+    <Position x="97193.75" y="166474.5" z="-1203769" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_macro_diffuse" Show="True" />
+      <SubMeshInfo Name="LES_building_25x30_B_decals-lib.0" MaterialName="LES_building_25x30_B.LES_building_25x30_B_decals" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="30_10_A_01" Mesh="LES_building_30x10_A.mesh" TerrainOffest="166585.5" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="16177.87" y="166585.5" z="-1148646" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_30x10_A-lib.0" MaterialName="LES_building_30x10_A.LES_building_30x10_A_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="avatar" Mesh="LES_avatar.mesh" TerrainOffest="166454.5" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True" Azimuth="110" Zenith="90">
+    <Position x="23133.77" y="166454.5" z="-1193204" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.8191521" z="0" w="0.5735765" />
+    <SubMeshes>
+      <SubMeshInfo Name="hair_pony-mesh.0" MaterialName="LES_avatar.hair_pony" Show="True" />
+      <SubMeshInfo Name="legs_capris-mesh.0" MaterialName="LES_avatar.legs_capris" Show="False" />
+      <SubMeshInfo Name="legs_skirt-mesh.0" MaterialName="LES_avatar.legs_skirt" Show="True" />
+      <SubMeshInfo Name="skateboard-mesh.0" MaterialName="LES_avatar.skateboard" Show="False" />
+      <SubMeshInfo Name="hair_bob2-mesh.0" MaterialName="LES_avatar.hair_bob2" Show="False" />
+      <SubMeshInfo Name="hair_layers-mesh.0" MaterialName="LES_avatar.hair_layers" Show="False" />
+      <SubMeshInfo Name="hair_bob-mesh.0" MaterialName="LES_avatar.hair_bob" Show="False" />
+      <SubMeshInfo Name="torso_leotard-mesh.0" MaterialName="LES_avatar.torso_leotard" Show="True" />
+      <SubMeshInfo Name="head_aa_01-mesh.0" MaterialName="LES_avatar.head_aa_01" Show="False" />
+      <SubMeshInfo Name="head_cauc_01-mesh.0" MaterialName="LES_avatar.head_cauc_01" Show="False" />
+      <SubMeshInfo Name="head_asian_01-mesh.0" MaterialName="LES_avatar.head_asian_01" Show="True" />
+      <SubMeshInfo Name="torso_strapless-mesh.0" MaterialName="LES_avatar.torso_strapless" Show="False" />
+      <SubMeshInfo Name="torso_sleeveless-mesh.0" MaterialName="LES_avatar.torso_sleeveless" Show="False" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <PointLight Name="club_light_01" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="166232.5" AllowHeightAdjustment="True">
+    <Position x="13194.24" y="166232.5" z="-1141716" />
+    <Specular R="0.945098" G="0.9921569" B="0.9960784" />
+    <Diffuse R="0.8627451" G="0.9294118" B="0.972549" />
+  </PointLight>
+  <PointLight Name="club_light_02" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="169474.5" AllowHeightAdjustment="True">
+    <Position x="12094.24" y="169474.5" z="-1170016" />
+    <Specular R="0.9254902" G="0.9607843" B="0.8705882" />
+    <Diffuse R="0.8862745" G="0.8627451" B="0.7803922" />
+  </PointLight>
+  <PointLight Name="club_light_03" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="169632.5" AllowHeightAdjustment="True">
+    <Position x="8394.24" y="169632.5" z="-1161716" />
+    <Specular R="0.8705882" G="0.9803922" B="0.7960784" />
+    <Diffuse R="0.8666667" G="0.8862745" B="0.7960784" />
+  </PointLight>
+  <PointLight Name="bar_light_low_01" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="162832.5" AllowHeightAdjustment="True">
+    <Position x="11994.24" y="162832.5" z="-1156716" />
+    <Specular R="0.8784314" G="0.8117647" B="0.9529412" />
+    <Diffuse R="0.7333333" G="0.6901961" B="0.8431373" />
+  </PointLight>
+  <PointLight Name="club_light_entry" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="166232.5" AllowHeightAdjustment="True">
+    <Position x="19494.24" y="166232.5" z="-1159416" />
+    <Specular R="0.9411765" G="0.9686275" B="0.9019608" />
+    <Diffuse R="0.9333333" G="0.9098039" B="0.7568628" />
+  </PointLight>
+  <PointLight Name="club_light_center" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="166232.5" AllowHeightAdjustment="True">
+    <Position x="13594.24" y="166232.5" z="-1148016" />
+    <Specular R="0.8470588" G="0.9607843" B="0.9176471" />
+    <Diffuse R="0.7568628" G="0.8901961" B="0.9568627" />
+  </PointLight>
+  <PointLight Name="club_light_04" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="166232.5" AllowHeightAdjustment="True">
+    <Position x="9894.24" y="166232.5" z="-1150116" />
+    <Specular R="0.8666667" G="0.9372549" B="0.9764706" />
+    <Diffuse R="0.8235294" G="0.9176471" B="0.9333333" />
+  </PointLight>
+  <PointLight Name="club_light_jukebox" AttenuationRange="100000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="163875" AllowHeightAdjustment="True">
+    <Position x="20046.27" y="163875" z="-1151537" />
+    <Specular R="0.8352941" G="0.8941177" B="0.9921569" />
+    <Diffuse R="0.6078432" G="0.9411765" B="0.9411765" />
+  </PointLight>
+  <PointLight Name="stage_light_01" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="165875" AllowHeightAdjustment="True">
+    <Position x="19046.27" y="165875" z="-1143137" />
+    <Specular R="0.7882353" G="0.9607843" B="0.9137255" />
+    <Diffuse R="0.7960784" G="0.8705882" B="0.9294118" />
+  </PointLight>
+  <PointLight Name="club_light_05" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="166275" AllowHeightAdjustment="True">
+    <Position x="15046.27" y="166275" z="-1150137" />
+    <Specular R="0.827451" G="0.7882353" B="0.945098" />
+    <Diffuse R="0.8823529" G="0.7843137" B="0.9176471" />
+  </PointLight>
+  <PointLight Name="club_light_06" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="166275" AllowHeightAdjustment="True">
+    <Position x="15246.27" y="166275" z="-1156337" />
+    <Specular R="0.8666667" G="0.9686275" B="0.9333333" />
+    <Diffuse R="0.8039216" G="0.9019608" B="0.7843137" />
+  </PointLight>
+  <PointLight Name="club_light_07" AttenuationRange="1000000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="1.388889E-08" TerrainOffset="166275" AllowHeightAdjustment="True">
+    <Position x="14946.27" y="166275" z="-1133337" />
+    <Specular R="0.682353" G="0.7882353" B="0.8509804" />
+    <Diffuse R="0.7372549" G="0.8039216" B="0.8392157" />
+  </PointLight>
+  <PointLight Name="club_light_08" AttenuationRange="1E+07" AttenuationConstant="1" AttenuationLinear="1E-05" AttenuationQuadratic="0" TerrainOffset="166175" AllowHeightAdjustment="True">
+    <Position x="15346.27" y="166175" z="-1129337" />
+    <Specular R="0.7019608" G="0.3254902" B="0.8431373" />
+    <Diffuse R="0.5843138" G="0.7803922" B="0.6862745" />
+  </PointLight>
+</WorldObjectCollection>

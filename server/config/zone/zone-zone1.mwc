@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="1">
+  <Road Name="r" HalfWidth="2">
+    <PointCollection>
+      <Point x="0" y="20000" z="200000" />
+      <Point x="0" y="20000" z="-200000" />
+    </PointCollection>
+  </Road>
+  <StaticObject Name="r" Mesh="human_house.mesh" Sound="">
+    <Position x="-22306.63" y="20000" z="5000.596" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-1" Mesh="human_house.mesh" Sound="">
+    <Position x="-66306.63" y="20000" z="3142.549" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-2" Mesh="human_house.mesh" Sound="">
+    <Position x="-120306.6" y="20000" z="-536.6163" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-3" Mesh="human_house.mesh" Sound="">
+    <Position x="-186306.6" y="20000" z="-3594.843" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-4" Mesh="human_house.mesh" Sound="">
+    <Position x="-267306.7" y="20000" z="-9319.125" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-5" Mesh="human_house.mesh" Sound="">
+    <Position x="36693.38" y="20000" z="6625.87" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-6" Mesh="human_house.mesh" Sound="">
+    <Position x="80693.38" y="20000" z="8733.048" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-7" Mesh="human_house.mesh" Sound="">
+    <Position x="127082.3" y="20000" z="9436.387" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-8" Mesh="human_house.mesh" Sound="">
+    <Position x="173082.3" y="20000" z="12961.77" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-9" Mesh="human_house.mesh" Sound="">
+    <Position x="209082.3" y="20000" z="13981.67" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-10" Mesh="human_house.mesh" Sound="">
+    <Position x="-356917.7" y="20000" z="-21654.3" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-11" Mesh="human_house.mesh" Sound="">
+    <Position x="252741.8" y="20000" z="14225.29" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="-12" Mesh="human_house.mesh" Sound="">
+    <Position x="302741.9" y="20000" z="9841.728" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawn" Sound="">
+    <Position x="-26239.93" y="20000" z="24434.62" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

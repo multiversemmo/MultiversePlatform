@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EventObjects>
+  <Event EventString="axiomToggleMoveCameraOnPlane" Text="Toggle lock camera to plane" Context="world view" />
+  <Event EventString="axiomOnCameraOnPlane" Text="Turn on lock camera to plane" Context="world view" />
+  <Event EventString="axiomOffCameraOnPlane" Text="Turn off lock camera to plane" Context="world view" />
+  <Event EventString="axiomCameraMoveSpeedUp" Text="Increase the camera move speed" Context="world view" />
+  <Event EventString="axiomCameraMoveSpeedUpStop" Text="Stop increasing move speed" Context="world view" />
+  <Event EventString="axiomCameraMoveSpeedDown" Text="Decrease the camera move speed" Context="world view" />
+  <Event EventString="axiomCameraMoveSpeedDownStop" Text="Stop decreasing move speed" Context="world view" />
+  <Event EventString="axiomToggleAccelerate" Text="Toggle the acceleration of camera movement" Context="world view" />
+  <Event EventString="axiomCameraAccelerateUp" Text="Increase the rate at which the camera accelerates" Context="world view" />
+  <Event EventString="axiomCameraAccelerateUpStop" Text="Stop increasing the camera acceleration rate" Context="world view" />
+  <Event EventString="axiomCameraAccelerateDown" Text="Decrease the rate at which the camera accelerates" Context="world view" />
+  <Event EventString="axiomCameraAccelerateDownStop" Text="Stop decreasing the rate of the camera acceleration" Context="world view" />
+  <Event EventString="axiomMoveCameraForward" Text="Move the camera forward" Context="world view" />
+  <Event EventString="axiomMoveCameraForwardStop" Text="Stop moving the camera forward" Context="world view" />
+  <Event EventString="axiomMoveCameraBack" Text="Move the camera back" Context="world view" />
+  <Event EventString="axiomMoveCameraBackStop" Text="Stop moving the camera back" Context="world view" />
+  <Event EventString="axiomMoveCameraLeft" Text="Move the camera left" Context="world view" />
+  <Event EventString="axiomMoveCameraLeftStop" Text="Stop moving the camera left" Context="world view" />
+  <Event EventString="axiomMoveCameraRight" Text="Move the camera right" Context="world view" />
+  <Event EventString="axiomMoveCameraRightStop" Text="Stop moving the camera right" Context="world view" />
+  <Event EventString="axiomMoveCameraStop" Text="Stop the camera movement" Context="world view" />
+  <Event EventString="axiomTurnCameraLeft" Text="Turn camera left" Context="world view" />
+  <Event EventString="axiomTurnCameraLeftStop" Text="Stop Turning camera left" Context="world view" />
+  <Event EventString="axiomTurnCameraRight" Text="Turn camera right" Context="world view" />
+  <Event EventString="axiomTurnCameraRightStop" Text="Stop Turning camera right" Context="world view" />
+  <Event EventString="axiomTurnCameraDown" Text="Turn camera down" Context="world view" />
+  <Event EventString="axiomTurnCameraDownStop" Text="Stop Turning camera down" Context="world view" />
+  <Event EventString="axiomTurnCameraUp" Text="Turn camera up" Context="world view" />
+  <Event EventString="axiomTurnCameraUpStop" Text="Stop Turning camera up" Context="world view" />
+  <Event EventString="axiomDeleteObject" Text="Delete Objects" Context="world view" />
+  <Event EventString="axiomMouseTurnCamera" Text="Mouse turns camera" Context="world view" />
+  <Event EventString="axiomMouseSelectObject" Text="Mouse selects object under pointer" Context="world view" />
+  <Event EventString="axiomMouseSelectMultipleObject" Text="Mouse selects multiple objects" Context="world view" />
+  <Event EventString="axiomCameraLookDownSouth" Text="Point camera down and to south" Context="world view" />
+  <Event EventString="axiomWarpCamera" Text="Move camera to same height above mouse position" Context="world view" />
+  <Event EventString="axiomSetCameraSpeedPreset1" Text="Set Camera speed to preset 1" Context="world view" />
+  <Event EventString="axiomSetCameraSpeedPreset2" Text="Set Camera speed to preset 2" Context="world view" />
+  <Event EventString="axiomSetCameraSpeedPreset3" Text="Set Camera speed to preset 3" Context="world view" />
+  <Event EventString="axiomSetCameraSpeedPreset4" Text="Set Camera speed to preset 4" Context="world view" />
+  <Event EventString="axiomSetPresetMWM1" Text="Set Mouse Wheel Multiplier to preset 1" Context="world view" />
+  <Event EventString="axiomSetPresetMWM2" Text="Set Mouse Wheel Multiplier to preset 2" Context="world view" />
+  <Event EventString="axiomSetPresetMWM3" Text="Set Mouse Wheel Multiplier to preset 3" Context="world view" />
+  <Event EventString="axiomSetPresetMWM4" Text="Set Mouse Wheel Multiplier to preset 4" Context="world view" />
+  <Event EventString="axiomSetAccelPreset1" Text="Set camera acceleration preset 1" Context="world view" />
+  <Event EventString="axiomSetAccelPreset2" Text="Set camera acceleration preset 2" Context="world view" />
+  <Event EventString="axiomSetAccelPreset3" Text="Set camera acceleration preset 3" Context="world view" />
+  <Event EventString="axiomSetAccelPreset4" Text="Set camera acceleration preset 4" Context="world view" />
+  <Event EventString="axiomCopy" Text="Copy" Context="world view" />
+  <Event EventString="axiomCut" Text="Cut" Context="world view" />
+  <Event EventString="axiomPaste" Text="Paste" Context="world view" />
+  <Event EventString="axiomMoveCameraToSelectedMarker" Text="Sets the camera to the position and orientation of the selected Marker" Context="world view" />	
+  <Event EventString="worldEditorToggleLockCameraToObject" Text="Toggle lock camera to object" Context="global" />
+  <Event EventString="worldEditorTakeScreenShotOn" Text="Turn on screenshots" Context="global" />
+  <Event EventString="worldEditorTakeScreenShotOff" Text="Turn off screenshots" Context="global" />
+  <Event EventString="worldEditorUndo" Text="Undo" Context="global" />
+  <Event EventString="worldEditorRedo" Text="Redo" Context="global" />
+  <Event EventString="worldEditorCopy" Text="Copy" Context="global" />
+  <Event EventString="worldEditorCut" Text="Cut" Context="global" />
+  <Event EventString="worldEditorPaste" Text="Paste" Context="global" />
+  <Event EventString="worldEditorNewWorld" Text="New world" Context="global" />
+  <Event EventString="worldEditorLoadWorld" Text="Open world" Context="global" />
+  <Event EventString="worldEditorExit" Text="Exit" Context="global" />
+  <Event EventString="worldEditorSaveWorld" Text="Save world" Context="global" />
+  <Event EventString="worldEditorTreeViewSearch" Text="Tree view search" Context="global" />
+  <Event EventString="worldEditorEditPreferences" Text="Launch user preferences editor" Context="global" />
+  <Event EventString="worldEditorControlMappingEditor" Text="Launch control mapping editor" Context="global" />
+  <Event EventString="worldEditorDisplayPointLightCircles" Text="Toggle Display of Point Light Attenuation Circles" Context="global" />
+  <Event EventString="worldEditorMoveCameraForward" Text="Move camera forward" Context="global" />
+  <Event EventString="worldEditorMoveCameraForwardStop" Text="Stop moving camera forward" Context="global" />
+  <Event EventString="worldEditorMoveCameraBack" Text="Move camera back" Context="global" />
+  <Event EventString="worldEditorMoveCameraBackStop" Text="Stop moving camera back" Context="global" />
+  <Event EventString="worldEditorMoveCameraLeft" Text="Move camera left" Context="global" />
+  <Event EventString="worldEditorMoveCameraLeftStop" Text="Stop moving camera left" Context="global" />
+  <Event EventString="worldEditorMoveCameraRight" Text="Move camera right" Context="global" />
+  <Event EventString="worldEditorMoveCameraRightStop" Text="Stop moving  camera right" Context="global" />
+  <Event EventString="worldEditorMoveCameraUp" Text="Move the camera up (relative to ground)" Context="global" />
+  <Event EventString="worldEditorMoveCameraUpStop" Text="Stop moving the camera up(relative to ground)" Context="global" />
+  <Event EventString="worldEditorMoveCameraDown" Text="Move the camera down" Context="global" />
+  <Event EventString="worldEditorMoveCameraDownStop" Text="Stop moving the camera down" Context="global" />
+  <Event EventString="treeViewMoveToNextNode" Text="Move to the next Tree View node" Context="treeView" />
+  <Event EventString="treeViewMoveToPrevNode" Text="Move to the previous Tree View node" Context="treeView" />
+  <Event EventString="treeViewExpandSelectedNode" Text="Expand the current Tree View node" Context="treeView" />
+  <Event EventString="treeViewExpandAllSelectedNode" Text="Expand all child nodes of the current node" Context="treeView" />
+  <Event EventString="treeViewCollapseSelectedNode" Text="Collapse the current Tree View node" Context="treeView" />
+  <Event EventString="treeViewCopy" Text="Copy" Context="treeView" />
+  <Event EventString="treeViewCut" Text="Cut" Context="treeView" />
+  <Event EventString="treeViewPaste" Text="Paste" Context="treeView" />
+  <Event EventString="treeViewDeleteObject" Text="Delete objects" Context="treeView" />
+</EventObjects>

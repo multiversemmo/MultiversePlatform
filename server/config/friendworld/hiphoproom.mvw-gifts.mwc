@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="hiphop_doll" Mesh="FRW_gift_doll.mesh" TerrainOffest="2398" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="109737.8" y="22398" z="-196345.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="doll_legs-lib.0" MaterialName="FRW_gift_doll.cutout_legs" Show="True" />
+      <SubMeshInfo Name="doll_head-lib.0" MaterialName="FRW_gift_doll.cutout_face" Show="True" />
+      <SubMeshInfo Name="doll_hair-lib.0" MaterialName="FRW_gift_doll.cutout_hair" Show="True" />
+      <SubMeshInfo Name="doll_torso-lib.0" MaterialName="FRW_gift_doll.cutout_torso" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_flowers_white" Mesh="FRW_gift_flowers_white.mesh" TerrainOffest="1448" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="97773.93" y="21448" z="-201353.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="flowers-lib.0" MaterialName="FRW_gift_flowers_white.flowers_white" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_grammy" Mesh="FRW_gift_grammy.mesh" TerrainOffest="1617" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="105035" y="21617" z="-196353.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="grammy-lib.0" MaterialName="FRW_gift_grammy.grammy" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_mannequin" Mesh="FRW_gift_mannequin.mesh" TerrainOffest="838" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="108166.9" y="20838" z="-205633.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="cutout_hair-lib.0" MaterialName="FRW_gift_mannequin.cutout_hair" Show="True" />
+      <SubMeshInfo Name="cutout_legs-lib.0" MaterialName="FRW_gift_mannequin.cutout_legs" Show="True" />
+      <SubMeshInfo Name="cutout_torso-lib.0" MaterialName="FRW_gift_mannequin.cutout_torso" Show="True" />
+      <SubMeshInfo Name="cutout_head-lib.0" MaterialName="FRW_gift_mannequin.cutout_face" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_pimpdog" Mesh="FRW_gift_pimpdog.mesh" TerrainOffest="1618" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="104613.9" y="21618" z="-196253.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="pimpdog-lib.0" MaterialName="FRW_gift_pimpdog.pimpdog" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_statuette" Mesh="FRW_gift_statuette.mesh" TerrainOffest="1600" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="104486" y="21600" z="-201143.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="statue-lib.0" MaterialName="FRW_gift_statuette.grammy" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_toper_cat" Mesh="FRW_gift_topher_cat.mesh" TerrainOffest="1445.811" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="136" Zenith="90">
+    <Position x="97837.95" y="21445.81" z="-200153" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.9271839" z="0" w="0.3746066" />
+    <SubMeshes>
+      <SubMeshInfo Name="topher_cat-lib.0" MaterialName="FRW_gift_topher_cat.cat" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_zombie_cat" Mesh="FRW_gift_zombie_cat.mesh" TerrainOffest="1444.801" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="64" Zenith="90">
+    <Position x="97785.35" y="21444.8" z="-200866.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.5299193" z="0" w="0.8480481" />
+    <SubMeshes>
+      <SubMeshInfo Name="zombie_cat-lib.0" MaterialName="FRW_gift_zombie_cat.cat" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

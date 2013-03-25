@@ -1,0 +1,11 @@
+Mesh:barrel.mesh
+Mesh:unit_box.mesh
+Material:wallvideo.wall
+Mesh:LogWallMovieScreen.mesh
+Material:wallvideo.wall
+Mesh:unit_box.mesh
+Material:wallbrowser.wall
+Texture:splatting_sand.dds
+Texture:splatting_grass.dds
+Texture:splatting_rock.dds
+Texture:splatting_snow.dds

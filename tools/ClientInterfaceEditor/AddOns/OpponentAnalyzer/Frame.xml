@@ -1,0 +1,52 @@
+﻿<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="Frame.lua" />
+	<Frame name="DemoFrame" parent="UIParent" toplevel="true" movable="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="172" y="200" />
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="81" y="-132" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Scripts>
+			<OnLoad>DemoFrame_OnLoad();</OnLoad>
+			<OnEvent>DemoFrame_OnEvent();</OnEvent>
+			<OnMouseDown>self:StartMoving();</OnMouseDown>
+			<OnMouseUp>self:StopMovingOrSizing();</OnMouseUp>
+		</Scripts>
+		<Layers>
+			<Layer>
+				<FontString name="DemoCaption" inherits="GameFontNormalSmall" text="Analyzer" justifyH="LEFT">
+					<Size x="103" y="15" />
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeTo="">
+							<Offset x="15" y="-15" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<Texture name="DemoImage" file="Interface\AddOns\OpponentAnalyzer\squirrel">
+					<Size x="128" y="128" />
+					<Anchors>
+						<Anchor point="CENTER" relativeTo="">
+							<Offset x="0" y="-8" />
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+	</Frame>
+</Ui>

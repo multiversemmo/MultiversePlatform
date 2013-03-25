@@ -1,0 +1,27 @@
+<VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>ASP.NET Web Service</Name>
+    <Description>A Web site for creating XML Web services (.NET Framework 3.5)</Description>
+    <ProjectType>Web</ProjectType>
+    <ProjectSubType>IronPython</ProjectSubType>
+    <SortOrder>20</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>WebSite</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <EnableEditOfLocationField>true</EnableEditOfLocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <LocationField>Hidden</LocationField>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="WebService.webproj" ReplaceParameters="false">
+      <Folder Name="App_Code">
+        <ProjectItem OpenInEditor="true" OpenOrder="10">Service.py</ProjectItem>
+      </Folder>
+      <Folder Name="App_Data">
+      </Folder>
+      <ProjectItem>Service.asmx</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

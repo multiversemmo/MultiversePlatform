@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DNPreBuild xmlns="http://dnpb.sourceforge.net/schemas/dnpb-1.2.xsd" version="1.2">
+	<Solution name="Axiom" path=".">
+		<Configuration name="Debug">
+			<Options>
+				<CompilerDefines>TRACE;DEBUG</CompilerDefines>
+				<OptimizeCode>false</OptimizeCode>
+				<AllowUnsafe>true</AllowUnsafe>
+				<OutputPath>bin\Debug</OutputPath>
+				<DebugInformation>true</DebugInformation>
+			</Options>
+		</Configuration>
+		<Configuration name="Release">
+			<Options>
+				<CompilerDefines>TRACE</CompilerDefines>
+				<OptimizeCode>true</OptimizeCode>
+				<AllowUnsafe>true</AllowUnsafe>
+				<OutputPath>bin\Release</OutputPath>
+				<DebugInformation>false</DebugInformation>
+			</Options>
+		</Configuration>
+		<Project 
+			name="Demos" 
+			type="Exe" 
+			path="DemoTest" 
+			language="C#" 
+			runtime="Microsoft" >
+				
+			<ReferencePath>..\Dependencies\Managed</ReferencePath>
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Drawing" />
+			<Reference name="System.Windows.Forms" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.Engine" localCopy="true"/>
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			<Reference name="Axiom.Plugins.ParticleFX" localCopy="true"/>
+			<Reference name="Axiom.Plugins.CgProgramManager" localCopy="true"/>
+			<Reference name="Axiom.RenderSystems.DirectX9" localCopy="true"/>
+			<Reference name="Axiom.RenderSystems.OpenGL" localCopy="true"/>
+			<Reference name="Axiom.Platforms.Win32" localCopy="true"/>
+			<Reference name="Axiom.SceneManagers.Bsp" localCopy="true"/>
+			<Reference name="Axiom.SceneManagers.Octree" localCopy="true"/>
+			
+			<Files>
+				<Match pattern="*.cs" path="." recurse="true"/>
+			</Files>
+		</Project>
+		<Project 
+			name="Axiom.MathLib" 
+			type="Library" 
+			path="MathLib"
+			language="C#" 
+			runtime="Microsoft" >
+
+			<Reference name="System" />
+			
+			<Files>
+				<Match pattern="*.cs" path="." recurse="true"/>
+			</Files>
+		</Project>
+		<Project 
+			name="Axiom.Engine" 
+			type="Library" 
+			path="Engine" 
+			language="C#" 
+			runtime="Microsoft" >		
+			
+			<ReferencePath>..\Dependencies\Managed</ReferencePath>
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Drawing" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			<Reference name="Tao.DevIl" localCopy="true" />
+			<Reference name="ICSharpCode.SharpZipLib" localCopy="true" />
+			
+			<Files>
+				<Match pattern="*.cs" path="." recurse="true"/>
+			</Files>
+		</Project>
+
+		<?if OS = "Win32" ?>
+		<Project 
+			name="Axiom.Platforms.Win32" 
+			type="Library" 
+			path="Platforms/Win32" 
+			language="C#" 
+			runtime="Microsoft" >
+			
+			<ReferencePath>..\..\Dependencies\Managed</ReferencePath>
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Drawing" />
+			<Reference name="System.Windows.Forms" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.Engine" localCopy="true"/>
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			<Reference name="Microsoft.DirectX" />
+			<Reference name="Microsoft.DirectX.DirectInput" />
+			<Reference name="Tao.Platform.Windows" localCopy="true" />
+			
+			<Files>
+				<Match pattern="*.cs" path="." recurse="true"/>
+			</Files>
+		</Project>
+
+		<?else ?>
+
+		<Project 
+			name="Axiom.Platforms.SDL" 
+			type="Library" 
+			path="Platforms/SDL" 
+			language="C#" 
+			runtime="Microsoft" >
+			
+			<ReferencePath>..\..\Dependencies\Managed</ReferencePath>
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Drawing" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.Engine" localCopy="true"/>
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			<Reference name="Tao.Platform.Windows" localCopy="true" />
+			<Reference name="Tao.Sdl" localCopy="true" />
+			
+			<Files>
+				<Match pattern="*.cs" path="." recurse="true"/>
+			</Files>
+		</Project>
+
+		<?endif ?>
+
+		<?if OS = "Win32" ?>
+		
+		<Project 
+			name="Axiom.RenderSystems.DirectX9" 
+			type="Library" 
+			path="RenderSystems/DirectX9" 
+			language="C#" 
+			runtime="Microsoft" >
+			
+			<ReferencePath>..\..\Dependencies\Managed</ReferencePath>
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Drawing" />
+			<Reference name="System.Windows.Forms" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.Engine" localCopy="true"/>
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			<Reference name="Microsoft.DirectX" />
+			<Reference name="Microsoft.DirectX.Direct3D" />
+			<Reference name="Microsoft.DirectX.Direct3DX" />
+			<Reference name="Tao.Platform.Windows" localCopy="true" />
+			
+			<Files>
+				<Match pattern="*.cs" path="." recurse="true"/>
+			</Files>
+		</Project>
+
+		<?endif ?>
+
+		<Project 
+			name="Axiom.RenderSystems.OpenGL" 
+			type="Library" 
+			path="RenderSystems/OpenGL" 
+			language="C#" 
+			runtime="Microsoft" >
+			
+			<ReferencePath>..\..\Dependencies\Managed</ReferencePath>
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Drawing" />
+			<Reference name="System.Windows.Forms" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.Engine" localCopy="true"/>
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			<Reference name="Tao.OpenGl" localCopy="true" />
+
+			<?if OS = "Win32" ?>
+				<Reference name="Tao.Platform.Windows" localCopy="true" />
+			<?endif ?>
+			
+			<Files>
+				<Match pattern="*.cs" path="." />
+				<Match pattern="*.cs" path="./ATI" />
+				<Match pattern="*.cs" path="./Nvidia" />
+				<Match pattern="*.cs" path="./GLSL" />
+				<?if OS = "Win32" ?>
+					<Match pattern="*.cs" path="./Win32" />
+				<?else ?>
+					<Match pattern="*.cs" path="./SDL" />
+				<?endif ?>
+			</Files>
+		</Project>
+		<Project 
+			name="Axiom.Plugins.CgProgramManager" 
+			type="Library" 
+			path="Plugins/CgProgramManager" 
+			language="C#" 
+			runtime="Microsoft" >		
+			
+			<ReferencePath>..\..\Dependencies\Managed</ReferencePath>
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.Engine" localCopy="true"/>
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			<Reference name="Tao.Cg" localCopy="true" />
+			
+			<Files>
+				<Match pattern="*.cs" path="." />
+			</Files>
+		</Project>
+		<Project 
+			name="Axiom.Plugins.ParticleFX" 
+			type="Library" 
+			path="Plugins/ParticleFX" 
+			language="C#" 
+			runtime="Microsoft" >
+			
+			<ReferencePath>..\..\Dependencies\Managed</ReferencePath>
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.Engine" localCopy="true"/>
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			
+			<Files>
+				<Match pattern="*.cs" path="." recurse="true"/>
+			</Files>
+		</Project>
+		<Project 
+			name="Axiom.SceneManagers.Octree" 
+			type="Library" 
+			path="SceneManagers\Octree" 
+			language="C#" 
+			runtime="Microsoft" >
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.Engine" localCopy="true"/>
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			
+			<Files>
+				<Match pattern="*.cs" path="." recurse="true"/>
+			</Files>
+		</Project>
+		<Project 
+			name="Axiom.SceneManagers.Bsp" 
+			type="Library" 
+			path="SceneManagers\Bsp" 
+			language="C#" 
+			runtime="Microsoft" >
+
+			<Reference name="System" />
+			<Reference name="System.Data" />
+			<Reference name="System.Xml" />
+			<Reference name="Axiom.Engine" localCopy="true"/>
+			<Reference name="Axiom.MathLib" localCopy="true"/>
+			
+			<Files>
+				<Match pattern="*.cs" path="." recurse="true"/>
+			</Files>
+		</Project>
+	</Solution>
+</DNPreBuild>

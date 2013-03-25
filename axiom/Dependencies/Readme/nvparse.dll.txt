@@ -1,0 +1,6 @@
+NVparse is a small utility library, provided by NVIDIA to facilitate the use of vertex programs, 
+texture shaders and the register combiners. NVparse is normally shipped as a .LIB file for C++, 
+but I've recompiled it as a DLL and written a Delphi import unit for it.
+
+Tom Nuydens
+http://www.delphi3d.net

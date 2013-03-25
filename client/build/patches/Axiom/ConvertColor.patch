@@ -1,0 +1,89 @@
+Index: RenderSystems/DirectX9/D3D9RenderSystem.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/RenderSystems/DirectX9/D3D9RenderSystem.cs,v
+retrieving revision 1.11
+diff -b -u -r1.11 D3D9RenderSystem.cs
+--- RenderSystems/DirectX9/D3D9RenderSystem.cs	5 Dec 2004 14:22:01 -0000	1.11
++++ RenderSystems/DirectX9/D3D9RenderSystem.cs	13 Dec 2004 01:06:08 -0000
+@@ -1025,6 +1025,20 @@
+ 			return color.ToARGB();
+ 		}
+ 
++		/// <summary>
++		///   Convert the RenderSystem's encoding of color to an explicit portable one.
++		/// </summary>
++		/// <param name="color">The color as an integer</param>
++		/// <returns>ColorEx version of the RenderSystem specific int storage of color</returns>
++		public override ColorEx ConvertColor(int color) {
++			ColorEx colorEx = new ColorEx();
++			colorEx.a = (float)((color >> 24) % 256) / 255;
++			colorEx.r = (float)((color >> 16) % 256) / 255;
++			colorEx.g = (float)((color >> 8 ) % 256) / 255;
++			colorEx.b = (float)((color      ) % 256) / 255;
++			return colorEx;
++		}
++
+ 		public override void SetSceneBlending(SceneBlendFactor src, SceneBlendFactor dest) {
+ 			// set the render states after converting the incoming values to D3D.Blend
+ 			device.RenderState.SourceBlend = D3DHelper.ConvertEnum(src);
+Index: RenderSystems/OpenGL/GLRenderSystem.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/RenderSystems/OpenGL/GLRenderSystem.cs,v
+retrieving revision 1.10
+diff -b -u -r1.10 GLRenderSystem.cs
+--- RenderSystems/OpenGL/GLRenderSystem.cs	9 Dec 2004 00:19:07 -0000	1.10
++++ RenderSystems/OpenGL/GLRenderSystem.cs	13 Dec 2004 01:06:26 -0000
+@@ -1676,6 +1676,22 @@
+ 			return color.ToABGR();
+ 		}
+ 
++
++
++		/// <summary>
++		///   Convert the RenderSystem's encoding of color to an explicit portable one.
++		/// </summary>
++		/// <param name="color">The color as an integer</param>
++		/// <returns>ColorEx version of the RenderSystem specific int storage of color</returns>
++		public override ColorEx ConvertColor(int color) {
++            ColorEx colorEx = new ColorEx(); 
++            colorEx.a = (float)((color >> 24) % 256) / 255;
++            colorEx.b = (float)((color >> 16) % 256) / 255;
++            colorEx.g = (float)((color >> 8 ) % 256) / 255;
++            colorEx.r = (float)((color      ) % 256) / 255;
++			return colorEx;
++		}
++		
+ 		public override CullingMode CullingMode {
+ 			get {
+ 				return cullingMode;
+Index: Engine/Graphics/RenderSystem.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Engine/Graphics/RenderSystem.cs,v
+retrieving revision 1.21
+diff -b -u -r1.21 RenderSystem.cs
+--- Engine/Graphics/RenderSystem.cs	5 Dec 2004 00:17:52 -0000	1.21
++++ Engine/Graphics/RenderSystem.cs	13 Dec 2004 01:07:05 -0000
+@@ -709,7 +709,7 @@
+ 		public abstract void ClearFrameBuffer(FrameBuffer buffers, ColorEx color, float depth, int stencil);
+ 
+ 		/// <summary>
+-		///		Converts the System.Drawing.Color value to a int.  Each API may need the 
++		///		Converts the Axiom.Core.ColorEx value to a int.  Each API may need the 
+ 		///		bytes of the packed color data in different orders. i.e. OpenGL - ABGR, D3D - ARGB
+ 		/// </summary>
+ 		/// <param name="color"></param>
+@@ -717,6 +717,14 @@
+ 		public abstract int ConvertColor(ColorEx color);
+ 
+ 		/// <summary>
++		///		Converts the int value to an Axiom.Core.ColorEx object.  Each API may have the 
++		///		bytes of the packed color data in different orders. i.e. OpenGL - ABGR, D3D - ARGB
++		/// </summary>
++		/// <param name="color"></param>
++		/// <returns></returns>
++		public abstract ColorEx ConvertColor(int color);
++
++		/// <summary>
+ 		///    Creates and registers a render texture object.
+ 		/// </summary>
+ 		/// <param name="name">The name for the new render texture. Note that names must be unique.</param>

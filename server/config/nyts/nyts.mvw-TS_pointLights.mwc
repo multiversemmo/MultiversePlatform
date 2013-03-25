@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="streetProps" Mesh="nyts_props.mesh" TerrainOffest="5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="True" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="127070.5" y="20005" z="-320026" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="streetProps-lib.0" MaterialName="nyts_props.streetProps" Show="True" />
+      <SubMeshInfo Name="streetLights-lib.0" MaterialName="nyts_props.streetLights" Show="True" />
+    </SubMeshes>
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_01" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_02" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_03" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_04" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_05" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_06" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_07" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_08" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_09" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_10" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_11" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_12" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_13" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_14" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_15" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_16" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_17" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_18" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_19" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_20" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_21" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_22" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_23" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_24" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_25" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_26" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_27" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_28" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_29" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_30" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_31" />
+    <ParticleEffect ParticleEffectName="nyts_street_light" VelocityScale="1" ParticleScale="1" AttachmentPoint="streetLight_32" />
+  </StaticObject>
+  <PointLight Name="TS_45_01" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="113284.9" y="26651.29" z="-451530.6" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_45_02" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="103248" y="26651.29" z="-437346.5" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_45_03" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="125164.7" y="26651.29" z="-436788.3" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_Broadway_01" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="103263.9" y="26651.29" z="-406497.3" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_Broadway_02" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="120348.6" y="26651.29" z="-395168.9" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_44_01" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="103198.8" y="26651.29" z="-374254.2" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_44_02" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="139052.2" y="26651.29" z="-370854.2" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_44_03" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="126782.9" y="26651.29" z="-353154.2" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_44_04" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="91640.05" y="26651.29" z="-360475.2" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_Broadway_03" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="120154.8" y="26651.29" z="-323366.6" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_Broadway_04" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="131010.5" y="26651.29" z="-318866.6" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_43_01" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="127004.9" y="26651.29" z="-293690.5" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_43_02" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="132461.1" y="26651.29" z="-281357" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="TS_43_03" AttenuationRange="15000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6651.289" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="102861.1" y="26651.29" z="-277562.4" />
+    <Specular R="0.8392157" G="0.8392157" B="0.7058824" />
+    <Diffuse R="0.7607843" G="0.7529412" B="0.4784314" />
+  </PointLight>
+  <PointLight Name="edelmann_01abc" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="144008.6" y="24200" z="-355406.1" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.7254902" G="0.7254902" B="1" />
+  </PointLight>
+  <PointLight Name="edelmann_02abc" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="142177.8" y="24200" z="-345455.6" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.7333333" G="0.7333333" B="1" />
+  </PointLight>
+  <PointLight Name="edelmann_03abc" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="143205.2" y="24200" z="-336019.7" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.7333333" G="0.7333333" B="1" />
+  </PointLight>
+  <PointLight Name="edelmann_04sephora" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="146165.8" y="24200" z="-323722.3" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.8470588" G="0.8392157" B="0.7294118" />
+  </PointLight>
+  <PointLight Name="edelmann_05starbux" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="151365.8" y="24200" z="-305882.5" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.7960784" G="0.7764706" B="0.4039216" />
+  </PointLight>
+  <PointLight Name="edelmann_06starbux" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="155292.5" y="24200" z="-298463.6" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.8078431" G="0.6745098" B="0.3921569" />
+  </PointLight>
+  <PointLight Name="condenast_01nasdaq" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="157356.4" y="24200" z="-276620" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.7333333" G="0.7333333" B="1" />
+  </PointLight>
+  <PointLight Name="condenast_02nasdaq" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="156701.7" y="24200" z="-265626.9" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.8666667" G="0.8666667" B="1" />
+  </PointLight>
+  <PointLight Name="reuters_01att" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="97795.99" y="24200" z="-266898.1" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.7019608" G="0.9411765" B="0.9921569" />
+  </PointLight>
+  <PointLight Name="paramount_02overhang" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="3200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="102226.8" y="23200" z="-306396.6" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.9411765" G="0.8666667" B="0.8666667" />
+  </PointLight>
+  <PointLight Name="paramount_03patisserie" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="100327.3" y="24200" z="-323096.7" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.9019608" G="0.7019608" B="0.5686275" />
+  </PointLight>
+  <PointLight Name="paramount_01hardRock" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="5200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="100594.9" y="25200" z="-295580.8" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.9019608" G="0.7019608" B="0.5686275" />
+  </PointLight>
+  <PointLight Name="paramount_04bubba" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="100528.4" y="24200" z="-339867.8" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.9411765" G="0.8666667" B="0.8666667" />
+  </PointLight>
+  <PointLight Name="paramount_05gump" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="5200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="100894.4" y="25200" z="-358199.8" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.8901961" G="0.6470588" B="0.4" />
+  </PointLight>
+  <PointLight Name="viacom_01mtv" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="5200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="99694.41" y="25200" z="-386215.6" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.9568627" G="0.5921569" B="0.9568627" />
+  </PointLight>
+  <PointLight Name="millennium_01footlocker" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="131671.5" y="26200" z="-418956.9" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="1" G="0.2901961" B="0.3098039" />
+  </PointLight>
+  <PointLight Name="millennium_02screen" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="6200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="132689.4" y="26200" z="-400861" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.8509804" G="1" B="1" />
+  </PointLight>
+  <PointLight Name="millennium_03toysRus" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="2200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="140043.6" y="22200" z="-376726.2" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.8666667" G="0.8666667" B="1" />
+  </PointLight>
+  <PointLight Name="army_01" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="121313" y="24200" z="-300300.5" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.9882353" G="0.8784314" B="0.8784314" />
+  </PointLight>
+  <PointLight Name="army_02" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="121060.5" y="24200" z="-308406.9" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.9921569" G="0.8745098" B="0.8745098" />
+  </PointLight>
+  <PointLight Name="army_03" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="128265.6" y="24200" z="-300699.8" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.9921569" G="0.8745098" B="0.8745098" />
+  </PointLight>
+  <PointLight Name="army_04" AttenuationRange="10000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="4200" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="128265.6" y="24200" z="-307779.9" />
+    <Specular R="0.8431373" G="0.8431373" B="1" />
+    <Diffuse R="0.9921569" G="0.8745098" B="0.8745098" />
+  </PointLight>
+</WorldObjectCollection>

@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Boundary Name="swamp_trees_02" Priority="50">
+    <PointCollection>
+      <Point x="-234591.5" y="9946.969" z="3706760" />
+      <Point x="-223591.5" y="31300.69" z="2912873" />
+      <Point x="140087.3" y="79961.76" z="2596505" />
+      <Point x="529746.6" y="19216.32" z="2711505" />
+      <Point x="692180.6" y="234.6905" z="3129505" />
+      <Point x="686408.5" y="772.5812" z="3461219" />
+      <Point x="384408.5" y="363.5899" z="3767881" />
+      <Point x="-108591.5" y="2010.187" z="3848833" />
+    </PointCollection>
+    <Grass Name="swamp_grass_09">
+      <PlantType Name="Pampas Grass" ImageName="pampas" Instances="200" WindMagnitude="100" ScaleHeightLow="500" ScaleHeightHi="800" ScaleWidthLow="500" ScaleWidthHi="800" ColorMultHi="1" ColorMultLow="1" R="0.4705882" G="0.5137255" B="0.3137255" />
+    </Grass>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Venus Tree" Instances="25" Scale="10000" ScaleVariance="1000" Filename="VenusTree_RT.tre" />
+      <Tree Name="Umbrella Thorn" Instances="23" Scale="10000" ScaleVariance="1000" Filename="UmbrellaThorn_RT.tre" />
+      <Tree Name="Umbrella Thorn - Dead" Instances="55" Scale="10000" ScaleVariance="1000" Filename="UmbrellaThorn_RT_Dead.tre" />
+    </Forest>
+  </Boundary>
+  <StaticObject Name="orc_ey_poo" Mesh="orc.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="0.006835938" AllowHeightAdjustment="True">
+    <Position x="-22530.03" y="8305.979" z="3362625" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="Body_gggShape" MaterialName="orc.BODY" Show="True" />
+      <SubMeshInfo Name="Eyes_gggShape" MaterialName="orc.FACE" Show="True" />
+      <SubMeshInfo Name="Head_gggShape" MaterialName="orc.FACE" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="clonnade_02" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="0.109375" AllowHeightAdjustment="True">
+    <Position x="-579992.9" y="115681.9" z="3275050" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_03" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="0.005584717" AllowHeightAdjustment="True">
+    <Position x="191199.2" y="-139.3293" z="3134829" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="colonnade_04" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-0.0009765625" AllowHeightAdjustment="True">
+    <Position x="476695.9" y="8801.194" z="3352443" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="south_east_swamp_spawn" TerrainOffset="0.004180908" AllowHeightAdjustment="True">
+    <Position x="-491520.8" y="460.694" z="3828335" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="swamp" TerrainOffset="0.004180908" AllowHeightAdjustment="True">
+    <Position x="-491520.8" y="460.694" z="3828335" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Boundary Name="south_east_swamp" Priority="50">
+    <PointCollection>
+      <Point x="-559460.1" y="15017.23" z="3780221" />
+      <Point x="-501166.4" y="10797.39" z="3745221" />
+      <Point x="59568.63" y="96453.21" z="2589830" />
+      <Point x="562585.9" y="2477.334" z="3470424" />
+      <Point x="499962.9" y="-6207.454" z="3717153" />
+      <Point x="-83799.92" y="-4037.484" z="4295136" />
+      <Point x="-315057.8" y="15906.52" z="4250421" />
+      <Point x="-506057.8" y="30323.78" z="4160732" />
+      <Point x="-557685.1" y="16086.93" z="3855155" />
+    </PointCollection>
+    <Water Height="25" />
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Umbrella Thorn - Dead" Instances="12" Scale="10000" ScaleVariance="1000" Filename="UmbrellaThorn_RT_Dead.tre" />
+    </Forest>
+    <Grass Name="east_swamp_grass">
+      <PlantType Name="Cattail" ImageName="cattail" Instances="390" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1300" ScaleWidthLow="1000" ScaleWidthHi="1100" ColorMultHi="1" ColorMultLow="1" R="0.9058824" G="0.9215686" B="0.9176471" />
+      <PlantType Name="Colorized Grass 1" ImageName="grass1" Instances="1000" WindMagnitude="100" ScaleHeightLow="1000" ScaleHeightHi="1500" ScaleWidthLow="1000" ScaleWidthHi="1500" ColorMultHi="1" ColorMultLow="0.5" R="0.5921569" G="0.6745098" B="0.5411765" />
+    </Grass>
+    <Fog Far="299900" Near="70000">
+      <Color R="0.7450981" G="0.772549" B="0.5960785" />
+    </Fog>
+  </Boundary>
+  <Waypoint Name="south_east_swamp_center" TerrainOffset="-3000" AllowHeightAdjustment="True">
+    <Position x="-450349.5" y="-4794.918" z="3854869" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="south_east_swamp_spawn_02" TerrainOffset="0.009765625" AllowHeightAdjustment="True">
+    <Position x="-391007.8" y="26396.97" z="4010766" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Boundary Name="s_e_swamp_trees_01" Priority="50">
+    <PointCollection>
+      <Point x="-592662.4" y="34170.32" z="3886944" />
+      <Point x="-573310.7" y="35362.48" z="3735681" />
+      <Point x="-426861.5" y="32870.82" z="3667140" />
+      <Point x="-324792" y="6896.472" z="3677954" />
+      <Point x="-350358.1" y="2104.977" z="3761954" />
+      <Point x="-438985" y="1775.726" z="3765467" />
+      <Point x="-497273.3" y="1053.305" z="3791467" />
+      <Point x="-483909.1" y="3773.17" z="3887890" />
+    </PointCollection>
+    <Forest Name="Forest" Seed="0" WindSpeed="0.3" Filename="demoWind.ini">
+      <WindDirection x="0" y="0" z="0" />
+      <Tree Name="Weeping Willow" Instances="29" Scale="10000" ScaleVariance="1000" Filename="WeepingWillow_RT.tre" />
+      <Tree Name="Umbrella Thorn - Dead" Instances="22" Scale="10000" ScaleVariance="1000" Filename="UmbrellaThorn_RT_Dead.tre" />
+    </Forest>
+  </Boundary>
+  <StaticObject Name="swamp_col_01" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1000.002" AllowHeightAdjustment="True">
+    <Position x="-462112" y="-2579.05" z="3852300" />
+    <Orientation w="0.7489557" x="0" y="0.6626201" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="swamp_col_02" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-4000.023" AllowHeightAdjustment="True">
+    <Position x="-472112" y="-4937.186" z="3845252" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="swamp_col_03" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1500.036" AllowHeightAdjustment="True">
+    <Position x="-479112" y="-1820.69" z="3872205" />
+    <Orientation w="0.7489557" x="0" y="0.6626201" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="swamp_col_04" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-999.9961" AllowHeightAdjustment="True">
+    <Position x="-479112" y="-1849.039" z="3852801" />
+    <Orientation w="0.8703557" x="0" y="0.4924236" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="swamp_col_05" Mesh="colonnade.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="-1000.006" AllowHeightAdjustment="True">
+    <Position x="-481112" y="-1845.47" z="3863293" />
+    <Orientation w="0.7880108" x="0" y="0.6156615" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="colonnade-lib.0" MaterialName="colonnade.stonework" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="swamp_tele_01" Mesh="gazebo_sand.mesh" PerceptionRadius="0" CastShadows="True" TerrainOffest="499.491" AllowHeightAdjustment="True">
+    <Position x="-502970" y="1904" z="3824007" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <Scale x="1" y="1" z="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="gazebo_a-lib.0" MaterialName="gazebo_sand.gazebo_a_texture" Show="True" />
+      <SubMeshInfo Name="gazebo_a-lib.1" MaterialName="gazebo_sand.gazebo_floor_texture" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Road Name="swamp_alley" HalfWidth="2">
+    <PointCollection>
+      <Point x="-467633.5" y="-1272.545" z="3870751" />
+      <Point x="-480623.1" y="24685.85" z="4041587" />
+      <Point x="-561086.6" y="54576.13" z="4218649" />
+    </PointCollection>
+  </Road>
+  <Waypoint Name="swamp_smoke_spawn" TerrainOffset="-2131.043" AllowHeightAdjustment="True">
+    <Position x="-450286" y="-3924.795" z="3855446" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="swamp_tele" TerrainOffset="499.491" AllowHeightAdjustment="True">
+    <Position x="-502970" y="1904" z="3824007" />
+    <Orientation w="1" x="0" y="0" z="0" />
+    <ParticleEffect ParticleEffectName="teleporter" ParticleScale="1" VelocityScale="1" />
+  </Waypoint>
+  <Waypoint Name="swamp_tele_dest" TerrainOffset="0.004180908" AllowHeightAdjustment="True">
+    <Position x="-491520.8" y="460.694" z="3828335" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="swamp_mob_1" TerrainOffset="0.2675781" AllowHeightAdjustment="True">
+    <Position x="-476324" y="-121" z="3795033" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+  <Waypoint Name="swamp_mob_2" TerrainOffset="-0.7442322" AllowHeightAdjustment="True">
+    <Position x="-494703" y="488" z="3866599" />
+    <Orientation w="1" x="0" y="0" z="0" />
+  </Waypoint>
+</WorldObjectCollection>

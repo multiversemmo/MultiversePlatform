@@ -1,0 +1,1749 @@
+--- OgreXmlSkeletonReader.cs.orig	1969-12-31 16:00:00.000000000 -0800
++++ OgreXmlSkeletonReader.cs	2004-11-21 21:24:11.520125000 -0800
+@@ -0,0 +1,293 @@
++using System;
++using System.Diagnostics;
++using System.IO;
++using System.Text;
++using System.Xml;
++using Axiom.Animating;
++using Axiom.Core;
++using Axiom.MathLib;
++using Axiom.Graphics;
++
++namespace Axiom.Serialization {
++    /// <summary>
++    /// 	Summary description for OgreXmlSkeletonReader.
++    /// </summary>
++    public class OgreXmlSkeletonReader {
++        #region Member variables
++		
++        private Skeleton skeleton;
++		protected Stream stream;
++
++		#endregion
++		
++        #region Constructors
++		
++        public OgreXmlSkeletonReader(Stream data) {
++			stream = data;
++        }
++		
++        #endregion
++		
++        #region Methods
++
++		protected void DebugMessage(XmlNode node) {
++			if (node.NodeType == XmlNodeType.Comment)
++				return;
++			Trace.TraceWarning("Unhandled node type: " + node.Name +
++							   " with parent of " + node.ParentNode.Name);
++		}
++
++		protected void DebugMessage(XmlNode node, XmlAttribute attr) {
++			Trace.TraceWarning("Unhandled node attribute: " + attr.Name +
++							   " with parent node of " + node.Name);
++		}
++
++        public void Import(Skeleton skeleton) {
++			// store a local reference to the skeleton for modification
++			this.skeleton = skeleton;
++
++			XmlDocument document = new XmlDocument();
++			document.Load(stream);
++			foreach (XmlNode childNode in document.ChildNodes) {
++				switch (childNode.Name) {
++					case "skeleton":
++						ReadSkeleton(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++			skeleton.SetBindingPose();
++		}
++
++        /// <summary>
++        ///    Reads bone information from the file.
++        /// </summary>
++		protected void ReadSkeleton(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "bones":
++						ReadBones(childNode);
++						break;
++					case "bonehierarchy":
++						ReadBoneHierarchy(childNode);
++						break;
++					case "animations":
++						ReadAnimations(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadBones(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "bone":
++						ReadBone(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadBoneHierarchy(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "boneparent":
++						ReadBoneParent(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadAnimations(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "animation":
++						ReadAnimation(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		/// <summary>
++        ///    Reads bone information from the file.
++        /// </summary>
++        protected void ReadBone(XmlNode node) {
++            // bone name
++			string name = node.Attributes["name"].Value;
++			ushort handle = ushort.Parse(node.Attributes["id"].Value);
++
++            // create a new bone
++            Bone bone = skeleton.CreateBone(name, handle);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "position":
++						ReadPosition(childNode, bone);
++						break;
++					case "rotation":
++						ReadRotation(childNode, bone);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++        /// <summary>
++        ///    Reads bone parent information from the file.
++        /// </summary>
++		protected void ReadBoneParent(XmlNode node) {
++			string childName = node.Attributes["bone"].Value;
++			string parentName = node.Attributes["parent"].Value;
++			// get references to father and son bones
++			Bone child = skeleton.GetBone(childName);
++			Bone parent = skeleton.GetBone(parentName);
++			// attach the child to the parent
++			parent.AddChild(child);
++		}
++
++		protected void ReadAnimation(XmlNode node) {
++			string name = node.Attributes["name"].Value;
++			float length = float.Parse(node.Attributes["length"].Value);
++			// create an animation from the skeleton
++			Animation anim = skeleton.CreateAnimation(name, length);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "tracks":
++						ReadTracks(childNode, anim);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected Vector3 ReadVector3(XmlNode node) {
++			Vector3 vec;
++			vec.x = float.Parse(node.Attributes["x"].Value);
++			vec.y = float.Parse(node.Attributes["y"].Value);
++			vec.z = float.Parse(node.Attributes["z"].Value);
++			return vec;
++		}
++
++		protected void ReadPosition(XmlNode node, Bone bone) {
++			bone.Position = ReadVector3(node);
++		}
++
++		protected void ReadRotation(XmlNode node, Bone bone) {
++			float angle = float.Parse(node.Attributes["angle"].Value);
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "axis":
++						Vector3 axis = ReadVector3(childNode);
++						bone.Orientation = Quaternion.FromAngleAxis(angle, axis);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadTracks(XmlNode node, Animation anim) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "track":
++						ReadTrack(childNode, anim);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadTrack(XmlNode node, Animation anim) {
++			string boneName = node.Attributes["bone"].Value;
++			// get a reference to the target bone
++			Bone targetBone = skeleton.GetBone(boneName);
++			// create an animation track for this bone
++			AnimationTrack track = anim.CreateTrack((short)targetBone.Handle, targetBone);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "keyframes":
++						ReadKeyFrames(childNode, track);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadKeyFrames(XmlNode node, AnimationTrack track) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "keyframe":
++						ReadKeyFrame(childNode, track);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadKeyFrame(XmlNode node, AnimationTrack track) {
++			float time = float.Parse(node.Attributes["time"].Value);
++			// create a new keyframe with the specified length
++			KeyFrame keyFrame = track.CreateKeyFrame(time);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "translate":
++						keyFrame.Translate = ReadVector3(childNode);
++						break;
++					case "rotate":
++						ReadRotate(childNode, keyFrame);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadRotate(XmlNode node, KeyFrame keyFrame) {
++			float angle = float.Parse(node.Attributes["angle"].Value);
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "axis":
++						Vector3 axis = ReadVector3(childNode);
++						keyFrame.Rotation = Quaternion.FromAngleAxis(angle, axis);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++
++        #endregion Methods
++    }
++}
++
+--- OgreXmlMeshReader.cs.orig	1969-12-31 16:00:00.000000000 -0800
++++ OgreXmlMeshReader.cs	2004-12-08 14:23:50.468750000 -0800
+@@ -0,0 +1,708 @@
++#region LGPL License
++/*
++Axiom Game Engine Library
++Copyright (C) 2003  Axiom Project Team
++
++The overall design, and a majority of the core engine and rendering code 
++contained within this library is a derivative of the open source Object Oriented 
++Graphics Engine OGRE, which can be found at http://ogre.sourceforge.net.  
++Many thanks to the OGRE team for maintaining such a high quality project.
++
++This library is free software; you can redistribute it and/or
++modify it under the terms of the GNU Lesser General Public
++License as published by the Free Software Foundation; either
++version 2.1 of the License, or (at your option) any later version.
++
++This library is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++Lesser General Public License for more details.
++
++You should have received a copy of the GNU Lesser General Public
++License along with this library; if not, write to the Free Software
++Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
++*/
++#endregion
++
++using System;
++using System.Diagnostics;
++using System.IO;
++using System.Text;
++using System.Xml;
++using System.Collections.Generic;
++
++using Axiom.Animating;
++using Axiom.Core;
++using Axiom.MathLib;
++using Axiom.Graphics;
++
++namespace Axiom.Serialization
++{
++	public class Float2ArrayRef
++	{
++		public float[,] data;
++		public Float2ArrayRef(int rows, int cols) {
++			data = new float[rows, cols];
++		}
++	}
++
++	public class XmlVertexData
++	{
++		public float[,] positionData;
++		public float[,] normalData;
++		public int[] diffuseData;
++		public int[] specularData;
++		public List<Float2ArrayRef> multiTexData;
++		public short bindIdx;
++
++		/// <summary>
++		///   Offset into the list of texture buffers for this vertex buffer chunk
++		/// </summary>
++		public int textureOffset;
++
++		public int vertexCount;
++
++		public XmlVertexData(int vertexCount) {
++			this.vertexCount = vertexCount;
++			positionData = new float[vertexCount, 3];
++			normalData = new float[vertexCount, 3];
++			diffuseData = new int[vertexCount];
++			specularData = new int[vertexCount];
++			multiTexData = new List<Float2ArrayRef>();
++			bindIdx = 0;
++			textureOffset = 0;
++		}
++
++		public int AddTexture(int dim) {
++			multiTexData.Add(new Float2ArrayRef(vertexCount, dim));
++			return multiTexData.Count - 1;
++		}
++
++		public Float2ArrayRef GetTextureData(int textureIndex) {
++			return multiTexData[textureOffset + textureIndex];
++		}
++	}
++
++	/// <summary>
++	/// 	Summary description for OgreMeshReader.
++	///		TODO: Add support for level of detail and operation type (other than triangle list)
++	/// </summary>
++	public class OgreXmlMeshReader
++	{
++		#region Member variables
++
++		protected Mesh mesh;
++		protected bool isSkeletallyAnimated;
++		protected int subMeshAutoNumber = 0;
++		protected short bindIdx = 0;
++		protected Dictionary<int, string> submeshNames;
++		protected Dictionary<SubMesh, XmlVertexData> xmlVertexDataDict;
++
++		protected Stream stream;
++
++		#endregion
++
++		#region Constructors
++
++		public OgreXmlMeshReader(Stream data) {
++			stream = data;
++		}
++
++		#endregion
++
++		#region Methods
++
++		public void Import(Mesh mesh) {
++			// store a local reference to the mesh for modification
++			this.mesh = mesh;
++			this.submeshNames = new Dictionary<int, string>();
++			this.xmlVertexDataDict = new Dictionary<SubMesh, XmlVertexData>();
++
++			XmlDocument document = new XmlDocument();
++			document.Load(stream);
++			foreach (XmlNode childNode in document.ChildNodes) {
++				switch (childNode.Name) {
++					case "mesh":
++						ReadMesh(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadMesh(XmlNode node) {
++			// First try to read submesh names
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "submeshnames":
++						ReadSubmeshNames(childNode);
++						break;
++					default:
++						break;
++				}
++			}
++
++			bool hasBoundsInfo = false;
++			// Next read submeshes and skeleton link
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "submeshes":
++						ReadSubmeshes(childNode);
++						break;
++					case "skeletonlink":
++						ReadSkeletonLink(childNode);
++						break;
++					case "submeshnames":
++						break;
++					// Multiverse extensions
++					case "boundsinfo":
++						hasBoundsInfo = true;
++						ReadBoundsInfo(childNode);
++						break;
++//					case "attachmentpoints":
++//						ReadAttachmentPoints(childNode);
++//						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++
++			if (!hasBoundsInfo)
++				ComputeBoundsInfo();
++		}
++
++		protected void ReadSubmeshes(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "submesh":
++						ReadSubmesh(childNode);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadSkeletonLink(XmlNode node) {
++			foreach (XmlAttribute attr in node.Attributes) {
++				switch (attr.Name) {
++					case "name":
++						mesh.SkeletonName = attr.Value;
++						break;
++					default:
++						DebugMessage(node, attr);
++						break;
++				}
++			}
++		}
++
++		protected void ReadSubmeshNames(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "submeshname":
++						ReadSubmeshName(childNode);
++						break;
++					default:
++						DebugMessage(node);
++						break;
++				}
++			}
++		}
++
++		protected void ReadSubmesh(XmlNode node) {
++			if (!submeshNames.ContainsKey(subMeshAutoNumber))
++				submeshNames[subMeshAutoNumber] = "SubMesh" + subMeshAutoNumber;
++			string submeshName = submeshNames[subMeshAutoNumber];
++			subMeshAutoNumber++;
++			ReadSubmesh(node, submeshName);
++		}
++
++		protected void ReadSubmesh(XmlNode node, string subMeshName) {
++			SubMesh subMesh = mesh.CreateSubMesh(subMeshName);
++
++			// does this use 32 bit index buffer
++			IndexType indexType = IndexType.Size16;
++			subMesh.useSharedVertices = false;
++
++			foreach (XmlAttribute attr in node.Attributes) {
++				switch (attr.Name) {
++					case "material":
++						subMesh.MaterialName = attr.Value;
++						break;
++					case "usesharedvertices":
++						// use shared vertices?
++						if (attr.Value == "true")
++							subMesh.useSharedVertices = true;
++						break;
++					case "use32bitindexes":
++						if (attr.Value == "true")
++							indexType = IndexType.Size32;
++						break;
++					case "operationtype":
++						if (attr.Value != "triangle_list")
++							throw new Exception("Unsupported operation type: " + attr.Value);
++						break;
++					default:
++						DebugMessage(node, attr);
++						break;
++				}
++			}
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "faces":
++						ReadFaces(childNode, subMesh, indexType);
++						break;
++					case "geometry":
++						ReadGeometry(childNode, subMesh);
++						break;
++					case "boneassignments":
++						ReadBoneAssignments(childNode, subMesh);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++			Trace.TraceInformation("Parsed submesh: " + subMeshName);
++			Trace.Flush();
++		}
++
++		protected void ReadSubmeshName(XmlNode node) {
++			int index = int.Parse(node.Attributes["index"].Value);
++			submeshNames[index] = node.Attributes["name"].Value;
++		}
++
++		protected void ReadFaces(XmlNode node, SubMesh subMesh, IndexType indexType) {
++			short faceCount = short.Parse(node.Attributes["count"].Value);
++
++			int faceIndex = 0;
++			int[,] data = new int[faceCount, 3];
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "face":
++						ReadFace(childNode, data, faceIndex++);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++
++			int count = data.GetLength(1);
++			subMesh.indexData.indexStart = 0;
++			subMesh.indexData.indexCount = data.GetLength(0) * data.GetLength(1);
++
++			HardwareIndexBuffer idxBuffer = null;
++
++			// create the index buffer
++			idxBuffer =
++				HardwareBufferManager.Instance.
++				CreateIndexBuffer(
++				indexType,
++				subMesh.indexData.indexCount,
++				mesh.IndexBufferUsage,
++				mesh.UseIndexShadowBuffer);
++
++			IntPtr indices = idxBuffer.Lock(BufferLocking.Discard);
++
++			if (indexType == IndexType.Size32) {
++				// read the ints into the buffer data
++				unsafe {
++					int* pInts = (int*)indices.ToPointer();
++					for (int i = 0; i < faceCount; ++i)
++						for (int j = 0; j < count; ++j) {
++							Debug.Assert(i * count + j < subMesh.indexData.indexCount, "Wrote off end of index buffer");
++							pInts[i * count + j] = data[i, j];
++						}
++				}
++			} else {
++				// read the shorts into the buffer data
++				unsafe {
++					short* pShorts = (short*)indices.ToPointer();
++					for (int i = 0; i < faceCount; ++i)
++						for (int j = 0; j < count; ++j) {
++							Debug.Assert(i * count + j < subMesh.indexData.indexCount, "Wrote off end of index buffer");
++							pShorts[i * count + j] = (short)data[i, j];
++						}
++				}
++			}
++			// unlock the buffer to commit
++			idxBuffer.Unlock();
++
++			// save the index buffer
++			subMesh.indexData.indexBuffer = idxBuffer;
++            subMesh.numFaces = faceCount;
++        }
++
++		protected void ReadGeometry(XmlNode node, SubMesh subMesh) {
++			if (subMesh.useSharedVertices)
++				throw new Exception("I don't support shared vertices");
++			
++			VertexData vertexData = new VertexData();
++			subMesh.vertexData = vertexData;
++
++			vertexData.vertexStart = 0;
++			vertexData.vertexCount = int.Parse(node.Attributes["vertexcount"].Value);
++
++			XmlVertexData xmlVertexData = new XmlVertexData(vertexData.vertexCount);
++
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "vertexbuffer":
++						ReadVertexBuffer(childNode, subMesh.vertexData, xmlVertexData);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++
++			xmlVertexDataDict[subMesh] = xmlVertexData;
++		}
++
++		protected void ReadBoneAssignments(XmlNode node, SubMesh subMesh) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "vertexboneassignment":
++						ReadVertexBoneAssigment(childNode, subMesh);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadFace(XmlNode node, int[,] buffer, int faceIndex) {
++			buffer[faceIndex, 0] = int.Parse(node.Attributes["v1"].Value);
++			buffer[faceIndex, 1] = int.Parse(node.Attributes["v2"].Value);
++			buffer[faceIndex, 2] = int.Parse(node.Attributes["v3"].Value);
++		}
++
++		protected void ReadVertexBuffer(XmlNode node, VertexData vertexData, XmlVertexData xmlVertexData) {
++			bool positions = false;
++			bool normals = false;
++			bool colours_diffuse = false;
++			bool colours_specular = false;
++			int texture_coords = 0;
++
++			foreach (XmlAttribute attr in node.Attributes) {
++				switch (attr.Name) {
++					case "positions":
++						if (attr.Value == "true")
++							positions = true;
++						break;
++					case "normals":
++						if (attr.Value == "true")
++							normals = true;
++						break;
++					case "colours_diffuse":
++						if (attr.Value == "true")
++							colours_diffuse = true;
++						break;
++					case "colours_specular":
++						if (attr.Value == "true")
++							colours_specular = true;
++						break;
++					case "texture_coords":
++						texture_coords = int.Parse(attr.Value);
++						break;
++					case "texture_coord_dimensions_0":
++					case "texture_coord_dimensions_1":
++					case "texture_coord_dimensions_2":
++					case "texture_coord_dimensions_3":
++					case "texture_coord_dimensions_4":
++					case "texture_coord_dimensions_5":
++					case "texture_coord_dimensions_6":
++					case "texture_coord_dimensions_7":
++						break;
++					default:
++						DebugMessage(node, attr);
++						break;
++				}
++			}
++
++			for (int i = 0; i < texture_coords; ++i) {
++				string key = string.Format("texture_coord_dimensions_{0}", i);
++				XmlNode attrNode = node.Attributes.GetNamedItem(key);
++				if (attrNode != null)
++					xmlVertexData.AddTexture(int.Parse(attrNode.Value));
++				else
++					xmlVertexData.AddTexture(2);
++			}
++
++			int vertexIndex = 0;
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "vertex":
++						ReadVertex(childNode, xmlVertexData, vertexIndex++);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++
++			if (positions)
++				AllocateBuffer(vertexData, VertexElementType.Float3, 
++							   VertexElementSemantic.Position, xmlVertexData.bindIdx++,
++							   0, ref xmlVertexData.positionData);
++			if (normals)
++				AllocateBuffer(vertexData, VertexElementType.Float3,
++							   VertexElementSemantic.Normal, xmlVertexData.bindIdx++,
++							   0, ref xmlVertexData.normalData);
++			if (colours_diffuse)
++				AllocateBuffer(vertexData, VertexElementType.Color,
++							   VertexElementSemantic.Diffuse, xmlVertexData.bindIdx++,
++							   0, ref xmlVertexData.diffuseData);
++			if (colours_specular)
++				AllocateBuffer(vertexData, VertexElementType.Color,
++							   VertexElementSemantic.Specular, xmlVertexData.bindIdx++,
++							   0, ref xmlVertexData.specularData);
++			for (int i = 0; i < texture_coords; ++i) {
++				int dim = xmlVertexData.GetTextureData(i).data.GetLength(1);
++				AllocateBuffer(vertexData,
++							   VertexElement.MultiplyTypeCount(VertexElementType.Float1, dim),
++							   VertexElementSemantic.TexCoords, xmlVertexData.bindIdx++,
++							   i, ref xmlVertexData.GetTextureData(i).data);
++			}
++
++			// We have read the textures for this vertex buffer node.
++			xmlVertexData.textureOffset += texture_coords;
++		}
++
++		private void AllocateBuffer(VertexData vertexData, VertexElementType type,
++									VertexElementSemantic semantic,
++									short bindIdx, int index, ref float[,] data) {
++			// vertex buffers
++			vertexData.vertexDeclaration.AddElement(bindIdx, 0, type, semantic, index);
++			int vertexSize = vertexData.vertexDeclaration.GetVertexSize(bindIdx);
++			int vertexCount = vertexData.vertexCount;
++			HardwareVertexBuffer vBuffer = 
++				HardwareBufferManager.Instance.CreateVertexBuffer(vertexSize,
++					vertexCount, mesh.VertexBufferUsage, mesh.UseVertexShadowBuffer);
++
++			FillBuffer(vBuffer, vertexCount, vertexSize, ref data);
++
++			// bind the position data
++			vertexData.vertexBufferBinding.SetBinding(bindIdx, vBuffer);
++		}
++
++		private void FillBuffer(HardwareVertexBuffer vBuffer, int vertexCount, int vertexSize, ref float[,] data) {
++			int count = data.GetLength(1);
++			IntPtr bufData = vBuffer.Lock(BufferLocking.Discard);
++
++			unsafe {
++				float* pFloats = (float*)bufData.ToPointer();
++				for (int i = 0; i <  vertexCount; ++i)
++					for (int j = 0; j < count; ++j) {
++						Debug.Assert(sizeof(float) * (i * count + j) < vertexCount * vertexSize,
++							"Wrote off end of index buffer");
++						pFloats[i * count + j] = data[i, j];
++					}
++			}
++
++			// unlock the buffer
++			vBuffer.Unlock();
++		}
++
++		private void AllocateBuffer(VertexData vertexData, VertexElementType type,
++					VertexElementSemantic semantic,
++					short bindIdx, int index, ref int[] data) {
++			// vertex buffers
++			vertexData.vertexDeclaration.AddElement(bindIdx, 0, type, semantic, index);
++			int vertexSize = vertexData.vertexDeclaration.GetVertexSize(bindIdx);
++			int vertexCount = vertexData.vertexCount;
++			HardwareVertexBuffer vBuffer =
++				HardwareBufferManager.Instance.CreateVertexBuffer(vertexSize,
++					vertexCount, mesh.VertexBufferUsage, mesh.UseVertexShadowBuffer);
++
++			FillBuffer(vBuffer, vertexCount, vertexSize, ref data);
++
++			// bind the position data
++			vertexData.vertexBufferBinding.SetBinding(bindIdx, vBuffer);
++		}
++
++		private void FillBuffer(HardwareVertexBuffer vBuffer, int vertexCount, int vertexSize, ref int[] data) {
++			IntPtr bufData = vBuffer.Lock(BufferLocking.Discard);
++
++			unsafe {
++				int* pInts = (int*)bufData.ToPointer();
++				for (int i = 0; i < vertexCount; ++i) {
++					Debug.Assert(sizeof(int) * i < vertexCount * vertexSize,
++						"Wrote off end of index buffer");
++					pInts[i] = data[i];
++				}
++			}
++
++			// unlock the buffer
++			vBuffer.Unlock();
++		}
++
++
++		protected void ReadVertexBoneAssigment(XmlNode node, SubMesh subMesh) {
++			VertexBoneAssignment assignment = new VertexBoneAssignment();
++
++			// read the data from the file
++			assignment.vertexIndex = int.Parse(node.Attributes["vertexindex"].Value);
++			assignment.boneIndex = ushort.Parse(node.Attributes["boneindex"].Value); ;
++			assignment.weight = float.Parse(node.Attributes["weight"].Value); ;
++
++			// add the assignment to the mesh
++			subMesh.AddBoneAssignment(ref assignment);
++		}
++
++		protected void ReadVertex(XmlNode node, XmlVertexData vertexData, int vertexIndex) {
++			int textureIndex = 0;
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "position":
++						ReadVector(childNode, ref vertexData.positionData, vertexIndex);
++						break;
++					case "normal":
++						ReadVector(childNode, ref vertexData.normalData, vertexIndex);
++						break;
++					case "colour_diffuse":
++						ReadColour(childNode, ref vertexData.diffuseData, vertexIndex);
++						break;
++					case "colour_specular":
++						ReadColour(childNode, ref vertexData.specularData, vertexIndex);
++						break;
++					case "texcoord":
++						ReadTexCoord(childNode, ref vertexData.GetTextureData(textureIndex).data, vertexIndex);
++						textureIndex++;
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadVector(XmlNode node, ref float[,] buffer, int vertexIndex) {
++			buffer[vertexIndex, 0] = float.Parse(node.Attributes["x"].Value);
++			buffer[vertexIndex, 1] = float.Parse(node.Attributes["y"].Value);
++			buffer[vertexIndex, 2] = float.Parse(node.Attributes["z"].Value);
++		}
++
++		protected void ReadColour(XmlNode node, ref int[] buffer, int vertexIndex) {
++			string value = node.Attributes["value"].Value;
++			string[] vals = value.Split(' ');
++			Debug.Assert(vals.Length == 4, "Invalid colour value");
++			ColorEx color = new ColorEx();
++			color.r = float.Parse(vals[0]);
++			color.g = float.Parse(vals[1]);
++			color.b = float.Parse(vals[2]);
++			color.a = float.Parse(vals[3]);
++			buffer[vertexIndex] = Root.Instance.RenderSystem.ConvertColor(color);
++		}
++
++		protected void ReadTexCoord(XmlNode node, ref float[,] buffer, int vertexIndex) {
++			buffer[vertexIndex, 0] = float.Parse(node.Attributes["u"].Value);
++			if (buffer.GetLength(1) > 1)
++				buffer[vertexIndex, 1] = float.Parse(node.Attributes["v"].Value);
++			if (buffer.GetLength(1) > 2)
++				buffer[vertexIndex, 2] = float.Parse(node.Attributes["w"].Value);
++		}
++
++		protected void ReadBoundsInfo(XmlNode node) {
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "boundingbox":
++						ReadBoundingBox(childNode);
++						break;
++					case "boundingsphere":
++						mesh.BoundingSphereRadius = float.Parse(childNode.Attributes["radius"].Value);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++		}
++
++		protected void ReadBoundingBox(XmlNode node) {
++			float[,] box = new float[2, 3];
++			foreach (XmlNode childNode in node.ChildNodes) {
++				switch (childNode.Name) {
++					case "min":
++						ReadVector(childNode, ref box, 0);
++						break;
++					case "max":
++						ReadVector(childNode, ref box, 1);
++						break;
++					default:
++						DebugMessage(childNode);
++						break;
++				}
++			}
++			Vector3 min = new Vector3(box[0, 0], box[0, 1], box[0, 2]);
++			Vector3 max = new Vector3(box[1, 0], box[1, 1], box[1, 2]);
++			mesh.BoundingBox = new AxisAlignedBox(min, max);
++		}
++
++		private void ComputeBoundsInfo() {
++			AxisAlignedBox boundingBox = new AxisAlignedBox();
++			float boundingRadius = 0.0f;
++			foreach (XmlVertexData vertData in xmlVertexDataDict.Values)
++				ComputeBoundsInfo(ref boundingBox, ref boundingRadius,
++								  ref vertData.positionData);
++			mesh.BoundingBox = boundingBox;
++			mesh.BoundingSphereRadius = boundingRadius;
++		}
++
++		/// <summary>
++		///   Compute the bounds information for the portion of a mesh specified by the points parameter.
++		/// </summary>
++		/// <param name="boundingBox">This is the bounding box that will 
++		///							  probably be expanded to include all 
++		///							  of the points.</param>
++		/// <param name="boundingRadius">This is the bounding sphere radius
++		///								 that will probably be expanded to 
++		///								 include all of the points.</param>
++		/// <param name="points"></param>
++		private void ComputeBoundsInfo(ref AxisAlignedBox boundingBox, ref float boundingRadius,
++									   ref float[,] points) {
++			float boundingRadiusSquared = boundingRadius * boundingRadius;
++			Vector3 min = boundingBox.Minimum;
++			Vector3 max = boundingBox.Maximum;
++			for (int i = 0; i < points.GetLength(0); ++i) {
++				min.x = Math.Min(min.x, points[i, 0]);
++				min.y = Math.Min(min.y, points[i, 1]);
++				min.z = Math.Min(min.z, points[i, 2]);
++				max.x = Math.Max(max.x, points[i, 0]);
++				max.y = Math.Max(max.y, points[i, 1]);
++				max.z = Math.Max(max.z, points[i, 2]);
++				float lenSquared = points[i, 0] * points[i, 0] +
++								   points[i, 1] * points[i, 1] +
++								   points[i, 2] * points[i, 2];
++				boundingRadiusSquared = Math.Max(boundingRadiusSquared, lenSquared);
++			}
++			boundingBox.Minimum = min;
++			boundingBox.Maximum = max;
++			if (boundingRadiusSquared > boundingRadius * boundingRadius)
++				boundingRadius = (float)Math.Sqrt(boundingRadiusSquared);
++		}
++		
++
++		protected void DebugMessage(XmlNode node) {
++			Trace.TraceWarning("Unhandled node type: " + node.Name +
++							   " with parent of " + node.ParentNode.Name);
++		}
++
++		protected void DebugMessage(XmlNode node, XmlAttribute attr) {
++			Trace.TraceWarning("Unhandled node attribute: " + attr.Name +
++							   " with parent node of " + node.Name);
++		}
++
++		#endregion
++
++		#region Properties
++
++		#endregion
++	}
++}
+--- OgreXmlMeshWriter.cs.orig	1969-12-31 16:00:00.000000000 -0800
++++ OgreXmlMeshWriter.cs	2004-12-12 17:04:56.234375000 -0800
+@@ -0,0 +1,739 @@
++#region LGPL License
++/*
++Axiom Game Engine Library
++Copyright (C) 2003  Axiom Project Team
++
++The overall design, and a majority of the core engine and rendering code 
++contained within this library is a derivative of the open source Object Oriented 
++Graphics Engine OGRE, which can be found at http://ogre.sourceforge.net.  
++Many thanks to the OGRE team for maintaining such a high quality project.
++
++This library is free software; you can redistribute it and/or
++modify it under the terms of the GNU Lesser General Public
++License as published by the Free Software Foundation; either
++version 2.1 of the License, or (at your option) any later version.
++
++This library is distributed in the hope that it will be useful,
++but WITHOUT ANY WARRANTY; without even the implied warranty of
++MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++Lesser General Public License for more details.
++
++You should have received a copy of the GNU Lesser General Public
++License along with this library; if not, write to the Free Software
++Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
++*/
++#endregion
++
++using System;
++using System.Diagnostics;
++using System.IO;
++using System.Text;
++using System.Xml;
++using System.Collections.Generic;
++
++using Axiom.Animating;
++using Axiom.Core;
++using Axiom.MathLib;
++using Axiom.Graphics;
++
++namespace Axiom.Serialization
++{
++	/// <summary>
++	/// 	Summary description for OgreMeshReader.
++	///		TODO: Add support for level of detail and shared geometry
++	/// </summary>
++	public class OgreXmlMeshWriter
++	{
++		#region Member variables
++
++		protected Mesh mesh;
++
++		protected Dictionary<int, string> submeshNames;
++		protected Dictionary<SubMesh, XmlVertexData> xmlVertexDataDict;
++
++		protected AxisAlignedBox boundingBox;
++		protected float boundingRadius;
++
++		protected Stream stream;
++
++		protected XmlDocument document;
++
++		#endregion
++
++		#region Constructors
++
++		public OgreXmlMeshWriter(Stream data) {
++			stream = data;
++		}
++
++		#endregion
++
++		#region Methods
++
++		public void Export(Mesh mesh) {
++			// store a local reference to the mesh for modification
++			this.mesh = mesh;
++			this.submeshNames = new Dictionary<int, string>();
++			this.xmlVertexDataDict = new Dictionary<SubMesh, XmlVertexData>();
++			this.document = new XmlDocument();
++			XmlNode meshNode = WriteMesh();
++			document.AppendChild(meshNode);
++			document.Save(stream);
++		}
++
++		protected XmlNode WriteMesh() {
++			XmlElement node = document.CreateElement("mesh");
++
++			XmlNode childNode;
++			
++			// Build the dictionary of vertex data for the submeshes.
++			for (int i = 0; i < mesh.SubMeshCount; ++i) {
++				SubMesh subMesh = mesh.GetSubMesh(i);
++				XmlVertexData vertexData = GetXmlVertexData(subMesh);
++				xmlVertexDataDict[subMesh] = vertexData;
++			}
++
++			// TODO:
++			// childNode = WriteSharedGeometry();
++			// node.AppendChild(childNode);
++
++			// Write the submesh components
++			childNode = WriteSubmeshes();
++			node.AppendChild(childNode);
++
++			// Next write skeletonlink
++			childNode = WriteSkeletonLink();
++			node.AppendChild(childNode);
++
++			// TODO:
++			// childNode = WriteLevelOfDetail();
++			// node.AppendChild(childNode);
++
++			// Next write submesh names
++			childNode = WriteSubmeshNames();
++			node.AppendChild(childNode);
++			
++			// Finally write the bounds info
++			childNode = WriteBoundsInfo();
++			node.AppendChild(childNode);
++
++			return node;
++		}
++
++		protected XmlElement WriteSubmeshes() {
++			XmlElement node = document.CreateElement("submeshes");
++
++			for (int i = 0; i < mesh.SubMeshCount; ++i) {
++				SubMesh subMesh = mesh.GetSubMesh(i);
++				XmlElement childNode = WriteSubmesh(subMesh);
++				node.AppendChild(childNode);
++			}
++
++			return node;
++		}
++
++		protected XmlElement WriteSkeletonLink() {
++			XmlElement node = document.CreateElement("skeletonlink");
++			XmlAttribute attr = document.CreateAttribute("name");
++			attr.Value = mesh.SkeletonName;
++			node.Attributes.Append(attr);
++			return node;
++		}
++
++		protected XmlElement WriteSubmeshNames() {
++			XmlElement node = document.CreateElement("submeshnames");
++
++			for (int i = 0; i < mesh.SubMeshCount; ++i) {
++				SubMesh subMesh = mesh.GetSubMesh(i);
++				XmlNode childNode = WriteSubmeshName(subMesh, i);
++				node.AppendChild(childNode);
++			}
++
++			return node;
++		}
++
++		protected XmlElement WriteSubmesh(SubMesh subMesh) {
++			XmlElement node = document.CreateElement("submesh");
++			XmlAttribute attr;
++
++			attr = document.CreateAttribute("material");
++			attr.Value = subMesh.MaterialName;
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("usesharedvertices");
++			attr.Value = (subMesh.useSharedVertices) ? "true" : "false";
++			node.Attributes.Append(attr);
++
++			IndexType indexType = IndexType.Size16; 
++			if (subMesh.vertexData.vertexCount > short.MaxValue)
++				indexType = IndexType.Size32;
++
++			attr = document.CreateAttribute("use32bitindexes");
++			attr.Value = (indexType == IndexType.Size32) ? "true" : "false";
++			node.Attributes.Append(attr);
++
++			bool isTriList = true;
++
++			// TODO: Support things other than triangle lists
++			attr = document.CreateAttribute("operationtype");
++			RenderOperation op = new RenderOperation();
++			subMesh.GetRenderOperation(op);
++			switch (op.operationType) {
++				case RenderMode.TriangleList:
++					attr.Value = "triangle_list";
++					break;
++				case RenderMode.TriangleStrip:
++					attr.Value = "triangle_strip";
++					isTriList = false;
++					break;
++				case RenderMode.TriangleFan:
++					attr.Value = "triangle_fan";
++					isTriList = false;
++					break;
++				default:
++					throw new AxiomException("Export of non triangle lists is not supported");
++			}
++			node.Attributes.Append(attr);
++
++			XmlElement childNode;
++
++			
++			childNode = WriteFaces(subMesh, indexType, isTriList);
++			node.AppendChild(childNode);
++
++			if (!subMesh.useSharedVertices) {
++				childNode = WriteGeometry(subMesh);
++				node.AppendChild(childNode);
++			}
++
++			childNode = WriteBoneAssignments(subMesh);
++			node.AppendChild(childNode);
++
++			return node;
++		}
++
++		protected XmlElement WriteSubmeshName(SubMesh subMesh, int index) {
++			XmlElement node = document.CreateElement("submeshname");
++			XmlAttribute attr;
++
++			attr = document.CreateAttribute("index");
++			attr.Value = index.ToString();
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("name");
++			attr.Value = subMesh.Name;
++			node.Attributes.Append(attr);
++
++			return node;
++		}
++
++		protected XmlElement WriteFaces(SubMesh subMesh, IndexType indexType, bool isTriList) {
++			XmlElement node = document.CreateElement("faces");
++
++			// Extract the hardware vertex buffer data into this array
++			int[,] data = new int[subMesh.numFaces, 3];
++            Trace.TraceInformation("Num faces: " + subMesh.numFaces);
++
++            HardwareIndexBuffer idxBuffer = subMesh.indexData.indexBuffer;
++			IntPtr indices = idxBuffer.Lock(BufferLocking.ReadOnly);
++
++			if (isTriList)
++				GetTriangleListIndices(ref data, indices, indexType, subMesh.indexData.indexCount);
++			else
++				GetTriangleStripOrFanIndices(ref data, indices, indexType, subMesh.indexData.indexCount);
++
++			// unlock the buffer
++			idxBuffer.Unlock();
++
++			int faceCount = data.GetLength(0);
++
++			XmlAttribute attr;
++			attr = document.CreateAttribute("count");
++			attr.Value = faceCount.ToString();
++			node.Attributes.Append(attr);
++
++			if (isTriList) {
++				for (int i = 0; i < faceCount; ++i) {
++					XmlElement childNode = WriteFace(ref data, i);
++					node.AppendChild(childNode);
++				}
++			} else {
++				// triangle strip or fan
++				if (faceCount != 0) {
++					XmlElement childNode = WriteFace(ref data, 0);
++					node.AppendChild(childNode);
++				}
++				for (int i = 1; i < faceCount; ++i) {
++					XmlElement childNode = WriteNextFace(ref data, i);
++					node.AppendChild(childNode);
++				}
++			}
++
++			return node;
++		}
++
++		private void GetTriangleListIndices(ref int[,] data, IntPtr indices, IndexType indexType, int maxIndex) {
++			int faceCount = data.GetLength(0);
++			int count = data.GetLength(1);
++
++			if (indexType == IndexType.Size32) {
++				// read the ints from the buffer data
++				unsafe {
++					int* pInts = (int*)indices.ToPointer();
++					for (int i = 0; i < faceCount; ++i)
++						for (int j = 0; j < count; ++j) {
++							Debug.Assert(i * count + j < maxIndex, "Read off end of index buffer");
++							data[i, j] = pInts[i * count + j];
++						}
++				}
++			} else {
++				// read the shorts from the buffer data
++				unsafe {
++					short* pShorts = (short*)indices.ToPointer();
++					for (int i = 0; i < faceCount; ++i)
++						for (int j = 0; j < count; ++j) {
++							Debug.Assert(i * count + j < maxIndex, "Read off end of index buffer");
++							data[i, j] = pShorts[i * count + j];
++						}
++				}
++			}
++		}
++
++		private void GetTriangleStripOrFanIndices(ref int[,] data, IntPtr indices, IndexType indexType, int maxIndex) {
++			int faceCount = data.GetLength(0);
++			int count = data.GetLength(1);
++
++			if (faceCount == 0)
++				return;
++
++			if (indexType == IndexType.Size32) {
++				// read the ints from the buffer data
++				unsafe {
++					int* pInts = (int*)indices.ToPointer();
++					for (int j = 0; j < count; ++j) {
++						Debug.Assert(j < maxIndex, "Read off end of index buffer");
++						data[0, j] = pInts[j];
++					}
++					for (int i = 1; i < faceCount; ++i)
++						for (int j = 0; j < count; ++j) {
++							Debug.Assert(2 + i < maxIndex, "Read off end of index buffer");
++							data[i, j] = pInts[2 + i];
++						}
++				}
++			} else {
++				// read the shorts from the buffer data
++				unsafe {
++					short* pShorts = (short*)indices.ToPointer();
++					for (int j = 0; j < count; ++j) {
++						Debug.Assert(j < maxIndex, "Read off end of index buffer");
++						data[0, j] = pShorts[j];
++					}
++					for (int i = 1; i < faceCount; ++i)
++						for (int j = 0; j < count; ++j) {
++							Debug.Assert(2 + i < maxIndex, "Read off end of index buffer");
++							data[i, j] = pShorts[2 + i];
++						}
++				}
++			}
++		}
++
++
++		protected XmlElement WriteGeometry(SubMesh subMesh) {
++			XmlElement node = document.CreateElement("geometry");
++			XmlAttribute attr;
++
++			attr = document.CreateAttribute("vertexcount");
++			attr.Value = subMesh.vertexData.vertexCount.ToString();
++			node.Attributes.Append(attr);
++
++			XmlVertexData xmlVertData = xmlVertexDataDict[subMesh];
++
++			// Break up the vertex data into the portions used for geometry, and the 
++			// portions used for color and textures.
++
++			XmlVertexData xmlGeomVertData = new XmlVertexData(xmlVertData.vertexCount);
++			xmlGeomVertData.positionData = xmlVertData.positionData;
++			xmlGeomVertData.normalData = xmlVertData.normalData;
++			xmlGeomVertData.diffuseData = null;
++            xmlGeomVertData.specularData = null;
++            xmlGeomVertData.multiTexData = null;
++
++            XmlVertexData xmlMatVertData = new XmlVertexData(xmlVertData.vertexCount);
++			xmlMatVertData.positionData = null;
++			xmlMatVertData.normalData = null;
++            xmlMatVertData.diffuseData = xmlVertData.diffuseData;
++            xmlMatVertData.specularData = xmlVertData.specularData;
++            xmlMatVertData.multiTexData = xmlVertData.multiTexData;
++
++            XmlElement childNode;
++
++			childNode = WriteVertexBuffer(xmlGeomVertData);
++			node.AppendChild(childNode);
++
++			childNode = WriteVertexBuffer(xmlMatVertData);
++			node.AppendChild(childNode);
++
++			return node;
++		}
++
++		private XmlVertexData GetXmlVertexData(SubMesh subMesh) {
++			XmlVertexData vertexData = new XmlVertexData(subMesh.vertexData.vertexCount);
++            vertexData.positionData = null;
++            vertexData.normalData = null;
++            vertexData.diffuseData = null;
++            vertexData.specularData = null;
++
++            for (short bindIdx = 0; bindIdx < subMesh.vertexData.vertexDeclaration.ElementCount; ++bindIdx) {
++                // I'm going to write all the texture buffers to one vertex 
++                // buffer, so I can leave textureOffset at zero.
++                int textureOffset = 0;
++                VertexElement element = subMesh.vertexData.vertexDeclaration.GetElement(bindIdx);
++                HardwareVertexBuffer vBuffer = subMesh.vertexData.vertexBufferBinding.GetBuffer(bindIdx);
++                switch (element.Semantic) {
++                    case VertexElementSemantic.Position:
++                        vertexData.positionData = new float[vertexData.vertexCount, 3];
++                        ReadBuffer(vBuffer, vertexData.vertexCount, element.Size, ref vertexData.positionData);
++                        break;
++                    case VertexElementSemantic.Normal:
++                        vertexData.normalData = new float[vertexData.vertexCount, 3];
++                        ReadBuffer(vBuffer, vertexData.vertexCount, element.Size, ref vertexData.normalData);
++                        break;
++                    case VertexElementSemantic.Diffuse:
++                        vertexData.diffuseData = new int[vertexData.vertexCount];
++                        ReadBuffer(vBuffer, vertexData.vertexCount, element.Size, ref vertexData.diffuseData);
++                        break;
++                    case VertexElementSemantic.Specular:
++                        vertexData.specularData = new int[vertexData.vertexCount];
++                        ReadBuffer(vBuffer, vertexData.vertexCount, element.Size, ref vertexData.specularData);
++                        break;
++                    case VertexElementSemantic.TexCoords:
++                        int dim = VertexElement.GetTypeSize(element.Type) /
++                                  VertexElement.GetTypeSize(VertexElementType.Float1);
++                        Float2ArrayRef texData = new Float2ArrayRef(vertexData.vertexCount, dim);
++                        ReadBuffer(vBuffer, vertexData.vertexCount, element.Size, ref texData.data);
++                        // pad out the list
++                        while (textureOffset + element.Index >= vertexData.multiTexData.Count)
++                            vertexData.multiTexData.Add(null);
++                        // set this element
++                        vertexData.multiTexData[textureOffset + element.Index] = texData;
++                        break;
++                    default:
++                        Trace.TraceWarning("Unknown vertex buffer semantic: " + element.Semantic);
++                        break;
++                }
++            }
++            return vertexData;
++        }
++
++        private void ReadBuffer(HardwareVertexBuffer vBuffer, int vertexCount, int vertexSize, ref float[,] data) {
++            int count = data.GetLength(1);
++            IntPtr bufData = vBuffer.Lock(BufferLocking.ReadOnly);
++
++            unsafe {
++                float* pFloats = (float*)bufData.ToPointer();
++                for (int i = 0; i < vertexCount; ++i)
++                    for (int j = 0; j < count; ++j) {
++                        Debug.Assert(sizeof(float) * (i * count + j) < vertexCount * vertexSize,
++                            "Read off end of vertex buffer");
++                        data[i, j] = pFloats[i * count + j];
++                    }
++            }
++
++            // unlock the buffer
++            vBuffer.Unlock();
++        }
++
++        private void ReadBuffer(HardwareVertexBuffer vBuffer, int vertexCount, int vertexSize, ref int[] data) {
++            IntPtr bufData = vBuffer.Lock(BufferLocking.ReadOnly);
++
++            unsafe {
++                int* pInts = (int*)bufData.ToPointer();
++                for (int i = 0; i < vertexCount; ++i) {
++                    Debug.Assert(sizeof(int) * i < vertexCount * vertexSize,
++						"Read off end of vertex buffer");
++					data[i] = pInts[i];
++                }
++            }
++
++            // unlock the buffer
++            vBuffer.Unlock();
++        }
++        
++        protected XmlElement WriteVertexBuffer(XmlVertexData xmlVertData) {
++            XmlElement node = document.CreateElement("vertexbuffer");
++			XmlAttribute attr;
++
++			if (xmlVertData.positionData != null) {
++				attr = document.CreateAttribute("positions");
++				attr.Value = "true";
++				node.Attributes.Append(attr);
++			}
++
++			if (xmlVertData.normalData != null) {
++				attr = document.CreateAttribute("normals");
++				attr.Value = "true";
++				node.Attributes.Append(attr);
++			}
++			
++			if (xmlVertData.diffuseData != null) {
++				attr = document.CreateAttribute("colours_diffuse");
++				attr.Value = "true";
++				node.Attributes.Append(attr);
++			}
++
++			if (xmlVertData.specularData != null) {
++				attr = document.CreateAttribute("colours_specular");
++				attr.Value = "true";
++				node.Attributes.Append(attr);
++			}
++
++			if (xmlVertData.multiTexData != null) {
++				attr = document.CreateAttribute("texture_coords");
++				attr.Value = xmlVertData.multiTexData.Count.ToString();
++				node.Attributes.Append(attr);
++
++				for (int i = 0; i < xmlVertData.multiTexData.Count; ++i) {
++					attr = document.CreateAttribute("texture_coord_dimensions_" + i);
++					attr.Value = xmlVertData.multiTexData[i].data.GetLength(1).ToString();
++					node.Attributes.Append(attr);
++				}
++			}
++
++			// now write the vertex entries;
++			for (int i = 0; i < xmlVertData.vertexCount; ++i) {
++				XmlElement childNode = WriteVertex(xmlVertData, i);
++				node.AppendChild(childNode);
++			}
++
++			return node;
++		}
++
++		protected XmlElement WriteVertex(XmlVertexData xmlVertData, int vertIndex) {
++			XmlElement node = document.CreateElement("vertex");
++
++			if (xmlVertData.positionData != null) {
++				XmlElement childNode = document.CreateElement("position");
++				WriteVector(childNode, ref xmlVertData.positionData, vertIndex);
++				node.AppendChild(childNode);
++			}
++
++			if (xmlVertData.normalData != null) {
++				XmlElement childNode = document.CreateElement("normal");
++				WriteVector(childNode, ref xmlVertData.normalData, vertIndex);
++				node.AppendChild(childNode);
++			}
++
++			if (xmlVertData.diffuseData != null) {
++				XmlElement childNode = document.CreateElement("colour_diffuse");
++				WriteColour(childNode, xmlVertData.diffuseData[vertIndex]);
++				node.AppendChild(childNode);
++			}
++
++			if (xmlVertData.specularData != null) {
++				XmlElement childNode = document.CreateElement("colour_specular");
++				WriteColour(childNode, xmlVertData.specularData[vertIndex]);
++				node.AppendChild(childNode);
++			}
++
++			if (xmlVertData.multiTexData != null) {
++				for (int texIndex = 0; texIndex < xmlVertData.multiTexData.Count; ++texIndex) {
++					XmlElement childNode = document.CreateElement("texcoord");
++					WriteTexCoord(childNode, ref xmlVertData.multiTexData[texIndex].data, vertIndex);
++					node.AppendChild(childNode);
++				}
++			}
++
++			return node;
++		}
++
++		protected XmlElement WriteBoneAssignments(SubMesh subMesh) {
++			XmlElement node = document.CreateElement("boneassignments");
++
++			foreach (Axiom.MathLib.Collections.Pair entry in subMesh.BoneAssignmentList) {
++				VertexBoneAssignment vba = (VertexBoneAssignment)entry.second;
++				XmlElement childNode = WriteVertexBoneAssignment(vba);
++				node.AppendChild(childNode);
++			}
++
++			return node;
++		}
++
++		protected XmlElement WriteFace(ref int[,] data, int faceIndex) {
++			XmlElement node = document.CreateElement("face");
++			XmlAttribute attr;
++
++			attr = document.CreateAttribute("v1");
++			attr.Value = data[faceIndex, 0].ToString();
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("v2");
++			attr.Value = data[faceIndex, 1].ToString();
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("v3");
++			attr.Value = data[faceIndex, 2].ToString();
++			node.Attributes.Append(attr);
++
++			return node;
++		}
++
++
++		/// <summary>
++		///   Used to write faces other than the first for the triangle_strip 
++		///   and triangle_fan render modes.  This just writes the first vertex.
++		/// </summary>
++		/// <param name="data"></param>
++		/// <param name="faceIndex"></param>
++		/// <returns></returns>
++		protected XmlElement WriteNextFace(ref int[,] data, int faceIndex) {
++			XmlElement node = document.CreateElement("face");
++			XmlAttribute attr;
++
++			attr = document.CreateAttribute("v1");
++			attr.Value = data[faceIndex, 0].ToString();
++			node.Attributes.Append(attr);
++
++			return node;
++		}
++
++		protected XmlElement WriteVertexBoneAssignment(VertexBoneAssignment vba) {
++			XmlElement node = document.CreateElement("vertexboneassignment");
++			XmlAttribute attr;
++
++			attr = document.CreateAttribute("vertexindex");
++			attr.Value = vba.vertexIndex.ToString();
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("boneindex");
++			attr.Value = vba.boneIndex.ToString();
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("weight");
++			attr.Value = vba.weight.ToString();
++			node.Attributes.Append(attr);
++
++			return node;
++		}
++
++		protected XmlElement WriteVector(XmlElement node, Vector3 vec) {
++			XmlAttribute attr;
++
++			attr = document.CreateAttribute("x");
++			attr.Value = vec.x.ToString();
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("y");
++			attr.Value = vec.y.ToString();
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("z");
++			attr.Value = vec.z.ToString();
++			node.Attributes.Append(attr);
++
++			return node;
++		}
++
++		protected XmlElement WriteVector(XmlElement node, ref float[,] buffer, int vertIndex) {
++			XmlAttribute attr;
++
++			attr = document.CreateAttribute("x");
++			attr.Value = buffer[vertIndex, 0].ToString();
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("y");
++			attr.Value = buffer[vertIndex, 1].ToString();
++			node.Attributes.Append(attr);
++
++			attr = document.CreateAttribute("z");
++			attr.Value = buffer[vertIndex, 2].ToString();
++			node.Attributes.Append(attr);
++
++			return node;
++		}
++
++		protected XmlElement WriteColour(XmlElement node, ColorEx color) {
++			XmlAttribute attr;
++
++			attr = document.CreateAttribute("value");
++			attr.Value = string.Format("{0} {1} {2} {3}", color.r, color.g, color.b, color.a);
++
++			node.Attributes.Append(attr);
++			return node;
++		}
++
++		protected XmlElement WriteColour(XmlElement node, int color) {
++			ColorEx colorEx = Root.Instance.RenderSystem.ConvertColor(color);
++			return WriteColour(node, colorEx);
++		}
++
++		protected XmlElement WriteTexCoord(XmlElement node, ref float[,] buffer, int vertexIndex) {
++			XmlAttribute attr;
++
++			if (buffer.GetLength(1) > 0) {
++				attr = document.CreateAttribute("u");
++				attr.Value = buffer[vertexIndex, 0].ToString();
++				node.Attributes.Append(attr);
++			}
++
++			if (buffer.GetLength(1) > 1) {
++				attr = document.CreateAttribute("v");
++				attr.Value = buffer[vertexIndex, 1].ToString();
++				node.Attributes.Append(attr);
++			}
++
++			if (buffer.GetLength(1) > 2) {
++				attr = document.CreateAttribute("w");
++				attr.Value = buffer[vertexIndex, 2].ToString();
++				node.Attributes.Append(attr);
++			}
++
++			return node;
++		}
++
++		protected XmlElement WriteBoundsInfo() {
++			XmlElement node = document.CreateElement("boundsinfo");
++			XmlElement childNode;
++
++			childNode = WriteBoundingBox();
++			node.AppendChild(childNode);
++
++			childNode = WriteBoundingSphere();
++			node.AppendChild(childNode);
++
++			return node;
++		}
++
++		protected XmlElement WriteBoundingBox() {
++			XmlElement node = document.CreateElement("boundingbox");
++
++			XmlElement childNode;
++
++			childNode = document.CreateElement("min");
++			WriteVector(childNode, mesh.BoundingBox.Minimum);
++			node.AppendChild(childNode);
++
++			childNode = document.CreateElement("max");
++			WriteVector(childNode, mesh.BoundingBox.Maximum);
++			node.AppendChild(childNode);
++
++			return node;
++		}
++
++		protected XmlElement WriteBoundingSphere() {
++			XmlElement node = document.CreateElement("boundingsphere");
++			XmlAttribute attr = document.CreateAttribute("radius");
++			attr.Value = mesh.BoundingSphereRadius.ToString();
++			node.Attributes.Append(attr);
++			return node;
++		}
++
++
++
++
++		#endregion
++
++		#region Properties
++
++		#endregion
++	}
++}

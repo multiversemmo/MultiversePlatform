@@ -1,0 +1,31 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <BootstrapperFile Include="Microsoft.Net.Framework.2.0">
+      <InProject>False</InProject>
+      <ProductName>Microsoft .NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperFile>
+    <BootstrapperFile Include="DX_1.0.2908.0">
+      <InProject>False</InProject>
+      <ProductName>Microsoft Managed DirectX 9.0c</ProductName>
+      <Install>true</Install>
+    </BootstrapperFile>
+    <BootstrapperFile Include="Multiverse Tools">
+      <InProject>False</InProject>
+      <ProductName>Multiverse Tools</ProductName>
+      <Install>true</Install>
+    </BootstrapperFile>
+  </ItemGroup>
+
+   <Target Name="Bootstrapper">
+      <GenerateBootstrapper
+         ApplicationName="Multiverse Bootstrapper"
+         BootstrapperItems="@(BootstrapperFile)"
+         Culture="en"
+         CopyComponents="True"
+         ComponentsLocation="Absolute"
+         ComponentsUrl="$(BOOTSTRAPPER_URL)"
+         OutputPath="publish\"
+         Path="$(BootstrapDir)"/>
+   </Target>
+</Project>

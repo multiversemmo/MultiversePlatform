@@ -1,0 +1,245 @@
+<?xml version='1.0'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2003/01/wi'>
+  <Product Id='B6ED129F-5587-463f-997A-6B7405576288' Name='Multiverse Terrain Generator' 
+        Language='1033' Codepage='1252'
+        UpgradeCode='E8852D82-C7F9-4eb5-9DE7-4F08E47F9D99'
+        Version='0.7.050714' Manufacturer='Multiverse Inc.'>
+  	
+    <Package Id='????????-????-????-????-????????????'
+          Description='Multiverse TerrainGenerator Installer'
+          Comments='Multiverse Terrain Generator'
+          Manufacturer='Multiverse Inc.' InstallerVersion='200' Compressed='yes' />
+  	
+  	<Media Id='1' Cabinet='product.cab' EmbedCab='yes' />
+  	<?include ui.wxi?> 	
+  	<Directory Id='TARGETDIR' Name='SourceDir'>		
+  		<Directory Id="DesktopFolder" Name='Desktop' />
+  		<Directory Id="ProgramMenuFolder" Name="PMenu" LongName="Programs">
+  			<Directory Id="ProgramMenuDir" Name='FOO.BAR' LongName="Multiverse Tools" />
+  		</Directory>
+  		<Directory Id='ProgramFilesFolder' Name='PFiles'>
+  			<Directory Id='MULTITOOLDIR' Name='MVTOOLS' LongName='Multiverse Tools'>
+<!--
+  				<Component Id='ConfigFiles' Guid='58572178-27BD-41f2-B1FA-577A2DCE2C4F'>
+  					<File Id='WLImageset' DiskId='1' Name='IMAGESET.XML'
+  					      LongName='WindowsLookImageset.xml' src='../bin/WindowsLookImageset.xml' />
+  					<File Id='MVImageset' DiskId='1' Name='IMAGESET.XML'
+  					      LongName='MultiverseImageset.xml' src='../bin/MultiverseImageset.xml' />
+  					<File Id='LogoPic' DiskId='1' Name='LOGOPIC.JPG'
+  					      LongName='logopicture.jpg' src='../bin/logopicture.jpg' />
+-->
+<!--  					
+  				</Component>
+-->
+  				<Directory Id='INSTALLDIR' Name='MVMODVIE' LongName='Multiverse Terrain Generator'>
+  					<Component Id='ConfigFiles' Guid='3E1962A9-C29A-4561-BBE0-9962017A14AA'>
+  						<File Id='EngineConfig' DiskId='1' Name='ENGINE.XML'
+  						      LongName='EngineConfig.xml' src='EngineConfig-installer.xml' />
+<!--  						
+  						<File Id='RefPointTypes' DiskId='1' Name='foo.xml'
+  						      LongName='refpointtypes.xml' src='../MapTool/bin/Debug/refpointtypes.xml' />
+  						<File Id='Assets' DiskId='1' Name='foo.xml'
+  						      LongName='assets.xml' src='../MapTool/bin/Debug/assets.xml' />
+-->
+  					</Component>
+  					<Component Id='LibraryFiles' Guid='3A0644DD-65FB-42f1-AC91-E3AC53DFA813'>
+  						<File Id='Axiom.Engine' DiskId='1' Name='AxiomEng.DLL'
+  						      LongName='Axiom.Engine.dll' src='../../../Axiom/Engine/bin/Debug/Axiom.Engine.dll' />
+  						<File Id='Axiom.MathLib' DiskId='1' Name='AxiomMat.DLL'
+  						      LongName='Axiom.MathLib.dll' src='../../../Axiom/MathLib/bin/Debug/Axiom.MathLib.dll' />
+  						<File Id='Axiom.Platforms.Win32' DiskId='1' Name='AxiomPla.DLL'
+  						      LongName='Axiom.Platforms.Win32.dll' src='../../../Axiom/Platforms/Win32/bin/Debug/Axiom.Platforms.Win32.dll' />
+  						<File Id='Axiom.Plugins.CgProgramManager' DiskId='1' Name='AxiomPlu.DLL'
+  						      LongName='Axiom.Plugins.CgProgramManager.dll' src='../../../Axiom/Plugins/CgProgramManager/bin/Debug/Axiom.Plugins.CgProgramManager.dll' />
+  						<File Id='Axiom.Plugins.ParticleFX' DiskId='1' Name='AxiomPlu.DLL'
+  						      LongName='Axiom.Plugins.ParticleFX.dll' src='../../../Axiom/Plugins/ParticleFX/bin/Debug/Axiom.Plugins.ParticleFX.dll' />
+  						<File Id='Axiom.RenderSystems.DirectX9' DiskId='1' Name='AxiomRen.DLL'
+  						      LongName='Axiom.RenderSystems.DirectX9.dll' src='../../../Axiom/RenderSystems/DirectX9/bin/Debug/Axiom.RenderSystems.DirectX9.dll' />
+<!--
+  						<File Id='Axiom.RenderSystems.OpenGL' DiskId='1' Name='AxiomRen.DLL'
+  						      LongName='Axiom.RenderSystems.OpenGL.dll' src='../bin/Debug/Axiom.RenderSystems.OpenGL.dll' />
+-->
+  						<File Id='Axiom.SceneManagers.Multiverse' DiskId='1' Name='AxiomSce.DLL'
+  						      LongName='Axiom.SceneManagers.Multiverse.dll' src='../../../Lib/Generator/bin/Debug/Axiom.SceneManagers.Multiverse.dll' />
+						<File Id='Multiverse.Generator' DiskId='1' Name='Multiver.DLL'
+  						      LongName='Multiverse.Generator.dll' src='../../../Lib/Generator/bin/Debug/Multiverse.Generator.dll' />
+  						<File Id='SpeedTreeRT' DiskId='1' Name='SpeedTre.DLL'
+  						      LongName='SpeedTreeRT.dll' src='../../../Lib/SpeedTree/bin/Debug/SpeedTreeRT.dll' />
+  						<File Id='SpeedTreeWrapper' DiskId='1' Name='SpeedTre.DLL'
+  						      LongName='SpeedTreeWrapper.dll' src='../../../Lib/SpeedTree/bin/Debug/SpeedTreeWrapper.dll' />
+  						<File Id='Tao.Cg' DiskId='1' Name='TaoCg.DLL'
+  						      LongName='Tao.Cg.dll' src='../../../Axiom/Dependencies/Managed/Tao.Cg.dll' />
+  						<File Id='Tao.DevIl' DiskId='1' Name='TaoDevIl.DLL'
+  						      LongName='Tao.DevIl.dll' src='../../../Axiom/Dependencies/Managed/Tao.DevIl.dll' />
+  						<File Id='cg' DiskId='1' Name='cg.DLL'
+  						      LongName='cg.dll' src='../../../Axiom/Dependencies/Native/cg.dll' />
+  						<File Id='devil' DiskId='1' Name='devil.DLL'
+  						      LongName='devil.dll' src='../../../Axiom/Dependencies/Native/devil.dll' />
+  						<File Id='ICSharpCode.SharpZipLib' DiskId='1' Name='foobar.bar'
+  							  LongName='ICSharpCode.SharpZipLib.dll' src='../../../Axiom/Engine/bin/Debug/ICSharpCode.SharpZipLib.dll' />
+  						<File Id='Multiverse.Serialization' DiskId='1' Name='foobar.bar'
+  							  LongName='Multiverse.Serialization.dll' src='../../../MultiverseClient/Serialization/bin/Debug/Multiverse.Serialization.dll' />
+  						<File Id='System.Data' DiskId='1' Name='foobar.bar'
+  							  LongName='System.Data.dll' src='../../../Axiom/Engine/bin/Debug/System.Data.dll' />
+  						<File Id='System' DiskId='1' Name='System.dll'
+  							  src='../../../Axiom/Engine/bin/Debug/System.dll' />
+  						<File Id='System.Drawing' DiskId='1' Name='foobar.bar'
+  							  LongName='System.Drawing.dll' src='../../../Axiom/Engine/bin/Debug/System.Drawing.dll' />
+  						<File Id='System.Windows.Forms' DiskId='1' Name='foobar.bar'
+  							  LongName='System.Windows.Forms.dll' src='../../../Axiom/Platforms/Win32/bin/Debug/System.Windows.Forms.dll' />
+  						<File Id='System.Xml' DiskId='1' Name='foobar.bar'
+  							  LongName='System.Xml.dll' src='../../../Axiom/Engine/bin/Debug/System.Xml.dll' />
+  						<File Id='Tao.Platform.Windows' DiskId='1' Name='foobar.bar'
+  							  LongName='Tao.Platform.Windows.dll' src='../../../Axiom/Dependencies/Managed/Tao.Platform.Windows.dll' />
+  						<File Id='ilu' DiskId='1' Name='ilu.dll'
+  							  src='../../ogretools/ilu.dll' />
+  						<File Id='ilut' DiskId='1' Name='ilut.dll'
+  							  src='../../ogretools/ilut.dll' />
+  						<File Id='msvcp80' DiskId='1' Name='msvcp80.dll'
+  							  src='C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.42_x-ww_0de06acd/msvcp80.dll' />
+  						<File Id='msvcr80' DiskId='1' Name='msvcr80.dll'
+  							  src='C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.42_x-ww_0de06acd/msvcr80.dll' />
+  						<File Id='OgreMain' DiskId='1' Name='OgreMain.dll'
+  							  src='../../ogretools/OgreMain.dll' />
+  						<File Id='stlport_vc746' DiskId='1' Name='foobar.bar'
+  							  LongName='stlport_vc746.dll' src='../../ogretools/stlport_vc746.dll' />
+  						<File Id='Readme' DiskId='1' Name='Readme.txt'
+  							  src='../../ogretools/Readme.txt' />
+  						<File Id='MultiverseIcon' DiskId='1' Name='foobar.bar' LongName='MultiverseIcon.ico'
+  							  src='./MultiverseIcon.ico' />
+  						<File Id='MULTMATHLIB' DiskId='1' Name='foobar.bar' LongName='Multiverse.MathLib.dll'
+  							  src='../../../MultiverseClient/MathLib/bin/Debug/Multiverse.MathLib.dll' />
+<!--
+  						<File Id='msvcr71' DiskId='1' Name='msvcr71.DLL' LongName='msvcr71.dll' src='../../../MultiverseClient/Dependencies/Native/msvcr71.dll' />
+             			<File Id='msvcp71' DiskId='1' Name='msvcp71.DLL' LongName='msvcp71.dll' src='../../../MultiverseClient/Dependencies/Native/msvcp71.dll' />
+-->
+	  					<RemoveFile Id='LogFile' On='uninstall' Name='foobar.bar' LongName='AxiomEngine.log' />
+	  					<RemoveFile Id='MODVIEWSUO' On='uninstall' Name='barfoo.foo' LongName='TerrainGenerator.suo'/>
+  					</Component>
+  						<Directory Id='MEDIADIR' Name='Media'>
+		  					<Component Id='MEDIA' Guid='7322BF15-EE61-44b3-B82C-39FB08583D0D'>
+	  							<File Id='mvsmtm' DiskId='1' Name='MVSMTM.mat'
+  								      LongName='MVSMTerrain.material' src='../../../Media/Materials/MVSMTerrain.material' />  					
+  								<File Id='OM' DiskId='1' Name='Ocean.mat'
+  								      LongName='Ocean.material' src='../../../Media/Materials/Ocean.material' />
+  								<File Id='OGP' DiskId='1' Name='Ocean.cg' 
+  								      LongName='Ocean.cg' src='../../../Media/GpuPrograms/Ocean.cg' />
+  								<File Id='terrain' DiskId='1' Name='Terrain.cg' 
+		  						      LongName='Terrain.cg' src='../../../Media/GpuPrograms/Terrain.cg' />
+  								<File Id='sand' DiskId='1' Name='SP_sand.dds'
+		  						      LongName='splatting_sand.dds' src='../../../Media/Textures/splatting_sand.dds' />
+  								<File Id='rock' DiskId='1' Name='SP_rock.dds'
+		  						      LongName='splatting_rock.dds' src='../../../Media/Textures/splatting_rock.dds' />
+	 							<File Id='grass' DiskId='1' Name='SP_grass.dds'
+		  						      LongName='splatting_grass.dds' src='../../../Media/Textures/splatting_grass.dds' />
+	  							<File Id='snow' DiskId='1' Name='SP_snow.dds'
+		  						      LongName='splatting_snow.dds' src='../../../Media/Textures/splatting_snow.dds' />
+  								<File Id='water' DiskId='1' Name='Water.mat'
+		  						      LongName='Water.material'	src='../../../Media/Materials/Water.material' />
+  								<File Id='HMETerrainMaterial' DiskId='1' Name='foobar.bar' LongName='HMETerrain.material'
+  									  src='../../../Media/Materials/HMETerrain.material'/>
+  								<File Id='HMETerrainCG' DiskId='1' Name='foobar.bar' LongName='HMETerrain.cg'
+  									  src='../../../Media/GpuPrograms/HMETerrain.cg'/>
+  								<File Id='RedOutline' DiskId='1' Name='foobar.bar' LongName='red-outline.png'
+  									  src='../../../Media/Textures/red-outline.png'/>
+  								<File Id='HedYellowSquare' DiskId='1' Name='foobar.bar' LongName='hed-yellow-square.png'
+  									  src='../../../Media/Textures/hed-yellow-square.png'/>
+  							</Component>
+  						</Directory>
+<!--  					
+  					<Component Id='ConversionToolExecutableFiles' Guid='2966F3A1-9D43-43f9-A67A-A96DAA8CA25B'>
+  						<File Id='ConversionTool' DiskId='1' Name='CT.EXE'
+  						      LongName='ConversionTool.exe' src='../../Tools/ConversionTool/bin/Debug/ConversionTool.exe'>
+  						</File>
+  					</Component>
+  					<Directory Id="ProgramMenuMVDir" LongName="Multiverse Tools" Name="MVTOOLS"></Directory>
+-->
+  					<Component Id='TerrainGeneratorExecutableFiles' Guid='7C55AB32-44D1-4274-BB3A-597CB7CED003'>
+  						<File Id='TerrainGenerator' DiskId='1' Name='MV.EXE'
+  						      LongName='TerrainGenerator.exe' src='../bin/Debug/TerrainGenerator.exe'>
+  							<Shortcut Id='StartMenuTerrainGeneratorItem' Directory='ProgramMenuDir' Name='foobar.bar'
+  							          LongName='TerrainGenerator' WorkingDirectory='INSTALLDIR'
+  							          Icon='C:\Program Files\Multiverse Tools\Multiverse Terrain Generator\Multiverse.ico' IconIndex='0'
+  							          Description='The Multiverse Terrain Generator' />
+  						</File>
+  					</Component>
+<!--
+  					<Component Id='OgreXMLConverterExecutableFiles' Guid='8A1216DB-4ACD-4d3c-B046-5C567C25526D'>
+  						<File Id='OgreXMLConverterFile' DiskId='1' Name='foobar.bar'
+  							  LongName='OgreXMLConverter.exe' src='../../ogretools/OgreXMLConverter.exe' />
+  					</Component>
+  					<Component Id='ConversionToolComponentExecutableFiles' Guid='08B1B7BF-6181-40ba-82C4-92DD94180FB1'>
+  						<File Id='ConversionToolExecuatable' DiskId='1' Name='foobar.bar'
+  							  LongName='ConversionTool.exe' src='../../ConversionTool/bin/Debug/ConversionTool.exe' />
+  					</Component>
+  					<Component Id='FILEREMOVE'>
+	  					<RemoveFile Id='LogFile' On='uninstall' Name='foobar.bar' LongName='AxiomEngine.log' />
+	  					<RemoveFile Id='MODVIEWSUO' On='uninstall' Name='barfoo.foo' LongName='ModelViewer.suo'/>
+  					</Component>
+  					<Component Id='ImagesetSchema' Guid='67C33BB4-2C54-49d7-81C1-01C98B2E761C'>
+  						<File Id='Imageset' DiskId='1' Name='FOO.BAR'
+  						      LongName='Imageset.xsd' src='../bin/Imageset.xsd' />
+  					</Component>
+-->
+  				</Directory>
+<!--
+  				<Directory Id='MediaDir' Name='MEDIA' LongName='Media'>
+  					<?include media_assets.wxi?>
+  				</Directory>
+-->
+  			</Directory> <!-- close of INSTALLDIR -->
+  		</Directory>   <!-- close of ProgramFilesFolder -->
+  	</Directory>
+  	
+  	<Icon Id="MVTOOLS" src="../bin/Debug/TerrainGenerator.exe" />
+  	
+  	<Feature Id='Complete' Title='Complete Install' Display='expand' Level='1' ConfigurableDirectory='INSTALLDIR'>
+<!--
+  		<Feature Id='MainProgram' Title='Main Program' Level='1'>
+  			<ComponentRef Id='ClientExecutableFiles' />
+  			<ComponentRef Id='MVUpdateExecutableFiles' />
+  		</Feature>
+-->
+  		<Feature Id='TerrainGenerator' Title='Terrain Generator' Level='1'>
+  			<ComponentRef Id='TerrainGeneratorExecutableFiles' />
+  		</Feature>
+<!--
+  		<Feature Id='ConversionTools' Title='Conversion Tools' Level="1">
+  			<Feature Id='OgreXMLConverterExecutableFiles' Title='Ogre XML Converter' Level='2'>
+  				<ComponentRef Id='OgreXMLConverterExecutableFiles' />
+  			</Feature>
+  			<Feature Id='ConversionTool' Title='ConversionTool' Level='2'>
+  				<ComponentRef Id='ConversionToolComponentExecutableFiles' />
+  			</Feature>
+  		</Feature>
+-->
+  		<Feature Id='Basics' Title='Base Stuff' Level='1'>
+ 
+  			<ComponentRef Id='ConfigFiles' />
+  			<ComponentRef Id='LibraryFiles' />
+  			<ComponentRef Id='MEDIA' />
+<!--
+  			<ComponentRef Id='MYMEDIA'/>
+  			<ComponentRef Id='FILEREMOVE'/>
+  			<ComponentRef Id='Icons' />
+  			<ComponentRef Id='Skeletons' />
+  			<ComponentRef Id='Textures' />
+  			<ComponentRef Id='Fonts' />			
+  			<ComponentRef Id='InterfaceModules' />
+  			<ComponentRef Id='Materials' />
+  			<ComponentRef Id='GpuPrograms' />
+  			<ComponentRef Id='InterfaceImagesets' />
+  			<ComponentRef Id='InterfaceLayouts' />
+  			<ComponentRef Id='InterfaceScripts' />
+  			<ComponentRef Id='SpeedTree' />
+  			<ComponentRef Id='Imagefiles' />
+  			<ComponentRef Id='Sounds' />
+  			<ComponentRef Id='Meshes' /> 			
+  			<ComponentRef Id='ImagesetFiles' />
+  			<ComponentRef Id='DirectX_SDK' />
+-->
+  		</Feature>
+  	</Feature>
+	</Product>
+</Wix>
+

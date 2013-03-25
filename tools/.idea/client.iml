@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module relativePaths="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../MultiverseClient">
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/_ReSharper.Multiverse" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/_ReSharper.MultiverseClient" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/bin/Debug" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/bin/Release" />
+      <excludeFolder url="file://$MODULE_DIR$/../../MultiverseClient/obj" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntryProperties />
+  </component>
+</module>
+

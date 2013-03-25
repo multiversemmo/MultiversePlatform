@@ -1,0 +1,97 @@
+// ./maya -nosplash -script c:/export.mel
+
+autoLoadPlugin("", "COLLADA", "COLLADA");
+
+proc showAllJoints() {
+  string $joints[] = `ls -type joint`;
+  for ($joint in $joints) {
+    setAttr($joint + ".visibility", on);
+  }
+}  
+
+proc showAllMeshes() {
+  string $meshes[] = `ls -type mesh`;
+  for ($mesh in $meshes) {
+    string $transforms[] = `listRelatives -fullPath -parent $mesh`;
+    for ($transform in $transforms) {
+        setAttr($transform + ".visibility", on);
+    }
+  }
+}
+
+proc string[] getRootBones() {
+  string $joints[] = `ls -type joint`;
+  string $rootBones[];
+  for ($joint in $joints) {
+    string $parentBones[] = `listRelatives -fullPath -parent -type joint $joint`;
+    if (size($parentBones) == 0) {
+      $rootBones[size($rootBones)] = $joint;
+    }
+  }
+  return $rootBones;
+};
+
+proc prepareModel(int $is_rig) {
+  if ($is_rig > 0) {
+    string $rootBones[] = getRootBones();
+    for ($rootBone in $rootBones) {
+      select -r $rootBone;
+      // Move to bindPose
+      gotoBindPose;
+    }
+  }
+  // Display the skeleton so that it will export
+  showAllJoints();
+  // Show all the mesh objects so they will export
+  showAllMeshes();
+  currentUnit -l millimeter -a degree -t ntsc;
+};
+
+proc exportModel(string $saveFilePath, int $is_rig) {
+  prepareModel($is_rig);
+  float $sampleMax = `playbackOptions -q -max`;
+  float $sampleMin = `playbackOptions -q -min`;
+  float $sampleSize = 1;
+  $sampleMax = $sampleMax / 30;
+  $sampleMin = $sampleMin / 30;
+  $sampleSize = $sampleSize / 30;
+  string $opts = "bakeTransforms=1;bakeLighting=0;exportCameraAsLookat=0;exportTriangles=1";
+  if ($is_rig == 0) {
+    $opts = $opts + ";isSampling=1;samplingFunction=" + $sampleMin + "," + $sampleMax + "," + $sampleSize;
+  }
+  $opts = $opts + ";exportPolygonMeshes=1;exportLights=0;exportCameras=0;exportJointsAndSkin=1;exportAnimations=1;exportControllerTargets=1;exportInvisibleNodes=0;exportBoundingBoxes=0;exportNormals=1;exportTexCoords=1;exportVertexColors=1;exportWeaklyTypedArrays=0;";
+  
+  string $message = "Exporting file - options = " + $opts;
+  warning $message;
+  pv_performAction $saveFilePath "Collada";
+  file -op $opts -typ "Collada" -pr -ea $saveFilePath;
+  warning "File exported";
+};
+
+proc convertModel(string $exportDir, string $modelDir, string $modelBase, string $anim) {
+  string $saveName = $modelBase + ".dae";
+  string $sourceName = $modelBase + ".ma";
+  int $is_rig = 0;
+  if ($anim == "") {
+    $is_rig = 1;
+  } else {
+    $saveName = $modelBase + "_" + $anim + ".dae";
+    $sourceName = $modelBase + "_" + $anim + ".ma";
+  }
+  file -f -new;
+  string $sourceFile = $modelDir + "/" + $sourceName;
+  file -f -o $sourceFile;
+  string $destFile = $exportDir + "/" + $saveName;
+  exportModel($destFile, $is_rig);
+};
+
+global proc convertAnimatedModel(string $exportDir, string $modelDir, string $modelBase, string $animations[]) {
+  // Process the rig file
+  convertModel($exportDir, $modelDir, $modelBase, "");
+  
+  for ($anim in $animations) {
+    // Process the animations
+    convertModel($exportDir, $modelDir, $modelBase, $anim);
+  }
+};
+

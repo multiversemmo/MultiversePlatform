@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="1">
+  <StaticObject Name="Axe" Mesh="axe.mesh" Sound="">
+    <Position x="23323.95" y="39980" z="37702.94" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="axe_003_polySurfaceShape1-lib.0/axe_003____Default____Standard__" MaterialName="axe.axe_003____Default____Standard__" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Barrel_4" Mesh="barrel.mesh" Sound="">
+    <Position x="27010.35" y="40000" z="37519.46" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_openShape-lib.0" MaterialName="barrel.barrel_material" Show="True" />
+      <SubMeshInfo Name="barrel_closedShape-lib.0" MaterialName="barrel.barrel_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Brax_5" Mesh="brax.mesh" Sound="">
+    <Position x="32901.55" y="40000" z="42567" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="braxLadenBoxesShape-lib.0" MaterialName="brax.brax_box_006_lambert5" Show="True" />
+      <SubMeshInfo Name="braxHeadShape-lib.0" MaterialName="brax.phong1" Show="True" />
+      <SubMeshInfo Name="braxBodyShape-lib.0" MaterialName="brax.phong1" Show="True" />
+      <SubMeshInfo Name="braxTailShellTopShape-lib.0" MaterialName="brax.phong1" Show="True" />
+      <SubMeshInfo Name="braxTailShellShape-lib.0" MaterialName="brax.phong1" Show="True" />
+      <SubMeshInfo Name="braxTailShape-lib.0" MaterialName="brax.phong1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Broken Barrel_8" Mesh="barrel_broken.mesh" Sound="">
+    <Position x="37736.49" y="40000" z="38657.71" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_half_broken_openShape-lib.0" MaterialName="barrel_broken.barrel_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Corral01_10" Mesh="corral_01.mesh" Sound="">
+    <Position x="43004.03" y="40000" z="38878.96" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="91" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="corral_0Shape1-lib.0" MaterialName="corral_01.corral_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Corral02_12" Mesh="corral_02.mesh" Sound="">
+    <Position x="51414.53" y="40000" z="38831.16" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="-116" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="corral_0Shape2-lib.0" MaterialName="corral_02.corral_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Corral03_14" Mesh="corral_03.mesh" Sound="">
+    <Position x="62612.68" y="40000" z="39487.04" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="-93" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="corral_0Shape3-lib.0" MaterialName="corral_03.corral_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Empty Fountain_16" Mesh="fountainEmpty.mesh" Sound="">
+    <Position x="74591.51" y="40000" z="41898.96" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="fountainShape-lib.0" MaterialName="fountainEmpty.lambert3" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Gate_18" Mesh="gate.mesh" Sound="">
+    <Position x="84195.38" y="40000" z="43000.61" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="InnerDoorShape-lib.0" MaterialName="gate.Gate_Material" Show="True" />
+      <SubMeshInfo Name="RtOuterDoorShape-lib.0" MaterialName="gate.Gate_Material" Show="True" />
+      <SubMeshInfo Name="GateShape-lib.0" MaterialName="gate.Gate_Material" Show="True" />
+      <SubMeshInfo Name="LftOuterDoorShape-lib.0" MaterialName="gate.Gate_Material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Half open Barrel_20" Mesh="barrel_half_open.mesh" Sound="">
+    <Position x="96447.96" y="40000" z="42383.05" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_half_openShape-lib.0" MaterialName="barrel_half_open.barrel_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Hall_24" Mesh="hall.mesh" Sound="">
+    <Position x="112120.4" y="40000" z="45307.53" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="roof_beam_end_piece_tallShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="side_windows_human_meeting_houseShape-lib.0" MaterialName="hall.windows_hall_material" Show="True" />
+      <SubMeshInfo Name="roof_beam_end_piece_shortShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="human_meeting_houseShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_long_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_mid_long_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_mid_short_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_short_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="windowsShape-lib.0" MaterialName="hall.windows_hall_material" Show="True" />
+      <SubMeshInfo Name="inside_human_meeting_houseShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="House Open_27" Mesh="house_open.mesh" Sound="">
+    <Position x="135014.9" y="40000" z="49099.53" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="PorchShape-lib.0" MaterialName="house_open.houseOpen_material" Show="True" />
+      <SubMeshInfo Name="RampShape-lib.0" MaterialName="house_open.houseOpen_material" Show="True" />
+      <SubMeshInfo Name="HouseShape-lib.0" MaterialName="house_open.houseOpen_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="House Tall_30" Mesh="house_tall.mesh" Sound="">
+    <Position x="156732.4" y="40000" z="51498.09" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="house_tallShape-lib.0" MaterialName="house_tall.house_tall_material" Show="True" />
+      <SubMeshInfo Name="ChimneyShape-lib.0" MaterialName="house_tall.house_tall_material" Show="True" />
+      <SubMeshInfo Name="RampShape-lib.0" MaterialName="house_tall.house_tall_material" Show="True" />
+      <SubMeshInfo Name="StepShape-lib.0" MaterialName="house_tall.house_tall_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Human Female_32" Mesh="human_female.mesh" Sound="">
+    <Position x="173234.8" y="40000" z="52174.83" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="head_aShape-lib.0" MaterialName="human_female.head_a_material" Show="True" />
+      <SubMeshInfo Name="leather_a_beltShape-lib.0" MaterialName="human_female.leather_a_material" Show="True" />
+      <SubMeshInfo Name="leather_a_pantsShape-lib.0" MaterialName="human_female.leather_a_material" Show="True" />
+      <SubMeshInfo Name="leather_a_bootsShape-lib.0" MaterialName="human_female.leather_a_material" Show="True" />
+      <SubMeshInfo Name="leather_a_bracersShape-lib.0" MaterialName="human_female.leather_a_material" Show="True" />
+      <SubMeshInfo Name="bodyShape-lib.0" MaterialName="human_female.skin_material" Show="True" />
+      <SubMeshInfo Name="plate_b_tunicShape-lib.0" MaterialName="human_female.plate_b_material" Show="True" />
+      <SubMeshInfo Name="plate_b_pantsShape-lib.0" MaterialName="human_female.plate_b_material" Show="True" />
+      <SubMeshInfo Name="plate_b_glovesShape-lib.0" MaterialName="human_female.plate_b_material" Show="True" />
+      <SubMeshInfo Name="plate_b_helmetShape-lib.0" MaterialName="human_female.plate_b_material" Show="True" />
+      <SubMeshInfo Name="plate_b_bootsShape-lib.0" MaterialName="human_female.plate_b_material" Show="True" />
+      <SubMeshInfo Name="leather_a_tunicShape-lib.0" MaterialName="human_female.leather_a_material" Show="True" />
+      <SubMeshInfo Name="hair_bShape-lib.0" MaterialName="human_female.hair_b_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Human Male_34" Mesh="human_male.mesh" Sound="">
+    <Position x="189997" y="40000" z="53054.48" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="cloth_a_apronShape-lib.0" MaterialName="human_male.apron_a_material" Show="True" />
+      <SubMeshInfo Name="leather_a_mantleShape-lib.0" MaterialName="human_male.leather_a_material" Show="True" />
+      <SubMeshInfo Name="leather_a_tunicShape-lib.0" MaterialName="human_male.leather_a_material" Show="True" />
+      <SubMeshInfo Name="leather_b_tunicShape-lib.0" MaterialName="human_male.leather_b_material" Show="True" />
+      <SubMeshInfo Name="leather_b_bootsShape-lib.0" MaterialName="human_male.leather_b_material" Show="True" />
+      <SubMeshInfo Name="leather_b_glovesShape-lib.0" MaterialName="human_male.leather_b_material" Show="True" />
+      <SubMeshInfo Name="leather_b_helmetShape-lib.0" MaterialName="human_male.leather_b_material" Show="True" />
+      <SubMeshInfo Name="leather_b_armband_leftShape-lib.0" MaterialName="human_male.leather_b_material" Show="True" />
+      <SubMeshInfo Name="leather_b_armband_rightShape-lib.0" MaterialName="human_male.leather_b_material" Show="True" />
+      <SubMeshInfo Name="plate_a_pantsShape-lib.0" MaterialName="human_male.plate_a_material" Show="True" />
+      <SubMeshInfo Name="plate_a_armorShape-lib.0" MaterialName="human_male.plate_a_material" Show="True" />
+      <SubMeshInfo Name="cloth_a_beltShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="plate_a_bootsShape-lib.0" MaterialName="human_male.plate_a_material" Show="True" />
+      <SubMeshInfo Name="plate_a_glovesShape-lib.0" MaterialName="human_male.plate_a_material" Show="True" />
+      <SubMeshInfo Name="plate_a_helmetShape-lib.0" MaterialName="human_male.plate_a_material" Show="True" />
+      <SubMeshInfo Name="cloth_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="hair_cShape-lib.0" MaterialName="human_male.hair_b_material" Show="True" />
+      <SubMeshInfo Name="hair_eShape-lib.0" MaterialName="human_male.hair_b_material" Show="True" />
+      <SubMeshInfo Name="facial_hair_aShape-lib.0" MaterialName="human_male.facial_hair_a_material" Show="True" />
+      <SubMeshInfo Name="hair_bShape-lib.0" MaterialName="human_male.hair_a_material" Show="True" />
+      <SubMeshInfo Name="hair_aShape-lib.0" MaterialName="human_male.hair_a_material" Show="True" />
+      <SubMeshInfo Name="hair_dShape-lib.0" MaterialName="human_male.hair_a_material" Show="True" />
+      <SubMeshInfo Name="cloth_a_bootsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="head_aShape-lib.0" MaterialName="human_male.head_a_material" Show="True" />
+      <SubMeshInfo Name="head_dShape-lib.0" MaterialName="human_male.head_a_material" Show="True" />
+      <SubMeshInfo Name="head_cShape-lib.0" MaterialName="human_male.head_a_material" Show="True" />
+      <SubMeshInfo Name="head_bShape-lib.0" MaterialName="human_male.head_a_material" Show="True" />
+      <SubMeshInfo Name="bodyShape-lib.0" MaterialName="human_male.skin_material" Show="True" />
+      <SubMeshInfo Name="leather_a_pantsShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="cloth_a_shirtShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="cloth_a_boxersShape-lib.0" MaterialName="human_male.cloth_a_material" Show="True" />
+      <SubMeshInfo Name="leather_b_pantsShape-lib.0" MaterialName="human_male.leather_b_material" Show="True" />
+      <SubMeshInfo Name="leather_a_beltShape-lib.0" MaterialName="human_male.leather_a_material" Show="True" />
+      <SubMeshInfo Name="leather_a_glovesShape-lib.0" MaterialName="human_male.leather_a_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Orc_36" Mesh="orc.mesh" Sound="">
+    <Position x="201591.6" y="40000" z="52236.95" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="Body_gggShape" MaterialName="orc.BODY" Show="True" />
+      <SubMeshInfo Name="Eyes_gggShape" MaterialName="orc.FACE" Show="True" />
+      <SubMeshInfo Name="Head_gggShape" MaterialName="orc.FACE" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Orc House_39" Mesh="orc_house.mesh" Sound="">
+    <Position x="215977.2" y="40000" z="60491.27" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape10-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape11-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape12-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape13-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape14-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape15-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape16-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape17-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape18-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape19-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape20-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape21-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape22-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape23-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape3-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape4-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape5-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape6-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape7-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape8-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape9-lib.0/sadasd" MaterialName="orc_house.sadasd" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Pick_43" Mesh="pick.mesh" Sound="">
+    <Position x="252216" y="40000" z="66069.65" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="pick_003_polySurfaceShape1-lib.0/pick_003_Material__26____Standard__" MaterialName="pick.pick_003_Material__26____Standard__" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Rock 1_45" Mesh="rock_group_01.mesh" Sound="">
+    <Position x="261463.9" y="40000" z="68221.98" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0" MaterialName="rock_group_01.rocks_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.0" MaterialName="rock_group_01.rocks_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape3-lib.0" MaterialName="rock_group_01.rocks_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape4-lib.0" MaterialName="rock_group_01.rocks_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape5-lib.0" MaterialName="rock_group_01.rocks_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape6-lib.0" MaterialName="rock_group_01.rocks_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Rock 2_47" Mesh="rock_group_02.mesh" Sound="">
+    <Position x="273117" y="40000" z="69651.13" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0" MaterialName="rock_group_02.rock_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.0" MaterialName="rock_group_02.rock_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape3-lib.0" MaterialName="rock_group_02.rock_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape4-lib.0" MaterialName="rock_group_02.rock_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape5-lib.0" MaterialName="rock_group_02.rock_material" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape6-lib.0" MaterialName="rock_group_02.rock_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Shack_50" Mesh="shack.mesh" Sound="">
+    <Position x="287383.1" y="40000" z="75249.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="shack_awningShape-lib.0" MaterialName="shack.shack_Material" Show="True" />
+      <SubMeshInfo Name="shack_shack_shackShape-lib.0" MaterialName="shack.shack_Material" Show="True" />
+      <SubMeshInfo Name="shack_chimneyShape-lib.0" MaterialName="shack.shack_Material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Sheild_52" Mesh="shield.mesh" Sound="">
+    <Position x="297841.3" y="40300" z="75249.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0/phong1" MaterialName="shield.phong1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Spear_55" Mesh="spear.mesh" Sound="">
+    <Position x="307537.4" y="40000" z="77041.68" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="spear_polySurfaceShape1-lib.0/spear____Default____Standard__" MaterialName="spear.spear____Default____Standard__" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Stilt House_57" Mesh="house_stilt.mesh" Sound="">
+    <Position x="321855.4" y="40000" z="88753.88" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="stairsShape1-lib.0" MaterialName="house_stilt.house_stilt_roof_material" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0" MaterialName="house_stilt.house_stilt_material" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0" MaterialName="house_stilt.house_stilt_material" Show="True" />
+      <SubMeshInfo Name="inside_front_windowShape-lib.0" MaterialName="house_stilt.house_stilt_inside_material" Show="True" />
+      <SubMeshInfo Name="inside_back_windowShape-lib.0" MaterialName="house_stilt.house_stilt_inside_material" Show="True" />
+      <SubMeshInfo Name="house_stilt_rampShape-lib.0" MaterialName="house_stilt.house_stilt_material" Show="True" />
+      <SubMeshInfo Name="back_windowShape-lib.0" MaterialName="house_stilt.house_stilt_inside_material" Show="True" />
+      <SubMeshInfo Name="front_windowShape-lib.0" MaterialName="house_stilt.house_stilt_inside_material" Show="True" />
+      <SubMeshInfo Name="awningShape-lib.0" MaterialName="house_stilt.house_stilt_roof_material" Show="True" />
+      <SubMeshInfo Name="roof_leftShape1-lib.0" MaterialName="house_stilt.house_stilt_roof_material" Show="True" />
+      <SubMeshInfo Name="roof_rightShape1-lib.0" MaterialName="house_stilt.house_stilt_roof_material" Show="True" />
+      <SubMeshInfo Name="porchShape-lib.0" MaterialName="house_stilt.house_stilt_material" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0" MaterialName="house_stilt.house_stilt_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Sword_59" Mesh="sword.mesh" Sound="">
+    <Position x="335475.2" y="40000" z="89409.33" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0/Material__45____Standard__" MaterialName="sword.Material__45____Standard__" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Wall_61" Mesh="wall.mesh" Sound="">
+    <Position x="344762.6" y="40000" z="91371.08" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="wallShape-lib.0" MaterialName="wall.wall_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Wall Corner_63" Mesh="wall_corner.mesh" Sound="">
+    <Position x="355388.9" y="40000" z="93091.25" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="wall_cornerShape-lib.0" MaterialName="wall_corner.wall_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Wall Corner with Walkway_65" Mesh="wall_corner_walkway.mesh" Sound="">
+    <Position x="369207.3" y="40000" z="92850.92" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="wall_corner_walkwayShape-lib.0" MaterialName="wall_corner_walkway.wall_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Wall with Walkway_67" Mesh="wall_walkway.mesh" Sound="">
+    <Position x="384287.3" y="40000" z="97969.73" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="_wall_walkway_wall_walkway-lib.0" MaterialName="wall_walkway.wall_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Watch Tower_69" Mesh="tower.mesh" Sound="">
+    <Position x="399334.1" y="40000" z="99684.76" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="watchtowerShape-lib.0" MaterialName="tower.lambert1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Wishbone House_71" Mesh="house_wishbone.mesh" Sound="">
+    <Position x="413815" y="40000" z="106172.6" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_wishbone_houseShape-lib.0" MaterialName="house_wishbone.house_wishbone_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Wolf_73" Mesh="wolf.mesh" Sound="">
+    <Position x="427283.8" y="40000" z="100049.6" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="headShape-lib.0/wolf_rig_019_wolf_phong1" MaterialName="wolf.wolf_rig_019_wolf_phong1" Show="True" />
+      <SubMeshInfo Name="BodyShape-lib.0/wolf_rig_019_wolf_phong1" MaterialName="wolf.wolf_rig_019_wolf_phong1" Show="True" />
+      <SubMeshInfo Name="TailShape-lib.0/wolf_rig_019_wolf_phong1" MaterialName="wolf.wolf_rig_019_wolf_phong1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="Axe_0" Sound="">
+    <Position x="23207.68" y="40000" z="36332.89" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Barrel" Sound="">
+    <Position x="26866.98" y="40000" z="36337.08" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Brax" Sound="">
+    <Position x="32801.23" y="40000" z="36922.12" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Broken Barrel" Sound="">
+    <Position x="37974.1" y="40000" z="36657.71" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Corral01" Sound="">
+    <Position x="43313.39" y="40000" z="36878.96" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Corral02" Sound="">
+    <Position x="51364.03" y="40000" z="37831.16" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Corral03" Sound="">
+    <Position x="62504.92" y="40000" z="38322.48" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Empty Fountain" Sound="">
+    <Position x="75390.2" y="40000" z="37898.96" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Gate" Sound="">
+    <Position x="83715.25" y="40000" z="37982.22" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Half open Barrel" Sound="">
+    <Position x="96502.38" y="40000" z="39383.05" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Hall" Sound="">
+    <Position x="114120.4" y="40000" z="39725.91" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="House Open" Sound="">
+    <Position x="136073.6" y="40000" z="41254.28" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="House Tall" Sound="">
+    <Position x="158192.2" y="40000" z="42455.57" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Human Female" Sound="">
+    <Position x="173692.1" y="40000" z="44909.82" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Human Male" Sound="">
+    <Position x="190883.9" y="40000" z="45939.63" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Orc" Sound="">
+    <Position x="202217.2" y="40000" z="47236.95" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Orc House" Sound="">
+    <Position x="217869.5" y="40000" z="52491.27" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Pick" Sound="">
+    <Position x="252310" y="40000" z="64118.27" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Rock 1" Sound="">
+    <Position x="262299.1" y="40000" z="64221.98" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Rock 2" Sound="">
+    <Position x="274011.9" y="40000" z="65651.13" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Shack" Sound="">
+    <Position x="287071.6" y="40000" z="66249.41" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Sheild" Sound="">
+    <Position x="298047.5" y="40000" z="72680.07" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Spear" Sound="">
+    <Position x="307680.8" y="40000" z="75545.65" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Stilt House" Sound="">
+    <Position x="324527.3" y="40000" z="76821.81" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Sword" Sound="">
+    <Position x="335741.5" y="40000" z="83409.33" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Wall" Sound="">
+    <Position x="345297.2" y="40000" z="85371.08" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Wall Corner" Sound="">
+    <Position x="356211.3" y="40000" z="86808.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Wall Corner with Walkway" Sound="">
+    <Position x="369649.2" y="40000" z="87850.92" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Wall with Walkway" Sound="">
+    <Position x="384002" y="40000" z="88969.73" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Watch Tower" Sound="">
+    <Position x="399322.9" y="40000" z="88963.37" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Wishbone House" Sound="">
+    <Position x="414050.7" y="40000" z="92172.65" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Wolf" Sound="">
+    <Position x="427234.7" y="40000" z="94049.58" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="Marker: Zombie" Sound="">
+    <Position x="434979.4" y="40000" z="98270.53" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <StaticObject Name="Human Tall House" Mesh="human_shack_tall.mesh" Sound="">
+    <Position x="443050" y="40000" z="97270.53" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_shack_tallshape-obj.0" MaterialName="human_shack_tall.human_shack_tall_texture" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="Human Tall House" Sound="">
+    <Position x="444264.3" y="40000" z="89745.59" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <StaticObject Name="Zombie" Mesh="zombie.mesh" Sound="">
+    <Position x="434925.5" y="40000" z="101886.9" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="Zombie_Body2-obj.0" MaterialName="zombie.Zombie_Body" Show="True" />
+      <SubMeshInfo Name="Zombie_Clothes2-obj.0" MaterialName="zombie.Zombie_Clothes" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../Common/Overview.xsl" type="text/xsl"?>
+<VSSDKSample>
+  <ImagePath>../../Common</ImagePath>
+  <Status>
+    <Accessibility>true</Accessibility>
+    <ArchitectureDiagram>false</ArchitectureDiagram>
+    <Comments>true</Comments>
+    <Documentation>true</Documentation>
+    <ErrorHandling>true</ErrorHandling>
+    <FollowSDKCodingStandards>true</FollowSDKCodingStandards>
+    <Localizable>true</Localizable>
+    <Overview>true</Overview>
+    <ScenarioTests>true</ScenarioTests>
+    <Supported>true</Supported>
+    <UnitTests>true</UnitTests>
+    <Style>Example</Style>
+  </Status>
+  <Overview>
+    <ShortName>C# Example.IronPython</ShortName>
+    <LongName>IronPython Integration</LongName>
+    <Phrase>Integrating an end-to-end language experience in Visual Studio.</Phrase>
+  </Overview>
+  <Introduction>
+    <Summary>
+      This solution will build all the IronPython related projects. For more information on a specific project in the sample, see the other IronPython overviews.
+    </Summary>
+    <Goal>Creating a Visual Studio project type for building Iron Python applications</Goal>
+    <Goal>Creating a Visual Studio language service for providing colorization and Intellisense for Iron Python</Goal>
+    <Goal>Creating custom MSBuild targets for building Iron Python projects</Goal>
+    <Goal>Creating a tool window that implements the IronPython interactive console.</Goal>
+  </Introduction>
+  <SampleInfo>
+    <State>
+    </State>
+    <Type>Example</Type>
+    <Complexity>3</Complexity>
+    <Screenshot></Screenshot>
+    <Area>Iron Python</Area>
+    <Language>C#</Language>
+    <Folder>VisualStudioIntegration\Samples\IronPythonIntegration\</Folder>
+    <SampleSolution>IronPython.sln</SampleSolution>
+    <FolderUnitTest />
+    <UnitTestStartup />
+    <Doc />
+    <Keywords>
+      <Keyword>IronPython</Keyword>
+      <Keyword>Iron Python</Keyword>
+      <Keyword>Project</Keyword>
+      <Keyword>Projects</Keyword>
+      <Keyword>MSBuild</Keyword>
+      <Keyword>Target</Keyword>
+      <Keyword>Python</Keyword>
+      <Keyword>Task</Keyword>
+      <Keyword>Invoke</Keyword>
+      <Keyword>Compiler</Keyword>
+      <Keyword>Language</Keyword>
+      <Keyword>Service</Keyword>
+      <Keyword>Colorization</Keyword>
+      <Keyword>Statement completion</Keyword>
+      <Keyword>context menu items</Keyword>
+      <Keyword>Syntax checking</Keyword>
+      <Keyword>squiggles</Keyword>
+      <Keyword>Console Window</Keyword>
+      <Keyword>MSBuild Tasks</Keyword>
+      <Keyword>engine</Keyword>
+      <Keyword>interactive</Keyword>
+      <Keyword>command</Keyword>
+      <Keyword>console</Keyword>
+    </Keywords>
+  </SampleInfo>
+  <BuildingTheSample>
+    <Step>
+      Open the IronPython.sln solution.
+    </Step>
+    <Step>
+      Press F5 to build the sample, register it in the experimental hive, and launch Visual Studio from the experimental hive.
+    </Step>
+  </BuildingTheSample>
+  <RunningTheSample>
+  </RunningTheSample>
+  <AdditionalResources>
+    <Resource>
+      <Title>Visual Studio SDK Website</Title>
+      <URL>http://msdn.microsoft.com/vstudio/extend</URL>
+    </Resource>
+  </AdditionalResources>
+  <UnitTests>
+  </UnitTests>
+  <FunctionalTests>
+  </FunctionalTests>
+  <ProjectFiles>
+  </ProjectFiles>
+  <History>
+    <Change>
+      <Date>2005-11-21</Date>
+      <Description>Created this sample for the Visual Studio SDK.</Description>
+    </Change>
+  </History>
+</VSSDKSample>

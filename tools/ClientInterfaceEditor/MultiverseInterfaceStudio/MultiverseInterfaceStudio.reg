@@ -1,0 +1,198 @@
+This file contains information that should be merged into the registry
+from a setup program, or copied into a .reg file and merged into the
+registry for your own personal testing. If you are using a Visual Studio
+Setup Project, then simply copy the file starting below the the "CUT HERE"
+line until the end, and save it to a file with the extension .reg. Then open 
+the Registry editor for your setup program, right click on the Registry editor 
+window, select Import and then browse to the .reg file you have created. All 
+the correct settings have been made and you do not need to make any further 
+modifications. To test these settings on your computer, save the contents of 
+this file to a .reg file like you would for a Setup project, but also search 
+for the value [InstallPath] and replace it with the directory path containing 
+your program. After saving these changes, double-click on the .reg file and
+merge the changes into the registry.
+
+--------------------------------  CUT HERE  --------------------------------
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\CLSID\{cf60f317-adb1-4fec-bc7d-60734c632c91}]
+@="MultiverseInterfaceStudio DTE Object"
+
+[HKEY_CLASSES_ROOT\CLSID\{cf60f317-adb1-4fec-bc7d-60734c632c91}\LocalServer32]
+@="$RootFolder$\MultiverseInterfaceStudio.exe"
+
+[HKEY_CLASSES_ROOT\CLSID\{cf60f317-adb1-4fec-bc7d-60734c632c91}\ProgID\
+@="MultiverseInterfaceStudio.DTE.9.0"
+
+[HKEY_CLASSES_ROOT\CLSID\{cf60f317-adb1-4fec-bc7d-60734c632c91}\VersionIndependentProgID]
+@="MultiverseInterfaceStudio.DTE"
+
+[HKEY_CLASSES_ROOT\CLSID\{cf60f317-adb1-4fec-bc7d-60734c632c91}\Programmable]
+@=""
+
+[HKEY_CLASSES_ROOT\CLSID\{cf60f317-adb1-4fec-bc7d-60734c632c91}\TypeLib]
+@="{80cc9f66-e7d8-4ddd-85b6-d9e6cd0e93e2}"
+
+[HKEY_CLASSES_ROOT\CLSID\{cf60f317-adb1-4fec-bc7d-60734c632c91}\DefaultIcon]
+@="$RootFolder$\MultiverseInterfaceStudio.exe,1200"
+
+[HKEY_CLASSES_ROOT\CLSID\{cf60f317-adb1-4fec-bc7d-60734c632c91}\Version]
+@="9.0"
+
+[HKEY_CLASSES_ROOT\CLSID\{6c2e23a9-5bf0-4e53-89a6-a9e3b2620242}]
+@="MultiverseInterfaceStudio Solution Object"
+
+[HKEY_CLASSES_ROOT\CLSID\{6c2e23a9-5bf0-4e53-89a6-a9e3b2620242}\LocalServer32]
+@="$RootFolder$\MultiverseInterfaceStudio.exe"
+
+[HKEY_CLASSES_ROOT\CLSID\{6c2e23a9-5bf0-4e53-89a6-a9e3b2620242}\ProgID]
+@="MultiverseInterfaceStudio.Solution.9.0"
+
+[HKEY_CLASSES_ROOT\CLSID\{6c2e23a9-5bf0-4e53-89a6-a9e3b2620242}\VersionIndependentProgID]
+@="MultiverseInterfaceStudio.Solution"
+
+[HKEY_CLASSES_ROOT\CLSID\{6c2e23a9-5bf0-4e53-89a6-a9e3b2620242}\Programmable]
+@=""
+
+[HKEY_CLASSES_ROOT\CLSID\{6c2e23a9-5bf0-4e53-89a6-a9e3b2620242}\TypeLib]
+@="{80cc9f66-e7d8-4ddd-85b6-d9e6cd0e93e2}"
+
+[HKEY_CLASSES_ROOT\CLSID\{6c2e23a9-5bf0-4e53-89a6-a9e3b2620242}\DefaultIcon]
+@="$RootFolder$\MultiverseInterfaceStudio.exe,1200"
+
+[HKEY_CLASSES_ROOT\CLSID\{6c2e23a9-5bf0-4e53-89a6-a9e3b2620242}\Version]
+@="9.0"
+
+[HKEY_CLASSES_ROOT\MultiverseInterfaceStudio.DTE.9.0]
+@="MultiverseInterfaceStudio DTE Object" />
+
+[HKEY_CLASSES_ROOT\MultiverseInterfaceStudio.DTE.9.0\CLSID]
+@="{cf60f317-adb1-4fec-bc7d-60734c632c91}"
+
+[HKEY_CLASSES_ROOT\MultiverseInterfaceStudio.Solution.9.0]
+@="MultiverseInterfaceStudio Solution Object" />
+
+[HKEY_CLASSES_ROOT\MultiverseInterfaceStudio.Solution.9.0\CLSID]
+@="{6c2e23a9-5bf0-4e53-89a6-a9e3b2620242}"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Addin]
+"ClassName"="VSContentInstaller.AddinInstallerPage"
+"DisplayName"="#AddinContentDisplayName"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Addin\ContentHosts]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Addin\ContentHosts\2.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Addin\ContentHosts\2.0\MultiverseInterfaceStudio]
+"ProgID"="MultiverseInterfaceStudio.DTE.9.0"
+"ApplicationPath"="$RootFolder$\MultiverseInterfaceStudio.exe"
+"ApplicationName"="MultiverseInterfaceStudio"
+"RegistryRoot"="$HivelessRootKey$"
+"UserDataFolder"="%VSMYDOCUMENTS%\MultiverseInterfaceStudio"
+"ApplicationIcon"="#DevenvIcon"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Code Snippet]
+"ClassName"="VSContentInstaller.SnippetInstallerPage"
+"DisplayName"="#CodeSnippetsContentDisplayName"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Code Snippet\ContentHosts]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Code Snippet\ContentHosts\1.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Code Snippet\ContentHosts\1.0\MultiverseInterfaceStudio]
+"ProgID"="MultiverseInterfaceStudio.DTE.9.0"
+"ApplicationPath"="$RootFolder$\MultiverseInterfaceStudio.exe"
+"ApplicationName"="MultiverseInterfaceStudio"
+"RegistryRoot"="$HivelessRootKey$"
+"UserDataFolder"="%VSMYDOCUMENTS%\MultiverseInterfaceStudio"
+"ApplicationIcon"="#DevenvIcon"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Code Snippet\ContentHosts\2.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Code Snippet\ContentHosts\2.0\MultiverseInterfaceStudio]
+"ProgID"="MultiverseInterfaceStudio.DTE.9.0"
+"ApplicationPath"="$RootFolder$\MultiverseInterfaceStudio.exe"
+"ApplicationName"="MultiverseInterfaceStudio"
+"RegistryRoot"="$HivelessRootKey$"
+"UserDataFolder"="%VSMYDOCUMENTS%\MultiverseInterfaceStudio"
+"ApplicationIcon"="#DevenvIcon"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Macro Project]
+"ClassName"="VSContentInstaller.MacroInstallerPage"
+"DisplayName"="#MacroProjContentDisplayName"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Macro Project\ContentHosts]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Macro Project\ContentHosts\1.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Macro Project\ContentHosts\1.0\MultiverseInterfaceStudio]
+"ProgID"="MultiverseInterfaceStudio.DTE.9.0"
+"ApplicationPath"="$RootFolder$\MultiverseInterfaceStudio.exe"
+"ApplicationName"="MultiverseInterfaceStudio"
+"RegistryRoot"="$HivelessRootKey$"
+"UserDataFolder"="%VSMYDOCUMENTS%\MultiverseInterfaceStudio"
+"ApplicationIcon"="#DevenvIcon"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Macro Project\ContentHosts\2.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Macro Project\ContentHosts\2.0\MultiverseInterfaceStudio]
+"ProgID"="MultiverseInterfaceStudio.DTE.9.0"
+"ApplicationPath"="$RootFolder$\MultiverseInterfaceStudio.exe"
+"ApplicationName"="MultiverseInterfaceStudio"
+"RegistryRoot"="$HivelessRootKey$"
+"UserDataFolder"="%VSMYDOCUMENTS%\MultiverseInterfaceStudio"
+"ApplicationIcon"="#DevenvIcon"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Toolbox Control]
+"ClassName"="VSContentInstaller.ToolBoxControlPage"
+"DisplayName"="#ToolboxControlContentDisplayName"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Toolbox Control\ContentHosts]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Toolbox Control\ContentHosts\1.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Toolbox Control\ContentHosts\1.0\MultiverseInterfaceStudio]
+"ProgID"="MultiverseInterfaceStudio.DTE.9.0"
+"ApplicationPath"="$RootFolder$\MultiverseInterfaceStudio.exe"
+"ApplicationName"="MultiverseInterfaceStudio"
+"RegistryRoot"="$HivelessRootKey$"
+"UserDataFolder"="%VSMYDOCUMENTS%\MultiverseInterfaceStudio"
+"ApplicationIcon"="#DevenvIcon"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Toolbox Control\ContentHosts\2.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\Toolbox Control\ContentHosts\2.0\MultiverseInterfaceStudio]
+"ProgID"="MultiverseInterfaceStudio.DTE.9.0"
+"ApplicationPath"="$RootFolder$\MultiverseInterfaceStudio.exe"
+"ApplicationName"="MultiverseInterfaceStudio"
+"RegistryRoot"="$HivelessRootKey$"
+"UserDataFolder"="%VSMYDOCUMENTS%\MultiverseInterfaceStudio"
+"ApplicationIcon"="#DevenvIcon"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\VSTemplate]
+"ClassName"="VSContentInstaller.VSTemplateInstallerPage"
+"DisplayName"="#VSTemplateContentDisplayName"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\VSTemplate\ContentHosts]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\VSTemplate\ContentHosts\1.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\VSTemplate\ContentHosts\1.0\MultiverseInterfaceStudio]
+"ProgID"="MultiverseInterfaceStudio.DTE.9.0"
+"ApplicationPath"="$RootFolder$\MultiverseInterfaceStudio.exe"
+"ApplicationName"="MultiverseInterfaceStudio"
+"RegistryRoot"="$HivelessRootKey$"
+"UserDataFolder"="%VSMYDOCUMENTS%\MultiverseInterfaceStudio"
+"ApplicationIcon"="#DevenvIcon"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\VSTemplate\ContentHosts\2.0]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSEnvCommunityContent\ContentTypes\VSTemplate\ContentHosts\2.0\MultiverseInterfaceStudio]
+"ProgID"="MultiverseInterfaceStudio.DTE.9.0"
+"ApplicationPath"="$RootFolder$\MultiverseInterfaceStudio.exe"
+"ApplicationName"="MultiverseInterfaceStudio"
+"RegistryRoot"="$HivelessRootKey$"
+"UserDataFolder"="%VSMYDOCUMENTS%\MultiverseInterfaceStudio"
+"ApplicationIcon"="#DevenvIcon"

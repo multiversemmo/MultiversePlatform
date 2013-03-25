@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetConfig>
+
+<!-- Asset paths for Multiverse assets -->
+  <AssetPath type="Folder" resource="Font"      src="..\..\..\Media\Fonts"/>
+  <AssetPath type="Folder" resource="Imageset"  src="..\..\..\Media\Interface\Imagesets"/>
+  <AssetPath type="Folder" resource="Interface" src="..\..\..\Media\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\..\..\Media\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\..\..\Media\Scripts"/>
+  <AssetPath type="Folder" src="..\..\..\Media\GpuPrograms"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Textures"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Imagefiles"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Icons"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Meshes"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Skeletons"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Materials"/>
+  <AssetPath type="Folder" src="..\..\..\Media\SpeedTree"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Sounds"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Physics"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Particles"/>
+  <AssetPath type="Folder" src="..\..\..\Media\Misc"/>
+
+<!-- Asset paths for custom assets -->
+  <AssetPath type="Folder" resource="Font"      src="..\..\..\Media\AddOns\Fonts"/>
+  <AssetPath type="Folder" resource="Imageset"  src="..\..\..\Media\AddOns\Interface\Imagesets"/>
+  <AssetPath type="Folder" resource="Interface" src="..\..\..\Media\AddOns\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\..\..\Media\AddOns\Interface\FrameXML"/>
+  <AssetPath type="Folder" resource="Script"    src="..\..\..\Media\AddOns\Scripts"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\GpuPrograms"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Textures"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Imagefiles"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Icons"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Meshes"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Skeletons"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Materials"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\SpeedTree"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Sounds"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Physics"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Particles"/>
+  <AssetPath type="Folder" src="..\..\..\Media\AddOns\Misc"/>
+
+</AssetConfig>
+ 

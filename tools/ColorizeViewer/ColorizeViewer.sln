@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorizeViewer", "ColorizeViewer\ColorizeViewer.csproj", "{6CD35DF8-7A79-40C9-8D1B-FB16D420D17D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDSFile", "..\..\Lib\DDSFile\DDSFile.csproj", "{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CD35DF8-7A79-40C9-8D1B-FB16D420D17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD35DF8-7A79-40C9-8D1B-FB16D420D17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD35DF8-7A79-40C9-8D1B-FB16D420D17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD35DF8-7A79-40C9-8D1B-FB16D420D17D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21198EBE-0473-46B9-9DFA-BFBB3BD1DD78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

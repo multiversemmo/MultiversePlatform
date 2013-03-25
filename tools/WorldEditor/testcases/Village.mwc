@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="1">
+  <Boundary Name="Colorized Grass 1">
+    <PointCollection>
+      <Point x="-26143.05" y="20000" z="-130000" />
+      <Point x="90006.88" y="20000" z="-148000" />
+      <Point x="55804.18" y="20000" z="-38000" />
+    </PointCollection>
+    <Grass Name="Colorized Grass 1">
+      <PlantType Instances="1000" ColorMultHi="1" ColorMultLow="1" Name="Colorized Grass 1" ImageName="grass1" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="Colorized Grass 2">
+    <PointCollection>
+      <Point x="139507.3" y="20000" z="-138468.1" />
+      <Point x="258341.6" y="20000" z="-114855.7" />
+      <Point x="161582.9" y="20000" z="-5855.734" />
+    </PointCollection>
+    <Grass Name="Colorized Grass 2">
+      <PlantType Instances="1000" ColorMultHi="1" ColorMultLow="1" Name="Colorized Grass 2" ImageName="grass2" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="Cattail">
+    <PointCollection>
+      <Point x="294525.5" y="20000" z="-123214.7" />
+      <Point x="451948" y="20000" z="-119214.7" />
+      <Point x="350895" y="20000" z="28785.31" />
+    </PointCollection>
+    <Grass Name="Cattail">
+      <PlantType Instances="1000" ColorMultHi="1" ColorMultLow="1" Name="Cattail" ImageName="cattail" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="Sun Flower">
+    <PointCollection>
+      <Point x="508227" y="20000" z="-119374.4" />
+      <Point x="696728.8" y="20000" z="-105374.4" />
+      <Point x="545654.2" y="20000" z="145625.6" />
+    </PointCollection>
+    <Grass Name="Sun Flower">
+      <PlantType Instances="1000" ColorMultHi="1" ColorMultLow="1" Name="Sun Flower" ImageName="sunflower" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="Rose">
+    <PointCollection>
+      <Point x="729619.1" y="20000" z="-94693.44" />
+      <Point x="950237.4" y="20000" z="-57512.43" />
+      <Point x="779237.4" y="20000" z="73408.38" />
+    </PointCollection>
+    <Grass Name="Rose">
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Rose" ImageName="rose" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="Marigold">
+    <PointCollection>
+      <Point x="964693.2" y="20000" z="-55340.91" />
+      <Point x="1120129" y="20000" z="-37715.74" />
+      <Point x="1010929" y="20000" z="98659.09" />
+    </PointCollection>
+    <Grass Name="Marigold">
+      <PlantType Instances="100" ColorMultHi="1" ColorMultLow="1" Name="Marigold" ImageName="marigold" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+  <Boundary Name="Pampas Grass">
+    <PointCollection>
+      <Point x="1130625" y="20000" z="-36603.5" />
+      <Point x="1297025" y="20000" z="-15237.17" />
+      <Point x="1178171" y="20000" z="130396.5" />
+    </PointCollection>
+    <Grass Name="Pampas Grass">
+      <PlantType Instances="1000" ColorMultHi="1" ColorMultLow="1" Name="Pampas Grass" ImageName="pampas" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+</WorldObjectCollection>

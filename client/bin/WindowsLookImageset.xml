@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<Imageset Name="WindowsLook" Imagefile="WindowsLook3.png" NativeHorzRes="800" NativeVertRes="600" AutoScaled="false">
+	<Image Name="Background" XPos="9" YPos="9" Width="2" Height="2" />
+	<Image Name="TopLeftBubble" XPos="71" YPos="46" Width="12" Height="12" />
+	<Image Name="TopRightBubble" XPos="96" YPos="46" Width="12" Height="12" />
+	<Image Name="BottomLeftBubble" XPos="71" YPos="62" Width="12" Height="22" />
+	<Image Name="BottomRightBubble" XPos="96" YPos="62" Width="12" Height="22" />
+	<Image Name="TopBubble" XPos="83" YPos="46" Width="1" Height="12" />
+	<Image Name="BottomBubble" XPos="83" YPos="62" Width="1" Height="22" />
+	<Image Name="LeftBubble" XPos="71" YPos="58" Width="12" Height="4" />
+	<Image Name="RightBubble" XPos="96" YPos="58" Width="12" Height="4" />
+	<Image Name="TailBubble" XPos="85" YPos="62" Width="12" Height="22" />
+</Imageset>

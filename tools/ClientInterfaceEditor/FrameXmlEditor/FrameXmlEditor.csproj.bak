@@ -1,0 +1,336 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.Multiverse.FrameXml</RootNamespace>
+    <AssemblyName>FrameXmlEditor</AssemblyName>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+    <ProjectGuid>{B72FCFBF-9BBE-4308-99F5-E908CF4F394B}</ProjectGuid>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ProjectBasePath>$(VSSDK90Install)VisualStudioIntegration\Common\Source\CSharp\Project</ProjectBasePath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\PackagesToLoad\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\PackagesToLoad\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PublicAssemblies\EnvDTE.dll</HintPath>
+    </Reference>
+    <Reference Include="EnvDTE90, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PublicAssemblies\EnvDTE90.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Designer.Interfaces, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop" />
+    <Reference Include="Microsoft.VisualStudio.Shell.9.0" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controls\AnchorsTypeConverter.cs" />
+    <Compile Include="Controls\AutoSizeDesigner.cs" />
+    <Compile Include="Controls\BaseControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BaseControlDesigner.cs" />
+    <Compile Include="Controls\Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorSelectTextureEditor.cs" />
+    <Compile Include="Controls\ColorSelect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorTypeConverter.cs" />
+    <Compile Include="Controls\ControlAnchors.cs" />
+    <Compile Include="Controls\BaseControlCollection.cs" />
+    <Compile Include="Controls\ControlSorter.cs" />
+    <Compile Include="Controls\EventEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\EventEditorForm.Designer.cs">
+      <DependentUpon>EventEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EventEditorUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EventEditorUserControl.designer.cs">
+      <DependentUpon>EventEditorUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FrameDesigner.cs" />
+    <Compile Include="Controls\IFrameControl.cs" />
+    <Compile Include="Controls\InheritedAttribute.cs" />
+    <Compile Include="Controls\InheritsTypeConverter.cs" />
+    <Compile Include="Controls\DimensionConverter.cs" />
+    <Compile Include="Controls\EditBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EventEditor.cs" />
+    <Compile Include="Controls\EventPropertyDescriptor.cs" />
+    <Compile Include="Controls\FontString.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FontTypeConverter.cs" />
+    <Compile Include="Controls\Frame.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\FrameCollection.cs" />
+    <Compile Include="Controls\GenericControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GenericFrameControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ILayerable.cs" />
+    <Compile Include="Controls\ImageNameTypeConverter.cs" />
+    <Compile Include="Controls\LayoutFrame.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ISerializableControl.cs">
+    </Compile>
+    <Compile Include="Controls\LuaInterface.cs" />
+    <Compile Include="Controls\NotifierTypeDescriptor.cs" />
+    <Compile Include="Controls\RelativeToTypeConverter.cs" />
+    <Compile Include="Controls\ScrollFrame.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ScrollingMessageFrame.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SerializationObjectExtensions.cs" />
+    <Compile Include="Controls\SimpleHTML.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Slider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\StatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TargaImage.cs" />
+    <Compile Include="Controls\Texture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TypeDescriptorHelper.cs" />
+    <Compile Include="Controls\Ui.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UniqueName.cs" />
+    <Compile Include="FontChoice.cs" />
+    <Compile Include="FrameXmlDesignerLoader.ControlFactory.cs">
+      <DependentUpon>FrameXmlDesignerLoader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrameXmlDesignerLoader.cs" />
+    <Compile Include="FrameXmlPane.cs" />
+    <Compile Include="FrameXmlPaneControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrameXmlPaneControl.Designer.cs">
+      <DependentUpon>FrameXmlPaneControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuidStrings.cs" />
+    <Compile Include="FrameXmlEditorFactory.cs" />
+    <Compile Include="Guids.cs" />
+    <Compile Include="FrameXmlEditorPackage.cs" />
+    <Compile Include="LayoutFrameCollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectionEventsMonitor.cs" />
+    <Compile Include="SerializationObjectSorter.cs" />
+    <Compile Include="Serialization\AbsDimension.cs" />
+    <Compile Include="Serialization\AbsInset.cs" />
+    <Compile Include="Serialization\AbsValue.cs" />
+    <Compile Include="Serialization\ALPHAMODE.cs" />
+    <Compile Include="Serialization\ATTRIBUTEENUM.cs" />
+    <Compile Include="Serialization\AttributesType.cs" />
+    <Compile Include="Serialization\AttributeType.cs" />
+    <Compile Include="Serialization\BackdropType.cs" />
+    <Compile Include="Serialization\ButtonType.cs" />
+    <Compile Include="Serialization\CheckButtonType.cs" />
+    <Compile Include="Serialization\ColorChoice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\ColorSelectType.cs">
+      <SubType>code</SubType>
+    </Compile>
+    <Compile Include="Serialization\ColorType.cs" />
+    <Compile Include="Serialization\Dimension.cs" />
+    <Compile Include="Serialization\DRAWLAYER.cs" />
+    <Compile Include="Serialization\EditBoxType.cs" />
+    <Compile Include="Serialization\EventChoice.cs" />
+    <Compile Include="Serialization\Extensions\ButtonType.cs" />
+    <Compile Include="Serialization\Extensions\CheckButtonType.cs" />
+    <Compile Include="Serialization\Extensions\ColorSelectType.cs" />
+    <Compile Include="Serialization\Extensions\ColorType.cs" />
+    <Compile Include="Serialization\Extensions\ColorTypeExtensions.cs" />
+    <Compile Include="Serialization\Extensions\EditBoxType.cs" />
+    <Compile Include="Serialization\Extensions\FontStringType.cs" />
+    <Compile Include="Serialization\Extensions\FrameTypeLayersLayer.cs" />
+    <Compile Include="Serialization\Extensions\FrameTypeLayers.cs" />
+    <Compile Include="Serialization\Extensions\GradientType.cs" />
+    <Compile Include="Serialization\Extensions\InheritableMember.cs" />
+    <Compile Include="Serialization\Extensions\LayoutFrameTypeAnchors.cs" />
+    <Compile Include="Serialization\Extensions\LayoutFrameTypeAnchorsAnchor.cs" />
+    <Compile Include="Serialization\Extensions\PropertyBag.cs" />
+    <Compile Include="Serialization\Extensions\ScriptsType.cs" />
+    <Compile Include="Serialization\Extensions\ScrollFrameType.cs" />
+    <Compile Include="Serialization\Extensions\SerializationObject.cs" />
+    <Compile Include="Serialization\Extensions\SimpleHTMLType.cs" />
+    <Compile Include="Serialization\Extensions\SliderType.cs" />
+    <Compile Include="Serialization\Extensions\StatusBarType.cs" />
+    <Compile Include="Serialization\Extensions\TextureType.cs" />
+    <Compile Include="Serialization\Extensions\Ui.cs" />
+    <Compile Include="Serialization\FontStringType.cs" />
+    <Compile Include="Serialization\FontType.cs" />
+    <Compile Include="Serialization\FRAMEPOINT.cs" />
+    <Compile Include="Serialization\FRAMESTRATA.cs" />
+    <Compile Include="Serialization\FrameType.cs" />
+    <Compile Include="Serialization\FrameTypeFrames.cs" />
+    <Compile Include="Serialization\FrameTypeLayers.cs" />
+    <Compile Include="Serialization\FrameTypeLayersLayer.cs" />
+    <Compile Include="Serialization\FrameTypeResizeBounds.cs" />
+    <Compile Include="Serialization\GradientType.cs" />
+    <Compile Include="Serialization\INSERTMODE.cs" />
+    <Compile Include="Serialization\Inset.cs" />
+    <Compile Include="Serialization\JUSTIFYHTYPE.cs" />
+    <Compile Include="Serialization\JUSTIFYVTYPE.cs" />
+    <Compile Include="Serialization\LayoutFrameType.cs" />
+    <Compile Include="Serialization\LayoutFrameTypeAnchors.cs" />
+    <Compile Include="Serialization\LayoutFrameTypeAnchorsAnchor.cs" />
+    <Compile Include="Serialization\MovieFrameType.cs" />
+    <Compile Include="Serialization\ORIENTATION.cs" />
+    <Compile Include="Serialization\OUTLINETYPE.cs" />
+    <Compile Include="Serialization\RelDimension.cs" />
+    <Compile Include="Serialization\RelInset.cs" />
+    <Compile Include="Serialization\RelValue.cs" />
+    <Compile Include="Serialization\ScriptsType.cs" />
+    <Compile Include="Serialization\ScrollFrameType.cs" />
+    <Compile Include="Serialization\ScrollFrameTypeScrollChild.cs" />
+    <Compile Include="Serialization\ScrollingMessageFrameType.cs" />
+    <Compile Include="Serialization\SerializationMap.cs" />
+    <Compile Include="Serialization\SerializationObject.cs" />
+    <Compile Include="Serialization\FontStringChoice.cs" />
+    <Compile Include="Serialization\InsetChoice.cs" />
+    <Compile Include="Serialization\ModelChoice.cs" />
+    <Compile Include="Serialization\ShadowType.cs" />
+    <Compile Include="Serialization\SimpleHTMLType.cs" />
+    <Compile Include="Serialization\SliderType.cs" />
+    <Compile Include="Serialization\StatusBarType.cs" />
+    <Compile Include="Serialization\TextureChoice.cs" />
+    <Compile Include="Serialization\TextureType.cs" />
+    <Compile Include="Serialization\TextureTypeTexCoords.cs" />
+    <Compile Include="Serialization\Ui.cs" />
+    <Compile Include="Serialization\Extensions\Dimension.cs" />
+    <Compile Include="Serialization\Extensions\FrameType.cs" />
+    <Compile Include="Serialization\Extensions\LayoutFrameType.cs" />
+    <Compile Include="Serialization\UiInclude.cs" />
+    <Compile Include="Serialization\UiScript.cs" />
+    <Compile Include="Serialization\Value.cs" />
+    <Compile Include="Serialization\ValueChoice.cs" />
+    <Compile Include="Serialization\XmlSettings.cs" />
+    <Compile Include="VSPackage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VSPackage.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="VSPackage.resx">
+      <MergeWithCTO>true</MergeWithCTO>
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VSPackage.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Resources\ColorWheelTexture.png" />
+    <EmbeddedResource Include="Controls\EventEditorForm.resx">
+      <DependentUpon>EventEditorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\EventEditorUserControl.resx">
+      <DependentUpon>EventEditorUserControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Resources\UI-DialogBox-Border-0.png" />
+    <EmbeddedResource Include="Controls\Resources\UI-DialogBox-Border-1.png" />
+    <EmbeddedResource Include="Controls\Resources\UI-DialogBox-Border-2.png" />
+    <EmbeddedResource Include="Controls\Resources\UI-DialogBox-Border-3.png" />
+    <EmbeddedResource Include="Controls\Resources\UI-DialogBox-Border-4.png" />
+    <EmbeddedResource Include="Controls\Resources\UI-DialogBox-Border-5.png" />
+    <EmbeddedResource Include="Controls\Resources\UI-DialogBox-Border-6.png" />
+    <EmbeddedResource Include="Controls\Resources\UI-DialogBox-Border-7.png" />
+    <None Include="Resources\Backround.jpg" />
+    <EmbeddedResource Include="Controls\Frame.Backdrop.xml" />
+    <EmbeddedResource Include="FrameXmlPaneControl.resx">
+      <DependentUpon>FrameXmlPaneControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Resources\InheritedGlyph.bmp" />
+    <Content Include="Resources\Package.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WowAddonStudio.Services\WowAddonStudio.Services.csproj">
+      <Project>{40E487DB-2CD5-4504-B70B-835F343721EF}</Project>
+      <Name>WowAddonStudio.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <!--
+    To specify a different registry root to register your package, uncomment the TargetRegistryRoot
+    tag and specify a registry root in it.
+    <TargetRegistryRoot></TargetRegistryRoot>
+    -->
+    <RegisterOutputPackage>false</RegisterOutputPackage>
+    <RegisterWithCodebase>true</RegisterWithCodebase>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\VSSDK\Microsoft.VsSDK.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

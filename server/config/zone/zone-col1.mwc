@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Road Name="roadz" HalfWidth="2">
+    <PointCollection>
+      <Point x="0" y="20000" z="1000000" />
+      <Point x="0" y="20000" z="-1000000" />
+    </PointCollection>
+  </Road>
+  <Road Name="roadx" HalfWidth="2">
+    <PointCollection>
+      <Point x="-1000000" y="20000" z="0" />
+      <Point x="1000000" y="20000" z="0" />
+    </PointCollection>
+  </Road>
+  <Waypoint Name="nxny" TerrainOffset="0" AllowHeightAdjustment="True">
+    <Position x="-21747.72" y="21600" z="-33805.66" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="nxpy" TerrainOffset="0" AllowHeightAdjustment="True">
+    <Position x="-23502.95" y="19400" z="13539.47" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="pxny" TerrainOffset="0" AllowHeightAdjustment="True">
+    <Position x="23252.28" y="20000" z="-15363.47" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="pxpy" TerrainOffset="0" AllowHeightAdjustment="True">
+    <Position x="20252.28" y="20000" z="17872.72" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <StaticObject Name="pxpy" Mesh="hall.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="30252.28" y="20000" z="27872.72" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="roof_beam_end_piece_tallShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="side_windows_human_meeting_houseShape-lib.0" MaterialName="hall.windows_hall_material" Show="True" />
+      <SubMeshInfo Name="roof_beam_end_piece_shortShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="human_meeting_houseShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_long_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_mid_long_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_mid_short_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="support_pillar_short_endShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+      <SubMeshInfo Name="windowsShape-lib.0" MaterialName="hall.windows_hall_material" Show="True" />
+      <SubMeshInfo Name="inside_human_meeting_houseShape-lib.0" MaterialName="hall.hall_material" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="nxpy" Mesh="human_house.mesh" TerrainOffest="-600" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-33502.95" y="19400" z="23539.47" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="nxny" Mesh="human_house_stilt.mesh" TerrainOffest="1600" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="-31747.72" y="21600" z="-43805.66" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="porchShape-lib.0/blinn1" MaterialName="human_house_stilt.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape2-lib.0/blinn1" MaterialName="human_house_stilt.blinn1" Show="True" />
+      <SubMeshInfo Name="end_pieceShape-lib.0/blinn1" MaterialName="human_house_stilt.blinn1" Show="True" />
+      <SubMeshInfo Name="houseShape1-lib.0/blinn1" MaterialName="human_house_stilt.blinn1" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="pxny" Mesh="orc_house.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="0" CastShadows="True">
+    <Position x="33252.28" y="20000" z="-25363.47" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="polySurfaceShape1-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape10-lib.0/___Defaulasdt" MaterialName="orc_house.___Defaulasdt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape11-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape12-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape13-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape14-lib.0/sadt" MaterialName="orc_house.sadt" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape15-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape16-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape17-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape18-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape19-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape2-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape20-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape21-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape22-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape23-lib.0/___Default" MaterialName="orc_house.___Default" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape3-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape4-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape5-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape6-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape7-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape8-lib.0/sad" MaterialName="orc_house.sad" Show="True" />
+      <SubMeshInfo Name="polySurfaceShape9-lib.0/sadasd" MaterialName="orc_house.sadasd" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

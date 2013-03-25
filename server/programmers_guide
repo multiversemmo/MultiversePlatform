@@ -1,0 +1,921 @@
+
+Table of content
+
+- distributed server
+- msghandlers
+- interpolation
+- notifying users about orientation & loc, etc
+- sockets
+- mars object state
+- exposing actions for mobs
+- Locking
+- INVENTORY
+- Perceiving and newmobmessage
+- load balancing
+- logging in
+- zoning
+- event handling
+- entity vs. object
+- rdp
+- equipment
+- state
+- quests
+- dropping connection
+- serialization
+- lock cycle detection
+- how we send rigged attachments
+
+----------------------------------
+
+intro
+
+the multiverse system is an end-to-end virtual 3d world creation solution.
+it allows developers to quickly and easily create large
+scale interactive worlds as would
+be suitable for massively multiplayer online games or simulations.
+
+unlike many other game infrastructure software, multiverse is designed
+to work as a network of virtual worlds for users to travel to.
+the multiverse client software is designed to interact with any world
+created by the multiverse system.  it features progressive
+content loading so that there is no need to wait for the entire map
+and graphical elements to be downloaded before the user can interact
+with the world.  any multiverse developer is automatically guaranteed
+reach to all users who have already installed the multiverse client.
+
+besides the client, there are servers and databases that comprise the entire
+system. 
+ - master server: this server is run and hosted by multiverse.  
+   before users can enter any world, they must first log into
+   the master server.
+   it verifies that the user is registered to the multiverse network.
+   the client maintains a connection with the master server
+   while it is running, which enables users who are logged
+   into seperate worlds to communicate with each other.
+
+   gives client an identity token which the client sends to its
+   destination server.  
+
+   the destination is identified by worldID which is a string.  
+   the master server
+   looks up this string in its registered list of worlds and resolves
+   it into a server hostname and port number.
+
+ - world manager: not hosted by multiverse.  
+   this server takes care of logging users into the world, sending
+   them to the appropriate server to 'enter' the world,
+   allows users to select their character, distributes the
+   geography to servers for scaling
+
+   using the identity token, this server checks with the master server
+   to see if the user has access to this world (required by license
+   agreement)
+
+   the client can then do two things, either select an existing
+   character or create a character on this world.
+
+   for selecting, the login server tells the client a list of characters
+   that the client then selects to enter the world
+   the character list has the world server reference also, so the client
+   can now connect directly to the world server
+   
+   character creation - the client has a simple plugin for creating characters
+
+ - world server: this server runs a geographic portion of a world, coordinating
+   all object movements, creation, and destruction.
+   adjacent servers communicate with each other to make going from world
+   server to world server seamless.
+
+   when the world server starts up, it listens for a message from the
+   world manager to tell it what geographic region it is responsible for.
+
+   users log into the world server also, this is where they get assigned
+   a unique object id.
+
+ - world server proxy: 
+
+ - mobserver
+
+----------------------------------
+
+distributed server
+
+an initialization file tells each server what region it 'owns'.
+when a player or object's location is within a server's region, that
+server is responsible for all actions for that object.
+
+there is also a server proxy to which the client connects.  the proxy
+will connect to the appropriate server based on the user's location.
+when a user approaches a region boundary, the proxy will also connect
+to the adjacent boundary's server.  this way the proxy can tell the client
+about mobs that are in the other region as you approach it.
+
+the server proxy reads a config file that tells it about all servers
+and their region ownership.  the proxy makes RMI calls into the servers
+to get updates on everything.
+
+----------------------------------
+
+msghandlers
+  - msg handlers should not have logic, they should take the packet, and
+    make an event.
+
+----------------------------------
+
+security
+
+discovering password - protect billing and account info
+ - use tcp and ssl
+
+hijacking a session
+
+online financial transaction should be secured
+
+up to server admin to set up which messages are secured, our system
+supports an encrypted sequential rdp channel
+
+----------------------------------
+interpolation
+
+the engine creates an updater thread :
+	Thread updaterThread = new Thread(new Updater());
+	updaterThread.start();
+the thread takes the usermanager and calls updateUser()
+also takes the npcManager and calls updateNpcs()
+both take the mob and call mob.update()
+update() figures out the current location based on their direction
+the thread is in a tight loop with a 100ms sleep in between cycles
+,
+----------------------------------
+notifying users about orientation & loc, etc
+
+TimerHandler handles timerevents for users.
+it sends the user his own location, and dir
+sends the user an update on all objects he is perceiving 
+(dirLoc and orientation)
+updates the users perceivers
+
+when a mob sets a new direction for itself, it should use the
+basebehavior method setDir()  this sets up a dirEvent which sets
+the mobs dir and also notifies all Users about it
+
+
+----------------------------------
+attaching objects to a model - eg, sword in a hand
+
+objects get attached to sockets.  sockets are names on the model's bones.
+all humanoid models all share the same skeleton, so they can all
+attach to the same sockets.  for instance, all of them can attach
+an object to their right hand.
+
+you set up a mapping from a 'slot' to a 'socket' in MVObject.setSocketMapping.
+the socket is a model specific name, a slot is a game name.  for example,
+the slot may be called 'primaryWeapon' and that gets attached to
+'Right_Wrist_BIND_jjj' socket.
+
+mars knows about specific slots, and for a wolf, the primaryWeapon
+slot may attach to a different socket name for the canine skeleton.
+there is a create hook that you can set up that will set it up 
+for all objects.  you can see it in the js_init.js file.
+
+the newmob handler should also send out any needed attach messages
+so that people seeing an object for the first time.  it does this by checking
+the user's inventory and seeing where the object is equipped.
+
+----------------------------------
+Mars object state - and animation
+
+mars keeps track of several types of state.
+one is the movement state, whether you are running or standing still.
+eventually i assume there will be walking also or swimming, etc.
+in this example, the state can be used for gameplay reasons, such 
+as whether you run out of endurance while swimming.  it is also used
+to help select an animation to play.
+use MarsObject.setMovementState() to set the movement state.
+the state also has the animation which is associated with the state.
+you can call MarsObject.getMovementState().getAnim() to get the animation 
+string to play for the object.
+
+currently, the animation is sent to the client in event handlers, for example,
+when you run, the MarsDirLocHandler sets the animation state.
+
+there is also combat state.. which hasnt been implemented yet.
+
+----------------------------------
+
+Exposing actions for mobs
+
+we generally write event handlers for actions, these should be
+independent of whether it comes from a mob or a user
+so for example, you write a comevent handler.  users send
+a com-message, their msg handler converts that to an event which
+is routed to the comevent  handler.
+for mobs, you can expose a method called 'say' in their
+behavior and that should create a comevent and
+just call eventserver.handleEvent(comevent).  this is a blocking call
+as opposed to adding it to the event server as an event in a queue.
+
+events that are meant to only notify other mobs, such as the notifyUnequipEvent
+should have the prefix notify to let you know that the handler doesnt
+actually perform the unequip.  in this case, dropping the object
+is actually unequipping the object then sending a notifyUnequip event.
+
+certain actions like acquire() may make sense to put into the Mob()
+object, but adding it there probably isnt the best idea.  these
+classes are meant to keep track of state.  actions should be extensible
+and thats why there are events and eventhandlers.  add behavior there
+and if you want to expose it to your mobs, also add a call hook in the
+behavior object.
+
+----------------------------------
+
+Locking
+
+To help avoid deadlocks, I try to not have inner locks
+where possible, for instance, I write:
+  objA.getOid() == objB.getOid()
+instead of
+  objA.equals(objB)
+
+----------------------------------
+
+INVENTORY
+all objects (MVObjects) can have an owner.  MVObject.getOwner()
+an owner isnt the abstract idea that it belongs to someone, instead
+it means the object is physically attached to the owner.
+this status is used to determine whether other mobs should be notified
+of the object.  objects just lying on the ground do not have an owner (null).
+
+all objects also have an ObjectContainer accessible by
+calling getInventory().  Its a set of objects
+that they 'contain'.  all contained objects should be owned by the container.
+**NOT sure if it should be the top level mob or the bag**
+all items a mob has should be added to its inventory (after setting
+ownership).  a bag should contain all its items also.
+inventory does NOT have a concept of being in a particular location.
+it is just a set of items you own.
+when you change ownership of an object, you call
+object.setOwnerIfFree() which sets the new owner only if
+the object is currently not owned by anyone.
+you should then add the object to the new owner's inventory
+with owner.getInventory().addObject()
+you should lock on the global MVObject.inventoryLock when doing these
+two actions so that they are atomic.
+
+placing an object in a particular 'location' is called equipping the item, 
+even if its not being used as a weapon or tool.
+to equip an item, you call Attributes.equip(obj, slotName)
+this equips the obj to the named slot.  the slot can be any string.
+
+currently, the system adds the mapping of slot to object in the
+object itself.  the container doesnt have a list of slots.
+this is just to simplify locking so that only the object needs
+to be locked.  this also adds the limitation that you dont have
+nesting of objects and slots.
+
+equipping objects can sometimes end up attaching objects to a socket also.
+objects have a socketmapping, which are slotnames to socketname mappings.
+these usually get initialized during object creation.  so the
+"primaryWeapon" slot may map to the "righthand" socket.  The socket
+is related to the model, so it has to have the correct mapping for the model
+being used.
+
+protocol commands:
+acquireobject(general) - sets ownership and send a
+freeobject to all otherclients
+places object in your inventory.
+
+equipobject (mars) - 
+places it into a slot and send attachment message if appropriate
+
+----------------------------------
+
+Perceiving
+
+every mob has a perceiver.  it is created in the Mob's constructor.
+the perceiver has a radius that tells it how far it can perceive things.
+
+the timerhandler calls mob.updatePerceivers() for all users
+this goes through the user's perceivers list
+and calls perceiver.update()
+1) removes percieved objects too far away
+2) 
+
+MVObject.getObjects() which returns a set of objects around a point
+will NOT return objects that are owned by someone else.
+
+Perceivers call this function to find out if there are any new objects
+that it is unaware of.  So when you drop an object and mark it as
+'unowned' then perceivers will start to notice it.  make sure you
+have set its loc and anything else before you do this.
+
+---
+
+behaviors vs. eventhandlers:
+behaviors is how you react.  event handlers make sure the server info 
+is up to date.  it should not really be used to 'make' an npc do something.
+
+---
+
+todo - make even user's have behaviors, and this way whether its an npc or
+user, you can call their behavior on events such as freeobject, newobject, etc
+the user's behavior would end up sending a message to ther client
+the npc's would react to it.
+
+rdp changes:
+when retransmitting, we update the packet's acknum with the current rcvcur
+in close-wait, respond to all incoming packets with a rst unless its a rst
+
+dont send the same message to more than one user - you need to copy it first
+
+events should not be modified in eventhandlers since other handlers will
+be using it too
+
+
+maybe make a api wrapper for npc:
+setName(String)
+
+face(direction?)
+face(othermob)
+
+goto(mob)
+
+say(string)
+setlocation(x,y,z);
+spawn() - make alive
+
+----
+
+How Objects Are Tracked 
+to notify both users and npc's about new objects
+and also when object are no longer 'visible' to them.
+
+in the engine, we set up a timer event and add it to the event server
+to call this event every 5 seconds (period is adjustable)
+see engine ~line 351
+
+by default, two event handlers are registered for this time event,
+one of for the user (timerhandler) and the other is for npcs
+(npceventhandler)
+
+the timerhandler will call its handleUser method for all users.
+along with updating the client on his location and other jobs,
+the handleUser method will update the users's observing map.. the
+items the user is aware of.  it does this by calling the user's 
+updatePerceivers() method which is defined as part of its superclass 'Mob'
+
+each mob has a list of perceivers, since they can have multiple ways
+of being aware of things around them.  each perceiver can be aware of 
+different places also.  for example, in a fantasy setting, the player
+may cast an 'floating eye' spell which allows the player to
+see things which are remote to you.
+
+core to the perceiver is a radius for which is it aware of objects. 
+typically, an 'eye' would have about 100meters radius.  note that this is much
+smaller than realworld.  all perceivers are attached to an object,
+and it uses the objects location to determine what it can see.
+
+the updatePerceivers call update() on all its perceivers.
+
+the update method first removes all objects that are too far away
+when the mobs are removed, a freeObjectEvent is created and added to the
+eventserver.  (we try not to send messages directly, so leave it to the
+event handlers)  the freeObjectEvent has the object being free'd and
+the mob it should be made aware. 
+
+the update method then adds any new objects that are now visible to it.
+it adds it to the list of objects it is aware of (awareMap).
+create a new object event (currently called newmobevent)
+
+newMobHandler will get this event.  if the object is an npc, its
+behavior gets called.  for users, a message is created.
+
+
+---TODO-- probably should move the :
+	else if (obj instanceof Npc) {
+	    Npc npc = (Npc) obj;
+// 	    Log.debug("TimerHandler: npc specified: " + npc +
+// 		      ", calling its behavior");
+	    npc.getBehavior().handleEvent(event);
+	}
+Logic into the npceventhandler
+
+
+---
+inventory system:
+use the MVObject.inventoryLock when you modify inventory to prevent
+race conditions such as taking it away from one object and resetting loc
+
+invisible backpack with 50 items
+
+how to equip items--->
+left hand
+right hand
+head/helm/hat/crown - later
+feet - later
+earrings - later
+goggles - later
+
+-------------------------------------------------------------------
+load balancing notes
+
+some goals
+ - we dont want 'yet another server' that acts just as a director
+   for load balancing or as a 'proxy server'. its all one server program
+   although perhaps with different config.  a simple installation
+   has just 1 server
+ - failure causes partial world failure, not full service
+ - allows distribution level to shrink when load lessens
+ - happens all dynamically by computer, no human intervention needed
+
+each server has a certain number of load it can handle.
+we will probably use users as a metric since they are the most
+expensive to handle.  the server will have a threshold set in its
+config file that tells it the maximum number of users it can handle.
+so when the world comes up, there is a single world server
+running everything.  if the server reaches its maximum number of
+users, it goes through all its nodes and chooses the one that is closest
+to 50% of its users without going over.  its unlikely that this will
+be very imbalanced because each quad tree node has a maximum number of
+objects which probably is smaller than the maximum number of users
+the server can handle.  (we can also break up the quad tree even further
+until we find a good match)  so now it has a quad tree node that it
+will want to delegate to another server.
+
+every server comes with a config that lists all the servers and their
+order.  server1 is the 'top' server, it gets filled up first.
+then server2 gets the new nodes, once it fills up, server2 starts to break
+stuff up to server3, etc.  you can add a new machine by going to the
+last server and using scripting language to add a new machine to its
+config.  the servers before it dont need to know.  the system degrades when
+the last server cannot delegate.  you should go to each server and increase
+the max # of objects until the load is more even across the servers.
+there can be tools built to help with this, although its not a normal
+condition.
+
+there should be some way to kick start this process so it doesnt
+have to 'grow' organically each time.  but that can be for later.
+perhaps it reads in a 'template' from the database.
+
+note, if a large group of users (approachine or exceeding the max # of users
+a server can handle) are all travelling for some reason at great speeds,
+the whole system will have big problems.
+
+----------------------------------------------------------------------
+logging in
+
+the user first logs into the master server using tcp - username/password
+
+then the user does a world id resolution on the master server 
+and gets back a world manager,port
+
+the user logs into the world manager (using tcp), 
+where he selects which character, etc.
+the world manager sends the user off to a proxy server.
+
+the client sends a 'login' message to the proxy server.
+the proxy loads the user object, and sends the user a login response msg
+along with some general info, like ambient lighting, skybox, and terrain.
+the user is now 'logged in'.
+
+the proxy server then contacts the 'top' world server (server 1) and tries
+to instantiate the user in that world.
+
+the world server checks it quadtree and sees if it is running a leaf
+node that contains that location.
+
+if so - it returns its set of top quadnode geometries which it runs, and returns a success status for the login - it also accepts the user obj and instantiates it
+
+if not - (if because its totally out of the tree, then it returns failure) -- otherwise, it tells the proxy to contact server2, which does the same thing we just did recursively
+
+the proxy server stores the quadnode geometries it gets back, with the association to what server, so next time, it can just try the cached value.  if the cached try returns a 'failure' (ie, the server no longer contains the node) the proxy can go back to the 'root' server
+
+after running for a while, even if the root server dies, the system should allow logins to occur due to the cache.
+
+----------------------------------------------------------------------
+zoning
+
+the proxy server uses the world manager to connect to the root world server.
+that is hard coded in the javascript file for the proxy server.
+
+each world server connects to its subworld server.
+it uses he world manager to do this, which returns a worldserver object.
+currently it knows ahead of time the subworld server's geometry so
+it stores that in its quadtree (QuadTree.addRemoteWorldServer(subServer));
+
+when a user reaches a zone boundary, the server tells the the proxy that
+its no longer in charge.  the proxy can look up its cache or talk to the
+main server. to contact the next server.
+
+----------------------------------------------------------------------
+
+event handling
+
+server get a byte buffer, it looks at the msgid and finds he appropriate
+event object for it.
+
+it then constructs an event passing in the rdp con and the byte buffer.
+we want to store the con because some eventhandlers need the rdp con,
+such as the registerentityresponse
+
+
+
+-- old stuff follows
+
+the msg comes into the world server (eg, pickup item msg)
+
+the world server makes an event from that message
+
+the event gets sent to the event handler
+
+the event handler processes the event
+ - something wants to pick something up
+   - lets other users know about the results
+   - lets entities know about the results
+
+if the entity is remote, in the case of a user, or remote mob,
+the handler re-encodes the message and sends it to the remote entity.
+
+is there a case where mobs want to get different information than users?
+
+the eventhandlers should be user vs. npc independent.
+when a msg needs to be sent to all perceivers, it should not care
+whether the perceiver is a user or not
+so i need to **UPDATE THE MESSAGESERVER** to add a sendToPerceivers
+method which will gather all the nearby objects that have perceivers,
+unique the perceiver set, then send the message to all the perceivers.
+if we implement a tribe mind, then all the orcs will share a single
+perceiver.  this way, 
+
+but since mobs can share perceivers, when we update perceivers, we should
+go through a **PERCEIVER LIST INSTEAD OF MOB LIST** otherwise we 
+update some perceivers many times.
+
+----------------------------------------------------------------------
+entity vs. object
+
+objects can have perceivers and can interact in the world
+you cannot use the event system with entities.
+entities are things like lights that arent necessarily real objects
+
+----------------------------------------------------------------------
+rdp
+
+the rdpconnection represents the network connection.
+to receive packets from the connection, you register a callback with the
+connection (RDPConnection.registerCallback())
+when you open a connection with the rdpconnection class, it binds itself
+to a localport.  there are two versions of open, one that takes in a
+localport, the other that doesnt.  if you dont supply one then
+the system will find one.  
+
+since multiple connections can share a localport (connections are unique
+based on localport, remotehost, remoteport combo), 
+there is an rdpserversocket which
+is registered to a localport that all these connections point to.
+this serversocket also has an rdpconnection that is special, it doesnt
+have a 'remote host' and 'remote port' associated with it since it
+accepts and processes any packets.
+
+when you create a connection, it adds itself to a connection map,
+which says which localport, remotehost, remote port its connected to.
+so when a new packet comes in, it can look into the packet to find out
+where it came from and find the correct connection associated with it,
+and call that connection's callback method.
+----------------------------------------------------------------------
+
+equipment
+
+marsmobs can equip marsitems.
+you have to first acquire an item, by sending an acquire event to the
+server.  once you acquire the item, it is in your inventory.
+you can see your acquired items are by calling mvobject.containerObjects().
+
+the server will send different types of messages based on what the player
+already has equipped and the type of equipment the mob is equipping.
+
+every mob has equipment slots, they are represented by the
+MarsEquipSlot objects.  
+you can get what slots a mob has by calling
+marsmob.getEquippableSlots() which returns Set<MarsEquipSlot>
+
+once you have a slot, you can see what the mob has in that slot by
+calling marsmob.getItemBySlot(slot)
+
+you can PLACE an item into a slot by calling
+marsmob.putItemIntoSlot(MarsEquipSlot, MarsItem)
+
+items MAY go into a SOCKET of the model equipping it.
+the item itself knows this mapping from equipment slot to socket.
+you call marsitem.getAttachSocket(MarsEquipSlot) to get a
+MarsAttachSocket.
+you can use this socket to make an attachevent to tell the client about
+this change.
+
+----------------------------------------------------------------------
+state
+need to build a state system
+when a mob dies, we set the state
+
+
+----------------------------------------------------------------------
+
+dropping connection
+
+the rdpserver sends a null packet every 30 seconds.
+this is in the RDPServer.RetryThread
+look for Log.net("RDPServer.retry: sending nul packet in " + (30000 - (currentTime - con.getLastNullPacketTime())));
+also RDPServer.retry: sent nul packet
+
+in RDPServer.java there is a variable called resendTimeoutMS (default 30sec).
+if any packet is not 'acked' within that time, the connection will close.
+that is checked in RDPConnection.resend() which is called from RDPServer.
+look for:
+RDPConnection.resend: packetTra... timeout reached in <x> millis
+or once is closes it will say:
+ERROR:... RDPConnection: closing connect because resendTimeout reached
+
+this works together with the nul packet.  since we send a null packet
+every 30 seconds, and since we wait 30 seconds for the packet to timeout,
+it can take up to a minute for the connection to go into close wait.
+
+when we close the connection, we also send a reset packet to the other side.
+
+--
+
+if the connection goes into CLOSE_WAIT, we start a close wait timer on it
+for 30 seconds.
+see RDPServer.RetryThread
+Log.net("RDPRetryThread: con is in CLOSE_WAIT: elapsed close timer(ms)=" + elapsedTime + ", waiting for 30seconds to elapse. con=" + con);
+
+this means it can take up to 90 seconds for the connection to close
+nul packet (30sec) + timeout(30sec) + close wait timer (30sec)
+
+--
+
+the proxy server will check the user's connection's state
+when the proxy gets a message from the world server.
+if the connection is not open, it will close the world server's connection also
+and send a reset packet over to the world server.
+See ProxyHandler.java "con.close()"
+in the world server you will see:
+RDPServer.processExistingConnection: got reset packet for con..
+
+if the user quits the client, the client sends a reset message to the server,
+which then calls the engine's reset callback, which then sends
+a reset event to the ConResetHandler.
+
+the proxy server will send a reset event to the world server.
+
+how does the world server know to remove the user object from the world?
+when the world server tries to send an event to the proxy, the
+mvobject.sendEvent() method will notice the user's connection is closed.
+sendEvent then creates a ConResetEvent event and handles it.
+MVObject.sendEvent: remote con is not open, sending conresetevent for user..
+
+----------------------------------------------------------------------
+
+- quests
+
+availability - 
+when a mob gets a newobject event, it sends, via its behavior,
+whether it has a quest.
+
+marsbehavior has a method called hasQuestFor(mob) - that should return
+whether the mob has a quest for the given mob.  the default
+implementation in marsbehavior for this quest just checks if
+it has any quests at all, assuming its applicable to the mob.
+you can override this to be smarter.
+
+the behavior sends a QuestAvailableEvent to the world server 
+(QuestAvailableHander)
+
+the world server stores that information in the QuestNotifyManager
+(which is a remote service)
+
+when the user becomes aware of the quest object (if it isnt alreasy)
+the world server will send the
+quest available message which is handled by the marsnewobjecthandler
+the server uses the marstate event with a 'questAvailable' state name
+to signal the client that it has a quest.  
+***see MarsBehavior.handleNewObject to see how it sends 
+   the quest available state
+
+the client then sends a "RequestQuestInfo" event about a specific npc.
+the server makes a "ServerRequestQuestInfo" event which it sends
+to the on the mobserver.
+the mob server's ServerRequestQuestInfoHandler calls into the mob's
+behavior (marsbehavior.getQuestsFor(player))
+and finds out what quest the mob is giving out.
+
+the mob server responds with a
+"QuestInfo" event back to the worldserver.
+the world server has a QuestInfoHandler that just forwards it to the
+player.  the client gets the quest oid also along with the quest.
+
+the player then sends a questresponse event
+the worldserver sends this event over to the mobserver.
+the mob server responds by sending over a newQuestStateEvent to the world server
+it has the quest state object
+
+in newqueststatehandler:
+the world server adds the quest state to the player by calling 
+player.addQuestState
+it also sends a quest log update using QuestLogInfo event
+
+3 places to worry about notifying quests:
+when you log in - marsnewobjecthandler
+when you get a quest - newqueststatehandler
+when you update a quest - queststate.handledeath or something
+
+CONCLUDE - 
+the marsbehavior actually sends the flag over to the user whether it
+can conclude the quest
+
+when a user does /conclude, that gets sent to the npc directly,
+the marsbehavior then gets the queststates using rmi for the user.
+calling queststate.handleConclude() which then collects the items
+from the user's inventory.  it uses rmi to get to the user object
+directly and remove it from the user's inventory.
+
+--
+
+marsquest object
+marsdeliveryquest
+the marsquest object is an abstract class, representing a quest
+prototype.  it has no state information, but has the info you need
+to create an instance.  you get one by calling quest.makeQuestState()
+which returns a QuestState.  a deliveryquest returns a deliveryqueststate.
+
+---
+
+they can create a queststateobject which keeps track of how you are
+doing, if you need to kill 10 more mobs, for instance.
+
+the marsmob.addQuest() adds the quest to the mob.
+
+the marsmob behaviors check if they should let someone know about the
+quest.  the user gets a statechange(questavail) state.
+this should not be in the newmob because the world server doesnt know
+when a user should be told about a quest.
+
+
+debugging quests:
+log MarsQuest.addquest: registering quest
+warn MarsQuest.getquest: returned null
+log  MarsQuest.getquest: found quest
+debug loading up persistent objects
+Log.debug("Engine: debug loading persisted object oid " + oid);                Log.debug("Engine: loaded marsquest " + quest.getName());
+
+marsnewobjecthandler: senidng user ... questinfoevent on quest: 
+
+killqueststate.handledeath: sending state update to player
+------------------------------------------------------------------------
+
+grouping
+
+the group manager keeps track of groups
+
+groups can have 2 types of members, pending members and active members.
+a group has a single leader.
+
+a group must have a leader that is not active in any other group
+the leader may be pending.
+
+a group must have at least 2 pending members (includes leader)
+
+when someone invites someone:
+-----------------------------
+inviter must not be an active member of a group where they are not group leader
+invitee must not be an active member of any group
+
+if they are not group leader of any groups, a new group is created and they
+are set as the group leader, and also a pending member.
+
+the invitee is then added as a pending member of the invitor's group.
+the invitee is sent a join request with the group id.
+
+when someone accepts, joins a group
+-----------------------------------
+the invitee accepts a group invitation indicating the group id.
+the group must be valid (has a leader that is not active in other group,etc)
+the invitee must not be the leader.
+the invitee must not be active in any other group.
+
+if the group has no active members, activate the leader and the invitee.
+
+debugging tools:
+/grouplist - prints a list of group ids that exist on the system. can check if it was created or removed
+/membermap <id> - tells you if the membermap is correct - what groups the member belongs to -- prints out a list of groups the member belongs to
+/groupinfo <gid> - who is in a group. looks into the group object.  tell you if the group itself is consistent. 
+
+------------------------------------------------------------------------
+new item system
+items can be attachable to a socket
+they can implement these classes
+any object can implement displayable
+displayable needs to refer to a file and submeshes that should be drawn
+marsweapontemplate makes an item that is both attachable and displayable
+
+------------------------------------------------------------------------
+
+remote mob
+in MVObject.spawn() it will check if its a world server, and if it is
+then it will register the object as an rmi object
+with MVObject.rmiBindObject();
+
+
+---
+
+serialization 
+
+used as storage in database
+
+design goals for serialization
+
+- version control - you know what version of the stored the data and version of the class being stored
+
+- upgradability - easy to upgrade from one version to another, perhaps using a written script
+
+- automatic upgrade if the change is a new field with a default or deletion of a field
+
+- interfacing with a tool for input (so it knows the field names)
+
+-size
+-hand editing
+-speed
+-compactness
+
+------------------------------------------------------------------------
+
+xmlencoder
+be careful about static references.
+mvobject has a setDefaultAnimation which i set to IDLE by default
+when the encoder tries to encode a running player into xml,
+it makes a new marsobject and compares the defaultanimation, which is
+the static refernce to IDLE.  it then tries to make the static IDLE
+object into the RUNNING animation, which changes ALL object's IDLE into run.
+so now i clone the anim before i set it in the obj.
+
+------------------------------------------------------------------------
+
+lock cycle detection
+
+get all top nodes (keep it in a set so we dont check top nodes again later)
+
+get all non-top-nodes because we need to go through them to cull them
+
+run check cycle on top-nodes first and
+keep a set of all top node cycles (in curCycles)
+
+for each non-top-node
+  if (has cycle) {
+    isProperSubset(top node cycles);
+
+function isProperSubset(cycle, otherCycles) {
+  for each other cycles {
+    is cycle a subset of "other cycle" {
+      return true;
+    }
+  }
+  return false;
+}
+
+function isSubset(testCycle, containerCycle) {
+  for each element in testCycle {
+    if (! containerCycle.contains(element)) 
+      return false;
+  }
+  return true;
+}
+
+------------------------------------------------------------------------
+how we send rigged attachments
+
+the notifynewobject handler calls sendMeshMessage.
+marsnewobjecthandler overrides this and makes a marsmodelinfoevent
+for the mob (if its a mob).  the marsmodelinfoevent's constructor
+checks for non-rigid attachments (rigged attachments) and adds
+those to the meshfile
+
+------------------------------------------------------------------------
+
+how objects get spawned
+MarsspawnnewObject: derives from NewObjectHandler
+the entity manager and proxy server get newobject events from the world
+server for objects that are created.
+(does this apply for objects it registers? maybe not?)
+the MarsSpawnNewObject.java code sets the world server connection for the
+stub object and also sets the remote object connection ONLY if its
+an entity manager.
+
+remoteobjectconnection is set for proxy server in
+the RegisterEntityResponse.java)
+
+
+
+
+locks-
+always grab the staticquadtreenode lock before getting any world nodes
+because the quad tree methods often look into world nodes for location
+and stuff

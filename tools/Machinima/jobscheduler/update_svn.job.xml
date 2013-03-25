@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<job>
+  <lock.use lock="update_svn_lock" />
+  <script language="JavaScript">
+    <![CDATA[
+
+spooler_log.info("*** start of update_svn script ***");
+
+var cmd = "/cygwin/bin/ssh -q multiverse@localhost '/cygdrive/c/Multiverse/tree/Tools/Machinima/update_svn.sh'"
+
+try {
+  var proc = spooler_task.create_subprocess();
+  spooler_log.info("*** updating svn ***");
+  proc.start(cmd);
+  proc.wait_for_termination();
+  spooler_log.info("*** finished updating svn ***");
+} catch (x) {
+  spooler.log.error("*** error updating svn ***");
+}
+
+    ]]>
+  </script>
+</job>

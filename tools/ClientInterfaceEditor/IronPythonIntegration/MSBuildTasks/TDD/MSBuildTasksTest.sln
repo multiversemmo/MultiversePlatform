@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildTasksTest", "MSBuildTasksTest.csproj", "{93284932-B3A4-477D-A38D-AED4B2F9CDE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronPythonCompilerTask", "..\IronPythonCompilerTask.csproj", "{68B54816-884B-48A1-949C-DBBDE2A5C412}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A7E9A04-9EA9-4F57-8195-1A08BCC5DE15}"
+	ProjectSection(SolutionItems) = preProject
+		localtestrun.testrunconfig = localtestrun.testrunconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93284932-B3A4-477D-A38D-AED4B2F9CDE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93284932-B3A4-477D-A38D-AED4B2F9CDE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93284932-B3A4-477D-A38D-AED4B2F9CDE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93284932-B3A4-477D-A38D-AED4B2F9CDE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

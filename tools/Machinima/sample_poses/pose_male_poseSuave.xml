@@ -1,0 +1,25 @@
+<Machinima Name="photo_cleanroom_personal" World="friendworld2">
+  <Render Width="760" Height="1400" FPS="25" />
+    <Scene length="0.04">
+    <CameraMarker>cameraPersonalPic</CameraMarker>
+    <MobileObject id="character01">
+      <Name>Jim</Name>
+      <Mesh>hmn_m_01_machinima.mesh</Mesh>
+      <SpawnPoint>personalPicSlot</SpawnPoint>
+      <Animation name="poseSuave" />
+      <Property name="Sex" value="male" />
+      <Property name="SkinColor" value="warm-tan" />      
+      <Property name="HeadShape" value="euro_01" />
+      <Property name="HairStyle" value="bald" />
+      <Property name="HairColor" value="brown" />
+      <Property name="UpperBodyType" value="ntrl" />
+      <Property name="LowerBodyType" value="ntrl" />
+      <Property name="ClothesTorso" value="bare" />
+      <Property name="ClothesLegs" value="bare" />
+      <Property name="Footwear" value="bare" />
+      <Property name="AppearanceOverride" value="avatar" />
+      <Property name="MaterialOverride" value="LayeredAvatar.flatcolor" />
+      <Property name="ShaderParam.SurfaceColor" value="#333333" />
+    </MobileObject>
+  </Scene>
+</Machinima>

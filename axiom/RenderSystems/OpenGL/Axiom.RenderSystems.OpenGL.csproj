@@ -1,0 +1,215 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA1AE24F-7A68-4218-8C22-DD3D49820551}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Axiom.RenderSystems.OpenGL</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Axiom.RenderSystems.OpenGL</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tao.OpenGL, Version=1.5.0.3, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\Managed\Tao.OpenGL.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Platform.Windows, Version=1.0.0.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\Managed\Tao.Platform.Windows.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\..\Engine\Axiom.Engine.csproj">
+      <Project>{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Engine</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MathLib\Axiom.MathLib.csproj">
+      <Project>{48EAC066-47F2-44A5-9454-DFA718DCB55E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.MathLib</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ARBGpuProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseGLSupport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLGpuProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLGpuProgramManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLHardwareBufferManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLHardwareIndexBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLHardwareOcclusionQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLHardwareVertexBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLRenderSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLRenderTexture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLTexture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLTextureManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IOpenGLGpuProgramFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Plugin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ATI\ATIFragmentShaderGpuProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ATI\Compiler2Pass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ATI\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ATI\Lists.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ATI\PixelShader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ATI\Structures.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nvidia\NV3xGpuProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nvidia\NvparseFragmentProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLSL\GLSLGpuProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLSL\GLSLHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLSL\GLSLLinkProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLSL\GLSLLinkProgramManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLSL\GLSLProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GLSL\GLSLProgramFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Win32\DefaultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Win32\GLHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Win32\GLRenderWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

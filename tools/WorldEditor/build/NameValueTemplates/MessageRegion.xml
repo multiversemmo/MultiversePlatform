@@ -1,0 +1,44 @@
+<NameValueTemplate>
+ <ObjectTypes><!-- This lists the types of objects that this Template would be appropriate for -->
+   <Region/>
+ </ObjectTypes>
+ <Name>MessageRegion</Name>
+ <Properties>
+   <Property>
+     <Name>onEnter</Name>
+     <Type>String</Type>
+     <Default>myRegionTrigger</Default>
+   </Property>
+   <Property>
+     <Name>onLeave</Name>
+     <Type>String</Type>
+     <Default>myRegionTrigger</Default>
+   </Property>
+   <Property>
+     <Name>messageClass</Name>
+     <Type>Enum</Type>
+     <Enums>
+       <Value>extension</Value>
+       <Value>property</Value>
+     </Enums>
+     <Default>extension</Default>
+   </Property>
+   <Property>
+     <Name>messageType</Name>
+     <Type>String</Type>
+   </Property>
+   <Property>
+     <Name>messageExtensionType</Name>
+     <Type>String</Type>
+   </Property>
+   <Property>
+     <Name>messageRegionProperties</Name>
+     <Type>String</Type>
+   </Property>
+   <Property>
+     <Name>messageObjectProperties</Name>
+     <Type>String</Type>
+   </Property>
+ </Properties>
+</NameValueTemplate> 
+

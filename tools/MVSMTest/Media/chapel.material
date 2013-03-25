@@ -1,0 +1,26 @@
+
+material Chapel01 M
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture CHAPEL01.TGA
+			}
+		}
+	}
+}
+material Ground M
+{
+	technique
+	{
+		pass
+		{
+			ambient 0.717647 0.717647 0.717647 0
+			diffuse 0.717647 0.717647 0.717647 0
+			specular 0.898039 0.898039 0.898039 1 0.0
+		}
+	}
+}

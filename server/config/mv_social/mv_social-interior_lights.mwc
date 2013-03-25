@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="1">
+  <PointLight Name="point_light_03" AttenuationRange="29000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0">
+    <Position x="-177265.1" y="76100" z="276975.4" />
+    <Specular R="0.8078431" G="0.4862745" B="0.945098" />
+    <Diffuse R="0.6509804" G="0.3411765" B="0.8588235" />
+  </PointLight>
+  <PointLight Name="point_light_04" AttenuationRange="29000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0">
+    <Position x="-178107.8" y="76000" z="326436.9" />
+    <Specular R="0.9490196" G="0.5921569" B="0.8509804" />
+    <Diffuse R="0.8745098" G="0.1568628" B="0.1764706" />
+  </PointLight>
+  <PointLight Name="point_light_01" AttenuationRange="19000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0">
+    <Position x="-111033.4" y="99000" z="271754.4" />
+    <Specular R="0.4039216" G="0.8509804" B="0.945098" />
+    <Diffuse R="0.4117647" G="0.7333333" B="0.972549" />
+  </PointLight>
+  <PointLight Name="point_light_02" AttenuationRange="19000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0">
+    <Position x="-110368" y="99000" z="327313.8" />
+    <Specular R="0.5568628" G="0.9568627" B="0.6156863" />
+    <Diffuse R="0.3843137" G="0.7176471" B="0.08235294" />
+  </PointLight>
+</WorldObjectCollection>

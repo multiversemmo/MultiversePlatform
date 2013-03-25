@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="postcardSlot01" TerrainOffset="0" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="-163" Zenith="90">
+    <Position x="102068.2" y="20000" z="106853" />
+    <Orientation x="0" y="-0.9890159" z="0" w="0.1478095" />
+  </Waypoint>
+  <Waypoint Name="postcardSlot02" TerrainOffset="0" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="165" Zenith="90">
+    <Position x="100268.2" y="20000" z="106857.9" />
+    <Orientation x="0" y="0.9914448" z="0" w="0.1305262" />
+  </Waypoint>
+  <StaticObject Name="terrace" Mesh="brickTerrace.mesh" TerrainOffest="-350" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="102784.2" y="19650" z="98559.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="cementWall-lib.0" MaterialName="brickTerrace.cementWallMat" Show="True" />
+      <SubMeshInfo Name="brickTerrace-lib.0" MaterialName="brickTerrace.brickTerraceMat" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="cameraPostcard" TerrainOffset="1070.342" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="101013.3" y="21070.34" z="102519.9" />
+    <Orientation x="-0.001501524" y="0.9984718" z="-0.04256445" w="-0.03521647" />
+  </Waypoint>
+  <Waypoint Name="cameraPersonalPic" TerrainOffset="1069.656" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="101906.8" y="21069.66" z="104343.9" />
+    <Orientation x="0.001579447" y="0.9983879" z="0.03589348" w="-0.04393983" />
+  </Waypoint>
+  <Waypoint Name="persPicSlot01" TerrainOffset="0" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="-163" Zenith="90">
+    <Position x="102066.8" y="20000" z="106862.2" />
+    <Orientation x="0" y="-0.9890159" z="0" w="0.1478095" />
+  </Waypoint>
+  <Waypoint Name="cameraPersonalPicCloseUp2" TerrainOffset="1558.65" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="102188.3" y="21558.65" z="106252.8" />
+    <Orientation x="-0.001241183" y="0.9987577" z="0.03590695" w="0.03452941" />
+  </Waypoint>
+</WorldObjectCollection>

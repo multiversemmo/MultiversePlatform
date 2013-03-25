@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../../Common/Overview.xsl" type="text/xsl"?>
+<VSSDKSample>
+  <ImagePath>../../../Common</ImagePath>
+  <Status>
+    <Accessibility>true</Accessibility>
+    <ArchitectureDiagram>true</ArchitectureDiagram>
+    <Comments>true</Comments>
+    <Documentation>true</Documentation>
+    <ErrorHandling>true</ErrorHandling>
+    <FollowSDKCodingStandards>true</FollowSDKCodingStandards>
+    <Localizable>true</Localizable>
+    <Overview>true</Overview>
+    <ScenarioTests>false</ScenarioTests>
+    <Supported>true</Supported>
+    <UnitTests>true</UnitTests>
+    <Style>Example</Style>
+  </Status>
+  <Overview>
+    <ShortName>C# Example.IronPythonCompilerTask</ShortName>
+    <LongName>IronPython Compiler Task</LongName>
+    <Phrase>Provides support for using MSBuild to build assembly from Python projects.</Phrase>
+  </Overview>
+  <Introduction>
+    <Summary>
+      This sample is a component of IronPython integration inside Visual Studio.
+      This sample provides a MSBuild target and a MSBuild task that invoke the IronPython compiler. This
+      makes it possible to have MSBuild-based IronPython projects that can be compiled into assemblies. 
+    </Summary>
+    <Goal>Creating a MSBuild task that invokes a compiler.</Goal>
+    <Goal>Creating an MSBuild target to enable support for a language by taking advantage of Microsoft.Common.Targets.</Goal>
+    <Goal>Deploying the task and target in such a way that they can be used from anywhere on the computer.</Goal>
+    <Image width="400" height="400">MSBuildTask.jpg</Image>
+  </Introduction>
+  <SampleInfo>
+    <State>
+    </State>
+    <Type>Example</Type>
+    <Complexity>2</Complexity>
+    <Screenshot>MSBuildTask.jpg</Screenshot>
+    <Area>Iron Python</Area>
+    <Language>C#</Language>
+    <Folder>VisualStudioIntegration\Samples\IronPythonIntegration\</Folder>
+    <SampleSolution>MSBuildTasks\IronPythonCompilerTask.sln</SampleSolution>
+    <FolderUnitTest>VisualStudioIntegration\Samples\IronPythonIntegration\MSBuildTasks\TDD\</FolderUnitTest>
+    <UnitTestStartup>MSBuildTasksTest.sln</UnitTestStartup>
+    <Doc />
+    <Keywords>
+      <Keyword>Iron Python</Keyword>
+      <Keyword>MSBuild</Keyword>
+      <Keyword>Target</Keyword>
+      <Keyword>Projects</Keyword>
+      <Keyword>Python</Keyword>
+      <Keyword>Task</Keyword>
+      <Keyword>Invoke</Keyword>
+      <Keyword>Compiler</Keyword>
+      <Keyword>IronPython</Keyword>
+    </Keywords>
+  </SampleInfo>
+  <GettingStarted>
+    <Paragraph>
+      This sample shows how to create a MSBuild task based on the IronPython compiler (PythonCompiler).
+      Together with the targets file it provides (IronPython.targets), it enables python projects
+      (.pyproj files) to be built into managed assemblies.
+    </Paragraph>
+    <Paragraph>
+      While this sample allows one to build projects from the command line using
+      MSBuild.exe, the recommended way to use it is to build the PythonProject sample to
+      enable IronPython inside VisualStudio.
+    </Paragraph>
+    <Paragraph>
+      The project file in this sample (IronPythonCompilerTask.csproj) was modified to include
+      a special target that is responsible for deploying the .targets file and the generated task to a
+      location where MSBuild always can find it. For a computer where
+      everything is installed in the default location, this location would be:
+        "C:\Program Files\MSBuild\Microsoft\IronPython\1.0\".
+    </Paragraph>
+  </GettingStarted>
+  <AdditionalResources>
+    <Resource>
+      <Title>Visual Studio SDK Website</Title>
+      <URL>http://msdn.microsoft.com/vstudio/extend</URL>
+    </Resource>
+  </AdditionalResources>
+  <UnitTests>
+    <Test>
+      Create the IronPythonCompilerTask object successfully.
+    </Test>
+    <Test>
+	    Verify that each property setter and getter works and that the data is persisted.
+    </Test>
+    <Test>
+      Verify that the Execute command can be called and that it returns successfully.
+    </Test>
+    <Test>
+      Verify that calling the Execute method causes the parameters passed in to be set on the compiler object.
+    </Test>
+  </UnitTests>
+  <FunctionalTests>
+  </FunctionalTests>
+  <ProjectFiles>
+    <File>
+      <Name>Compiler.cs</Name>
+      <Description>
+        This class derives from the PythonCompiler class and does not extend it. It implements ICompiler,
+        which is an interface with the same public method as the PythonCompiler class. This enables unit
+        tests to replace the PythonCompiler with a mock object. Ideally, we would have added the ICompiler
+        interface directly on the PythonCompiler, but because we cannot modify that code, we achieved the same
+        result by using the Compiler class.
+      </Description>
+    </File>
+    <File>
+      <Name>CompilerErrorSink.cs</Name>
+      <Description>
+        This class is responsible for receiving the errors, warnings, and logs from the PythonCompiler and
+        generating the corresponding MSBuild errors, warnings, and messages.
+      </Description>
+    </File>
+    <File>
+      <Name>ICompiler.cs</Name>
+      <Description>
+        This interface has the same public methods as the PythonCompiler and enables our unit tests to
+        replace the PythonCompiler with a mock object. See the above description of the Compiler for more
+        details.
+      </Description>
+    </File>
+    <File>
+      <Name>IronPython.targets</Name>
+      <Description>
+        This files contains all the targets we require to build an assembly from a
+        .pyproj file. It imports Microsoft.Common.targets which is the same file that Visual Basic or Visual C# imports. The
+        IronPythonCompilerTarget target is responsible for setting the properties on our task and
+        executing our task. It is added in the list of dependencies through the CoreCompile target.
+        For a more advanced example on how to create targets, examine the
+        Microsoft.CSharp.targets file.
+      </Description>
+    </File>
+    <File>
+      <Name>IronPythonCompilerTask.cs</Name>
+      <Description>
+        This is the actual implementation of our compiler task. It derives from the MSBuild Task class.
+        It is responsible for creating the compiler, setting the properties on it, and starting the
+        compilation.
+      </Description>
+    </File>
+  </ProjectFiles>
+  <History>
+    <Change>
+      <Date>2005-11-24</Date>
+      <Description>Created this sample for the Visual Studio 2005 SDK.</Description>
+    </Change>
+  </History>
+</VSSDKSample>

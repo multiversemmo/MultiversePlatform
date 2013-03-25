@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<project name="Tao.OpenAl">
+    <target name="build">
+        <echo message="Build Directory is ${framework.build.directory}" />
+        <csc target="library" warnaserror="false" unsafe="true" debug="${build.debug}" optimize="${build.optimize}" output="${framework.build.directory}/${nant.project.name}.dll" define="${build.debug.define};${build.platform.define};${build.strong.define}" doc="${framework.build.directory}/${nant.project.name}.xml">
+            <sources failonempty="true">
+                <include name="${framework.projects.directory}/${nant.project.name}/Al.cs" />
+                <include name="${framework.projects.directory}/${nant.project.name}/Alc.cs" />
+                <include name="${framework.projects.directory}/${nant.project.name}/Alut.cs" />
+                <include name="${framework.projects.directory}/${nant.project.name}/AssemblyInfo.cs" />
+            </sources>
+        </csc>
+        <copy file="${framework.solutions.directory}/${nant.project.name}/Solution Items/${nant.project.name}.License.txt" todir="${framework.build.directory}" />
+        <copy file="${framework.solutions.directory}/${nant.project.name}/Solution Items/${nant.project.name}.Readme.txt" todir="${framework.build.directory}" />
+        <copy file="${framework.solutions.directory}/${nant.project.name}/Solution Items/${nant.project.name}.dll.config" todir="${framework.build.directory}" />
+    </target>
+
+    <target name="clean">
+        <delete file="${framework.build.directory}/${nant.project.name}.dll" failonerror="false" />
+        <delete file="${framework.build.directory}/${nant.project.name}.dll.config" failonerror="false" />
+        <delete file="${framework.build.directory}/${nant.project.name}.pdb" failonerror="false" />
+        <delete file="${framework.build.directory}/${nant.project.name}.xml" failonerror="false" />
+        <delete file="${framework.build.directory}/${nant.project.name}.License.txt" failonerror="false" />
+        <delete file="${framework.build.directory}/${nant.project.name}.Readme.txt" failonerror="false" />
+    </target>
+</project>

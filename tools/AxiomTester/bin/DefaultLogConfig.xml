@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+
+  <appender name="RollingFile" type="log4net.Appender.RollingFileAppender">
+    <file value="${USERPROFILE}/My Documents/AxiomTester/Logs/AxiomTester.log" />
+    <appendToFile value="false" />
+    <maximumFileSize value="100MB" />
+    <maxSizeRollBackups value="2" />
+    <rollingStyle value="once" />
+
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%-5p [%d{ISO8601}] %-20.20c{1} %m%n" />
+    </layout>
+  </appender>
+
+  <appender name="ExceptionFile" type="log4net.Appender.RollingFileAppender">
+    <file value="${USERPROFILE}/My Documents/AxiomTester/Logs/Exception.log" />
+    <appendToFile value="false" />
+    <maximumFileSize value="1MB" />
+    <maxSizeRollBackups value="2" />
+    <rollingStyle value="once" />
+
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%-5p [%d{ISO8601}] %-20.20c{1} %m%n" />
+    </layout>
+  </appender>
+
+  <appender name="MeterEventAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="${USERPROFILE}/My Documents/AxiomTester/Logs/MeterEvents.log" />
+    <appendToFile value="false" />
+    <maximumFileSize value="10MB" />
+    <maxSizeRollBackups value="2" />
+    <rollingStyle value="once" />
+
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%-5p [%d{ISO8601}] %-20.20c{1} %m%n" />
+    </layout>
+  </appender>
+
+  <appender name="MeterReportAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="${USERPROFILE}/My Documents/AxiomTester/Logs/MeterReport.log" />
+    <appendToFile value="false" />
+    <maximumFileSize value="10MB" />
+    <maxSizeRollBackups value="2" />
+    <rollingStyle value="once" />
+
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%-5p [%d{ISO8601}] %-20.20c{1} %m%n" />
+    </layout>
+  </appender>
+
+  <appender name="TraceAppender" type="log4net.Appender.TraceAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%-5p %m%n" />
+    </layout>
+  </appender>
+
+  <root>
+    <level value="INFO" />
+    <appender-ref ref="RollingFile" />
+    <appender-ref ref="TraceAppender" />
+  </root>
+  <logger name="ScriptDeprecated">
+    <level value="WARN" />
+    <appender-ref ref="DeprecatedFile" />
+  </logger>
+  <logger name="Exception">
+    <level value="DEBUG" />
+    <appender-ref ref="ExceptionFile" />
+  </logger>
+  <logger name="HardwareCaps">
+    <level value="DEBUG" />
+    <appender-ref ref="ExceptionFile" />
+  </logger>
+  <logger name="MeterEvents">
+    <level value="INFO" />
+    <appender-ref ref="MeterEventsAppender" />
+  </logger>
+  <logger name="MeterReport">
+    <level value="INFO" />
+    <appender-ref ref="MeterReportAppender" />
+  </logger>
+</log4net>

@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.0">
+   <asset>
+      <contributor>
+         <author>Admin</author>
+         <authoring_tool>Feeling ColladaMax v1.03 with FCollada v1.09.</authoring_tool>
+         <source_data>file://E:/Multiverse_Inhouse/TutorialStuff/TutorialShack/tutorial_shack_finish.max</source_data>
+      </contributor>
+      <created>2006-08-15T04:06:31Z</created>
+      <modified>2006-08-15T04:06:31Z</modified>
+      <revision>1.0</revision>
+      <unit name="inch" meter="0.010000"></unit>
+      <up_axis>Y_UP</up_axis>
+   </asset>
+   <library_images>
+      <image id="Map__3" name="Map__3">
+         <init_from>./Pictures/tutorial_shack_texture.dds</init_from>
+      </image>
+   </library_images>
+   <library_materials>
+      <material id="shack_mat" name="shack_mat">
+         <instance_effect url="#shack_mat-fx"></instance_effect>
+      </material>
+      <material id="scene_material" name="scene_material">
+         <instance_effect url="#scene_material-fx"></instance_effect>
+      </material>
+      <material id="collision_volume_lambert" name="collision_volume_lambert">
+         <instance_effect url="#collision_volume_lambert-fx"></instance_effect>
+      </material>
+   </library_materials>
+   <library_effects>
+      <effect id="shack_mat-fx" name="shack_mat">
+         <profile_COMMON>
+            <technique id="shack_mat-fx-COMMON" sid="COMMON">
+               <phong>
+                  <ambient>
+                     <color>0.588235 0.588235 0.588235 1.000000</color>
+                  </ambient>
+                  <diffuse>
+                     <texture texture="Map__3" texcoord="CHANNEL1">
+                        <extra>
+                           <technique profile="MAX3D">
+                              <amount>1.000000</amount>
+                           </technique>
+                        </extra>
+                     </texture>
+                  </diffuse>
+                  <specular>
+                     <color>0.007843 0.007843 0.007843 1.000000</color>
+                  </specular>
+                  <shininess>
+                     <float>9.999999</float>
+                  </shininess>
+                  <reflective>
+                     <color>0 0 0 1.000000</color>
+                  </reflective>
+                  <transparent>
+                     <color>1.000000 1.000000 1.000000 1.000000</color>
+                  </transparent>
+                  <transparency>
+                     <float>0</float>
+                  </transparency>
+               </phong>
+               <extra>
+                  <technique profile="MAX3D">
+                     <spec_level>
+                        <float>0</float>
+                     </spec_level>
+                     <emission_level>
+                        <float>0</float>
+                     </emission_level>
+                     <faceted>false</faceted>
+                     <double_sided>false</double_sided>
+                     <wireframe>false</wireframe>
+                     <face_map>false</face_map>
+                  </technique>
+               </extra>
+            </technique>
+         </profile_COMMON>
+      </effect>
+      <effect id="scene_material-fx" name="scene_material">
+         <profile_COMMON>
+            <technique id="scene_material-fx-COMMON" sid="COMMON">
+               <phong>
+                  <ambient>
+                     <color>0.300000 0.300000 0.300000 1.000000</color>
+                  </ambient>
+                  <diffuse>
+                     <color>0.700000 0.700000 0.700000 1.000000</color>
+                  </diffuse>
+                  <specular>
+                     <color>1.000000 1.000000 1.000000 1.000000</color>
+                  </specular>
+                  <shininess>
+                     <float>500.000000</float>
+                  </shininess>
+                  <reflective>
+                     <color>0 0 0 1.000000</color>
+                  </reflective>
+                  <transparent>
+                     <color>1.000000 1.000000 1.000000 1.000000</color>
+                  </transparent>
+                  <transparency>
+                     <float>0</float>
+                  </transparency>
+               </phong>
+               <extra>
+                  <technique profile="MAX3D">
+                     <spec_level>
+                        <float>0</float>
+                     </spec_level>
+                     <emission_level>
+                        <float>0</float>
+                     </emission_level>
+                     <faceted>false</faceted>
+                     <double_sided>false</double_sided>
+                     <wireframe>false</wireframe>
+                     <face_map>false</face_map>
+                  </technique>
+               </extra>
+            </technique>
+         </profile_COMMON>
+      </effect>
+      <effect id="collision_volume_lambert-fx" name="collision_volume_lambert">
+         <profile_COMMON>
+            <technique id="collision_volume_lambert-fx-COMMON" sid="COMMON">
+               <phong>
+                  <ambient>
+                     <color>0.588235 0.588235 0.588235 1.000000</color>
+                  </ambient>
+                  <diffuse>
+                     <color>0.588235 0.588235 0.588235 1.000000</color>
+                  </diffuse>
+                  <specular>
+                     <color>0.900000 0.900000 0.900000 1.000000</color>
+                  </specular>
+                  <shininess>
+                     <float>9.999999</float>
+                  </shininess>
+                  <reflective>
+                     <color>0 0 0 1.000000</color>
+                  </reflective>
+                  <transparent>
+                     <color>1.000000 1.000000 1.000000 1.000000</color>
+                  </transparent>
+                  <transparency>
+                     <float>0</float>
+                  </transparency>
+               </phong>
+               <extra>
+                  <technique profile="MAX3D">
+                     <spec_level>
+                        <float>0</float>
+                     </spec_level>
+                     <emission_level>
+                        <float>0</float>
+                     </emission_level>
+                     <faceted>false</faceted>
+                     <double_sided>false</double_sided>
+                     <wireframe>false</wireframe>
+                     <face_map>false</face_map>
+                  </technique>
+               </extra>
+            </technique>
+         </profile_COMMON>
+      </effect>
+   </library_effects>
+   <library_lights>
+      <light id="global-ambient-light">
+         <technique_common>
+            <ambient>
+               <color>0.388235 0.388235 0.388235</color>
+            </ambient>
+         </technique_common>
+      </light>
+   </library_lights>
+   <library_geometries>
+      <geometry id="mvcv_obb_tutorial_chimney_002-obj" name="mvcv_obb_tutorial_chimney_002">
+         <mesh>
+            <source id="mvcv_obb_tutorial_chimney_002-obj-position">
+               <float_array id="mvcv_obb_tutorial_chimney_002-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_002-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_002-obj-normal">
+               <float_array id="mvcv_obb_tutorial_chimney_002-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_002-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_002-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_chimney_002-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_002-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_002-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_chimney_002-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_002-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_002-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_chimney_002-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_002-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_chimney_002-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_chimney_002-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_chimney_002-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_chimney_002-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_chimney_002-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_chimney_002-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_chimney_002-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_chimney_003-obj" name="mvcv_obb_tutorial_chimney_003">
+         <mesh>
+            <source id="mvcv_obb_tutorial_chimney_003-obj-position">
+               <float_array id="mvcv_obb_tutorial_chimney_003-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_003-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_003-obj-normal">
+               <float_array id="mvcv_obb_tutorial_chimney_003-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_003-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_003-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_chimney_003-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_003-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_003-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_chimney_003-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_003-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_003-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_chimney_003-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_003-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_chimney_003-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_chimney_003-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_chimney_003-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_chimney_003-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_chimney_003-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_chimney_003-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_chimney_003-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_chimney_01-obj" name="mvcv_obb_tutorial_chimney_01">
+         <mesh>
+            <source id="mvcv_obb_tutorial_chimney_01-obj-position">
+               <float_array id="mvcv_obb_tutorial_chimney_01-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_01-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_01-obj-normal">
+               <float_array id="mvcv_obb_tutorial_chimney_01-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_01-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_01-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_chimney_01-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_01-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_01-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_chimney_01-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_01-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_chimney_01-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_chimney_01-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_chimney_01-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_chimney_01-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_chimney_01-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_chimney_01-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_chimney_01-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_chimney_01-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_chimney_01-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_chimney_01-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_003-obj" name="mvcv_obb_tutorial_shack_003">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_003-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_003-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_003-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_003-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_003-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_003-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_003-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_003-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_003-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_003-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_003-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_003-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_003-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_003-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_003-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_003-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_003-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_003-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_003-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_003-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_003-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_003-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_005-obj" name="mvcv_obb_tutorial_shack_005">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_005-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_005-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_005-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_005-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_005-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_005-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_005-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_005-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_005-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_005-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_005-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_005-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_005-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_005-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_005-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_005-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_005-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_005-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_005-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_005-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_005-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_005-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_004-obj" name="mvcv_obb_tutorial_shack_004">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_004-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_004-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_004-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_004-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_004-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_004-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_004-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_004-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_004-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_004-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_004-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_004-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_004-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_004-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_004-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_004-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_004-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_004-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_004-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_004-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_004-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_004-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_002-obj" name="mvcv_obb_tutorial_shack_002">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_002-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_002-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_002-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_002-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_002-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_002-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_002-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_002-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_002-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_002-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_002-obj-mapchan-1-tangent-array" count="72">0.558320 0.829626 0 -0.558320 -0.829626 0 0 0 1.000000 0.558320 0.829626 0 -0.558320 -0.829626 0 0 0 -1.000000 0.558320 0.829626 0 0.558320 0.829626 0 0 0 1.000000 0.558320 0.829626 0 0 0 -1.000000 0.558320 0.829626 0 -0.558320 -0.829626 0 -0.558320 -0.829626 0 0 0 1.000000 -0.558320 -0.829626 0 -0.558320 -0.829626 0 0 0 -1.000000 -0.558320 -0.829626 0 0.558320 0.829626 0 0 0 1.000000 -0.558320 -0.829626 0 0 0 -1.000000 0.558320 0.829626 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_002-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_002-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_002-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0.829626 -0.558320 0 0.829626 -0.558320 0 0 0 -1.000000 0.829626 -0.558320 0 0.829626 -0.558320 0 0 0 -1.000000 0.829626 -0.558320 0 0.829626 -0.558320 0 0 0 -1.000000 0.829626 -0.558320 0 0.829626 -0.558320 0 0 0 -1.000000 0.829626 -0.558320 0 0.829626 -0.558320 0 0 0 -1.000000 0.829626 -0.558320 0 0.829626 -0.558320 0 0 0 -1.000000 0.829626 -0.558320 0 0.829626 -0.558320 0 0 0 -1.000000 0.829626 -0.558320 0 0.829626 -0.558320 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_002-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_002-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_002-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_002-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_002-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_002-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_002-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_002-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_01-obj" name="mvcv_obb_tutorial_shack_01">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_01-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_01-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_01-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_01-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_01-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_01-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_01-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_01-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_01-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_01-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_01-obj-mapchan-1-tangent-array" count="72">-0.561892 0.827211 0 0.561892 -0.827211 0 0 0 1.000000 -0.561892 0.827211 0 0.561892 -0.827211 0 0 0 -1.000000 -0.561892 0.827211 0 -0.561892 0.827211 0 0 0 1.000000 -0.561892 0.827211 0 0 0 -1.000000 -0.561892 0.827211 0 0.561892 -0.827211 0 0.561892 -0.827211 0 0 0 1.000000 0.561892 -0.827211 0 0.561892 -0.827211 0 0 0 -1.000000 0.561892 -0.827211 0 -0.561892 0.827211 0 0 0 1.000000 0.561892 -0.827211 0 0 0 -1.000000 -0.561892 0.827211 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_01-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_01-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_01-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0.827211 0.561892 0 0.827211 0.561892 0 0 0 -1.000000 0.827211 0.561892 0 0.827211 0.561892 0 0 0 -1.000000 0.827211 0.561892 0 0.827211 0.561892 0 0 0 -1.000000 0.827211 0.561892 0 0.827211 0.561892 0 0 0 -1.000000 0.827211 0.561892 0 0.827211 0.561892 0 0 0 -1.000000 0.827211 0.561892 0 0.827211 0.561892 0 0 0 -1.000000 0.827211 0.561892 0 0.827211 0.561892 0 0 0 -1.000000 0.827211 0.561892 0 0.827211 0.561892 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_01-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_01-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_01-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_01-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_01-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_01-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_01-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_01-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_011-obj" name="mvcv_obb_tutorial_shack_011">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_011-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_011-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_011-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_011-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_011-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_011-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_011-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_011-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_011-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_011-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_011-obj-mapchan-1-tangent-array" count="72">-0.829948 0.557840 0 0.829948 -0.557840 0 0 0 1.000000 -0.829948 0.557840 0 0.829948 -0.557840 0 0 0 -1.000000 -0.829948 0.557840 0 -0.829948 0.557840 0 0 0 1.000000 -0.829948 0.557840 0 0 0 -1.000000 -0.829948 0.557840 0 0.829948 -0.557840 0 0.829948 -0.557840 0 0 0 1.000000 0.829948 -0.557840 0 0.829948 -0.557840 0 0 0 -1.000000 0.829948 -0.557840 0 -0.829948 0.557840 0 0 0 1.000000 0.829948 -0.557840 0 0 0 -1.000000 -0.829948 0.557840 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_011-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_011-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_011-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0.557840 0.829948 0 0.557840 0.829948 0 0 0 -1.000000 0.557840 0.829948 0 0.557840 0.829948 0 0 0 -1.000000 0.557840 0.829948 0 0.557840 0.829948 0 0 0 -1.000000 0.557840 0.829948 0 0.557840 0.829948 0 0 0 -1.000000 0.557840 0.829948 0 0.557840 0.829948 0 0 0 -1.000000 0.557840 0.829948 0 0.557840 0.829948 0 0 0 -1.000000 0.557840 0.829948 0 0.557840 0.829948 0 0 0 -1.000000 0.557840 0.829948 0 0.557840 0.829948 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_011-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_011-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_011-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_011-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_011-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_011-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_011-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_011-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_012-obj" name="mvcv_obb_tutorial_shack_012">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_012-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_012-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_012-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_012-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_012-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_012-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_012-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_012-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_012-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_012-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_012-obj-mapchan-1-tangent-array" count="72">-0.827435 -0.561561 0 0.827435 0.561561 0 0 0 1.000000 -0.827435 -0.561561 0 0.827435 0.561561 0 0 0 -1.000000 -0.827435 -0.561561 0 -0.827435 -0.561561 0 0 0 1.000000 -0.827435 -0.561561 0 0 0 -1.000000 -0.827435 -0.561561 0 0.827435 0.561561 0 0.827435 0.561561 0 0 0 1.000000 0.827435 0.561561 0 0.827435 0.561561 0 0 0 -1.000000 0.827435 0.561561 0 -0.827435 -0.561561 0 0 0 1.000000 0.827435 0.561561 0 0 0 -1.000000 -0.827435 -0.561561 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_012-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_012-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_012-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 -0.561561 0.827435 0 -0.561561 0.827435 0 0 0 -1.000000 -0.561561 0.827435 0 -0.561561 0.827435 0 0 0 -1.000000 -0.561561 0.827435 0 -0.561561 0.827435 0 0 0 -1.000000 -0.561561 0.827435 0 -0.561561 0.827435 0 0 0 -1.000000 -0.561561 0.827435 0 -0.561561 0.827435 0 0 0 -1.000000 -0.561561 0.827435 0 -0.561561 0.827435 0 0 0 -1.000000 -0.561561 0.827435 0 -0.561561 0.827435 0 0 0 -1.000000 -0.561561 0.827435 0 -0.561561 0.827435 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_012-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_012-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_012-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_012-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_012-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_012-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_012-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_012-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_013-obj" name="mvcv_obb_tutorial_shack_013">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_013-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_013-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_013-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_013-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_013-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_013-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_013-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_013-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_013-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_013-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_013-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_013-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_013-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_013-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_013-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_013-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_013-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_013-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_013-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_013-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_013-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_013-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_009-obj" name="mvcv_obb_tutorial_shack_009">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_009-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_009-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_009-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_009-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_009-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_009-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_009-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_009-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_009-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_009-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_009-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_009-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_009-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_009-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_009-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_009-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_009-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_009-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_009-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_009-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_009-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_009-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_010-obj" name="mvcv_obb_tutorial_shack_010">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_010-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_010-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_010-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_010-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_010-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_010-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_010-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_010-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_010-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_010-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_010-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_010-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_010-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_010-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_010-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_010-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_010-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_010-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_010-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_010-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_010-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_010-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_008-obj" name="mvcv_obb_tutorial_shack_008">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_008-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_008-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_008-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_008-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_008-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_008-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_008-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_008-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_008-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_008-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_008-obj-mapchan-1-tangent-array" count="72">-0.857516 0.514457 0 0.857516 -0.514457 0 0 0 1.000000 -0.857516 0.514457 0 0.857516 -0.514457 0 0 0 -1.000000 -0.857516 0.514457 0 -0.857516 0.514457 0 0 0 1.000000 -0.857516 0.514457 0 0 0 -1.000000 -0.857516 0.514457 0 0.857516 -0.514457 0 0.857516 -0.514457 0 0 0 1.000000 0.857516 -0.514457 0 0.857516 -0.514457 0 0 0 -1.000000 0.857516 -0.514457 0 -0.857516 0.514457 0 0 0 1.000000 0.857516 -0.514457 0 0 0 -1.000000 -0.857516 0.514457 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_008-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_008-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_008-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0.514457 0.857516 0 0.514457 0.857516 0 0 0 -1.000000 0.514457 0.857516 0 0.514457 0.857516 0 0 0 -1.000000 0.514457 0.857516 0 0.514457 0.857516 0 0 0 -1.000000 0.514457 0.857516 0 0.514457 0.857516 0 0 0 -1.000000 0.514457 0.857516 0 0.514457 0.857516 0 0 0 -1.000000 0.514457 0.857516 0 0.514457 0.857516 0 0 0 -1.000000 0.514457 0.857516 0 0.514457 0.857516 0 0 0 -1.000000 0.514457 0.857516 0 0.514457 0.857516 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_008-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_008-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_008-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_008-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_008-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_008-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_008-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_008-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_007-obj" name="mvcv_obb_tutorial_shack_007">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_007-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_007-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_007-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_007-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_007-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_007-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_007-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_007-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_007-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_007-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_007-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_007-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_007-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_007-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_007-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_007-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_007-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_007-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_007-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_007-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_007-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_007-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="mvcv_obb_tutorial_shack_006-obj" name="mvcv_obb_tutorial_shack_006">
+         <mesh>
+            <source id="mvcv_obb_tutorial_shack_006-obj-position">
+               <float_array id="mvcv_obb_tutorial_shack_006-obj-position-array" count="24">-331.240356 0 551.375977 331.240356 0 551.375977 -331.240356 0 -551.375977 331.240356 0 -551.375977 -331.240356 222.949677 551.375977 331.240356 222.949677 551.375977 -331.240356 222.949677 -551.375977 331.240356 222.949677 -551.375977</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_006-obj-position-array" count="8" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_006-obj-normal">
+               <float_array id="mvcv_obb_tutorial_shack_006-obj-normal-array" count="72">0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_006-obj-normal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_006-obj-mapchan-1">
+               <float_array id="mvcv_obb_tutorial_shack_006-obj-mapchan-1-array" count="36">0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0 1.000000 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_006-obj-mapchan-1-array" count="12" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_006-obj-mapchan-1-tangent">
+               <float_array id="mvcv_obb_tutorial_shack_006-obj-mapchan-1-tangent-array" count="72">-1.000000 0 0 1.000000 0 0 0 0 1.000000 -1.000000 0 0 1.000000 0 0 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 1.000000 0 0 -1.000000 0 0 0 0 1.000000 1.000000 0 0 0 0 -1.000000 -1.000000 0 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_006-obj-mapchan-1-tangent-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="mvcv_obb_tutorial_shack_006-obj-mapchan-1-binormal">
+               <float_array id="mvcv_obb_tutorial_shack_006-obj-mapchan-1-binormal-array" count="72">0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 0 1.000000 0</float_array>
+               <technique_common>
+                  <accessor source="#mvcv_obb_tutorial_shack_006-obj-mapchan-1-binormal-array" count="24" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="mvcv_obb_tutorial_shack_006-obj-vertex">
+               <input semantic="POSITION" source="#mvcv_obb_tutorial_shack_006-obj-position"></input>
+            </vertices>
+            <triangles material="collision_volume_lambert" count="12">
+               <input semantic="VERTEX" source="#mvcv_obb_tutorial_shack_006-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#mvcv_obb_tutorial_shack_006-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#mvcv_obb_tutorial_shack_006-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#mvcv_obb_tutorial_shack_006-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#mvcv_obb_tutorial_shack_006-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 9 0 2 1 11 6 3 2 10 9 3 2 10 9 1 3 8 3 0 0 9 0 4 4 8 12 5 5 9 15 7 6 11 21 7 6 11 21 6 7 10 18 4 4 8 12 0 8 4 1 1 9 5 4 5 10 7 16 5 10 7 16 4 11 6 13 0 8 4 1 1 12 0 5 3 13 1 10 7 14 3 22 7 14 3 22 5 15 2 17 1 12 0 5 3 16 4 11 2 17 5 7 6 18 7 19 6 18 7 19 7 19 6 23 3 16 4 11 2 20 0 8 0 21 1 2 4 22 3 14 4 22 3 14 6 23 2 20 2 20 0 8 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="character_size_eg-obj" name="character_size_eg">
+         <mesh>
+            <source id="character_size_eg-obj-position">
+               <float_array id="character_size_eg-obj-position-array" count="132">-10.376497 0.297232 -3.917174 10.376497 0.297232 -3.917174 -10.688453 148.380341 -3.917174 3.482936 163.468002 -3.917174 -10.376497 0.297232 12.360794 10.376497 0.297232 12.360794 -3.482936 163.468002 8.813071 10.688453 148.380341 10.386359 -14.706581 134.331818 -8.204359 -7.454492 140.235397 -3.917174 75.167999 136.391266 -5.002675 14.706581 134.331818 -8.204359 -14.706581 123.939941 16.057232 -75.167999 136.391266 4.451263 7.454492 140.235397 8.797249 14.706581 123.939941 16.057232 -75.167999 132.900848 -5.002675 -75.167999 136.391266 -5.002675 -75.167999 132.900848 4.451263 -7.454492 140.235397 8.797249 7.454492 140.235397 -3.917174 75.167999 132.900848 -5.002675 75.167999 136.391266 4.451263 75.167999 132.900848 4.451263 -11.540547 104.279442 -0.943531 -11.540547 104.279442 11.565527 11.540547 104.279442 -0.943531 11.540547 104.279442 11.565527 -14.339210 91.045105 -7.607072 -14.339210 89.575951 13.292875 14.339210 91.045105 -7.607072 14.339210 89.575951 13.292875 18.819271 129.697830 1.760772 -17.463985 129.697830 1.806905 12.802608 139.190338 2.910461 -11.323736 139.190338 2.832633 -10.688453 148.380341 10.386359 -10.280839 157.886307 -3.917174 10.688453 148.380341 -3.917174 10.280839 157.886307 11.388045 3.482936 163.468002 8.813071 10.280839 157.886307 -3.917174 -3.482936 163.468002 -3.917174 -10.280839 157.886307 11.388045</float_array>
+               <technique_common>
+                  <accessor source="#character_size_eg-obj-position-array" count="44" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="character_size_eg-obj-normal">
+               <float_array id="character_size_eg-obj-normal-array" count="756">0 -0.040627 -0.999174 0 -0.040627 -0.999174 0 -0.040627 -0.999174 0 -0.040627 -0.999174 0 -0.040627 -0.999174 0 -0.040627 -0.999174 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 -0.999016 -0.044342 0 -0.999016 -0.044342 0 -0.999016 -0.044342 0 -0.999038 -0.043750 -0.003075 -0.999038 -0.043750 -0.003075 -0.999038 -0.043750 -0.003075 0.999038 -0.043750 -0.003075 0.999038 -0.043750 -0.003075 0.999038 -0.043750 -0.003075 0.999016 -0.044342 0 0.999016 -0.044342 0 0.999016 -0.044342 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 -0.010440 0.999946 0 -0.010440 0.999946 0 -0.010440 0.999946 0 -0.010440 0.999946 0 -0.010440 0.999946 0 -0.010440 0.999946 0 0.587604 -0.809148 0 0.587604 -0.809148 0 0.587604 -0.809148 0 0.587604 -0.809148 0 0.587604 -0.809148 0 0.587604 -0.809148 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -0.929419 -0.369027 0 -0.929419 -0.369027 0 -0.929419 -0.369027 0 -0.929419 -0.369027 0 -0.929419 -0.369027 0 -0.929419 -0.369027 0 0.929419 -0.369027 0 0.929419 -0.369027 0 0.929419 -0.369027 0 0.929419 -0.369027 0 0.929419 -0.369027 0 0.929419 -0.369027 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0.406960 0.913446 0 0.406960 0.913446 0 0.406960 0.913446 0 0.406960 0.913446 0 0.406960 0.913446 0 0.406960 0.913446 -0.431635 -0.112815 0.894966 -0.431635 -0.112815 0.894966 -0.431635 -0.112815 0.894966 0 0.103714 0.994607 0 0.103714 0.994607 0 0.103714 0.994607 0.158185 0.248235 0.955697 0.158185 0.248235 0.955697 0.158185 0.248235 0.955697 0 -0.104794 0.994494 0 -0.104794 0.994494 0 -0.104794 0.994494 0 -0.191493 0.981494 0 -0.191493 0.981494 0 -0.191493 0.981494 0 -0.191493 0.981494 0 -0.191493 0.981494 0 -0.191493 0.981494 -0.260750 0.965406 0 -0.260750 0.965406 0 -0.260750 0.965406 0 -0.055913 0.630745 -0.773973 -0.055913 0.630745 -0.773973 -0.055913 0.630745 -0.773973 0.016029 0 -0.999872 0.016029 0 -0.999872 0.016029 0 -0.999872 -0.069761 -0.897823 -0.434796 -0.069761 -0.897823 -0.434796 -0.069761 -0.897823 -0.434796 0.023661 -0.999720 0 0.023661 -0.999720 0 0.023661 -0.999720 0 -0.783980 0.507918 0.356924 -0.783980 0.507918 0.356924 -0.783980 0.507918 0.356924 0.041576 0.991991 0.119271 0.041576 0.991991 0.119271 0.041576 0.991991 0.119271 0.056679 0.998392 0 0.056679 0.998392 0 0.056679 0.998392 0 0.716431 0.383513 0.582790 0.716431 0.383513 0.582790 0.716431 0.383513 0.582790 0.869102 -0.200779 -0.452051 0.869102 -0.200779 -0.452051 0.869102 -0.200779 -0.452051 0.021564 0.604676 -0.796179 0.021564 0.604676 -0.796179 0.021564 0.604676 -0.796179 0.052880 0 -0.998601 0.052880 0 -0.998601 0.052880 0 -0.998601 0 -0.234849 -0.972032 0 -0.234849 -0.972032 0 -0.234849 -0.972032 0 -0.234849 -0.972032 0 -0.234849 -0.972032 0 -0.234849 -0.972032 -0.973905 -0.226956 0 -0.973905 -0.226956 0 -0.973905 -0.226956 0 -0.976305 -0.183445 0.114791 -0.976305 -0.183445 0.114791 -0.976305 -0.183445 0.114791 -0.924226 -0.178875 -0.337357 -0.924226 -0.178875 -0.337357 -0.924226 -0.178875 -0.337357 0 -0.222725 0.974881 0 -0.222725 0.974881 0 -0.222725 0.974881 0 -0.222725 0.974881 0 -0.222725 0.974881 0 -0.222725 0.974881 0 0.449716 -0.893172 0 0.449716 -0.893172 0 0.449716 -0.893172 0 0.449716 -0.893172 0 0.449716 -0.893172 0 0.449716 -0.893172 -0.978363 0.206894 0 -0.978363 0.206894 0 -0.978363 0.206894 0 -0.981990 0.188468 0.013248 -0.981990 0.188468 0.013248 -0.981990 0.188468 0.013248 0.982363 0.186983 0 0.982363 0.186983 0 0.982363 0.186983 0 0.979677 0.200090 0.014065 0.979677 0.200090 0.014065 0.979677 0.200090 0.014065 0 0.116676 0.993170 0 0.116676 0.993170 0 0.116676 0.993170 0 0.116676 0.993170 0 0.116676 0.993170 0 0.116676 0.993170 0.056751 -0.998388 0 0.056751 -0.998388 0 0.056751 -0.998388 0 0.000887 -0.906614 -0.421960 0.000887 -0.906614 -0.421960 0.000887 -0.906614 -0.421960 0.742938 0.518975 0.422739 0.742938 0.518975 0.422739 0.742938 0.518975 0.422739 -0.043800 0.999040 0 -0.043800 0.999040 0 -0.043800 0.999040 0 -0.058188 0.991057 0.120088 -0.058188 0.991057 0.120088 -0.058188 0.991057 0.120088 0.045778 0 0.998952 0.045778 0 0.998952 0.045778 0 0.998952 0.030703 -0.126991 0.991429 0.030703 -0.126991 0.991429 0.030703 -0.126991 0.991429 -0.024699 0 0.999695 -0.024699 0 0.999695 -0.024699 0 0.999695 -0.038997 -0.144470 0.988741 -0.038997 -0.144470 0.988741 -0.038997 -0.144470 0.988741 0.191780 0.981438 0 0.191780 0.981438 0 0.191780 0.981438 0 -0.780062 0.458588 0.425677 -0.780062 0.458588 0.425677 -0.780062 0.458588 0.425677 0.987281 -0.158987 0 0.987281 -0.158987 0 0.987281 -0.158987 0 0.945042 -0.287235 0.156178 0.945042 -0.287235 0.156178 0.945042 -0.287235 0.156178 -0.999082 0.042840 0 -0.999082 0.042840 0 -0.999082 0.042840 0 -0.999082 0.042840 0 -0.999082 0.042840 0 -0.999082 0.042840 0 0.999082 0.042840 0 0.999082 0.042840 0 0.999082 0.042840 0 0.999082 0.042840 0 0.999082 0.042840 0 0.999082 0.042840 0 0.634584 0.772854 0 0.634584 0.772854 0 0.634584 0.772854 0 0.634584 0.772854 0 0.634584 0.772854 0 0.634584 0.772854 0 -0.634584 0.772854 0 -0.634584 0.772854 0 -0.634584 0.772854 0 -0.634584 0.772854 0 -0.634584 0.772854 0 -0.634584 0.772854 0</float_array>
+               <technique_common>
+                  <accessor source="#character_size_eg-obj-normal-array" count="252" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="character_size_eg-obj-vertex">
+               <input semantic="POSITION" source="#character_size_eg-obj-position"></input>
+            </vertices>
+            <triangles material="scene_material" count="84">
+               <input semantic="VERTEX" source="#character_size_eg-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#character_size_eg-obj-normal" offset="1"></input>
+               <p>0 0 28 1 30 2 0 3 30 4 1 5 0 6 1 7 5 8 0 9 5 10 4 11 0 12 4 13 29 14 0 15 29 16 28 17 1 18 30 19 31 20 1 21 31 22 5 23 6 24 40 25 3 26 6 27 3 28 42 29 4 30 5 31 31 32 4 33 31 34 29 35 9 36 20 37 11 38 9 39 11 40 8 41 2 42 37 43 42 44 2 45 42 46 3 47 2 48 3 49 41 50 2 51 41 52 38 53 2 54 38 55 20 56 2 57 20 58 9 59 13 60 17 61 16 62 13 63 16 64 18 65 2 66 9 67 19 68 2 69 19 70 36 71 7 72 14 73 20 74 7 75 20 76 38 77 10 78 22 79 23 80 10 81 23 82 21 83 14 84 19 85 12 86 14 87 12 88 15 89 7 90 39 91 40 92 7 93 40 94 6 95 7 96 6 97 43 98 7 99 43 100 36 101 7 102 36 103 19 104 7 105 19 106 14 107 19 108 9 109 35 110 9 111 8 112 16 113 9 114 16 115 17 116 8 117 33 118 18 119 8 120 18 121 16 122 12 123 19 124 33 125 20 126 34 127 22 128 20 129 22 130 10 131 14 132 32 133 34 134 11 135 32 136 26 137 11 138 20 139 10 140 11 141 10 142 21 143 8 144 11 145 26 146 8 147 26 148 24 149 33 150 24 151 25 152 33 153 25 154 12 155 8 156 24 157 33 158 15 159 12 160 25 161 15 162 25 163 27 164 24 165 26 166 30 167 24 168 30 169 28 170 25 171 24 172 28 173 25 174 28 175 29 176 26 177 27 178 31 179 26 180 31 181 30 182 27 183 25 184 29 185 27 186 29 187 31 188 21 189 23 190 32 191 21 192 32 193 11 194 15 195 32 196 14 197 17 198 13 199 35 200 17 201 35 202 9 203 13 204 18 205 33 206 13 207 33 208 35 209 23 210 22 211 34 212 23 213 34 214 32 215 14 216 34 217 20 218 19 219 35 220 33 221 15 222 27 223 26 224 15 225 26 226 32 227 37 228 2 229 36 230 37 231 36 232 43 233 39 234 7 235 38 236 39 237 38 238 41 239 39 240 41 241 3 242 39 243 3 244 40 245 37 246 43 247 6 248 37 249 6 250 42 251 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="tutorial_chimney-obj" name="tutorial_chimney">
+         <mesh>
+            <source id="tutorial_chimney-obj-position">
+               <float_array id="tutorial_chimney-obj-position-array" count="162">-205.349487 -7.501604 -1441.137207 205.349487 -7.501604 -1441.137207 -205.349487 226.621246 -1441.137207 205.349487 12.639632 -1441.137207 -169.485870 -7.501604 -1216.243774 205.349487 -7.501604 -1247.368652 -205.349487 12.639632 -1247.368652 169.485870 12.639632 -1216.243774 -190.516922 -7.501604 -1227.760010 -169.485870 12.639632 -1216.243774 190.516922 12.639632 -1227.760010 169.485870 -7.501604 -1216.243774 205.349487 12.639632 -1247.368652 190.516922 -7.501604 -1227.760010 -205.349487 -7.501604 -1247.368652 -190.516922 12.639632 -1227.760010 205.349487 -7.501604 -1312.894775 -205.349487 12.639632 -1312.894775 205.349487 12.639632 -1312.894775 -205.349487 -7.501604 -1312.894775 -205.349487 12.639632 -1441.137207 205.349487 226.621246 -1441.137207 -205.349487 226.621246 -1312.894775 205.349487 226.621246 -1312.894775 -98.491219 284.903931 -1312.894775 63.675709 283.512329 -1338.023804 -98.491219 284.903931 -1441.137207 98.491219 284.903931 -1441.137207 -68.449829 923.529114 -1312.894775 98.491219 284.903931 -1312.894775 -68.449829 923.529114 -1441.137207 68.449829 923.529114 -1441.137207 68.449829 923.529114 -1312.894775 -41.624405 923.529114 -1338.023804 -41.624405 923.529114 -1416.008179 41.624405 923.529114 -1416.008179 41.624405 923.529114 -1338.023804 -63.675709 283.512329 -1338.023804 -63.675709 283.512329 -1416.008179 63.675709 283.512329 -1416.008179 -205.349487 33.466026 -1312.894775 -205.349487 205.794846 -1312.894775 205.349487 33.466026 -1312.894775 205.349487 205.794846 -1312.894775 135.024811 33.466026 -1312.894775 -135.024811 33.466026 -1312.894775 135.024811 205.794846 -1312.894775 -106.692024 205.794846 -1408.804443 106.692024 33.466026 -1408.804443 -106.692024 33.466026 -1408.804443 106.692024 205.794846 -1408.804443 -135.024811 205.794846 -1312.894775 119.365372 204.333282 -1325.459229 -119.365372 204.333282 -1325.459229</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_chimney-obj-position-array" count="54" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="tutorial_chimney-obj-normal">
+               <float_array id="tutorial_chimney-obj-normal-array" count="972">0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 -0.478829 0.877908 0 -0.478829 0.877908 0 -0.478829 0.877908 0 -0.478829 0.877908 0 -0.478829 0.877908 0 -0.478829 0.877908 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 -0.480290 0 0.877110 -0.480290 0 0.877110 -0.480290 0 0.877110 -0.480290 0 0.877110 -0.480290 0 0.877110 -0.480290 0 0.877110 0.480290 0 0.877110 0.480290 0 0.877110 0.480290 0 0.877110 0.480290 0 0.877110 0.480290 0 0.877110 0.480290 0 0.877110 0.797532 0 0.603277 0.797532 0 0.603277 0.797532 0 0.603277 0.797532 0 0.603277 0.797532 0 0.603277 0.797532 0 0.603277 -0.797532 0 0.603277 -0.797532 0 0.603277 -0.797532 0 0.603277 -0.797532 0 0.603277 -0.797532 0 0.603277 -0.797532 0 0.603277 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -0.821015 -0.559197 0.115036 -0.821015 -0.559197 0.115036 -0.821015 -0.559197 0.115036 -0.874921 -0.484265 0 -0.874921 -0.484265 0 -0.874921 -0.484265 0 0.478829 0.877908 0 0.478829 0.877908 0 0.478829 0.877908 0 0.478829 0.877908 0 0.478829 0.877908 0 0.478829 0.877908 0 0.998895 0.046989 0 0.998895 0.046989 0 0.998895 0.046989 0 0.998895 0.046989 0 0.998895 0.046989 0 0.998895 0.046989 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -0.998895 0.046989 0 -0.998895 0.046989 0 -0.998895 0.046989 0 -0.998895 0.046989 0 -0.998895 0.046989 0 -0.998895 0.046989 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 -0.999407 -0.034434 0 -0.999407 -0.034434 0 -0.999407 -0.034434 0 -0.999407 -0.034434 0 -0.999407 -0.034434 0 -0.999407 -0.034434 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0.999407 -0.034434 0 0.999407 -0.034434 0 0.999407 -0.034434 0 0.999407 -0.034434 0 0.999407 -0.034434 0 0.999407 -0.034434 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0.959029 0 0.283308 0.959029 0 0.283308 0.959029 0 0.283308 0.959029 0 0.283308 0.959029 0 0.283308 0.959029 0 0.283308 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 -0.959029 0 0.283308 -0.959029 0 0.283308 -0.959029 0 0.283308 -0.959029 0 0.283308 -0.959029 0 0.283308 -0.959029 0 0.283308 0 0.092296 0.995732 0 0.092296 0.995732 0 0.092296 0.995732 0 0.092296 0.995732 0 0.092296 0.995732 0 0.092296 0.995732 -0.121346 -0.991963 -0.035847 -0.121346 -0.991963 -0.035847 -0.121346 -0.991963 -0.035847 0 -0.993302 0.115546 0 -0.993302 0.115546 0 -0.993302 0.115546 0 -0.993302 0.115546 0 -0.993302 0.115546 0 -0.993302 0.115546 0 -0.156725 -0.987642 0 -0.156725 -0.987642 0 -0.156725 -0.987642 0 -0.156725 -0.987642 0 -0.156725 -0.987642 0 -0.156725 -0.987642 0.817947 -0.575294 0 0.817947 -0.575294 0 0.817947 -0.575294 0 0.872961 -0.471643 0.124470 0.872961 -0.471643 0.124470 0.872961 -0.471643 0.124470 0.121346 -0.991963 -0.035847 0.121346 -0.991963 -0.035847 0.121346 -0.991963 -0.035847</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_chimney-obj-normal-array" count="324" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="tutorial_chimney-obj-mapchan-1">
+               <float_array id="tutorial_chimney-obj-mapchan-1-array" count="594">0.840660 0.009911 0 0.840660 0.000918 0 0.652030 0.000918 0 0.652030 0.009911 0 0.657705 0.011543 0 0.850538 0.011543 0 0.850538 0.125423 0 0.657705 0.125423 0 0.715065 0.056984 0 0.796843 0.056984 0 0.796843 0.069748 0 0.715065 0.069748 0 0.794586 0.058495 0 0.794586 0.071259 0 0.712808 0.071259 0 0.712808 0.058495 0 0.717394 0.195074 0 0.797691 0.195074 0 0.798044 0.290038 0 0.717748 0.290038 0 0.727491 0.297068 0 0.727491 0.105723 0 0.746053 0.105723 0 0.746053 0.297068 0 0.727491 0.297068 0 0.746053 0.297068 0 0.746053 0.308940 0 0.727491 0.308940 0 0.746053 0.105723 0 0.727491 0.105723 0 0.727491 0.093851 0 0.746053 0.093851 0 0.764214 0.305797 0 0.745653 0.305797 0 0.745653 0.285583 0 0.764214 0.285583 0 0.745653 0.097706 0 0.764214 0.097706 0 0.764214 0.117920 0 0.745653 0.117920 0 0.850538 0.183610 0 0.843574 0.201023 0 0.833699 0.211249 0 0.674544 0.211249 0 0.664670 0.201023 0 0.657705 0.183610 0 0.657705 0.125423 0 0.850538 0.125423 0 0.745653 0.117920 0 0.764214 0.117920 0 0.764214 0.185468 0 0.745653 0.185468 0 0.764214 0.285583 0 0.745653 0.285583 0 0.745653 0.218035 0 0.764214 0.218035 0 0.773924 0.317312 0 0.753710 0.308940 0 0.741838 0.297068 0 0.741838 0.105723 0 0.753710 0.093851 0 0.773924 0.085478 0 0.841472 0.085478 0 0.841472 0.317312 0 0.717041 0.070602 0 0.797337 0.070602 0 0.797337 0.082686 0 0.797337 0.182675 0 0.797691 0.195074 0 0.717394 0.195074 0 0.654689 0.007450 0 0.856773 0.007450 0 0.856773 0.018410 0 0.822170 0.018410 0 0.689292 0.018410 0 0.654689 0.018410 0 0.716295 0.071230 0 0.796591 0.071230 0 0.796496 0.194705 0 0.716200 0.194705 0 0.716295 0.182746 0 0.716295 0.083254 0 0.652700 0.009986 0 0.841330 0.009986 0 0.841330 0.105527 0 0.792251 0.131549 0 0.701779 0.131549 0 0.652700 0.105527 0 0.875529 0.086639 0 0.935455 0.086032 0 0.926421 0.118905 0 0.870349 0.118905 0 0.716200 0.194705 0 0.796496 0.194705 0 0.796401 0.285786 0 0.716104 0.285786 0 0.721740 0.149192 0 0.814738 0.149192 0 0.814738 0.513741 0 0.721740 0.513741 0 0.727573 0.134327 0 0.838767 0.134327 0 0.821809 0.498875 0 0.744531 0.498875 0 0.695389 0.149192 0 0.788386 0.149192 0 0.788386 0.513741 0 0.695389 0.513741 0 0.689917 0.112730 0 0.801111 0.112730 0 0.784153 0.520953 0 0.706875 0.520953 0 0.780354 0.274046 0 0.780354 0.379441 0 0.768282 0.358789 0 0.768282 0.294698 0 0.780354 0.379441 0 0.718745 0.379441 0 0.730817 0.358789 0 0.768282 0.358789 0 0.718745 0.379441 0 0.718745 0.274046 0 0.730817 0.294698 0 0.730817 0.358789 0 0.718745 0.274046 0 0.780354 0.274046 0 0.768282 0.294698 0 0.730817 0.294698 0 0.924771 0.516672 0 0.868699 0.516672 0 0.868699 0.150499 0 0.924771 0.150499 0 0.947870 0.516672 0 0.915093 0.516672 0 0.906411 0.150499 0 0.956552 0.150499 0 0.994265 0.516672 0 0.938193 0.516672 0 0.938193 0.150499 0 0.994265 0.150499 0 0.947870 0.516672 0 0.915093 0.516672 0 0.906411 0.150499 0 0.956552 0.150499 0 0.856773 0.109097 0 0.822170 0.109097 0 0.822170 0.018410 0 0.856773 0.018410 0 0.856773 0.120057 0 0.804193 0.150728 0 0.707268 0.150728 0 0.654689 0.120057 0 0.654689 0.109097 0 0.689292 0.109097 0 0.822170 0.109097 0 0.856773 0.109097 0 0.891125 0.086639 0 0.891125 0.015093 0 0.975139 0.015093 0 0.975139 0.086639 0 0.654689 0.109097 0 0.654689 0.018410 0 0.689292 0.018410 0 0.689292 0.109097 0 0.921775 0.086639 0 0.921775 0.015093 0 0.990735 0.015093 0 0.990735 0.086639 0 0.877087 0.122366 0 0.983412 0.122366 0 0.972257 0.161108 0 0.888242 0.161108 0 0.944489 0.015093 0 0.944489 0.086639 0 0.875529 0.086639 0 0.875529 0.015093 0 0.891125 0.086639 0 0.975139 0.086639 0 0.958203 0.118905 0 0.908061 0.118905 0 0.944489 0.062176 0 0.875529 0.062176 0 0.935455 0.048460 0 0.823658 0.242854 0 0.683199 0.242854 0 0.691343 0.233951 0 0.815513 0.233951 0 0.960911 0.241176 0 0.900562 0.241176 0 0.874171 0.210949 0 0.987301 0.210949 0 0.995915 0.118905 0 0.939843 0.118905 0 0.930809 0.086032 0 0.990735 0.086639 0 0.921775 0.062176 0 0.930809 0.048460 0 0.990735 0.062176 0</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_chimney-obj-mapchan-1-array" count="198" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="tutorial_chimney-obj-mapchan-1-tangent">
+               <float_array id="tutorial_chimney-obj-mapchan-1-tangent-array" count="324">-1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 0 0 1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 1.000000 0 -0.000066 1.000000 0 0 1.000000 0 0.000003 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 -0.000146 0 -1.000000 -0.000030 0 -1.000000 -0.000037 0 -1.000000 -0.000019 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 -0.000001 1.000000 0 0.038244 0.999268 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 -1.000000 0 1.000000 0 0 -1.000000 0 0 -1.000000 -0.000007 0 -1.000000 0 0 -1.000000 0.000015 0 0.138755 0.000006 0.990327 0 0 1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 -0.000004 1.000000 0 0.000007 1.000000 0 0 1.000000 0 0 1.000000 0 -0.000004 1.000000 0 0.000007 1.000000 0 0 1.000000 0 0 0 0 1.000000 0 0 1.000000 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0.283308 0 -0.959029 0.283308 0 -0.959029 1.000000 0 0 1.000000 0 0 0.283308 0 0.959029 0.283308 0 0.959029 1.000000 0 0 1.000000 0 0 -0.283308 0 0.959029 1.000000 0 0 1.000000 0 0 -1.000000 0 0 -1.000000 0 0 0 0 -1.000000 0.141153 -0.000006 -0.989988 -0.283308 0 -0.959029</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_chimney-obj-mapchan-1-tangent-array" count="108" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="tutorial_chimney-obj-mapchan-1-binormal">
+               <float_array id="tutorial_chimney-obj-mapchan-1-binormal-array" count="324">0 -1.000000 0 0 -1.000000 0 0 0 1.000000 0 0 1.000000 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0.877908 0.478829 0 0.877908 0.478829 0 -1.000000 0 0 -1.000000 0 0 -0.877110 0 -0.480290 -0.877110 0 -0.480290 -0.877110 0 0.480290 -0.877110 0 0.480290 -0.603277 0 0.797532 -0.603277 0 0.797532 -0.603277 0 -0.797532 -0.603277 0 -0.797532 0.000066 0 1.000000 0 0 1.000000 -0.000003 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 -1.000000 0 0.000146 -1.000000 0 0.000030 -1.000000 0 0.000037 -1.000000 0 0.000019 -1.000000 0 0 -1.000000 0 0 0 1.000000 0 0 1.000000 0.000001 0 0.999268 -0.038244 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 1.000000 0 0 0 1.000000 0 -0.000007 1.000000 0 0 1.000000 0 0.000015 1.000000 0 -0.553788 0.829035 0.077587 -0.484265 0.874921 0 -0.877908 0.478829 0 -0.877908 0.478829 0 -0.046989 0.998895 0 -0.046989 0.998895 0 0 1.000000 0 0 1.000000 0 0.046989 0.998895 0 0.046989 0.998895 0 0 1.000000 0 0 1.000000 0 -0.000004 0 -1.000000 0.000007 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -0.000004 0 -1.000000 0.000007 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -0.034434 0.999407 0 -0.034434 0.999407 0 0 1.000000 0 0 1.000000 0 0.034434 0.999407 0 0.034434 0.999407 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 0.995732 -0.092296 0 0.995732 -0.092296 -0.951321 0.126530 -0.281031 0 0.115546 0.993302 0 0.115546 0.993302 0 0.987642 -0.156725 0 0.987642 -0.156725 0.575294 0.817947 0 0.466921 0.881790 0.066569 0.951321 0.126530 -0.281031</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_chimney-obj-mapchan-1-binormal-array" count="108" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="tutorial_chimney-obj-vertex">
+               <input semantic="POSITION" source="#tutorial_chimney-obj-position"></input>
+            </vertices>
+            <triangles material="shack_mat" count="108">
+               <input semantic="VERTEX" source="#tutorial_chimney-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#tutorial_chimney-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#tutorial_chimney-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#tutorial_chimney-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#tutorial_chimney-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>0 0 0 0 20 1 1 0 3 2 2 0 0 3 0 1 3 4 2 1 1 5 3 1 0 6 4 2 1 7 5 2 16 8 6 2 0 9 4 3 16 10 6 3 19 11 7 3 0 12 8 4 19 13 9 4 17 14 10 4 0 15 8 5 17 16 10 5 20 17 11 5 1 18 12 6 3 19 13 6 18 20 14 6 1 21 12 7 18 22 14 7 16 23 15 7 2 24 16 8 22 25 17 8 24 26 18 8 2 27 16 9 24 28 18 9 26 29 19 9 4 30 20 10 11 31 21 10 7 32 22 10 4 33 20 11 7 34 22 11 9 35 23 11 4 36 24 12 9 37 25 12 15 38 26 12 4 39 24 13 15 40 26 13 8 41 27 13 7 42 28 14 11 43 29 14 13 44 30 14 7 45 28 15 13 46 30 15 10 47 31 15 10 48 32 16 13 49 33 16 5 50 34 16 10 51 32 17 5 52 34 17 12 53 35 17 8 54 36 18 15 55 37 18 6 56 38 18 8 57 36 19 6 58 38 19 14 59 39 19 5 60 40 20 13 61 41 20 11 62 42 20 5 63 40 21 11 64 42 21 4 65 43 21 5 66 40 22 4 67 43 22 8 68 44 22 5 69 40 23 8 70 44 23 14 71 45 23 5 72 40 24 14 73 45 24 19 74 46 24 5 75 40 25 19 76 46 25 16 77 47 25 14 78 48 26 6 79 49 26 17 80 50 26 14 81 48 27 17 82 50 27 19 83 51 27 12 84 52 28 5 85 53 28 16 86 54 28 12 87 52 29 16 88 54 29 18 89 55 29 6 90 56 30 15 91 57 30 9 92 58 30 6 93 56 31 9 94 58 31 7 95 59 31 6 96 56 32 7 97 59 32 10 98 60 32 6 99 56 33 10 100 60 33 12 101 61 33 6 102 56 34 12 103 61 34 18 104 62 34 6 105 56 35 18 106 62 35 17 107 63 35 20 108 64 36 17 109 65 36 40 110 66 36 20 111 64 37 40 112 66 37 41 113 67 37 20 114 64 38 41 115 67 38 22 116 68 38 20 117 64 39 22 118 68 39 2 119 69 39 17 120 70 40 18 121 71 40 42 122 72 40 17 123 70 41 42 124 72 41 44 125 73 41 17 126 70 42 44 127 73 42 45 128 74 42 17 129 70 43 45 130 74 43 40 131 75 43 18 132 76 44 3 133 77 44 21 134 78 44 18 135 76 45 21 136 78 45 23 137 79 45 18 138 76 46 23 139 79 46 43 140 80 46 18 141 76 47 43 142 80 47 42 143 81 47 3 144 82 48 20 145 83 48 2 146 84 48 3 147 82 49 2 148 84 49 26 149 85 49 3 150 82 50 26 151 85 50 27 152 86 50 3 153 82 51 27 154 86 51 21 155 87 51 50 156 88 52 52 157 89 52 25 158 90 52 50 159 88 53 25 160 90 53 39 161 91 53 23 162 92 54 21 163 93 54 27 164 94 54 23 165 92 55 27 166 94 55 29 167 95 55 29 168 96 56 27 169 97 56 31 170 98 56 29 171 96 57 31 172 98 57 32 173 99 57 27 174 100 58 26 175 101 58 30 176 102 58 27 177 100 59 30 178 102 59 31 179 103 59 26 180 104 60 24 181 105 60 28 182 106 60 26 183 104 61 28 184 106 61 30 185 107 61 24 186 108 62 29 187 109 62 32 188 110 62 24 189 108 63 32 190 110 63 28 191 111 63 32 192 112 64 31 193 113 64 35 194 114 64 32 195 112 65 35 196 114 65 36 197 115 65 31 198 116 66 30 199 117 66 34 200 118 66 31 201 116 67 34 202 118 67 35 203 119 67 30 204 120 68 28 205 121 68 33 206 122 68 30 207 120 69 33 208 122 69 34 209 123 69 28 210 124 70 32 211 125 70 36 212 126 70 28 213 124 71 36 214 126 71 33 215 127 71 36 216 128 72 35 217 129 72 39 218 130 72 36 219 128 73 39 220 130 73 25 221 131 73 35 222 132 74 34 223 133 74 38 224 134 74 35 225 132 75 38 226 134 75 39 227 135 75 34 228 136 76 33 229 137 76 37 230 138 76 34 231 136 77 37 232 138 77 38 233 139 77 33 234 140 78 36 235 141 78 25 236 142 78 33 237 140 79 25 238 142 79 37 239 143 79 43 240 144 80 46 241 145 80 44 242 146 80 43 243 144 81 44 244 146 81 42 245 147 81 23 246 148 82 29 247 149 82 24 248 150 82 23 249 148 83 24 250 150 83 22 251 151 83 23 252 148 84 22 253 151 84 41 254 152 84 23 255 148 85 41 256 152 85 51 257 153 85 23 258 148 86 51 259 153 86 46 260 154 86 23 261 148 87 46 262 154 87 43 263 155 87 47 264 156 88 49 265 157 88 48 266 158 88 47 267 156 89 48 268 158 89 50 269 159 89 41 270 160 90 40 271 161 90 45 272 162 90 41 273 160 91 45 274 162 91 51 275 163 91 51 276 164 92 45 277 165 92 49 278 166 92 51 279 164 93 49 280 166 93 47 281 167 93 45 282 168 94 44 283 169 94 48 284 170 94 45 285 168 95 48 286 170 95 49 287 171 95 44 288 172 96 46 289 173 96 50 290 174 96 44 291 172 97 50 292 174 97 48 293 175 97 47 294 176 98 50 295 177 98 39 296 178 98 47 297 176 99 39 298 178 99 38 299 179 99 51 300 180 100 47 301 181 100 53 302 182 100 46 303 183 101 51 304 184 101 53 305 185 101 46 306 183 102 53 307 185 102 52 308 186 102 37 309 187 103 25 310 188 103 52 311 189 103 37 312 187 104 52 313 189 104 53 314 190 104 38 315 191 105 37 316 192 105 53 317 193 105 38 318 191 106 53 319 193 106 47 320 194 106 46 321 195 107 52 322 196 107 50 323 197 107 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+      <geometry id="tutorial_shack-obj" name="tutorial_shack">
+         <mesh>
+            <source id="tutorial_shack-obj-position">
+               <float_array id="tutorial_shack-obj-position-array" count="180">0 747.338806 -1691.549194 468.989136 -2.352289 -1452.349976 -472.799896 401.292603 -1452.349976 63.345688 205.318268 11.216726 -468.989136 -2.352289 11.216726 468.989136 -2.352289 11.216726 -568.491272 363.291168 283.917969 -63.345688 205.318268 11.216726 63.345688 -2.352289 11.216726 -472.799896 401.292603 -1608.871826 0 724.516174 -1452.349976 -468.989136 -2.352289 -1452.349976 -60.565624 -1.512025 -9.365870 448.406555 -1.512025 -1431.767334 -448.406555 403.874756 -1431.767334 60.565624 205.318268 -9.365870 -448.406555 -1.512025 -9.365870 448.406555 -1.512025 -9.365870 -448.406555 403.874756 -9.365870 -60.565624 205.318268 -9.365870 60.565624 -1.512025 -9.365870 448.406555 403.874756 -1431.767334 448.406555 403.874756 -9.365870 -448.406555 -1.512025 -1431.767334 -266.167419 -2.352289 287.184906 468.989136 -244.361069 -1452.349976 -468.989136 -244.361069 11.216726 468.989136 -244.361069 11.216726 63.345688 -244.361069 11.216726 -468.989136 -244.361069 -1452.349976 -266.167419 -2.352289 11.216726 -266.167419 -244.361069 11.216726 -266.167419 -244.361069 287.184906 63.345688 -2.352289 287.184906 -63.345688 -2.352289 11.216726 468.989136 -244.361069 287.184906 63.345688 -244.361069 287.184906 0 724.516174 -1691.549194 -472.799896 403.053009 283.917969 0 749.099243 372.292114 0 729.886292 372.292114 0 718.398376 -1431.767334 0 718.398376 -9.365870 555.786011 343.337860 -1608.871826 -472.799896 401.292603 11.216726 -485.505188 419.485474 -1608.871826 472.799896 401.292603 -1608.871826 485.505188 421.245880 283.917969 472.799896 401.292603 11.216726 -555.786011 343.337860 -1608.871826 -485.505188 421.245880 283.917969 -555.786011 345.098267 283.917969 -568.491272 361.530762 -1608.871826 485.505188 419.485474 -1608.871826 472.799896 401.292603 -1452.349976 555.786011 345.098267 283.917969 568.491272 363.291168 283.917969 472.799896 403.053009 283.917969 0 728.125854 11.216726 568.491272 361.530762 -1608.871826</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_shack-obj-position-array" count="60" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="tutorial_shack-obj-normal">
+               <float_array id="tutorial_shack-obj-normal-array" count="1044">0.999955 -0.009440 0 0.999955 -0.009440 0 0.999955 -0.009440 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 -0.999955 -0.009440 0 -0.999955 -0.009440 0 -0.999955 -0.009440 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 0 0 0 0 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0.117145 -0.081810 -0.989739 0.117145 -0.081810 -0.989739 0.117145 -0.081810 -0.989739 0.167875 0 -0.985808 0.167875 0 -0.985808 0.167875 0 -0.985808 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0.559537 0.828805 -0.000771 0.559537 0.828805 -0.000771 0.559537 0.828805 -0.000771 0.179083 0 0.983834 0.179083 0 0.983834 0.179083 0 0.983834 0.124596 -0.087013 0.988385 0.124596 -0.087013 0.988385 0.124596 -0.087013 0.988385 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0.574245 -0.818683 0 0.574245 -0.818683 0 0.574245 -0.818683 0 0.574245 -0.818683 0 0.574245 -0.818683 0 0.574245 -0.818683 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0.991001 0 0.133853 0.991001 0 0.133853 0.991001 0 0.133853 0.991001 0 0.133853 0.991001 0 0.133853 0.991001 0 0.133853 0 0.999168 0.040790 0 0.999168 0.040790 0 0.999168 0.040790 0 0.999168 0.040790 0 0.999168 0.040790 0 0.999168 0.040790 -0.991001 0 0.133853 -0.991001 0 0.133853 -0.991001 0 0.133853 -0.991001 0 0.133853 -0.991001 0 0.133853 -0.991001 0 0.133853 1.000000 0 0 1.000000 0 0 1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 1.000000 0 0 1.000000 0 0 1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0.512350 0.858777 0 0.512350 0.858777 0 0.512350 0.858777 0 0.512350 0.858777 0 0.512350 0.858777 0 0.512350 0.858777 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 -0.559537 0.828805 -0.000771 -0.559537 0.828805 -0.000771 -0.559537 0.828805 -0.000771 -0.574245 -0.818683 0 -0.574245 -0.818683 0 -0.574245 -0.818683 0 -0.574245 -0.818683 0 -0.574245 -0.818683 0 -0.574245 -0.818683 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -0.167875 0 -0.985808 -0.167875 0 -0.985808 -0.167875 0 -0.985808 -0.117145 -0.081810 -0.989739 -0.117145 -0.081810 -0.989739 -0.117145 -0.081810 -0.989739 -0.819862 -0.572562 0.000533 -0.819862 -0.572562 0.000533 -0.819862 -0.572562 0.000533 -0.819862 -0.572562 0.000533 -0.819862 -0.572562 0.000533 -0.819862 -0.572562 0.000533 0.819862 -0.572562 0.000533 0.819862 -0.572562 0.000533 0.819862 -0.572562 0.000533 0.819862 -0.572562 0.000533 0.819862 -0.572562 0.000533 0.819862 -0.572562 0.000533 -0.572563 0.819860 -0.000763 -0.572563 0.819860 -0.000763 -0.572563 0.819860 -0.000763 -0.572563 0.819860 -0.000763 -0.572563 0.819860 -0.000763 -0.572563 0.819860 -0.000763 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0.571595 -0.820535 0.000763 0.571595 -0.820535 0.000763 0.571595 -0.820535 0.000763 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0.572563 0.819860 -0.000763 0.572563 0.819860 -0.000763 0.572563 0.819860 -0.000763 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 -0.560697 -0.828021 0 -0.560697 -0.828021 0 -0.560697 -0.828021 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -0.124596 -0.087013 0.988385 -0.124596 -0.087013 0.988385 -0.124596 -0.087013 0.988385 -0.179083 0 0.983834 -0.179083 0 0.983834 -0.179083 0 0.983834 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0.559716 0.828684 -0.000707 0.559716 0.828684 -0.000707 0.559716 0.828684 -0.000707 0.572563 0.819860 -0.000763 0.572563 0.819860 -0.000763 0.572563 0.819860 -0.000763 0 0 1.000000 0 0 1.000000 0 0 1.000000 0.572563 -0.819861 0 0.572563 -0.819861 0 0.572563 -0.819861 0 0.572555 -0.819849 0.005292 0.572555 -0.819849 0.005292 0.572555 -0.819849 0.005292 0.568626 -0.822579 0.005310 0.568626 -0.822579 0.005310 0.568626 -0.822579 0.005310 -0.568122 -0.822935 0.004012 -0.568122 -0.822935 0.004012 -0.568122 -0.822935 0.004012 -0.572555 -0.819849 0.005292 -0.572555 -0.819849 0.005292 -0.572555 -0.819849 0.005292 -0.571595 -0.820535 0.000763 -0.571595 -0.820535 0.000763 -0.571595 -0.820535 0.000763 -0.559716 0.828684 -0.000707 -0.559716 0.828684 -0.000707 -0.559716 0.828684 -0.000707 -0.564361 -0.825528 0 -0.564361 -0.825528 0 -0.564361 -0.825528 0 0.564361 -0.825528 0 0.564361 -0.825528 0 0.564361 -0.825528 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -0.999955 -0.009440 0 -0.999955 -0.009440 0 -0.999955 -0.009440 0 0.999955 -0.009440 0 0.999955 -0.009440 0 0.999955 -0.009440 0 -0.564361 -0.825528 0 -0.564361 -0.825528 0 -0.564361 -0.825528 0 0.564361 -0.825528 0 0.564361 -0.825528 0 0.564361 -0.825528 0 -0.572563 -0.819861 0 -0.572563 -0.819861 0 -0.572563 -0.819861 0 0.560697 -0.828021 0 0.560697 -0.828021 0 0.560697 -0.828021 0 0.568122 -0.822935 0.004012 0.568122 -0.822935 0.004012 0.568122 -0.822935 0.004012 -0.568626 -0.822579 0.005310 -0.568626 -0.822579 0.005310 -0.568626 -0.822579 0.005310</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_shack-obj-normal-array" count="348" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="tutorial_shack-obj-mapchan-1">
+               <float_array id="tutorial_shack-obj-mapchan-1-array" count="888">0.151460 0.627411 0 0.338601 0.954040 0 0.151460 0.954040 0 0.017110 0.815265 0 0.277924 0.749657 0 0.277924 0.815265 0 0.338601 0.587137 0 0.242319 0.751464 0 0.151460 0.585593 0 0.151460 0.600211 0 0.338601 0.926840 0 0.151460 0.926840 0 0.151460 0.968658 0 0.242319 0.802787 0 0.338601 0.967114 0 0.338601 0.587137 0 0.338601 0.669301 0 0.338601 0.751464 0 0.242319 0.751464 0 0.486838 0.666585 0 0.492882 0.656679 0 0.717818 0.832669 0 0.717818 0.845095 0 0.338601 0.967114 0 0.242319 0.802787 0 0.338601 0.802787 0 0.017110 0.511852 0 0.277924 0.511852 0 0.277924 0.643068 0 0.017110 0.511852 0 0.277924 0.643068 0 0.017110 0.815265 0 0.461540 0.897951 0 0.997823 0.659395 0 0.973901 0.897951 0 0.948798 0.667543 0 0.717818 0.846054 0 0.717818 0.835593 0 0.942753 0.657638 0 0.337062 0.351708 0 0.337062 0.669400 0 0.148966 0.669400 0 0.148966 0.351708 0 0.343542 0.340285 0 0.473983 0.340285 0 0.343542 0.589095 0 0.241094 0.548719 0 0.337062 0.705958 0 0.148966 0.705958 0 0.337062 0.378929 0 0.337062 0.696621 0 0.148966 0.696621 0 0.148966 0.378929 0 0.337062 0.342371 0 0.241094 0.499610 0 0.148966 0.342371 0 0.241094 0.548719 0 0.337062 0.548719 0 0.337062 0.705958 0 0.148966 0.342371 0 0.337062 0.342371 0 0.337062 0.705958 0 0.148966 0.705958 0 0.003029 0.524164 0 0.337062 0.499610 0 0.241094 0.499610 0 0.337062 0.342371 0 0.514722 0.340285 0 0.645162 0.340285 0 0.645162 0.589095 0 0.343542 0.589095 0 0.473983 0.340285 0 0.514722 0.340285 0 0.645162 0.589095 0 0.930691 0.959488 0 0.528716 0.959488 0 0.528716 0.729465 0 0.930691 0.729465 0 0.241094 0.499610 0 0.241094 0.548719 0 0.148966 0.705958 0 0.003029 0.524164 0 0.148966 0.342371 0 0.031637 0.369360 0 0.033106 0.363367 0 0.097126 0.363367 0 0.098595 0.369360 0 0.056464 0.518344 0 0.050471 0.518344 0 0.050471 0.392730 0 0.056464 0.393238 0 0.424386 0.389389 0 0.423394 0.385344 0 0.468594 0.385344 0 0.467602 0.389389 0 0.074115 0.518344 0 0.068122 0.518344 0 0.068122 0.393238 0 0.074115 0.392730 0 0.110368 0.003999 0 0.565028 0.003999 0 0.110368 0.160181 0 0.527167 0.160181 0 0.072507 0.003999 0 0.527167 0.003999 0 0.583227 0.160181 0 0.054308 0.003999 0 0.583227 0.003999 0 0.565028 0.160181 0 0.110368 0.160181 0 0.565028 0.003999 0 0.583227 0.160181 0 0.354488 0.160181 0 0.583227 0.003999 0 0.354488 0.160181 0 0.168677 0.160181 0 0.354488 0.003999 0 0.354488 0.003999 0 0.583227 0.003999 0 0.354488 0.160181 0 0.054308 0.160181 0 0.168677 0.003999 0 0.168677 0.160181 0 0.189101 0.312445 0 0.018022 0.312445 0 0.018022 0.184206 0 0.527167 0.160181 0 0.527167 0.003999 0 0.612897 0.160181 0 0.277924 0.749657 0 0.277924 0.643068 0 0.327103 0.749657 0 0.277924 0.643068 0 0.327103 0.643068 0 0.327103 0.749657 0 0.277924 0.643068 0 0.327103 0.511852 0 0.327103 0.643068 0 0.638123 0.312445 0 0.295964 0.312445 0 0.295964 0.184206 0 0.638123 0.184206 0 0.295964 0.312445 0 0.189101 0.312445 0 0.295964 0.184206 0 0.463391 0.898335 0 0.439469 0.659779 0 0.975753 0.898335 0 0.528716 0.729350 0 0.930691 0.729350 0 0.930691 0.959373 0 0.528716 0.959373 0 0.338163 0.582619 0 0.001168 0.772608 0 0.151023 0.581076 0 0.948798 0.666585 0 0.717818 0.845095 0 0.717818 0.832669 0 0.942753 0.656679 0 0.965117 0.635988 0 0.469026 0.635029 0 0.469026 0.625124 0 0.965117 0.626082 0 0.470519 0.635988 0 0.470519 0.626082 0 0.966610 0.625124 0 0.966610 0.635029 0 0.463391 0.898335 0 0.975753 0.898335 0 0.975753 0.939110 0 0.463391 0.939110 0 0.948798 0.666585 0 0.942753 0.656679 0 0.982234 0.625124 0 0.988279 0.635029 0 0.500580 0.879999 0 0.970636 0.920781 0 0.458205 0.920781 0 0.492882 0.657638 0 0.486838 0.667543 0 0.447357 0.635988 0 0.453402 0.626082 0 0.461540 0.897951 0 0.973901 0.897951 0 0.973901 0.938726 0 0.948798 0.667543 0 0.942753 0.657638 0 0.982234 0.626082 0 0.988279 0.635988 0 0.898405 0.880130 0 0.502177 0.880130 0 0.972233 0.920911 0 0.492882 0.656679 0 0.486838 0.666585 0 0.447357 0.635029 0 0.453402 0.625124 0 0.338163 0.962596 0 0.001168 0.772608 0 0.338163 0.582619 0 0.486838 0.667543 0 0.492882 0.657638 0 0.717818 0.835593 0 0.717818 0.846054 0 0.243979 0.802787 0 0.153120 0.968658 0 0.001592 0.777126 0 0.242319 0.751464 0 0.242319 0.802787 0 0.151460 0.585593 0 0.997823 0.659395 0 0.461540 0.897951 0 0.439160 0.659395 0 0.461540 0.897951 0 0.973901 0.938726 0 0.461540 0.938726 0 0.001592 0.777126 0 0.153120 0.585593 0 0.243979 0.802787 0 0.500580 0.879999 0 0.458205 0.920781 0 0.458205 0.879999 0 0.970636 0.920781 0 0.896808 0.879999 0 0.970636 0.879999 0 0.896808 0.879999 0 0.896808 0.647655 0 0.970636 0.879999 0 0.898405 0.647785 0 0.972233 0.880130 0 0.996159 0.647785 0 0.898405 0.880130 0 0.972233 0.920911 0 0.972233 0.880130 0 0.972233 0.920911 0 0.502177 0.880130 0 0.459802 0.920911 0 0.975753 0.898335 0 0.439469 0.659779 0 0.998133 0.659779 0 0.502177 0.880130 0 0.502177 0.647785 0 0.459802 0.880130 0 0.500580 0.647655 0 0.458205 0.879999 0 0.435822 0.647655 0 0.151023 0.964140 0 0.001168 0.772608 0 0.338163 0.962596 0 0.054308 0.160181 0 0.054308 0.003999 0 0.583227 0.160181 0 0.018022 0.184206 0 0.295964 0.184206 0 0.189101 0.312445 0 0.168677 0.003999 0 0.354488 0.003999 0 0.168677 0.160181 0 0.277924 0.511852 0 0.327103 0.511852 0 0.277924 0.643068 0 0.277924 0.643068 0 0.277924 0.749657 0 0.017110 0.815265 0 0.612897 0.003999 0 0.612897 0.160181 0 0.527167 0.003999 0 0.054308 0.003999 0 0.168677 0.003999 0 0.054308 0.160181 0 0.072507 0.160181 0 0.072507 0.003999 0 0.527167 0.160181 0 0.338601 0.600211 0 0.338601 0.926840 0 0.151460 0.600211 0 0.338601 0.627411 0 0.338601 0.954040 0 0.151460 0.627411 0 0.437419 0.647785 0 0.459802 0.880130 0 0.502177 0.647785 0 0.500580 0.879999 0 0.458205 0.879999 0 0.500580 0.647655 0 0.459802 0.880130 0 0.459802 0.920911 0 0.502177 0.880130 0 0.896808 0.879999 0 0.970636 0.920781 0 0.500580 0.879999 0 0.994561 0.647655 0 0.970636 0.879999 0 0.896808 0.647655 0 0.898405 0.880130 0 0.972233 0.880130 0 0.898405 0.647785 0</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_shack-obj-mapchan-1-array" count="296" stride="3">
+                     <param name="S" type="float"></param>
+                     <param name="T" type="float"></param>
+                     <param name="R" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="tutorial_shack-obj-mapchan-1-tangent">
+               <float_array id="tutorial_shack-obj-mapchan-1-tangent-array" count="348">-0.009440 -0.999955 0 0 0 1.000000 -0.000002 -1.000000 0 0.009440 -0.999955 0 0.000002 -1.000000 0 1.000000 0 0 0 -1.000000 0 -0.993068 0.000015 -0.117540 -0.985808 -0.000029 -0.167875 0 -1.000000 0 0 0 1.000000 0.000001 0 1.000000 0 0.000930 1.000000 0.983834 0.000008 -0.179083 0.992148 0.000034 -0.125067 0 -1.000000 0 0 -1.000000 0 1.000000 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 -0.000004 -1.000000 0 0 -1.000000 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 0 0 1.000000 -0.000009 -1.000000 0 0.000003 -1.000000 0 0.000003 -1.000000 0 1.000000 0 0 1.000000 0 0 0.133853 0 -0.991001 0.133853 0.000019 -0.991001 1.000000 0 0 1.000000 0 0 0.133853 0 0.991001 0.133853 -0.000019 0.991001 0 0 -1.000000 0 0 1.000000 -1.000000 0 0 0 0 -1.000000 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0.858777 -0.512350 0 0.858777 -0.512350 0 1.000000 0 0 0 -0.000930 -1.000000 0 0 1.000000 0 0 1.000000 -0.000005 -1.000000 0 -0.985808 0.000029 0.167875 -0.993068 -0.000015 0.117540 0.000650 -0.000001 1.000000 0.000649 0.000000 1.000000 0.000649 -0.000000 -1.000000 0.000650 0.000001 -1.000000 0 -0.000930 -1.000000 0 -0.000930 -1.000000 -1.000000 -0.000022 0 -1.000000 0.000042 0 0 0.000930 1.000000 1.000000 -0.000029 0 1.000000 0.000003 0 0 0.000930 1.000000 1.000000 0.000044 0 1.000000 -0.000018 0 0 0 1.000000 -1.000000 0.000007 0 -1.000000 -0.000027 0 -0.000002 -1.000000 0 0.992148 -0.000034 0.125067 0.983834 -0.000008 0.179083 0.000002 -1.000000 0 -0.000001 -1.000000 0 0 0.000853 1.000000 0 0.000930 1.000000 0.000003 -1.000000 0 0 0 1.000000 0 0.006455 0.999979 0 0.006455 0.999979 0 0.004875 0.999988 0 0.006455 0.999979 0 0.000930 1.000000 0 -0.000853 -1.000000 0 0 1.000000 0 0 1.000000 -0.000002 -1.000000 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 0 0 1.000000 -0.000001 0 1.000000 0 0 1.000000 1.000000 0 0 0 0 1.000000 0.009440 -0.999955 0 -0.009440 -0.999955 0 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0.004875 0.999988 0 0.006455 0.999979</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_shack-obj-mapchan-1-tangent-array" count="116" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <source id="tutorial_shack-obj-mapchan-1-binormal">
+               <float_array id="tutorial_shack-obj-mapchan-1-binormal-array" count="348">0 0 -1.000000 -1.000000 0 0 1.000000 -0.000002 0 0 0 1.000000 1.000000 0.000002 0 1.000000 0 0 1.000000 0 0 0.009631 0.996648 -0.081241 -0.000028 1.000000 -0.000005 1.000000 0 0 -1.000000 0 0 -1.000000 0 0.000001 0.828805 -0.559537 0.000520 -0.000007 1.000000 0.000001 0.010849 0.996207 0.086334 0 0 1.000000 0 0 1.000000 0 0 -1.000000 -1.000000 0 0 0 0 -1.000000 0 0 -1.000000 -1.000000 0 0 -1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 -0.000004 0 -1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -0.818683 -0.574245 0 -0.818683 -0.574245 0 -1.000000 0.000009 0 -1.000000 -0.000003 0 -1.000000 -0.000003 0 0 0 1.000000 0 0 1.000000 0 1.000000 0 -0.000003 1.000000 0.000019 0 0.040790 -0.999168 0 0.040790 -0.999168 0 1.000000 0 0.000003 1.000000 0.000019 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 -1.000000 0 0 -1.000000 0 0 -1.000000 0 0 0 0 -1.000000 0 0 -1.000000 0 0 -1.000000 -0.828805 -0.559537 0.000520 -0.818683 0.574245 0 -0.818683 0.574245 0 -1.000000 0.000005 0 0.000028 1.000000 -0.000005 -0.009631 0.996648 -0.081241 -0.572561 0.819862 0.000373 -0.572561 0.819862 0.000371 0.572561 0.819862 0.000371 0.572561 0.819862 0.000373 -0.819861 -0.572563 0.000533 -0.819861 -0.572563 0.000533 -0.000022 1.000000 0 0.000042 1.000000 0 -0.820536 -0.571595 0.000532 0.000029 1.000000 0 -0.000003 1.000000 0 0.819861 -0.572563 0.000533 -0.000044 1.000000 0 0.000018 1.000000 0 0.828021 -0.560697 0 0.000007 1.000000 0 -0.000027 1.000000 0 -1.000000 0.000002 0 -0.010849 0.996207 0.086334 0.000007 1.000000 0.000001 1.000000 0.000002 0 1.000000 -0.000001 0 0.828684 -0.559716 0.000477 0.819861 -0.572563 0.000533 1.000000 0.000003 0 -0.819861 -0.572563 0 -0.819866 -0.572543 0.003696 -0.822596 -0.568614 0.003671 0.822945 -0.568115 0.002770 0.819866 -0.572543 0.003696 0.820536 -0.571595 0.000532 -0.828684 -0.559716 0.000477 0.825528 -0.564361 0 -0.825528 -0.564361 0 -1.000000 0.000002 0 0 1.000000 0 0 0 -1.000000 0 1.000000 0 -1.000000 0 0 -1.000000 0 -0.000001 0 1.000000 0 0 1.000000 0 0 1.000000 0 0 0 1.000000 0 0 -1.000000 0.825528 -0.564361 0 -0.825528 -0.564361 0 0.819861 -0.572563 0 -0.828021 -0.560697 0 -0.822945 -0.568115 0.002770 0.822596 -0.568614 0.003671</float_array>
+               <technique_common>
+                  <accessor source="#tutorial_shack-obj-mapchan-1-binormal-array" count="116" stride="3">
+                     <param name="X" type="float"></param>
+                     <param name="Y" type="float"></param>
+                     <param name="Z" type="float"></param>
+                  </accessor>
+               </technique_common>
+            </source>
+            <vertices id="tutorial_shack-obj-vertex">
+               <input semantic="POSITION" source="#tutorial_shack-obj-position"></input>
+            </vertices>
+            <triangles material="shack_mat" count="116">
+               <input semantic="VERTEX" source="#tutorial_shack-obj-vertex" offset="0"></input>
+               <input semantic="NORMAL" source="#tutorial_shack-obj-normal" offset="1"></input>
+               <input semantic="TEXCOORD" source="#tutorial_shack-obj-mapchan-1" offset="2" set="1"></input>
+               <input semantic="TEXTANGENT" source="#tutorial_shack-obj-mapchan-1-tangent" offset="3" set="1"></input>
+               <input semantic="TEXBINORMAL" source="#tutorial_shack-obj-mapchan-1-binormal" offset="3" set="1"></input>
+               <p>48 0 0 0 1 1 1 0 54 2 2 0 29 3 3 1 31 4 4 1 26 5 5 1 4 6 6 2 7 7 7 2 44 8 8 2 2 9 9 3 4 10 10 3 44 11 11 3 48 12 12 4 3 13 13 4 5 14 14 4 4 15 15 5 30 16 16 5 34 17 17 5 4 18 15 6 34 19 17 6 7 20 18 6 53 21 19 7 46 22 20 7 37 23 21 7 53 24 19 8 37 25 21 8 0 26 22 8 5 27 23 9 3 28 24 9 8 29 25 9 25 30 26 10 27 31 27 10 28 32 28 10 25 33 29 11 28 34 30 11 29 35 31 11 53 36 32 12 39 37 33 12 47 38 34 12 47 39 35 13 39 40 36 13 40 41 37 13 47 42 35 14 40 43 37 14 57 44 38 14 13 45 39 15 17 46 40 15 22 47 41 15 13 48 39 16 22 49 41 16 21 50 42 16 16 51 43 17 12 52 44 17 23 53 45 17 19 54 46 18 16 55 47 18 18 56 48 18 16 57 49 19 23 58 50 19 14 59 51 19 16 60 49 20 14 61 51 20 18 62 52 20 17 63 53 21 15 64 54 21 22 65 55 21 19 66 56 22 12 67 57 22 16 68 58 22 14 69 59 23 23 70 60 23 13 71 61 23 14 72 59 24 13 73 61 24 21 74 62 24 14 75 59 25 21 76 62 25 41 77 63 25 20 78 64 26 15 79 65 26 17 80 66 26 20 81 67 27 17 82 68 27 13 83 69 27 23 84 70 28 12 85 71 28 20 86 72 28 23 87 70 29 20 88 72 29 13 89 73 29 18 90 74 30 14 91 75 30 41 92 76 30 18 93 74 31 41 94 76 31 42 95 77 31 15 96 78 32 19 97 79 32 18 98 80 32 15 99 78 33 18 100 80 33 42 101 81 33 15 102 78 34 42 103 81 34 22 104 82 34 7 105 83 35 19 106 84 35 15 107 85 35 7 108 83 36 15 109 85 36 3 110 86 36 19 111 87 37 7 112 88 37 34 113 89 37 19 114 87 38 34 115 89 38 12 116 90 38 12 117 91 39 34 118 92 39 8 119 93 39 12 120 91 40 8 121 93 40 20 122 94 40 3 123 95 41 15 124 96 41 20 125 97 41 3 126 95 42 20 127 97 42 8 128 98 42 27 129 99 43 25 130 100 43 5 131 101 43 4 132 102 44 29 133 103 44 26 134 104 44 11 135 105 45 25 136 106 45 29 137 107 45 1 138 108 46 5 139 109 46 25 140 110 46 5 141 111 47 8 142 112 47 27 143 113 47 33 144 114 48 24 145 115 48 36 146 116 48 36 147 117 49 35 148 118 49 33 149 119 49 4 150 120 50 31 151 121 50 30 152 122 50 34 153 123 51 30 154 124 51 24 155 125 51 30 156 126 52 31 157 127 52 24 158 128 52 31 159 129 53 28 160 130 53 32 161 131 53 28 162 132 54 36 163 133 54 32 164 134 54 28 165 135 55 35 166 136 55 36 167 137 55 27 168 138 56 8 169 139 56 33 170 140 56 27 171 138 57 33 172 140 57 35 173 141 57 8 174 142 58 34 175 143 58 33 176 144 58 50 177 145 59 39 178 146 59 45 179 147 59 21 180 148 60 22 181 149 60 42 182 150 60 21 183 148 61 42 184 150 61 41 185 151 61 1 186 152 62 10 187 153 62 54 188 154 62 45 189 155 63 0 190 156 63 37 191 157 63 45 192 155 64 37 193 157 64 9 194 158 64 6 195 159 65 52 196 160 65 49 197 161 65 6 198 159 66 49 199 161 66 51 200 162 66 56 201 163 67 55 202 164 67 43 203 165 67 56 204 163 68 43 205 165 68 59 206 166 68 50 207 167 69 45 208 168 69 52 209 169 69 50 210 167 70 52 211 169 70 6 212 170 70 45 213 171 71 9 214 172 71 49 215 173 71 45 216 171 72 49 217 173 72 52 218 174 72 2 219 175 73 51 220 176 73 49 221 177 73 38 222 178 74 50 223 179 74 6 224 180 74 38 225 178 75 6 226 180 75 51 227 181 75 53 228 182 76 47 229 183 76 56 230 184 76 47 231 185 77 57 232 186 77 55 233 187 77 47 234 185 78 55 235 187 78 56 236 188 78 48 237 189 79 54 238 190 79 55 239 191 79 46 240 192 80 53 241 193 80 59 242 194 80 46 243 192 81 59 244 194 81 43 245 195 81 11 246 196 82 10 247 197 82 1 248 198 82 50 249 199 83 38 250 200 83 40 251 201 83 50 252 199 84 40 253 201 84 39 254 202 84 3 255 203 85 48 256 204 85 58 257 205 85 7 258 206 86 3 259 207 86 44 260 208 86 39 261 209 87 53 262 210 87 0 263 211 87 53 264 212 88 56 265 213 88 59 266 214 88 58 267 215 89 44 268 216 89 3 269 217 89 2 270 218 90 49 271 219 90 9 272 220 90 51 273 221 91 44 274 222 91 38 275 223 91 44 276 224 92 58 277 225 92 38 278 226 92 58 279 227 93 57 280 228 93 40 281 229 93 48 282 230 94 55 283 231 94 57 284 232 94 55 285 233 95 54 286 234 95 43 287 235 95 45 288 236 96 39 289 237 96 0 290 238 96 54 291 239 97 10 292 240 97 46 293 241 97 10 294 242 98 9 295 243 98 37 296 244 98 2 297 245 99 10 298 246 99 11 299 247 99 1 300 248 100 25 301 249 100 11 302 250 100 24 303 251 101 33 304 252 101 34 305 253 101 32 306 254 102 36 307 255 102 24 308 256 102 27 309 257 103 35 310 258 103 28 311 259 103 28 312 260 104 31 313 261 104 29 314 262 104 32 315 263 105 24 316 264 105 31 317 265 105 26 318 266 106 31 319 267 106 4 320 268 106 11 321 269 107 29 322 270 107 4 323 271 107 11 324 272 108 4 325 273 108 2 326 274 108 5 327 275 109 1 328 276 109 48 329 277 109 37 330 278 110 46 331 279 110 10 332 280 110 2 333 281 111 9 334 282 111 10 335 283 111 46 336 284 112 43 337 285 112 54 338 286 112 44 339 287 113 51 340 288 113 2 341 289 113 40 342 290 114 38 343 291 114 58 344 292 114 48 345 293 115 57 346 294 115 58 347 295 115 </p>
+            </triangles>
+         </mesh>
+      </geometry>
+   </library_geometries>
+   <library_visual_scenes>
+      <visual_scene id="tutorial_shack_finish_max" name="tutorial_shack_finish_max">
+         <node id="tutorial_shack" sid="tutorial_shack" name="tutorial_shack">
+            <matrix>1.000000 0 0 0.160515 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1</matrix>
+            <instance_geometry url="#tutorial_shack-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="shack_mat" target="#shack_mat">
+                        <bind semantic="CHANNEL1" target="#tutorial_shack-obj-mapchan-1"></bind>
+                     </instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="tutorial_chimney" sid="tutorial_chimney" name="tutorial_chimney">
+            <matrix>1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1</matrix>
+            <instance_geometry url="#tutorial_chimney-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="shack_mat" target="#shack_mat">
+                        <bind semantic="CHANNEL1" target="#tutorial_chimney-obj-mapchan-1"></bind>
+                     </instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="character_size_eg" sid="character_size_eg" name="character_size_eg">
+            <matrix>1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1</matrix>
+            <instance_geometry url="#character_size_eg-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="scene_material" target="#scene_material"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_006" sid="mvcv_obb_tutorial_shack_006" name="mvcv_obb_tutorial_shack_006">
+            <matrix>1.441732 0 0 -1.925446 0 1.333371 0 723.065369 0 0 1.094945 -242.706451 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_006-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_007" sid="mvcv_obb_tutorial_shack_007" name="mvcv_obb_tutorial_shack_007">
+            <matrix>0.508697 0 0 -102.865921 0 0.261557 0 -145.901108 0 0 1.094945 -246.148911 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_007-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_008" sid="mvcv_obb_tutorial_shack_008" name="mvcv_obb_tutorial_shack_008">
+            <matrix>0.658961 0 0.563302 157.831512 0 0.261557 0 -145.901108 -0.395336 0 0.938934 -342.504425 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_008-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_010" sid="mvcv_obb_tutorial_shack_010" name="mvcv_obb_tutorial_shack_010">
+            <matrix>0.041853 0 0 -461.850433 0 1.333371 0 723.065369 0 0 1.810981 4.791229 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_010-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_009" sid="mvcv_obb_tutorial_shack_009" name="mvcv_obb_tutorial_shack_009">
+            <matrix>0.041853 0 0 458.945587 0 1.333371 0 723.065369 0 0 1.810981 4.791229 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_009-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_013" sid="mvcv_obb_tutorial_shack_013" name="mvcv_obb_tutorial_shack_013">
+            <matrix>1.385951 0 0 -6.727432 0 0.031657 0 1436.370850 0 0 1.810981 4.791229 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_013-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_012" sid="mvcv_obb_tutorial_shack_012" name="mvcv_obb_tutorial_shack_012">
+            <matrix>0.747405 0 -1.166836 -1.245312 0 0.031657 0 1442.986450 0.507247 0 1.719280 190.665192 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_012-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_011" sid="mvcv_obb_tutorial_shack_011" name="mvcv_obb_tutorial_shack_011">
+            <matrix>0.749675 0 1.159104 -2.164848 0 0.031657 0 1446.297852 -0.503885 0 1.724502 181.296829 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_011-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_01" sid="mvcv_obb_tutorial_shack_01" name="mvcv_obb_tutorial_shack_01">
+            <matrix>0.023517 0 2.515726 -561.013550 0 1.779388 0 671.679199 -0.034621 0 1.708835 352.808167 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_01-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_002" sid="mvcv_obb_tutorial_shack_002" name="mvcv_obb_tutorial_shack_002">
+            <matrix>-0.023367 0 2.523070 1.865056 0 1.779388 0 671.679199 -0.034722 0 -1.697972 732.970581 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_002-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_004" sid="mvcv_obb_tutorial_shack_004" name="mvcv_obb_tutorial_shack_004">
+            <matrix>0.608265 0 0 -264.349945 0 0.031657 0 3.380085 0 0 1.810981 4.791229 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_004-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_005" sid="mvcv_obb_tutorial_shack_005" name="mvcv_obb_tutorial_shack_005">
+            <matrix>0.608265 0 0 261.662689 0 0.031657 0 3.380085 0 0 1.810981 4.791229 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_005-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_shack_003" sid="mvcv_obb_tutorial_shack_003" name="mvcv_obb_tutorial_shack_003">
+            <matrix>0.608265 0 0 2.457009 0 0.031657 0 -3.179545 0 0 1.594146 205.426224 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_shack_003-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_chimney_01" sid="mvcv_obb_tutorial_chimney_01" name="mvcv_obb_tutorial_chimney_01">
+            <matrix>0.281039 0 0 -1.553142 0 0.122072 0 1379.744995 0 0 4.339348 -41.788853 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_chimney_01-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_chimney_003" sid="mvcv_obb_tutorial_chimney_003" name="mvcv_obb_tutorial_chimney_003">
+            <matrix>0.622423 0 0 0.545248 0 0.201781 0 1326.464233 0 0 0.100760 -9.041079 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_chimney_003-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvcv_obb_tutorial_chimney_002" sid="mvcv_obb_tutorial_chimney_002" name="mvcv_obb_tutorial_chimney_002">
+            <matrix>0.622423 0 0 0.545248 0 0.097942 0 1365.199585 0 0 1.136595 8.652330 0 0 0 1</matrix>
+            <instance_geometry url="#mvcv_obb_tutorial_chimney_002-obj">
+               <bind_material>
+                  <technique_common>
+                     <instance_material symbol="collision_volume_lambert" target="#collision_volume_lambert"></instance_material>
+                  </technique_common>
+               </bind_material>
+            </instance_geometry>
+         </node>
+         <node id="mvsock_chimney" sid="mvsock_chimney" name="mvsock_chimney">
+            <matrix>1.000000 0 0 5.254051 0 1.000000 0 1386.933350 0 0 1.000000 892.848328 0 0 0 1</matrix>
+            <extra>
+               <technique profile="MAX3D">
+                  <helper>
+                     <bounding_min>-48.502075 -48.502075 -48.502075</bounding_min>
+                     <bounding_max>48.502075 48.502075 48.502075</bounding_max>
+                  </helper>
+               </technique>
+            </extra>
+         </node>
+         <node id="global-ambient-light_scene-node" name="global-ambient-light_scene-node">
+            <instance_light url="#global-ambient-light"></instance_light>
+         </node>
+      </visual_scene>
+   </library_visual_scenes>
+   <scene>
+      <instance_visual_scene url="#tutorial_shack_finish_max"></instance_visual_scene>
+   </scene>
+</COLLADA>

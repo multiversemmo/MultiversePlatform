@@ -1,0 +1,111 @@
+<physics_model>
+  <rigid_body sid="tutorial_shack-obj.0">
+    <technique_common>
+      <shape>
+        <rotate>0 -1 0 34.16383</rotate>
+        <translate>-0.01245313 14.46515 1.906652</translate>
+        <box>
+          <half_extents>2.992026 0.03529004 11.45673</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 1 0 33.90656</rotate>
+        <translate>-0.02164844 14.49827 1.812968</translate>
+        <box>
+          <half_extents>2.992024 0.03528906 11.45672</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 -1 0 34.18687</rotate>
+        <translate>-5.610136 8.700362 3.528081</translate>
+        <box>
+          <half_extents>16.76854 1.983569 0.1386338</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0.9999999 0 33.93964</rotate>
+        <translate>0.01865039 8.700362 7.329706</translate>
+        <box>
+          <half_extents>16.76853 1.983569 0.1386328</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-2.6435 0.06909044 0.04791211</translate>
+        <box>
+          <half_extents>2.014819 0.03528958 9.985315</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>2.616627 0.06909044 0.04791211</translate>
+        <box>
+          <half_extents>2.014819 0.03528959 9.985315</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0.02457007 0.003494141 2.054262</translate>
+        <box>
+          <half_extents>2.014819 0.03528959 8.789739</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.0192544 8.717028 -2.427065</translate>
+        <box>
+          <half_extents>4.775599 1.486373 6.037264</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-1.028659 -1.167441 -2.461489</translate>
+        <box>
+          <half_extents>1.68501 0.2915702 6.037264</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <rotate>0 0.9999999 0 30.96116</rotate>
+        <translate>1.578315 -1.167441 -3.425044</translate>
+        <box>
+          <half_extents>2.545427 0.2915702 6.037268</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-4.618505 8.717028 0.04791211</translate>
+        <box>
+          <half_extents>0.1386338 1.486373 9.985315</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>4.589456 8.717028 0.04791211</translate>
+        <box>
+          <half_extents>0.1386338 1.486373 9.985315</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>-0.06727441 14.399 0.04791211</translate>
+        <box>
+          <half_extents>4.590829 0.03528906 9.985314</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+  <rigid_body sid="tutorial_chimney-obj.0">
+    <technique_common>
+      <shape>
+        <translate>-0.01553143 13.93353 -0.4178887</translate>
+        <box>
+          <half_extents>0.9309146 0.1360791 23.92612</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0.005452393 13.48958 -0.09041077</translate>
+        <box>
+          <half_extents>2.061716 0.2249356 0.5555664</half_extents>
+        </box>
+      </shape>
+      <shape>
+        <translate>0.005452393 13.76118 0.08652344</translate>
+        <box>
+          <half_extents>2.061716 0.1091807 6.266912</half_extents>
+        </box>
+      </shape>
+    </technique_common>
+  </rigid_body>
+</physics_model>

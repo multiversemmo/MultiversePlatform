@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="cakeshop" Mesh="LES_cakeshop.mesh" TerrainOffest="166581.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="34922.2" y="166581.5" z="-1201429" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="cakeshop_chairs-lib.0" MaterialName="LES_cakeshop.cakeshop_chairs" Show="True" />
+      <SubMeshInfo Name="cakeshop_interior-lib.0" MaterialName="LES_cakeshop.cakeshop_interior" Show="True" />
+      <SubMeshInfo Name="cakeshop_coffee-lib.0" MaterialName="LES_cakeshop.cakeshop_coffee" Show="True" />
+      <SubMeshInfo Name="cakeshop_DJbooth-lib.0" MaterialName="LES_cakeshop.cakeshop_DJbooth" Show="True" />
+      <SubMeshInfo Name="cakeshop_stage-lib.0" MaterialName="LES_cakeshop.cakeshop_stage" Show="True" />
+      <SubMeshInfo Name="cakeshop_bar-lib.0" MaterialName="LES_cakeshop.cakeshop_bar" Show="True" />
+      <SubMeshInfo Name="cakeshop_downstairs-lib.0" MaterialName="LES_cakeshop.cakeshop_downstairs" Show="True" />
+      <SubMeshInfo Name="cakeshop_stairway-lib.0" MaterialName="LES_cakeshop.cakeshop_stairway" Show="True" />
+      <SubMeshInfo Name="cakeshop_stairway_top-lib.0" MaterialName="LES_cakeshop.cakeshop_stairway_top" Show="True" />
+      <SubMeshInfo Name="cakeshop_christmas-lib.0" MaterialName="LES_cakeshop.cakeshop_christmas" Show="True" />
+      <SubMeshInfo Name="cakeshop_glass-lib.0" MaterialName="LES_cakeshop.cakeshop_glass" Show="True" />
+      <SubMeshInfo Name="cakeshop_wallpictures-lib.0" MaterialName="LES_cakeshop.cakeshop_wallpictures" Show="True" />
+      <SubMeshInfo Name="cakeshop_exterior-lib.0" MaterialName="LES_cakeshop.cakeshop_exterior" Show="True" />
+      <SubMeshInfo Name="cakeshop_chairs_down-lib.0" MaterialName="LES_cakeshop.cakeshop_chairs_down" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="LightControl" Value="cakeshop" Type="String" />
+      <NameValuePair Name="LightControl_Regions" Value="InCakeStairs, InClubEntry, InCakeRecord" Type="String" />
+      <NameValuePair Name="LightControl_Lights" Value="coffee_area_01, record_area_01, entry_area_01" Type="String" />
+      <NameValuePair Name="LightControl_State" Value="on" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="sketchup_table" Mesh="table2.mesh" TerrainOffest="166950.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="38412.2" y="166950.5" z="-1200429" />
+    <Scale x="0.5131581" y="0.5131581" z="0.5131581" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="mesh1-geometry.0" MaterialName="table2.Wood_Cherry_OriginalnoCulling" Show="True" />
+      <SubMeshInfo Name="mesh1-geometry.1" MaterialName="table2.FrontColorNoCulling" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="LightControl" Value="cakeClub" Type="String" />
+      <NameValuePair Name="LightControl_Regions" Value="InCakeStairs, InCakeClub" Type="String" />
+      <NameValuePair Name="LightControl_Lights" Value="DJbooth_area_01, CakeBar_area_01, CakeStage_area_01" Type="String" />
+      <NameValuePair Name="LightControl_State" Value="on" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="cakeshop_video_down" Mesh="LES_vid_screen.mesh" TerrainOffest="163490.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90">
+    <Position x="35931.2" y="163490.5" z="-1208162" />
+    <Scale x="1.5" y="1.5" z="1.5" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="vid_case-lib.0" MaterialName="LES_vid_screen.vid_case" Show="True" />
+      <SubMeshInfo Name="vid_screen-lib.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="cakeshop_video_down2" Mesh="LES_vid_screen.mesh" TerrainOffest="163390.5" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="32941.2" y="163390.5" z="-1196382" />
+    <Scale x="2" y="2" z="2" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="vid_case-lib.0" MaterialName="LES_vid_screen.vid_case" Show="True" />
+      <SubMeshInfo Name="vid_screen-lib.0" MaterialName="LES_vid_screen.vid_screen" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

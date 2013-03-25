@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="ufo1" Mesh="UFO.mesh" TerrainOffest="180000" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="713000" y="200000" z="137314.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="UFO-mesh.0" MaterialName="UFO.Ufo_Mat" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="pool1" Mesh="pool.mesh" TerrainOffest="199300" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="23" Zenith="-90">
+    <Position x="804000" y="219300" z="311357.9" />
+    <Scale x="4" y="4" z="4" />
+    <Orientation x="0.9799247" y="-8.714649E-09" z="-0.1993679" w="-4.283387E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="pool-lib.0" MaterialName="pool.pool_marble" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawn" TerrainOffset="214380" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="-146" Zenith="90">
+    <Position x="843412.4" y="234380" z="359223.3" />
+    <Orientation x="0" y="-0.9563047" z="0" w="0.2923718" />
+  </Waypoint>
+  <StaticObject Name="house2" Mesh="human_house_open.mesh" TerrainOffest="213400" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-157" Zenith="90">
+    <Position x="847569.4" y="233400" z="381972.4" />
+    <Scale x="4" y="4" z="4" />
+    <Orientation x="0" y="-0.9799247" z="0" w="0.1993679" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_house_open_porchshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_open_rampshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_openshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="barrel1" Mesh="barrel.mesh" TerrainOffest="214200" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="851879.1" y="234200" z="368774.8" />
+    <Scale x="4" y="4" z="4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="barrel_open-mesh.0" MaterialName="barrel.barrel" Show="True" />
+      <SubMeshInfo Name="barrel_lid-mesh.0" MaterialName="barrel.barrel" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="instancePortal" Value="" Type="String" />
+      <NameValuePair Name="instanceFlags" Value="pop" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+</WorldObjectCollection>

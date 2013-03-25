@@ -1,0 +1,172 @@
+Index: Engine/Graphics/HardwareBuffer.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Engine/Graphics/HardwareBuffer.cs,v
+retrieving revision 1.5
+diff -u -b -r1.5 HardwareBuffer.cs
+--- Engine/Graphics/HardwareBuffer.cs	15 Apr 2004 03:31:27 -0000	1.5
++++ Engine/Graphics/HardwareBuffer.cs	13 Dec 2004 01:26:18 -0000
+@@ -284,9 +284,11 @@
+         ///     so use with care.
+         /// </param>
+         public void WriteData(int offset, int length, System.Array data) {
+-            IntPtr dataPtr = Marshal.UnsafeAddrOfPinnedArrayElement(data, 0);
+-
++			GCHandle handle = GCHandle.Alloc(data, GCHandleType.Pinned);
++			IntPtr dataPtr = handle.AddrOfPinnedObject();
++			// IntPtr dataPtr = Marshal.UnsafeAddrOfPinnedArrayElement(data, 0);
+             WriteData(offset, length, dataPtr);
++			handle.Free();
+         }
+ 
+         /// <summary>
+@@ -304,9 +306,12 @@
+         ///     such that DMA stalls can be avoided; use if you can.
+         /// </param>
+         public void WriteData(int offset, int length, System.Array data, bool discardWholeBuffer) {
+-            IntPtr dataPtr = Marshal.UnsafeAddrOfPinnedArrayElement(data, 0);
++			GCHandle handle = GCHandle.Alloc(data, GCHandleType.Pinned);
++			IntPtr dataPtr = handle.AddrOfPinnedObject();
++			// IntPtr dataPtr = Marshal.UnsafeAddrOfPinnedArrayElement(data, 0);
+ 
+             WriteData(offset, length, dataPtr, discardWholeBuffer);
++			handle.Free();
+         }
+ 
+         /// <summary>
+Index: Engine/Graphics/SoftwareBufferManager.cs
+===================================================================
+RCS file: /cvsroot/axiomengine/Axiom/Engine/Graphics/SoftwareBufferManager.cs,v
+retrieving revision 1.5
+diff -u -b -r1.5 SoftwareBufferManager.cs
+--- Engine/Graphics/SoftwareBufferManager.cs	5 Dec 2004 00:17:52 -0000	1.5
++++ Engine/Graphics/SoftwareBufferManager.cs	13 Dec 2004 01:26:19 -0000
+@@ -112,6 +112,7 @@
+         #region Member variables
+ 		
+         protected byte[] data;
++		protected GCHandle handle;
+ 		
+         #endregion
+ 
+@@ -137,22 +138,21 @@
+         #region Methods
+ 
+         public override IntPtr Lock(int offset, int length, BufferLocking locking) {
+-            isLocked = true;
+-
+-            // return the offset into the array as a pointer
+-            return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
+-
+-			//handle = GCHandle.Alloc(data, GCHandleType.Pinned);
+-			//return handle.AddrOfPinnedObject();
++			return LockImpl(offset, length, locking);
+         }
+ 
+         protected override IntPtr LockImpl(int offset, int length, BufferLocking locking) {
++			Debug.Assert(!isLocked, "Cannot lock this buffer because it is already locked.");
++
+             isLocked = true;
+ 
++			lockStart = offset;
++			lockSize = length;
++			
+             // return the offset into the array as a pointer
+-            return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
+-			//handle = GCHandle.Alloc(data, GCHandleType.Pinned);
+-			//return handle.AddrOfPinnedObject();
++			handle = GCHandle.Alloc(data, GCHandleType.Pinned);
++			return handle.AddrOfPinnedObject();
++			// return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
+         }
+ 
+         public override void ReadData(int offset, int length, IntPtr dest) {
+@@ -169,15 +169,13 @@
+         }
+ 
+         public override void Unlock() {
+-            isLocked = false;
+-
+-			//handle.Free();
++			UnlockImpl();
+         }
+ 
+         public override void UnlockImpl() {
+             isLocked = false;
+ 
+-			//handle.Free();
++			handle.Free();
+         }
+ 
+         public override void WriteData(int offset, int length, IntPtr src, bool discardWholeBuffer) {
+@@ -198,8 +196,8 @@
+         ///		buffer is software and not hardware.
+         /// </summary>
+         public IntPtr GetDataPointer(int offset) {
+-            return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
+-			//return handle.AddrOfPinnedObject();
++            // return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
++			return handle.AddrOfPinnedObject();
+         }
+ 
+         #endregion
+@@ -213,6 +211,8 @@
+ 		
+         protected byte[] data;
+ 		
++		GCHandle handle;
++
+         #endregion
+ 
+         #region Constructors
+@@ -237,18 +237,21 @@
+         #region Methods
+ 
+         public override IntPtr Lock(int offset, int length, BufferLocking locking) {
+-            isLocked = true;
+-
+-            // return the offset into the array as a pointer
+-            return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
++			return LockImpl(offset, length, locking);
+         }
+ 
+-
+         protected override IntPtr LockImpl(int offset, int length, BufferLocking locking) {
++			Debug.Assert(!isLocked, "Cannot lock this buffer because it is already locked.");
++
+             isLocked = true;
+ 
++			lockStart = offset;
++			lockSize = length;
++
+             // return the offset into the array as a pointer
+-            return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
++			handle = GCHandle.Alloc(data, GCHandleType.Pinned);
++			return handle.AddrOfPinnedObject();
++			// return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
+         }
+ 
+         public override void ReadData(int offset, int length, IntPtr dest) {
+@@ -265,11 +268,12 @@
+         }
+ 
+         public override void Unlock() {
+-            isLocked = false;
++			UnlockImpl();
+         }
+ 
+         public override void UnlockImpl() {
+             isLocked = false;
++			handle.Free();
+         }
+ 
+         public override void WriteData(int offset, int length, IntPtr src, bool discardWholeBuffer) {
+@@ -290,7 +294,8 @@
+         ///		buffer is software and not hardware.
+         /// </summary>
+         public IntPtr GetDataPointer(int offset) {
+-            return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
++			return handle.AddrOfPinnedObject();
++			// return Marshal.UnsafeAddrOfPinnedArrayElement(data, offset);
+         }
+ 
+         #endregion

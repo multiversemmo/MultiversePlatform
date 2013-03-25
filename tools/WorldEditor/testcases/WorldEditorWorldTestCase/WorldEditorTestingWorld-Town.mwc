@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <WorldCollection Name="Roads" Filename="WorldEditorTestingWorld-Town-Roads.mwc" />
+  <WorldCollection Name="Buildings" Filename="WorldEditorTestingWorld-Town-Buildings.mwc" />
+  <TerrainDecal Name="CharacterSpawnPoint" ImageName="blue-circle-gradient.png" PositionX="-254720.2" PositionZ="330865.1" SizeX="10000" SizeZ="10000" Rotation="0" Priority="1" PerceptionRadius="0" />
+  <Waypoint Name="CharacterSpawnPoint" TerrainOffset="-0.125" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="-254481.3" y="151242.4" z="331058.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <PointLight Name="pl" AttenuationRange="50000" AttenuationConstant="1" AttenuationLinear="0.0001" AttenuationQuadratic="0" TerrainOffset="2000.016" AllowHeightAdjustment="True" WorldViewSelect="True">
+    <Position x="-257481.3" y="153420.9" z="325295.7" />
+    <Specular R="1" G="1" B="0" />
+    <Diffuse R="0.7764706" G="0.7764706" B="0" />
+  </PointLight>
+</WorldObjectCollection>

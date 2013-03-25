@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="times square streets" Mesh="nyts_streets.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="127105.6" y="20000" z="-319948.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_streets-lib.0" MaterialName="nyts_streets.streets" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="edelmann" Mesh="nyts_edelmann.mesh" TerrainOffest="91" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="173786.1" y="20091" z="-325880.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_edelmann_windows-lib.0" MaterialName="nyts_edelmann.windows" Show="True" />
+      <SubMeshInfo Name="nyts_edelmann_building-lib.0" MaterialName="nyts_edelmann.building" Show="True" />
+      <SubMeshInfo Name="nyts_edelmann_scrolling-lib.0" MaterialName="nyts_edelmann.scrolling" Show="True" />
+      <SubMeshInfo Name="nyts_edelmann_billboard-lib.0" MaterialName="nyts_edelmann.billboard" Show="True" />
+      <SubMeshInfo Name="nyts_edelmann_anim_billboard-lib.0" MaterialName="nyts_edelmann.anim_billboard" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="timesSquareTower" Mesh="nyts_timesSquareTower.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="148463.6" y="20000" z="-158562.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="nyts_timesSquareTower-lib.0" MaterialName="nyts_timesSquareTower.timesSquareTower" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_02" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="80" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="19492.97" y="20080" z="-445826.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_03" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="80" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="-565.83" y="20080" z="-365486.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_05" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="80" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="254863.8" y="20080" z="-285976.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_06" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="80" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="180" Zenith="90">
+    <Position x="-607.05" y="20080" z="-286301" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="streets_2Lane_04" Mesh="nyts_streets_2Lane.mesh" TerrainOffest="80" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="1000000" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="240997.2" y="20080" z="-365483.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="street_2Lane-lib.0" MaterialName="nyts_streets_2Lane.streets" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="avatar" Mesh="business01_f_lowpoly.mesh" TerrainOffest="660" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-104" Zenith="90">
+    <Position x="127098.7" y="20660" z="-355373.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7880107" z="0" w="0.6156615" />
+    <SubMeshes>
+      <SubMeshInfo Name="business01_f_lowpoly-mesh.0" MaterialName="business01_f_lowpoly.body" Show="True" />
+      <SubMeshInfo Name="business01_f_lowpoly-mesh.1" MaterialName="business01_f_lowpoly.hair_transparent" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

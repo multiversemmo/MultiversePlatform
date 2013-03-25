@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="Kothuria" Version="1">
+  <CameraPosition x="1194025" y="39202.08" z="63396.5" />
+  <CameraOrientation x="-0.2540397" y="0.008438897" z="0.002224072" w="0.9671449" />
+  <Terrain>
+    <algorithm>HybridMultifractalWithFloor</algorithm>
+    <xOffset>0</xOffset>
+    <yOffset>0</yOffset>
+    <zOffset>0</zOffset>
+    <h>0.25</h>
+    <lacunarity>2</lacunarity>
+    <octaves>8</octaves>
+    <metersPerPerlinUnit>500</metersPerPerlinUnit>
+    <heightScale>0</heightScale>
+    <heightOffset>0</heightOffset>
+    <fractalOffset>0.7</fractalOffset>
+    <heightFloor>20</heightFloor>
+  </Terrain>
+  <Ocean DisplayOcean="True" WaveHeight="1000" SeaLevel="10000" />
+  <WorldCollection Name="Village" />
+</World>

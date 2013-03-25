@@ -1,0 +1,9 @@
+<add_order job_chain="filewritechain">
+  <xml_payload>
+    <player Name="jsw" Model="casual06_f_mediumpoly.mesh" spawn="spawnPt">
+      <prop Name="skin_color" Value="caucasian"/>
+      <prop Name="hair_style" Value="bob"/>
+      <prop Name="hair_color" Value="red"/>
+    </player>
+  </xml_payload>
+</add_order>

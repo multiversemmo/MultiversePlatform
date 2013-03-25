@@ -1,0 +1,50 @@
+// This file is where you will place registry entries that are to be removed during setup.
+
+// Database Output
+[$RootKey$\OutputWindow\{220A4C17-7E7C-4663-BBCC-5E607C6543CD}]
+
+// Menus
+[$RootKey$\Menus]
+"{39c9c826-8ef8-4079-8c95-428f5b1c323f}"=",4022,1"
+"{220A4C17-7E7C-4663-BBCC-5E607C6543CD}"=", 8100, 1"
+"{A8F602E2-40CE-4daf-AE82-A457A91728B9}"=", VSPackage.ctmenu, 1"
+"{d6c919aa-1217-41e2-a13b-9b92e1866305}"=", 541, 32"
+"{A659F1B3-AD34-11d1-ABAD-0080C7B89C95}"=",10,53"
+
+// Tools/Options Pages
+[$RootKey$\ToolsOptionsPages\Database Tools]
+[$RootKey$\ToolsOptionsPages\Debugger]
+[$RootKey$\ToolsOptionsPages\DSLTools]
+[$RootKey$\ToolsOptionsPages\Source Control]
+[$RootKey$\ToolsOptionsPages\HTML Designer]
+
+[$RootKey$\ToolsOptionsPages\WindowsFormsDesigner]
+[$RootKey$\ToolsOptionsPages\Environment\Add-in Security]
+[$RootKey$\ToolsOptionsPages\Environment\Help]
+[$RootKey$\ToolsOptionsPages\Environment\International Settings]
+[$RootKey$\ToolsOptionsPages\Projects\Build and Run]
+
+// Language Services
+[$RootKey$\Languages\Language Services\CSS]
+[$RootKey$\Languages\Language Services\Disassembly]
+[$RootKey$\Languages\Language Services\ENC]
+[$RootKey$\Languages\Language Services\HTML]
+[$RootKey$\Languages\Language Services\Memory]
+[$RootKey$\Languages\Language Services\PL/SQL]
+[$RootKey$\Languages\Language Services\RDL Expression]
+[$RootKey$\Languages\Language Services\Register]
+[$RootKey$\Languages\Language Services\SQL Script]
+[$RootKey$\Languages\Language Services\T-SQL]
+[$RootKey$\Languages\Language Services\T-SQL7]
+[$RootKey$\Languages\Language Services\T-SQL80]
+[$RootKey$\Languages\Language Services\T-SQL90]
+[$RootKey$\Languages\Language Services\XAML]
+
+// Server Explorer
+[$RootKey$\ToolWindows\{74946827-37a0-11d2-a273-00c04f8ef4ff}]
+
+// Macros
+[$RootKey$\Packages\{A659F1B3-AD34-11d1-ABAD-0080C7B89C95}]
+
+// Visual Studio Explorers and Designers Package (Connect to Database...)
+[$RootKey$\Packages\{8D8529D3-625D-4496-8354-3DAD630ECC1B}]

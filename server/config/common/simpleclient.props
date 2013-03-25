@@ -1,0 +1,67 @@
+#use_master_server (boolean): whether to try and log into the master server
+use_master_server=false
+
+# Need these only if use_master_server is true
+#username (string)
+#password (string)
+
+# Need these only if use_master_server is true
+#ms_hostname (string)
+#ms_tcp_port (int)
+#ms_rdp_port (int)
+
+#account_id (int): Use this if use_master_server is false 
+#   to set the player account to log in with
+account_id=1
+
+#world_id (string)
+world_id=sampleworld
+
+#login_hostname_override (string): use this to override what the
+#   master server returns to us.  this is useful when the simple client
+#   is running behind a NAT'd network along with the login server
+login_hostname_override=localhost
+
+#login_port_override (int): use this along with login_hostname_override
+login_port_override=5040
+
+###
+### The default log level of the server.
+###
+log_level=2
+multiverse.log_level=2
+
+### MV-Level     log4j Level
+### =======
+###   0           TRACE
+###   1           DEBUG
+###   2           INFO
+###   3           WARN
+###   4           ERROR
+###
+multiverse.rotate_logs_on_startup=true
+###
+### log4j configuration.  The multiverse.log_level over-rides the
+### log4j log level.
+###
+log4j.appender.FILE = org.apache.log4j.RollingFileAppender
+log4j.appender.FILE.File = logs/${multiverse.loggername}.out
+log4j.appender.FILE.MaxFileSize = 50MB
+log4j.appender.FILE.MaxBackupIndex=1
+log4j.appender.FILE.layout=org.apache.log4j.PatternLayout
+log4j.appender.FILE.layout.ConversionPattern=%-5p [%d{ISO8601}] %-20t %m%n
+
+log4j.rootLogger=DEBUG, FILE
+
+#character_name (string): use this character to log in
+
+#proxy_hostname_override (string): similar to login_hostname_override,
+#   use this to override what the login server tells us for the proxy hostname
+#proxy_hostname_override=localhost
+
+#proxy_port_override (int): use along with proxy_hostname_override
+
+###
+### Disable packet aggregation if the aggregation interval is zero
+###
+#multiverse.rdp_aggregation_interval=0

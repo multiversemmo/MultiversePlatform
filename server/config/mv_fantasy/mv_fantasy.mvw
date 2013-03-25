@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="Tom's Paradise" Version="2">
+  <WorldCollection Name="south_tower" Filename="mv_fantasy-south_tower.mwc" />
+  <WorldCollection Name="east_trees" Filename="mv_fantasy-east_trees.mwc" />
+  <WorldCollection Name="lakes" Filename="mv_fantasy-lakes.mwc" />
+  <WorldCollection Name="swamp" Filename="mv_fantasy-swamp.mwc" />
+  <WorldCollection Name="village" Filename="mv_fantasy-village.mwc" />
+  <WorldCollection Name="south_orc_area" Filename="mv_fantasy-south_orc_area.mwc" />
+  <CameraPosition x="-750832.3" y="154305.1" z="4334709" />
+  <CameraOrientation x="0.1081999" y="0.04336322" z="0.004724167" w="-0.9931722" />
+  <Terrain Type="HeightfieldMosaic" MosaicName="volcano_hf" PreloadRadius="1" OutsideHeight="0" />
+  <TerrainDisplay Type="AlphaSplat" UseParams="True" TextureTileSize="4" DetailTextureName="l3dt-detailmap.jpg" Alpha0MosaicName="volcano_alpha1" Alpha1MosaicName="volcano_alpha2" Layer1TextureName="l3dt-grass1-dry.jpg" Layer2TextureName="l3dt-grass1.jpg" Layer3TextureName="l3dt-yellowsand1.jpg" Layer4TextureName="volcano_rock.jpg" Layer5TextureName="splatting_rock.dds" Layer6TextureName="l3dt-grass1-lush.jpg" Layer7TextureName="volcano_rock_grey.jpg" Layer8TextureName="l3dt-dirt1.jpg" />
+  <Skybox Name="Multiverse/mv_yelo_skyBox" />
+  <Ocean DisplayOcean="True" UseParams="True" SeaLevel="-2000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" WaveHeight="1000" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <GlobalFog Far="700000" Near="5000">
+    <Color R="0.7411765" G="0.7529412" B="0.5607843" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.7098039" G="0.7098039" B="0.5411765" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="-59" Zenith="35">
+    <Diffuse R="0.9215686" G="0.8784314" B="0.372549" />
+    <Specular R="0.8941177" G="0.7254902" B="0.4705882" />
+    <Direction x="0.7021504" y="-0.5735764" z="-0.4218946" />
+  </GlobalDirectionalLight>
+</World>

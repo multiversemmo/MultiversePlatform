@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="cute_hiphopskyline" Mesh="FRW_env_hiphopskyline.mesh" TerrainOffest="128008" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="114749.6" y="148008" z="-197326.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="hiphopSkyline-lib.0" MaterialName="FRW_env_hiphopskyline.SkylineNewColor" Show="True" />
+      <SubMeshInfo Name="hiphopSkyline-lib.1" MaterialName="FRW_env_hiphopskyline.SkylineLightsColor" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="cute_room_01" Mesh="FRW_cuteroom.mesh" TerrainOffest="1008" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="114749.6" y="21008" z="-197926.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="room_01-lib.0" MaterialName="FRW_cuteroom.cuteroom" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="cute_room_02" Mesh="FRW_cuteroom_room_02.mesh" TerrainOffest="1008" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="114749.6" y="21008" z="-197926.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="room_02-lib.0" MaterialName="FRW_cuteroom_room_02.cuteroom" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="cute_room_03" Mesh="FRW_cuteroom_room_03.mesh" TerrainOffest="1008" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="114749.6" y="21008" z="-197926.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="room_03-lib.0" MaterialName="FRW_cuteroom_room_03.cuteroom" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="cute_room_04" Mesh="FRW_cuteroom_room_04.mesh" TerrainOffest="1008" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="114749.6" y="21008" z="-197926.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="room_04-lib.0" MaterialName="FRW_cuteroom_room_04.cuteroom" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="cute_room_05" Mesh="FRW_cuteroom_room_05.mesh" TerrainOffest="1008" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="114749.6" y="21008" z="-197926.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="room_05-lib.0" MaterialName="FRW_cuteroom_room_05.cuteroom" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="cute_room_lights" Mesh="FRW_room_lights.mesh" TerrainOffest="4368" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="108429.6" y="24368" z="-200386.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="lights-lib.0" MaterialName="FRW_room_lights.lights" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="hiphop_glasspane" Mesh="FRW_glasspane.mesh" TerrainOffest="2830" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="108777.5" y="22830" z="-214805.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="glass-lib.0" MaterialName="FRW_glasspane.glass" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

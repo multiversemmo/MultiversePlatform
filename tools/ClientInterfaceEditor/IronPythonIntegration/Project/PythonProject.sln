@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PythonProject", "PythonProject.csproj", "{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621} = {3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronPythonCompilerTask", "..\MSBuildTasks\IronPythonCompilerTask.csproj", "{68B54816-884B-48A1-949C-DBBDE2A5C412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LanguageService", "..\LanguageService\LanguageService.csproj", "{DA16C614-B1B9-42F1-8513-4C9E601041CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{16041FE4-7A5D-4DFD-9A79-A92B6A81E291}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621}.Debug|Any CPU.ActiveCfg = Release|Win32
+		{3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621}.Debug|Any CPU.Build.0 = Release|Win32
+		{3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621}.Debug|Mixed Platforms.Build.0 = Debug|Win32
+		{3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621}.Release|Any CPU.ActiveCfg = Release|Win32
+		{3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621}.Release|Any CPU.Build.0 = Release|Win32
+		{3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{3E207E0B-59BC-4F56-A9D9-BC8C5BFF2621}.Release|Mixed Platforms.Build.0 = Release|Win32
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{68B54816-884B-48A1-949C-DBBDE2A5C412}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{DA16C614-B1B9-42F1-8513-4C9E601041CB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+		DebugSamples90.Connect = 1;Configure Project for VSIP Experimental Environment;ConfigVSIPDebug
+	EndGlobalSection
+EndGlobal

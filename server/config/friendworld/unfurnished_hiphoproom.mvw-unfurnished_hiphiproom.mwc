@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="friendworld_hiphoproom" Mesh="FRW_hiphoproom.mesh" TerrainOffest="900" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90">
+    <Position x="23423.03" y="20900" z="-232824.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="floor-lib.0" MaterialName="FRW_hiphoproom.wood_tile" Show="True" />
+      <SubMeshInfo Name="wall_01-lib.0" MaterialName="FRW_hiphoproom.brown_middle" Show="True" />
+      <SubMeshInfo Name="celing-lib.0" MaterialName="FRW_hiphoproom.ceiling" Show="True" />
+      <SubMeshInfo Name="wall_03-lib.0" MaterialName="FRW_hiphoproom.brick" Show="True" />
+      <SubMeshInfo Name="wall_02-lib.0" MaterialName="FRW_hiphoproom.orange" Show="True" />
+      <SubMeshInfo Name="friendwall_background-lib.0" MaterialName="FRW_hiphoproom.sheet" Show="True" />
+      <SubMeshInfo Name="baseboard-lib.0" MaterialName="FRW_hiphoproom.wood" Show="True" />
+      <SubMeshInfo Name="window_posts-lib.0" MaterialName="FRW_hiphoproom.lightTall" Show="True" />
+      <SubMeshInfo Name="book_shelves-lib.0" MaterialName="FRW_hiphoproom.book_shelves" Show="True" />
+      <SubMeshInfo Name="frame_01-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="profile_main-lib.0" MaterialName="FRW_hiphoproom.main_profile" Show="True" />
+      <SubMeshInfo Name="frame_18-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_19-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_20-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_21-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_22-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_23-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_24-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_25-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_26-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_27-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+      <SubMeshInfo Name="frame_28-lib.0" MaterialName="FRW_hiphoproom.plastic" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawnPt" TerrainOffset="700" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="25270.28" y="20700" z="-233671.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="stuck" TerrainOffset="700" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="25270.28" y="20700" z="-233671.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <StaticObject Name="door_sliding" Mesh="FRW_furn_hiphop_door_sliding.mesh" TerrainOffest="720" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90">
+    <Position x="26906.34" y="20720" z="-234027.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_furn_hiphop_door_sliding.wood" Show="True" />
+      <SubMeshInfo Name="door_paper-lib.0" MaterialName="FRW_furn_hiphop_door_sliding.sheet" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="Copy of door_sliding" Mesh="FRW_furn_hiphop_door_sliding.mesh" TerrainOffest="720" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90">
+    <Position x="26907.74" y="20720" z="-233286.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="door-lib.0" MaterialName="FRW_furn_hiphop_door_sliding.wood" Show="True" />
+      <SubMeshInfo Name="door_paper-lib.0" MaterialName="FRW_furn_hiphop_door_sliding.sheet" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

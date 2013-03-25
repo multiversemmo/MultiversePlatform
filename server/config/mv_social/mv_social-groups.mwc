@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="group1" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-459509.9" y="71000" z="702365.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group2" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-977273.4" y="71000" z="244011.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group3" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="-1154396" y="124144.3" z="780694" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group4" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="628860.2" y="125955.5" z="795873.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group5" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="1401969" y="79665.66" z="725720.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group6" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2789306" y="71000" z="734720.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group7" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="3664975" y="72078.02" z="739720.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group8" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2777961" y="74405.11" z="558835.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group9" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2249293" y="71000" z="-400165" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group10" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2244377" y="74164.27" z="140050.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group11" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="1600505" y="79234" z="73153" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group12" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="1800505" y="79698" z="73582" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group13" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2000505" y="95465" z="72248" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group14" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2000505" y="81334" z="271534" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group15" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2000505" y="79734" z="471534" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group16" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2000505" y="95533" z="670700" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group16" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2000505" y="95533" z="670700" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group17" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2197255" y="76135" z="71091" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group18" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2197129" y="71000" z="270919" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group19" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2199598" y="71000" z="470521" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="group20" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="90">
+    <Position x="2200000" y="71000" z="670000" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

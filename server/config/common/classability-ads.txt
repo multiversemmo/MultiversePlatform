@@ -1,0 +1,7 @@
+# Agent message type advertisements
+# See: http://update.multiverse.net/wiki/index.php/Multiverse_Messaging_System#Advertisements
+
+mv.SKILL_UPDATE
+mv.START_ABILITY
+mv.ABILITY_UPDATE
+mv.STAT_XP_UPDATE

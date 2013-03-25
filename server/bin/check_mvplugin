@@ -1,0 +1,76 @@
+#!/bin/sh
+
+# check_mvplugin
+#
+# Nagios check script for Multiverse server on local machine.
+# Run on the domain server machine to gather plugin status
+# for entire server cluster.
+
+MAIN_CLASS=multiverse.management.PluginStatusCheck
+STATUS_KEYS="--keys user,login,login_sec,account,instance,entity,instance_entry,chat,private_chat,voice_user,voice_alloc,voice_frame"
+
+while getopts "hd:" arg; do
+    case "$arg" in
+        h)
+            echo "Usage: $0 [-h] [-d <MV_HOME>]"
+            exit
+            ;;
+        d)
+            export MV_HOME=$OPTARG
+            shift
+            shift
+            ;;
+        v)
+            let verbose++
+            ;;
+    esac
+done
+
+if [ "X$MV_HOME" = "X" ]; then
+    export MV_HOME=`dirname $0`/..
+fi
+MV_COMMON="$MV_HOME/config/common"
+MV_LOGS="$MV_HOME/logs"
+
+# Tell kernel we don't need rotated log files so they're purged from
+# disk cache, so check_mem has more accurate numbers, so we don't
+# got false alerts.
+# fadvise can be built from MV_HOME/src/native/fadvise.c
+#if type fadvise > /dev/null 2>&1 ; then
+#    fadvise --dontneed $MV_LOGS/*/*.out.*
+#fi
+
+INJECTED_JAR=${INJECTED_JAR:-"${MV_HOME}/dist/lib/injected.jar"}
+MVJAR="$MV_HOME/dist/lib/multiverse.jar"
+MARSJAR="$MV_HOME/dist/lib/mars.jar"
+GETOPT="$MV_HOME/other/java-getopt-1.0.11.jar"
+LOG4J="$MV_HOME/other/log4j-1.2.14.jar"
+BCEL="$MV_HOME/other/bcel-5.2.jar"
+RHINO="$MV_HOME/other/rhino1_5R5/js.jar"
+JYTHON="$MV_HOME/other/jython.jar"
+
+
+if [ $(uname -o) == "Cygwin" ]; then
+    MV_CLASSPATH="$INJECTED_JAR;$MVJAR;$MARSJAR;$BCEL;$GETOPT;$LOG4J;$JYTHON;$RHINO;$JAVA_HOME/lib/tools.jar"
+else
+    MV_CLASSPATH="$INJECTED_JAR:$MVJAR:$MARSJAR:$BCEL:$GETOPT:$LOG4J:$JYTHON:$RHINO:$JAVA_HOME/lib/tools.jar"
+fi
+
+DISABLE_LOG="-Dmultiverse.disable_logs=true"
+
+MARSHALL_LIST="-t ${MV_COMMON}/typenumbers.txt"
+SCRIPT_LIST="-s ${MV_COMMON}/mvmessages.py"
+OPTIONS="$MARSHALL_LIST $SCRIPT_LIST --host `hostname` $STATUS_KEYS"
+
+JAVA_PROPS="$DISABLE_LOG"
+
+if [ "X$JAVA_HOME" = "X" ]; then
+    java -cp $MV_CLASSPATH $JAVA_PROPS $MAIN_CLASS $OPTIONS "$@" 2>&1
+else
+    "$JAVA_HOME/bin/java" -cp "$MV_CLASSPATH" $JAVA_PROPS $MAIN_CLASS $OPTIONS "$@" 2>&1
+fi
+
+RC=$?
+
+exit $RC
+

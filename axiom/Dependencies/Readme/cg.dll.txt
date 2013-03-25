@@ -1,0 +1,5 @@
+nVidia Cg
+
+NVIDIA and the NVIDIA logo are trademarks or registered trademarks of NVIDIA Corporation.
+
+Copyright © 2004 NVIDIA Corporation. All rights reserved.

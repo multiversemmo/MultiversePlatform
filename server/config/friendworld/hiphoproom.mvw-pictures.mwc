@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="hiphop_profile_01" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="3254" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="110117" y="23254" z="-196891.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_02" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="3254" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="109406.7" y="23254" z="-196889.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_03" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="3254" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="108691" y="23254" z="-196889.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_04" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="3254" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="107982.7" y="23254" z="-196891.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_05" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="2515" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="110117" y="22515" z="-196889.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_06" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="2515" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="109406.7" y="22515" z="-196889.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_07" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="2515" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="108691" y="22515" z="-196891.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_08" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="2515" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="107982.7" y="22515" z="-196889.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_09" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="1768" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="110117" y="21768" z="-196889.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_10" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="1768" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="109406.7" y="21768" z="-196891.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_11" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="1768" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="108691" y="21768" z="-196889.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_12" Mesh="FRW_pict_hiphop_profile_01.mesh" TerrainOffest="1768" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="107982.7" y="21768" z="-196889.6" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profiles-lib.0" MaterialName="FRW_pict_hiphop_profile_01.profiles" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_profile_main" Mesh="FRW_pict_hiphop_profile_main.mesh" TerrainOffest="2242.529" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="107104.3" y="22242.53" z="-206399.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="profile_main-lib.0" MaterialName="FRW_pict_hiphop_profile_main.profile_main" Show="True" />
+      <SubMeshInfo Name="profile_main_frame-lib.0" MaterialName="FRW_pict_hiphop_profile_main.frame" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="my_profile_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_CO1" Mesh="FRW_pict_posters_3x4.mesh" TerrainOffest="2300" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="113174.8" y="22300" z="-193580.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame_09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.frame" Show="True" />
+      <SubMeshInfo Name="poster09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_CO2" Mesh="FRW_pict_posters_3x4.mesh" TerrainOffest="2300" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="112336.1" y="22300" z="-188500.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame_09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.frame" Show="True" />
+      <SubMeshInfo Name="poster09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR01" Mesh="FRW_pict_posters_lrg_4x3.mesh" TerrainOffest="2500" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="99280" y="22500" z="-196619.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR02" Mesh="FRW_pict_posters_lrg_4x3.mesh" TerrainOffest="2500" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="104161.4" y="22500" z="-196622.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_CO3" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2650" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="110521.5" y="22650" z="-189368.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_CO4" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="1540" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="110521.5" y="21540" z="-189368.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_CO5" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2650" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="110561.5" y="22650" z="-192718.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR04" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2850" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="110341" y="22850" z="-195573.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR05" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2850" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="110341" y="22850" z="-194133.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR06" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2850" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="110341" y="22850" z="-192733.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR08" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="3150" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="107167" y="23150" z="-188493.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR09" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="3150" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="105967" y="23150" z="-188493.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR10" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="3150" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="104767" y="23150" z="-188493.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR11" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="3150" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="103567" y="23150" z="-188493.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR13" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2050" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="106607" y="22050" z="-188493.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR14" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2050" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="105367" y="22050" z="-188493.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_BR15" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2050" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="104167" y="22050" z="-188493.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_TVR01" Mesh="FRW_pict_posters_lrg_3x4.mesh" TerrainOffest="2420" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="111808.7" y="22420" z="-206265.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_TVR02" Mesh="FRW_pict_posters_lrg_3x4.mesh" TerrainOffest="2420" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="111808.7" y="22420" z="-203865.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_TVR03" Mesh="FRW_pict_posters_lrg_3x4.mesh" TerrainOffest="2420" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="118118.7" y="22420" z="-203865.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_TVR04" Mesh="FRW_pict_posters_lrg_3x4.mesh" TerrainOffest="2420" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="118118.7" y="22420" z="-206265.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_TVR05" Mesh="FRW_pict_posters_lrg_3x4.mesh" TerrainOffest="2420" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="118118.7" y="22420" z="-201455.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_TVR06" Mesh="FRW_pict_posters_lrg_3x4.mesh" TerrainOffest="2620" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="116256.4" y="22620" z="-196839.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_TVR07" Mesh="FRW_pict_posters_lrg_3x4.mesh" TerrainOffest="2620" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="113756.4" y="22620" z="-196839.9" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_3x4-lib.0" MaterialName="FRW_pict_posters_lrg_3x4.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_LR01" Mesh="FRW_pict_posters_lrg_4x3.mesh" TerrainOffest="2600" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="101583.6" y="22600" z="-206199.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_LR02" Mesh="FRW_pict_posters_lrg_4x3.mesh" TerrainOffest="2600" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="103683.6" y="22600" z="-206199.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_LR03" Mesh="FRW_pict_posters_3x4.mesh" TerrainOffest="2500" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="106498.2" y="22500" z="-206195.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame_09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.frame" Show="True" />
+      <SubMeshInfo Name="poster09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_LR04" Mesh="FRW_pict_posters_3x4.mesh" TerrainOffest="2920" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="111611.5" y="22920" z="-204546.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame_09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.frame" Show="True" />
+      <SubMeshInfo Name="poster09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_LR05" Mesh="FRW_pict_posters_3x4.mesh" TerrainOffest="2920" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-90" Zenith="90" Targetable="False">
+    <Position x="111611.5" y="22920" z="-202046.7" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame_09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.frame" Show="True" />
+      <SubMeshInfo Name="poster09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_LR07" Mesh="FRW_pict_posters_3x4.mesh" TerrainOffest="2320" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="99396.6" y="22320" z="-196838.1" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame_09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.frame" Show="True" />
+      <SubMeshInfo Name="poster09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_LR06" Mesh="FRW_pict_posters_lrg_4x3.mesh" TerrainOffest="2490" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="104588.7" y="22490" z="-196834.8" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_EW01" Mesh="FRW_pict_posters_3x4.mesh" TerrainOffest="2400" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-45" Zenith="90" Targetable="False">
+    <Position x="110743.6" y="22400" z="-212038" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-0.3826835" z="0" w="0.9238795" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame_09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.frame" Show="True" />
+      <SubMeshInfo Name="poster09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_EW02" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="3370" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="111620.1" y="23370" z="-209458.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_EW03" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="3370" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="111620.1" y="23370" z="-208058.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_EW04" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2270" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="-180" Zenith="90" Targetable="False">
+    <Position x="111620.1" y="22270" z="-208058.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_EW05" Mesh="FRW_pict_posters_4x3.mesh" TerrainOffest="2270" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="180" Zenith="90" Targetable="False">
+    <Position x="111620.1" y="22270" z="-209458.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.frame" Show="True" />
+      <SubMeshInfo Name="poster08_4x3-lib.0" MaterialName="FRW_pict_posters_4x3.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_3x4_EW06" Mesh="FRW_pict_posters_3x4.mesh" TerrainOffest="2400" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="45" Zenith="90" Targetable="False">
+    <Position x="106704" y="22400" z="-211997.4" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.3826835" z="0" w="0.9238795" />
+    <SubMeshes>
+      <SubMeshInfo Name="frame_09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.frame" Show="True" />
+      <SubMeshInfo Name="poster09_3x4-lib.0" MaterialName="FRW_pict_posters_3x4.posters" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <StaticObject Name="hiphop_posters_4x3_EW07" Mesh="FRW_pict_posters_lrg_4x3.mesh" TerrainOffest="2700" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="90" Zenith="90" Targetable="False">
+    <Position x="105889.7" y="22700" z="-208865.5" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <SubMeshes>
+      <SubMeshInfo Name="poster_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.posters" Show="True" />
+      <SubMeshInfo Name="frame_lrg_4x3-lib.0" MaterialName="FRW_pict_posters_lrg_4x3.frames" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="Targetable" Value="True" Type="Boolean" />
+      <NameValuePair Name="ClickHookName" Value="poster_menu" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+</WorldObjectCollection>

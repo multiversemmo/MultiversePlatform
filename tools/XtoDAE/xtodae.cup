@@ -1,0 +1,399 @@
+
+using TUVienna.CS_CUP.Runtime;
+using System;
+using System.IO;
+using System.Collections.Generic;
+using xtodae;
+
+// There were several strange things where the files I had didn't match the spec.
+// The first was the Coords2d array, which used commas between the u and v entries.
+// The second was the MeshMaterialList where we have an extra semicolon.
+// The third is that some mesh entries follow the face with an option with a
+// comma instead of a semicolon as the delimiter (or sometimes a semicolon where
+// there should be a comma)
+parser code {:
+	public static void Main(string[] args)  {
+		string inFile = null;
+		string outFile = null;
+		string imagePrefix = null;
+		string meshName = null;
+		string units = null;
+		for (int i = 0; i < args.Length; ++i) {
+			switch (args[i]) {
+				case "--inFile":
+					if (i + 1 >= args.Length) {
+						Usage();
+						return;
+					}
+					inFile = args[++i];
+					break;
+				case "--outFile":
+					if (i + 1 >= args.Length) {
+						Usage();
+						return;
+					}
+					outFile = args[++i];
+					break;
+				case "--imagePrefix":
+					if (i + 1 >= args.Length) {
+						Usage();
+						return;
+					}
+					imagePrefix = args[++i];
+					break;
+				case "--meshName":
+					if (i + 1 >= args.Length) {
+						Usage();
+						return;
+					}
+					meshName = args[++i];
+					break;
+				case "--units":
+					if (i + 1 >= args.Length) {
+						Usage();
+						return;
+					}
+					units = args[++i];
+					break;
+				default:
+					Usage();
+					return;
+			}
+		}
+		if (inFile == null) {
+			Usage();
+			return;
+		}
+
+		new parser(new Yylex(new StreamReader(new FileStream(inFile, FileMode.Open)))).parse();
+		ParseResult.Instance.Process();
+		
+
+		ParseResult.Instance.Export(outFile, imagePrefix, meshName, units);
+	}
+
+	public static void Usage() {
+		Console.WriteLine("Usage: XtoDAE [options]");
+		Console.WriteLine("  --inFile <dae_file>             the input file name (e.g. sample.x)");
+		Console.WriteLine("                                    this argument is required");
+		Console.WriteLine("  --outFile <out_file>            the output file name (e.g. sample.dae)");
+		Console.WriteLine("                                    this argument is required");
+		Console.WriteLine("  --imagePrefix <url_to_images>   url_to_images should be the path where");
+		Console.WriteLine("                                    texture images can be found");
+		Console.WriteLine("                                    (e.g. file://c:/projects/images/)");
+		Console.WriteLine("  --meshName <mesh_name>          mesh_name will be used in the submesh names");
+		Console.WriteLine("  --units <unit_factor>           unit_factor is the ratio of units to meters");
+		Console.WriteLine("                                    (e.g. for inches: .0254)");
+	}
+:}
+
+action code {:
+	Dictionary<string, object> objectsByUuid = new Dictionary<string, object>();
+	Dictionary<string, object> objectsByName = new Dictionary<string, object>();
+:}
+
+terminal ELLIPSIS, SEMI, LCURLY, RCURLY, COMMA, COLON;
+terminal LSQUARE, RSQUARE, LANGLE, RANGLE, PIPE;
+terminal string IDENTIFIER;
+terminal int INTEGER;
+terminal float FLOAT;
+terminal string STRING;
+terminal ARRAY, TEMPLATE;
+terminal BINARY_TYPE, BINARY_RESOURCE_TYPE, CHAR_TYPE, CSTRING_TYPE;
+terminal DOUBLE_TYPE, DWORD_TYPE, FLOAT_TYPE, SDWORD_TYPE, STRING_TYPE;
+terminal SWORD_TYPE, UCHAR_TYPE, ULONGLONG_TYPE, UNICODE_TYPE, WORD_TYPE;
+terminal HEADER_TYPE, VECTOR_TYPE, COLOR_RGB_TYPE, COLOR_RGBA_TYPE;
+terminal COORDS2D_TYPE, MATRIX4X4_TYPE, FRAME_TRANSFORM_MATRIX_TYPE;
+terminal FRAME_TYPE, MESH_FACE_TYPE, MESH_TYPE, TEXTURE_FILENAME_TYPE;
+terminal MATERIAL_TYPE, MESH_TEXTURE_COORDS_TYPE, MESH_NORMALS_TYPE;
+terminal MESH_MATERIAL_LIST_TYPE;
+
+non terminal data_list, data_part;
+non terminal string uuid;
+non terminal body;
+non terminal data_reference;
+non terminal integer_list, integer_array;
+non terminal integer_part, integer_array_part;
+non terminal float_list, float_array;
+non terminal float_part, float_array_part;
+non terminal string_list, string_array;
+non terminal string string_part, string_array_part;
+non terminal type_identifier, primitive_type, complex_type;
+non terminal header, header_contents;
+non terminal color_rgba_contents, color_rgb_contents;
+non terminal material, material_contents;
+non terminal texture_filename, texture_filename_contents;
+non terminal frame, frame_contents;
+non terminal frame_transform_matrix, frame_transform_matrix_contents;
+non terminal mesh, mesh_contents;
+non terminal matrix4x4_contents;
+non terminal vector_part, vector_array;
+non terminal mesh_face_part, mesh_face_array;
+non terminal coords2d_part, coords2d_array;
+non terminal mesh_normals, mesh_normals_contents;
+non terminal mesh_texture_coords, mesh_texture_coords_contents;
+non terminal mesh_material_list, mesh_material_list_contents;
+
+body		::= data_list:data_list
+			{: System.Console.WriteLine("Parsed Body"); foreach (Node node in objectsByName.Values) { System.Console.WriteLine("Named node: {0}", node.name); } ParseResult.Instance.objects = (List<object>)data_list; ParseResult.Instance.objectsByName = objectsByName; ParseResult.Instance.objectsByUuid = objectsByUuid; :}
+		  ;
+
+primitive_type	::= BINARY_TYPE | BINARY_RESOURCE_TYPE | CHAR_TYPE | CSTRING_TYPE 
+		  | DOUBLE_TYPE | DWORD_TYPE | FLOAT_TYPE | SDWORD_TYPE | STRING_TYPE
+		  | SWORD_TYPE | UCHAR_TYPE | ULONGLONG_TYPE | UNICODE_TYPE | WORD_TYPE;
+complex_type	::= HEADER_TYPE | VECTOR_TYPE | COLOR_RGB_TYPE | COLOR_RGBA_TYPE
+		  | COORDS2D_TYPE | MATRIX4X4_TYPE | FRAME_TRANSFORM_MATRIX_TYPE
+		  | FRAME_TYPE | MESH_FACE_TYPE | MESH_TYPE | TEXTURE_FILENAME_TYPE
+		  | MATERIAL_TYPE | MESH_TEXTURE_COORDS_TYPE | MESH_NORMALS_TYPE
+		  | MESH_MATERIAL_LIST_TYPE;
+type_identifier ::= primitive_type | complex_type;
+
+data_list	::= data_list:data_list data_part:data_part
+			{: List<object> tmp = (List<object>)data_list; tmp.Add(data_part); RESULT = tmp; :}
+		  | data_part:data_part
+			{: List<object> tmp = new List<object>(); tmp.Add(data_part); RESULT = tmp; :}
+		  ;
+
+header		::= HEADER_TYPE IDENTIFIER:name LCURLY uuid:uuid header_contents:header RCURLY
+			{: Header tmp = (Header)header; tmp.name = name; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | HEADER_TYPE IDENTIFIER:name LCURLY header_contents:header RCURLY
+			{: Header tmp = (Header)header; tmp.name = name; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | HEADER_TYPE LCURLY uuid:uuid header_contents:header RCURLY
+			{: Header tmp = (Header)header; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+		  | HEADER_TYPE LCURLY header_contents:header RCURLY
+			{: Header tmp = (Header)header; RESULT = tmp; :}
+		  ;
+
+header_contents ::= INTEGER:major SEMI INTEGER:minor SEMI INTEGER:flags SEMI
+			{: Header tmp = new Header(); tmp.major = major; tmp.minor = minor; tmp.flags = flags; RESULT = tmp; :}
+		  ;
+
+color_rgba_contents	::= FLOAT:red SEMI FLOAT:green SEMI FLOAT:blue SEMI FLOAT:alpha SEMI
+				{: ColorRGBA tmp = new ColorRGBA(); tmp.red = red; tmp.green = green; tmp.blue = blue; tmp.alpha = alpha; RESULT = tmp; :}
+			  ;
+
+color_rgb_contents	::= FLOAT:red SEMI FLOAT:green SEMI FLOAT:blue SEMI
+				{: ColorRGB tmp = new ColorRGB(); tmp.red = red; tmp.green = green; tmp.blue = blue; RESULT = tmp; :}
+			  ;
+
+material	::= MATERIAL_TYPE IDENTIFIER:name LCURLY uuid:uuid material_contents:material RCURLY
+			{: Material tmp = (Material)material; tmp.name = name; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | MATERIAL_TYPE IDENTIFIER:name LCURLY material_contents:material RCURLY
+			{: Material tmp = (Material)material; tmp.name = name; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | MATERIAL_TYPE LCURLY uuid:uuid material_contents:material RCURLY
+			{: Material tmp = (Material)material; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+		  | MATERIAL_TYPE LCURLY material_contents:material RCURLY
+			{: Material tmp = (Material)material; RESULT = tmp; :}
+		  ;
+
+material_contents	::= color_rgba_contents:faceColor SEMI FLOAT:power SEMI color_rgb_contents:specularColor SEMI color_rgb_contents:emissiveColor SEMI data_list:options
+				{: Material tmp = new Material(); tmp.faceColor = (ColorRGBA)faceColor; tmp.power = power; tmp.specularColor = (ColorRGB)specularColor; tmp.emissiveColor = (ColorRGB)emissiveColor; tmp.options = (List<object>)options; RESULT = tmp; :}
+			  | color_rgba_contents:faceColor SEMI FLOAT:power SEMI color_rgb_contents:specularColor SEMI color_rgb_contents:emissiveColor SEMI
+				{: Material tmp = new Material(); tmp.faceColor = (ColorRGBA)faceColor; tmp.power = power; tmp.specularColor = (ColorRGB)specularColor; tmp.emissiveColor = (ColorRGB)emissiveColor; RESULT = tmp; :}
+			  ;
+
+texture_filename	::= TEXTURE_FILENAME_TYPE IDENTIFIER:name LCURLY uuid:uuid texture_filename_contents:texture_filename RCURLY
+				{: TextureFilename tmp = (TextureFilename)texture_filename; tmp.name = name; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+			  | TEXTURE_FILENAME_TYPE IDENTIFIER:name LCURLY texture_filename_contents:texture_filename RCURLY
+				{: TextureFilename tmp = (TextureFilename)texture_filename; tmp.name = name; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+			  | TEXTURE_FILENAME_TYPE LCURLY uuid:uuid texture_filename_contents:texture_filename RCURLY
+				{: TextureFilename tmp = (TextureFilename)texture_filename; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+			  | TEXTURE_FILENAME_TYPE LCURLY texture_filename_contents:texture_filename RCURLY
+				{: TextureFilename tmp = (TextureFilename)texture_filename; RESULT = tmp; :}
+			  ;
+texture_filename_contents	::= STRING:filename SEMI
+					{: TextureFilename tmp = new TextureFilename(); tmp.filename = filename; RESULT = tmp; :}
+				  ;
+
+frame		::= FRAME_TYPE IDENTIFIER:name LCURLY uuid:uuid frame_contents:frame RCURLY
+			{: Frame tmp = (Frame)frame; tmp.name = name; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | FRAME_TYPE IDENTIFIER:name LCURLY frame_contents:frame RCURLY
+			{: Frame tmp = (Frame)frame; tmp.name = name; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | FRAME_TYPE LCURLY uuid:uuid frame_contents:frame RCURLY
+			{: Frame tmp = (Frame)frame; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+		  | FRAME_TYPE LCURLY frame_contents:frame RCURLY
+			{: Frame tmp = (Frame)frame; RESULT = tmp; :}
+		  ;
+
+frame_contents	::= data_list:options
+			{: Frame tmp = new Frame(); tmp.options = (List<object>)options; RESULT = tmp; :}
+		  | 
+			{: Frame tmp = new Frame(); RESULT = tmp; :}
+		  ;
+
+frame_transform_matrix 	::= FRAME_TRANSFORM_MATRIX_TYPE IDENTIFIER:name LCURLY uuid:uuid frame_transform_matrix_contents:frame_transform_matrix RCURLY
+				{: FrameTransformMatrix tmp = (FrameTransformMatrix)frame_transform_matrix; tmp.name = name; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+			  | FRAME_TRANSFORM_MATRIX_TYPE IDENTIFIER:name LCURLY frame_transform_matrix_contents:frame_transform_matrix RCURLY
+				{: FrameTransformMatrix tmp = (FrameTransformMatrix)frame_transform_matrix; tmp.name = name; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+			  | FRAME_TRANSFORM_MATRIX_TYPE LCURLY uuid:uuid frame_transform_matrix_contents:frame_transform_matrix RCURLY
+				{: FrameTransformMatrix tmp = (FrameTransformMatrix)frame_transform_matrix; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+			  | FRAME_TRANSFORM_MATRIX_TYPE LCURLY frame_transform_matrix_contents:frame_transform_matrix RCURLY
+				{: FrameTransformMatrix tmp = (FrameTransformMatrix)frame_transform_matrix; RESULT = tmp; :}
+			  ;
+
+frame_transform_matrix_contents ::= matrix4x4_contents:matrix4x4 SEMI
+					{: FrameTransformMatrix tmp = new FrameTransformMatrix(); tmp.frameMatrix = (Matrix4x4)matrix4x4; RESULT = tmp; :}
+				  ;
+			
+matrix4x4_contents	::= float_array:float_array SEMI
+				{: Matrix4x4 tmp = new Matrix4x4(); ((List<float>)float_array).CopyTo(tmp.matrix); RESULT = tmp; :}
+			  ;
+
+mesh		::= MESH_TYPE IDENTIFIER:name LCURLY uuid:uuid mesh_contents:mesh RCURLY
+			{: Mesh tmp = (Mesh)mesh; tmp.name = name; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | MESH_TYPE IDENTIFIER:name LCURLY mesh_contents:mesh RCURLY
+			{: Mesh tmp = (Mesh)mesh; tmp.name = name; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | MESH_TYPE LCURLY uuid:uuid mesh_contents:mesh RCURLY
+			{: Mesh tmp = (Mesh)mesh; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+		  | MESH_TYPE LCURLY mesh_contents:mesh RCURLY
+			{: Mesh tmp = (Mesh)mesh; RESULT = tmp; :}
+		  ;
+
+mesh_contents	::= INTEGER:nVertices SEMI vector_array:vertices SEMI INTEGER:nFaces SEMI mesh_face_array:faces SEMI data_list:options
+			{: Mesh tmp = new Mesh(); tmp.nVertices = nVertices; tmp.vertices = new Vector[nVertices]; ((List<Vector>)vertices).CopyTo(tmp.vertices); tmp.nFaces = nFaces; tmp.faces = new MeshFace[nFaces]; ((List<MeshFace>)faces).CopyTo(tmp.faces); tmp.options = (List<object>)options; RESULT = tmp; :}
+		  | INTEGER:nVertices SEMI vector_array:vertices SEMI INTEGER:nFaces SEMI mesh_face_array:faces SEMI
+			{: Mesh tmp = new Mesh(); tmp.nVertices = nVertices; tmp.vertices = new Vector[nVertices]; ((List<Vector>)vertices).CopyTo(tmp.vertices); tmp.nFaces = nFaces; tmp.faces = new MeshFace[nFaces]; ((List<MeshFace>)faces).CopyTo(tmp.faces); RESULT = tmp; :}
+		  ;
+
+mesh_texture_coords	::= MESH_TEXTURE_COORDS_TYPE IDENTIFIER:name LCURLY uuid:uuid mesh_texture_coords_contents:mesh_texture_coords RCURLY
+				{: MeshTextureCoords tmp = (MeshTextureCoords)mesh_texture_coords; tmp.name = name; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+			  | MESH_TEXTURE_COORDS_TYPE IDENTIFIER:name LCURLY mesh_texture_coords_contents:mesh_texture_coords RCURLY
+				{: MeshTextureCoords tmp = (MeshTextureCoords)mesh_texture_coords; tmp.name = name; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+			  | MESH_TEXTURE_COORDS_TYPE LCURLY uuid:uuid mesh_texture_coords_contents:mesh_texture_coords RCURLY
+				{: MeshTextureCoords tmp = (MeshTextureCoords)mesh_texture_coords; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+			  | MESH_TEXTURE_COORDS_TYPE LCURLY mesh_texture_coords_contents:mesh_texture_coords RCURLY
+				{: MeshTextureCoords tmp = (MeshTextureCoords)mesh_texture_coords; RESULT = tmp; :}
+			  ;
+
+mesh_texture_coords_contents	::= INTEGER:nTextureCoords SEMI coords2d_array:textureCoords SEMI
+					{: MeshTextureCoords tmp = new MeshTextureCoords(); tmp.nTextureCoords = nTextureCoords; tmp.textureCoords = new Coords2d[nTextureCoords]; ((List<Coords2d>)textureCoords).CopyTo(tmp.textureCoords); RESULT = tmp; :}
+				  ;
+
+mesh_normals	::= MESH_NORMALS_TYPE IDENTIFIER:name LCURLY uuid:uuid mesh_normals_contents:mesh_normals RCURLY
+			{: MeshNormals tmp = (MeshNormals)mesh_normals; tmp.name = name; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | MESH_NORMALS_TYPE IDENTIFIER:name LCURLY mesh_normals_contents:mesh_normals RCURLY
+			{: MeshNormals tmp = (MeshNormals)mesh_normals; tmp.name = name; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+		  | MESH_NORMALS_TYPE LCURLY uuid:uuid mesh_normals_contents:mesh_normals RCURLY
+			{: MeshNormals tmp = (MeshNormals)mesh_normals; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+		  | MESH_NORMALS_TYPE LCURLY mesh_normals_contents:mesh_normals RCURLY
+			{: MeshNormals tmp = (MeshNormals)mesh_normals; RESULT = tmp; :}
+		  ;
+
+mesh_normals_contents	::= INTEGER:nNormals SEMI vector_array:normals SEMI INTEGER:nFaceNormals SEMI mesh_face_array:faceNormals SEMI
+				{: MeshNormals tmp = new MeshNormals(); tmp.nNormals = nNormals; tmp.normals = new Vector[nNormals]; ((List<Vector>)normals).CopyTo(tmp.normals); tmp.nFaceNormals = nFaceNormals; tmp.faceNormals = new MeshFace[nFaceNormals]; ((List<MeshFace>)faceNormals).CopyTo(tmp.faceNormals); RESULT = tmp; :}
+		  ;
+mesh_material_list	::= MESH_MATERIAL_LIST_TYPE IDENTIFIER:name LCURLY uuid:uuid mesh_material_list_contents:mesh_material_list RCURLY
+				{: MeshMaterialList tmp = (MeshMaterialList)mesh_material_list; tmp.name = name; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+			  | MESH_MATERIAL_LIST_TYPE IDENTIFIER:name LCURLY mesh_material_list_contents:mesh_material_list RCURLY
+				{: MeshMaterialList tmp = (MeshMaterialList)mesh_material_list; tmp.name = name; objectsByName[tmp.name] = tmp; RESULT = tmp; :}
+			  | MESH_MATERIAL_LIST_TYPE LCURLY uuid:uuid mesh_material_list_contents:mesh_material_list RCURLY
+				{: MeshMaterialList tmp = (MeshMaterialList)mesh_material_list; tmp.uuid = uuid; objectsByUuid[tmp.uuid] = tmp; RESULT = tmp; :}
+			  | MESH_MATERIAL_LIST_TYPE LCURLY mesh_material_list_contents:mesh_material_list RCURLY
+				{: MeshMaterialList tmp = (MeshMaterialList)mesh_material_list; RESULT = tmp; :}
+			  ;
+
+mesh_material_list_contents	::= INTEGER:nMaterials SEMI INTEGER:nFaceIndexes SEMI integer_array:FaceIndexes SEMI SEMI data_list:options
+					{: MeshMaterialList tmp = new MeshMaterialList(); tmp.nMaterials = nMaterials; tmp.nFaceIndexes = nFaceIndexes; tmp.FaceIndexes = new int[nFaceIndexes]; ((List<int>)FaceIndexes).CopyTo(tmp.FaceIndexes); foreach (Material option in (List<object>)options) { tmp.options.Add(option); } RESULT = tmp; :}
+				  | INTEGER:nMaterials SEMI INTEGER:nFaceIndexes SEMI integer_array:FaceIndexes SEMI data_list:options
+					{: MeshMaterialList tmp = new MeshMaterialList(); tmp.nMaterials = nMaterials; tmp.nFaceIndexes = nFaceIndexes; tmp.FaceIndexes = new int[nFaceIndexes]; ((List<int>)FaceIndexes).CopyTo(tmp.FaceIndexes); foreach (Material option in (List<object>)options) { tmp.options.Add(option); } RESULT = tmp; :}
+				  | INTEGER:nMaterials SEMI INTEGER:nFaceIndexes SEMI integer_array:FaceIndexes SEMI
+					{: MeshMaterialList tmp = new MeshMaterialList(); tmp.nMaterials = nMaterials; tmp.nFaceIndexes = nFaceIndexes; tmp.FaceIndexes = new int[nFaceIndexes]; ((List<int>)FaceIndexes).CopyTo(tmp.FaceIndexes); RESULT = tmp; :}
+				  ;
+
+data_part	::= header:header
+			{: System.Console.WriteLine("Got header"); RESULT = header; :}
+		  | material:material
+			{: System.Console.WriteLine("Got material"); RESULT = material; :}
+		  | texture_filename:texture_filename
+			{: System.Console.WriteLine("Got texture_filename"); RESULT = texture_filename; :}
+		  | frame:frame
+			{: System.Console.WriteLine("Got frame {0}", ((Frame)frame).name); RESULT = frame; :}
+		  | frame_transform_matrix:frame_transform_matrix
+			{: System.Console.WriteLine("Got frame_transform_matrix"); RESULT = frame_transform_matrix; :}
+		  | mesh:mesh
+			{: System.Console.WriteLine("Got mesh {0}", ((Mesh)mesh).name); RESULT = mesh; :}
+		  | mesh_texture_coords:mesh_texture_coords
+			{: System.Console.WriteLine("Got mesh_texture_coords"); RESULT = mesh_texture_coords; :}
+		  | mesh_normals:mesh_normals
+			{: System.Console.WriteLine("Got mesh_normals"); RESULT = mesh_normals; :}
+		  | mesh_material_list:mesh_material_list
+			{: System.Console.WriteLine("Got mesh_material_list"); RESULT = mesh_material_list; :}
+		  | data_reference:data_reference
+			{: System.Console.WriteLine("Got data_reference"); RESULT = data_reference; :}
+		  ;
+
+data_reference	::= LCURLY IDENTIFIER:name uuid:uuid RCURLY
+			{: if (objectsByName.ContainsKey(name)) RESULT = objectsByName[name]; else if (objectsByUuid.ContainsKey(uuid)) RESULT = objectsByUuid[uuid]; else RESULT = null; :}
+		  | LCURLY uuid:uuid RCURLY
+			{: if (objectsByUuid.ContainsKey(uuid)) RESULT = objectsByUuid[uuid]; else RESULT = null; :}
+		  | LCURLY IDENTIFIER:name RCURLY
+			{: if (objectsByName.ContainsKey(name)) RESULT = objectsByName[name]; else RESULT = null; :}
+		  ;
+
+integer_list		::= integer_list integer_part | integer_part;
+integer_part		::= INTEGER:i SEMI
+				{: System.Console.WriteLine("Got integer part: = "+i+";"); RESULT=i; :}
+			  ;
+integer_array		::= integer_array:integer_array COMMA integer_array_part:data
+				{: List<int> tmp = (List<int>)integer_array; tmp.Add((int)data); RESULT = tmp; :}
+			  | integer_array_part:data
+				{: List<int> tmp = new List<int>(); tmp.Add((int)data); RESULT = tmp; :}
+			  ;
+integer_array_part	::= INTEGER:i
+				{: RESULT = i; :}
+			  ;
+float_list		::= float_list float_part | float_part;
+float_part		::= FLOAT:x SEMI
+				{: System.Console.WriteLine("Got float part: = "+x+";"); RESULT=x; :}
+			  ;
+float_array		::= float_array:float_array COMMA float_array_part:data
+				{: List<float> tmp = (List<float>)float_array; tmp.Add((float)data); RESULT = tmp; :}
+			  | float_array_part:data
+				{: List<float> tmp = new List<float>(); tmp.Add((float)data); RESULT = tmp; :}
+			  ;
+float_array_part	::= FLOAT:x
+				{: RESULT = x; :}
+			  ;
+
+string_list		::= string_list string_part | string_part;
+string_part		::= STRING SEMI;
+string_array		::= string_array COMMA string_array_part | string_array_part;
+string_array_part	::= STRING:str
+				{: System.Console.WriteLine("Got string array part: = "+str+";"); :}
+			  ;
+
+vector_part		::= FLOAT:x SEMI FLOAT:y SEMI FLOAT:z SEMI
+				{: Vector tmp = new Vector(); tmp.x = x; tmp.y = y; tmp.z = z; RESULT = tmp; :}
+			  ;
+vector_array		::= vector_array:vector_array COMMA vector_part:vector
+				{: List<Vector> tmp = (List<Vector>)vector_array; tmp.Add((Vector)vector); RESULT = tmp; :}
+			  | vector_part:vector
+				{: List<Vector> tmp = new List<Vector>(); tmp.Add((Vector)vector); RESULT = tmp; :}
+			  ;
+
+mesh_face_part		::= INTEGER:nFaceVertexIndices SEMI integer_array:integer_array SEMI
+				{: MeshFace tmp = new MeshFace(); tmp.nFaceVertexIndices = nFaceVertexIndices; tmp.faceVertexIndices = new int[nFaceVertexIndices]; ((List<int>)integer_array).CopyTo(tmp.faceVertexIndices); RESULT = tmp; :}
+			  ;
+mesh_face_array		::= mesh_face_array:mesh_face_array COMMA mesh_face_part:mesh_face
+				{: List<MeshFace> tmp = (List<MeshFace>)mesh_face_array; tmp.Add((MeshFace)mesh_face); RESULT = tmp; :}
+			  | mesh_face_part:mesh_face
+				{: List<MeshFace> tmp = new List<MeshFace>(); tmp.Add((MeshFace)mesh_face); RESULT = tmp; :}
+			  ;
+
+coords2d_part		::= FLOAT:u COMMA FLOAT:v SEMI
+				{: Coords2d tmp = new Coords2d(); tmp.u = u; tmp.v = v; RESULT = tmp; :}
+			  | FLOAT:u SEMI FLOAT:v SEMI
+				{: Coords2d tmp = new Coords2d(); tmp.u = u; tmp.v = v; RESULT = tmp; :}
+			  ;
+coords2d_array		::= coords2d_array:coords2d_array COMMA coords2d_part:coords2d
+				{: List<Coords2d> tmp = (List<Coords2d>)coords2d_array; tmp.Add((Coords2d)coords2d); RESULT = tmp; :}
+			  | coords2d_part:coords2d
+				{: List<Coords2d> tmp = new List<Coords2d>(); tmp.Add((Coords2d)coords2d); RESULT = tmp; :}
+			  ;
+
+
+uuid		::= LANGLE IDENTIFIER:uuid RANGLE
+			{: RESULT = uuid; :}
+		  ;
+
+

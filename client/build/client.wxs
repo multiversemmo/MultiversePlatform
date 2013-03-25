@@ -1,0 +1,292 @@
+<?xml version='1.0'?>
+<Wix xmlns='http://schemas.microsoft.com/wix/2003/01/wi'>
+  <Product Id='a5e08284-41d3-4acb-804d-47fbe5976a59' Name='Multiverse World Browser' 
+        Language='1033' Codepage='1252'
+        UpgradeCode='8bfbdf57-9347-4ece-a94a-4829866ecf03'
+        Version='0.9.060801' Manufacturer='Multiverse Inc.'>
+
+    <Package Id='????????-????-????-????-????????????'
+          Description='Multiverse World Browser Installer'
+          Comments='Multiverse World Browser'
+          Manufacturer='Multiverse Inc.' InstallerVersion='200' Compressed='yes' />
+
+    <Media Id='1' Cabinet='product.cab' EmbedCab='yes' />
+ 
+    <?include ui.wxi?>
+    <?include product.wxi?>
+
+    <Directory Id='TARGETDIR' Name='SourceDir'>
+      <Directory Id='ProgramFilesFolder' Name='PFiles'>
+        <Directory Id='INSTALLDIR' Name='MVCLIENT' LongName='Multiverse World Browser'>
+          <Component Id='ConfigFiles' Guid='d4f5c124-9e9d-4c63-9e88-7823f65fd20b'>
+            <CreateFolder>
+              <Permission GenericRead='yes' GenericExecute='yes' 
+                          User='Users' Extended='yes'/>
+            </CreateFolder>
+
+            <RemoveFile Id='PatchVersion' On='both' Name='FOO.TXT' LongName='patch_version.txt' />
+            <RemoveFile Id='MvPatch' On='both' Name='FOO.TXT' LongName='mv.patch' />
+            <RemoveFile Id='MvPatchCur' On='both' Name='FOO.TXT' LongName='mv.patch.cur' />
+
+            <File Id='MVImageset' DiskId='1' Name='IMAGESET.XML'
+                    LongName='MultiverseImageset.xml' src='../bin/MultiverseImageset.xml' />
+            <File Id='LogoPic' DiskId='1' Name='LOGOPIC.JPG'
+                    LongName='logopicture.jpg' src='../bin/logopicture.jpg' />
+            <File Id='MVLoadSc' DiskId='1' Name='MVLOADSC.BMP'
+                    LongName='mvloadscreen.bmp' src='../bin/mvloadscreen.bmp' />
+            <File Id='LogConfig' DiskId='1' Name='foo.xml'
+                    LongName='DefaultLogConfig.xml' src='../bin/DefaultLogConfig.xml' />
+          </Component>
+          <Directory Id='MVHtmlDir' Name='FOO' LongName='Html'>
+            <Component Id='HtmlFiles' Guid='a701c3ed-643b-4d57-bba9-ef613a6df83d'>
+              <File Id='ClientError.css' DiskId='1' Name='FOO.TXT'
+                    LongName='ClientError.css' src='../bin/Html/ClientError.css' />
+              <File Id='logo.gif' DiskId='1' Name='FOO.TXT' 
+                    LongName='logo.gif' src='../bin/Html/logo.gif' />
+              <File Id='bad_media.htm' DiskId='1' Name='FOO.TXT'
+                    LongName='bad_media.htm' src='../bin/Html/bad_media.htm' />
+              <File Id='bad_script.htm' DiskId='1' Name='FOO.TXT'
+                    LongName='bad_script.htm' src='../bin/Html/bad_script.htm' />
+              <File Id='unable_connect_tcp_world.htm' DiskId='1' Name='FOO.TXT'
+                    LongName='unable_connect_tcp_world.htm' src='../bin/Html/unable_connect_tcp_world.htm' />
+            </Component>
+          </Directory>
+          <Directory Id='MVDocsDir' Name='DOC' LongName='doc'>
+            <Component Id='DocFiles' Guid='bf6e9a98-1231-4ed4-a586-4d5f79e5eb8f'>
+              <File Id='third_party.txt' DiskId='1' Name='FOO.TXT' 
+                    LongName='third_party_software.txt' src='licenses/third_party_software.txt' />
+              <File Id='nvidia_license.txt' DiskId='1' Name='FOO.TXT' 
+                    LongName='nvidia_license.txt' src='licenses/nvidia_license.txt' />
+              <File Id='cpl_license' DiskId='1' Name='FOO.TXT' 
+                    LongName='cpl1.0.txt' src='licenses/cpl1.0.txt' />
+              <File Id='apache_license' DiskId='1' Name='FOO.TXT' 
+                    LongName='apache2.0.txt' src='licenses/apache2.0.txt' />
+              <File Id='lgpl_license' DiskId='1' Name='FOO.TXT' 
+                    LongName='lgpl2.1.txt' src='licenses/lgpl2.1.txt' />
+              <File Id='gpl_license' DiskId='1' Name='FOO.TXT' 
+                    LongName='gpl2.0.txt' src='licenses/gpl2.0.txt' />
+              <File Id='Tao.Cg.license' DiskId='1' Name='FOO.TXT' 
+                    LongName='Tao.Cg.License.txt' src='licenses/Tao.Cg.License.txt' />
+              <File Id='Tao.DevIl.license' DiskId='1' Name='FOO.TXT' 
+                    LongName='Tao.DevIl.License.txt' src='licenses/Tao.DevIl.License.txt' />
+<!--
+              <File Id='Tao.OpenGl.license' DiskId='1' Name='FOO.TXT' 
+                    LongName='Tao.OpenGl.License.txt' src='licenses/Tao.OpenGl.License.txt' />
+-->
+              <File Id='Tao.Platform.Windows.license' DiskId='1' Name='FOO.TXT' 
+                    LongName='Tao.Platform.Windows.License.txt' src='licenses/Tao.Platform.Windows.License.txt' />
+              <File Id='ICSharpCode.SharpZipLib.license' DiskId='1' Name='FOO.TXT' 
+                    LongName='ICSharpCode.SharpZipLib.License.txt' src='licenses/ICSharpCode.SharpZipLib.License.txt' />
+            </Component>
+          </Directory>
+          <Directory Id='ScriptsDirectory' Name='SCRIPTS' LongName='Scripts'>
+            <Component Id='ClientScripts' Guid='B02BA988-59CA-48ab-87F7-1D3B657EB19C'>
+               <File Id='AnimationScript' DiskId='1' Name='FOO.BAR' LongName='Animation.py' src='../Scripts/Animation.py' />
+               <File Id='AnimationStateScript' DiskId='1' Name='FOO.BAR' LongName='AnimationState.py' src='../Scripts/AnimationState.py' />
+               <File Id='CameraScript' DiskId='1' Name='FOO.BAR' LongName='Camera.py' src='../Scripts/Camera.py'/>
+               <File Id='CharacterCreationScript' DiskId='1' Name='FOO.BAR' LongName='CharacterCreation.py' src='../Scripts/CharacterCreation.py'/>
+               <File Id='ClientAPIScript' DiskId='1' Name='FOO.BAR' LongName='ClientAPI.py' src='../Scripts/ClientAPI.py'/>
+               <File Id='CompositorScript' DiskId='1' Name='FOO.BAR' LongName='Compositor.py' src='../Scripts/Compositor.py'/>
+               <File Id='DecalScript' DiskId='1' Name='FOO.BAR' LongName='Decal.py' src='../Scripts/Decal.py'/>
+               <File Id='EditableImageScript' DiskId='1' Name='FOO.BAR' LongName='EditableImage.py' src='../Scripts/EditableImage.py'/>
+               <File Id='GPUProgramTypeScript' DiskId='1' Name='FOO.BAR' LongName='GPUProgramType.py' src='../Scripts/GPUProgramType.py'/>
+               <File Id='HardwareCapsScript' DiskId='1' Name='FOO.BAR' LongName='HardwareCaps.py' src='../Scripts/HardwareCaps.py'/>
+               <File Id='InputScript' DiskId='1' Name='FOO.BAR' LongName='Input.py' src='../Scripts/Input.py'/>
+               <File Id='InterfaceScript' DiskId='1' Name='FOO.BAR' LongName='Interface.py' src='../Scripts/Interface.py'/>
+               <File Id='LightScript' DiskId='1' Name='FOO.BAR' LongName='Light.py' src='../Scripts/Light.py'/>
+               <File Id='MaterialScript' DiskId='1' Name='FOO.BAR' LongName='Material.py' src='../Scripts/Material.py'/>
+               <File Id='ModelScript' DiskId='1' Name='FOO.BAR' LongName='Model.py' src='../Scripts/Model.py'/>
+               <File Id='MorphAnimationTrackScript' DiskId='1' Name='FOO.BAR' LongName='MorphAnimationTrack.py' src='../Scripts/MorphAnimationTrack.py'/>
+               <File Id='MorphKeyFrameScript' DiskId='1' Name='FOO.BAR' LongName='MorphKeyFrame.py' src='../Scripts/MorphKeyFrame.py'/>
+               <File Id='NetworkScript' DiskId='1' Name='FOO.BAR' LongName='Network.py' src='../Scripts/Network.py'/>
+               <File Id='NodeAnimationTrackScript' DiskId='1' Name='FOO.BAR' LongName='NodeAnimationTrack.py' src='../Scripts/NodeAnimationTrack.py'/>
+               <File Id='NodeKeyFrameScript' DiskId='1' Name='FOO.BAR' LongName='NodeKeyFrame.py' src='../Scripts/NodeKeyFrame.py'/>
+               <File Id='ParticleSystemScript' DiskId='1' Name='FOO.BAR' LongName='ParticleSystem.py' src='../Scripts/ParticleSystem.py'/>
+               <File Id='PassScript' DiskId='1' Name='FOO.BAR' LongName='Pass.py' src='../Scripts/Pass.py'/>
+               <File Id='PropertyAnimationTrackScript' DiskId='1' Name='FOO.BAR' LongName='PropertyAnimationTrack.py' src='../Scripts/PropertyAnimationTrack.py'/>
+               <File Id='PropertyKeyFrameScript' DiskId='1' Name='FOO.BAR' LongName='PropertyKeyFrame.py' src='../Scripts/PropertyKeyFrame.py'/>
+               <File Id='SceneNodeScript' DiskId='1' Name='FOO.BAR' LongName='SceneNode.py' src='../Scripts/SceneNode.py'/>
+               <File Id='SceneQueryScript' DiskId='1' Name='FOO.BAR' LongName='SceneQuery.py' src='../Scripts/SceneQuery.py'/>
+               <File Id='SoundSourceScript' DiskId='1' Name='FOO.BAR' LongName='SoundSource.py' src='../Scripts/SoundSource.py'/>
+               <File Id='SystemStatusScript' DiskId='1' Name='FOO.BAR' LongName='SystemStatus.py' src='../Scripts/SystemStatus.py'/>
+               <File Id='TechniqueScript' DiskId='1' Name='FOO.BAR' LongName='Technique.py' src='../Scripts/Technique.py'/>
+               <File Id='TextureUnitScript' DiskId='1' Name='FOO.BAR' LongName='TextureUnit.py' src='../Scripts/TextureUnit.py'/>
+               <File Id='VoiceScript' DiskId='1' Name='FOO.BAR' LongName='Voice.py' src='../Scripts/Voice.py'/>
+               <File Id='WorldScript' DiskId='1' Name='FOO.BAR' LongName='World.py' src='../Scripts/World.py'/>
+               <File Id='WorldObjectScript' DiskId='1' Name='FOO.BAR' LongName='WorldObject.py' src='../Scripts/WorldObject.py'/>
+             </Component> <!-- ClientScripts -->
+           </Directory> <!-- Scripts -->
+           <Directory Id='MVBinDir' Name='BIN' LongName='bin'>
+            <Component Id='LibraryFiles' Guid='4347ffbe-26c8-4b55-a924-a6d79cd03c4c'>
+              <File Id='Axiom.Engine' DiskId='1' Name='AxiomEng.DLL' 
+                    LongName='Axiom.Engine.dll' src='../../Axiom/Engine/bin/$(var.Configuration)/Axiom.Engine.dll' />
+              <File Id='Axiom.MathLib' DiskId='1' Name='AxiomMat.DLL'
+                    LongName='Axiom.MathLib.dll' src='../../Axiom/MathLib/bin/$(var.Configuration)/Axiom.MathLib.dll' />
+              <File Id='Axiom.Platforms.Win32' DiskId='1' Name='AxiomPla.DLL'
+                    LongName='Axiom.Platforms.Win32.dll' src='../../Axiom/Platforms/Win32/bin/$(var.Configuration)/Axiom.Platforms.Win32.dll' />
+              <File Id='Axiom.Plugins.CgProgramManager' DiskId='1' Name='AxiomPlu.DLL'
+                    LongName='Axiom.Plugins.CgProgramManager.dll' src='../../Axiom/Plugins/CgProgramManager/bin/$(var.Configuration)/Axiom.Plugins.CgProgramManager.dll' />
+              <File Id='Axiom.Plugins.ParticleFX' DiskId='1' Name='AxiomPlu.DLL'
+                    LongName='Axiom.Plugins.ParticleFX.dll' src='../../Axiom/Plugins/ParticleFX/bin/$(var.Configuration)/Axiom.Plugins.ParticleFX.dll' />
+              <File Id='Axiom.RenderSystems.DirectX9' DiskId='1' Name='AxiomRen.DLL'
+                    LongName='Axiom.RenderSystems.DirectX9.dll' src='../../Axiom/RenderSystems/DirectX9/bin/$(var.Configuration)/Axiom.RenderSystems.DirectX9.dll' />
+              <File Id='Axiom.SceneManagers.Multiverse' DiskId='1' Name='AxiomSce.DLL'
+                    LongName='Axiom.SceneManagers.Multiverse.dll' src='../../mvsm/bin/$(var.Configuration)/Axiom.SceneManagers.Multiverse.dll' />
+              <File Id='ILU.DLL' DiskId='1' Name='ILU.DLL'
+                    LongName='ilu.dll' src='../../Axiom/Dependencies/Native/ilu.dll' />
+              <File Id='ILUT.DLL' DiskId='1' Name='ILUT.DLL' 
+                    LongName='ilut.dll' src='../../Axiom/Dependencies/Native/ilut.dll' />
+              <File Id='ICSharpCode.SharpZipLib' DiskId='1' Name='ICSharpC.DLL'
+                    LongName='ICSharpCode.SharpZipLib.dll' src='../../Axiom/Dependencies/Managed/ICSharpCode.SharpZipLib.dll' />
+              <File Id='IronMath' DiskId='1' Name='IronMath.DLL'
+                    LongName='IronMath.dll' src='../Dependencies/Managed/IronMath.dll' />
+              <File Id='IronPython' DiskId='1' Name='IronPyth.DLL'
+                    LongName='IronPython.dll' src='../Dependencies/Managed/IronPython.dll' />
+              <File Id='log4net' DiskId='1' Name='log4net.DLL'
+                    LongName='log4net.dll' src='../../Axiom/Dependencies/Managed/log4net.dll' />
+              <File Id='HeightFieldGenerator' DiskId='1' Name='foo.dll'
+                    LongName='HeightfieldGenerator.dll' src='../../Lib/HeightfieldGenerator/bin/$(var.Configuration)/HeightfieldGenerator.dll' />
+              <File Id='LogUtil' DiskId='1' Name='foo.dll'
+                    LongName='LogUtil.dll' src='../../Lib/LogUtil/bin/$(var.Configuration)/LogUtil.dll' />
+              <File Id='Multiverse.AssetRepository' DiskId='1' Name='FOO.DLL' 
+                    LongName='Multiverse.AssetRepository.dll' src='../../Lib/AssetRepository/bin/$(var.Configuration)/Multiverse.AssetRepository.dll' />
+              <File Id='Multiverse.Base' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Base.dll' src='../Base/bin/$(var.Configuration)/Multiverse.Base.dll' />
+              <File Id='Multiverse.CollisionLib' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.CollisionLib.dll' src='../CollisionLib/bin/$(var.Configuration)/Multiverse.CollisionLib.dll' />
+              <File Id='Multiverse.Config' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Config.dll' src='../Config/bin/$(var.Configuration)/Multiverse.Config.dll' />
+              <File Id='Multiverse.Generator' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Generator.dll' src='../../Lib/Generator/bin/$(var.Configuration)/Multiverse.Generator.dll' />
+              <File Id='Multiverse.Gui' DiskId='1' Name='FOO.DLL'
+                    LongName='Multiverse.Gui.dll' src='../bin/$(var.Configuration)/Multiverse.Gui.dll' />
+              <File Id='Multiverse.Interface' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Interface.dll' src='../Interface/bin/$(var.Configuration)/Multiverse.Interface.dll' />
+              <File Id='Multiverse.MathLib' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.MathLib.dll' src='../MathLib/bin/$(var.Configuration)/Multiverse.MathLib.dll' />
+              <File Id='Multiverse.Movie' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Movie.dll' src='../Movie/bin/$(var.Configuration)/Multiverse.Movie.dll' />
+              <File Id='DirectShowWrapper' DiskId='1' Name='FOO.DLL'
+                    LongName='DirectShowWrapper.dll' src='../Movie/Codecs/DirectShowLib/bin/$(var.Configuration)/DirectShowWrapper.dll' />
+              <File Id='Multiverse.Network' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Network.dll' src='../Network/bin/$(var.Configuration)/Multiverse.Network.dll' />
+              <File Id='Multiverse.Patcher' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Patcher.dll' src='../Patcher/bin/$(var.Configuration)/Multiverse.Patcher.dll' />
+              <File Id='Multiverse.Serialization' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Serialization.dll' src='../Serialization/bin/$(var.Configuration)/Multiverse.Serialization.dll' />
+              <File Id='Multiverse.Utility' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Utility.dll' src='../Utility/bin/$(var.Configuration)/Multiverse.Utility.dll' />
+              <File Id='Multiverse.Web' DiskId='1' Name='Multiver.DLL'
+                    LongName='Multiverse.Web.dll' src='../Web/bin/$(var.Configuration)/Multiverse.Web.dll' />
+<!--
+              <File Id='OggVorbisWrapper' DiskId='1' Name='FOO.DLL'
+                    LongName='OggVorbisWrapper.dll' src='../bin/$(var.Configuration)/OggVorbisWrapper.dll' />
+              <File Id='MVOpenAL32' DiskId='1' Name='MVOpenAL32.DLL'
+                    LongName='MVOpenAL32.dll' src='../bin/$(var.Configuration)/MVOpenAL32.dll' />
+-->
+              <File Id='SpeedTreeRT' DiskId='1' Name='SpeedTre.DLL'
+                    LongName='SpeedTreeRT.dll' src='../../Lib/SpeedTree/bin/Release/SpeedTreeRT.dll' />
+              <File Id='SpeedTreeWrapper' DiskId='1' Name='SpeedTre.DLL'
+                    LongName='SpeedTreeWrapper.dll' src='../../Lib/SpeedTree/bin/Release/SpeedTreeWrapper.dll' />
+
+              <File Id='Tao.Cg' DiskId='1' Name='TaoCg.DLL'
+                    LongName='Tao.Cg.dll' src='../../Axiom/Dependencies/Managed/Tao.Cg.dll' />
+              <File Id='Tao.DevIl' DiskId='1' Name='TaoDevIl.DLL'
+                    LongName='Tao.DevIl.dll' src='../../Axiom/Dependencies/Managed/Tao.DevIl.dll' />
+<!--
+              <File Id='Tao.OpenAl' DiskId='1' Name='TaoOpenA.DLL'
+                    LongName='Tao.OpenAl.dll' src='../bin/$(var.Configuration)/Tao.OpenAl.dll' />
+-->
+              <File Id='Tao.Platform.Windows' DiskId='1' Name='TaoPlatf.DLL'
+                    LongName='Tao.Platform.Windows.dll' src='../../Axiom/Dependencies/Managed/Tao.Platform.Windows.dll' />
+
+              <File Id='cg' DiskId='1' Name='cg.DLL'
+                    LongName='cg.dll' src='../../Axiom/Dependencies/Native/cg.dll' />
+              <File Id='devil' DiskId='1' Name='devil.DLL'
+                    LongName='devil.dll' src='../../Axiom/Dependencies/Native/devil.dll' />
+              <File Id='msvcr71' DiskId='1' Name='msvcr71.DLL'
+                    LongName='msvcr71.dll' src='../Dependencies/Native/msvcr71.dll' />
+              <File Id='msvcp71' DiskId='1' Name='msvcp71.DLL'
+                    LongName='msvcp71.dll' src='../Dependencies/Native/msvcp71.dll' />
+<!--
+              <File Id='ogg' DiskId='1' Name='FOO.DLL'
+                    LongName='ogg.dll' src='../bin/$(var.Configuration)/ogg.dll' />
+              <File Id='vorbis' DiskId='1' Name='FOO.DLL'
+                    LongName='vorbis.dll' src='../bin/$(var.Configuration)/vorbis.dll' />
+              <File Id='vorbisfile' DiskId='1' Name='FOO.DLL'
+                    LongName='vorbisfile.dll' src='../bin/$(var.Configuration)/vorbisfile.dll' />
+              <File Id='wrap_oal' DiskId='1' Name='wrap_oal.DLL'
+                    LongName='wrap_oal.dll' src='../bin/$(var.Configuration)/wrap_oal.dll' />
+-->
+              <File Id='FMODWrapper' DiskId='1' Name='FOO.DLL'
+                    LongName='FMODWrapper.dll' src='../../Lib/FMOD/FMODWrapper/bin/$(var.Configuration)/FMODWrapper.dll' />
+              <File Id='FMODex.dll' DiskId='1' Name='Bar.dll'
+                    LongName='fmodex.dll' src='../../Lib/FMOD/fmodex.dll' />
+              <File Id='libspeex.dll' DiskId='1' Name='FOO.DLL' LongName='libspeex.dll'
+                    src='../../Lib/Speex/bin/libspeex.dll' />
+              <File Id='libspeexdsp.dll' DiskId='1' Name='FOO.DLL' LongName='libspeexdsp.dll'
+                    src='../../Lib/Speex/bin/libspeexdsp.dll' />
+              <File Id='Multiverse.Voice.dll' DiskId='1' Name='FOO.DLL' LongName='Multiverse.Voice.dll'
+                    src='../../Lib/Voice/bin/$(var.Configuration)/Multiverse.Voice.dll' />
+              <File Id='SpeexWrapper.dll' DiskId='1' Name='FOO.DLL' LongName='SpeexWrapper.dll'
+                    src='../../Lib/SpeexWrapper/bin/$(var.Configuration)/SpeexWrapper.dll' />
+              <File Id='TextureFetcher.dll' DiskId='1' Name='TEXTUREF.DLL' LongName='TextureFetcher.dll' 
+                    src='../../Lib/TextureFetcher/bin/$(var.Configuration)/TextureFetcher.dll' />
+            </Component>
+            <Component Id='ClientExecutableFiles' Guid='1458e736-14ba-4fdc-9530-f441762d6e93'>
+              <File Id='MultiverseClient' DiskId='1' Name='MVCLIENT.EXE'
+                    LongName='MultiverseClient.exe' src='../bin/$(var.Configuration)/MultiverseClient.exe' Vital='yes'>
+                <Permission GenericWrite='yes' GenericExecute='yes' User='Users' Extended='yes' />
+                <Shortcut Id='StartMenuMultiverse' Directory='ProgramMenuDir' Name='MVCLIENT' 
+                          LongName='Multiverse World Browser' WorkingDirectory='MVBinDir'
+                          Icon='MultiverseClient.exe' IconIndex='0'
+                          Description='The Multiverse World Browser' />
+                <Shortcut Id='StartMenuMultiverse_config' Directory='ProgramMenuDir' Name='MVCLIENT' 
+                          LongName='Multiverse Configuration' WorkingDirectory='MVBinDir'
+                          Icon='MultiverseClient.exe' IconIndex='0'
+                          Arguments='--config'
+                          Description='The Multiverse Configuration Tool' />
+                <Shortcut Id='DesktopShortcut' Directory='DesktopFolder' Name='MVCLIENT'
+                          LongName='Multiverse World Browser' WorkingDirectory='MVBinDir'
+                          Icon='MultiverseClient.exe' IconIndex='0'
+                          Description='The Multiverse World Browser' />
+              </File>
+            </Component>
+            <Component Id='ImagesetSchema' Guid='cb97e42a-5e1a-448e-9be1-0608fc551831'>
+              <File Id='Imageset' DiskId='1' Name='FOO.BAR'
+                    LongName='Imageset.xsd' src='../bin/Imageset.xsd' />
+            </Component>
+          </Directory>
+          <Component Id='PatcherExecutableFiles' Guid='5d40cc8e-1970-44eb-ad43-136d2b35a91e'>
+            <File Id='patcher' DiskId='1' Name='MVCLIENT.EXE'
+                  LongName='patcher.exe' src='../Patcher/bin/$(var.Configuration)/patcher.exe' Vital='yes'>
+              <Shortcut Id='StartMenuMultiverse_repair' Directory='ProgramMenuDir' Name='MVCLIENT' 
+                        LongName='Repair Multiverse World Browser' WorkingDirectory='INSTALLDIR'
+                        Icon='MultiverseClient.exe' IconIndex='0'
+                        Description='Repair the Multiverse World Browser' />
+            </File>
+          </Component>
+        </Directory> <!-- close of INSTALLDIR -->
+      </Directory>   <!-- close of ProgramFilesFolder -->
+      <Directory Id='DesktopFolder' Name='Desktop' />
+      <Directory Id='ProgramMenuFolder' Name='PMenu' LongName='Programs'>
+        <Directory Id='ProgramMenuDir' Name='FOO.BAR' LongName='Multiverse World Browser' />
+      </Directory>
+    </Directory>
+    <Icon Id='MultiverseClient.exe' src='../bin/$(var.Configuration)/MultiverseClient.exe' />
+
+    <Feature Id='Complete' Title='Complete Install' Display='expand' Level='1' ConfigurableDirectory='INSTALLDIR'>
+      <Feature Id='MainProgram' Title='Main Program' Level='1'>
+        <ComponentRef Id='LibraryFiles' />
+        <ComponentRef Id='ClientExecutableFiles' />
+        <ComponentRef Id='PatcherExecutableFiles' />
+        <ComponentRef Id='ConfigFiles' />
+        <ComponentRef Id='DocFiles' />
+        <ComponentRef Id='HtmlFiles' />
+        <ComponentRef Id='ImagesetSchema' />
+        <ComponentRef Id='ClientScripts' />
+      </Feature>
+    </Feature>
+  </Product>
+</Wix>
+

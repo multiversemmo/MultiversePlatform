@@ -1,0 +1,8 @@
+<client_config>
+  <loopback_world_response world_id="sampleworld">
+    <account id_number="1"/>
+    <server hostname="localhost" port="5040"/>
+    <patcher_url href="http://update.multiverse.net/patcher/world_patcher.html"/>
+    <update_url href="http://update.multiverse.net/sampleworld/update/"/>
+  </loopback_world_response>
+</client_config>

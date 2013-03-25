@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <WorldCollection Name="Town Center" Filename="WorldEditorTestingWorld-Town-Buildings-TownCenter.mwc" />
+  <WorldCollection Name="Northern outskirt" Filename="WorldEditorTestingWorld-Town-Buildings-Northernoutskirt.mwc" />
+  <WorldCollection Name="Southern outskirt" Filename="WorldEditorTestingWorld-Town-Buildings-Southernoutskirt.mwc" />
+  <WorldCollection Name="Eatern outskirt" Filename="WorldEditorTestingWorld-Town-Buildings-Eaternoutskirt.mwc" />
+  <WorldCollection Name="Western Outskirt" Filename="WorldEditorTestingWorld-Town-Buildings-WesternOutskirt.mwc" />
+</WorldObjectCollection>

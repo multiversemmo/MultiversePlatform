@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="steam_44TS_03" TerrainOffset="-500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="138611.2" y="19500" z="-343009.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+</WorldObjectCollection>

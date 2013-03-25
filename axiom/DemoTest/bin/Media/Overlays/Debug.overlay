@@ -1,0 +1,142 @@
+// Axiom debug overlay scripts
+Core/DebugOverlay
+{
+    zorder 500
+
+    // Statistics panel
+    container BorderPanel(Core/StatPanel)
+    {
+        metrics_mode pixels
+        vert_align bottom
+        left 5
+        top -92
+        width 220
+        height 87
+
+        material Core/StatsBlockCenter
+        border_size 1 1 1 1
+        border_material Core/StatsBlockBorder
+        border_topleft_uv       0.0000 1.0000 0.0039 0.9961
+        border_top_uv           0.0039 1.0000 0.9961 0.9961
+        border_topright_uv      0.9961 1.0000 1.0000 0.9961
+        border_left_uv          0.0000 0.9961 0.0039 0.0039
+        border_right_uv         0.9961 0.9961 1.0000 0.0039
+        border_bottomleft_uv    0.0000 0.0039 0.0039 0.0000
+        border_bottom_uv        0.0039 0.0039 0.9961 0.0000
+        border_bottomright_uv   0.9961 0.0039 1.0000 0.0000
+
+        // Nested break line
+        container Panel(Core/BreakPanel)
+        {
+            metrics_mode pixels
+            left 5
+            top 22
+            width 210
+            height 1
+            material Core/StatsBreak
+        }
+
+        // Current FPS counter
+        element TextArea(Core/CurrFps)
+        {
+            metrics_mode pixels
+            left 5
+            top 5
+            width 90
+            height 30
+            font_name Garamond
+            char_height 19
+            caption Current FPS:
+            colour_top 0.8 0.8 0.8
+            colour_bottom 0.2 0.2 0.4
+        }
+
+        // Average FPS counter
+        element TextArea(Core/AverageFps)
+        {
+            metrics_mode pixels
+            left 5
+            top 25
+            width 90
+            height 30
+            font_name Garamond
+            char_height 16
+            caption AVERAGE FPS:
+            colour_top 0.8 0.8 0.8
+            colour_bottom 0.2 0.2 0.4
+        }
+
+        // Worst FPS counter
+        element TextArea(Core/WorstFps)
+        {
+            metrics_mode pixels
+            left 5
+            top 40
+            width 90
+            height 30
+            font_name Garamond
+            char_height 16
+            caption WORST FPS:
+            colour_top 0.8 0.8 0.8
+            colour_bottom 0.2 0.2 0.4
+        }
+
+        // Best FPS counter
+        element TextArea(Core/BestFps)
+        {
+            metrics_mode pixels
+            left 5
+            top 55
+            width 90
+            height 30
+            font_name Garamond
+            char_height 16
+            caption BEST FPS:
+            colour_top 0.8 0.8 0.8
+            colour_bottom 0.2 0.2 0.4
+        }
+
+        // Number of triangles counter
+        element TextArea(Core/NumTris)
+        {
+            metrics_mode pixels
+            left 5
+            top 70
+            width 90
+            height 30
+            font_name Garamond
+            char_height 16
+            caption Triangle Count:
+            colour_top 0.8 0.8 0.8
+            colour_bottom 0.2 0.2 0.4
+        }
+
+        // General debug text area
+        element TextArea(Core/DebugText)
+        {
+            metrics_mode pixels
+            caption Demo
+            left 230
+            top 70
+            width 200
+            height 30
+            font_name Garamond
+            char_height 16
+            colour_top 0.8 0.8 0.8
+            colour_bottom 0.2 0.2 0.4
+        }
+    }
+
+    // Logo panel
+    container Panel(Core/LogoPanel)
+    {
+        metrics_mode pixels
+        horz_align right
+        vert_align bottom
+        top -75
+        left -210
+        width 200
+        height 80
+        material Core/AxiomLogo
+    }
+}

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="Larrissa Hudson's house" Mesh="human_house_open.mesh" TerrainOffest="0" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="228.0212" Zenith="90">
+    <Position x="-22954.66" y="180287.6" z="354858.8" />
+    <Scale x="0.9402508" y="0.9402508" z="0.9402508" />
+    <Orientation x="0" y="0.9134701" z="0" w="-0.4069059" />
+    <SubMeshes>
+      <SubMeshInfo Name="human_house_open_porchshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_open_rampshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+      <SubMeshInfo Name="human_house_openshape-obj.0" MaterialName="human_house_open._01_-_Default" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Boundary Name="Larrissa's Sunflower Farm" Priority="50">
+    <PointCollection>
+      <Point WorldViewSelect="True" x="58416.56" y="196017.1" z="381145.2" />
+      <Point WorldViewSelect="True" x="5519.638" y="182153.6" z="421736.5" />
+      <Point WorldViewSelect="True" x="3045.344" y="182445.6" z="403191.6" />
+      <Point WorldViewSelect="True" x="40233.92" y="195563" z="353016.6" />
+    </PointCollection>
+    <Grass Name="Vegies #2">
+      <PlantType Instances="10000" ColorMultHi="1" ColorMultLow="1" Name="Sunflower" ImageName="sunflower" ScaleWidthLow="1000" ScaleWidthHi="1000" ScaleHeightLow="1000" ScaleHeightHi="1000" WindMagnitude="100" R="1" G="1" B="1" />
+    </Grass>
+  </Boundary>
+</WorldObjectCollection>

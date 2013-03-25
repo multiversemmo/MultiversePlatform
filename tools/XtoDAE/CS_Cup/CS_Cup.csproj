@@ -1,0 +1,84 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C939D26-7254-44D4-9A9C-FFE7512C498F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TUVienna.CS_Cup</RootNamespace>
+    <AssemblyName>CS_Cup</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="action_part.cs" />
+    <Compile Include="action_production.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="assoc.cs" />
+    <Compile Include="CSCup.cs" />
+    <Compile Include="emit.cs" />
+    <Compile Include="internal_error.cs" />
+    <Compile Include="lalr_item.cs" />
+    <Compile Include="lalr_item_set.cs" />
+    <Compile Include="lalr_state.cs" />
+    <Compile Include="lalr_transition.cs" />
+    <Compile Include="lexer.cs" />
+    <Compile Include="lr_item_core.cs" />
+    <Compile Include="nonassoc_action.cs" />
+    <Compile Include="non_terminal.cs" />
+    <Compile Include="parser.cs" />
+    <Compile Include="parse_action.cs" />
+    <Compile Include="parse_action_row.cs" />
+    <Compile Include="parse_action_table.cs" />
+    <Compile Include="parse_reduce_row.cs" />
+    <Compile Include="parse_reduce_table.cs" />
+    <Compile Include="production.cs" />
+    <Compile Include="production_part.cs" />
+    <Compile Include="reduce_action.cs" />
+    <Compile Include="Runtime\lr_parser.cs" />
+    <Compile Include="Runtime\Scanner.cs" />
+    <Compile Include="Runtime\Symbol.cs" />
+    <Compile Include="Runtime\virtual_parse_stack.cs" />
+    <Compile Include="shift_action.cs" />
+    <Compile Include="sym.cs" />
+    <Compile Include="symbol.cs" />
+    <Compile Include="symbol_part.cs" />
+    <Compile Include="symbol_set.cs" />
+    <Compile Include="terminal.cs" />
+    <Compile Include="terminal_set.cs" />
+    <Compile Include="version.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

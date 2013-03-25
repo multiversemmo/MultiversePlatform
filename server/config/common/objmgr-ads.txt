@@ -1,0 +1,46 @@
+# Agent message type advertisements
+# See: http://update.multiverse.net/wiki/index.php/Multiverse_Messaging_System#Advertisements
+
+mv.REGISTER_TEMPLATE
+mv.SAVE_OBJECT_DATA
+mv.GENERATE_SUB_OBJECT
+mv.SAVE_SUBOBJECT
+mv.SET_PROPERTY_NONBLOCK
+mv.SUB_OBJECT_DEPS_READY
+mv.INV_UPDATE
+mv.MODIFY_DC
+mv.LOAD_SUBOBJECT
+mv.LOAD_OBJECT
+mv.GET_PROPERTY
+mv.OBJINFO_REQ
+mv.GENERATE_OBJECT
+mv.SAVE_OBJECT
+mv.SET_SUBPERSISTENCE
+mv.UNLOAD_SUBOBJECT
+mv.DELETE_SUBOBJECT
+mv.PROPERTY
+
+# on-demand instance loading
+mv.LOAD_INSTANCE
+mv.LOAD_OBJECT
+mv.SPAWN_REQ
+
+# instance content
+mv.INSTANCE_UNLOADED
+mv.INSTANCE_DELETED
+
+# inventory stuff
+mv.START_ABILITY
+mv.CREATE_INV
+mv.ACTIVATE
+mv.LOOTALL
+mv.COM
+mv.UNLOAD_OBJECT
+mv.DELETE_OBJECT
+mv.SET_PERSISTENCE
+
+# trade system
+mv.TRADE_START
+mv.TRADE_COMPLETE
+mv.TRADE_OFFER_UPDATE
+

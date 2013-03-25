@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="terrain_test" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-1000000" y="0" z="-983574.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="terrain_test_02" TerrainOffset="0" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="1000000" y="0" z="0" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Road Name="road_01" HalfWidth="6">
+    <PointCollection>
+      <Point x="-1000000" y="0" z="0" />
+      <Point x="1000000" y="0" z="0" />
+    </PointCollection>
+  </Road>
+  <Road Name="road_02" HalfWidth="6">
+    <PointCollection>
+      <Point x="0" y="0" z="-1000000" />
+      <Point x="0" y="0" z="1000000" />
+    </PointCollection>
+  </Road>
+  <Waypoint Name="perf1" TerrainOffset="166474.5" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="170236.2" y="166474.5" z="-1105392" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="perf2" TerrainOffset="166474.5" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="-38060" y="166474.5" z="-1186327" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="perf3" TerrainOffset="162736.5" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="12894" y="162736.5" z="-1149616" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="LES_spot_beam" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="perf4" TerrainOffset="166474.5" AllowHeightAdjustment="True" Azimuth="0" Zenith="0">
+    <Position x="66898.34" y="166474.5" z="-1185310" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="LES_spotlight" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+</WorldObjectCollection>

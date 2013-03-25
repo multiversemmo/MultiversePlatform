@@ -1,0 +1,342 @@
+﻿<Ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="Frame.lua" />
+	<Frame name="Frame1" parent="UIParent" toplevel="true" movable="true" resizable="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="703" y="355" />
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT">
+				<Offset>
+					<AbsDimension x="46" y="-151" />
+				</Offset>
+			</Anchor>
+		</Anchors>
+		<Scripts>
+			<OnLoad>Frame1_OnLoad();</OnLoad>
+			<OnEvent>Frame1_OnEvent();</OnEvent>
+			<OnMouseDown>Frame1_OnMouseDown();</OnMouseDown>
+			<OnMouseUp>Frame1_OnMouseUp();</OnMouseUp>
+		</Scripts>
+		<Layers>
+			<Layer>
+				<FontString name="TitleCaption" inherits="GameFontNormalSmall" text="World of Warcraft - RSS Reader" justifyV="TOP" justifyH="LEFT">
+					<Size x="200" y="18" />
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset x="19" y="-16" />
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<TitleRegion>
+			<Size x="200" y="18" />
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset x="19" y="-16" />
+				</Anchor>
+			</Anchors>
+		</TitleRegion>
+		<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+			<BackgroundInsets>
+				<AbsInset left="11" right="12" top="12" bottom="11" />
+			</BackgroundInsets>
+			<TileSize>
+				<AbsValue val="32" />
+			</TileSize>
+			<EdgeSize>
+				<AbsValue val="32" />
+			</EdgeSize>
+		</Backdrop>
+		<ResizeBounds>
+			<minResize x="650" y="300" />
+		</ResizeBounds>
+		<Frames>
+			<Button name="CloseButton" inherits="UIPanelCloseButton" text="X">
+				<Size x="24" y="24" />
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset x="-8" y="-8" />
+					</Anchor>
+				</Anchors>
+			</Button>
+			<Frame name="ScrollFrameFeedsContainer">
+				<Size x="366" y="99" />
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="16" y="-32" />
+						</Offset>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT" relativePoint="TOP">
+						<Offset>
+							<AbsDimension x="-4" y="-130" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<BackgroundInsets>
+						<AbsInset left="4" right="4" top="4" bottom="4" />
+					</BackgroundInsets>
+					<TileSize>
+						<AbsValue val="16" />
+					</TileSize>
+					<EdgeSize>
+						<AbsValue val="16" />
+					</EdgeSize>
+				</Backdrop>
+				<Frames>
+					<ScrollFrame name="ScrollFrameFeeds" inherits="FauxScrollFrameTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="0" y="-8" />
+								</Offset>
+							</Anchor>
+							<Anchor point="BOTTOMRIGHT">
+								<Offset>
+									<AbsDimension x="-30" y="8" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnVerticalScroll>FauxScrollFrame_OnVerticalScroll(16, ScrollFrameFeeds_Update);</OnVerticalScroll>
+						</Scripts>
+					</ScrollFrame>
+					<Button name="ButtonFeed1" text="ButtonFeed1">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ScrollFrameFeeds" relativePoint="TOPLEFT">
+								<Offset>
+									<AbsDimension x="8" y="0" />
+								</Offset>
+							</Anchor>
+							<Anchor point="TOPRIGHT" relativeTo="ScrollFrameFeeds" relativePoint="TOPRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonFeed(1);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+					<Button name="ButtonFeed2" text="ButtonFeed2">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ButtonFeed1" relativePoint="BOTTOMLEFT" />
+							<Anchor point="TOPRIGHT" relativeTo="ButtonFeed1" relativePoint="BOTTOMRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonFeed(2);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+					<Button name="ButtonFeed3" text="ButtonFeed3">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ButtonFeed2" relativePoint="BOTTOMLEFT" />
+							<Anchor point="TOPRIGHT" relativeTo="ButtonFeed2" relativePoint="BOTTOMRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonFeed(3);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+					<Button name="ButtonFeed4" text="ButtonFeed4">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ButtonFeed3" relativePoint="BOTTOMLEFT" />
+							<Anchor point="TOPRIGHT" relativeTo="ButtonFeed3" relativePoint="BOTTOMRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonFeed(4);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+					<Button name="ButtonFeed5" text="ButtonFeed5">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ButtonFeed4" relativePoint="BOTTOMLEFT" />
+							<Anchor point="TOPRIGHT" relativeTo="ButtonFeed4" relativePoint="BOTTOMRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonFeed(5);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+				</Frames>
+			</Frame>
+			<Frame name="ScrollFrameItemsContainer">
+				<Size x="366" y="98" />
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-16" y="-32" />
+						</Offset>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativePoint="TOP">
+						<Offset>
+							<AbsDimension x="4" y="-130" />
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<BackgroundInsets>
+						<AbsInset left="4" right="4" top="4" bottom="4" />
+					</BackgroundInsets>
+					<TileSize>
+						<AbsValue val="16" />
+					</TileSize>
+					<EdgeSize>
+						<AbsValue val="16" />
+					</EdgeSize>
+				</Backdrop>
+				<Frames>
+					<ScrollFrame name="ScrollFrameItems" inherits="FauxScrollFrameTemplate">
+						<Anchors>
+							<Anchor point="TOPLEFT">
+								<Offset>
+									<AbsDimension x="0" y="-8" />
+								</Offset>
+							</Anchor>
+							<Anchor point="BOTTOMRIGHT">
+								<Offset>
+									<AbsDimension x="-30" y="8" />
+								</Offset>
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnVerticalScroll>FauxScrollFrame_OnVerticalScroll(16, ScrollFrameItems_Update);</OnVerticalScroll>
+						</Scripts>
+					</ScrollFrame>
+					<Button name="ButtonItem1" text="ButtonItem1">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ScrollFrameItems" relativePoint="TOPLEFT">
+								<Offset>
+									<AbsDimension x="8" y="0" />
+								</Offset>
+							</Anchor>
+							<Anchor point="TOPRIGHT" relativeTo="ScrollFrameItems" relativePoint="TOPRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonItem(1);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+					<Button name="ButtonItem2" text="ButtonItem2">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ButtonItem1" relativePoint="BOTTOMLEFT" />
+							<Anchor point="TOPRIGHT" relativeTo="ButtonItem1" relativePoint="BOTTOMRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonItem(2);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+					<Button name="ButtonItem3" text="ButtonItem3">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ButtonItem2" relativePoint="BOTTOMLEFT" />
+							<Anchor point="TOPRIGHT" relativeTo="ButtonItem2" relativePoint="BOTTOMRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonItem(3);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+					<Button name="ButtonItem4" text="ButtonItem4">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ButtonItem3" relativePoint="BOTTOMLEFT" />
+							<Anchor point="TOPRIGHT" relativeTo="ButtonItem3" relativePoint="BOTTOMRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonItem(4);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+					<Button name="ButtonItem5" text="ButtonItem5">
+						<Size>
+							<AbsDimension x="240" y="16" />
+						</Size>
+						<Anchors>
+							<Anchor point="TOPLEFT" relativeTo="ButtonItem4" relativePoint="BOTTOMLEFT" />
+							<Anchor point="TOPRIGHT" relativeTo="ButtonItem4" relativePoint="BOTTOMRIGHT" />
+						</Anchors>
+						<Scripts>
+							<OnClick>OnClickButtonItem(5);</OnClick>
+						</Scripts>
+						<NormalFont inherits="GameFontNormal" justifyH="LEFT" />
+					</Button>
+				</Frames>
+			</Frame>
+			<Frame name="ScrollFrameDescriptionContainer">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="ScrollFrameFeedsContainer" relativePoint="BOTTOMLEFT">
+						<Offset x="0" y="0" />
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset x="-16" y="16" />
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer>
+						<FontString name="SummaryFontString" inherits="GameFontNormalSmall" text="Summary" justifyV="TOP" justifyH="LEFT">
+							<Size x="714" y="185" />
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="16" y="-16" />
+								</Anchor>
+								<Anchor point="BOTTOMRIGHT">
+									<Offset x="-16" y="50" />
+								</Anchor>
+							</Anchors>
+						</FontString>
+					</Layer>
+				</Layers>
+				<Backdrop bgFile="Interface\DialogFrame\UI-DialogBox-Background" edgeFile="Interface\Tooltips\UI-Tooltip-Border" tile="true">
+					<BackgroundInsets>
+						<AbsInset left="4" right="4" top="4" bottom="4" />
+					</BackgroundInsets>
+					<TileSize>
+						<AbsValue val="16" />
+					</TileSize>
+					<EdgeSize>
+						<AbsValue val="16" />
+					</EdgeSize>
+				</Backdrop>
+				<Frames>
+					<Button name="RefreshButton" inherits="UIPanelButtonTemplate" text="Refresh">
+						<Size x="101" y="28" />
+						<Anchors>
+							<Anchor point="BOTTOMRIGHT">
+								<Offset x="-16" y="16" />
+							</Anchor>
+						</Anchors>
+						<Scripts>
+							<OnClick>ReloadUI();</OnClick>
+						</Scripts>
+					</Button>
+				</Frames>
+			</Frame>
+		</Frames>
+	</Frame>
+</Ui>

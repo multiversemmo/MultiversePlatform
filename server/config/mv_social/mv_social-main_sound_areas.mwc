@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Boundary Name="main_dance_sound" Priority="50">
+    <PointCollection>
+      <Point x="369342.6" y="71000" z="275198.2" />
+      <Point x="386422.5" y="71000" z="272198.2" />
+      <Point x="400824.7" y="71000" z="282198.2" />
+      <Point x="401999.7" y="71000" z="306198.2" />
+      <Point x="386804.3" y="71000" z="315198.2" />
+      <Point x="369171.9" y="71000" z="309198.2" />
+      <Point x="361820.7" y="71000" z="294198.2" />
+    </PointCollection>
+    <Sound Filename="stage.ogg" Type="Ambient" Gain="1" Loop="True" />
+  </Boundary>
+  <Boundary Name="main_area_ambient" Priority="50">
+    <PointCollection>
+      <Point x="337745.2" y="71000" z="274198.2" />
+      <Point x="345382" y="71000" z="242198.2" />
+      <Point x="382460.1" y="71000" z="230198.2" />
+      <Point x="434867.3" y="71000" z="258198.2" />
+      <Point x="430070" y="71000" z="321207.6" />
+      <Point x="400070" y="71000" z="351551.9" />
+      <Point x="357070" y="71000" z="351905.8" />
+      <Point x="335070" y="71000" z="319059.1" />
+      <Point x="308070" y="71000" z="320189.2" />
+      <Point x="304929.4" y="71000" z="272198.2" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="gazebo_01_sound" Priority="50">
+    <PointCollection>
+      <Point x="327749.5" y="71000" z="229198.2" />
+      <Point x="338830.5" y="71000" z="223198.2" />
+      <Point x="345062" y="71000" z="233198.2" />
+      <Point x="336161.8" y="71000" z="241198.2" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="gazebo_02_sound" Priority="50">
+    <PointCollection>
+      <Point x="386700.9" y="71000" z="249561.7" />
+      <Point x="388700.9" y="71000" z="259201.2" />
+      <Point x="374700.9" y="71000" z="262839.3" />
+      <Point x="367700.9" y="71000" z="254501.8" />
+      <Point x="371700.9" y="71000" z="247304.3" />
+    </PointCollection>
+  </Boundary>
+  <Boundary Name="promenade_01" Priority="50">
+    <PointCollection>
+      <Point x="-97798.77" y="71000" z="265925.8" />
+      <Point x="64201.23" y="72009.47" z="268694.4" />
+      <Point x="69201.23" y="72357.97" z="330560.7" />
+      <Point x="-97798.77" y="71000" z="335839" />
+    </PointCollection>
+  </Boundary>
+</WorldObjectCollection>

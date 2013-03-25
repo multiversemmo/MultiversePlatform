@@ -1,0 +1,5 @@
+multiverse.msgsys.Message,100
+multiverse.msgsys.MessageType,101
+multiverse.msgsys.AllocNameMessage,102
+multiverse.msgsys.AllocNameResponseMessage,103
+multiverse.msgsys.ResponseMessage,104

@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeedWind", "..\SpeedWind\SpeedWind.vcproj", "{66A53DFC-CE16-41A7-87F9-1F39EFD4B70C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpeedTreeWrapper", "..\SpeedTreeWrapper\SpeedTreeWrapper.vcproj", "{0BBE6080-2988-47F5-91BA-9637223439EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66A53DFC-CE16-41A7-87F9-1F39EFD4B70C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{66A53DFC-CE16-41A7-87F9-1F39EFD4B70C}.Debug|Win32.Build.0 = Debug|Win32
+		{66A53DFC-CE16-41A7-87F9-1F39EFD4B70C}.Release|Win32.ActiveCfg = Release|Win32
+		{66A53DFC-CE16-41A7-87F9-1F39EFD4B70C}.Release|Win32.Build.0 = Release|Win32
+		{0BBE6080-2988-47F5-91BA-9637223439EF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0BBE6080-2988-47F5-91BA-9637223439EF}.Debug|Win32.Build.0 = Debug|Win32
+		{0BBE6080-2988-47F5-91BA-9637223439EF}.Release|Win32.ActiveCfg = Release|Win32
+		{0BBE6080-2988-47F5-91BA-9637223439EF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

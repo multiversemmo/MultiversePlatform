@@ -1,0 +1,89 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<UsingTask AssemblyFile="Microsoft.MultiverseInterfaceStudio.Build.dll" TaskName="TocGenerator"/>
+	<PropertyGroup>
+    <!--
+		<AddonPath>$(WowPath)\Interface\AddOns\$(Name)</AddonPath>
+
+		<StartAction>Program</StartAction>
+		<StartProgram>$(WoWPath)\WoW.exe</StartProgram>
+    -->
+	</PropertyGroup>
+
+	<Target Name="BeforeClean" />
+	<Target Name="AfterClean" />
+	<Target Name="BeforeRebuild" />
+	<Target Name="AfterRebuild" />
+	<Target Name="BeforeDeploy" />
+	<Target Name="AfterDeploy" />
+
+	<Target Name="Clean" DependsOnTargets="_CheckProperties">
+		<CallTarget Targets="BeforeClean" />
+
+		<CreateItem Include="@(Content)" AdditionalMetadata="TargetPath=$(AddonPath)\%(Content.Identity)">
+			<Output TaskParameter="Include" ItemName="_FilesToDelete"/>
+		</CreateItem>
+		<Delete Files="%(_FilesToDelete.TargetPath)" />
+
+		<CallTarget Targets="AfterClean" />
+	</Target>
+
+	<Target Name="Rebuild" DependsOnTargets="_CheckProperties">
+		<CallTarget Targets="BeforeRebuild" />
+
+		<CallTarget Targets="Clean" />
+		<CallTarget Targets="Deploy" />
+
+		<CallTarget Targets="AfterRebuild" />
+	</Target>
+
+ 
+	<Target Name="Deploy" DependsOnTargets="_CheckProperties">
+		<Message Importance="High" Text="Deploying addon..." />
+
+		<CallTarget Targets="BeforeDeploy" />
+
+		<CreateItem Include="@(Content)" Condition="'%(Content.SubType)' != 'TableOfContents'" AdditionalMetadata="TargetPath=$(AddonPath)\%(Content.Identity);TargetDir=$(AddonPath)\%(Content.RelativeDir)">
+			<Output TaskParameter="Include" ItemName="_AddonFiles"/>
+		</CreateItem>
+
+		<CreateItem Include="@(Content)" Condition="'%(Content.SubType)' == 'Code' Or '%(Content.SubType)' == 'Frame'">
+			<Output TaskParameter="Include" ItemName="_TocItems"/>
+		</CreateItem>
+
+    <CreateItem Include="@(Content)" Condition="'%(Content.SubType)' == 'TableOfContents'">
+      <Output TaskParameter="Include" ItemName="_Toc"/>
+    </CreateItem>
+
+    <CreateItem Include="$(AddonTitle).toc" Condition="'@(_Toc)' == ''" AdditionalMetadata="SubType=TableOfContents">
+      <Output TaskParameter="Include" ItemName="_Toc" />
+    </CreateItem>
+
+    <Message Importance="High" Text="Creating target folder structure..." />
+		<MakeDir Directories="$(AddonPath)" />
+		<MakeDir Directories="%(_AddonFiles.TargetDir)"/>
+
+		<Message Importance="High" Text="Generating TOC file..." />
+		<TocGenerator
+			InputPath="%(_Toc.FullPath)"
+			OutputPath="$(AddonPath)\%(_Toc.Identity)"
+			Files="@(_TocItems)"
+			Condition="'%(_Toc.SubType)'=='TableOfContents'"
+			InterfaceVersion="$(InterfaceVersion)"
+			AddonTitle="$(AddonTitle)"
+			AddonNotes="$(AddonNotes)"
+			Dependencies="$(Dependencies)"
+			SavedVariables="$(SavedVariables)"
+			SavedVariablesPerCharacter="$(SavedVariablesPerCharacter)"
+			Author="$(Author)"
+			AddonVersion="$(AddonVersion)"
+			AuthorEmail="$(AuthorEmail)"
+		/>
+
+    <Message Importance="High" Text="Copying files..." />
+		<Copy SourceFiles="@(_AddonFiles)" SkipUnchangedFiles="true" DestinationFiles="%(_AddonFiles.TargetPath)"/>
+    <Message Importance="High" Text="Addon deployed." />
+
+    <CallTarget Targets="AfterDeploy" />
+	</Target>
+	<Target Name="AllProjectOutputGroups" />
+</Project>

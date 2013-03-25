@@ -1,0 +1,5 @@
+<Scene Name="crowdScene" World="times_square">
+  <Render Width="640" Height="480" FPS="15"/>
+  <Encode BitRate="1500"/>
+  <Player Name="jsw" Model="casual15_f_mediumpoly.mesh" Spawn="crowdSceneSpawn"/>
+</Scene>

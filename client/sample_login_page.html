@@ -1,0 +1,249 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Multiverse Login</title>
+<style type="text/css" MEDIA="screen, projection">
+<!--
+body,td,div,p,a,font,span {font-family: arial,sans-serif}
+
+.tl {padding: 0; width: 4; text-align: left; vertical-align: top}
+.tr {padding: 0; width: 4; text-align: right; vertical-align: top}
+.bl {padding: 0; width: 4; text-align: left; vertical-align: bottom}
+.br {padding: 0; width: 4; text-align: right; vertical-align: bottom}
+
+.caption {color:#000000; white-space:nowrap; background:#E8EEFA; text-align:center}
+
+.form-noindent {background-color: #ffffff; border: #C3D9FF 1px solid}
+
+.mv.label { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.mv.value { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.mv.button { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.mv.remember { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+
+.errormsg { color: red; font-size: smaller; font-family:arial,sans-serif; }
+.statusmsg { color: black; font-size: smaller; font-family:arial,sans-serif; }  
+
+// -->
+</style>
+
+<script>
+function WorldEntry(id, text) {
+  this.id = id;
+  this.text = text;
+}
+
+// Check to see if the select input contains an option with the given value
+function ContainsOption(elem, val) {
+  for (var i = 0; i < elem.options.length; ++i) {
+    if (elem.options.value == val) {
+      return true;
+    }
+  }
+  return false;
+}
+
+// Add any worlds that we want to show up by default (if they aren't in the login settings)
+function AddLocalWorlds() {
+  var local_world_options = new Array();
+  local_world_options[0] = new WorldEntry("3", "Kothuria");
+  local_world_options[1] = new WorldEntry("4", "Social");
+  elem = document.getElementById("world_id");
+  if (elem && elem.options) {
+    for (var i = 0; i < local_world_options.length; ++i) {
+      if (!ContainsOption(elem, local_world_options[i].id)) {
+        var option = new Option();
+        option.value = local_world_options[i].id;
+        option.appendChild(document.createTextNode(local_world_options[i].text));
+        elem.appendChild(option);
+      }
+    }
+  } else {
+    alert("invalid element: world_id");
+  }
+}
+
+function HandleLoad() {
+  if (window.external) {
+    window.external.UpdateFormFields();
+  }
+  AddLocalWorlds();
+  UpdateWidgetDisplay();
+}
+   
+function ReloadSettings() {
+  if (window.external) {
+    window.external.ReloadSettings();
+    window.external.UpdateFormFields();
+  }
+  AddLocalWorlds();
+  UpdateWidgetDisplay();
+}
+
+function UpdateWidgetDisplay() {
+  var elem;
+  var has_error = false;
+  var has_status = false;
+  var has_world_list = false;
+  elem = document.getElementById("mv_error_text");
+  if (elem) {
+    if (elem.value == "") {
+      has_error = false;
+    } else {
+      has_error = true;
+      var txt_elem = document.getElementById("error");
+      txt_elem.innerText = elem.value;
+    }
+  } else {
+    alert("invalid element: mv_error_text");
+  }
+  elem = document.getElementById("mv_status_text");
+  if (elem) {
+    if (elem.value == "") {
+      has_status = false;
+    } else {
+      has_status = true;
+      var txt_elem = document.getElementById("status");
+      txt_elem.innerText = elem.value;
+    }
+  } else {
+    alert("invalid element: mv_status_text");
+  }
+  elem = document.getElementById("world_id");
+  if (elem) {
+    if (elem.options && elem.options.length > 1) {
+      has_world_list = true;
+    } else {
+      has_world_list = false;
+    }
+  } else {
+    alert("invalid element: world_id");
+  }
+
+  // alert('update widget display: ' + has_status + ', ' + has_error);
+
+  // Should we display the status widget?  
+  var error_status_table = document.getElementById("status_error_table");
+  if (has_error || has_status) {
+    // Show the error/status table
+    error_status_table.style.display = 'block';
+    var error_section = document.getElementById("error_section");
+    var status_section = document.getElementById("status_section");
+    if (has_error) {
+      error_section.style.display = 'block';
+    } else {
+      error_section.style.display = 'none';
+    }
+    if (has_status) {
+      status_section.style.display = 'block';
+    } else {
+      status_section.style.display = 'none';
+    }
+  } else {
+    error_status_table.style.display = 'none';
+  }
+  
+  // Should we display the world selection widget?
+  var world_section = document.getElementById("world_section");
+  if (has_world_list) {
+    world_section.style.display = 'block';
+  } else {
+    world_section.style.display = 'none';
+  }
+  var world_section_spacer = document.getElementById("world_section_spacer");
+  if (has_world_list) {
+    world_section_spacer.style.display = 'block';
+  } else {
+    world_section_spacer.style.display = 'none';
+  }
+}
+
+</script>
+  </head>
+
+  <body onload="HandleLoad();">
+<form>
+<input type="hidden" id="mv_error_text" value="">
+<input type="hidden" id="mv_status_text" value="">
+</form>
+    <h3>Multiverse Login</h3>
+<table width="100%">
+<tr>
+<td width="50%">
+<table class=form-noindent cellspacing=3 cellpadding=5 width="100%" bgcolor="#E8EEFA" id="login_table">
+<form action="#" id="login_form" method="post" onsubmit="return false;">
+<tr bgcolor=#E8EEFA>
+<td>
+  <table cellpadding="1" cellspacing="0" align="center" border="0" id="inner_login_table">
+    <tr>
+    <td><span class="mv label">Username: </span></td>
+    <td><input id="account" type="text" name="account" class="mv value"></td></tr>
+    
+    <tr>
+    <td><span class="mv label">Password: </span></td>
+    <td><input id="password" type="password" name="password" class="mv value"></td></tr>
+    
+    <tr>
+    <td align=right><input type="checkbox" id="remember_username" value="true" checked></td>
+    <td><span class="mv remember">Remember me on this computer</span></td></tr>
+    
+    <tr>
+    <td>&nbsp</td>
+    <td><input type="button" id="login_button" value="Sign in" class="mv button" onclick="window.external.Login()"></td></tr>
+
+    <tr id="world_section_spacer">			 
+    <td colspan="2">&nbsp;</td>
+
+    <tr id="world_section">
+    <td><span class="mv label">World Id: </span></td>
+    <td><span class="mv value">
+<select id="world_id">
+</select>
+    </span></td></tr>
+  </table>
+</td></tr>
+</form>
+</table>
+<br>
+<!-- This cell holds status and errors - we are still in the main table -->
+<table class=form-noindent cellspacing=3 cellpadding=5 width="100%" bgcolor=#cccccc id="status_error_table">
+<tr bgcolor=#e8e8e8>
+<td>
+  <table cellpadding="1" cellspacing="0" align="center" border="0" id="inner_status_table">
+    <tr id="status_section">
+      <td>
+        <span class="mv label">
+          Status:
+        </span>
+      </td>
+      <td>
+        <div id="status" class="statusmsg"></div>
+      </td>
+    </tr>
+
+    <tr id="error_section">
+      <td>
+        <span class="mv label">
+          Error: 
+        </span>
+      </td>
+      <td>
+        <div id="error" class="errormsg"></div>
+      </td>
+    </tr>
+  </table>
+</td>
+</tr>
+</table>
+
+<td width="100%" valign=top>
+Check out our top worlds<br>
+<span class="mv label">
+<ul>
+<li><a href="http://www.kothuria.com/" target="new_window">Kothuria</a> - the land before time
+<li><a href="http://www.secondlife.com/" target="new_window">Social world</a> - it's not just for cyber
+</ul>
+</span>
+</td>
+</tr></table>
+  </body>
+</html>

@@ -1,0 +1,641 @@
+// Author: claforte@feelingsoftware.com	
+
+global proc colladaPhysics()
+{
+	// Currently serves no purpose, except to force loading this file.
+}
+
+
+// Add all the necessary physics extensions to the current scene, 
+// as dynamic attributes.
+//
+global proc colladaPhysicsSceneAddAttr()
+{
+	colladaPhysicsIterateScene("colladaPhysicsAddAttr");
+}
+
+// Remove all necessary physics extensions in the scene.
+// Mostly used for debugging purposes.
+//
+global proc colladaPhysicsSceneDeleteAttr()
+{
+	colladaPhysicsIterateScene("colladaPhysicsDeleteAttr");
+}
+
+// Iterate through the scene. First, visit all rigid bodies,
+// then visit each shape attached to a rigid body.
+//
+global proc colladaPhysicsIterateScene(string $evaluator)
+{
+	$rigidBodies = `ls -typ rigidBody`;
+	int $numRigidBodies = size($rigidBodies);
+
+	// Iterate over each rigid body in the scene.
+	for ($i = 0; $i < $numRigidBodies; $i++)
+		colladaPhysicsIterateRigidBody($rigidBodies[$i], $evaluator);
+}
+
+global proc colladaPhysicsIterateRigidBody(string $rigidBody, string $evaluator)
+{
+	// Select the rigid body, then call the
+	// evaluator function.
+	eval $evaluator $rigidBody;
+
+	// For each shape that is part of
+	// the rigid body...
+	$shapes = `listConnections -sh on ($rigidBody + ".inputGeometryMsg")`;
+	int $numShapes = size($shapes);
+	for ($j = 0; $j < $numShapes; $j++)
+	{
+		// Select the shape, then call the
+		// evaluator.
+		string $shape = $shapes[$j];
+		eval $evaluator $shape;
+	}
+}
+
+global proc colladaPhysicsAddAttrRigidBodyDeferred(string $rigidBody)
+{
+	$command = "colladaPhysicsIterateRigidBody(\"" + $rigidBody + "\", \"colladaPhysicsAddAttr\");";
+	evalDeferred $command;
+}
+
+// Add physics extension attributes to the selected object.
+//
+global proc colladaPhysicsAddAttr(string $currentObject)
+{
+	$selectedType = `objectType $currentObject`;
+
+	if ($selectedType == "mesh" ||
+		$selectedType == "nurbSurface" ||
+		$selectedType == "subdiv")
+	{
+		// Add physicsStandIn attribute
+		if (!objExists($currentObject + ".physicsStandIn"))
+		{
+			addAttr -ln physicsStandIn -at "enum" -en "None:Box:Sphere:Convex hull:Capsule:Cylinder:Ellipsoid" $currentObject;
+			setAttr -e -keyable true ($currentObject + ".physicsStandIn");
+		}
+
+		// Add mass attribute
+		if (!objExists($currentObject + ".mass"))
+		{
+			addAttr -ln mass -at double  -dv 1 $currentObject;
+			setAttr -e -keyable true ($currentObject + ".mass");
+		}
+
+		// Add density attribute
+		if (!objExists($currentObject + ".density"))
+		{
+			addAttr -ln density -at double  -dv 1 $currentObject;
+			setAttr -e -keyable true ($currentObject + ".density");
+		}
+
+		// Add useMassOrDensity attribute
+		if (!objExists($currentObject + ".useMassOrDensity"))
+		{
+			addAttr -ln useMassOrDensity -at "enum" -en "Default:Mass:Density" $currentObject;
+			setAttr -e -keyable true ($currentObject + ".useMassOrDensity");
+		}
+	}
+	else if ($selectedType == "rigidBody")
+	{
+		// Add enableColladaPhysics attribute, set it to true.
+		if (!objExists($currentObject + ".enableColladaPhysics"))
+		{
+			addAttr -ln enableColladaPhysics -at bool $currentObject;
+			setAttr -e -keyable true ($currentObject + ".enableColladaPhysics");
+			setAttr ($currentObject + ".enableColladaPhysics") 1;
+		}
+	
+		// Add physicsStandIn attribute
+		if (!objExists($currentObject + ".physicsStandIn"))
+		{
+			addAttr -ln physicsStandIn -at "enum" -en "None:Box:Sphere:Convex hull:Capsule:Cylinder:Ellipsoid" $currentObject;
+			setAttr -e -keyable true ($currentObject + ".physicsStandIn");
+		}
+
+		// Add density attribute
+		if (!objExists($currentObject + ".density"))
+		{
+			addAttr -ln density -at double -dv 1 $currentObject;
+			setAttr -e -keyable true ($currentObject + ".density");
+		}
+
+		// Add useMassOrDensity attribute
+		if (!objExists($currentObject + ".useMassOrDensity"))
+		{
+			addAttr -ln useMassOrDensity -at "enum" -en "None:Use Mass:Use Density" $currentObject;
+			setAttr -e -keyable true ($currentObject + ".useMassOrDensity");
+		}
+
+		// Add inertiaTensor attribute (3 x 3)
+		if (false)//!objExists($currentObject + ".inertiaTensorX"))
+		{
+			addAttr -ln inertiaTensorX -at double3 $currentObject;
+			addAttr -ln inertiaTensorXX -at double -p inertiaTensorX $currentObject;
+			addAttr -ln inertiaTensorXY -at double -p inertiaTensorX $currentObject;
+			addAttr -ln inertiaTensorXZ -at double -p inertiaTensorX $currentObject;
+			setAttr -type double3 ($currentObject + ".inertiaTensorX") 0 0 0;
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorX");
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorXX");
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorXY");
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorXZ");
+	
+			addAttr -ln inertiaTensorY -at double3 $currentObject;
+			addAttr -ln inertiaTensorYX -at double -p inertiaTensorY $currentObject;
+			addAttr -ln inertiaTensorYY -at double -p inertiaTensorY $currentObject;
+			addAttr -ln inertiaTensorYZ -at double -p inertiaTensorY $currentObject;
+			setAttr -type double3 ($currentObject + ".inertiaTensorY") 0 0 0;
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorY");
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorYX");
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorYY");
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorYZ");
+
+			addAttr -ln inertiaTensorZ -at double3 $currentObject;
+			addAttr -ln inertiaTensorZX -at double -p inertiaTensorZ $currentObject;
+			addAttr -ln inertiaTensorZY -at double -p inertiaTensorZ $currentObject;
+			addAttr -ln inertiaTensorZZ -at double -p inertiaTensorZ $currentObject;
+			setAttr -type double3 ($currentObject + ".inertiaTensorZ") 0 0 0;
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorZ");
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorZX");
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorZY");
+			setAttr -e -keyable true ($currentObject + ".inertiaTensorZZ");
+		}
+	}
+	else
+	{
+		print ("Warning: the first selected object is not a shape or a rigid body.");
+	}
+	
+	setUITemplate -pst attributeEditorTemplate;
+
+}
+
+// Delete all physics extension attributes from the selected
+// object.
+//
+global proc colladaPhysicsDeleteAttr(string $currentObject)
+{
+	$selectedType = `objectType $currentObject`;
+
+	// Delete all physics attributes.
+	//
+	if ($selectedType == "mesh" ||
+		$selectedType == "nurbSurface" ||
+		$selectedType == "subdiv")
+	{
+		if (objExists($currentObject + ".physicsStandIn"))
+			deleteAttr($currentObject + ".physicsStandIn");
+		
+		if (objExists($currentObject + ".mass"))
+			deleteAttr($currentObject + ".mass");
+
+		if (objExists($currentObject + ".density"))
+			deleteAttr($currentObject + ".density");
+
+		if (objExists($currentObject + ".useMassOrDensity"))
+			deleteAttr($currentObject + ".useMassOrDensity");
+	}
+	else if ($selectedType == "rigidBody")
+	{
+		if (objExists($currentObject + ".enableColladaPhysics"))
+			deleteAttr($currentObject + ".enableColladaPhysics");
+
+		if (objExists($currentObject + ".physicsStandIn"))
+			deleteAttr($currentObject + ".physicsStandIn");
+
+		if (objExists($currentObject + ".density"))
+			deleteAttr($currentObject + ".density");
+
+		if (objExists($currentObject + ".useMassOrDensity"))
+			deleteAttr($currentObject + ".useMassOrDensity");
+		
+		if (objExists($currentObject + ".inertiaTensorX"))
+			deleteAttr($currentObject + ".inertiaTensorX");
+		
+		if (objExists($currentObject + ".inertiaTensorY"))
+			deleteAttr($currentObject + ".inertiaTensorY");
+		
+		if (objExists($currentObject + ".inertiaTensorZ"))
+			deleteAttr($currentObject + ".inertiaTensorZ");
+	}
+}
+
+
+
+global proc physicsIterateChildrenPhysicsShapes(
+    string $evaluatorPhysicsShape,
+    string $evaluatorOther)
+{
+    // Return dag objects only
+    string $dagNodes[];
+    $dagNodes = `selectedNodes -dagObjects`;
+
+    // If no selection, process all rigid bodies.
+    if (size($dagNodes) == 0)
+        $dagNodes = `ls -type rigidBody`;
+
+    for ($dagNode in $dagNodes)
+    {
+        $rigidBodyParent = findRigidBodyParent($dagNode);
+        if ($rigidBodyParent == "")
+        {
+            warning ("Not a rigid body or one of its children shapes: " + $dagNode);
+        }
+        else
+        {
+            //print ($dagNode + "\n");
+            
+            $children = `listRelatives -allDescendents -path $rigidBodyParent`;
+            for ($child in $children)
+            {
+                //print ("child: " + $child + "\n");
+            
+                $childType = `nodeType $child`;
+                if ($childType == "physicsShape" && $evaluatorPhysicsShape != "")
+                    eval $evaluatorPhysicsShape $child;
+                else if ($childType == "mesh" && $evaluatorOther != "")
+                    eval $evaluatorOther $child;    
+            }
+        }
+    }
+}
+
+
+// Returns:
+//   "" if no rigid body parent was found, or if the selected 
+//      object was an instance and no single rigid body parent 
+//      was found.
+//   otherwise the actual parent name is returned.
+//
+global proc string findRigidBodyParent(string $currentNode)
+{
+    $nodeType = `nodeType $currentNode`;
+    if ($nodeType == "rigidBody")
+    {
+        // The rigid body is already selected. Only need
+        // to return the parent.
+        $parents = `listRelatives -parent -path $currentNode`;
+        if (size($parents) > 1)
+        {
+            warning "Instance found in findRigidBodyParent";
+            return "";
+        }
+        
+        $currentNode = $parents[0];
+        return $currentNode;
+    }
+    
+    // Check if the current transform contains a rigid body as
+    // a direct child. If it doesn't, continue the search with 
+    // the parent's transform.
+    while (1)
+    {
+        if ($nodeType == "transform")
+        {
+            $children = `listRelatives -path $currentNode`;
+            for ($child in $children)
+            {
+                $childType = `nodeType $child`;
+                if ($childType == "rigidBody")
+                    return $currentNode;
+            }
+        }
+        
+        // Go up in the hierarchy.
+        $parents = `listRelatives -parent -path $currentNode`;
+        if (size($parents) > 1)
+        {
+            warning "Instance found in findRigidBodyParent";
+            return "";
+        }
+        else if (size($parents) == 0)
+        {
+            // Went up all the way to the world. Since rigid
+            // bodies need to have a parent, the search failed.
+            return "";
+        }
+        
+        $currentNode = $parents[0];
+        $nodeType = `nodeType $currentNode`;
+    }
+}
+
+// Create a physics shape. Expects one rigid body transform
+// (or one of its children/grandchildren/etc.) to be selected.
+// Will parent the physics shape to the rigid body transform.
+// Returns: the name of the created shape.
+//
+global proc string physicsCreateShape(int $shapeType)
+{
+    // Prepare an error message.
+    $errorMsg = "Select one rigid body or one of its shapes. " +
+        "Make sure to select one instance in the DAG.";
+
+    $selection = `ls -selection`;
+    if (size($selection) != 1)
+    {
+        error $errorMsg;
+        return "";
+    }
+
+    $rigidBodyParent = findRigidBodyParent($selection[0]);
+    if ($rigidBodyParent == "")
+    {
+        error $errorMsg;
+        return "";
+    }
+
+    $shape = `createNode physicsShape`;
+    
+    // Find the physics shape parent transform.
+    // We will parent it to the parent of the rigid
+    // body found above. (Sorry for the confusing sentence.)
+    $shapeParents = `listRelatives -parent -path $shape`;
+    if (size($shapeParents) != 1)
+    {
+        error "This error should never occur, since this is a new physicsShape.";
+        return "";
+    }
+    $shapeParent = $shapeParents[0];
+    
+    // Parent to transform found above.
+    parent $shapeParent $rigidBodyParent;
+    
+    // Set the shape type.
+    setAttr ($shape + ".shapeType") $shapeType;
+    
+    // Automatically show the physics shapes and
+    // template the original shapes.
+    physicsShowPhysicsShapes();
+    
+    // Lock the scale and shear attributes on the
+    // parent transform.
+    setAttr -l true ($shapeParent + ".scale");
+    setAttr -l true ($shapeParent + ".shear");
+    
+    select $shape;
+    ShowManipulators;
+    
+    return $shape;
+}
+
+global proc physicsShowNonPhysicsShapes()
+{
+    physicsIterateChildrenPhysicsShapes("hide", "physicsShowUntemplated");
+}
+
+global proc physicsShowPhysicsShapes()
+{
+    physicsIterateChildrenPhysicsShapes("physicsShowUntemplated", "physicsShowTemplated");
+}
+
+global proc physicsShowShapesWindow()
+{
+    // Set $developing to false when you're ready
+    // to release.
+    int $developing = true;
+    if ($developing && `window -exists myWindow`)
+        deleteUI myWindow;
+        
+    if (!`window -exists myWindow`)
+    {
+        if ($developing)
+            windowPref -remove myWindow;
+        window -title "My Window" -resizeToFitChildren true myWindow;
+        columnLayout -adjustableColumn true;
+        //button -label "Template" -command "toggle -state on -template;";        
+        //button -label "Untemplate" -command "toggle -state off -template;";        
+        //button -label "Hide" -command "hide;";        
+        //button -label "ShowHidden" -command "showHidden;";        
+        
+        button -label "Box" -command "physicsCreateShape(1);";
+        button -label "Sphere" -command "physicsCreateShape(2);";
+        button -label "Capsule" -command "physicsCreateShape(4);";
+        
+        button -label "Show Regular Shapes"
+            -command "physicsShowNonPhysicsShapes";       
+        
+        button -label "Show Physics Shapes" 
+            -command "physicsShowPhysicsShapes";        
+
+        
+    }
+    showWindow myWindow;
+}
+
+
+//physicsShowShapesWindow();
+
+global proc physicsShowUntemplated(string $node)
+{
+    if ($node == "")
+    {
+        // No objects provided. Run on selection.
+        $nodes = `ls -selection`;
+        for ($n in $nodes)
+            physicsShowUntemplated($n);
+        return;
+    }
+    
+    showHidden $node;
+    setAttr ($node + ".template") 0;
+}
+
+global proc physicsShowTemplated(string $node)
+{
+    if ($node == "")
+    {
+        // No objects provided. Run on selection.
+        $nodes = `ls -selection`;
+        for ($n in $nodes)
+            physicsShowTemplated($n);
+        return;
+    }
+
+    showHidden $node;
+    setAttr ($node + ".template") 1;
+}
+
+global proc physicsHideUntemplated(string $node)
+{
+    if ($node == "")
+    {
+        // No objects provided. Run on selection.
+        $nodes = `ls -selection`;
+        for ($n in $nodes)
+            physicsHideUntemplated($n);
+        return;
+    }
+
+    showHidden $node;
+    setAttr ($node + ".template") 0;
+}
+
+//-------------------------------------------------------------
+// NxRigidBody creation
+//-------------------------------------------------------------
+
+
+global proc string nxGetTransformOrParent(string $dagNode)
+{
+    // If the selected dag node is not a transform,
+    // return the parent transform instead.
+    //
+    $nodeType = `nodeType $dagNode`;
+    if ($nodeType != "transform")
+    {
+        $parents = `listRelatives -parent -path $dagNode`;
+        if (size($parents) > 1)
+        {
+            warning "Instance found in nxGetTransformOrParent";
+            return "";
+        }
+        
+        $dagNode = $parents[0];
+    }
+
+    return $dagNode;
+}
+
+global proc int nxConnectTransformToSolver(string $transform, string $rigidSolver)
+{
+	$nextIndex = `getAttr ($rigidSolver + ".nri")`;
+
+	// Connect translates and rotates.
+	connectAttr -f ("nxRigidSolver1.translate[" + $nextIndex + "].translateX") ($transform + ".translateX");
+	connectAttr -f ("nxRigidSolver1.translate[" + $nextIndex + "].translateY") ($transform + ".translateY");
+	connectAttr -f ("nxRigidSolver1.translate[" + $nextIndex + "].translateZ") ($transform + ".translateZ");
+	connectAttr -f ("nxRigidSolver1.rotate[" + $nextIndex + "].rotateX") ($transform + ".rotateX");
+	connectAttr -f ("nxRigidSolver1.rotate[" + $nextIndex + "].rotateY") ($transform + ".rotateY");
+	connectAttr -f ("nxRigidSolver1.rotate[" + $nextIndex + "].rotateZ") ($transform + ".rotateZ");
+
+	setAttr ($rigidSolver + ".nri") ($nextIndex + 1);
+    
+    return $nextIndex;
+}
+
+global proc int nxAttachShapesToRigidBody(string $rigidBodyParent, string $rigidBody)
+{
+    $children = `listRelatives -allDescendents -path $rigidBodyParent`;
+
+	int $numProcessedChildren = 0;
+    
+    for ($child in $children)
+    {
+        //print ("child: " + $child + "\n");
+    
+        $childType = `nodeType $child`;
+        if ($childType == "mesh")
+		{
+			connectAttr ($child + ".outMesh") ($rigidBody + ".shapes");
+			$numProcessedChildren++;
+		}
+    }
+    
+    if ($numProcessedChildren == 0)
+    {
+		error "in nxAttachShapesToRigidBody, no children shapes found.";
+    }
+
+	return $numProcessedChildren;
+}
+
+global proc string nxCreateRigidBody(string $dagTransform, string $rigidSolver, string $rigidBodyName)
+{
+    // Find the transform where the rigid body will be
+    // created.
+    $dagTransform = nxGetTransformOrParent($dagTransform);
+    if ($dagTransform == "")
+    {
+		error "error in nxCreateRigidBody, calling nxGetTransformOrParent() returned nothing.";
+        return "";
+    }
+
+    // TODO: Verify that no rigid body is already assigned to this
+    // transform.
+        
+    // Create rigid body node.
+    $rigidBody = `createNode -parent $dagTransform nxRigidBody`;
+    
+    // TODO: Lock the dag path of the rigid body.
+
+	print "in nxCreateRigidBody: setting the initial position and orientation.\n";
+
+    // Preserve the initial position.
+    //
+    $tx = `getAttr ($dagTransform + ".translateX")`;
+    setAttr ($rigidBody + ".initialPositionX") $tx;
+    $ty = `getAttr ($dagTransform + ".translateY")`;
+    setAttr ($rigidBody + ".initialPositionY") $ty;
+    $tz = `getAttr ($dagTransform + ".translateZ")`;
+    setAttr ($rigidBody + ".initialPositionZ") $tz;
+
+	print ("Initial position: " + $tx + ", " + $ty + ", " + $tz + "\n");
+
+    // Preserve the initial orientation.
+    //
+    $rx = `getAttr ($dagTransform + ".rotateX")`;
+    setAttr ($rigidBody + ".initialOrientationX") $rx;
+    $ry = `getAttr ($dagTransform + ".rotateY")`;
+    setAttr ($rigidBody + ".initialOrientationY") $ry;
+    $rz = `getAttr ($dagTransform + ".rotateZ")`;
+    setAttr ($rigidBody + ".initialOrientationZ") $rz;
+ 
+	// If the solver name was not provided, check if a default solver exists.
+	// If it doesn't, create it.
+	if ($rigidSolver == "")
+	{
+		$rigidSolver = "nxRigidSolver1";
+		
+		$oldsel = `ls -selection`;
+
+		// The following call automatically creates the default solver 
+		// if it doesn't exist.
+		eval "nxRigidSolver";
+		
+		select $oldsel;
+	}
+
+    // Connect the rigid body's parent transform to the solver.
+    int $rigidBodyId = `eval nxConnectTransformToSolver $dagTransform $rigidSolver`;
+    
+	// Connect the rigid body to the solver, to make sure that the 
+	// rigid body's attributes are evaluated when the solver executes its compute()
+	// method.
+	connectAttr -f ($rigidBody + ".toSolver") ($rigidSolver + ".rigidBodies[" + $rigidBodyId + "]");
+
+	// Connect the shapes to the rigid body.
+	int $dummy = `nxAttachShapesToRigidBody $dagTransform $rigidBody`;
+
+    // Assign rigid body id.
+    setAttr ($rigidBody + ".rigidBodyId") $rigidBodyId;
+    
+    // TODO: Lock the rigid body id.
+
+	return $rigidBody;
+}
+
+global proc nxDisconnectRigidBody(string $rigidBodyName)
+{
+	/*
+    $connections = `listConnections ($rigidBodyName + ".toSolver")`;
+	
+    if (size($connections) != 1)
+    {
+        error("Rigid body " + $rigidBodyName + " is not connected to a solver.");
+        return;
+    }
+    
+    $solver = $connections[0];
+    */
+    
+    $solver = "nxRigidBody1";
+
+    $rigidBodyId = `getAttr ($rigidBodyName + ".rigidBodyId")`;
+
+	removeMultiInstance -b true ($solver + ".translate[" + $rigidBodyId + "]");
+	removeMultiInstance -b true ($solver + ".rotate[" + $rigidBodyId + "]");
+}
+

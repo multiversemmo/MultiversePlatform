@@ -1,0 +1,23 @@
+#!/bin/sh
+
+if [ "X$MV_HOME" = "X" ]; then
+    export MV_HOME=`dirname $0`/..
+fi
+
+MVJAR="$MV_HOME/dist/lib/multiverse.jar"
+MARSJAR="$MV_HOME/dist/lib/mars.jar"
+GETOPT="$MV_HOME/other/java-getopt-1.0.11.jar"
+
+if [ $(uname -o) == "Cygwin" ]; then
+    MV_CLASSPATH="$MVJAR;$MARSJAR;$GETOPT;$JAVA_HOME/lib/tools.jar"
+else
+    MV_CLASSPATH="$MVJAR:$MARSJAR:$GETOPT:$JAVA_HOME/lib/tools.jar"
+fi
+
+if [ "X$JAVA_HOME" = "X" ]; then
+    java -cp $MV_CLASSPATH multiverse.management.CommandMain "$@"
+else
+    "$JAVA_HOME/bin/java" -cp "$MV_CLASSPATH" multiverse.management.CommandMain "$@"
+fi
+
+

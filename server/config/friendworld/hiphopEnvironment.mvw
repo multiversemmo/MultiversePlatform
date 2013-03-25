@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<World Name="hiphopEnvironment" Version="2">
+  <CameraPosition x="132243" y="59204.5" z="-482053.1" />
+  <CameraOrientation x="0.002258216" y="-0.9659021" z="-0.2587608" w="-0.008428772" />
+  <Terrain>
+    <algorithm>HybridMultifractalWithFloor</algorithm>
+    <xOffset>0</xOffset>
+    <yOffset>0</yOffset>
+    <zOffset>0</zOffset>
+    <h>0.25</h>
+    <lacunarity>2</lacunarity>
+    <octaves>8</octaves>
+    <metersPerPerlinUnit>500</metersPerPerlinUnit>
+    <heightScale>0</heightScale>
+    <heightOffset>0</heightOffset>
+    <fractalOffset>0.7</fractalOffset>
+    <heightFloor>20</heightFloor>
+  </Terrain>
+  <TerrainDisplay Type="AutoSplat" UseParams="True" UseGeneratedShadeMask="True" TextureTileSize="5" SandToGrassHeight="50000" GrassToRockHeight="250000" RockToSnowHeight="450000" SandTextureName="splatting_sand.dds" GrassTextureName="splatting_grass.dds" RockTextureName="splatting_rock.dds" SnowTextureName="splatting_snow.dds" ShadeMaskTextureName="" />
+  <Ocean DisplayOcean="False" UseParams="True" WaveHeight="1000" SeaLevel="10000" BumpScale="0.5" BumpSpeedX="-0.005" BumpSpeedZ="0" TextureScaleX="0.015625" TextureScaleZ="0.0078125">
+    <DeepColor R="0" G="0" B="0.1" />
+    <ShallowColor R="0" G="0.3" B="0.5" />
+  </Ocean>
+  <Skybox Name="nyts_skybox" />
+  <GlobalFog Far="150000" Near="25000">
+    <Color R="0.1529412" G="0.1686275" B="0.3372549" />
+  </GlobalFog>
+  <GlobalAmbientLight>
+    <Color R="0.4352941" G="0.6352941" B="0.5568628" />
+  </GlobalAmbientLight>
+  <GlobalDirectionalLight Azimuth="155" Zenith="-2">
+    <Direction x="-0.4223609" y="0.0348995" z="0.9057556" />
+    <Diffuse R="0.7372549" G="0.7490196" B="0.509804" />
+    <Specular R="0.3098039" G="0.5137255" B="0.2862745" />
+  </GlobalDirectionalLight>
+  <WorldCollection Name="Environment" Filename="hiphopEnvironment.mvw-Environment.mwc" />
+</World>

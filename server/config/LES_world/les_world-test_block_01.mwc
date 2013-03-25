@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="10_10_B_02" Mesh="LES_building_10x20_A.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-54062.24" y="166274.5" z="-37876.38" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building10x20_A-lib.0" MaterialName="LES_building_10x20_A.LES_building_10x20_A_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="10_10_B_01" Mesh="LES_building_10x10_B.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="5602.609" y="166274.5" z="-14224.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building10x10_B-lib.0" MaterialName="LES_building_10x10_B.LES_building10x10_B" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="10_10_A_01" Mesh="LES_building_10x10_A.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-126586.7" y="166274.5" z="-4600.438" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building10x10_A-lib.0" MaterialName="LES_building_10x10_A.LES_building10x10_A" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawn2" TerrainOffset="990" AllowHeightAdjustment="True">
+    <Position x="-95036.96" y="167264.5" z="15566.59" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <StaticObject Name="10_50_A_01" Mesh="LES_building_10x50_A.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-57562.62" y="166274.5" z="-84433.41" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building10x50_A-lib.0" MaterialName="LES_building_10x50_A.LES_building10x50_A" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="40_50_B_01" Mesh="LES_building_40x50_B.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-123389.7" y="166274.5" z="-83914.1" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building40x50_B" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="40_50_B_02" Mesh="LES_building_40x50_B.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-63712.73" y="166274.5" z="-153973.5" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building40x50_B-lib.0" MaterialName="LES_building_40x50_B.LES_building40x50_B" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_30_B_01" Mesh="LES_building_25x30_B.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-46031.15" y="166274.5" z="-83533.34" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building25x30_B-lib.0" MaterialName="LES_building_25x30_B.LES_building25x30_B" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="20_50_C_01" Mesh="LES_building_20x50_C.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-2710.805" y="166274.5" z="-86415.59" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building20x50_C-lib.0" MaterialName="LES_building_20x50_C.LES_building_20x50_C_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="35_30_01" Mesh="LES_building_35x30_C.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-66355.44" y="166274.5" z="-9415.578" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building35x30_C-lib.0" MaterialName="LES_building_35x30_C.LES_building35x30_C" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="40_30_B_01" Mesh="LES_building_40x30_B.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="5994.234" y="166274.5" z="49346.73" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_40x30_B-lib.0" MaterialName="LES_building_40x30_B.LES_building_40x30_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="25_50_B_01" Mesh="LES_building_25x50_B.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="47994.23" y="166274.5" z="18195.42" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building_25x30_B-lib.0" MaterialName="LES_building_25x50_B.LES_building_25x50_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="20_20_B_01" Mesh="LES_building_20x20_B.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-73037.15" y="166274.5" z="-83983.52" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building20x20_B-lib.0" MaterialName="LES_building_20x20_B.LES_building_20x20_B_macro_diffuse" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="35_10_A_01" Mesh="LES_building_35x10_A.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-49005.77" y="161574.7" z="45925.38" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="0" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building35x10_A-lib.0" MaterialName="LES_building_35x10_A.LES_building35x10_A" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <StaticObject Name="10_40_C_01" Mesh="LES_building_10x40_C.mesh" TerrainOffest="0" AllowHeightAdjustment="True" PerceptionRadius="1000000" CastShadows="True">
+    <Position x="-42453.2" y="166274.5" z="-108983.5" />
+    <Scale x="1" y="1" z="1" />
+    <Rotation x="0" y="90" z="0" />
+    <SubMeshes>
+      <SubMeshInfo Name="LES_building10x40_C-lib.0" MaterialName="LES_building_10x40_C.LES_building10x40_C" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+</WorldObjectCollection>

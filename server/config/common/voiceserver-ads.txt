@@ -1,0 +1,8 @@
+# Agent message type advertisements
+# See: http://update.multiverse.net/wiki/index.php/Multiverse_Messaging_System#Advertisements
+
+mv.OBJINFO_REQ
+mv.GET_INSTANCE_INFO
+mv.VOICE_MEMBER_ADDED
+mv.VOICE_MEMBER_REMOVED
+mv.PLAYER_IGNORE_LIST_REQ

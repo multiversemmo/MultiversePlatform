@@ -1,0 +1,203 @@
+I have been using speex-1.2beta1 dll in our voice application written with
+C#. In order to use Speex correctly firstly I advice to you examination
+speexenc and speexdec projects.
+
+I have used unsafe code and fixed statements in C#. I have added following
+method to library and I used that instead of speex_encoder_init simply.
+
+void *speex_encoder_init_new(int modeID)
+{
+	const SpeexMode *mode;
+	mode = speex_lib_get_mode(modeID);
+	return mode->enc_init(mode);
+}
+
+Maybe following codes that I have been using in a class can help you.
+/* structs */
+public struct SpeexBits 
+{
+	char *chars;		/* "raw" data */
+	int   nbBits;		/* Total number of bits stored in the stream*/
+	int   charPtr;		/* Position of the byte "cursor" */
+	int   bitPtr;		/* Position of the bit "cursor" within the current char */
+	int   owner;		/* Does the struct "own" the "raw" buffer (member "chars") */
+	int   overflow;		/* Set to one if we try to read past the valid data */
+	int   buf_size;		/* Allocated size for buffer */
+	int   reserved1;	/* Reserved for future use */
+	void *reserved2;	/* Reserved for future use */
+}
+...
+
+/* EXPORTED ENCODER METHODS */
+
+[DllImport("libspeex.dll")]
+	public static extern void *speex_encoder_init_new(int modeID);
+
+[DllImport("libspeex.dll")]
+	public static extern int speex_encoder_ctl(void *state, int request, void *ptr);
+
+/* default this function doesn't exist but same job is done speex_encoder_ctl function too. */
+[DllImport("libspeex.dll")]
+	public static extern int speex_encoder_settings(void *state, int complexity, int samplingrate, int quality, int bitrate);
+
+[DllImport("libspeex.dll")]
+	public static extern int speex_encode_int(void *state, short *input, SpeexBits *bits);	// IntPtr
+...
+
+/* EXPORTED BIT-OPERATION METHODS */
+
+[DllImport("libspeex.dll")]
+	public static extern void speex_bits_init(SpeexBits *bits);
+
+[DllImport("libspeex.dll")]
+	public static extern int speex_bits_write(SpeexBits *bits, IntPtr bytes, int max_len);	// char *
+...
+
+/* some global variables */
+int frame_size;	
+void *enc_state;
+SpeexBits enc_bits;
+short[] input_frame;
+...
+
+/* from Constructor */
+...
+enc_bits = new SpeexBits();
+enc_state = speex_encoder_init_new(0);
+speex_encoder_settings(enc_state, 3, 8000, 10, 11000);
+fixed (int *fSize = &frame_size)
+{
+	speex_encoder_ctl(enc_state, SPEEX_GET_FRAME_SIZE, fSize);
+}
+fixed (SpeexBits *bitsAdd = &enc_bits)
+{
+	speex_bits_init(bitsAdd);
+}
+/* MAX_FRAME_SIZE is a constant and is 2000 */
+input_frame = new short[MAX_FRAME_SIZE];
+
+/* From Encode Function */
+/* after voice data capture */
+fixed (short *inputAdd = input_frame)
+	fixed (SpeexBits *bitsAdd = &enc_bits)
+	{
+		speex_encode_int(enc_state, inputAdd, bitsAdd);
+		encodedDataSize = speex_bits_write(bitsAdd, enc_outputAdd, MAX_FRAME_BYTES);
+	}
+fixed (SpeexBits *bitsAdd = &enc_bits)
+{
+	speex_bits_reset(bitsAdd);
+}
+
+
+-----Original Message-----
+From: speex-dev-request@xxxxxxxx [mailto:speex-dev-request@xxxxxxxx] 
+Sent: Thursday, December 28, 2006 10:00 PM
+To: speex-dev@xxxxxxxx
+Subject: Speex-dev Digest, Vol 31, Issue 29
+
+Send Speex-dev mailing list submissions to
+        speex-dev@xxxxxxxx
+
+To subscribe or unsubscribe via the World Wide Web, visit
+        http://lists.xiph.org/mailman/listinfo/speex-dev
+or, via email, send a message with subject or body 'help' to
+        speex-dev-request@xxxxxxxx
+
+You can reach the person managing the list at
+        speex-dev-owner@xxxxxxxx
+
+When replying, please edit your Subject line so it is more specific
+than "Re: Contents of Speex-dev digest..."
+
+
+Today's Topics:
+
+   1. using speex in C# (SAITAMA Taro)
+
+
+----------------------------------------------------------------------
+
+Message: 1
+Date: Thu, 28 Dec 2006 17:09:08 +0900
+From: SAITAMA Taro <game72@xxxxxxxxx>
+Subject: [Speex-dev] using speex in C#
+To: speex-dev@xxxxxxxx
+Message-ID: <20061228170814.9F7E.GAME72@xxxxxxxxx>
+Content-Type: text/plain; charset="US-ASCII"
+
+Hi,
+
+I have read the message below,
+http://lists.xiph.org/pipermail/speex-dev/2006-October/004924.html
+and try to use P/Invoke to use speex in C#.
+
+This is a part of my code.
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct SpeexBits {
+                IntPtr chars;                   // "raw" data
+                int nbBits;                     // Total number of bits
+stored in the stream
+                int charPtr;                    // Position of the byte
+"cursor"
+                int bitPtr;                     // Position of the bit
+"cursor" within the current char
+                int owner;                      // Does the struct "own" the
+"raw" buffer (member "chars")
+                int overflow;                   // Set to one if we try to
+read past the valid data
+                int buf_size;                   // Allocated size for buffer
+                int reserved1;                  // Reserved for future use
+                IntPtr reserved2;               // Reserved for future use
+        }
+
+        [DllImport("libspeex.dll")]
+        public static extern IntPtr speex_lib_get_mode(int mode);       //
+Obtain one of the modes available
+
+        [DllImport("libspeex.dll")]
+        public static extern IntPtr speex_encoder_init(ref SpeexMode mode);
+
+        [DllImport("libspeex.dll")]
+        public static extern void speex_bits_init(ref SpeexBits bits);
+
+        [DllImport("libspeex.dll")]
+        public static extern int speex_encode_int(IntPtr state, Int16[] in_,
+ref SpeexBits bits);
+
+        SpeexBits bits = new SpeexBits();
+        SpeexMode mode =
+(SpeexMode)Marshal.PtrToStructure(Speex.speex_lib_get_mode(1),
+typeof(SpeexMode));
+        Speex.speex_bits_init(ref bits);
+        IntPtr enc_state = Speex.speex_encoder_init(ref mode);
+
+        Int16[] CaptureData = null;
+        (CaptureData receives data recorded from mic...)
+        CaptureData = (Int16[])dsCapBuffer.Read(NextCaptureOffset,
+typeof(Int16), LockFlag.None, LockSize);
+
+        Speex.speex_bits_reset(ref bits);
+        Speex.speex_encode_int(enc_state, CaptureData, ref bits);       //
+at this point, System.AccessViolationException occurs
+
+Whould anyone tell me what wrong about my code?
+Please help me.
+
+Regards
+
+Kaihong
+
+
+------------------------------
+
+_______________________________________________
+Speex-dev mailing list
+Speex-dev@xxxxxxxx
+http://lists.xiph.org/mailman/listinfo/speex-dev
+
+
+End of Speex-dev Digest, Vol 31, Issue 29
+*****************************************
+

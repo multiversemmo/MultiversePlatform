@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="gothroom" Mesh="FRW_gothroom.mesh" TerrainOffest="10" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="False" PerceptionRadius="0" CastShadows="True" Azimuth="0" Zenith="90" Targetable="False">
+    <Position x="108595.1" y="20010" z="-208292.2" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <SubMeshes>
+      <SubMeshInfo Name="bed_01-lib.0" MaterialName="FRW_gothroom.gothRed" Show="True" />
+      <SubMeshInfo Name="cabinet_01-lib.0" MaterialName="FRW_gothroom.gothWood" Show="True" />
+      <SubMeshInfo Name="pic_sml_01-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_sml_02-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_secret_01-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_secret_02-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_sml_03-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_sml_04-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_sml_05-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_sml_06-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_sml_07-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_sml_08-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_sml_09-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_sml_10-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_secret_lrg_01-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_lrg_01-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_lrg_02-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_lrg_03-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_lrg_04-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_lrg_05-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_lrg_06-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_lrg_07-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_lrg_08-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="pic_lrg_09-lib.0" MaterialName="FRW_gothroom.gothPics" Show="True" />
+      <SubMeshInfo Name="rug_01-lib.0" MaterialName="FRW_gothroom.gothBlack" Show="True" />
+      <SubMeshInfo Name="tv_livingroom_01-lib.0" MaterialName="FRW_gothroom.gothBlack" Show="True" />
+      <SubMeshInfo Name="tv_screen_01-lib.0" MaterialName="FRW_gothroom.furniture" Show="True" />
+      <SubMeshInfo Name="goth_Room_01-lib.0" MaterialName="FRW_gothroom.gothLightBlue" Show="True" />
+      <SubMeshInfo Name="pic_secret_lrg_02-lib.0" MaterialName="FRW_gothroom.furniture" Show="True" />
+      <SubMeshInfo Name="pic_secret_03-lib.0" MaterialName="FRW_gothroom.furniture" Show="True" />
+      <SubMeshInfo Name="pic_secret_04-lib.0" MaterialName="FRW_gothroom.furniture" Show="True" />
+      <SubMeshInfo Name="candles-lib.0" MaterialName="FRW_gothroom.gothGold" Show="True" />
+      <SubMeshInfo Name="candles01-lib.0" MaterialName="FRW_gothroom.gothGold" Show="True" />
+      <SubMeshInfo Name="candles02-lib.0" MaterialName="FRW_gothroom.gothGold" Show="True" />
+      <SubMeshInfo Name="candles03-lib.0" MaterialName="FRW_gothroom.gothGold" Show="True" />
+      <SubMeshInfo Name="curtain05-lib.0" MaterialName="FRW_gothroom.gothRed" Show="True" />
+      <SubMeshInfo Name="curtain06-lib.0" MaterialName="FRW_gothroom.gothRed" Show="True" />
+      <SubMeshInfo Name="curtain07-lib.0" MaterialName="FRW_gothroom.gothRed" Show="True" />
+      <SubMeshInfo Name="dresser_tall_01-lib.0" MaterialName="FRW_gothroom.gothWood" Show="True" />
+      <SubMeshInfo Name="table_fancy_01-lib.0" MaterialName="FRW_gothroom.gothWood" Show="True" />
+      <SubMeshInfo Name="table_fancy_01_ncl1_1-lib.0" MaterialName="FRW_gothroom.gothWood" Show="True" />
+      <SubMeshInfo Name="dresser_amoire_01-lib.0" MaterialName="FRW_gothroom.gothWood" Show="True" />
+      <SubMeshInfo Name="sofa_fancy_01-lib.0" MaterialName="FRW_gothroom.gothRed" Show="True" />
+      <SubMeshInfo Name="chair_fancy_02-lib.0" MaterialName="FRW_gothroom.gothRed" Show="True" />
+      <SubMeshInfo Name="chair_fancy_03-lib.0" MaterialName="FRW_gothroom.gothRed" Show="True" />
+      <SubMeshInfo Name="windows-lib.0" MaterialName="FRW_gothroom.gothBlack" Show="True" />
+      <SubMeshInfo Name="ceiling-lib.0" MaterialName="FRW_gothroom.gothWhite" Show="True" />
+      <SubMeshInfo Name="bedPost-lib.0" MaterialName="FRW_gothroom.gothBlack" Show="True" />
+      <SubMeshInfo Name="Box01-lib.0" MaterialName="BaseWhite" Show="True" />
+      <SubMeshInfo Name="gothFloor_01-lib.0" MaterialName="FRW_gothroom.gothBrown" Show="True" />
+    </SubMeshes>
+  </StaticObject>
+  <Waypoint Name="spawnPt" TerrainOffset="20" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="113990.5" y="20020" z="-199083.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="stuck" TerrainOffset="20" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="113990.5" y="20020" z="-199083.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

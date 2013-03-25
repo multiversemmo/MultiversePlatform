@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <StaticObject Name="FRW_hardrock" Mesh="FRW_club.mesh" TerrainOffest="5131" AllowHeightAdjustment="True" WorldViewSelect="True" AcceptObjectPlacement="True" PerceptionRadius="0" CastShadows="True" Azimuth="-180" Zenith="90" Targetable="False">
+    <Position x="83891" y="25131" z="-320690.3" />
+    <Scale x="1" y="1" z="1" />
+    <Orientation x="0" y="-1" z="0" w="-4.371139E-08" />
+    <SubMeshes>
+      <SubMeshInfo Name="club_stage-lib.0" MaterialName="FRW_club.stage_mat" Show="True" />
+      <SubMeshInfo Name="club_djbooth-lib.0" MaterialName="FRW_club.djbooth" Show="True" />
+      <SubMeshInfo Name="entry-lib.0" MaterialName="FRW_club.entry_mat" Show="True" />
+      <SubMeshInfo Name="club_walls-lib.0" MaterialName="FRW_club.walls_mat" Show="True" />
+      <SubMeshInfo Name="club_pictures-lib.0" MaterialName="FRW_club.chairstablesbooths_mat" Show="True" />
+      <SubMeshInfo Name="club_bar-lib.0" MaterialName="FRW_club.bar_mat" Show="True" />
+      <SubMeshInfo Name="club_lounge-lib.0" MaterialName="FRW_club.lounge_mat" Show="True" />
+      <SubMeshInfo Name="entry_decal_01-lib.0" MaterialName="FRW_club.light_decal_01" Show="True" />
+      <SubMeshInfo Name="club_decal_orange-lib.0" MaterialName="FRW_club.light_decal_02_orange" Show="True" />
+      <SubMeshInfo Name="club_lounge_decal_02_pink-lib.0" MaterialName="FRW_club.light_decal_02_pink" Show="True" />
+      <SubMeshInfo Name="entry_decal_03-lib.0" MaterialName="FRW_club.light_decal_03" Show="True" />
+      <SubMeshInfo Name="club_chairs_tables-lib.0" MaterialName="FRW_club.walls_mat" Show="True" />
+      <SubMeshInfo Name="club_floor_ceiling-lib.0" MaterialName="FRW_club.walls_mat" Show="True" />
+    </SubMeshes>
+    <NameValuePairs>
+      <NameValuePair Name="DisplayGroup" Value="ClubInterior" Type="String" />
+    </NameValuePairs>
+  </StaticObject>
+  <Waypoint Name="hardrock" TerrainOffset="1470" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="75292.31" y="21470" z="-309176.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

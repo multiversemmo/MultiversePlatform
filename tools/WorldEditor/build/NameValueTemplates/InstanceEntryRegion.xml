@@ -1,0 +1,22 @@
+<NameValueTemplate>
+ <ObjectTypes><!-- This lists the types of objects that this Template would be appropriate for -->
+   <Region/>
+ </ObjectTypes>
+ <Name>InstanceEntryRegion</Name>
+ <Properties>
+   <Property>
+     <Name>onEnter</Name>
+     <Type>String</Type>
+     <Default>instanceEntry</Default>
+   </Property>
+   <Property>
+     <Name>instanceName</Name>
+     <Type>String</Type>
+   </Property>
+   <Property>
+     <Name>locMarker</Name>
+     <Type>String</Type>
+   </Property>
+ </Properties>
+</NameValueTemplate>
+

@@ -1,0 +1,1054 @@
+<Wix xmlns='http://schemas.microsoft.com/wix/2003/01/wi'>
+	<Product Id='2A42414B-1E07-454b-97C4-4789D8DBD338'
+					 Name='Multiverse Tools' 
+					 Language='1033'
+					 Codepage='1252'
+					 UpgradeCode='E9793C12-E6D6-4c5e-A38A-A3D932485771'
+					 Version='0.7.050714'
+					 Manufacturer='Multiverse Inc.'>
+		<Package Id='????????-????-????-????-????????????'
+						 Description='Multiverse Tools Installer'
+						 Comments='Multiverse Tools'
+						 Manufacturer='Multiverse Inc.'
+						 InstallerVersion='200'
+						 Compressed='yes' />
+		<Media Id='1'
+					 Cabinet='product.cab'
+					 EmbedCab='yes' />
+		<?include ui.wxi?>
+		<Directory Id='TARGETDIR' Name='SourceDir'>
+			<Directory Id='DesktopFolder' Name='Desktop' />
+			<Directory Id='ProgramMenuFolder' Name='PMenu' LongName='Programs'>
+				<Directory Id='ProgramMenuDir' Name='FOO.BAR' LongName='Multiverse Tools' />
+			</Directory> <!-- Close ProgramMenuFolder -->
+			<Directory Id='ProgramFilesFolder'
+								 Name='PFiles'>
+				<Directory Id='MULTITOOLDIR' Name='MVTOOLS' LongName='Multiverse Tools'>
+					<Directory Id='MVLicensesDir'
+										 Name='Licenses' >						
+						<Component Id='MVLicenseFiles'
+											 Guid='F6D36DE3-7B32-4d77-A7E9-D094C0019F11'>
+							<File Id='TGthird_party.txt'
+										DiskId='1'
+										Name='FOO.TXT'
+										LongName='third_party_software.txt'
+										src='../../../MultiverseClient/build/licenses/third_party_software.txt' />
+							<File Id='TGnvidia_license.txt'
+										DiskId='1'
+										Name='FOO.TXT'
+										LongName='nvidia_license.txt' 
+										src='../../../MultiverseClient/build/licenses/nvidia_license.txt' />
+							<File Id='TGcpl_license'
+										DiskId='1'
+										Name='FOO.TXT'
+										LongName='cpl1.0.txt'
+										src='../../../MultiverseClient/build/licenses/cpl1.0.txt' />
+							<File Id='TGlgpl_license'
+										DiskId='1'
+										Name='FOO.TXT'
+										LongName='lgpl2.1.txt'
+										src='../../../MultiverseClient/build/licenses/lgpl2.1.txt' />
+							<File Id='TGgpl_license'
+										DiskId='1'
+										Name='FOO.TXT'
+										LongName='gpl2.0.txt'
+										src='../../../MultiverseClient/build/licenses/gpl2.0.txt' />
+							<File Id='TGapache_license'
+										DiskId='1'
+										Name='FOO.TXT'
+										LongName='apache2.0.txt'
+										src='../../../MultiverseClient/build/licenses/apache2.0.txt' />
+							<File Id='TGTao.Cg.license'
+										DiskId='1'
+										Name='FOO.TXT'
+										LongName='Tao.Cg.License.txt'
+										src='../../../MultiverseClient/build/licenses/Tao.Cg.License.txt' />
+							<File Id='TGTao.DevIl.license'
+										DiskId='1'
+										Name='FOO.TXT'
+										LongName='Tao.DevIl.License.txt'
+										src='../../../MultiverseClient/build/licenses/Tao.DevIl.License.txt' />
+							<File Id='TGTao.Platform.Windows.license'
+										DiskId='1'
+										Name='FOO.TXT'
+										LongName='Tao.Platform.Windows.License.txt'
+										src='../../../MultiverseClient/build/licenses/Tao.Platform.Windows.License.txt' />
+						</Component> <!-- Close LicenseFiles -->
+
+					</Directory> <!-- Close MVLicensesDir -->
+					<Directory Id='TGINSTALLDIR'
+										 Name='MVMODVIE'
+										 LongName='Multiverse Terrain Generator'>
+						<Component Id='TGLibraryFiles'
+											 Guid='10BEB89D-A9AE-49b2-967B-19A9A474BDFA'>
+							<File Id='TGAxiom.Engine'
+										DiskId='1'
+										Name='AxiomEng.DLL'
+										LongName='Axiom.Engine.dll'
+										src='../../../Axiom/Engine/bin/Debug/Axiom.Engine.dll' />
+							<File Id='TGAxiom.MathLib'
+										DiskId='1'
+										Name='AxiomMat.DLL'
+										LongName='Axiom.MathLib.dll'
+										src='../../../Axiom/MathLib/bin/Debug/Axiom.MathLib.dll' />
+							<File Id='TGAxiom.Platforms.Win32'
+										DiskId='1'
+										Name='AxiomPla.DLL'
+										LongName='Axiom.Platforms.Win32.dll'
+										src='../../../Axiom/Platforms/Win32/bin/Debug/Axiom.Platforms.Win32.dll' />
+							<File Id='TGAxiom.Plugins.CgProgramManager'
+										DiskId='1'
+										Name='AxiomPlu.DLL'
+										LongName='Axiom.Plugins.CgProgramManager.dll'
+										src='../../../Axiom/Plugins/CgProgramManager/bin/Debug/Axiom.Plugins.CgProgramManager.dll' />
+							<File Id='TGAxiom.Plugins.ParticleFX'
+										DiskId='1'
+										Name='AxiomPlu.DLL'
+										LongName='Axiom.Plugins.ParticleFX.dll'
+										src='../../../Axiom/Plugins/ParticleFX/bin/Debug/Axiom.Plugins.ParticleFX.dll' />
+							<File Id='TGAxiom.RenderSystems.DirectX9'
+										DiskId='1'
+										Name='AxiomRen.DLL'
+										LongName='Axiom.RenderSystems.DirectX9.dll'
+										src='../../../Axiom/RenderSystems/DirectX9/bin/Debug/Axiom.RenderSystems.DirectX9.dll' />
+							<File Id='TGAxiom.SceneManagers.Multiverse'
+										DiskId='1'
+										Name='AxiomSce.DLL'
+										LongName='Axiom.SceneManagers.Multiverse.dll'
+										src='../../../Lib/Generator/bin/Debug/Axiom.SceneManagers.Multiverse.dll' />
+							<File Id='TGMultiverse.Generator'
+										DiskId='1'
+										Name='Multiver.DLL'
+										LongName='Multiverse.Generator.dll'
+										src='../../../Lib/Generator/bin/Debug/Multiverse.Generator.dll' />
+							<File Id='TGSpeedTreeRT'
+										DiskId='1'
+										Name='SpeedTre.DLL'
+										LongName='SpeedTreeRT.dll'
+										src='../../../Lib/SpeedTree/bin/Release/SpeedTreeRT.dll' />
+							<File Id='TGSpeedTreeWrapper'
+										DiskId='1'
+										Name='SpeedTre.DLL'
+										LongName='SpeedTreeWrapper.dll'
+										src='../../../Lib/SpeedTree/bin/Release/SpeedTreeWrapper.dll' />
+							<File Id='TGlog4net'
+										DiskId='1'
+										Name='log4net.DLL'
+										LongName='log4net.dll'
+										src='../../../Axiom/Dependencies/Managed/log4net.dll' />
+                                                        <File Id='TGMultiverse.Lib.LogUtil'
+                                                                                DiskId='1'
+                                                                                Name='LogUtil.DLL'
+                                                                                LongName='LogUtil.dll'
+                                                                                src='../../../Lib/LogUtil/bin/Debug/LogUtil.dll' />
+							<File Id='TGTao.Cg'
+										DiskId='1'
+										Name='TaoCg.DLL'
+										LongName='Tao.Cg.dll'
+										src='../../../Axiom/Dependencies/Managed/Tao.Cg.dll' />
+							<File Id='TGTao.DevIl'
+										DiskId='1'
+										Name='TaoDevIl.DLL'
+										LongName='Tao.DevIl.dll'
+										src='../../../Axiom/Dependencies/Managed/Tao.DevIl.dll' />
+							<File Id='TGcg'
+										DiskId='1'
+										Name='cg.DLL'
+										LongName='cg.dll'
+										src='../../../Axiom/Dependencies/Native/cg.dll' />
+							<File Id='TGdevil'
+										DiskId='1'
+										Name='devil.DLL'
+										LongName='devil.dll'
+										src='../../../Axiom/Dependencies/Native/devil.dll' />
+							<File Id='TGMultiverse.Serialization'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='Multiverse.Serialization.dll'
+										src='../../../MultiverseClient/Serialization/bin/Debug/Multiverse.Serialization.dll' />
+							<File Id='TGSystem.Data'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='System.Data.dll'
+										src='../../../Axiom/Engine/bin/Debug/System.Data.dll' />
+							<File Id='TGSystem'
+										DiskId='1'
+										Name='System.dll'
+										src='../../../Axiom/Engine/bin/Debug/System.dll' />
+							<File Id='TGSystem.Drawing'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='System.Drawing.dll'
+										src='../../../Axiom/Engine/bin/Debug/System.Drawing.dll' />
+							<File Id='TGSystem.Windows.Forms'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='System.Windows.Forms.dll'
+										src='../../../Axiom/Platforms/Win32/bin/Debug/System.Windows.Forms.dll' />
+							<File Id='TGSystem.Xml'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='System.Xml.dll'
+										src='../../../Axiom/Engine/bin/Debug/System.Xml.dll' />
+							<File Id='TGTao.Platform.Windows'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='Tao.Platform.Windows.dll'
+										src='../../../Axiom/Dependencies/Managed/Tao.Platform.Windows.dll' />
+							<File Id='TGOgreMain'
+										DiskId='1'
+										Name='OgreMain.dll'
+										src='../../ogretools/OgreMain.dll' />
+							<File Id='TGstlport_vc746'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='stlport_vc746.dll'
+										src='../../ogretools/stlport_vc746.dll' />
+							<File Id='TGReadme'
+										DiskId='1'
+										Name='Readme.txt'
+										src='../../ogretools/Readme.txt' />
+							<File Id='TGmsvcr71'
+										DiskId='1'
+										Name='msvcr71.DLL'
+										LongName='msvcr71.dll'
+										src='../../../MultiverseClient/Dependencies/Native/msvcr71.dll' />
+							<File Id='TGmsvcp71'
+										DiskId='1'
+										Name='msvcp71.DLL'
+										LongName='msvcp71.dll'
+										src='../../../MultiverseClient/Dependencies/Native/msvcp71.dll' />
+							<File Id='TGmsvcp80'
+										DiskId='1'
+										Name='msvcp80.dll'
+										src='C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.42_x-ww_0de06acd/msvcp80.dll' />
+							<File Id='TGmsvcr80'
+										DiskId='1'
+										Name='msvcr80.dll'
+										src='C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.42_x-ww_0de06acd/msvcr80.dll' />
+							<File Id='TGCOLLISIONDLL'
+										DiskId='1'
+					      		Name='foobar'
+										LongName='Multiverse.CollisionLib.dll'
+										src='../../../MultiverseClient/CollisionLib/bin/Debug/Multiverse.CollisionLib.dll' />
+							
+							<File Id='TGMultiverse.AssetRepository.dll'
+										DiskId='1'
+										Name='foobar'
+										LongName='Multiverse.AssetRepository.dll'
+										src='../../../Lib/AssetRepository/bin/Debug/Multiverse.AssetRepository.dll' />
+							<File Id='TGMultiverse.Config.dll'
+								  DiskId='1'
+								  Name='foobar'
+								  LongName='Multiverse.Config.dll'
+								  src='../../../MultiverseClient/Config/bin/Debug/Multiverse.Config.dll' />
+							<File Id='TGHeightfieldGenerator.dll'
+								  DiskId='1'
+								  Name='foobar'
+								  LongName='HeightfieldGenerator.dll'
+								  src='../../../Lib/HeightfieldGenerator/bin/Debug/HeightfieldGenerator.dll' />
+							<RemoveFile Id='TGLogFile'
+													On='uninstall'
+													Name='foobar.bar'
+													LongName='AxiomEngine.log' />
+							<RemoveFile Id='TGMODVIEWSUO'
+													On='uninstall'
+													Name='barfoo.foo'
+													LongName='TerrainGenerator.suo'/>
+						</Component>
+						<!-- Close TGLibraryFiles -->
+						<Component Id='TGTerrainGeneratorExecutableFiles'
+											 Guid='AE08A9FC-4638-466d-8D8E-AC43836D6F8A'>
+							<File Id='TGTerrainGenerator'
+										DiskId='1'
+										Name='MV.EXE'
+										LongName='TerrainGenerator.exe'
+										src='../../TerrainGenerator/bin/Debug/TerrainGenerator.exe'>
+								<!--
+								<Shortcut Id='TGStartMenuTerrainGeneratorItem'
+													Directory='ProgramMenuDir'
+													Name='foobar.bar'
+													LongName='TerrainGenerator'
+													WorkingDirectory='TGINSTALLDIR'
+													Icon='TerrainGenerator.exe'
+													IconIndex='0'
+													Description='The Multiverse Terrain Generator' />				
+								<Shortcut Id='TGDesktopTerrainGeneratorItem'
+													Directory='DesktopFolder'
+													Name='foobar.bar'
+													LongName='MulitverseTerrain Generator'
+													WorkingDirectory='TGINSTALLDIR'
+													Icon='TerrainGenerator.exe'
+													IconIndex='0'
+													Description='The Multiverse Terrain Generator' />
+													-->
+							
+								<Shortcut Id='TGStartMenuTerrainGeneratorItem'
+													Directory='ProgramMenuDir'
+													Name='foobar.bar'
+													LongName='TerrainGenerator'
+													WorkingDirectory='TGINSTALLDIR'
+													IconIndex='0'
+													Description='The Multiverse Terrain Generator' />				
+								<Shortcut Id='TGDesktopTerrainGeneratorItem'
+													Directory='DesktopFolder'
+													Name='foobar.bar'
+													LongName='MulitverseTerrain Generator'
+													WorkingDirectory='TGINSTALLDIR'
+													IconIndex='0'
+													Description='The Multiverse Terrain Generator' />
+							</File>
+							<!-- Close LibraryFiles -->
+						</Component>
+						<!-- Close TGTerrainGeneratorExecutableFiles -->
+					</Directory>
+					<!-- close TGINSTALLDIR -->
+					<Directory Id='MVINSTALLDIR'
+										 Name='MVMODVIE'
+										 LongName='Multiverse Model Viewer'>
+						<Component Id='MVLibraryFiles'
+											 Guid='BD644EA3-F338-41b6-82FA-081D61002BE1'>
+							<Registry Id='MVFileTYPEMesh' Root='HKCR' Key='.mesh' Action='write' Type='string' Value='Multiverse.mesh' />
+							<Registry Id='MVFileHandleMesh' Root='HKCR' Key='Multiverse.mesh' Action='write' Type='string' Value='Multiverse Model File' />
+							<Registry Id='MVFILEICON' Root='HKCR' Key='Multiverse.mesh\DefaultIcon' Action='write' Type='string' Value='[MVINSTALLDIR]ModelViewer.exe,1' />
+							<Registry Id='MVShell' Root='HKCR' Key='Multiverse.mesh\shell' Action="write" Type='string' Value='open' />
+							<Registry Id='MVShellOpenCommand' Root='HKCR' Key='Multiverse.mesh\shell\open\command' Action="write" Type='string' Value='[MVINSTALLDIR]ModelViewer.exe --mesh_file %1' />
+							<File Id='MVAxiom.Engine'
+										DiskId='1'
+										Name='AxiomEng.DLL'
+										LongName='Axiom.Engine.dll'
+										src='../../../Axiom/Engine/bin/Debug/Axiom.Engine.dll' />
+							<File Id='MVAxiom.MathLib'
+										DiskId='1'
+										Name='AxiomMat.DLL'
+										LongName='Axiom.MathLib.dll'
+										src='../../../Axiom/MathLib/bin/Debug/Axiom.MathLib.dll' />
+							<File Id='MVAxiom.Platforms.Win32'
+										DiskId='1'
+										Name='AxiomPla.DLL'
+										LongName='Axiom.Platforms.Win32.dll'
+										src='../../../Axiom/Platforms/Win32/bin/Debug/Axiom.Platforms.Win32.dll' />
+							<File Id='MVAxiom.Plugins.CgProgramManager'
+										DiskId='1'
+										Name='AxiomPlu.DLL'
+										LongName='Axiom.Plugins.CgProgramManager.dll'
+										src='../../../Axiom/Plugins/CgProgramManager/bin/Debug/Axiom.Plugins.CgProgramManager.dll' />
+							<File Id='MVAxiom.Plugins.ParticleFX'
+										DiskId='1'
+										Name='AxiomPlu.DLL'
+										LongName='Axiom.Plugins.ParticleFX.dll'
+										src='../../../Axiom/Plugins/ParticleFX/bin/Debug/Axiom.Plugins.ParticleFX.dll' />
+							<File Id='MVAxiom.RenderSystems.DirectX9'
+										DiskId='1'
+										Name='AxiomRen.DLL'
+										LongName='Axiom.RenderSystems.DirectX9.dll'
+										src='../../../Axiom/RenderSystems/DirectX9/bin/Debug/Axiom.RenderSystems.DirectX9.dll' />
+							<File Id='MVAxiom.SceneManagers.Multiverse'
+										DiskId='1'
+										Name='AxiomSce.DLL'
+										LongName='Axiom.SceneManagers.Multiverse.dll'
+										src='../../../Lib/Generator/bin/Debug/Axiom.SceneManagers.Multiverse.dll' />
+							<File Id='MVMultiverse.Generator'
+										DiskId='1'
+										Name='Multiver.DLL'
+										LongName='Multiverse.Generator.dll'
+										src='../../../Lib/Generator/bin/Debug/Multiverse.Generator.dll' />
+							<File Id='MVSpeedTreeRT'
+										DiskId='1'
+										Name='SpeedTre.DLL'
+										LongName='SpeedTreeRT.dll'
+										src='../../../Lib/SpeedTree/bin/Release/SpeedTreeRT.dll' />
+							<File Id='MVSpeedTreeWrapper'
+										DiskId='1'
+										Name='SpeedTre.DLL'
+										LongName='SpeedTreeWrapper.dll'
+										src='../../../Lib/SpeedTree/bin/Release/SpeedTreeWrapper.dll' />
+							<File Id='MVlog4net'
+										DiskId='1'
+										Name='log4net.DLL'
+										LongName='log4net.dll'
+										src='../../../Axiom/Dependencies/Managed/log4net.dll' />
+                                                        <File Id='MVMultiverse.Lib.LogUtil'
+                                                                                DiskId='1'
+                                                                                Name='LogUtil.DLL'
+                                                                                LongName='LogUtil.dll'
+                                                                                src='../../../Lib/LogUtil/bin/Debug/LogUtil.dll' />
+							<File Id='MVTao.Cg'
+										DiskId='1'
+										Name='TaoCg.DLL'
+										LongName='Tao.Cg.dll'
+										src='../../../Axiom/Dependencies/Managed/Tao.Cg.dll' />
+							<File Id='MVTao.DevIl'
+										DiskId='1'
+										Name='TaoDevIl.DLL'
+										LongName='Tao.DevIl.dll'
+										src='../../../Axiom/Dependencies/Managed/Tao.DevIl.dll' />
+							<File Id='MVcg'
+										DiskId='1'
+										Name='cg.DLL'
+										LongName='cg.dll'
+										src='../../../Axiom/Dependencies/Native/cg.dll' />
+							<File Id='MVdevil'
+										DiskId='1'
+										Name='devil.DLL'
+										LongName='devil.dll'
+										src='../../../Axiom/Dependencies/Native/devil.dll' />
+							<File Id='MVMultiverse.MathLib'
+										DiskId='1'
+										Name='DUMMY.DLL'
+										LongName='Multiverse.MathLib.dll'
+										src='../../../MultiverseClient/MathLib/bin/Debug/Multiverse.MathLib.dll' />
+							<File Id='MVMultiverse.Serialization'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='Multiverse.Serialization.dll'
+										src='../../../MultiverseClient/Serialization/bin/Debug/Multiverse.Serialization.dll' />
+							<File Id='MVSystem.Data'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='System.Data.dll'
+										src='../../../Axiom/Engine/bin/Debug/System.Data.dll' />
+							<File Id='MVSystem'
+										DiskId='1'
+										Name='System.dll'
+										src='../../../Axiom/Engine/bin/Debug/System.dll' />
+							<File Id='MVSystem.Drawing'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='System.Drawing.dll'
+										src='../../../Axiom/Engine/bin/Debug/System.Drawing.dll' />
+							<File Id='MVSystem.Windows.Forms'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='System.Windows.Forms.dll'
+										src='../../../Axiom/Platforms/Win32/bin/Debug/System.Windows.Forms.dll' />
+							<File Id='MVSystem.Xml'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='System.Xml.dll'
+										src='../../../Axiom/Engine/bin/Debug/System.Xml.dll' />
+							<File Id='MVTao.Platform.Windows'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='Tao.Platform.Windows.dll'
+										src='../../../Axiom/Dependencies/Managed/Tao.Platform.Windows.dll' />
+							<File Id='MVilu'
+										DiskId='1'
+										Name='ilu.dll'
+										src='../../ogretools/ilu.dll' />
+							<File Id='MVilut'
+										DiskId='1'
+										Name='ilut.dll'
+										src='../../ogretools/ilut.dll' />
+							<File Id='MVOgreMain'
+										DiskId='1'
+										Name='OgreMain.dll'
+										src='../../ogretools/OgreMain.dll' />
+							<File Id='MVstlport_vc746'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='stlport_vc746.dll'
+										src='../../ogretools/stlport_vc746.dll' />
+							<File Id='MVReadme'
+										DiskId='1'
+										Name='Readme.txt'
+										src='../../ogretools/Readme.txt' />
+							<File Id='MVmsvcr71'
+										DiskId='1'
+										Name='msvcr71.DLL'
+										LongName='msvcr71.dll'
+										src='../../../MultiverseClient/Dependencies/Native/msvcr71.dll' />
+							<File Id='MVmsvcp71'
+										DiskId='1'
+										Name='msvcp71.DLL'
+										LongName='msvcp71.dll'
+										src='../../../MultiverseClient/Dependencies/Native/msvcp71.dll' />
+							<File Id='MVmsvcp80'
+										DiskId='1'
+										Name='msvcp80.dll'
+										src='C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.42_x-ww_0de06acd/msvcp80.dll' />
+							<File Id='MVmsvcr80'
+										DiskId='1'
+										Name='msvcr80.dll'
+										src='C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.42_x-ww_0de06acd/msvcr80.dll' />
+							<File Id='MVCOLLISIONDLL'
+										DiskId='1'
+							      		Name='foobar'
+										LongName='Multiverse.CollisionLib.dll'
+										src='../../../MultiverseClient/CollisionLib/bin/Debug/Multiverse.CollisionLib.dll' />
+							<File Id='MVMultiverse.AssetRepository.dll'
+										DiskId='1'
+										Name='foobar'
+										LongName='Multiverse.AssetRepository.dll'
+					                    src='../../../Lib/AssetRepository/bin/Debug/Multiverse.AssetRepository.dll' />
+							<File Id='MVMultiverse.Config.dll'
+								  DiskId='1'
+								  Name='foobar'
+								  LongName='Multiverse.Config.dll'
+								  src='../../../MultiverseClient/Config/bin/Debug/Multiverse.Config.dll' />
+
+							<File Id='MVHeightfieldGenerator.dll'
+								  DiskId='1'
+								  Name='foobar'
+								  LongName='HeightfieldGenerator.dll'
+								  src='../../../Lib/HeightfieldGenerator/bin/Debug/HeightfieldGenerator.dll' />
+							<File Id='MVICSharpCode.SharpZipLib.dll'
+									DiskId='1'
+									Name='foobar'
+									LongName='ICSharpCode.SharpZipLib.dll'
+									src='../../../Axiom/Dependencies/Managed/ICSharpCode.SharpZipLib.dll' />
+							<RemoveFile Id='MVLogFile'
+													On='uninstall'
+													Name='foobar.bar'
+													LongName='AxiomEngine.log' />
+							<RemoveFile Id='MVMODVIEWSUO'
+													On='uninstall'
+													Name='barfoo.foo'
+													LongName='ModelViewer.suo'/>
+						</Component>
+						<!-- MVLibraryFiles -->
+						<Component Id='MVModelViewerExecutableFiles'
+											 Guid='2FDAAD14-9C59-4786-9018-E6CB664F53B1'>
+							<File Id='MVModelViewer'
+										DiskId='1'
+										Name='MV.EXE'
+										LongName='ModelViewer.exe'
+										src='../../ModelViewer/bin/Debug/ModelViewer.exe'>
+								<!--
+								<Shortcut Id='MVStartMenuModelViewerItem'
+													Directory='ProgramMenuDir'
+													Name='foobar.bar'
+													LongName='Multiverse Model Viewer'
+													WorkingDirectory='MVINSTALLDIR'
+													Icon='MVINSTALLDIR'
+													IconIndex='0'
+													Description='The Multiverse Model Viewer' />
+								<Shortcut Id='MVModelViewerItem'
+													Directory='DesktopFolder'
+													Name='foobar.bar'
+													LongName='Multiverse Model Viewer'
+								          WorkingDirectory='MVINSTALLDIR'
+													Icon='MVINSTALLDIR'
+													IconIndex='0'
+													Description='The Multiverse Model Viewer' />
+								-->
+							
+								<Shortcut Id='MVStartMenuModelViewerItem'
+													Directory='ProgramMenuDir'
+													Name='foobar.bar'
+													LongName='Multiverse Model Viewer'
+								          WorkingDirectory='MVINSTALLDIR'
+													IconIndex='0'
+													Description='The Multiverse Model Viewer' />
+								<Shortcut Id='MVModelViewerItem'
+													Directory='DesktopFolder'
+													Name='foobar.bar'
+													LongName='Multiverse Model Viewer'
+								          WorkingDirectory='MVINSTALLDIR'
+													IconIndex='0'
+													Description='The Multiverse Model Viewer' />
+							</File>
+						</Component>
+						<Component Id='MVOgreXMLConverterExecutableFiles'
+											 Guid='4013D231-80ED-4fee-B8E9-8CFA2D9C34E4'>
+							<File Id='MVOgreXMLConverterFile'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='OgreXMLConverter.exe'
+										src='../../ogretools/OgreXMLConverter.exe' />
+						</Component>
+						<Component Id='MVConversionToolComponentExecutableFiles'
+											 Guid='A5F0A899-4F55-438a-AD3E-F0A83975CFCA'>
+							<File Id='MVConversionToolExecuatable'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='ConversionTool.exe'
+										src='../../ConversionTool/bin/Debug/ConversionTool.exe' />
+						</Component>
+					</Directory>
+					<!-- close MVINSTALLDIR-->
+					
+					<Directory Id='WorldEditorDIR'
+										 Name='BIN'
+										 LongName='Multiverse World Editor'>
+
+						<Directory Id='WENameValuePairDIR'
+											 Name='foobar'
+											 LongName='NameValueTemplates'>
+
+							<Component Id='NameValueExample'
+												 Guid='5C1FA27B-D015-4825-977F-A654BA98FD7B' >
+							<File Id='WENameValuePairExample'
+										DiskId='1'
+										Name='foobar'
+										LongName='example.xml'
+										src='../../WorldEditor/build/NameValueTemplates/example.xml' />
+							<File Id='InstanceEntryRegion.xmlNVT' DiskId='1' Name='foobar' LongName='InstanceEntryRegion.xml'
+										src='../../WorldEditor/build/NameValueTemplates/InstanceEntryRegion.xml' />
+							<File Id='MessageRegion.xmlNVT' DiskId='1' Name='foobar' LongName='MessageRegion.xml'
+										src='../../WorldEditor/build/NameValueTemplates/MessageRegion.xml' />
+										
+								
+							</Component> <!-- Close  NameValueExample -->
+						</Directory>	<!-- Close WENameValuePairDIR-->
+						<Component Id='WELibraryFiles'
+											 Guid='B2F4669E-8EA3-43b8-9ECE-269FB05EAB01'>
+							<Registry Id='WEFileTYPE' Root='HKCR' Key='.mvw' Action='write' Type='string' Value='Multiverse.mvw' />
+							<Registry Id='WEFileHandle' Root='HKCR' Key='Multiverse.mvw' Action='write' Type='string' Value='Multiverse World File' />
+							<Registry Id='WEFILEICON' Root='HKCR' Key='Multiverse.mvw\DefaultIcon' Action='write' Type='string' Value='[WorldEditorDIR]WorldEditor.exe,1' />
+							<Registry Id='WEShell' Root='HKCR' Key='Multiverse.mvw\shell' Action="write" Type='string' Value='open' />
+							<Registry Id='WESheelOpenCommand' Root='HKCR' Key='Multiverse.mvw\shell\open\command' Action="write" Type='string' Value='[WorldEditorDIR]WorldEditor.exe %1' />
+							
+							<File Id='WEAxiom.Engine'
+										DiskId='1'
+										Name='AxiomEng.DLL'
+										LongName='Axiom.Engine.dll'
+										src='../../../Axiom/Engine/bin/Debug/Axiom.Engine.dll' />
+							<File Id='WEAxiom.MathLib'
+										DiskId='1'
+										Name='AxiomMat.DLL'
+										LongName='Axiom.MathLib.dll'
+										src='../../../Axiom/MathLib/bin/Debug/Axiom.MathLib.dll' />
+							<File Id='WEAxiom.Platforms.Win32'
+										DiskId='1'
+										Name='AxiomPla.DLL'
+										LongName='Axiom.Platforms.Win32.dll'
+										src='../../../Axiom/Platforms/Win32/bin/Debug/Axiom.Platforms.Win32.dll' />
+							<File Id='WEAxiom.Plugins.CgProgramManager'
+										DiskId='1'
+										Name='AxiomPlu.DLL'
+										LongName='Axiom.Plugins.CgProgramManager.dll'
+										src='../../../Axiom/Plugins/CgProgramManager/bin/Debug/Axiom.Plugins.CgProgramManager.dll' />
+							<File Id='WEAxiom.Plugins.ParticleFX'
+										DiskId='1'
+										Name='AxiomPlu.DLL'
+										LongName='Axiom.Plugins.ParticleFX.dll'
+										src='../../../Axiom/Plugins/ParticleFX/bin/Debug/Axiom.Plugins.ParticleFX.dll' />
+							<File Id='WEAxiom.RenderSystems.DirectX9'
+										DiskId='1'
+										Name='AxiomRen.DLL'
+										LongName='Axiom.RenderSystems.DirectX9.dll'
+										src='../../../Axiom/RenderSystems/DirectX9/bin/Debug/Axiom.RenderSystems.DirectX9.dll' />
+							<File Id='WEAxiom.SceneManagers.Multiverse'
+										DiskId='1'
+										Name='AxiomSce.DLL'
+										LongName='Axiom.SceneManagers.Multiverse.dll'
+										src='../../../Lib/Generator/bin/Debug/Axiom.SceneManagers.Multiverse.dll' />
+							<File Id='WEMultiverse.Generator'
+										DiskId='1'
+										Name='Multiver.DLL'
+										LongName='Multiverse.Generator.dll'
+										src='../../../Lib/Generator/bin/Debug/Multiverse.Generator.dll' />
+							<File Id='WESpeedTreeRT'
+										DiskId='1'
+										Name='SpeedTre.DLL'
+										LongName='SpeedTreeRT.dll'
+										src='../../../Lib/SpeedTree/bin/Release/SpeedTreeRT.dll' />
+							<File Id='WESpeedTreeWrapper'
+										DiskId='1'
+										Name='SpeedTre.DLL'
+										LongName='SpeedTreeWrapper.dll'
+										src='../../../Lib/SpeedTree/bin/Release/SpeedTreeWrapper.dll' />
+							<File Id='WElog4net'
+										DiskId='1'
+										Name='log4net.DLL'
+										LongName='log4net.dll'
+										src='../../../Axiom/Dependencies/Managed/log4net.dll' />
+                            <File Id='WEMultiverse.Lib.LogUtil' DiskId='1' Name='LogUtil.DLL'
+							      LongName='LogUtil.dll' src='../../../Lib/LogUtil/bin/Debug/LogUtil.dll' />
+							<File Id='WETao.Cg'
+										DiskId='1'
+										Name='TaoCg.DLL'
+										LongName='Tao.Cg.dll'
+										src='../../../Axiom/Dependencies/Managed/Tao.Cg.dll' />
+							<File Id='WETao.DevIl'
+										DiskId='1'
+										Name='TaoDevIl.DLL'
+										LongName='Tao.DevIl.dll'
+										src='../../../Axiom/Dependencies/Managed/Tao.DevIl.dll' />
+							<File Id='WEcg'
+										DiskId='1'
+										Name='cg.DLL'
+										LongName='cg.dll'
+										src='../../../Axiom/Dependencies/Native/cg.dll' />
+							<File Id='WEdevil'
+										DiskId='1'
+										Name='devil.DLL'
+										LongName='devil.dll'
+										src='../../../Axiom/Dependencies/Native/devil.dll' />
+							<File Id='WEmsvcr71'
+										DiskId='1'
+										Name='msvcr71.DLL'
+										LongName='msvcr71.dll'
+										src='../../../MultiverseClient/Dependencies/Native/msvcr71.dll' />
+							<File Id='WEmsvcp71'
+										DiskId='1'
+										Name='msvcp71.DLL'
+										LongName='msvcp71.dll'
+										src='../../../MultiverseClient/Dependencies/Native/msvcp71.dll' />
+							<File Id='WEmsvcp80'
+										DiskId='1'
+										Name='msvcp80.dll'
+										src='C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.42_x-ww_0de06acd/msvcp80.dll' />
+							<File Id='WEmsvcr80'
+										DiskId='1'
+										Name='msvcr80.dll'
+										src='C:\WINDOWS\WinSxS\x86_Microsoft.VC80.CRT_1fc8b3b9a1e18e3b_8.0.50727.42_x-ww_0de06acd/msvcr80.dll' />
+							<File Id='WECOLLISIONDLL'
+										DiskId='1'
+							      		Name='foobar'
+										LongName='Multiverse.CollisionLib.dll'
+										src='../../../MultiverseClient/CollisionLib/bin/Debug/Multiverse.CollisionLib.dll' />
+              <File Id='WEMultiverse.Serialization'
+										DiskId='1'
+										Name='foobar.bar'
+										LongName='Multiverse.Serialization.dll'
+										src='../../../MultiverseClient/Serialization/bin/Debug/Multiverse.Serialization.dll' />
+							<File Id='WEMultiverse.AssetRepository.dll'
+										DiskId='1'
+										Name='foobar'
+										LongName='Multiverse.AssetRepository.dll'
+										src='../../../Lib/AssetRepository/bin/Debug/Multiverse.AssetRepository.dll' />
+							<File Id='WEMultiverse.Config.dll'
+										DiskId='1'
+										Name='foobar'
+										LongName='Multiverse.Config.dll'
+										src='../../../MultiverseClient/Config/bin/Debug/Multiverse.Config.dll' />
+							<File Id='WEHeightfieldGenerator.dll'
+								  DiskId='1'
+								  Name='foobar'
+								  LongName='HeightfieldGenerator.dll'
+								  src='../../../Lib/HeightfieldGenerator/bin/Debug/HeightfieldGenerator.dll' />
+							<File Id='WEKEYBINDINGSXML' DiskId='1' Name='foobar'
+									LongName='KeyBindings.xml'
+									src='../KeyBindings.xml' />
+							<File Id='WECommandEvents.xml' DiskId='1' Name='foobar'
+									LongName='CommandEvents.xml'
+									src='../CommandEvents.xml' />
+							<File Id='WEUserCommand.dll' DiskId='1' Name='foobar'
+									LongName='UserCommand.dll'
+									src='../../../Lib/UserCommand/UserCommand/bin/Debug/UserCommand.dll' />
+							<File Id='WEMultiSelectTreeView.dll' DiskId='1' Name='foobar'
+									LongName='MultiselectTreeView.dll'
+									src='../../../Lib/MultiselectTreeView/MultiselectTreeView/bin/Debug/MultiselectTreeView.dll'/>
+							<File Id='WENameValuePairs.dll' DiskId='1' Name='foobar'
+									LongName='NameValuePairs.dll'
+									src='../../../Lib/NameValuePairs/NameValuePairs/bin/Debug/NameValuePairs.dll'/>
+							<File Id='WEValidityHelper.dll' DiskId='1' Name='foobar'
+									LongName='ValidityHelper.dll'
+									src='../../../Lib/ValidityHelper/ValidityHelper/bin/Debug/ValidityHelper.dll'/>
+							<File Id='WEXmlHelper.dll' DiskId='1' Name='foobar'
+									LongName='XmlHelper.dll'
+									src='../../../Lib/XmlHelper/bin/Debug/XmlHelper.dll'/>							
+							<!--
+							<File Id='WEMultiverse.Movie.dll'
+							    DiskId='1'
+								  Name='foobar'
+								  LongName='Multiverse.Movie.dll'
+								  src='../../../MultiverseClient/Movie/bin/Debug/Multiverse.Movie.dll' />
+							<File Id='WEDirectShowWrapper.dll'
+							    DiskId='1'
+								  Name='foobar'
+								  LongName='DirectShowWrapper.dll'
+								  src='../../../MultiverseClient/Movie/Codecs/DirectShowLib/bin/Debug/DirectShowWrapper.dll' />
+							<File Id='WEMultiverse.Base.dll'
+							    DiskId='1'
+								  Name='foobar'
+								  LongName='Multiverse.Base.dll'
+								  src='../../../MultiverseClient/Base/bin/Debug/Multiverse.Base.dll' />
+							<File Id='WEMultiverse.Network.dll'
+							    DiskId='1'
+								  Name='foobar'
+								  LongName='Multiverse.Network.dll'
+								  src='../../../MultiverseClient/Network/bin/Debug/Multiverse.Network.dll' />
+							<File Id='WEMultiverse.Interface.dll'
+							    DiskId='1'
+								  Name='foobar'
+								  LongName='Multiverse.Interface.dll'
+								  src='../../../MultiverseClient/Interface/bin/Debug/Multiverse.Interface.dll' />
+								  -->
+							<RemoveFile Id='WELogFile'
+													On='uninstall'
+													Name='foobar.bar'
+													LongName='AxiomEngine.log' />
+							<RemoveFile Id='WEMODVIEWSUO'
+													On='uninstall'
+													Name='barfoo.foo'
+													LongName='ModelViewer.suo'/>
+						</Component> <!-- Close WELibraryFiles -->
+						<Component Id='WEWorldEditorExecutableFiles'
+											 Guid='2E427C8F-8037-4a06-934C-4E9A1B8196C3'>
+							<File Id='WEWorldEditor'
+										DiskId='1'
+										Name='foobar'
+										LongName='WorldEditor.exe'
+										src='../../WorldEditor/bin/Debug/WorldEditor.exe'>
+										<!--
+								<Shortcut Id='WEStartMenuWorldEditorItem'
+													Directory='ProgramMenuDir'
+													Name='foobar'
+													LongName='Multiverse World Editor'
+													WorkingDirectory='WorldEditorDIR'
+													Icon='WorldEditor.exe'
+													IconIndex='0'
+													Description='The Multiverse World Editor' />								
+								<Shortcut Id='WEDesktopWorldEditorItem'
+													Directory='DesktopFolder'
+													Name='foobar'
+													LongName='Multiverse World Editor'
+													WorkingDirectory='WorldEditorDIR'
+													Icon='WorldEditor.exe'
+													IconIndex='0'
+													Description='The Multiverse World Editor' />
+									-->
+									
+								<Shortcut Id='WEStartMenuWorldEditorItem'
+													Directory='ProgramMenuDir'
+													Name='foobar'
+													LongName='Multiverse World Editor'
+													WorkingDirectory='WorldEditorDIR'
+													IconIndex='0'
+													Description='The Multiverse World Editor' />								
+								<Shortcut Id='WEDesktopWorldEditorItem'
+													Directory='DesktopFolder'
+													Name='foobar'
+													LongName='Multiverse World Editor'
+													WorkingDirectory='WorldEditorDIR'
+													IconIndex='0'
+													Description='The Multiverse World Editor' />
+							</File>	<!-- close WEWorldEditor -->
+						</Component><!-- Close WEWorldEditorExecutableFiles -->
+					</Directory><!-- Close WorldEditorDIR -->
+            <Directory Id='ATAssetToolsDirectory' Name='foobar' LongName='AssetTools'>
+              <Component Id='ATAssetTools' Guid='2630F6F7-A1E5-4da9-B99A-8B96AF0D3B0A'>
+                <File Id='ATAssetImporter'
+										DiskId='1'
+										Name='foobar'
+										LongName='AssetImporter.exe'
+										src='../../AssetImporter/bin/Debug/AssetImporter.exe'>
+<!--
+                  <Shortcut Id='ATStartMenuAssetImporterItem'
+                            Directory='ProgramMenuDir'
+                            Name='foobar'
+                            LongName='Multiverse Asset Importer'
+                            WorkingDirectory='ATAssetToolsDirectory'
+                            Icon='AssetImporter.exe'
+                            IconIndex='0'
+                            Description='The Multiverse Asset Importer' />
+                  <Shortcut Id='ATDesktopAssetImporterItem'
+                            Directory='DesktopFolder'
+                            Name='foobar'
+                            LongName='Multiverse Asset Importer'
+                            WorkingDirectory='ATAssetToolsDirectory'
+                            Icon='AssetImporter.exe'
+                            IconIndex='0'
+                            Description='The Multiverse Asset Importer' />
+-->
+
+                  <Shortcut Id='ATStartMenuAssetImporterItem'
+                            Directory='ProgramMenuDir'
+                            Name='foobar'
+                            LongName='Multiverse Asset Importer'
+                            WorkingDirectory='ATAssetToolsDirectory'
+                            IconIndex='0'
+                            Description='The Multiverse Asset Importer' />
+                  <Shortcut Id='ATDesktopAssetImporterItem'
+                            Directory='DesktopFolder'
+                            Name='foobar'
+                            LongName='Multiverse Asset Importer'
+                            WorkingDirectory='ATAssetToolsDirectory'
+                            IconIndex='0'
+                            Description='The Multiverse Asset Importer' />
+                </File>
+                <File Id='ATAssetPackager'
+					DiskId='1'
+					Name='foobar'
+					LongName='AssetPackager.exe'
+					src='../../AssetPackager/bin/Debug/AssetPackager.exe'>
+                	<!--
+                    <Shortcut Id='ATStartMenuAssetPackagerItem'
+                         Directory='ProgramMenuDir'
+                         Name='foobar'
+                         LongName='Multiverse Asset Packager'
+                         WorkingDirectory='ATAssetToolsDirectory'
+                         Icon='AssetPackager.exe'
+                         IconIndex='0'
+                         Description='The Multiverse Asset Packager' />
+                    <Shortcut Id='ATDesktopAssetPackagerItem'
+                         Directory='DesktopFolder'
+                         Name='foobar'
+                         LongName='Multiverse Asset Packager'
+                         WorkingDirectory='ATAssetToolsDirectory'
+                         Icon='AssetPackager.exe'
+                         IconIndex='0'
+                         Description='The Multiverse Asset Packager' />
+                         -->
+              	
+                    <Shortcut Id='ATStartMenuAssetPackagerItem'
+                         Directory='ProgramMenuDir'
+                         Name='foobar'
+                         LongName='Multiverse Asset Packager'
+                         WorkingDirectory='ATAssetToolsDirectory'
+                         IconIndex='0'
+                         Description='The Multiverse Asset Packager' />
+                    <Shortcut Id='ATDesktopAssetPackagerItem'
+                         Directory='DesktopFolder'
+                         Name='foobar'
+                         LongName='Multiverse Asset Packager'
+                         WorkingDirectory='ATAssetToolsDirectory'
+                         IconIndex='0'
+                         Description='The Multiverse Asset Packager' />
+                </File>
+                <File Id='ATMultiverse.AssetRepository.dll'
+                    DiskId='1'
+                    Name='foobar'
+                    LongName='Multiverse.AssetRepository.dll'
+                    src='../../../Lib/AssetRepository/bin/Debug/Multiverse.AssetRepository.dll' />
+              </Component> <!--ATAssetTools-->
+			</Directory><!-- ATAssetToolsDirectory -->
+			<Directory Id='MCMosaicCreatorDir' Name='foobar' LongName='Multiverse Mosaic Creator'>
+				<Component Id='MCMosaicCreator' Guid='A39E8C59-4836-40e1-B269-D75E8C9AAC9C'>
+					<File Id='MCMosaicCreator.exe'
+						  DiskId='1'
+						  Name='foobar'
+						  LongName='MosaicCreator.exe' 
+						  src='../../MosaicCreator/MosaicCreator/bin/Debug/MosaicCreator.exe'>
+						<!--
+						<Shortcut  Id='MCStartMenuMosaicCreatorItem'
+							Directory='ProgramMenuDir'
+							Name='foobar'
+							LongName='Multiverse Mosaic Creator'
+							WorkingDirectory='MCMosaicCreatorDir'
+							Icon='MosaicCreator.exe'
+							IconIndex='0'
+							Description='The Multiverse Mosaic Creator' />
+							-->
+					<Shortcut  Id='MCStartMenuMosaicCreatorItem'
+							Directory='ProgramMenuDir'
+							Name='foobar'
+							LongName='Multiverse Mosaic Creator'
+							WorkingDirectory='MCMosaicCreatorDir'
+							IconIndex='0'
+							Description='The Multiverse Mosaic Creator' />
+					</File>
+					<File Id='MCilu.dll'
+						  DiskId='1'
+						  Name='ilu.dll'
+						  src='../../ogretools/ilu.dll' />
+					<File Id='MCilut.dll'
+						  DiskId='1'
+						  Name='ilut.dll'
+						  src='../../ogretools/ilut.dll' />
+					<File Id='MCdevil.dll'
+						  DiskId='1'
+						  Name='devil.DLL'
+						  LongName='devil.dll'
+						  src='../../../Axiom/Dependencies/Native/devil.dll' />
+					<File Id='MCTao.DevIl.dll'
+						  DiskId='1'
+						  Name='TaoDevIl.DLL'
+						  LongName='Tao.DevIl.dll'
+						  src='../../../Axiom/Dependencies/Managed/Tao.DevIl.dll' />
+				</Component> <!-- Close MCMosaicCreator -->
+			</Directory> <!-- Close MCMosaicCreatorDir -->		
+					<Directory Id='THREEDMXTOOLDIR' Name='foobar' LongName='3dsMaxExporter'>
+					<Component Id='THREEDMXTOOL' Guid='687CDF22-E42F-4b44-9603-2F8744A35546'>
+								<File Id='THREEDMXTOOLEXE' DiskId='1' Name='foobar' LongName='multiverse-tools.ms'
+						  	src='../../3dsMaxExporter/multiverse-tools.ms' />
+						</Component>
+					</Directory><!--Close 3DMXTOOLDIR -->
+				  <Directory Id='MVITImportToolDir' Name='foobar' LongName='Multiverse COLLADA Import Tool'>
+				  	<Directory Id='MVITWorkspace' Name='foobar' LongName='Workspace'>
+				  	  <Component Id='MVITWorkspaceComp' Guid='C21EE0BD-31BD-43ad-82E9-6DFB6AA5152F' >
+				  			<CreateFolder />
+				  		</Component>
+				  	</Directory>
+						<Component Id='MVITIMPORT' Guid='75655F70-F815-43c8-A167-EEC9B8BFC35B'>
+				  			<Registry Id='MVITRegConversionToolEXEFile' Root='HKCU' Key='Software\Multiverse\ImportTool' Name='ConversionToolExeFile' Action='write' Type='string' Value='[MVINSTALLDIR]ConversionTool.exe' />
+							  <Registry Id='MVITRegSourceFilter' Root='HKCU' Key='Software\Multiverse\ImportTool\' Name='SourceFilter' Action='write' Type='string' Value='*.dae' />
+								<File Id='MVITMVImportTool.exe' DiskId='1' Name='foobar' LongName='MVImportTool.exe'
+								src='../../MVImportTool/bin/Debug/MVImportTool.exe'>
+							<Shortcut  Id='MVITImportToolProgramMenuDir'
+							Directory='ProgramMenuDir'
+							Name='foobar'
+							LongName='Multiverse COLLADA Import Tool'
+							WorkingDirectory='MVITImportToolDir'
+							IconIndex='0'
+							Description='Multiverse COLLADA Import Tool' />
+							<Shortcut Id='MVITImportToolDesktopDir'
+                         Directory='DesktopFolder'
+                         Name='foobar'
+                         LongName='Multiverse COLLADA Import Tool'
+                         WorkingDirectory='MVITImportToolDir'
+                         IconIndex='0'
+                         Description='Multiverse COLLADA Import Tool' />
+									</File> <!-- Close MVITMVImportTool.exe -->
+								<File Id='MVITMultiverse.AssetRepository.dll' DiskId='1' Name='foobar'
+										LongName='Multiverse.AssetRepository.dll'
+										src='../../../Lib/AssetRepository/bin/Debug/Multiverse.AssetRepository.dll' />
+					  </Component> <!-- close MVITIMPORT -->
+					</Directory><!--Close MVITImportToolDir-->
+            </Directory><!-- Close MULTITOOLDIR -->
+			</Directory><!-- Close ProgramFilesFolder -->
+		</Directory>
+
+
+
+		<Feature Id='Complete'
+				 Title='Complete Install'
+				 Display='expand'
+				 Level='1' ConfigurableDirectory='MULTITOOLDIR'
+							 >
+			<Feature Id='Licenses'
+					 Title='Licenses'
+					 Level='2'>
+				<ComponentRef Id='MVLicenseFiles' />
+			</Feature> <!-- Close Licenses -->
+			<Feature Id='TGBasics'
+					 Title='Terrain Generator'
+					 Level='2'>
+				<ComponentRef Id='TGLibraryFiles' />
+				<ComponentRef Id='TGTerrainGeneratorExecutableFiles' />
+			</Feature> <!-- Close TGBasics -->
+			<!-- Close TGBasics -->
+			<Feature Id='MVModelViewer'
+					 Title='Model Viewer'
+					 Level='2'>
+				<ComponentRef Id='MVModelViewerExecutableFiles' />
+				<Feature Id='MVBasics'
+						 Title='Base Stuff'
+						 Level='3'>
+					<ComponentRef Id='MVLibraryFiles' />
+					<ComponentRef Id='MVLicenseFiles' />
+					<ComponentRef Id='MVConversionToolComponentExecutableFiles' />
+					<ComponentRef Id='MVOgreXMLConverterExecutableFiles' />
+				</Feature> <!-- Close MVBasics  -->
+			</Feature> <!-- Close MVModelViewer -->
+			<Feature Id='WorldEditor'
+					 Title='Multiverse World Editor'
+					 Level='2'>
+				<ComponentRef Id='NameValueExample' />
+				<ComponentRef Id='WELibraryFiles' />
+				<ComponentRef Id='WEWorldEditorExecutableFiles' />
+			</Feature> <!-- Close WorldEditor -->
+			<Feature Id='AssetTools'
+					 Title='Multiverse Asset Tools'
+					 Level='2'>
+				<ComponentRef Id='ATAssetTools' />
+			</Feature> <!-- close AssetTools -->
+			<Feature Id='MosaicCreator'
+					 Title='Multiverse Mosaic Creator'
+					 Level='2'>
+				<ComponentRef Id='MCMosaicCreator' />
+			</Feature> <!-- close MosaicCreater -->
+		  <Feature Id='MVTHREEdMaxExportTool' Title='Multiverse 3dMax Export Tool' Level='2'>
+				<ComponentRef Id='THREEDMXTOOL' />
+			</Feature>
+		 <Feature Id='MVITIMPORTTool' Title='Multiverse COLLADA Import Tool' Level='2'>
+		   <ComponentRef Id='MVITIMPORT' />
+			 <ComponentRef Id='MVITWorkspaceComp' />
+		   </Feature> <!-- close Multiverse Import Tool -->
+		</Feature> <!-- Close Complete -->
+	</Product>
+</Wix>
+	

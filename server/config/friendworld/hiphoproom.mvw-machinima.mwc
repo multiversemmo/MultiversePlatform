@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="pictureWallSpawn" TerrainOffset="724.5293" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="180" Zenith="90">
+    <Position x="110609.5" y="20832.53" z="-197607.1" />
+    <Orientation x="0" y="1" z="0" w="-4.371139E-08" />
+  </Waypoint>
+  <Waypoint Name="pictureWallCamera" TerrainOffset="1375.902" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="0">
+    <Position x="110610.8" y="21483.9" z="-200503.3" />
+    <Orientation x="8.149073E-10" y="0.9990482" z="-0.04361934" w="1.583248E-08" />
+  </Waypoint>
+  <Waypoint Name="spawnPt" TerrainOffset="830" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="108850.1" y="20830" z="-210639.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+  <Waypoint Name="stuck" TerrainOffset="830" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="108850.1" y="20830" z="-210639.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+  </Waypoint>
+</WorldObjectCollection>

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <Waypoint Name="steam_45Broadway_01" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="97991.54" y="24500" z="-444561.2" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_45Broadway_02" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="128780.9" y="24500" z="-447079.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_TS_01" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="124508.6" y="24500" z="-391044.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_TS_02" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="108187" y="24500" z="-373505.1" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_44TS_03" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="139611.2" y="24500" z="-367009.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_Broadway_03" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="107259" y="24500" z="-353918" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_TS_03" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="139425.3" y="24500" z="-306997.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_TS_04" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="137441.1" y="24500" z="-305997.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="3" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_Broadway_04" TerrainOffset="-500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="107551.7" y="19500" z="-302309.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_Broadway_05" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="114322.7" y="24500" z="-300009.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="3" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_Broadway_06" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="114008.2" y="24500" z="-274309.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_43TS_04" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="156000" y="24500" z="-285612.3" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="3" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_army_01" TerrainOffset="4000" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="124140.4" y="24000" z="-326159.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1.5" />
+  </Waypoint>
+  <Waypoint Name="steam_army_02" TerrainOffset="4000" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="90" Zenith="90">
+    <Position x="124686.4" y="24000" z="-324136.6" />
+    <Orientation x="0" y="0.7071068" z="0" w="0.7071068" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="4" ParticleScale="1.5" />
+  </Waypoint>
+  <Waypoint Name="steam_army_03" TerrainOffset="4000" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="124669.1" y="24000" z="-321089.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="3" ParticleScale="3" />
+  </Waypoint>
+  <Waypoint Name="steam_popo_01" TerrainOffset="4000" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="125648" y="24000" z="-278909.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="3" ParticleScale="2.5" />
+  </Waypoint>
+  <Waypoint Name="steam_sweetSpot_01" TerrainOffset="4000" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="121652.1" y="24000" z="-376033" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="3" ParticleScale="2.5" />
+  </Waypoint>
+  <Waypoint Name="steam_sweetSpot_02" TerrainOffset="4000" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="121667.9" y="24000" z="-378376.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="3" ParticleScale="1.5" />
+  </Waypoint>
+  <Waypoint Name="steam_43TS_05" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="144922.9" y="24500" z="-251988.7" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="3" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_42Broadway_07" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="116908" y="24500" z="-216208.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="4" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_ParaDog_01" TerrainOffset="5900" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="102035.5" y="25900" z="-349858" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="2" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="steam_45Broadway_13" TerrainOffset="4500" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="36267.2" y="24500" z="-442586.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="nyts_smoke" VelocityScale="3" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_01" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="76984.32" y="25057.99" z="-309493.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_02" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="79212.02" y="25057.99" z="-309505" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_03" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="74779.66" y="25057.99" z="-309474.8" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_hallGlow_01" TerrainOffset="4437.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="94566" y="24437.99" z="-339013.6" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_hallGlow_07" TerrainOffset="4437.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="94582.69" y="24437.99" z="-336932" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_hallGlow_02" TerrainOffset="4437.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="94566" y="24437.99" z="-334802" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_hallGlow_03" TerrainOffset="4437.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="94566" y="24437.99" z="-332742" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_hallGlow_04" TerrainOffset="4437.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="94566" y="24437.99" z="-324292" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_hallGlow_05" TerrainOffset="4437.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="94566" y="24437.99" z="-328502" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_hallGlow_06" TerrainOffset="4437.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="94566" y="24437.99" z="-326362" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_hallGlow_08" TerrainOffset="4437.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="94566" y="24437.99" z="-330574.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_04" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="78544.32" y="25057.99" z="-325881.9" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_05" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="82034.32" y="25057.99" z="-321963.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_06" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="76984.32" y="25057.99" z="-313133.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_07" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="76974.32" y="25057.99" z="-317343.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_08" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="76984.32" y="25057.99" z="-321663.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_09" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="85280.84" y="25057.99" z="-321959.5" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+  <Waypoint Name="club_lightGlow_10" TerrainOffset="5057.99" AllowHeightAdjustment="True" WorldViewSelect="True" Azimuth="0" Zenith="90">
+    <Position x="88581.7" y="25057.99" z="-321959.4" />
+    <Orientation x="0" y="0" z="0" w="1" />
+    <ParticleEffect ParticleEffectName="room_light" VelocityScale="1" ParticleScale="1" />
+  </Waypoint>
+</WorldObjectCollection>

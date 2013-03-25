@@ -1,0 +1,9 @@
+Mesh:UFO.mesh
+Mesh:pool.mesh
+Mesh:human_house_open.mesh
+Mesh:barrel.mesh
+Texture:splatting_sand.dds
+Texture:splatting_grass.dds
+Texture:splatting_rock.dds
+Texture:splatting_snow.dds
+Material:Multiverse/d2w_skyBox

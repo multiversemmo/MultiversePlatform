@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WorldObjectCollection Version="2">
+  <PointLight Name="street_light_01" AttenuationRange="100000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="173474.5" AllowHeightAdjustment="True">
+    <Position x="59746.27" y="173474.5" z="-1187681" />
+    <Specular R="0.6627451" G="0.6862745" B="0.145098" />
+    <Diffuse R="0.5960785" G="0.4666667" B="0.172549" />
+  </PointLight>
+  <PointLight Name="street_lite_03" AttenuationRange="100000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="173474.5" AllowHeightAdjustment="True">
+    <Position x="-46453.73" y="173474.5" z="-1189137" />
+    <Specular R="0.6862745" G="0.7019608" B="0.2745098" />
+    <Diffuse R="0.5490196" G="0.5176471" B="0.3254902" />
+  </PointLight>
+  <PointLight Name="street_light_04" AttenuationRange="100000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="173475" AllowHeightAdjustment="True">
+    <Position x="-17453.73" y="173475" z="-1186337" />
+    <Specular R="0.5254902" G="0.5137255" B="0.4509804" />
+    <Diffuse R="0.4509804" G="0.5176471" B="0.1843137" />
+  </PointLight>
+  <PointLight Name="street_light_05" AttenuationRange="100000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="173375" AllowHeightAdjustment="True">
+    <Position x="7546.27" y="173375" z="-1176837" />
+    <Specular R="0.4196078" G="0.9058824" B="0.6745098" />
+    <Diffuse R="0.427451" G="0.4352941" B="0.1921569" />
+  </PointLight>
+  <PointLight Name="street_light_02" AttenuationRange="100000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="173375" AllowHeightAdjustment="True">
+    <Position x="32646.27" y="173375" z="-1186237" />
+    <Specular R="0.4627451" G="0.5803922" B="0.1882353" />
+    <Diffuse R="0.4941176" G="0.454902" B="0.2039216" />
+  </PointLight>
+  <PointLight Name="street_light_06" AttenuationRange="100000" AttenuationConstant="1" AttenuationLinear="0" AttenuationQuadratic="0" TerrainOffset="172875" AllowHeightAdjustment="True">
+    <Position x="61546.27" y="172875" z="-1173637" />
+    <Specular R="0.4666667" G="0.4392157" B="0.2588235" />
+    <Diffuse R="0.3960784" G="0.3411765" B="0.2470588" />
+  </PointLight>
+</WorldObjectCollection>

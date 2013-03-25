@@ -1,0 +1,192 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7F6B8C0-4335-410C-892B-472C560B84CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Multiverse.Tools.MVImportTool</RootNamespace>
+    <AssemblyName>MVImportTool</AssemblyName>
+    <ApplicationIcon>asset_importer.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommandControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommandControl.Designer.cs">
+      <DependentUpon>CommandControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandWorker.cs" />
+    <Compile Include="FileControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileControl.Designer.cs">
+      <DependentUpon>FileControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImporterConfiguration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImporterConfiguration.Designer.cs">
+      <DependentUpon>ImporterConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ILog.cs" />
+    <Compile Include="ImporterConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImporterConfigurationDialog.Designer.cs">
+      <DependentUpon>ImporterConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportToolSettings.cs" />
+    <Compile Include="InstallationPreviewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallationPreviewDialog.Designer.cs">
+      <DependentUpon>InstallationPreviewDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LogPanel.Designer.cs">
+      <DependentUpon>LogPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MVImportToolForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MVImportToolForm.Designer.cs">
+      <DependentUpon>MVImportToolForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DirectoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DirectoryControl.Designer.cs">
+      <DependentUpon>DirectoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CommandControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FileControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImporterConfiguration.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImporterConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImporterConfigurationDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImporterConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallationPreviewDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InstallationPreviewDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LogPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MVImportToolForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MVImportToolForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DirectoryControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DirectoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepositoryControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RepositoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SourceFileSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SourceFileSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RepositoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RepositoryControl.Designer.cs">
+      <DependentUpon>RepositoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepositoryInstaller.cs" />
+    <Compile Include="SourceFileSelector.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SourceFileSelector.Designer.cs">
+      <DependentUpon>SourceFileSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextureFinder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Lib\AssetRepository\Multiverse.AssetRepository.csproj">
+      <Project>{A938BCF5-10B9-45A2-9553-550B2BDBF7CF}</Project>
+      <Name>Multiverse.AssetRepository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="asset_importer.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

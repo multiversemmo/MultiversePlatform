@@ -1,0 +1,40 @@
+
+material demotree4_Material1
+{
+	technique
+	{
+		pass
+		{
+			specular 1 1 1 1 0
+
+			texture_unit
+			{
+				texture tmp_trunk_skin_32.jpg
+			}
+		}
+	}
+}
+material demotree4_Material2
+{
+	technique
+	{
+		pass
+		{
+			specular 1 1 1 1 0
+
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture cat1_skin5.png
+			}
+
+			scene_blend alpha_blend
+			depth_write off
+			texture_unit
+			{
+				texture cat1_skin5.png
+			}
+		}
+	}
+}
