@@ -15,9 +15,9 @@ namespace Multiverse.AssetRepository
 		private string lastDirectoryReferenced = "";
         private bool inhibit = false;
         private List<string> worldAssetLines = new List<string>();
-        private string baseHelpURL = "http://update.multiverse.net/wiki/index.php/Using_Asset_Packager_Version_1.5";
-        private string baseReleaseNoteURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes";
-        private string feedbackURL = "http://update.multiverse.net/custportal/login.php";
+        private string baseHelpURL = "http://www.multiversemmo.com/wiki/Using_Asset_Packager";
+        private string baseReleaseNoteURL = "http://www.multiversemmo.com/wiki/Tools_Version_1.5_Release_Notes";
+        private string feedbackURL = "http://multiverse.forumotion.co.uk/";
         
 
         public assetPackagerForm(string worldName)
@@ -271,7 +271,7 @@ namespace Multiverse.AssetRepository
         private void aboutAssetPackagerToolStripMenuItem_Clicked(object sender, EventArgs e)
         {
             string assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            string msg = string.Format("Multiverse Asset Packager\n\nVersion: {0}\n\nCopyright 2006-2007 The Multiverse Network, Inc.\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
+            string msg = string.Format("Multiverse Asset Packager\n\nVersion: {0}\n\nCopyright 2012 The Multiverse Software Foundation\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
             DialogResult result = MessageBox.Show(this, msg, "About Multiverse Asset Packager", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

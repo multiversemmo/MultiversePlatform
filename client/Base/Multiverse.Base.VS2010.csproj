@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14A1A669-E474-4C8A-99AC-DC15705E395C}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Multiverse.Base</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Multiverse.Base</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>bin\Debug\Multiverse.Base.XML</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.6.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Axiom\Dependencies\Managed\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython, Version=1.0.60816.1877, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Managed\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Axiom\Dependencies\Managed\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tao.DevIl, Version=1.6.6.1, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Axiom\Dependencies\Managed\Tao.DevIl.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\..\Axiom\Engine\Axiom.Engine.VS2010.csproj">
+      <Project>{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Engine</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\MathLib\Axiom.MathLib.VS2010.csproj">
+      <Project>{48EAC066-47F2-44A5-9454-DFA718DCB55E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.MathLib</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\Platforms\Win32\Axiom.Platforms.Win32.VS2010.csproj">
+      <Project>{5E123EF9-47A1-49BA-BF0A-57B32156B2A1}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Platforms.Win32</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\Plugins\CgProgramManager\Axiom.Plugins.CgProgramManager.VS2010.csproj">
+      <Project>{519EF06F-12B1-43C4-AB84-765EAB4E5B59}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Plugins.CgProgramManager</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\Plugins\ParticleFX\Axiom.Plugins.ParticleFX.VS2010.csproj">
+      <Project>{E763AAC7-530A-48CF-A846-5423A83FA669}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Plugins.ParticleFX</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\RenderSystems\DirectX9\Axiom.RenderSystems.DirectX9.VS2010.csproj">
+      <Project>{CB7A661F-83B9-416D-B204-C1096DC7CF75}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.RenderSystems.DirectX9</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\AssetRepository\Multiverse.AssetRepository.VS2010.csproj">
+      <Project>{A938BCF5-10B9-45A2-9553-550B2BDBF7CF}</Project>
+      <Name>Multiverse.AssetRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\FMOD\FMODWrapper\FMODWrapper.VS2010.csproj">
+      <Project>{C0C175AF-AD7A-4A2E-8395-0E13468225EB}</Project>
+      <Name>FMODWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\HeightfieldGenerator\HeightfieldGenerator.VS2010.csproj">
+      <Project>{35F25073-16AD-49C6-A15D-7E5AF51CE004}</Project>
+      <Name>HeightfieldGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\LogUtil\Multiverse.Lib.LogUtil.VS2010.csproj">
+      <Project>{68B78196-2567-4E0F-99E6-F577B2CAAB9A}</Project>
+      <Name>Multiverse.Lib.LogUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\SpeexWrapper\SpeexWrapper.VS2010.csproj">
+      <Project>{3D0CCD1B-DEA7-4AE6-85D3-E65C561C1005}</Project>
+      <Name>SpeexWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\TextureFetcher\Multiverse.Lib.TextureFetcher.VS2010.csproj">
+      <Project>{77C93B8C-B5D8-48D0-ACFF-213479FB7C04}</Project>
+      <Name>Multiverse.Lib.TextureFetcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Voice\Multiverse.Voice.VS2010.csproj">
+      <Project>{E05497AA-2C38-4716-880E-CF934BF2C47A}</Project>
+      <Name>Multiverse.Voice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\mvsm\Axiom.SceneManagers.Multiverse.VS2010.csproj">
+      <Project>{1634B8A5-A73F-4814-809D-CD8E107D2C65}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.SceneManagers.Multiverse</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Generator\Multiverse.Generator.VS2010.csproj">
+      <Project>{61BBF284-FC72-4D15-9783-263CE4BB940C}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Multiverse.Generator</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CollisionLib\Multiverse.CollisionLib.VS2010.csproj">
+      <Project>{EB687263-4BFD-4EC0-A987-055148C056DD}</Project>
+      <Name>Multiverse.CollisionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Config\Multiverse.Config.VS2010.csproj">
+      <Project>{A885B41B-BDA3-42F7-968D-D471A5B156A2}</Project>
+      <Name>Multiverse.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gui\Multiverse.Gui.VS2010.csproj">
+      <Project>{DAE8ED1B-8A27-45A3-AC0C-1626C388AE92}</Project>
+      <Name>Multiverse.Gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interface\Multiverse.Interface.VS2010.csproj">
+      <Project>{62CED69E-5849-4502-8134-020D2EE00FC1}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Multiverse.Interface</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\MathLib\Multiverse.MathLib.VS2010.csproj">
+      <Project>{9F78B40B-536B-4D4C-9B2A-2D17246CC670}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Multiverse.MathLib</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Network\Multiverse.Network.VS2010.csproj">
+      <Project>{161E863F-2EE1-4013-ADD5-6045B033D7FE}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Multiverse.Network</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Patcher\Multiverse.Patcher.VS2010.csproj">
+      <Project>{DA24F315-0C0A-4FFC-9048-07642C064C12}</Project>
+      <Name>Multiverse.Patcher</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Serialization\Multiverse.Serialization.VS2010.csproj">
+      <Project>{AE280269-9891-428E-A2E0-8774F2BEAF24}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Multiverse.Serialization</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Multiverse.Utility.VS2010.csproj">
+      <Project>{969AF559-C830-4823-A8A3-DEC358608BA5}</Project>
+      <Name>Multiverse.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web\Multiverse.Web.VS2010.csproj">
+      <Project>{DB80E8B4-6A2B-4F94-8B32-D005455D1025}</Project>
+      <Name>Multiverse.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Client.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClientAPI.cs" />
+    <Compile Include="Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConfigDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigDialog.Designer.cs">
+      <DependentUpon>ConfigDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigParser.cs" />
+    <Compile Include="Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog.Designer.cs">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditableImage.cs" />
+    <Compile Include="HtmlWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HtmlWindow.Designer.cs">
+      <DependentUpon>HtmlWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGameWorld.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoadingScreen.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginHelper.cs" />
+    <Compile Include="MarsWorld.cs" />
+    <Compile Include="MeshUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MobNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Player.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrimeMover.cs" />
+    <Compile Include="ScriptableLODSpec.cs" />
+    <Compile Include="SoundManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="StaticGeometryHelper.cs" />
+    <Compile Include="WorldManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\InputHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConfigDialog.resx">
+      <DependentUpon>ConfigDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog.resx">
+      <DependentUpon>Dialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HtmlWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

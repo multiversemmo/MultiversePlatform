@@ -78,17 +78,16 @@ namespace Multiverse.AssetRepository
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.repositoryLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 671);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 542);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(802, 23);
+            this.statusStrip1.Size = new System.Drawing.Size(602, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // repositoryLabel
             // 
             this.repositoryLabel.Name = "repositoryLabel";
-            this.repositoryLabel.Size = new System.Drawing.Size(176, 18);
+            this.repositoryLabel.Size = new System.Drawing.Size(144, 17);
             this.repositoryLabel.Text = "No Repository Designated";
             // 
             // openWorldAssetsDialog
@@ -117,56 +116,55 @@ namespace Multiverse.AssetRepository
             this.topPanel.Controls.Add(this.aboutButton);
             this.topPanel.Controls.Add(this.designateSourceMediaTreeButton);
             this.topPanel.Controls.Add(this.worldAssetsFilesLabel);
-            this.topPanel.Location = new System.Drawing.Point(3, 36);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.topPanel.Location = new System.Drawing.Point(2, 29);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(799, 166);
+            this.topPanel.Size = new System.Drawing.Size(599, 135);
             this.topPanel.TabIndex = 22;
             // 
             // worldAssetsCheckedListBox
             // 
             this.worldAssetsCheckedListBox.CheckOnClick = true;
             this.worldAssetsCheckedListBox.FormattingEnabled = true;
-            this.worldAssetsCheckedListBox.Location = new System.Drawing.Point(156, 63);
-            this.worldAssetsCheckedListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.worldAssetsCheckedListBox.Location = new System.Drawing.Point(117, 51);
             this.worldAssetsCheckedListBox.Name = "worldAssetsCheckedListBox";
-            this.worldAssetsCheckedListBox.Size = new System.Drawing.Size(520, 89);
+            this.worldAssetsCheckedListBox.Size = new System.Drawing.Size(391, 64);
             this.worldAssetsCheckedListBox.TabIndex = 39;
             // 
             // worldNamePanel
             // 
             this.worldNamePanel.Controls.Add(this.label5);
             this.worldNamePanel.Controls.Add(this.worldNameTextBox);
-            this.worldNamePanel.Location = new System.Drawing.Point(453, 14);
-            this.worldNamePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.worldNamePanel.Location = new System.Drawing.Point(340, 11);
+            this.worldNamePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.worldNamePanel.Name = "worldNamePanel";
-            this.worldNamePanel.Size = new System.Drawing.Size(223, 31);
+            this.worldNamePanel.Size = new System.Drawing.Size(167, 25);
             this.worldNamePanel.TabIndex = 38;
             this.worldNamePanel.Visible = false;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 6);
+            this.label5.Location = new System.Drawing.Point(5, 5);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 17);
+            this.label5.Size = new System.Drawing.Size(66, 13);
             this.label5.TabIndex = 39;
             this.label5.Text = "World Name";
             // 
             // worldNameTextBox
             // 
-            this.worldNameTextBox.Location = new System.Drawing.Point(99, 4);
-            this.worldNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.worldNameTextBox.Location = new System.Drawing.Point(74, 3);
+            this.worldNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.worldNameTextBox.Name = "worldNameTextBox";
-            this.worldNameTextBox.Size = new System.Drawing.Size(124, 22);
+            this.worldNameTextBox.Size = new System.Drawing.Size(94, 20);
             this.worldNameTextBox.TabIndex = 38;
             // 
             // openWorldAssetsButton
             // 
-            this.openWorldAssetsButton.Location = new System.Drawing.Point(692, 63);
-            this.openWorldAssetsButton.Margin = new System.Windows.Forms.Padding(4);
+            this.openWorldAssetsButton.Location = new System.Drawing.Point(519, 51);
             this.openWorldAssetsButton.Name = "openWorldAssetsButton";
-            this.openWorldAssetsButton.Size = new System.Drawing.Size(80, 28);
+            this.openWorldAssetsButton.Size = new System.Drawing.Size(60, 23);
             this.openWorldAssetsButton.TabIndex = 35;
             this.openWorldAssetsButton.Text = "Browse...";
             this.openWorldAssetsButton.UseVisualStyleBackColor = true;
@@ -174,10 +172,9 @@ namespace Multiverse.AssetRepository
             // 
             // aboutButton
             // 
-            this.aboutButton.Location = new System.Drawing.Point(692, 14);
-            this.aboutButton.Margin = new System.Windows.Forms.Padding(4);
+            this.aboutButton.Location = new System.Drawing.Point(519, 11);
             this.aboutButton.Name = "aboutButton";
-            this.aboutButton.Size = new System.Drawing.Size(80, 28);
+            this.aboutButton.Size = new System.Drawing.Size(60, 23);
             this.aboutButton.TabIndex = 25;
             this.aboutButton.Text = "About";
             this.aboutButton.UseVisualStyleBackColor = true;
@@ -185,10 +182,9 @@ namespace Multiverse.AssetRepository
             // 
             // designateSourceMediaTreeButton
             // 
-            this.designateSourceMediaTreeButton.Location = new System.Drawing.Point(156, 14);
-            this.designateSourceMediaTreeButton.Margin = new System.Windows.Forms.Padding(4);
+            this.designateSourceMediaTreeButton.Location = new System.Drawing.Point(117, 11);
             this.designateSourceMediaTreeButton.Name = "designateSourceMediaTreeButton";
-            this.designateSourceMediaTreeButton.Size = new System.Drawing.Size(321, 28);
+            this.designateSourceMediaTreeButton.Size = new System.Drawing.Size(241, 23);
             this.designateSourceMediaTreeButton.TabIndex = 24;
             this.designateSourceMediaTreeButton.Text = "Designate Source Asset Repository";
             this.designateSourceMediaTreeButton.UseVisualStyleBackColor = true;
@@ -196,10 +192,9 @@ namespace Multiverse.AssetRepository
             // 
             // worldAssetsFilesLabel
             // 
-            this.worldAssetsFilesLabel.Location = new System.Drawing.Point(15, 63);
-            this.worldAssetsFilesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.worldAssetsFilesLabel.Location = new System.Drawing.Point(11, 51);
             this.worldAssetsFilesLabel.Name = "worldAssetsFilesLabel";
-            this.worldAssetsFilesLabel.Size = new System.Drawing.Size(133, 89);
+            this.worldAssetsFilesLabel.Size = new System.Drawing.Size(100, 72);
             this.worldAssetsFilesLabel.TabIndex = 23;
             this.worldAssetsFilesLabel.Text = "World Assets Files";
             this.worldAssetsFilesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -217,27 +212,26 @@ namespace Multiverse.AssetRepository
             this.bottomPanel.Controls.Add(this.assetListCheckedListBox);
             this.bottomPanel.Controls.Add(this.label2);
             this.bottomPanel.Controls.Add(this.assetListFileOpenButton);
-            this.bottomPanel.Location = new System.Drawing.Point(3, 206);
-            this.bottomPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bottomPanel.Location = new System.Drawing.Point(2, 167);
+            this.bottomPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bottomPanel.Name = "bottomPanel";
-            this.bottomPanel.Size = new System.Drawing.Size(799, 463);
+            this.bottomPanel.Size = new System.Drawing.Size(599, 376);
             this.bottomPanel.TabIndex = 24;
             // 
             // bottomLeftButtonPanel
             // 
             this.bottomLeftButtonPanel.Controls.Add(this.createEmptyRepositoryButton);
-            this.bottomLeftButtonPanel.Location = new System.Drawing.Point(24, 400);
-            this.bottomLeftButtonPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bottomLeftButtonPanel.Location = new System.Drawing.Point(18, 325);
+            this.bottomLeftButtonPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bottomLeftButtonPanel.Name = "bottomLeftButtonPanel";
-            this.bottomLeftButtonPanel.Size = new System.Drawing.Size(227, 59);
+            this.bottomLeftButtonPanel.Size = new System.Drawing.Size(170, 48);
             this.bottomLeftButtonPanel.TabIndex = 48;
             // 
             // createEmptyRepositoryButton
             // 
-            this.createEmptyRepositoryButton.Location = new System.Drawing.Point(0, 20);
-            this.createEmptyRepositoryButton.Margin = new System.Windows.Forms.Padding(4);
+            this.createEmptyRepositoryButton.Location = new System.Drawing.Point(0, 16);
             this.createEmptyRepositoryButton.Name = "createEmptyRepositoryButton";
-            this.createEmptyRepositoryButton.Size = new System.Drawing.Size(213, 26);
+            this.createEmptyRepositoryButton.Size = new System.Drawing.Size(160, 21);
             this.createEmptyRepositoryButton.TabIndex = 44;
             this.createEmptyRepositoryButton.Text = "Create Empty Asset Repository";
             this.createEmptyRepositoryButton.UseVisualStyleBackColor = true;
@@ -247,18 +241,17 @@ namespace Multiverse.AssetRepository
             // 
             this.bottomRightButtonPanel.Controls.Add(this.copyMediaButton);
             this.bottomRightButtonPanel.Controls.Add(this.cancelButton);
-            this.bottomRightButtonPanel.Location = new System.Drawing.Point(428, 401);
-            this.bottomRightButtonPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bottomRightButtonPanel.Location = new System.Drawing.Point(321, 326);
+            this.bottomRightButtonPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bottomRightButtonPanel.Name = "bottomRightButtonPanel";
-            this.bottomRightButtonPanel.Size = new System.Drawing.Size(347, 62);
+            this.bottomRightButtonPanel.Size = new System.Drawing.Size(260, 50);
             this.bottomRightButtonPanel.TabIndex = 47;
             // 
             // copyMediaButton
             // 
-            this.copyMediaButton.Location = new System.Drawing.Point(7, 21);
-            this.copyMediaButton.Margin = new System.Windows.Forms.Padding(4);
+            this.copyMediaButton.Location = new System.Drawing.Point(5, 17);
             this.copyMediaButton.Name = "copyMediaButton";
-            this.copyMediaButton.Size = new System.Drawing.Size(243, 26);
+            this.copyMediaButton.Size = new System.Drawing.Size(182, 21);
             this.copyMediaButton.TabIndex = 48;
             this.copyMediaButton.Text = "Copy Assets To Asset Repository";
             this.copyMediaButton.UseVisualStyleBackColor = true;
@@ -266,10 +259,10 @@ namespace Multiverse.AssetRepository
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(253, 21);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cancelButton.Location = new System.Drawing.Point(190, 17);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(93, 26);
+            this.cancelButton.Size = new System.Drawing.Size(70, 21);
             this.cancelButton.TabIndex = 47;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -278,20 +271,17 @@ namespace Multiverse.AssetRepository
             // logListBox
             // 
             this.logListBox.FormattingEnabled = true;
-            this.logListBox.ItemHeight = 16;
-            this.logListBox.Location = new System.Drawing.Point(24, 252);
-            this.logListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.logListBox.Location = new System.Drawing.Point(18, 205);
             this.logListBox.Name = "logListBox";
-            this.logListBox.Size = new System.Drawing.Size(751, 148);
+            this.logListBox.Size = new System.Drawing.Size(564, 121);
             this.logListBox.TabIndex = 45;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 231);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(16, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 17);
+            this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 44;
             this.label4.Text = "Packager Log";
             // 
@@ -300,20 +290,18 @@ namespace Multiverse.AssetRepository
             this.copyAssetDefinitionsCheckBox.AutoSize = true;
             this.copyAssetDefinitionsCheckBox.Checked = true;
             this.copyAssetDefinitionsCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.copyAssetDefinitionsCheckBox.Location = new System.Drawing.Point(160, 155);
-            this.copyAssetDefinitionsCheckBox.Margin = new System.Windows.Forms.Padding(4);
+            this.copyAssetDefinitionsCheckBox.Location = new System.Drawing.Point(120, 126);
             this.copyAssetDefinitionsCheckBox.Name = "copyAssetDefinitionsCheckBox";
-            this.copyAssetDefinitionsCheckBox.Size = new System.Drawing.Size(366, 21);
+            this.copyAssetDefinitionsCheckBox.Size = new System.Drawing.Size(275, 17);
             this.copyAssetDefinitionsCheckBox.TabIndex = 42;
             this.copyAssetDefinitionsCheckBox.Text = "Copy Asset Definition Files (.asset and .assetlist files) ";
             this.copyAssetDefinitionsCheckBox.UseVisualStyleBackColor = true;
             // 
             // newMediaTreeOpenButton
             // 
-            this.newMediaTreeOpenButton.Location = new System.Drawing.Point(695, 189);
-            this.newMediaTreeOpenButton.Margin = new System.Windows.Forms.Padding(4);
+            this.newMediaTreeOpenButton.Location = new System.Drawing.Point(521, 154);
             this.newMediaTreeOpenButton.Name = "newMediaTreeOpenButton";
-            this.newMediaTreeOpenButton.Size = new System.Drawing.Size(80, 28);
+            this.newMediaTreeOpenButton.Size = new System.Drawing.Size(60, 23);
             this.newMediaTreeOpenButton.TabIndex = 40;
             this.newMediaTreeOpenButton.Text = "Browse...";
             this.newMediaTreeOpenButton.UseVisualStyleBackColor = true;
@@ -321,18 +309,16 @@ namespace Multiverse.AssetRepository
             // 
             // newTreeTextBox
             // 
-            this.newTreeTextBox.Location = new System.Drawing.Point(160, 192);
-            this.newTreeTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.newTreeTextBox.Location = new System.Drawing.Point(120, 156);
             this.newTreeTextBox.Name = "newTreeTextBox";
-            this.newTreeTextBox.Size = new System.Drawing.Size(520, 22);
+            this.newTreeTextBox.Size = new System.Drawing.Size(391, 20);
             this.newTreeTextBox.TabIndex = 39;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(4, 184);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 38);
+            this.label3.Size = new System.Drawing.Size(115, 31);
             this.label3.TabIndex = 38;
             this.label3.Text = "Target Asset Repository";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -341,28 +327,25 @@ namespace Multiverse.AssetRepository
             // 
             this.assetListCheckedListBox.CheckOnClick = true;
             this.assetListCheckedListBox.FormattingEnabled = true;
-            this.assetListCheckedListBox.Location = new System.Drawing.Point(156, 18);
-            this.assetListCheckedListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.assetListCheckedListBox.Location = new System.Drawing.Point(117, 15);
             this.assetListCheckedListBox.Name = "assetListCheckedListBox";
-            this.assetListCheckedListBox.Size = new System.Drawing.Size(520, 123);
+            this.assetListCheckedListBox.Size = new System.Drawing.Size(391, 94);
             this.assetListCheckedListBox.TabIndex = 37;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(20, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(15, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 123);
+            this.label2.Size = new System.Drawing.Size(96, 100);
             this.label2.TabIndex = 36;
             this.label2.Text = "Asset List Files";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // assetListFileOpenButton
             // 
-            this.assetListFileOpenButton.Location = new System.Drawing.Point(691, 18);
-            this.assetListFileOpenButton.Margin = new System.Windows.Forms.Padding(4);
+            this.assetListFileOpenButton.Location = new System.Drawing.Point(518, 15);
             this.assetListFileOpenButton.Name = "assetListFileOpenButton";
-            this.assetListFileOpenButton.Size = new System.Drawing.Size(80, 28);
+            this.assetListFileOpenButton.Size = new System.Drawing.Size(60, 23);
             this.assetListFileOpenButton.TabIndex = 35;
             this.assetListFileOpenButton.Text = "Browse...";
             this.assetListFileOpenButton.UseVisualStyleBackColor = true;
@@ -374,8 +357,7 @@ namespace Multiverse.AssetRepository
             this.helpMenuToolStripItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(802, 26);
+            this.menuStrip.Size = new System.Drawing.Size(602, 24);
             this.menuStrip.TabIndex = 25;
             this.menuStrip.Text = "Help";
             // 
@@ -387,48 +369,47 @@ namespace Multiverse.AssetRepository
             this.releaseNotesToolStripMenuItem,
             this.aboutAssetPackagerToolStripMenuItem});
             this.helpMenuToolStripItem.Name = "helpMenuToolStripItem";
-            this.helpMenuToolStripItem.Size = new System.Drawing.Size(48, 22);
+            this.helpMenuToolStripItem.Size = new System.Drawing.Size(44, 20);
             this.helpMenuToolStripItem.Text = "&Help";
             // 
             // launchOnlineHelpToolStripMenuItem
             // 
             this.launchOnlineHelpToolStripMenuItem.Name = "launchOnlineHelpToolStripMenuItem";
-            this.launchOnlineHelpToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.launchOnlineHelpToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.launchOnlineHelpToolStripMenuItem.Text = "Launch Online Help";
             this.launchOnlineHelpToolStripMenuItem.Click += new System.EventHandler(this.launchOnlineHelpToolStripMenuItem_Clicked);
             // 
             // submitFeedbackOrBugToolStripMenuItem
             // 
             this.submitFeedbackOrBugToolStripMenuItem.Name = "submitFeedbackOrBugToolStripMenuItem";
-            this.submitFeedbackOrBugToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.submitFeedbackOrBugToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.submitFeedbackOrBugToolStripMenuItem.Text = "Submit Feedback or a Bug";
             this.submitFeedbackOrBugToolStripMenuItem.Click += new System.EventHandler(this.submitFeedbackOrBugToolStripMenuItem_Clicked);
             // 
             // releaseNotesToolStripMenuItem
             // 
             this.releaseNotesToolStripMenuItem.Name = "releaseNotesToolStripMenuItem";
-            this.releaseNotesToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.releaseNotesToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.releaseNotesToolStripMenuItem.Text = "Release Notes";
             this.releaseNotesToolStripMenuItem.Click += new System.EventHandler(this.releaseNotesToolStripMenuItem_clicked);
             // 
             // aboutAssetPackagerToolStripMenuItem
             // 
             this.aboutAssetPackagerToolStripMenuItem.Name = "aboutAssetPackagerToolStripMenuItem";
-            this.aboutAssetPackagerToolStripMenuItem.Size = new System.Drawing.Size(263, 22);
+            this.aboutAssetPackagerToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.aboutAssetPackagerToolStripMenuItem.Text = "About Asset Packager";
             this.aboutAssetPackagerToolStripMenuItem.Click += new System.EventHandler(this.aboutAssetPackagerToolStripMenuItem_Clicked);
             // 
             // assetPackagerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 694);
+            this.ClientSize = new System.Drawing.Size(602, 564);
             this.Controls.Add(this.bottomPanel);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "assetPackagerForm";
             this.Text = "Asset Packager";
             this.Shown += new System.EventHandler(this.assetPackagerForm_Shown);

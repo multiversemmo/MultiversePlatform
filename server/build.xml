@@ -38,7 +38,7 @@
     <!-- Compile the java code from ${src} into ${build} -->
     <javac srcdir="${src}" 
            destdir="${build}"
-           excludes="multiverse/webapps/**,multiverse/testclient/**,multiverse/**/eventhandlers/**"
+           excludes="multiverse/webapps/**,multiverse/testclient/**,multiverse/**/eventhandlers/**,**/QuestStatusChanged.java"
            listfiles="yes"
 	   compiler="modern"
 	   fork="${build.fork}"

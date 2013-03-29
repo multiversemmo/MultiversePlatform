@@ -62,7 +62,7 @@ namespace Multiverse.Tools.WorldEditor
         {
             try
             {
-                String execDir = Application.ExecutablePath.Substring(0,Application.ExecutablePath.LastIndexOf("\\"));
+                String execDir = Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf(System.IO.Path.DirectorySeparatorChar));
                 Directory.SetCurrentDirectory(execDir);
                 // Changes the CurrentCulture of the current thread to the invariant culture.
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("", false);

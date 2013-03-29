@@ -51,6 +51,7 @@ namespace Multiverse.Patcher {
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateForm));
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
@@ -73,6 +74,7 @@ namespace Multiverse.Patcher {
             this.ClientSize = new System.Drawing.Size(640, 480);
             this.Controls.Add(this.webBrowser1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "UpdateForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;

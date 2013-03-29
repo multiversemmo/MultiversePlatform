@@ -119,10 +119,16 @@ namespace Axiom.SceneManagers.Multiverse
                 //LogManager.Instance.Write("Create Material: {0}", materialName);
 
                 Material tmpMaterial = MaterialManager.Instance.GetByName(HighlightMaterialName(highlightType));
-                material = tmpMaterial.Clone(materialName);
+                if (tmpMaterial != null)
+                {
+                    material = tmpMaterial.Clone(materialName);
+                }
 
                 typeChange = false;
             }
+
+            if (material == null)
+                return;
 
             Technique tech = material.GetTechnique(0);
             material.Load();

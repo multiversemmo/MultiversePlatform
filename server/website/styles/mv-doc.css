@@ -1,0 +1,187 @@
+body,p,h1,h2,h3,h4,li {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body, body.help {
+  background-color: white;
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+p,li,dd {
+  font-size: 10pt;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+div.topnav {
+  margin-left: -25px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #312E49;
+  font-size: 10pt;
+}
+
+div.nav {
+  margin-left: -15px;
+  margin-top: 0;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #004080;
+  font-size: 10pt;
+}
+
+div.helpnav {
+  margin-left: -15px;
+  margin-top: 0;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: #7FC738;
+  font-size: 7pt;
+  letter-spacing: 2px;
+}
+
+div.logo {
+  margin-left: -15px;
+  margin-top: 0;
+  padding-left: 15px;
+  padding-bottom: 0;
+  padding-top: 0;
+  background-color: black;
+}
+
+a.nav, a.nav-here {
+  color: #97D2FF;  
+  text-decoration: none;
+  font-weight: bold; 
+  margin-left: 15px;
+}
+
+a.nav-here {
+  color: white;
+}
+
+a.helpnav {
+  color: black;
+  text-decoration: none;
+}
+
+a.nav:hover, a.nav-here:hover, a.topnav-start:hover, a.helpnav:hover {text-decoration: underline}
+
+p.figcaption {
+  margin-top: 0;
+}
+
+li {
+  padding-bottom: 3px;
+}
+
+li li {
+  margin-left: 0;
+}
+
+h1 { padding-top: 0px;
+  font-size: 20pt;
+}
+
+h2 {
+  font-size: 18pt;
+}
+
+h3 {
+  font-size: 14pt;
+  color: #337319;
+}
+
+
+h4 {
+  font-size: 12pt;
+  font-weight: bold; 
+  padding-right: 0.5in; 
+}
+
+table {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+caption {
+  padding-bottom: 5px;
+}
+
+td {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  vertical-align: top;
+}
+
+/*
+td p {
+  padding-left -15px;
+  color: red;
+} */
+
+td ul {
+  margin-top: 0.1em;
+}
+
+td ul li {
+  margin-left: -0.1in;
+}
+
+th {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold; 
+  background-color: #999999;
+  font-size: 10pt;
+}
+
+caption {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-color: red;
+}
+
+code { 
+  FONT-SIZE: 10pt; 
+}
+
+pre {
+  BORDER: black 1pt solid; 
+  PADDING-LEFT: 10px; 
+  PADDING-RIGHT: 10px; 
+  PADDING-BOTTOM: 1em; 
+  PADDING-TOP: 1em; 
+  FONT-SIZE: 10pt; 
+  OVERFLOW: auto; 
+  WHITE-SPACE: pre;
+  background-color: white;
+  margin-right: 0.25in; 
+}
+
+p.copyright {
+  font-size: 8pt;
+  font-weight: bold; 
+  text-align: center;
+  margin-top: 0; 
+}
+
+a.gloss:hover {
+  color: #FF00FF;
+    cursor:help
+}
+
+/* --- For glossary --- */
+dt {
+  font-weight: bold; 
+  margin-top: 0;
+}
+dd {
+  padding-bottom: 25px;
+}

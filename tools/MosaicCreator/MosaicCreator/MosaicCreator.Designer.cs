@@ -56,6 +56,7 @@ namespace Multiverse.Tools.MosaicCreator
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MosaicCreator));
             this.sourceLabel = new System.Windows.Forms.Label();
             this.tileSizeLabel = new System.Windows.Forms.Label();
             this.tileSizeComboBox = new System.Windows.Forms.ComboBox();
@@ -88,18 +89,20 @@ namespace Multiverse.Tools.MosaicCreator
             // sourceLabel
             // 
             this.sourceLabel.AutoSize = true;
-            this.sourceLabel.Location = new System.Drawing.Point(27, 43);
+            this.sourceLabel.Location = new System.Drawing.Point(36, 53);
+            this.sourceLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sourceLabel.Name = "sourceLabel";
-            this.sourceLabel.Size = new System.Drawing.Size(76, 13);
+            this.sourceLabel.Size = new System.Drawing.Size(99, 17);
             this.sourceLabel.TabIndex = 0;
             this.sourceLabel.Text = "Source Image:";
             // 
             // tileSizeLabel
             // 
             this.tileSizeLabel.AutoSize = true;
-            this.tileSizeLabel.Location = new System.Drawing.Point(27, 81);
+            this.tileSizeLabel.Location = new System.Drawing.Point(36, 100);
+            this.tileSizeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.tileSizeLabel.Name = "tileSizeLabel";
-            this.tileSizeLabel.Size = new System.Drawing.Size(50, 13);
+            this.tileSizeLabel.Size = new System.Drawing.Size(66, 17);
             this.tileSizeLabel.TabIndex = 2;
             this.tileSizeLabel.Text = "Tile Size:";
             // 
@@ -113,17 +116,19 @@ namespace Multiverse.Tools.MosaicCreator
             "512",
             "1024",
             "2048"});
-            this.tileSizeComboBox.Location = new System.Drawing.Point(144, 78);
+            this.tileSizeComboBox.Location = new System.Drawing.Point(192, 96);
+            this.tileSizeComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.tileSizeComboBox.Name = "tileSizeComboBox";
-            this.tileSizeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.tileSizeComboBox.Size = new System.Drawing.Size(160, 24);
             this.tileSizeComboBox.TabIndex = 3;
             // 
             // mpsLabel
             // 
             this.mpsLabel.AutoSize = true;
-            this.mpsLabel.Location = new System.Drawing.Point(27, 120);
+            this.mpsLabel.Location = new System.Drawing.Point(36, 148);
+            this.mpsLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.mpsLabel.Name = "mpsLabel";
-            this.mpsLabel.Size = new System.Drawing.Size(86, 13);
+            this.mpsLabel.Size = new System.Drawing.Size(114, 17);
             this.mpsLabel.TabIndex = 6;
             this.mpsLabel.Text = "Meters Per Pixel:";
             // 
@@ -141,17 +146,20 @@ namespace Multiverse.Tools.MosaicCreator
             "64",
             "128",
             "256"});
-            this.mpsComboBox.Location = new System.Drawing.Point(144, 117);
+            this.mpsComboBox.Location = new System.Drawing.Point(192, 144);
+            this.mpsComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.mpsComboBox.Name = "mpsComboBox";
-            this.mpsComboBox.Size = new System.Drawing.Size(121, 21);
+            this.mpsComboBox.Size = new System.Drawing.Size(160, 24);
             this.mpsComboBox.TabIndex = 7;
             // 
             // sourceGroupBox
             // 
             this.sourceGroupBox.Controls.Add(this.sourceImageInfoLabel);
-            this.sourceGroupBox.Location = new System.Drawing.Point(308, 68);
+            this.sourceGroupBox.Location = new System.Drawing.Point(411, 84);
+            this.sourceGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.sourceGroupBox.Name = "sourceGroupBox";
-            this.sourceGroupBox.Size = new System.Drawing.Size(242, 88);
+            this.sourceGroupBox.Padding = new System.Windows.Forms.Padding(4);
+            this.sourceGroupBox.Size = new System.Drawing.Size(323, 108);
             this.sourceGroupBox.TabIndex = 4;
             this.sourceGroupBox.TabStop = false;
             this.sourceGroupBox.Text = "Source Image Info";
@@ -159,17 +167,19 @@ namespace Multiverse.Tools.MosaicCreator
             // sourceImageInfoLabel
             // 
             this.sourceImageInfoLabel.AutoSize = true;
-            this.sourceImageInfoLabel.Location = new System.Drawing.Point(18, 28);
+            this.sourceImageInfoLabel.Location = new System.Drawing.Point(24, 34);
+            this.sourceImageInfoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sourceImageInfoLabel.Name = "sourceImageInfoLabel";
-            this.sourceImageInfoLabel.Size = new System.Drawing.Size(0, 13);
+            this.sourceImageInfoLabel.Size = new System.Drawing.Size(0, 17);
             this.sourceImageInfoLabel.TabIndex = 5;
             // 
             // heightMapCheckbox
             // 
             this.heightMapCheckbox.AutoSize = true;
-            this.heightMapCheckbox.Location = new System.Drawing.Point(30, 205);
+            this.heightMapCheckbox.Location = new System.Drawing.Point(40, 252);
+            this.heightMapCheckbox.Margin = new System.Windows.Forms.Padding(4);
             this.heightMapCheckbox.Name = "heightMapCheckbox";
-            this.heightMapCheckbox.Size = new System.Drawing.Size(81, 17);
+            this.heightMapCheckbox.Size = new System.Drawing.Size(102, 21);
             this.heightMapCheckbox.TabIndex = 8;
             this.heightMapCheckbox.Text = "Height Map";
             this.heightMapCheckbox.UseVisualStyleBackColor = true;
@@ -178,17 +188,19 @@ namespace Multiverse.Tools.MosaicCreator
             // minAltLabel
             // 
             this.minAltLabel.AutoSize = true;
-            this.minAltLabel.Location = new System.Drawing.Point(7, 16);
+            this.minAltLabel.Location = new System.Drawing.Point(9, 20);
+            this.minAltLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.minAltLabel.Name = "minAltLabel";
-            this.minAltLabel.Size = new System.Drawing.Size(89, 13);
+            this.minAltLabel.Size = new System.Drawing.Size(118, 17);
             this.minAltLabel.TabIndex = 10;
             this.minAltLabel.Text = "Minimum Altitude:";
             // 
             // minAltTextBox
             // 
-            this.minAltTextBox.Location = new System.Drawing.Point(102, 13);
+            this.minAltTextBox.Location = new System.Drawing.Point(136, 16);
+            this.minAltTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.minAltTextBox.Name = "minAltTextBox";
-            this.minAltTextBox.Size = new System.Drawing.Size(100, 20);
+            this.minAltTextBox.Size = new System.Drawing.Size(132, 22);
             this.minAltTextBox.TabIndex = 11;
             this.minAltTextBox.Text = "0";
             // 
@@ -199,34 +211,38 @@ namespace Multiverse.Tools.MosaicCreator
             this.altPanel.Controls.Add(this.minAltLabel);
             this.altPanel.Controls.Add(this.minAltTextBox);
             this.altPanel.Enabled = false;
-            this.altPanel.Location = new System.Drawing.Point(134, 190);
+            this.altPanel.Location = new System.Drawing.Point(179, 234);
+            this.altPanel.Margin = new System.Windows.Forms.Padding(4);
             this.altPanel.Name = "altPanel";
-            this.altPanel.Size = new System.Drawing.Size(459, 50);
+            this.altPanel.Size = new System.Drawing.Size(612, 62);
             this.altPanel.TabIndex = 9;
             // 
             // maxAltTextBox
             // 
-            this.maxAltTextBox.Location = new System.Drawing.Point(337, 13);
+            this.maxAltTextBox.Location = new System.Drawing.Point(449, 16);
+            this.maxAltTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.maxAltTextBox.Name = "maxAltTextBox";
-            this.maxAltTextBox.Size = new System.Drawing.Size(100, 20);
+            this.maxAltTextBox.Size = new System.Drawing.Size(132, 22);
             this.maxAltTextBox.TabIndex = 13;
             this.maxAltTextBox.Text = "1000";
             // 
             // maxAltLabel
             // 
             this.maxAltLabel.AutoSize = true;
-            this.maxAltLabel.Location = new System.Drawing.Point(239, 16);
+            this.maxAltLabel.Location = new System.Drawing.Point(319, 20);
+            this.maxAltLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.maxAltLabel.Name = "maxAltLabel";
-            this.maxAltLabel.Size = new System.Drawing.Size(92, 13);
+            this.maxAltLabel.Size = new System.Drawing.Size(121, 17);
             this.maxAltLabel.TabIndex = 12;
             this.maxAltLabel.Text = "Maximum Altitude:";
             // 
             // sourceImageFilenameLabel
             // 
             this.sourceImageFilenameLabel.AutoSize = true;
-            this.sourceImageFilenameLabel.Location = new System.Drawing.Point(131, 43);
+            this.sourceImageFilenameLabel.Location = new System.Drawing.Point(175, 53);
+            this.sourceImageFilenameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sourceImageFilenameLabel.Name = "sourceImageFilenameLabel";
-            this.sourceImageFilenameLabel.Size = new System.Drawing.Size(0, 13);
+            this.sourceImageFilenameLabel.Size = new System.Drawing.Size(0, 17);
             this.sourceImageFilenameLabel.TabIndex = 1;
             // 
             // menuStrip1
@@ -236,7 +252,8 @@ namespace Multiverse.Tools.MosaicCreator
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(603, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(804, 28);
             this.menuStrip1.TabIndex = 18;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -247,27 +264,27 @@ namespace Multiverse.Tools.MosaicCreator
             this.saveMosaicToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // loadImageToolStripMenuItem
             // 
             this.loadImageToolStripMenuItem.Name = "loadImageToolStripMenuItem";
-            this.loadImageToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.loadImageToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.loadImageToolStripMenuItem.Text = "Load Image...";
             this.loadImageToolStripMenuItem.Click += new System.EventHandler(this.loadImageToolStripMenuItem_Click);
             // 
             // saveMosaicToolStripMenuItem
             // 
             this.saveMosaicToolStripMenuItem.Name = "saveMosaicToolStripMenuItem";
-            this.saveMosaicToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.saveMosaicToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.saveMosaicToolStripMenuItem.Text = "Save Mosaic...";
             this.saveMosaicToolStripMenuItem.Click += new System.EventHandler(this.saveMosaicToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(169, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -279,42 +296,42 @@ namespace Multiverse.Tools.MosaicCreator
             this.submitFeedbackOrABugToolStripMenuItem,
             this.aboutMosaicCreatorToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // launchOnlineHelpToolStripMenuItem
             // 
             this.launchOnlineHelpToolStripMenuItem.Name = "launchOnlineHelpToolStripMenuItem";
-            this.launchOnlineHelpToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.launchOnlineHelpToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.launchOnlineHelpToolStripMenuItem.Text = "Launch Online Help";
             this.launchOnlineHelpToolStripMenuItem.Click += new System.EventHandler(this.launchOnlineHelpToolStripMenuItem_Click);
             // 
             // launchReleaseNotesToolStripMenuItem
             // 
             this.launchReleaseNotesToolStripMenuItem.Name = "launchReleaseNotesToolStripMenuItem";
-            this.launchReleaseNotesToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.launchReleaseNotesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.launchReleaseNotesToolStripMenuItem.Text = "Launch Release Notes";
             this.launchReleaseNotesToolStripMenuItem.Click += new System.EventHandler(this.launchReleaseNotesToolStripMenuItem_Click);
             // 
             // submitFeedbackOrABugToolStripMenuItem
             // 
             this.submitFeedbackOrABugToolStripMenuItem.Name = "submitFeedbackOrABugToolStripMenuItem";
-            this.submitFeedbackOrABugToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.submitFeedbackOrABugToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.submitFeedbackOrABugToolStripMenuItem.Text = "Submit Feedback or a Bug";
             this.submitFeedbackOrABugToolStripMenuItem.Click += new System.EventHandler(this.submitFeedbackOrABugToolStripMenuItem_Click);
             // 
             // aboutMosaicCreatorToolStripMenuItem
             // 
             this.aboutMosaicCreatorToolStripMenuItem.Name = "aboutMosaicCreatorToolStripMenuItem";
-            this.aboutMosaicCreatorToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.aboutMosaicCreatorToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.aboutMosaicCreatorToolStripMenuItem.Text = "About Mosaic Creator";
             this.aboutMosaicCreatorToolStripMenuItem.Click += new System.EventHandler(this.aboutMosaicCreatorToolStripMenuItem_Click);
             // 
             // MosaicCreator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 251);
+            this.ClientSize = new System.Drawing.Size(804, 309);
             this.Controls.Add(this.sourceImageFilenameLabel);
             this.Controls.Add(this.altPanel);
             this.Controls.Add(this.heightMapCheckbox);
@@ -325,7 +342,9 @@ namespace Multiverse.Tools.MosaicCreator
             this.Controls.Add(this.tileSizeLabel);
             this.Controls.Add(this.sourceLabel);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MosaicCreator";
             this.Text = "Mosaic Creator";
             this.sourceGroupBox.ResumeLayout(false);

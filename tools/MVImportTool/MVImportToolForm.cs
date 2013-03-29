@@ -475,7 +475,7 @@ namespace MVImportTool
             string msg = string.Format( 
                 "Multiverse COLLADA Import Tool\n\n" + 
                 "Version: {0}\n\n" + 
-                "Copyright 2007 The Multiverse Network, Inc.\n\n" +
+                "Copyright 2012 The Multiverse Software Foundation\n\n" +
                 "Portions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.", 
                 assemblyVersion );
 
@@ -503,9 +503,9 @@ namespace MVImportTool
             System.Diagnostics.Process.Start( releaseNotesURL );
         }
 
-        const string helpBaseURL = "http://update.multiverse.net/wiki/index.php/Using_the_Multiverse_COLLADA_Import_Tool";
-        const string feedbackBaseURL = "http://update.multiverse.net/custportal/login.php";
-        const string releaseNotesURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes"; 
+        const string helpBaseURL = "http://www.multiversemmo.com/wiki/Using_the_Multiverse_COLLADA_Import_Tool";
+        const string feedbackBaseURL = "http://multiverse.forumotion.co.uk/";
+        const string releaseNotesURL = "http://www.multiversemmo.com/wiki/Tools_Version_1.5_Release_Notes"; 
     }
     #endregion Help Menu support
 }

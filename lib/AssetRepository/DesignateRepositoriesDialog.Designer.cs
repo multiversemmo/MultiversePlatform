@@ -28,6 +28,7 @@ namespace Multiverse.AssetRepository
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DesignateRepositoriesDialog));
             this.FilesListBox = new System.Windows.Forms.ListBox();
             this.filesLabel = new System.Windows.Forms.Label();
             this.BrowseAndAddButton = new System.Windows.Forms.Button();
@@ -43,45 +44,44 @@ namespace Multiverse.AssetRepository
             // 
             this.FilesListBox.AllowDrop = true;
             this.FilesListBox.FormattingEnabled = true;
-            this.FilesListBox.ItemHeight = 16;
-            this.FilesListBox.Location = new System.Drawing.Point(11, 93);
-            this.FilesListBox.Margin = new System.Windows.Forms.Padding(4);
+            this.FilesListBox.Location = new System.Drawing.Point(8, 76);
             this.FilesListBox.Name = "FilesListBox";
-            this.FilesListBox.Size = new System.Drawing.Size(437, 244);
+            this.FilesListBox.Size = new System.Drawing.Size(329, 199);
             this.FilesListBox.TabIndex = 20;
-            this.FilesListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.FilesListBox_DragDrop);
-            this.FilesListBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FilesListBox_MouseUp);
-            this.FilesListBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FilesListBox_MouseMove);
-            this.FilesListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FilesListBox_MouseDown);
             this.FilesListBox.SelectedValueChanged += new System.EventHandler(this.FilesListBox_SelectedValueChanged);
+            this.FilesListBox.DragDrop += new System.Windows.Forms.DragEventHandler(this.FilesListBox_DragDrop);
             this.FilesListBox.DragOver += new System.Windows.Forms.DragEventHandler(this.FilesListBox_DragOver);
+            this.FilesListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.FilesListBox_MouseDown);
+            this.FilesListBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.FilesListBox_MouseMove);
+            this.FilesListBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.FilesListBox_MouseUp);
             // 
             // filesLabel
             // 
             this.filesLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.filesLabel.Location = new System.Drawing.Point(156, 9);
-            this.filesLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.filesLabel.Location = new System.Drawing.Point(114, 7);
             this.filesLabel.Name = "filesLabel";
-            this.filesLabel.Size = new System.Drawing.Size(126, 17);
+            this.filesLabel.Size = new System.Drawing.Size(100, 14);
             this.filesLabel.TabIndex = 19;
             this.filesLabel.Text = "Asset Repositories";
             // 
             // BrowseAndAddButton
             // 
-            this.BrowseAndAddButton.Location = new System.Drawing.Point(11, 364);
+            this.BrowseAndAddButton.Location = new System.Drawing.Point(8, 296);
+            this.BrowseAndAddButton.Margin = new System.Windows.Forms.Padding(2);
             this.BrowseAndAddButton.Name = "BrowseAndAddButton";
-            this.BrowseAndAddButton.Size = new System.Drawing.Size(224, 33);
+            this.BrowseAndAddButton.Size = new System.Drawing.Size(168, 27);
             this.BrowseAndAddButton.TabIndex = 21;
-            this.BrowseAndAddButton.Text = "Browse And Add Directory";
+            this.BrowseAndAddButton.Text = "Browse and Add Directory";
             this.BrowseAndAddButton.UseVisualStyleBackColor = true;
             this.BrowseAndAddButton.Click += new System.EventHandler(this.BrowseAndAddButton_Click);
             // 
             // RemoveDirectory
             // 
-            this.RemoveDirectory.Location = new System.Drawing.Point(241, 364);
+            this.RemoveDirectory.Location = new System.Drawing.Point(181, 296);
+            this.RemoveDirectory.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveDirectory.Name = "RemoveDirectory";
-            this.RemoveDirectory.Size = new System.Drawing.Size(207, 33);
+            this.RemoveDirectory.Size = new System.Drawing.Size(155, 27);
             this.RemoveDirectory.TabIndex = 22;
             this.RemoveDirectory.Text = "Remove Directory";
             this.RemoveDirectory.UseVisualStyleBackColor = true;
@@ -89,9 +89,10 @@ namespace Multiverse.AssetRepository
             // 
             // CancelButton
             // 
-            this.CancelButton.Location = new System.Drawing.Point(367, 439);
+            this.CancelButton.Location = new System.Drawing.Point(275, 357);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.CancelButton.Name = "CancelButton";
-            this.CancelButton.Size = new System.Drawing.Size(81, 33);
+            this.CancelButton.Size = new System.Drawing.Size(61, 27);
             this.CancelButton.TabIndex = 24;
             this.CancelButton.Text = "Cancel";
             this.CancelButton.UseVisualStyleBackColor = true;
@@ -99,9 +100,10 @@ namespace Multiverse.AssetRepository
             // 
             // OKButton
             // 
-            this.OKButton.Location = new System.Drawing.Point(264, 439);
+            this.OKButton.Location = new System.Drawing.Point(198, 357);
+            this.OKButton.Margin = new System.Windows.Forms.Padding(2);
             this.OKButton.Name = "OKButton";
-            this.OKButton.Size = new System.Drawing.Size(97, 33);
+            this.OKButton.Size = new System.Drawing.Size(73, 27);
             this.OKButton.TabIndex = 23;
             this.OKButton.Text = "OK";
             this.OKButton.UseVisualStyleBackColor = true;
@@ -110,9 +112,10 @@ namespace Multiverse.AssetRepository
             // blahBlahLabel
             // 
             this.blahBlahLabel.AutoSize = true;
-            this.blahBlahLabel.Location = new System.Drawing.Point(67, 63);
+            this.blahBlahLabel.Location = new System.Drawing.Point(50, 51);
+            this.blahBlahLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.blahBlahLabel.Name = "blahBlahLabel";
-            this.blahBlahLabel.Size = new System.Drawing.Size(313, 17);
+            this.blahBlahLabel.Size = new System.Drawing.Size(227, 13);
             this.blahBlahLabel.TabIndex = 25;
             this.blahBlahLabel.Text = "(Repositories are searched in first-to-last order.)";
             // 
@@ -120,17 +123,18 @@ namespace Multiverse.AssetRepository
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(88, 35);
+            this.label1.Location = new System.Drawing.Point(72, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 17);
+            this.label1.Size = new System.Drawing.Size(182, 13);
             this.label1.TabIndex = 26;
-            this.label1.Text = "Drag and drop to reorder repositories";
+            this.label1.Text = "Drag and drop to reorder repositories.";
             // 
             // DesignateRepositoriesDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 483);
+            this.ClientSize = new System.Drawing.Size(346, 392);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.blahBlahLabel);
             this.Controls.Add(this.CancelButton);
@@ -139,6 +143,8 @@ namespace Multiverse.AssetRepository
             this.Controls.Add(this.BrowseAndAddButton);
             this.Controls.Add(this.FilesListBox);
             this.Controls.Add(this.filesLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DesignateRepositoriesDialog";
             this.ShowInTaskbar = false;
             this.Text = "Designate Asset Repositories";

@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiverse.Serialization.VS2010", "Multiverse.Serialization.VS2010.csproj", "{AE280269-9891-428E-A2E0-8774F2BEAF24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.Engine.VS2010", "..\..\Axiom\Engine\Axiom.Engine.VS2010.csproj", "{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Axiom.MathLib.VS2010", "..\..\Axiom\MathLib\Axiom.MathLib.VS2010.csproj", "{48EAC066-47F2-44A5-9454-DFA718DCB55E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiverse.CollisionLib.VS2010", "..\CollisionLib\Multiverse.CollisionLib.VS2010.csproj", "{EB687263-4BFD-4EC0-A987-055148C056DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiverse.MathLib.VS2010", "..\MathLib\Multiverse.MathLib.VS2010.csproj", "{9F78B40B-536B-4D4C-9B2A-2D17246CC670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiverse.Lib.LogUtil.VS2010", "..\..\Lib\LogUtil\Multiverse.Lib.LogUtil.VS2010.csproj", "{68B78196-2567-4E0F-99E6-F577B2CAAB9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multiverse.Config.VS2010", "..\Config\Multiverse.Config.VS2010.csproj", "{A885B41B-BDA3-42F7-968D-D471A5B156A2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE280269-9891-428E-A2E0-8774F2BEAF24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE280269-9891-428E-A2E0-8774F2BEAF24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE280269-9891-428E-A2E0-8774F2BEAF24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE280269-9891-428E-A2E0-8774F2BEAF24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EAC066-47F2-44A5-9454-DFA718DCB55E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB687263-4BFD-4EC0-A987-055148C056DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB687263-4BFD-4EC0-A987-055148C056DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB687263-4BFD-4EC0-A987-055148C056DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB687263-4BFD-4EC0-A987-055148C056DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F78B40B-536B-4D4C-9B2A-2D17246CC670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F78B40B-536B-4D4C-9B2A-2D17246CC670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F78B40B-536B-4D4C-9B2A-2D17246CC670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F78B40B-536B-4D4C-9B2A-2D17246CC670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B78196-2567-4E0F-99E6-F577B2CAAB9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B78196-2567-4E0F-99E6-F577B2CAAB9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B78196-2567-4E0F-99E6-F577B2CAAB9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B78196-2567-4E0F-99E6-F577B2CAAB9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A885B41B-BDA3-42F7-968D-D471A5B156A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A885B41B-BDA3-42F7-968D-D471A5B156A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A885B41B-BDA3-42F7-968D-D471A5B156A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A885B41B-BDA3-42F7-968D-D471A5B156A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

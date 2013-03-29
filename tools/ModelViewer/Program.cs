@@ -67,7 +67,7 @@ namespace Multiverse.Tools.ModelViewer
             try
             {
                 // Set the current directory to the the directory of the excutable
-                String execDir = Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf("\\"));
+                String execDir = Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf(System.IO.Path.DirectorySeparatorChar));
                 Directory.SetCurrentDirectory(execDir);
                 // Changes the CurrentCulture of the current thread to the invariant culture.
                 Thread.CurrentThread.CurrentCulture = new CultureInfo("", false);
@@ -88,7 +88,8 @@ namespace Multiverse.Tools.ModelViewer
                 ModelViewer modelViewer = new ModelViewer();
 
                 string argsString = "";
-                foreach (string arg in args) {
+                foreach (string arg in args)
+                {
                     if (argsString.Length == 0)
                         argsString = arg;
                     else
@@ -100,6 +101,12 @@ namespace Multiverse.Tools.ModelViewer
                 modelViewer.Show();
                 modelViewer.Start();
 
+            }
+            catch (FileNotFoundException ex)
+            {
+                // try logging the error here first, before Root is disposed of
+                LogUtil.ExceptionLog.ErrorFormat("Caught file not found exception for {0}: {1}", ex.FileName, ex);
+                throw;
             }
             catch (Exception ex)
             {
@@ -118,10 +125,6 @@ namespace Multiverse.Tools.ModelViewer
                 switch (argStr[cur]) {
                     case '\"':
                         in_quote = !in_quote;
-                        break;
-                    case '\\':
-                        if (argStr.Length > (cur + 1))
-                            arg += argStr[++cur];
                         break;
                     case ' ':
                     case '\t':

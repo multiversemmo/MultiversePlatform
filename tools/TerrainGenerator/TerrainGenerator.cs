@@ -134,9 +134,9 @@ namespace Multiverse.Tools.TerrainGenerator
         protected float heightAdjustTimer = 0;
 
         protected string mapFilename;
-        protected string baseHelpURL = "http://update.multiverse.net/wiki/index.php/Using_Terrain_Generator_Version_1.5";
-        protected string baseReleaseNoteURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes";
-        protected string baseBugReportURL = "http://update.multiverse.net/custportal/login.php";
+        protected string baseHelpURL = "http://www.multiversemmo.com/wiki/Using_Terrain_Generator";
+        protected string baseReleaseNoteURL = "http://www.multiversemmo.com/wiki/Tools_Version_1.5_Release_Notes";
+        protected string baseBugReportURL = "http://multiverse.forumotion.co.uk/";
 
         Form newHeightmapDialog;
 
@@ -1652,8 +1652,8 @@ namespace Multiverse.Tools.TerrainGenerator
         private void aboutTerrainGeneratorToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			string assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-			string msg = string.Format("Multiverse Terrain Generator\n\nVersion: {0}\n\nCopyright 2006-2007 The Multiverse Network, Inc.\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
-            DialogResult result = MessageBox.Show(this, msg, "About Multiverse TerrainGenerator", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+			string msg = string.Format("Multiverse Terrain Generator\n\nVersion: {0}\n\nCopyright 2012 The Multiverse Software Foundation\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
+            DialogResult result = MessageBox.Show(this, msg, "About Multiverse Terrain Generator", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }
 
         private void generalTerrainHelpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

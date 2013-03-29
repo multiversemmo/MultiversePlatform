@@ -1,0 +1,680 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Axiom.Engine</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Axiom.Engine</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.6.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Managed\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Managed\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tao.DevIl, Version=1.6.6.1, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\Managed\Tao.DevIl.dll</HintPath>
+    </Reference>
+    <ProjectReference Include="..\..\Lib\LogUtil\Multiverse.Lib.LogUtil.VS2008.csproj">
+      <Project>{68B78196-2567-4E0F-99E6-F577B2CAAB9A}</Project>
+      <Name>Multiverse.Lib.LogUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MathLib\Axiom.MathLib.VS2008.csproj">
+      <Project>{48EAC066-47F2-44A5-9454-DFA718DCB55E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.MathLib</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animating\Animable.cs" />
+    <Compile Include="Animating\AnimationStateSet.cs" />
+    <Compile Include="Animating\Pose.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\Animation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\AnimationState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\AnimationTrack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\Bone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\KeyFrame.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\Skeleton.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\SkeletonInstance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\SkeletonManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animating\TagPoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Collections\AnimationCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Collections\AxiomCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Collections\HashList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Collections\MovableObjectCollection.cs" />
+    <Compile Include="Collections\NodeCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Collections\SceneQueryMovableObjectIntersectionList.cs" />
+    <Compile Include="Collections\SceneQueryMovableObjectWorldFragmentIntersectionList.cs" />
+    <Compile Include="Collections\ViewportCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\Config.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Configuration\DisplayConfig.cs" />
+    <Compile Include="Controllers\BaseControllerFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Canned\PassthroughControllerFunction.cs" />
+    <Compile Include="Controllers\Controller.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\ControllerManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\FrameTimeControllerValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\IControllerFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\IControllerValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Canned\AnimationControllerFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Canned\FloatGpuParamControllerValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Canned\MultiplyControllerFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Canned\NodeRotationControllerValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Canned\TexCoordModifierControllerValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Canned\TextureFrameControllerValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\Canned\WaveformControllerFunction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Ax.cs" />
+    <Compile Include="Core\AxiomException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Billboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\BillboardChain.cs" />
+    <Compile Include="Core\FactoryObj.cs" />
+    <Compile Include="Core\RibbonTrail.cs" />
+    <Compile Include="Graphics\LineRenderable.cs" />
+    <Compile Include="Media\ExternalTextureSource.cs" />
+    <Compile Include="Media\ExternalTextureSourceManager.cs" />
+    <Compile Include="Media\ILUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ShadowCameraSetup.cs" />
+    <Compile Include="Core\ShadowTextureManager.cs" />
+    <Compile Include="ParticleSystems\BillboardParticleRenderer.cs" />
+    <Compile Include="Core\BillboardSet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Camera.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Collections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ColorEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\CoreEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Entity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Frustum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\GeometryBucket.cs" />
+    <Compile Include="Core\IConfigurable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\IPlatformManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\IPlugin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ITimer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Light.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\LODBucket.cs" />
+    <Compile Include="Core\Log.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\LogManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\MaterialBucket.cs" />
+    <Compile Include="Core\Memory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Mesh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\MeshManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\MovableObject.cs" />
+    <Compile Include="Core\Node.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ObjectCreator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\PatchMesh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\PatchSurface.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\PlatformManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\PluginException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\PluginManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ProgressiveMesh.cs" />
+    <Compile Include="Core\Region.cs" />
+    <Compile Include="Core\Resource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\ResourceManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Root.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SceneManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SceneManagerList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SceneNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SceneObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SceneQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\StaticGeometry.cs" />
+    <Compile Include="Core\StringConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SubEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\SubMesh.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Texture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\TextureManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Viewport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\WireBoundingBox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSystem\Archive.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSystem\ArchiveManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSystem\Folder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSystem\FolderFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSystem\IArchiveFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSystem\Zip.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FileSystem\ZipFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\Font.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\FontEnums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Fonts\FontManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\AnyBuilder.cs" />
+    <Compile Include="Graphics\AutoParamDataSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\BufferStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Collections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\CompositionPass.cs" />
+    <Compile Include="Graphics\CompositionTargetPass.cs" />
+    <Compile Include="Graphics\CompositionTechnique.cs" />
+    <Compile Include="Graphics\Compositor.cs" />
+    <Compile Include="Graphics\CompositorChain.cs" />
+    <Compile Include="Graphics\CompositorInstance.cs" />
+    <Compile Include="Graphics\CompositorManager.cs" />
+    <Compile Include="Graphics\EdgeData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\EdgeListBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\GpuProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\GpuProgramManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\GpuProgramParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\GpuProgramUsage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\HardwareBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\HardwareBufferManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\HardwareCaps.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\HardwareIndexBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\HardwarePixelBuffer.cs" />
+    <Compile Include="Graphics\HardwareVertexBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\HighLevelGpuProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\HighLevelGpuProgramManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\IHardwareBufferLicensee.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\IHardwareOcclusionQuery.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\IRenderable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Material.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\MaterialManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\MovablePlane.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Pass.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Rectangle2D.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\RenderOperation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\RenderPriorityGroup.cs" />
+    <Compile Include="Graphics\RenderQueue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\RenderQueueGroup.cs" />
+    <Compile Include="Graphics\RenderSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\RenderTarget.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\RenderTexture.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\RenderWindow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\ShadowCaster.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\ShadowRenderable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\ShadowVolumeExtrudeProgram.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\SimpleRenderable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\SoftwareBufferManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\SpotShadowFadePng.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\StaticFaceGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\Technique.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\TempBlendedBufferInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\TextureUnitState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\TriangleBuilder.cs" />
+    <Compile Include="Graphics\VertexBufferBinding.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\VertexBufferLicense.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\VertexDeclaration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\VertexElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Graphics\VertexIndexData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\InputEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\InputReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\KeyEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Input\MouseEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\Bitwise.cs" />
+    <Compile Include="Media\CodecManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\ICodec.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\ILImageCodec.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\Image.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\ImageCodec.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Media\PixelBox.cs" />
+    <Compile Include="Media\PixelConversionLoops.cs" />
+    <Compile Include="Media\PixelConverter.cs" />
+    <Compile Include="Overlays\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\IOverlayElementFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\Overlay.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\OverlayElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\OverlayElementContainer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\OverlayElementManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\OverlayManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\Elements\BorderPanel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\Elements\Factories.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\Elements\Panel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Overlays\Elements\TextArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleSystems\Collections.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleSystems\Particle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleSystems\ParticleAffector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleSystems\ParticleAffectorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleSystems\ParticleEmitter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleSystems\ParticleEmitterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleSystems\ParticleSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleSystems\ParticleSystemManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleSystems\ParticleSystemRenderer.cs" />
+    <Compile Include="Scripting\CommandAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ICommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ParseHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptEnumAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\BinaryMemoryReader.cs" />
+    <Compile Include="Serialization\Enums.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\FXReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\MaterialSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\MeshSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\MeshSerializerImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\OgreSkeletonReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Serialization\Serializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\Meters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\TechDemo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

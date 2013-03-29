@@ -28,27 +28,20 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.IO;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 using System.Xml;
-using System.Collections;
-using System.Timers;
-
+using Axiom.Configuration;
 using Axiom.Core;
 using Axiom.Graphics;
 using Axiom.MathLib;
-using Axiom.Configuration;
-using Multiverse.AssetRepository;
-using Multiverse.Serialization;
-using Multiverse.CollisionLib;
 using Microsoft.Win32;
+using Multiverse.AssetRepository;
+using Multiverse.CollisionLib;
+using Multiverse.Serialization;
 using Multiverse.ToolBox;
-using log4net;
 
 namespace Multiverse.Tools.WorldEditor
 {
@@ -106,7 +99,6 @@ namespace Multiverse.Tools.WorldEditor
         protected float scaleMoveMultiplier = 1000f;
         protected float cameraAccelerateIncrement;
         protected bool orientationUpdate = false;
-
 
         // mouse motion related variables
         protected bool leftMouseClick = false;
@@ -250,9 +242,9 @@ namespace Multiverse.Tools.WorldEditor
         {
             axiomControl = new AxiomControl();
 
-            // 
+            //
             // axiomControl
-            // 
+            //
             this.axiomControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axiomControl.BackColor = Color.Gray;
             this.axiomControl.Location = new System.Drawing.Point(0, 0);
@@ -260,12 +252,10 @@ namespace Multiverse.Tools.WorldEditor
             this.axiomControl.Size = new System.Drawing.Size(734, 656);
             this.axiomControl.TabIndex = 2;
             this.axiomControl.TabStop = true;
-            // 
+            //
             // mainSplitContainer.Panel1
-            // 
+            //
             this.mainSplitContainer.Panel1.Controls.Add(this.axiomControl);
-
-
         }
 
         protected Axiom.SceneManagers.Multiverse.ITerrainGenerator DefaultTerrainGenerator()
@@ -329,7 +319,6 @@ namespace Multiverse.Tools.WorldEditor
                     }
                 }
             }
-
 
             List<string> log = RepositoryClass.Instance.InitializeRepository();
             CheckLogAndMaybeExit(log);
@@ -595,7 +584,6 @@ namespace Multiverse.Tools.WorldEditor
                 camAccelIncrement = Config.DefaultCamAccelRateIncrement;
             }
 
-
             ret = Registry.GetValue(Config.WorldEditorBaseRegistryKey, "PresetCameraAccelRate1", (object)(Config.DefaultPresetCamAccel1));
             if (ret != null)
             {
@@ -694,7 +682,6 @@ namespace Multiverse.Tools.WorldEditor
                 presetMWM4 = Config.DefaultPresetMWM4;
             }
 
-
             setToolStripMWMDropDownMenu();
 
             setToolStripAccelSpeedDropDownMenu();
@@ -708,8 +695,6 @@ namespace Multiverse.Tools.WorldEditor
             xmlWriterSettings.Indent = true;
 
             xmlReaderSettings = new XmlReaderSettings();
-
-
 
             createKeybindings();
 
@@ -727,7 +712,6 @@ namespace Multiverse.Tools.WorldEditor
 
             showPathDialog = new ShowPathDialog();
         }
-
 
         private void setShortCuts()
         {
@@ -787,7 +771,6 @@ namespace Multiverse.Tools.WorldEditor
                         case "axiomDeleteObject":
                             menuItem = deleteToolStripMenuItem;
                             break;
-
                     }
                     if (String.Equals(command.Modifier, "none"))
                     {
@@ -798,7 +781,6 @@ namespace Multiverse.Tools.WorldEditor
                         menuItem.ShortcutKeyDisplayString = String.Format("{0}+{1}", command.Modifier, command.Key);
                     }
                 }
-
             }
         }
 
@@ -810,7 +792,6 @@ namespace Multiverse.Tools.WorldEditor
             {
                 try
                 {
-
                     XmlReader r = XmlReader.Create(Config.CommandBindingEventsFilePath, xmlReaderSettings);
                     while (r.Read())
                     {
@@ -1113,7 +1094,6 @@ namespace Multiverse.Tools.WorldEditor
                     obj.Handler = hand;
                 }
 
-
                 XmlReader xr;
                 string keyBindingsFile = this.Config.AltCommandBindingsFilePath;
                 if (!File.Exists(keyBindingsFile))
@@ -1184,19 +1164,16 @@ namespace Multiverse.Tools.WorldEditor
             }
             else
             {
-                
                 string dir = Application.ExecutablePath.Substring(0, Application.ExecutablePath.LastIndexOf("\\"));
                 string filename = this.Config.CommandBindingEventsFilePath.Substring(this.Config.CommandBindingEventsFilePath.IndexOf(".") + 2, this.Config.CommandBindingEventsFilePath.Length - this.Config.CommandBindingEventsFilePath.IndexOf(".") - 2);
-                string filePath = String.Format("{0}\\{1}", dir , filename);
+                string filePath = String.Format("{0}\\{1}", dir, filename);
                 log.ErrorFormat("CommandEvents.xml was not found at {0}", filePath);
-                MessageBox.Show(String.Format("The CommandEvents.xml file could not be found at {0}.  The World Editor can not run properly without this file.  The World Editor will exit now.", filePath) , "Could not find CommandEvents.xml", MessageBoxButtons.OK);
+                MessageBox.Show(String.Format("The CommandEvents.xml file could not be found at {0}.  The World Editor can not run properly without this file.  The World Editor will exit now.", filePath), "Could not find CommandEvents.xml", MessageBoxButtons.OK);
                 exitToolStripMenuItem_Click(this, new EventArgs());
                 log.Error("World Editor Exiting now");
                 return;
             }
         }
-
-
 
         public NameValueTemplateCollection NameValueTemplates
         {
@@ -1268,7 +1245,6 @@ namespace Multiverse.Tools.WorldEditor
             // retrieve the max FPS, if it exists
             getMaxFPSFromRegistry();
             activeFps = Root.Instance.MaxFramesPerSecond;
-
 
             // add event handlers for frame events
             engine.FrameStarted += new FrameEvent(OnFrameStarted);
@@ -1350,7 +1326,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         protected void SetupResources()
         {
             foreach (string s in RepositoryClass.AxiomDirectories)
@@ -1362,7 +1337,6 @@ namespace Multiverse.Tools.WorldEditor
                 ResourceManager.AddCommonArchive(l, "Folder");
             }
         }
-
 
         protected bool ConfigureAxiom()
         {
@@ -1414,13 +1388,13 @@ namespace Multiverse.Tools.WorldEditor
             viewport = window.AddViewport(camera, 0, 0, 1.0f, 1.0f, 100);
             viewport.BackgroundColor = ColorEx.Black;
         }
+
         #endregion Axiom Initialization Code
 
         #region Application Startup Code
 
         public bool Start(string[] args)
         {
-
             if (!Setup())
             {
                 return false;
@@ -1438,10 +1412,8 @@ namespace Multiverse.Tools.WorldEditor
             // start the engines rendering loop
             engine.StartRendering();
 
-
             return true;
         }
-
 
         #endregion Application Startup Code
 
@@ -1477,7 +1449,6 @@ namespace Multiverse.Tools.WorldEditor
 
         protected void CreateScene()
         {
-
             viewport.BackgroundColor = ColorEx.White;
             viewport.OverlaysEnabled = false;
 
@@ -1489,6 +1460,7 @@ namespace Multiverse.Tools.WorldEditor
         #endregion Scene Setup
 
         #region Map Loading
+
         // load the map (terrain parameters) from the given file
         public void LoadMap(string filename)
         {
@@ -1526,7 +1498,6 @@ namespace Multiverse.Tools.WorldEditor
                 {
                     if (r.Name == "Terrain")
                     {
-
                         worldRoot.Terrain.LoadTerrain(r);
                         break;
                     }
@@ -1592,6 +1563,7 @@ namespace Multiverse.Tools.WorldEditor
             missingAssetList.Clear();
             FileInfo fileinfo = new FileInfo(filename);
             FileInfo autoSaveFileInfo = new FileInfo(filename.Insert(filename.LastIndexOf('.'), "~"));
+
             if (autoSaveFileInfo != null && fileinfo != null)
             {
                 if (autoSaveFileInfo.LastWriteTime > fileinfo.LastWriteTime)
@@ -1675,7 +1647,6 @@ namespace Multiverse.Tools.WorldEditor
                 {
                     worldRoot = null;
 
-
                     string dialogStr = "Loading this world failed because the following assets are missing from the current Asset Repository:\n\n";
                     foreach (string s in missingAssetList)
                     {
@@ -1709,10 +1680,8 @@ namespace Multiverse.Tools.WorldEditor
                     }
                     else
                     {
-
                         if (worldRoot.WorldFilePath != null && !String.Equals(worldRoot.WorldFilePath, ""))
                         {
-
                         }
                     }
                 }
@@ -1763,7 +1732,6 @@ namespace Multiverse.Tools.WorldEditor
             setRecentFiles(filename);
             return root;
         }
-
 
         protected void LoadWorldRoot(String filename)
         {
@@ -1856,7 +1824,6 @@ namespace Multiverse.Tools.WorldEditor
                 {
                     worldRoot = null;
 
-
                     string dialogStr = "Loading this world failed because the following assets are missing from the current Asset Repository:\n\n";
                     foreach (string s in missingAssetList)
                     {
@@ -1890,7 +1857,6 @@ namespace Multiverse.Tools.WorldEditor
                     }
                     else
                     {
-
                         if (worldRoot.WorldFilePath != null && !String.Equals(worldRoot.WorldFilePath, ""))
                         {
                             int pathlen = worldRoot.WorldFilePath.LastIndexOf("\\");
@@ -1904,7 +1870,6 @@ namespace Multiverse.Tools.WorldEditor
             setWorldDefaults();
             setRecentFiles(filename);
         }
-
 
         public void setRecentFiles(string file)
         {
@@ -1934,12 +1899,10 @@ namespace Multiverse.Tools.WorldEditor
             {
                 Registry.SetValue(Config.RecentFileListBaseRegistryKey, valueNames[i], values[i]);
             }
-
         }
 
         public void UpdateButtonBar()
         {
-
             for (int i = toolStrip1.Items.Count - 1; i >= 0; i--)
             {
                 ToolStripItem item = toolStrip1.Items[i];
@@ -1972,11 +1935,12 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
-
         private void setWorldDefaults()
         {
-            Axiom.SceneManagers.Multiverse.TerrainManager.Instance.ShowOcean = DisplayOcean && WorldRoot.DisplayOcean;
+            if (WorldRoot != null)
+            {
+                Axiom.SceneManagers.Multiverse.TerrainManager.Instance.ShowOcean = DisplayOcean && WorldRoot.DisplayOcean;
+            }
             if (Axiom.SceneManagers.Multiverse.TerrainManager.Instance.ShadowConfig.ShadowTechnique == Axiom.SceneManagers.Multiverse.ShadowTechnique.Depth && !DisplayShadows)
             {
                 Axiom.SceneManagers.Multiverse.TerrainManager.Instance.ShadowConfig.ShadowTechnique = Axiom.SceneManagers.Multiverse.ShadowTechnique.None;
@@ -1994,7 +1958,6 @@ namespace Multiverse.Tools.WorldEditor
                 CameraNear = oneMeter / 10f * (float)Math.Pow(10.0f, (double)CameraNearDistance / 20.0f);
             }
         }
-
 
         protected void LoadOldTerrain(XmlNode node, WorldRoot root)
         {
@@ -2122,7 +2085,6 @@ namespace Multiverse.Tools.WorldEditor
                 return worldTreeView;
             }
         }
-
 
         protected void LoadOldBoundary(XmlNode node, WorldObjectCollection collection)
         {
@@ -2257,7 +2219,6 @@ namespace Multiverse.Tools.WorldEditor
                     }
                 }
             }
-
         }
 
         protected void LoadOldWaypoint(XmlNode node, WorldObjectCollection collection)
@@ -2331,7 +2292,6 @@ namespace Multiverse.Tools.WorldEditor
             // create the object
             StaticObject obj = new StaticObject(name, collection, this, mesh, pos, scale, rot);
             collection.Add(obj);
-
 
             // process submeshes
             foreach (XmlNode childNode in node.ChildNodes)
@@ -2408,7 +2368,6 @@ namespace Multiverse.Tools.WorldEditor
             setRecentFiles(filename);
         }
 
-
         // this is used to save backup files
         public void SaveWorld(String filename, bool backup)
         {
@@ -2436,13 +2395,12 @@ namespace Multiverse.Tools.WorldEditor
             // don't save the manifest file when doing autosave
             saveTimer.Interval = (int)autoSaveTime;
             saveTimer.Start();
-
         }
-
 
         #endregion World Saving
 
         #region Skybox
+
         public void SetSkybox(bool enable, string materialName)
         {
             scene.SetSkyBox(enable, materialName, 1000f * oneMeter);
@@ -2456,7 +2414,6 @@ namespace Multiverse.Tools.WorldEditor
         {
             return;
         }
-
 
         protected void OnFrameStarted(object source, FrameEventArgs e)
         {
@@ -2484,11 +2441,8 @@ namespace Multiverse.Tools.WorldEditor
                 if (bound.PointIn(camera.Position))
                 {
                     activeBoundaryList.Add(bound);
-
                 }
             }
-
-
 
             if (moveOnPlane && !lockCameraToObject)
             {
@@ -2526,14 +2480,12 @@ namespace Multiverse.Tools.WorldEditor
                     }
                     cameraStatusLabel.Text = "Camera Status: Camera Maintains Speed";
                 }
-
             }
 
             checkPointAgainstBoundaryList(activeBoundaryList);
             updateStatusBarBoundaryList(activeBoundaryList);
             time += e.TimeSinceLastFrame;
             Axiom.SceneManagers.Multiverse.TerrainManager.Instance.Time = time;
-
 
             // reset acceleration zero
             camDirection = Vector3.Zero;
@@ -2704,7 +2656,6 @@ namespace Multiverse.Tools.WorldEditor
                 camera.MoveRelative(new Vector3(deltaX * 1000f, deltaY * 1000F, 0f));
             }
 
-
             if (moveCameraUp && !lockCameraToObject && !moveOnPlane)
             {
                 camera.Move(new Vector3(0, oneMeter * cameraUpDownMultiplier * e.TimeSinceLastFrame, 0));
@@ -2714,8 +2665,6 @@ namespace Multiverse.Tools.WorldEditor
             {
                 camera.Move(new Vector3(0, -oneMeter * cameraUpDownMultiplier * e.TimeSinceLastFrame, 0));
             }
-
-
 
             if (!lockCameraToObject && !moveOnPlane && (camDirection.x != 0f || camDirection.y != 0f || camDirection.z != 0f))
             {
@@ -2747,7 +2696,6 @@ namespace Multiverse.Tools.WorldEditor
             //    }
             //    camVelocity *= decel;
             //}
-
 
             // keep camera at least 2 meters above ground
             float heightUnderCamera = GetTerrainHeight(camera.Position.x, camera.Position.z);
@@ -2866,7 +2814,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         private Boundary findBoundaryListPriority(List<Boundary> boundList)
         {
             int topPriority = 101;
@@ -2886,7 +2833,6 @@ namespace Multiverse.Tools.WorldEditor
         {
             scene.SetFog(FogMode.None, null, 0);
         }
-
 
         public WorldTreeNode MakeTreeNode(IWorldObject obj, String text)
         {
@@ -2916,7 +2862,6 @@ namespace Multiverse.Tools.WorldEditor
                             break;
                     }
                 }
-
             }
 
             if (displayFog)
@@ -2955,7 +2900,6 @@ namespace Multiverse.Tools.WorldEditor
 
             if (displayLights)
             {
-
                 if (ambientLight.Count == 0)
                 {
                     if (globalAmbientLight != null)
@@ -3164,8 +3108,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
-
         public bool DisplayParticleEffects
         {
             get
@@ -3282,7 +3224,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         public float CameraNear
         {
             get
@@ -3398,7 +3339,6 @@ namespace Multiverse.Tools.WorldEditor
                 return displayPointLightCircles;
             }
         }
-
 
         public bool CameraAboveTerrain
         {
@@ -3541,7 +3481,6 @@ namespace Multiverse.Tools.WorldEditor
                 }
                 if (positionYTextBox.Text != null && !String.Equals(positionYTextBox.Text, "") && !String.Equals(positionYTextBox.Text, " "))
                 {
-
                     if (!float.TryParse(positionYTextBox.Text, out y))
                     {
                         y = 0;
@@ -3584,7 +3523,6 @@ namespace Multiverse.Tools.WorldEditor
                 }
                 if (positionYTextBox.Text != null && !String.Equals(positionYTextBox.Text, "") && !String.Equals(positionYTextBox.Text, " "))
                 {
-
                     if (!float.TryParse(positionYTextBox.Text, out y))
                     {
                         y = 0;
@@ -3599,7 +3537,6 @@ namespace Multiverse.Tools.WorldEditor
                 }
 
                 Vector3 v = new Vector3(x, y, z);
-
 
                 if ((SelectedPositionObject is StaticObject || SelectedPositionObject is Waypoint || SelectedPositionObject is PointLight || SelectedPositionObject is MPPoint) && SelectedPositionObject.Display != null && SelectedPositionObject.Display.Position != v)
                 {
@@ -3818,7 +3755,7 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-        #endregion //Rotation Panel
+        #endregion Rotation Panel
 
         #region Orientation Panel
 
@@ -3831,17 +3768,15 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         //protected void UpdateOrientationFromTrackBars(object sender, EventArgs e)
         //{
-        //    if (SelectedOrientationObject != null && (orientationRotationTrackBar.Value != 
-        //        (int) Math.Round(SelectedOrientationObject.Azimuth) || inclinationTrackbar.Value != 
+        //    if (SelectedOrientationObject != null && (orientationRotationTrackBar.Value !=
+        //        (int) Math.Round(SelectedOrientationObject.Azimuth) || inclinationTrackbar.Value !=
         //        (int) Math.Round(SelectedOrientationObject.Zenith)))
         //    {
-        //        SetObjectOrientationWithCommand(orientationRotationTrackBar.Value, inclinationTrackbar.Value); 
+        //        SetObjectOrientationWithCommand(orientationRotationTrackBar.Value, inclinationTrackbar.Value);
         //    }
         //}
-
 
         protected void inclinationTrackbar_MouseUp(object sender, MouseEventArgs e)
         {
@@ -4040,9 +3975,9 @@ namespace Multiverse.Tools.WorldEditor
         private static int uniqueIDCount = 0;
 
         /// <summary>
-        /// The Axiom engine requires that entities and 
+        /// The Axiom engine requires that entities and
         /// GetUniqueName() provides a mechanism for the application to create unique names for
-        /// objects that will be placed in the 3d world, while not exposing 
+        /// objects that will be placed in the 3d world, while not exposing
         /// </summary>
         /// <param name="moduleName"></param>
         /// <param name="objectName"></param>
@@ -4071,7 +4006,7 @@ namespace Multiverse.Tools.WorldEditor
             {
                 results = q.Execute();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 log.DebugFormat("Exception in PickTerrain:\r\n{0)", e.ToString());
             }
@@ -4101,7 +4036,6 @@ namespace Multiverse.Tools.WorldEditor
             }
             else
             {
-
                 return Vector3.Zero;
             }
         }
@@ -4138,9 +4072,6 @@ namespace Multiverse.Tools.WorldEditor
             return null;
         }
 
-
-
-
         public IWorldObject PickObjectByTriangle(int x, int y)
         {
             Axiom.Core.RaySceneQuery q = scene.CreateRayQuery(camera.GetCameraToViewportRay((float)x / (float)window.Width,
@@ -4163,7 +4094,6 @@ namespace Multiverse.Tools.WorldEditor
 
         public bool PickEntityTriangle(int x, int y, out Vector3 pos)
         {
-
             Axiom.Core.RaySceneQuery q = scene.CreateRayQuery(camera.GetCameraToViewportRay((float)x / (float)window.Width,
                 (float)y / (float)window.Height));
 
@@ -4184,10 +4114,8 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         public Vector3 ObjectPlacementLocation(Vector3 objPosition)
         {
-
             Ray pointRay = new Ray(new Vector3(objPosition.x, camera.Position.y, objPosition.z), Vector3.NegativeUnitY);
             Axiom.Core.RaySceneQuery q = scene.CreateRayQuery(pointRay);
             q.QueryMask = (ulong)Axiom.SceneManagers.Multiverse.RaySceneQueryType.AllEntityTriangles;
@@ -4233,15 +4161,12 @@ namespace Multiverse.Tools.WorldEditor
 
         public string PickTriangleAndTerrain(int x, int y)
         {
-
             string s = "Terrain: " + PickTerrain(x, y).ToString();
             Vector3 pos;
             if (PickEntityTriangle(x, y, out pos))
                 s += " Model: " + pos.ToString();
             return s;
         }
-
-
 
         #endregion Picking Methods
 
@@ -4261,7 +4186,7 @@ namespace Multiverse.Tools.WorldEditor
             statusStrip1.Items.Remove(item);
         }
 
-        #endregion // StatusBar Access Methods
+        #endregion StatusBar Access Methods
 
         #region Missing Asset List System
 
@@ -4433,7 +4358,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         public void CollectionButton_clicked(object sender, EventArgs e)
         {
             List<IObjectChangeCollection> changeObjList = new List<IObjectChangeCollection>();
@@ -4454,7 +4378,6 @@ namespace Multiverse.Tools.WorldEditor
                         undoRedo.PushCommand(commandInstance);
                     }
                 }
-
             }
         }
 
@@ -4487,7 +4410,6 @@ namespace Multiverse.Tools.WorldEditor
                 }
             }
         }
-
 
         private float CameraZenith
         {
@@ -4524,7 +4446,6 @@ namespace Multiverse.Tools.WorldEditor
                 }
             }
         }
-
 
         private void PositionCameraToObject(IWorldObject obj)
         {
@@ -4574,7 +4495,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         private bool canExit(String msg)
         {
             if (undoRedo.Dirty)
@@ -4592,7 +4512,6 @@ namespace Multiverse.Tools.WorldEditor
                         return false;
                     case DialogResult.No:
                         break;
-
                 }
             }
             return true;
@@ -4602,7 +4521,6 @@ namespace Multiverse.Tools.WorldEditor
         {
             quit = canExit("You have unsaved changes, would you like to save the file before you exit?");
         }
-
 
         private void recentFilesToolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
@@ -4682,7 +4600,6 @@ namespace Multiverse.Tools.WorldEditor
 
         private void displayParticleEffectsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             DisplayParticleEffects = !DisplayParticleEffects;
             if (worldRoot != null)
             {
@@ -4721,7 +4638,6 @@ namespace Multiverse.Tools.WorldEditor
             {
                 if (!DisplayBoundaryMarkers && !DisplayMarkerPoints && !DisplayPointLightMarker)
                 {
-
                     disableAllMarkers = true;
                 }
             }
@@ -4822,7 +4738,6 @@ namespace Multiverse.Tools.WorldEditor
             displayTerrainDecals = !displayTerrainDecals;
         }
 
-
         private void newWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
             bool rv = canLoad();
@@ -4899,7 +4814,6 @@ namespace Multiverse.Tools.WorldEditor
             {
                 if (mouseSelectObject)
                 {
-
                     if (hitObject != null)
                     {
                         if (SelectedObject.Count > 0)
@@ -4956,10 +4870,8 @@ namespace Multiverse.Tools.WorldEditor
                 {
                     WorldTreeView.AddSelectedNode(hitObject.Node);
                 }
-
             }
         }
-
 
         private void mouseDownTimerEvent(object source, EventArgs e)
         {
@@ -5006,7 +4918,6 @@ namespace Multiverse.Tools.WorldEditor
                 }
             }
         }
-
 
         private void axiomControl_MouseUp(object sender, MouseEventArgs e)
         {
@@ -5087,8 +4998,6 @@ namespace Multiverse.Tools.WorldEditor
             mouseWheelDelta += e.Delta;
         }
 
-
-
         private void treeView_KeyDown(object sender, KeyEventArgs e)
         {
             EventObject eo = commandMapping.GetMatch(e.Modifiers, e.KeyCode, "down", "treeView");
@@ -5099,10 +5008,7 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         #region WorldEditor control events
-
-
 
         private void worldEditorTakeScreenShotOn(object sender, EventArgs e)
         {
@@ -5155,7 +5061,6 @@ namespace Multiverse.Tools.WorldEditor
 
         private void editMenuControlMappingEditorItem_clicked(object sender, EventArgs e)
         {
-
             UserCommandMapping workingCopy = commandMapping.Clone();
             using (UserCommandEditor dialog = new UserCommandEditor(workingCopy, Config.MouseCapableContexts))
             {
@@ -5209,7 +5114,6 @@ namespace Multiverse.Tools.WorldEditor
 
         private void axiomCameraMoveSpeedUp(object sender, EventArgs e)
         {
-
             camSpeed += camSpeedIncrement;
             if (accelerateCamera)
             {
@@ -5258,20 +5162,17 @@ namespace Multiverse.Tools.WorldEditor
             incrementSpeedTimer.Start();
         }
 
-
         private void axiomCameraMoveSpeedDownStop(object sender, EventArgs e)
         {
             incrementSpeedTimer.Stop();
             incrementSpeedTimer.Enabled = false;
         }
 
-
         private void axiomToggleAccelerate(object sender, EventArgs e)
         {
             accelerateCamera = !accelerateCamera;
             setToolStripAccelSpeedDropDownMenu();
         }
-
 
         private void setToolStripMWMDropDownMenu()
         {
@@ -5303,7 +5204,6 @@ namespace Multiverse.Tools.WorldEditor
                 cameraSpeedDropDownPreset2MenuItem.Visible = false;
                 cameraSpeedDropDownPreset3MenuItem.Visible = false;
                 cameraSpeedDropDownPreset4MenuItem.Visible = false;
-
             }
             else
             {
@@ -5348,14 +5248,12 @@ namespace Multiverse.Tools.WorldEditor
             incrementAccelTimer.Start();
         }
 
-
         private void axiomCameraAccelerateUpStop(object sender, EventArgs e)
         {
             incrementAccelTimer.Stop();
             incrementAccelTimer.Enabled = false;
             incrementAccelTimer.Tick -= axiomCameraAccelerateUp;
         }
-
 
         private void axiomCameraAccelerateDown(object sender, EventArgs e)
         {
@@ -5389,8 +5287,6 @@ namespace Multiverse.Tools.WorldEditor
                 camera.Orientation = (SelectedObject[0] as Waypoint).Orientation;
             }
         }
-
-
 
         private void axiomCameraAccelerateDownStop(object sender, EventArgs e)
         {
@@ -5432,7 +5328,6 @@ namespace Multiverse.Tools.WorldEditor
         private void axiomMoveCameraRight(object sender, EventArgs e)
         {
             moveRight = true;
-
         }
 
         private void axiomMoveCameraRightStop(object sender, EventArgs e)
@@ -5450,8 +5345,6 @@ namespace Multiverse.Tools.WorldEditor
             moveCameraDown = false;
         }
 
-
-
         private void axiomTurnCameraLeft(object sender, EventArgs e)
         {
             turnCameraLeft = true;
@@ -5462,7 +5355,6 @@ namespace Multiverse.Tools.WorldEditor
         {
             turnCameraLeft = false;
         }
-
 
         private void axiomTurnCameraRight(object sender, EventArgs e)
         {
@@ -5485,7 +5377,6 @@ namespace Multiverse.Tools.WorldEditor
         {
             turnCameraDown = false;
         }
-
 
         private void axiomTurnCameraUp(object sender, EventArgs e)
         {
@@ -5686,7 +5577,6 @@ namespace Multiverse.Tools.WorldEditor
             mWMMenuItemPreset4.Font = new Font(mWMMenuItemPreset4.Font, FontStyle.Bold); ;
         }
 
-
         public MouseButtons MouseSelectButton
         {
             get
@@ -5696,7 +5586,6 @@ namespace Multiverse.Tools.WorldEditor
         }
 
         #endregion Axiom window control events
-
 
         #region Tree View control events
 
@@ -6125,7 +6014,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         private void yDownButton_mouseDown(object sender, MouseEventArgs e)
         {
             if (SelectedPositionObject != null)
@@ -6164,7 +6052,6 @@ namespace Multiverse.Tools.WorldEditor
                 UpdateDisplayObjectFromPanel();
             }
         }
-
 
         private void zDownButton_mouseDown(object sender, MouseEventArgs e)
         {
@@ -6303,7 +6190,6 @@ namespace Multiverse.Tools.WorldEditor
             positionPanelButtonMouseDownTimer = null;
             UpdatePositionFromPanel();
         }
-
 
         private void positionPanelButtonMouseDownTimer_tick(object sender, EventArgs e)
         {
@@ -6464,7 +6350,7 @@ namespace Multiverse.Tools.WorldEditor
         private void AboutMenuItem_clicked(object sender, System.EventArgs e)
         {
             string assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            string msg = string.Format("Multiverse World Editor\n\nVersion: {0}\n\nCopyright 2006-2007 The Multiverse Network, Inc.\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
+            string msg = string.Format("Multiverse World Editor\n\nVersion: {0}\n\nCopyright 2012 The Multiverse Software Foundation\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
             DialogResult result = MessageBox.Show(this, msg, "About Multiverse World Editor", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -6493,7 +6379,6 @@ namespace Multiverse.Tools.WorldEditor
             cameraTerrainFollow = !cameraTerrainFollow;
         }
 
-
         private void designateAssetRepositoryMenuItem_Click(object sender, EventArgs e)
         {
             DesignateRepository(true);
@@ -6515,7 +6400,7 @@ namespace Multiverse.Tools.WorldEditor
             }
             else
             {
-                ErrorLogPopup(validityLog, "The directories you selected do not make up a valid respository.  The following errors were generated:\n\n", "Invalid Repository", MessageBoxButtons.OK);
+                ErrorLogPopup(validityLog, "The directories you selected do not make up a valid repository.  The following errors were generated:\n\n", "Invalid Repository", MessageBoxButtons.OK);
                 dlg.RepositoryDirectoryList = new List<string>(RepositoryClass.Instance.RepositoryDirectoryList);
                 return false;
             }
@@ -6561,7 +6446,6 @@ namespace Multiverse.Tools.WorldEditor
                 Root.Instance.MaxFramesPerSecond = int.Parse(maxFPS.ToString());
                 activeFps = Root.Instance.MaxFramesPerSecond;
             }
-
         }
 
         /// <summary>
@@ -6760,7 +6644,6 @@ namespace Multiverse.Tools.WorldEditor
 
         private void cutToolStripMenuItemClicked_Clicked(object sender, EventArgs e)
         {
-
             bool dontCut = false;
             foreach (IWorldObject obj in SelectedObject)
             {
@@ -6800,7 +6683,6 @@ namespace Multiverse.Tools.WorldEditor
                 ExecuteCommand(cmd);
             }
         }
-
 
         private void editMenuPreferencesItem_clicked(object sender, EventArgs e)
         {
@@ -7083,7 +6965,6 @@ namespace Multiverse.Tools.WorldEditor
                     dlg.CameraAccelerationIncrementTextBoxAsFloat = Config.DefaultCamAccelRateIncrement / 1000f;
                 }
 
-
                 ret = Registry.GetValue(Config.WorldEditorBaseRegistryKey, "PresetCameraAccelRate1", (object)(Config.DefaultPresetCamAccel1));
                 if (ret != null)
                 {
@@ -7181,7 +7062,7 @@ namespace Multiverse.Tools.WorldEditor
                 {
                     dlg.Preset4MWMTextBoxAsFloat = Config.DefaultPresetMWM4;
                 }
-                // Show the dialog and if the dialog returns with an ok, set the registry settings and 
+                // Show the dialog and if the dialog returns with an ok, set the registry settings and
                 // make them the current settings.
 
                 DialogResult result;
@@ -7321,7 +7202,6 @@ namespace Multiverse.Tools.WorldEditor
             }
         }
 
-
         public List<WorldTreeNode> SelectedNodes
         {
             get
@@ -7414,6 +7294,14 @@ namespace Multiverse.Tools.WorldEditor
                 activeFps = Root.Instance.MaxFramesPerSecond;
                 Root.Instance.MaxFramesPerSecond = 3;
             }
+        }
+
+        private void btnDebugWorld_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void worldEditor_debugworld()
+        {
         }
     }
 

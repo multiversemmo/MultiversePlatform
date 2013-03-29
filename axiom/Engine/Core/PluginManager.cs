@@ -118,38 +118,43 @@ namespace Axiom.Core
 
 			foreach (string file in files)
 			{
+                LogManager.Instance.Write("Checking plugin file {0}.", file);
 				// TODO: Temp fix, allow exlusions in the app.config
 				if (file != "Axiom.Engine.dll")
 				{
-					try
-					{
-						Assembly assembly = Assembly.LoadFrom(file);
+                    try
+                    {
+                        Assembly assembly = Assembly.LoadFrom(file);
 
-						foreach (Type type in assembly.GetTypes())
-						{
-							//there may be other interfaces named IPlugin used for other assemblies, so check the full type
-							if ((type.GetInterface("IPlugin") == typeof (IPlugin)) && (!type.IsInterface))
-							{
-								try
-								{
-									IPlugin plugin = (IPlugin) Activator.CreateInstance(type);
-									if (plugin != null)
-										ans.Add(plugin);
-									else
-										LogManager.Instance.Write("Failed to create instance of plugin of type {0}.", type);
-								}
-								catch (Exception e)
-								{
-									LogManager.Instance.WriteException("Failed to create instance of plugin of type {0} from assembly {1}", type, assembly.FullName);
-									LogManager.Instance.WriteException(e.Message);
-								}
-							}
-						}
-					}
-					catch (BadImageFormatException)
-					{
-						// ignore native assemblies which will throw this exception when loaded
-					}
+                        foreach (Type type in assembly.GetTypes())
+                        {
+                            //there may be other interfaces named IPlugin used for other assemblies, so check the full type
+                            if ((type.GetInterface("IPlugin") == typeof(IPlugin)) && (!type.IsInterface))
+                            {
+                                try
+                                {
+                                    IPlugin plugin = (IPlugin)Activator.CreateInstance(type);
+                                    if (plugin != null)
+                                        ans.Add(plugin);
+                                    else
+                                        LogManager.Instance.Write("Failed to create instance of plugin of type {0}.", type);
+                                }
+                                catch (Exception e)
+                                {
+                                    LogManager.Instance.WriteException("Failed to create instance of plugin of type {0} from assembly {1}", type, assembly.FullName);
+                                    LogManager.Instance.WriteException(e.Message);
+                                }
+                            }
+                        }
+                    }
+                    catch (BadImageFormatException)
+                    {
+                        // ignore native assemblies which will throw this exception when loaded
+                    }
+                    catch (Exception ex)
+                    {
+                        LogManager.Instance.Write("Failed to load plugin: {0}, Error: {1}", file, ex.ToString());
+                    }
 				}
 			}
 

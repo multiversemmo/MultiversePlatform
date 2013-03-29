@@ -95,7 +95,7 @@ namespace Multiverse.AssetRepository
 
                 if (errorLog.Count > 0)
                 {
-                    ErrorLogPopup(errorLog, "The folder you selected does not contain a valid respository.  The following errors were generated:\n\n",
+                    ErrorLogPopup(errorLog, "The folder you selected does not contain a valid repository.  The following errors were generated:\n\n",
                         "Invalid Repository", MessageBoxButtons.OK);
                     this.errorLog = errorLog;
                 }

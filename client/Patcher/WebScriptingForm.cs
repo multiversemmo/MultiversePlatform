@@ -139,5 +139,19 @@ namespace Multiverse.Patcher
                 throw new NotImplementedException();
             }
         }
+
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WebScriptingForm));
+            this.SuspendLayout();
+            // 
+            // WebScriptingForm
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "WebScriptingForm";
+            this.ResumeLayout(false);
+
+        }
     }
 }

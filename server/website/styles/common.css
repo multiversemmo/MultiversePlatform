@@ -1,0 +1,404 @@
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	color: #000000;
+}
+
+body, div {
+  padding: 0px;
+  margin: 0px;
+  text-align: left;
+}
+
+.form, .form a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+}
+.error {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	color: #FF0000;
+}
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.maintitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+/*	font-weight: bold;*/
+}
+.sidebar {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	color: #555555;
+}
+a.sidebar{
+	font-weight: bold;
+	color: #48589D;
+}
+.footer{
+	color: #D2D2D2;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	padding-top: 20px;
+}
+a.footer{
+	color: #333333;
+}
+
+#nav, #nav ul {
+	float: left;
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-width: 0px;
+	/*valign: center;*/
+}
+
+#nav a, .sidenav-head {
+	color: #000000;
+	text-transform: uppercase;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	letter-spacing: 1px;
+	border-width: 0px;
+	padding: 4px 17px 4px 17px;
+	display: block;
+	text-decoration: none;
+}
+
+#nav a:hover {
+	color: #FFFFFF;
+}
+
+#nav li {
+	float: left;
+	width: 1em;
+}
+
+#nav li ul {
+	position: absolute;
+	left: -999em;
+	height: auto;
+	width: 10em;
+	font-weight: normal;
+	margin: 0;
+	background-color: #67A74D;
+}
+
+#nav li ul a {
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: #7FC738;
+}
+
+#nav td {
+	background-color: #6474B8;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	/* border-color: #7FC738; */
+	border-color:#383E78
+}
+
+#nav li:hover ul ul, 
+#nav li.sfhover ul ul {
+	left: -999em;
+}
+
+#nav li:hover ul, 
+#nav li li:hover ul, 
+#nav li.sfhover ul, 
+#nav li li.sfhover ul { 
+	left: auto;
+}
+
+td.text {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  vertical-align: top;
+}
+
+td.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: none;
+}
+
+ul.text {
+  list-style-image: url('/images/bullgrn14.gif')
+}
+
+ul.text li {
+  list-style-image: url('/images/bullgrn14.gif');
+  margin-bottom: 6px;
+}
+
+
+/* For games built on Multiverse page */
+p, p.gamedesc {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.gametitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+p.prtitle{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+p.prsubtitle{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-style: italic;
+	text-align: center;
+}
+
+p.prhead, p.head {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	margin-bottom: -10px;
+}
+
+p.subhead {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+p.events {
+	margin-bottom: 20px;
+}
+
+p.faq {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding-bottom: 20px;
+	color: red;
+}
+
+pre {
+  border: thin dashed; 
+  padding: 10px; 
+  font-size: 10pt; 
+  white-space: pre;
+  background-color: rgb(245,245,245);
+  margin-right: 0.25in; 
+}
+
+.hilite {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 2px solid rgb(127,199,56);
+  //background-color: rgb(220,240,200);
+	font-size: 11pt; 
+	font-weight: bold;
+  padding: 7px; 
+  margin-left: 0.75in; 
+	margin-right: 0.75in; 
+}
+
+.button {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 2px solid rgb(127,199,56);
+  background-color: rgb(220,240,200);
+	font-size: 11pt; 
+	font-weight: bold;
+  padding: 5px; 
+}
+
+.button .bullets {
+	font-size: 9pt; 
+}
+
+.hilite-big {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 1px solid rgb(127,199,56);
+  background-color: rgb(220,240,200);
+	font-size: 10pt; 
+	font-weight: bold;
+	line-height: 130%;
+  padding: 10px; 
+}
+
+.hilite a, .hilite-big a {
+  color: #337319;
+  text-decoration: none;
+}
+
+.hilite a:hover, .hilite-big a:hover {
+  text-decoration: underline;
+}
+
+.menu {
+  width:108px;
+}
+
+.menuitem {
+  width:180px;
+}
+
+td.search {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  vertical-align: top;
+}
+
+#maintitle {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  font-weight: bold;   
+  letter-spacing: 1px;
+  color: #337319;
+	/*text-transform: uppercase;*/
+}
+
+#tagline {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14pt;  
+}
+
+#checkout {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16pt; 
+  color: #337319;
+  line-height: 1.3em; 
+}
+
+.frontimg {
+  border: 5px double rgb(127,199,56);
+/*  background-color: rgb(220,240,200); */
+}
+
+.frontbullet {
+  font-size: 10pt; 
+  line-height: 1.3em;
+}
+
+.step {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 18pt; 
+  line-height: 130%;
+  font-weight: bold;
+  color: rgb(51,115,25);
+}
+
+.step a {
+  color: rgb(128,165,117);
+}
+
+.smalltext {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+}
+
+/*
+ul {
+  list-style-image: url('/images/green_bullet.jpg')
+}
+*/
+
+/* New gallery styles */
+div.galleryListing {
+	clear: both;
+	width: 900px;
+	border-bottom: 1px solid #e7e7e7;
+	padding: 10px 0;
+	overflow: hidden;
+}
+
+div.galleryListing h3 { /* This is the game title */
+	display: inline;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+div.galleryListing ul {
+	list-style: none;
+}
+
+div.galleryListing li {
+	float: left;
+	margin-right: 55px;
+}
+
+div.galleryListing a,
+div.galleryListing img {
+	border: 0;
+}
+
+/* Duplicated from home.css for video link
+*/
+
+ul.vid {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li.goVideo {
+	height: 30px;
+	line-height: 25px;
+	padding-left: 30px;
+	margin-bottom: 8px;
+	background: url('/images/icon_video.gif') top left no-repeat;
+}
+
+.mvtable {
+        border-width: 1px;
+        border-spacing: 0px 0px;
+        border-style: none;
+        border-collapse: collapse;
+        background-color: white;
+        margin: 10px;
+}
+.mvtable th {
+        border-width: 1px;
+        padding: 5px;
+        border-style: solid;
+        border-color: black;
+        background-color: #dfdfdf;
+}
+.mvtable td {
+        border-width: 1px;
+        padding: 5px;
+        border-style: solid;
+        border-color: black;
+        background-color: white;
+        line-height: 125%;
+}
+
+h2 { 	font-family: Verdana, Arial, Helvetica, sans-serif;
+		font-size:12px;
+		font-weight: bold;
+}
+
+#dhtmltooltip {
+ position: absolute;
+ width: 150px;
+ border: 1px solid grey;
+ padding: 2px;
+ background-color: lightyellow;
+ visibility: hidden;
+ z-index: 100;
+}

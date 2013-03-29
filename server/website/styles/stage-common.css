@@ -1,0 +1,276 @@
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	color: #000000;
+}
+
+body, div {
+  padding: 0px;
+  margin: 0px;
+}
+
+.form {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: bold;
+	color: #000000;
+}
+.error {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	color: #FF0000;
+}
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.maintitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	text-transform: uppercase;
+//	font-weight: bold;
+}
+.sidebar {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	color: #555555;
+}
+a.sidebar{
+	font-weight: bold;
+	color: #48589D;
+}
+.footer{
+	color: #D2D2D2;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	padding-top: 20px;
+}
+a.footer{
+	color: #333333;
+}
+
+#nav, #nav ul {
+	float: left;
+	width: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-width: 0px;
+	valign: center;
+}
+
+#nav a {
+	color: #000000;
+	text-transform: uppercase;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	letter-spacing: 1px;
+	border-width: 0px;
+	padding: 4px 17px 4px 17px;
+	display: block;
+	text-decoration: none;
+}
+
+#nav a:hover {
+	color: #FFFFFF;
+}
+
+#nav li {
+	float: left;
+	width: 1em;
+}
+
+#nav li ul {
+	position: absolute;
+	left: -999em;
+	height: auto;
+	width: 10em;
+	font-weight: normal;
+	margin: 0;
+	background-color: #67A74D;
+}
+
+#nav li ul a {
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: #7FC738;
+}
+
+#nav td {
+	background-color: #6474B8;
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: #7FC738;
+}
+
+#nav li:hover ul ul, 
+#nav li.sfhover ul ul {
+	left: -999em;
+}
+
+#nav li:hover ul, 
+#nav li li:hover ul, 
+#nav li.sfhover ul, 
+#nav li li.sfhover ul { 
+	left: auto;
+}
+
+td.text {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  vertical-align: top;
+}
+
+td.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: none;
+}
+
+ul.text {
+  list-style-image: url('/images/bullgrn14.gif')
+}
+
+ul.text li {
+  list-style-image: url('/images/bullgrn14.gif');
+  margin-bottom: 6px;
+}
+
+
+/* For games built on Multiverse page */
+p, p.gamedesc {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.gametitle {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+p.prtitle{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+p.prsubtitle{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+	font-style: italic;
+	text-align: center;
+}
+
+p.prhead{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	margin-bottom: -10px;
+}
+
+p.events {
+	margin-bottom: 20px;
+}
+
+p.faq {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	padding-bottom: 20px;
+	color="red";
+}
+
+pre {
+  border: thin dashed; 
+  padding: 10px; 
+  font-size: 10pt; 
+  white-space: pre;
+  background-color: rgb(245,245,245);
+  margin-right: 0.25in; 
+}
+
+.hilite {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 2px solid rgb(127,199,56);
+  background-color: rgb(220,240,200);
+	font-size: 10pt; 
+  padding: 10px; 
+}
+
+.hilite-big {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  border: 1px solid rgb(127,199,56);
+  background-color: rgb(220,240,200);
+	font-size: 10pt; 
+	font-weight: bold;
+	line-height: 130%;
+  padding: 10px; 
+}
+
+.hilite a, .hilite-big a {
+  color: black;
+  text-decoration: none;
+}
+
+.hilite a:hover, .hilite-big a:hover {
+  text-decoration: underline;
+}
+
+.menu {
+  width:108px;
+}
+
+.menuitem {
+  width:160px;
+}
+
+td.search {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  vertical-align: top;
+}
+
+#maintitle {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 20pt;
+  font-weight: bold;   
+  letter-spacing: 1px;
+  color: #337319;
+	text-transform: uppercase;
+}
+
+#tagline {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14pt; 
+}
+
+#checkout {
+  font-family: Georgia;
+  font-size: 14pt; 
+  color: #337319;
+}
+
+.frontimg {
+  border: 5px double rgb(127,199,56);
+//  background-color: rgb(220,240,200);
+}
+
+.frontbullet {
+  font-size: 11pt; 
+  line-height: 1.3em;
+}
+
+/*
+ul {
+  list-style-image: url('/images/green_bullet.jpg')
+}
+*/
+

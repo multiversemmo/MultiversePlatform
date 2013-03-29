@@ -38,8 +38,8 @@ namespace Multiverse.Tools.ModelViewer
 {
     public partial class SetAssetRepositoryDialog : Form
     {
-        protected string downloadPage = "http://update.multiverse.net/wiki/index.php/Download_an_Asset_Repository";
-        protected string helpPage = "http://update.multiverse.net/wiki/index.php/Download_and_Designate_Asset_Repository_-_Help";
+        protected string downloadPage = "http://www.multiversemmo.com/wiki/Download_an_Asset_Repository";
+        protected string helpPage = "http://www.multiversemmo.com/wiki/Setting_Up_an_Asset_Repository";
         protected ModelViewer app;
 
         public SetAssetRepositoryDialog(ModelViewer app)

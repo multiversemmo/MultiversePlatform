@@ -287,7 +287,7 @@ namespace Axiom.Core {
 		/// </summary>
 		/// <returns></returns>
 		public override AxisAlignedBox GetWorldBoundingBox(bool derive) {
-			if(derive) {
+			if(derive && this.BoundingBox != null) {
 				worldAABB = this.BoundingBox;
 				worldAABB.Transform(this.ParentFullTransform);
                 ComputeContainedWorldAABBs();

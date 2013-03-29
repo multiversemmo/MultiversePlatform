@@ -3,14 +3,14 @@ Multiverse Server README
 
 
 Multiverse Server Documentation:
-http://update.multiverse.net/wiki/index.php/Server
+http://www.multiversemmo.com/wiki/Server
 
 
 Multiverse Server Installation:
-http://update.multiverse.net/wiki/index.php/Platform_Tutorial_Getting_Started#Install_the_Multiverse_servers
+http://www.multiversemmo.com/wiki/Platform_Tutorial_Getting_Started#Install_the_Multiverse_servers
 
 
 Multiverse Server Forum:
-http://update.multiverse.net/forum/viewforum.php?f=15&theme=multiverse
+http://www.multiversemmo.com/forum/viewforum.php?f=15&theme=multiverse
 
 

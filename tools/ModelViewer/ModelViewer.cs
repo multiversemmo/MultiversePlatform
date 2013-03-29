@@ -784,7 +784,7 @@ namespace Multiverse.Tools.ModelViewer
 
         private void LaunchDoc(string anchor)
         {
-            string WebDocsString = "http://update.multiverse.net/wiki/index.php/Using_Model_Viewer_Version_1.5";
+            string WebDocsString = "http://www.multiversemmo.com/wiki/Using_Model_Viewer";
 
             string target = String.Format("{0}#{1}", WebDocsString, anchor); 
             System.Diagnostics.Process.Start(target); 
@@ -2252,8 +2252,8 @@ namespace Multiverse.Tools.ModelViewer
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            string msg = string.Format("Multiverse ModelViewer\n\nVersion: {0}\n\nCopyright 2006-2007 The Multiverse Network, Inc.\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
-            DialogResult result = MessageBox.Show(this, msg, "About Multiverse ModelViewer", MessageBoxButtons.OK, MessageBoxIcon.Information); 
+            string msg = string.Format("Multiverse Model Viewer\n\nVersion: {0}\n\nCopyright 2012 The Multiverse Software Foundation\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
+            DialogResult result = MessageBox.Show(this, msg, "About Multiverse Model Viewer", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }
 
         private void subMeshLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -2415,7 +2415,7 @@ namespace Multiverse.Tools.ModelViewer
 
         private void launchReleaseNotesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string releaseNotesURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes";
+            string releaseNotesURL = "http://www.multiversemmo.com/wiki/Tools_Version_1.5_Release_Notes";
 
             System.Diagnostics.Process.Start(releaseNotesURL);
         }

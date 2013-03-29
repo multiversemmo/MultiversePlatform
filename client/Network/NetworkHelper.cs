@@ -147,6 +147,14 @@ namespace Multiverse.Network
         /// </summary>
         string startupScript;
         
+        /// <summary>
+        /// WorldServerEntry constructor.  Requires world name and location details.
+        /// </summary>
+        /// <param name="worldName"></param>
+        /// <param name="hostname"></param>
+        /// <param name="port"></param>
+        /// <param name="patcherUrl"></param>
+        /// <param name="updateUrl"></param>
 		public WorldServerEntry(string worldName, string hostname, int port, string patcherUrl, string updateUrl) {
 			this.worldName = worldName;
 			this.hostname = hostname;
@@ -158,12 +166,17 @@ namespace Multiverse.Network
             this.startupScript = null;
 		}
 
+        /// <summary>
+        /// Prints the WorldName details.  Space and comma before newline for
+        /// readability because the logger ignores newlines.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString() {
             StringBuilder buffer = new StringBuilder();
-            buffer.AppendFormat("WorldName: {0}\n", worldName);
-            buffer.AppendFormat("Hostname: {0}\n", hostname);
-            buffer.AppendFormat("Port: {0}\n", port);
-            buffer.AppendFormat("PatcherUrl: {0}\n", patcherUrl);
+            buffer.AppendFormat("WorldName: {0}, \n", worldName);
+            buffer.AppendFormat("Hostname: {0}, \n", hostname);
+            buffer.AppendFormat("Port: {0}, \n", port);
+            buffer.AppendFormat("PatcherUrl: {0}, \n", patcherUrl);
             buffer.AppendFormat("UpdateUrl: {0}", updateUrl);
             return buffer.ToString();
         }

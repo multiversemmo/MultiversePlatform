@@ -1,4 +1,32 @@
 @ echo off
+::*******************************************************************
+::
+:: The Multiverse Platform is made available under the MIT License.
+::
+:: Copyright (c) 2012 The Multiverse Foundation
+:: 
+:: Permission is hereby granted, free of charge, to any person 
+:: obtaining a copy of this software and associated documentation 
+:: files (the "Software"), to deal in the Software without restriction, 
+:: including without limitation the rights to use, copy, modify, 
+:: merge, publish, distribute, sublicense, and/or sell copies 
+:: of the Software, and to permit persons to whom the Software 
+:: is furnished to do so, subject to the following conditions:
+:: 
+:: The above copyright notice and this permission notice shall be 
+:: included in all copies or substantial portions of the Software.
+:: 
+:: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+:: EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+:: OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND 
+:: NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+:: HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
+:: WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING 
+:: FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE 
+:: OR OTHER DEALINGS IN THE SOFTWARE.
+:: 
+:: ********************************************************************
+
 SETLOCAL ENABLEDELAYEDEXPANSION
 
 :: Check that script is being run from mv_home\bin
@@ -14,14 +42,12 @@ if not defined MV_HOME (
 
 echo +-----------------------------------------------------------------------------+
 echo : NOTE: This script works only on Windows XP Pro and Media Center Edition     :
-echo : If you see an error such as                                                 :
+echo : and Vista and 7.  If you see an error such as                               :
 echo : " 'tasklist' is not recognized as an internal or external command..."       :
 echo : Then your OS doesn't support this script.                                   :
 echo : You can download a utility to run the script with XP Home Edition.  See     :
-echo : http://update.multiverse.net/wiki/index.php/Running_the_Servers             :
+echo : http://www.multiversemmo.com/wiki/Running_the_Servers                       :
 echo +-----------------------------------------------------------------------------+
-
-pause
 
 if not defined DEFAULT_MV_PROPERTYFILE (
    set DEFAULT_MV_PROPERTYFILE=multiverse.properties

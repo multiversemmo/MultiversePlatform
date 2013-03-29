@@ -1,0 +1,67 @@
+.text {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	color: #000000;
+}
+.title{
+	font-size: 14px;
+	font-weight: bold;
+}
+.sidebar {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	line-height: 16px;
+	color: #555555;
+}
+a.sidebar{
+	font-weight: bold;
+	color: #48589D;
+}
+.footer{
+	color: #D2D2D2;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	padding-top: 20px;
+}
+#nav, #nav ul { 
+	float: left;
+	width: 100%;
+	list-style: none;
+	line-height: 1;	
+	padding: 0; 
+	margin: 0; 
+} 
+#nav a { 
+	display: block; 
+	width: 1em; 
+	padding: 0;
+} 
+#nav li { 
+	float: left; 
+	padding: 0;	
+	width: 1em; 
+}
+#nav li ul { 
+	position: absolute; 
+	width: 1em; 
+	left: -999em; 
+	height: auto;
+	margin: 0;
+} 
+#nav li li {
+	padding: 0;
+	width: 1em
+}
+#nav li ul a {
+	width: 1em;
+}
+#nav li ul ul {
+	margin: 0;
+}
+#nav li:hover ul { 
+	left: -999em;
+}
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul, #nav li li li.sfhover ul {
+	left: auto;
+}

@@ -1,0 +1,502 @@
+@charset "UTF-8";
+/* Multiverse Home Page Styles 
+ * First section styles have to do with layout and positioning
+ * Second section styles are primarily text and tag-level styles
+ */ 
+ 
+ /* BEGIN LAYOUT AND POSITIONING */
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: url('/images/bg_repeat_home.gif') top left repeat-x #c0c0c0;
+	text-align: center;
+}
+#wrapper {
+	margin: 0 auto;
+	padding: 0;
+	width: 945px;
+	text-align: left;
+	background: #fff;
+}
+#brand {
+	margin: 0;
+	padding: 0;
+	width: 945px;
+	height: 72px;
+	background: url('../images/logo_primary.jpg') bottom left no-repeat;
+}
+#tagLine {
+	float: right;
+	width: 400px;
+	text-align: center;
+	padding: 20px 100px 0 0;
+}
+#nav {
+	margin: 0;
+	padding: 0;
+	width: 945px;
+	height: 22px;
+	border-top: 3px solid #2a2a2a;
+	clear: both;
+	text-align: left;
+	background: #7fc738;
+}
+#nav #login {
+	margin: 0 15px 0 0;
+	padding: 0;
+	float: right;
+	font-size: 9px;
+	float: right;
+	text-align: right;
+}
+#nav #login a {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	color: #002cbc;
+	font-size: 9px;
+	display: inline;
+}
+#nav #login, #nav #login a {
+	line-height: 22px;
+}
+#nav ul {
+	width: 650px;
+	float: left;
+}
+#nav ul, #nav ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	backround-color: #67A74D;
+}
+#nav ul {
+	margin-left: 15px;
+}
+#nav ul a {
+	color: #000000;
+	text-transform: uppercase;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	letter-spacing: 1px;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	display: block;
+	text-decoration: none;
+	line-height: 22px;
+}
+#nav a:hover {
+	color: #fff;
+}
+#nav li {
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+#nav li.separator {
+	padding: 0 18px;
+}
+#nav li ul {
+	position: absolute;
+	left: -999em;
+	width: 10em;
+	font-weight: normal;
+	margin: 0;
+	background-color: #67A74D;
+	text-align: left;
+}
+#nav li ul li {
+	background-color: #67A74D;
+}
+#nav li ul a {
+	border-width: 0px 0px 1px 0px;
+	border-style: solid;
+	border-color: #7fc738;
+	width: 15em;
+	margin: 0;
+	padding: .5em 1.4em;
+	line-height: 1.3em;
+}
+#nav li:hover ul ul, #nav li.sfhover ul ul {
+	left: -999em;
+}
+#nav li:hover ul, #nav li li:hover ul, #nav li.sfhover ul, #nav li li.sfhover ul {
+	left: auto;
+}
+
+.featureBoxTop {
+	margin: 12px;
+	padding: 12px 15px;
+	border-top: 1px solid #cacaca;
+	border-right: 0;
+	border-bottom: 0;
+	border-left: 1px solid #cacaca;
+	text-align: left;
+}
+
+#topRowHome {
+	margin: 0;
+	padding: 0;
+	clear: both;
+	background: #fff;
+	text-align: center;
+}
+
+/*
+#adScroller {
+	width: 240px;
+	height: 180px;
+	background: url('/images/bgHomeTopBlueGrad.jpg') top left repeat-x;
+	text-align: center;	
+	margin: 15px 0 0 12px;
+	padding: 0 0 0 10px;	
+}
+*/
+
+#adScroller {
+	width: 240px;
+	height: 180px;
+	/* background: url('/images/bgHomeTopBlueGrad.jpg') top left repeat-x; */
+	background: url('/images/bgHomeTopBrown.jpg') top left repeat-x;	
+	/* background: #291c14; */
+	text-align: center;	
+	margin: 15px 0 0 12px;
+	padding: 0 0 0 10px;	
+}
+
+.billcontent {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.featureBox {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #cacaca;
+	border-right: 0;
+	border-bottom: 0;
+	border-left: 1px solid #cacaca;
+	text-align: left;
+}
+.featureBox p, .featureBox table {
+	clear: both;
+}
+.greyTab {
+	margin: 0;
+	padding: 0;
+	float: left;
+	background: url('/images/grey_tab.gif') top right no-repeat;
+}
+.featureBox .greyTab p {
+	display: block;
+	margin: 0;
+	padding: 0 20px 0 10px;
+	line-height: 20px;
+	color: #fff;
+	font-family: "trebuchet ms", tahoma, verdana, arial, sans-serif;
+	font-weight: bold;
+}
+.featureBox a {
+	font-weight: bold;
+	text-decoration: none;
+}
+.featureBox ul {
+	margin: 1em 0 0 1em;
+}
+
+#news {
+	padding: 0;
+	margin: 0;
+}
+#ajaxticker1 {
+	width: 290px;
+	margin: 0;
+	padding: 2px;
+	background-color: #FFFFFF;
+}
+#ajaxticker1 div {
+	/*IE6 bug fix when text is bold and fade effect (alpha filter) 
+	is enabled. Style inner DIV with same color as outer DIV*/
+	background-color: #FFFFFF;
+}
+
+/*
+ * News ticker rules. These rules are for the javascript news window in 
+ * the middle row of the home page that fades news snippets in and out.
+ *
+ * The actual content of the news stories is generated from the text file
+ * found at /jscripts/multiverse_news_ticker_content.txt. Markup guidelines
+ * are included in the comments for each rule below.
+*/
+
+h4.headline, h4.headline a {
+/* 
+ * Use <h4> for the article title 
+*/
+	margin: 0;
+	padding: 0;
+	font-family: tahoma, verdana, arial, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 1.3em;
+}
+
+em.byline {
+/* 
+ * Use <em class="byline"> for the bylines
+*/
+	margin: 0;
+	padding: 0;
+	font-family: tahoma, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: italic;
+	line-height: 1.3em;
+	display: block;
+}
+
+p.newsDate {
+/* 
+ * Use <p class="newsDate"> for the date stamp
+*/
+	margin: 0 0 6px 0;
+	padding: 0;
+	font-family: tahoma, verdana, arial, sans-serif;
+	font-size: 10px;
+	line-height: 1.3em;
+}
+
+p.newsStory {
+/* 
+ * Use <p class="newsStory"> for the article teaser
+*/
+	margin: 0;
+	padding: 0;
+	font-family: tahoma, verdana, arial, sans-serif;
+	font-size: 10px;
+	line-height: 1.3em;
+}
+
+/* END NEWS TICKER RULES */
+
+/* 
+ * The following styles are used for the middle row of the home page.
+ * This row has the flash thumbnail carousel, the news, and the events.
+ * I used IDs for now, but we may want to class these if the content
+ * of this row is to become variable.
+ */
+#midRowHome {
+	margin: 0;
+	padding: 0 15px 12px 15px;
+	clear: both;
+	background: #fff;
+	text-align: center;
+	overflow: hidden;
+}
+#worldsInProgress {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 560px;
+	float: left;
+	background: #fff;
+	overflow: hidden;
+}
+#newsAndEvents {
+	margin: 0;
+	padding: 0;
+	float: right;
+	width: 325px;
+	text-align: left;
+	float: right;
+	background: #fff;
+	overflow: hidden;
+}
+#news {
+	margin: 0;
+	padding: 6px;
+	border-right: 1px solid #cacaca;
+	text-align: left;
+}
+#events {
+	margin: 0;
+	padding: 6px;
+	text-align: left;
+}
+#events p {
+	padding: 0 5px;
+}
+
+/* END MIDDLE ROW STYLES */
+
+
+/* 
+ * The following styles are used for the bottom row of the home page
+ * with the green background. 
+ */
+#homeGreen {
+	width: 945px;
+	margin: 0;
+	clear: both;
+	background: #b4ed7c;
+	text-align: center;
+	overflow: hidden;
+}
+#homeGreenRow {
+	background: url('/images/bg_box_grads_home_mid.jpg') bottom left  no-repeat #fff;
+	width: 920px;
+	padding: 0;
+	margin: 12px auto;
+	overflow: hidden;
+}
+#homeGreenLeft {
+	margin: 0;
+	padding: 8px 17px 12px 15px;
+	float: left;
+	width: 730px;
+}
+#homeGreenRight {
+	float: right;
+	width: 140px;
+	margin: 8px 15px 0 0;
+	padding: 12px 0 0 0;
+	text-align: center;
+	vertical-align: middle;
+}
+#wantMore {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 275px;
+	float: left;
+}
+#wantMore ul {
+	clear: both;
+	margin-top: 40px;
+}
+#developerAdvantages {
+	margin: 0;
+	padding: 0;
+	float: right;
+	width: 430px;
+}
+#developerAdvantages table {
+	width: 400px;
+	clear: both;
+}
+#developerAdvantages ul {
+	list-style: square;
+	margin: 10px 0 0 10px;
+	padding: 0;
+}
+#developerAdvantages li {
+	margin: 3px 1.8em;
+	padding: 0;
+	line-height: 1em;
+}
+
+#footer {
+	height: 100%;
+	overflow: auto;
+	background-color: #e6e6e6;
+}
+#footer p {
+	margin: 10px 15px;
+	float: left;
+	font-size: 10px;
+}
+#footer ul {
+	margin: 10px 15px;
+	float: right;
+	list-style: none;
+	width: 40%;
+}
+#footer li {
+	float: right;
+}
+#footer li.separator {
+	margin: 0 10px;
+}
+
+/* END LAYOUT AND POSITIONING 
+
+   BEGIN TEXT AND OTHER TAG-LEVEL STYLES 
+   
+  * Overrides are grouped by tag. Global defaults are declared on the master tag 
+  * and are followed by container and class-based overrides.
+*/
+body, p, li, td {
+	font-family: tahoma, verdana, arial, sans-serif;
+	font-size: 11px;
+	line-height: 135%;
+	margin: 0 10px;
+	padding: 0;
+	color: #1f1f1f;
+}
+#tagLine p {
+	font-size: 11px;
+	padding: 0;
+	margin: 0;
+}
+a {
+	color: #002cbc;
+}
+img {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+#logo img {
+	width: 284px;
+	height: 65px;
+	margin-top: 8px;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	margin: 0;
+	padding: 0;
+}
+li.goPage {
+	height: 30px;
+	padding-left: 30px;
+	margin-bottom: 8px;
+	background: url('/images/icon_go.gif') top left no-repeat;
+}
+
+li.goVideo {
+	height: 30px;
+	padding-left: 30px;
+	margin-bottom: 8px;
+	background: url('/images/icon_video.gif') top left no-repeat;
+	/* line-height: 25px; */
+}
+
+li.goSee {
+	height: 30px;
+	padding-left: 30px;
+	background: url('/images/icon_view.gif') top left no-repeat;
+}
+
+#nyts_vid{
+	line-height: 15px;
+}
+
+.tagLine2 { /* Currently "What world will you build?" at the bottom of the green area */
+	padding: 1em 0;
+	font: bold 200%/ 2em "Gill Sans", helvetica, geneva, tahoma, verdana,  arial, sans-serif;
+	color: #2b2b2b;
+}
+
+#footer a {
+	font-family: arial, verdana, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	text-decoration: none;
+}

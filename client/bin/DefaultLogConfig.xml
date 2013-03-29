@@ -68,12 +68,12 @@
   </appender>
 
   <root>
-    <level value="INFO" />
+    <level value="DEBUG" />
     <appender-ref ref="RollingFile" />
     <appender-ref ref="TraceAppender" />
   </root>
   <logger name="ScriptDeprecated">
-    <level value="WARN" />
+    <level value="DEBUG" />
     <appender-ref ref="DeprecatedFile" />
   </logger>
   <logger name="Exception">
@@ -85,11 +85,11 @@
     <appender-ref ref="ExceptionFile" />
   </logger>
   <logger name="MeterEvents">
-    <level value="INFO" />
+    <level value="DEBUG" />
     <appender-ref ref="MeterEventsAppender" />
   </logger>
   <logger name="MeterReport">
-    <level value="INFO" />
+    <level value="DEBUG" />
     <appender-ref ref="MeterReportAppender" />
   </logger>
 </log4net>

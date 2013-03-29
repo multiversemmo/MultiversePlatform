@@ -1,0 +1,117 @@
+#!/bin/sh
+
+# chkconfig: 345 90 10
+# description: Generic Multiverse server control script.
+
+# Multiverse service_script
+#
+# Create a symbolic link to this script using the name of your world:
+# cd /etc/init.d ; ln -s $MV_HOME/bin/service_script world_name
+# then start the world with /sbin/service world_name start
+
+if [ -f /etc/init.d/functions ] ; then
+        . /etc/init.d/functions
+elif [ -f /etc/rc.d/init.d/functions ] ; then
+        . /etc/rc.d/init.d/functions
+else
+        exit 0
+fi
+
+# Configuration options:
+# RUN_AS      User to run server as
+# RUN_FLAGS   Extra flags to pass to Multiverse server script
+# MV_HOME     Override the Multiverse server install directory (defaults
+#             to "/home/$RUN_AS/multiverse")
+# RUN_SCRIPT  Override the Multiverse server script.  Defaults to
+#             "multiverse.sh" unless a script named "$WORLD_NAME".sh is
+#             found in $MV_HOME/bin
+
+RUN_AS=
+RUN_FLAGS=
+MV_HOME=
+RUN_SCRIPT=
+
+# You might need to explicitly set JAVA_HOME and PATH
+#JAVA_HOME=
+#PATH=$JAVA_HOME/bin:$PATH
+
+
+# Do not modify below here
+
+prog=`basename $0`
+
+MV_HOME=${MV_HOME:-/home/$RUN_AS/multiverse}
+
+WORLD_NAME=${WORLD_NAME:-$prog}
+
+if [ -z "$RUN_SCRIPT" ]; then
+    if [ -f "$MV_HOME/bin/${WORLD_NAME}.sh" ]; then
+        RUN_SCRIPT="${WORLD_NAME}.sh"
+        world_flag=
+    else
+        RUN_SCRIPT=multiverse.sh
+        world_flag="-w $WORLD_NAME"
+    fi
+fi
+
+#echo prog $prog
+#echo MV_HOME $MV_HOME
+#echo WORLD_NAME $WORLD_NAME
+#echo RUN_SCRIPT $RUN_SCRIPT
+
+if [ -n "$RUN_AS" ]; then
+    user_flag="--user $RUN_AS"
+fi
+
+run_flags="$world_flag $RUN_FLAGS"
+
+start() {
+    echo -n $"Starting $WORLD_NAME server: "
+    daemon $user_flag cd "$MV_HOME/bin" \; ./$RUN_SCRIPT $run_flags start
+    RETVAL=$?
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $WORLD_NAME server: "
+    daemon $user_flag cd "$MV_HOME/bin" \; ./$RUN_SCRIPT $world_flag stop
+    RETVAL=$?
+    return $RETVAL
+}
+
+restart() {
+    stop
+    start
+}
+
+status() {
+    ( cd "$MV_HOME/bin" ; ./$RUN_SCRIPT $world_flag status )
+    RETVAL=$?
+    if [ $RETVAL = 0 ]; then
+        echo $"$WORLD_NAME server is running"
+    else
+        echo $"$WORLD_NAME server is not running"
+    fi
+    return $RETVAL
+}
+
+
+case "$1" in
+start)
+        start
+        ;;
+stop)
+        stop
+        ;;
+restart)
+        restart
+        ;;
+status)
+        status
+        ;;
+*)
+        echo $"Usage: $0 {start|stop|status|restart}"
+        exit 1
+esac
+
+exit $RETVAL

@@ -27,30 +27,24 @@ OR OTHER DEALINGS IN THE SOFTWARE.
 *********************************************************************/
 
 using System;
-using System.Globalization;
 using System.Collections.Generic;
-using System.Threading;
-using System.Windows.Forms;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Net.Cache;
-
+using System.Threading;
+using System.Windows.Forms;
 using log4net;
-
-using Axiom.Utility;
-
 using Multiverse.Base;
-using Multiverse.Config;
 using Multiverse.Lib.LogUtil;
 
 namespace Multiverse
 {
-
     /// <summary>
     ///     Demo browser entry point.
     /// </summary>
-	public class MultiverseClient
+    public class MultiverseClient
     {
         // Create a logger for use in this class
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(typeof(MultiverseClient));
@@ -63,13 +57,15 @@ namespace Multiverse
         ///   Default patch base url.  We need this here, because the client
         ///   needs to check that it is up to date, and fetch the patcher if
         ///   required.
+        ///
+        /// make this configurable for the developer.
         /// </summary>
-        public static string UpdateUrl = "http://update.multiverse.net/mvupdate.client/";
+        public static string UpdateUrl = "http://update.multiversemmo.com/";
         /// <summary>
-        ///   The base for login urls.  The --login_page argument is appended 
+        ///   The base for login urls.  The --login_page argument is appended
         ///   to this.
         /// </summary>
-        public static string LoginBase = "http://login.multiverse.net/";
+        public static string LoginBase = "http://login.multiversemmo.com/login.jsp";
 
         private static string MyDocumentsFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         private static string ClientAppDataFolder = Path.Combine(MyDocumentsFolder, "Multiverse World Browser");
@@ -86,7 +82,7 @@ namespace Multiverse
             // Set up log configuration folders
             if (!Directory.Exists(ConfigFolder))
                 Directory.CreateDirectory(ConfigFolder);
-                // Note that the DisplaySettings.xml should also show up in this folder.
+            // Note that the DisplaySettings.xml should also show up in this folder.
 
             if (!Directory.Exists(LogFolder))
                 Directory.CreateDirectory(LogFolder);
@@ -99,27 +95,38 @@ namespace Multiverse
                 Directory.CreateDirectory(worldsFolder);
         }
 
-        private static string GetClientVersion(Stream stream) {
+        private static string GetClientVersion(Stream stream)
+        {
             string version = string.Empty;
-            try {
+            try
+            {
                 TextReader reader = new StreamReader(stream);
-                try {
+                try
+                {
                     string line = reader.ReadLine();
                     version = line.Trim();
-                } finally {
+                }
+                finally
+                {
                     reader.Close();
                 }
-            } catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 LogUtil.ExceptionLog.InfoFormat("Failed to parse version: {0}", e);
             }
             return version;
         }
 
-        private static bool Patch(string updateUrl, string patcherUrl, string[] extraArgs, bool forceScan, bool exit_after_patch) {
+        private static bool Patch(string updateUrl, string patcherUrl, string[] extraArgs, bool forceScan, bool exit_after_patch)
+        {
             string localVersion = string.Empty;
-            try {
+            try
+            {
                 localVersion = GetClientVersion(File.Open("../" + VersionFile, FileMode.Open, FileAccess.Read));
-            } catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 LogUtil.ExceptionLog.ErrorFormat("Unable to determine local version: {0}", e);
             }
             string remoteVersion = string.Empty;
@@ -131,6 +138,7 @@ namespace Multiverse
             // It is extremely common for people to not have the right update url.
             // Assume they left off the trailing slash and try again if we do not
             // find the file.
+            log.Info("Checking for client updates at URL '" + localUpdateUrl + VersionFile + "'");
             try
             {
                 webStream = webClient.OpenRead(localUpdateUrl + VersionFile);
@@ -149,28 +157,36 @@ namespace Multiverse
                     throw;
                 }
             }
-            try {
+            try
+            {
                 remoteVersion = GetClientVersion(webStream);
-            } catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 LogUtil.ExceptionLog.ErrorFormat("Failed to retrieve remote version: {0}", e);
-            } finally {
+            }
+            finally
+            {
                 webStream.Close();
             }
             if (localVersion == remoteVersion)
             {
                 log.InfoFormat("Client version up to date: {0}", localVersion);
-                // we are up to date.. 
+                // we are up to date..
                 if (!forceScan)
                     return false;
                 log.InfoFormat("Forcing patch from {0} to {1}", localVersion, remoteVersion);
-            } else {
+            }
+            else
+            {
                 log.InfoFormat("Patching from {0} to {1}", localVersion, remoteVersion);
             }
             // Pull the updated patcher, and spawn it
             log.Info("Downloading patcher...");
             string currentDir = Directory.GetCurrentDirectory();
             string parentDir = Directory.GetParent(currentDir).FullName;
-            if ((parentDir + "\\bin") != currentDir) {
+            if ((parentDir + "\\bin") != currentDir)
+            {
                 Debug.Assert(false, "Client must be run from the bin folder.\nIf you are running a development build, you should use the --noupdate command line option.  Current folder is: " + currentDir);
                 return true;
             }
@@ -193,7 +209,7 @@ namespace Multiverse
             foreach (string extraArg in extraArgs)
                 cmdArgs += " \"" + extraArg + "\"";
             log.DebugFormat("Patcher arguments: {0}", cmdArgs);
-            ProcessStartInfo psi = 
+            ProcessStartInfo psi =
                 new ProcessStartInfo(Path.Combine(Path.GetTempPath(), Patcher), cmdArgs);
             psi.WorkingDirectory = parentDir;
             try
@@ -210,17 +226,19 @@ namespace Multiverse
         }
 
         /// <summary>
-        ///   Make sure that the repository thresholds are at least as high 
+        ///   Make sure that the repository thresholds are at least as high
         ///   as the level we set here.  This does not allow us to lower the
-        ///   logging level.  That would be complex, because even in cases 
+        ///   logging level.  That would be complex, because even in cases
         ///   where we don't want heavy logging, we still want to make sure
         ///   we get our status messages.
         /// </summary>
         /// <param name="loglevel"></param>
         /// <param name="force"></param>
-        private static void SetLogLevel(string loglevel, bool force) {
+        private static void SetLogLevel(string loglevel, bool force)
+        {
             log4net.Core.Level logLevel = log4net.Core.Level.Off;
-            switch (loglevel.ToLowerInvariant()) {
+            switch (loglevel.ToLowerInvariant())
+            {
                 case "0":
                 case "debug":
                     logLevel = log4net.Core.Level.Debug;
@@ -246,7 +264,8 @@ namespace Multiverse
         }
 
         [STAThread]
-		private static void Main(string[] args) {
+        private static void Main(string[] args)
+        {
             // Changes the CurrentCulture of the current thread to the invariant
             // culture.
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
@@ -255,7 +274,8 @@ namespace Multiverse
             SetupUserFolders();
 
             List<string> extraArguments = new List<string>();
-            try {
+            try
+            {
                 bool patch = true;
 #if PERFHUD_BUILD
                 patch = false;
@@ -266,8 +286,10 @@ namespace Multiverse
                 string patchUrl = null;
                 bool force_scan = false;
                 bool exit_after_patch = false;
-                for (int i = 0; i < args.Length; ++i) {
-                    switch (args[i]) {
+                for (int i = 0; i < args.Length; ++i)
+                {
+                    switch (args[i])
+                    {
                         case "--noupdate":
                         case "--no_client_update":
                             patch = false;
@@ -324,14 +346,19 @@ namespace Multiverse
                 if (unhandledArguments)
                     log.Info("Got extra arguments; Will exit after patch if a client patch is required.");
 
-                if (patch) {
+                if (patch)
+                {
                     log.Info("Checking if restart required");
-                    try {
-                        if (Patch(updateUrl, patchUrl, extraArguments.ToArray(), force_scan, exit_after_patch)) {
+                    try
+                    {
+                        if (Patch(updateUrl, patchUrl, extraArguments.ToArray(), force_scan, exit_after_patch))
+                        {
                             log.Info("Restart required");
                             return;
                         }
-                    } catch (Exception e) {
+                    }
+                    catch (Exception e)
+                    {
                         LogUtil.ExceptionLog.ErrorFormat("Version determination failed: {0}", e);
                         throw;
                     }
@@ -340,49 +367,52 @@ namespace Multiverse
                 string errorMessage = null;
                 string errorPage = null;
 
-				// this.Hide();
-				// this.WindowState = FormWindowState.Minimized;
-				// create an instance of the client class and start it up 
-				// We use the using declaration here so that we dispose of the object
-				using (Client client = new Multiverse.Base.Client()) {
+                // this.Hide();
+                // this.WindowState = FormWindowState.Minimized;
+                // create an instance of the client class and start it up
+                // We use the using declaration here so that we dispose of the object
+                using (Client client = new Multiverse.Base.Client())
+                {
 #if PERFHUD_BUILD
                     client.standalone = true;
                     client.PatchMedia = false;
                     client.Repository = "../../../Media/";
                     // Debug.Assert(false, "Breakpoint for Debug");
 #endif
-					for (int i = 0; i < args.Length; ++i) {
-						switch (args[i]) {
-							case "--standalone":
-								client.standalone = true;
+                    for (int i = 0; i < args.Length; ++i)
+                    {
+                        switch (args[i])
+                        {
+                            case "--standalone":
+                                client.standalone = true;
                                 client.WorldId = "standalone";
-								break;
-							case "--debug":
-								client.doTraceConsole = true;
-								break;
-							case "--simple_terrain":
-								client.simpleTerrain = true;
-								break;
-							case "--config":
-								client.doDisplayConfig = true;
-								break;
-							case "--tocFile":
-								Debug.Assert(i + 1 < args.Length);
-								client.uiModules.Add(args[++i]);
-								break;
-							case "--master":
-								Debug.Assert(i + 1 < args.Length);
-								client.MasterServer = args[++i];
-								break;
-							case "--world":
+                                break;
+                            case "--debug":
+                                client.doTraceConsole = true;
+                                break;
+                            case "--simple_terrain":
+                                client.simpleTerrain = true;
+                                break;
+                            case "--config":
+                                client.doDisplayConfig = true;
+                                break;
+                            case "--tocFile":
+                                Debug.Assert(i + 1 < args.Length);
+                                client.uiModules.Add(args[++i]);
+                                break;
+                            case "--master":
+                                Debug.Assert(i + 1 < args.Length);
+                                client.MasterServer = args[++i];
+                                break;
+                            case "--world":
                             case "--world_id":
-								Debug.Assert(i + 1 < args.Length);
-								client.WorldId = args[++i];
-								break;
-							case "--character":
-								Debug.Assert(i + 1 < args.Length);
-								client.CharacterId = long.Parse(args[++i]);
-								break;
+                                Debug.Assert(i + 1 < args.Length);
+                                client.WorldId = args[++i];
+                                break;
+                            case "--character":
+                                Debug.Assert(i + 1 < args.Length);
+                                client.CharacterId = long.Parse(args[++i]);
+                                break;
                             case "--login_url":
                                 Debug.Assert(i + 1 < args.Length);
                                 client.LoginUrl = args[++i];
@@ -405,34 +435,34 @@ namespace Multiverse
                                 log.Warn("--world_update_url argument will not be honored by the login patcher");
                                 client.WorldUpdateUrl = args[++i];
                                 break;
-						    case "--world_settings_file":
+                            case "--world_settings_file":
                                 Debug.Assert(i + 1 < args.Length);
-								WorldSettingsFile = args[++i];
+                                WorldSettingsFile = args[++i];
                                 break;
-							case "--logcollisions":
+                            case "--logcollisions":
                                 client.logCollisions = true;
                                 break;
-						    case "--frames_between_sleeps":
+                            case "--frames_between_sleeps":
                                 Debug.Assert(i + 1 < args.Length);
                                 client.FramesBetweenSleeps = int.Parse(args[++i]);
                                 break;
-						    case "--log_level":
+                            case "--log_level":
                                 Debug.Assert(i + 1 < args.Length);
                                 SetLogLevel(args[++i], false);
                                 break;
-						    case "--development":
+                            case "--development":
                                 client.UseRepository = true;
-								client.FramesBetweenSleeps = 2;
+                                client.FramesBetweenSleeps = 2;
                                 client.PatchMedia = false;
-								break;
-						    case "--use_default_repository":
-								client.UseRepository = true;
+                                break;
+                            case "--use_default_repository":
+                                client.UseRepository = true;
                                 client.PatchMedia = false;
-								break;
-						    case "--repository_path":
-								client.RepositoryPaths.Add(args[++i]);
+                                break;
+                            case "--repository_path":
+                                client.RepositoryPaths.Add(args[++i]);
                                 client.PatchMedia = false;
-								client.UseRepository = true;
+                                client.UseRepository = true;
                                 break;
                             case "--maxfps":
                                 client.MaxFPS = int.Parse(args[++i]);
@@ -486,7 +516,7 @@ namespace Multiverse
                                 // Handle -Dproperty=value arguments
                                 if (args[i].StartsWith("-D") && args[i].Contains("="))
                                 {
-                                    char[] delims = {'='};
+                                    char[] delims = { '=' };
                                     string[] tmp = args[i].Substring(2).Split(delims, 2);
                                     client.SetParameter(tmp[0], tmp[1]);
                                 }
@@ -494,15 +524,18 @@ namespace Multiverse
                                 {
                                     Console.WriteLine("Invalid argument " + args[i]);
                                 }
-								break;
-						}
-					}
+                                break;
+                        }
+                    }
                     client.GameWorld = new Multiverse.Base.MarsWorld(client);
 
                     client.SourceConfig(Path.Combine(ConfigFolder, WorldSettingsFile));
-                    try {
+                    try
+                    {
                         client.Start();
-                    } catch (Exception ex) {
+                    }
+                    catch (Exception ex)
+                    {
                         LogUtil.ExceptionLog.ErrorFormat("Exiting client due to exception: {0}", ex);
                         errorMessage = ex.Message;
                     }
@@ -513,40 +546,47 @@ namespace Multiverse
                         errorMessage = client.ErrorMessage;
                 } // using client
                 bool errorShown = false;
-                if (errorPage != null) {
-                    string fullPath = Path.GetFullPath("../Html/" + errorPage);
-                    if (File.Exists(fullPath)) {
+                if (errorPage != null)
+                {
+                    string fullPath = Path.GetFullPath("../html/" + errorPage);
+                    if (File.Exists(fullPath))
+                    {
                         Multiverse.Base.HtmlWindow tmp = new Multiverse.Base.HtmlWindow("file://" + fullPath);
                         tmp.Text = "Multiverse Client Error";
                         tmp.ShowDialog();
                         errorShown = true;
                     }
                 }
-                if (!errorShown && errorMessage != null) {
+                if (!errorShown && errorMessage != null)
+                {
                     Dialog tmp = new Dialog();
                     tmp.TopMost = true;
                     tmp.Text = "Client Shutting Down!";
                     tmp.Message = errorMessage;
                     tmp.ShowDialog();
                 }
-			} catch (Exception ex) {
-				// call the existing global exception handler
+            }
+            catch (Exception ex)
+            {
+                // call the existing global exception handler
                 LogUtil.ExceptionLog.ErrorFormat("Exited client due to exception: {0}", ex);
                 Dialog tmp = new Dialog();
                 tmp.TopMost = true;
                 tmp.Text = "Alert";
                 tmp.Message = ex.Message;
                 tmp.ShowDialog();
-            } finally {
+            }
+            finally
+            {
                 log.Info("Cleaning up");
                 log.Info("Exiting Client");
                 LogManager.Shutdown();
                 GC.Collect();
-                // Kernel.SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1); 
-				// this.WindowState = FormWindowState.Normal;
-				// this.Show();
+                // Kernel.SetProcessWorkingSetSize(Process.GetCurrentProcess().Handle, -1, -1);
+                // this.WindowState = FormWindowState.Normal;
+                // this.Show();
                 Application.Exit();
-			}
-		}
-	}
+            }
+        }
+    }
 }

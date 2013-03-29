@@ -51,6 +51,7 @@ namespace Multiverse.Base {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HtmlWindow));
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -82,6 +83,7 @@ namespace Multiverse.Base {
             this.ClientSize = new System.Drawing.Size(641, 515);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.webBrowser1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HtmlWindow";
             this.Text = "HtmlWindow";
             this.ResumeLayout(false);

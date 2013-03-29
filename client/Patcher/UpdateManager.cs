@@ -201,5 +201,19 @@ namespace Multiverse.Patcher
             }
         }
 
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateManager));
+            this.SuspendLayout();
+            // 
+            // UpdateManager
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "UpdateManager";
+            this.ResumeLayout(false);
+
+        }
+
     }
 }

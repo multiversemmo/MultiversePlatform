@@ -398,7 +398,14 @@ namespace Axiom.SceneManagers.Multiverse
         {
             get
             {
-                return (AxisAlignedBox)waveBounds.Clone();
+                if (waveBounds != null)
+                {
+                    return (AxisAlignedBox)waveBounds.Clone();
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
 

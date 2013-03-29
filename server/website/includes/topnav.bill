@@ -1,0 +1,100 @@
+<% 
+// TOP NAVIGATION CODE
+// This code is used to determine which navigation element to show
+// If the parameters (cid or scid) are blank, then it will show nothing in that position
+// 
+
+// This is a cache buster
+response.setHeader("Cache-Control","no-cache");
+response.setHeader("Pragma","no-cache");
+%>
+
+<% 
+// Check to see if parameters exist
+String tcid = request.getParameter("cid");
+if (tcid == null) {
+  tcid = "0";
+} 
+%>
+<!-- BEGIN MENU -->
+<ul id="nav">
+  <li style="width:72px"><a href="/index.html">Home</a>
+  </li>
+
+<li style="width:1px">
+<img src="/images/navigation/home_divider.gif" alt="" width="1" height="17" border="0">
+</li>
+
+  <li style="width:108px">
+  <a href="/consumer/download.jsp?cid=1&scid=0"<% if (Integer.parseInt(tcid) == 1){ %> style="color:#FFFFFF" <% } %>>Download</a>
+    <ul>
+      <li style="width:160px"><a href="/consumer/gettingstarted.jsp?cid=1&scid=0">Get Started!</a></li>
+      <li style="width:160px"><a href="/consumer/registration.jsp?cid=1&scid=1">User Registration</a></li>
+      <li style="width:160px"><a href="/consumer/faq.jsp?cid=1&scid=2">Multiverse FAQ</a></li>
+    </ul>
+  </li>
+  
+
+<li style="width:1px"><img src="/images/navigation/home_divider.gif" alt="" width="1" height="17" border="0"></li>
+
+  <li style="width:108px"><a href="/games/demo.jsp?cid=2&scid=0"<% if (Integer.parseInt(tcid) == 2){ %> style="color:#FFFFFF" <% } %>>Worlds</a>
+    <ul>
+      <li style="width:160px"><a href="/games/demo.jsp?cid=2&scid=0">Multiverse Places</a></li>
+      <li style="width:160px"><a href="/games/built.jsp?cid=2&scid=1">Upcoming Worlds</a></li>
+      <li style="width:160px"><a href="/games/gallery.jsp?cid=2&scid=2">Image Gallery</a></li>      
+    </ul>
+  </li>
+ 
+<li style="width:1px"><img src="/images/navigation/home_divider.gif" alt="" width="1" height="17" border="0"></li>
+
+  <li style="width:108px"><a href="/platform/index.jsp?cid=3&scid=0"<% if (Integer.parseInt(tcid) == 3){ %> style="color:#FFFFFF" <% } %>>Solutions</a>
+    <ul>
+      <li style="width:160px"><a href="/platform/index.jsp?cid=3&scid=0">Solutions Overview</a></li>
+      <li style="width:160px"><a href="/platform/technology.jsp?cid=3&scid=1">Technology Platform</a></li>
+      <li style="width:160px"><a href="/platform/game.jsp?cid=3&scid=2">Developer Marketplace</a></li>
+      <li style="width:160px"><a href="/platform/network.jsp?cid=3&scid=3">Multiverse Network</a></li>
+        <li style="width:160px"><a href="/platform/onlinegaming.jsp?cid=3&scid=4">Online Gaming</a></li>
+        <li style="width:160px"><a href="/platform/media.jsp?cid=3&scid=5">Media and Branding</a></li>
+        <li style="width:160px"><a href="/platform/enterprise.jsp?cid=3&scid=6">Enterprise</a></li>
+        <li style="width:160px"><a href="/platform/govt.jsp?cid=3&scid=7">Government and Military</a></li>
+        <li style="width:160px"><a href="/platform/educational.jsp?cid=3&scid=8">Educational</a></li>
+    </ul>
+  </li>
+  
+<li style="width:1px"><img src="/images/navigation/home_divider.gif" alt="" width="1" height="17" border="0"></li>
+  
+  <li style="width:114px"><a href="/developer/index.jsp?cid=4&scid=0"<% if (Integer.parseInt(tcid) == 4){ %> style="color:#FFFFFF" <% } %>>Developers</a>  
+    <ul>
+      <li style="width:160px"><a href="/developer/index.jsp?cid=4&scid=0">Developer Overview</a></li>
+      <li style="width:160px"><a href="/developer/developeradd.jsp?cid=4&scid=1">Registration</a></li>
+      <li style="width:160px"><a href="/developer/developeredit.jsp?cid=4&scid=10">Developer Account</a></li>
+      <li style="width:160px"><a href="/developer/downloads.jsp?cid=4&scid=2">Downloads</a></li>
+      <li style="width:160px"><a href="/licensing/licensing-faq.jsp?cid=4&scid=3">Licensing Overview</a></li>
+      <li style="width:160px"><a href="/developer/worldmanager.jsp?cid=4&scid=6">Register Your World</a></li>      
+      <li style="width:160px"><a href="/developer/faq.jsp?cid=4&scid=4">FAQ</a></li>
+      <li style="width:160px"><a href="/developer/devprogram.jsp?cid=4&scid=9">Promotions Program</a></li>  
+      <li style="width:160px"><a href="/developer/premium.jsp?cid=4&scid=5">Premium Support</a></li>                
+      <li style="width:160px"><a href="http://update.multiverse.net/forum/index.php?c=1&theme=multiverse">Forums</a></li>
+      <li style="width:160px"><a target="wiki" href="http://update.multiverse.net/wiki/index.php/Multiverse_Developer_Wiki">Documentation</a></li>
+      <li style="width:160px"><a href="/developer/newsletter.jsp?cid=4&scid=7">Newsletter</a></li>
+    </ul>
+  </li>
+
+<li style="width:1px"><img src="/images/navigation/home_divider.gif" alt="" width="1" height="17" border="0"></li>
+
+  <li style="width:175px"><a href="/about/index.jsp?cid=5&scid=0"<% if (Integer.parseInt(tcid) == 5){ %> style="color:#FFFFFF" <% } %>>About Multiverse</a>
+    <ul>
+      <li style="width:160px"><a href="/about/index.jsp?cid=5&scid=0">Multiverse Overview</a></li>
+      <li style="width:160px"><a href="/about/news.jsp?cid=5&scid=1">News</a></li>
+      <li style="width:160px"><a href="/about/pressreleases.jsp?cid=5&scid=2">Press Releases</a></li>      
+      <li style="width:160px"><a href="/about/mgmt.jsp?cid=5&scid=3">Management</a></li>
+      <li style="width:160px"><a href="/about/board.jsp?cid=5&scid=4">Advisory Board</a></li>
+      <li style="width:160px"><a href="/about/partners.jsp?cid=5&scid=5">Partners</a></li>      
+      <li style="width:160px"><a href="/about/events.jsp?cid=5&scid=6">Events</a></li>	  
+      <li style="width:160px"><a href="/about/jobs.jsp?cid=5&scid=7">Jobs</a></li>
+      <li style="width:160px"><a href="/about/investors.jsp?cid=5&scid=8">Investors</a></li>
+      <li style="width:160px"><a href="/about/contact.jsp?cid=5&scid=9">Contact Us</a></li>
+    </ul>
+  </li>    
+</ul>
+<!-- END MENU -->

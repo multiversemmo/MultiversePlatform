@@ -180,6 +180,7 @@ namespace Multiverse.Tools.WorldEditor
             this.mainSplitContainer = new System.Windows.Forms.SplitContainer();
             this.designateRepositoryDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.designateAssetRepository = new System.Windows.Forms.ToolStripButton();
+            this.btnDebugWorld = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.propertyTabControl.SuspendLayout();
@@ -227,14 +228,14 @@ namespace Multiverse.Tools.WorldEditor
             this.recentFilesToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             this.fileToolStripMenuItem.DropDownOpening += new System.EventHandler(this.fileToolStripMenuItem_DropDownOpening);
             // 
             // newWorldToolStripMenuItem
             // 
             this.newWorldToolStripMenuItem.Name = "newWorldToolStripMenuItem";
-            this.newWorldToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.newWorldToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.newWorldToolStripMenuItem.Text = "&New World";
             this.newWorldToolStripMenuItem.ToolTipText = "Clear the current world and create a new world";
             this.newWorldToolStripMenuItem.Click += new System.EventHandler(this.newWorldToolStripMenuItem_Click);
@@ -242,7 +243,7 @@ namespace Multiverse.Tools.WorldEditor
             // loadWorldToolStripMenuItem
             // 
             this.loadWorldToolStripMenuItem.Name = "loadWorldToolStripMenuItem";
-            this.loadWorldToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.loadWorldToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.loadWorldToolStripMenuItem.Text = "&Open World";
             this.loadWorldToolStripMenuItem.ToolTipText = "Select world file to open";
             this.loadWorldToolStripMenuItem.Click += new System.EventHandler(this.loadWorldToolStripMenuItem_Click);
@@ -250,7 +251,7 @@ namespace Multiverse.Tools.WorldEditor
             // openWorldRootToolStripMenuItem
             // 
             this.openWorldRootToolStripMenuItem.Name = "openWorldRootToolStripMenuItem";
-            this.openWorldRootToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.openWorldRootToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.openWorldRootToolStripMenuItem.Text = "Open World Root";
             this.openWorldRootToolStripMenuItem.Click += new System.EventHandler(this.loadWorldRootToolStripMenuItem_Click);
             // 
@@ -258,7 +259,7 @@ namespace Multiverse.Tools.WorldEditor
             // 
             this.saveWorldToolStripMenuItem.Enabled = false;
             this.saveWorldToolStripMenuItem.Name = "saveWorldToolStripMenuItem";
-            this.saveWorldToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.saveWorldToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.saveWorldToolStripMenuItem.Text = "&Save World";
             this.saveWorldToolStripMenuItem.ToolTipText = "Save the world with the current filename";
             this.saveWorldToolStripMenuItem.Click += new System.EventHandler(this.saveWorldToolStripMenuItem_Click);
@@ -267,7 +268,7 @@ namespace Multiverse.Tools.WorldEditor
             // 
             this.saveWorldAsMenuItem.Enabled = false;
             this.saveWorldAsMenuItem.Name = "saveWorldAsMenuItem";
-            this.saveWorldAsMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.saveWorldAsMenuItem.Size = new System.Drawing.Size(198, 22);
             this.saveWorldAsMenuItem.Text = "Save World As";
             this.saveWorldAsMenuItem.ToolTipText = "Save the World with a new filename";
             this.saveWorldAsMenuItem.Click += new System.EventHandler(this.saveAsWorldToolStripMenuItem_Click);
@@ -275,7 +276,7 @@ namespace Multiverse.Tools.WorldEditor
             // packageWorldAssetsMenuItem
             // 
             this.packageWorldAssetsMenuItem.Name = "packageWorldAssetsMenuItem";
-            this.packageWorldAssetsMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.packageWorldAssetsMenuItem.Size = new System.Drawing.Size(198, 22);
             this.packageWorldAssetsMenuItem.Text = "Package World Assets...";
             this.packageWorldAssetsMenuItem.Click += new System.EventHandler(this.packageWorldAssetsMenuItem_Click);
             // 
@@ -284,20 +285,20 @@ namespace Multiverse.Tools.WorldEditor
             this.recentFilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aToolStripMenuItem});
             this.recentFilesToolStripMenuItem.Name = "recentFilesToolStripMenuItem";
-            this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.recentFilesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.recentFilesToolStripMenuItem.Text = "Recent Files";
             this.recentFilesToolStripMenuItem.MouseEnter += new System.EventHandler(this.recentFilesToolStripMenuItem_MouseEnter);
             // 
             // aToolStripMenuItem
             // 
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aToolStripMenuItem.Text = "a";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -314,70 +315,70 @@ namespace Multiverse.Tools.WorldEditor
             this.preferencesToolStripMenuItem,
             this.controlMappingEditorToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "&Edit";
             this.editToolStripMenuItem.DropDownOpening += new System.EventHandler(this.editToolStripMenuItem_DropDownOpening);
             // 
             // undoToolStripMenuItem
             // 
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.undoToolStripMenuItem.Text = "&Undo";
             this.undoToolStripMenuItem.Click += new System.EventHandler(this.undoToolStripMenuItem_Click);
             // 
             // redoToolStripMenuItem
             // 
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.redoToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.redoToolStripMenuItem.Text = "&Redo";
             this.redoToolStripMenuItem.Click += new System.EventHandler(this.redoToolStripMenuItem_Click);
             // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.cutToolStripMenuItem.Text = "Cu&t";
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItemClicked_Clicked);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.copyToolStripMenuItem.Text = "&Copy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Clicked);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.pasteToolStripMenuItem.Text = "&Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Clicked);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.deleteToolStripMenuItem.Text = "&Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Clicked);
             // 
             // treeViewSearchMenuItem
             // 
             this.treeViewSearchMenuItem.Name = "treeViewSearchMenuItem";
-            this.treeViewSearchMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.treeViewSearchMenuItem.Size = new System.Drawing.Size(199, 22);
             this.treeViewSearchMenuItem.Text = "&Find in Tree View";
             this.treeViewSearchMenuItem.Click += new System.EventHandler(this.editMenuTreeViewSearchItem_clicked);
             // 
             // preferencesToolStripMenuItem
             // 
             this.preferencesToolStripMenuItem.Name = "preferencesToolStripMenuItem";
-            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.preferencesToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.preferencesToolStripMenuItem.Text = "P&references";
             this.preferencesToolStripMenuItem.Click += new System.EventHandler(this.editMenuPreferencesItem_clicked);
             // 
             // controlMappingEditorToolStripMenuItem
             // 
             this.controlMappingEditorToolStripMenuItem.Name = "controlMappingEditorToolStripMenuItem";
-            this.controlMappingEditorToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.controlMappingEditorToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.controlMappingEditorToolStripMenuItem.Text = "C&ontrol Mapping Editor";
             this.controlMappingEditorToolStripMenuItem.Click += new System.EventHandler(this.editMenuControlMappingEditorItem_clicked);
             // 
@@ -407,42 +408,42 @@ namespace Multiverse.Tools.WorldEditor
             this.setCameraNearDistanceToolStripMenuItem,
             this.setMaximumFramesPerSecondToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.viewToolStripMenuItem.Text = "&View";
             this.viewToolStripMenuItem.DropDownOpening += new System.EventHandler(this.viewToolStripMenu_DropDownOpening);
             // 
             // wireFrameToolStripMenuItem
             // 
             this.wireFrameToolStripMenuItem.Name = "wireFrameToolStripMenuItem";
-            this.wireFrameToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.wireFrameToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.wireFrameToolStripMenuItem.Text = "&Wire Frame";
             this.wireFrameToolStripMenuItem.Click += new System.EventHandler(this.wireFrameToolStripMenuItem_Click);
             // 
             // displayOceanToolStripMenuItem
             // 
             this.displayOceanToolStripMenuItem.Name = "displayOceanToolStripMenuItem";
-            this.displayOceanToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayOceanToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayOceanToolStripMenuItem.Text = "Display &Ocean";
             this.displayOceanToolStripMenuItem.Click += new System.EventHandler(this.displayOceanToolStripMenuItem_Click);
             // 
             // displayTerrainToolStripMenuItem
             // 
             this.displayTerrainToolStripMenuItem.Name = "displayTerrainToolStripMenuItem";
-            this.displayTerrainToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayTerrainToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayTerrainToolStripMenuItem.Text = "Display &Terrain";
             this.displayTerrainToolStripMenuItem.Click += new System.EventHandler(this.displayTerrainToolStripMenuItem_Click);
             // 
             // displayFogEffectsToolStripMenuItem
             // 
             this.displayFogEffectsToolStripMenuItem.Name = "displayFogEffectsToolStripMenuItem";
-            this.displayFogEffectsToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayFogEffectsToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayFogEffectsToolStripMenuItem.Text = "Display &Fog Effects";
             this.displayFogEffectsToolStripMenuItem.Click += new System.EventHandler(this.displayFogEffectsToolStripMenuItem_Click);
             // 
             // displayLightEffectsToolStripMenuItem
             // 
             this.displayLightEffectsToolStripMenuItem.Name = "displayLightEffectsToolStripMenuItem";
-            this.displayLightEffectsToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayLightEffectsToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayLightEffectsToolStripMenuItem.Text = "Display &Light Effects";
             this.displayLightEffectsToolStripMenuItem.Click += new System.EventHandler(this.displayLightEffectsToolStripMenuItem_Click);
             // 
@@ -450,7 +451,7 @@ namespace Multiverse.Tools.WorldEditor
             // 
             this.showCollisionVolToolStripMenuItem.CheckOnClick = true;
             this.showCollisionVolToolStripMenuItem.Name = "showCollisionVolToolStripMenuItem";
-            this.showCollisionVolToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.showCollisionVolToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.showCollisionVolToolStripMenuItem.Text = "Display &Collision Volumes";
             this.showCollisionVolToolStripMenuItem.Click += new System.EventHandler(this.showCollisionVolToolStripMenuItem_Click);
             // 
@@ -458,14 +459,14 @@ namespace Multiverse.Tools.WorldEditor
             // 
             this.displayShadowsMenuItem.CheckOnClick = true;
             this.displayShadowsMenuItem.Name = "displayShadowsMenuItem";
-            this.displayShadowsMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayShadowsMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayShadowsMenuItem.Text = "Display S&hadows";
             this.displayShadowsMenuItem.Click += new System.EventHandler(this.displayShadowsMenuItem_Clicked);
             // 
             // displayPathToolStripMenuItem
             // 
             this.displayPathToolStripMenuItem.Name = "displayPathToolStripMenuItem";
-            this.displayPathToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayPathToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayPathToolStripMenuItem.Text = "Display P&ath";
             this.displayPathToolStripMenuItem.Visible = false;
             this.displayPathToolStripMenuItem.Click += new System.EventHandler(this.displayPathToolStripMenuItem_Click);
@@ -473,49 +474,49 @@ namespace Multiverse.Tools.WorldEditor
             // displayParticleEffectsToolStripMenuItem
             // 
             this.displayParticleEffectsToolStripMenuItem.Name = "displayParticleEffectsToolStripMenuItem";
-            this.displayParticleEffectsToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayParticleEffectsToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayParticleEffectsToolStripMenuItem.Text = "Display &Particle Effects";
             this.displayParticleEffectsToolStripMenuItem.Click += new System.EventHandler(this.displayParticleEffectsToolStripMenuItem_Click);
             // 
             // displayBoundaryMarkersToolStripMenuItem
             // 
             this.displayBoundaryMarkersToolStripMenuItem.Name = "displayBoundaryMarkersToolStripMenuItem";
-            this.displayBoundaryMarkersToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayBoundaryMarkersToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayBoundaryMarkersToolStripMenuItem.Text = "Display &Region Markers";
             this.displayBoundaryMarkersToolStripMenuItem.Click += new System.EventHandler(this.displayBoundaryMarkersToolStripMenuItem_Click);
             // 
             // displayRoadMarkersToolStripMenuItem
             // 
             this.displayRoadMarkersToolStripMenuItem.Name = "displayRoadMarkersToolStripMenuItem";
-            this.displayRoadMarkersToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayRoadMarkersToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayRoadMarkersToolStripMenuItem.Text = "Display Roa&d Markers";
             this.displayRoadMarkersToolStripMenuItem.Click += new System.EventHandler(this.displayRoadMarkersToolStripMenuItem_Click);
             // 
             // displayMarkerPointsToolStripMenuItem
             // 
             this.displayMarkerPointsToolStripMenuItem.Name = "displayMarkerPointsToolStripMenuItem";
-            this.displayMarkerPointsToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayMarkerPointsToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayMarkerPointsToolStripMenuItem.Text = "Display &Marker Points";
             this.displayMarkerPointsToolStripMenuItem.Click += new System.EventHandler(this.displayMarkerPointsToolStripMenuItem_Click);
             // 
             // displayPointLightMarkersViewMenuItem
             // 
             this.displayPointLightMarkersViewMenuItem.Name = "displayPointLightMarkersViewMenuItem";
-            this.displayPointLightMarkersViewMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayPointLightMarkersViewMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayPointLightMarkersViewMenuItem.Text = "Display Point Light Markers";
             this.displayPointLightMarkersViewMenuItem.Click += new System.EventHandler(this.displayPointLightMarkerMenuItem_Click);
             // 
             // displayPointLightAttenuationCirclesMenuItem
             // 
             this.displayPointLightAttenuationCirclesMenuItem.Name = "displayPointLightAttenuationCirclesMenuItem";
-            this.displayPointLightAttenuationCirclesMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayPointLightAttenuationCirclesMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayPointLightAttenuationCirclesMenuItem.Text = "Display Point Light Attenuation Circles";
             this.displayPointLightAttenuationCirclesMenuItem.Click += new System.EventHandler(this.displayPointLightAttenuationCirclesMenuItem_Click);
             // 
             // disableAllMarkersToolStripMenuItem
             // 
             this.disableAllMarkersToolStripMenuItem.Name = "disableAllMarkersToolStripMenuItem";
-            this.disableAllMarkersToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.disableAllMarkersToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.disableAllMarkersToolStripMenuItem.Text = "&Disable All Markers";
             this.disableAllMarkersToolStripMenuItem.Click += new System.EventHandler(this.disableAllMarkersToolStripMenuItem_Click);
             // 
@@ -523,21 +524,21 @@ namespace Multiverse.Tools.WorldEditor
             // 
             this.displayTerrainDecalsToolStripMenuItem.CheckOnClick = true;
             this.displayTerrainDecalsToolStripMenuItem.Name = "displayTerrainDecalsToolStripMenuItem";
-            this.displayTerrainDecalsToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.displayTerrainDecalsToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.displayTerrainDecalsToolStripMenuItem.Text = "Display T&errain Decals";
             this.displayTerrainDecalsToolStripMenuItem.Click += new System.EventHandler(this.displayDisplayTerrainDecalToolStripMenuItem_Click);
             // 
             // lockCameraToSelectedObjectToolStipMenuItem
             // 
             this.lockCameraToSelectedObjectToolStipMenuItem.Name = "lockCameraToSelectedObjectToolStipMenuItem";
-            this.lockCameraToSelectedObjectToolStipMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.lockCameraToSelectedObjectToolStipMenuItem.Size = new System.Drawing.Size(277, 22);
             this.lockCameraToSelectedObjectToolStipMenuItem.Text = "Lock Camera to Selected Object";
             this.lockCameraToSelectedObjectToolStipMenuItem.Click += new System.EventHandler(this.lockCameraToSelectedObjectToolStipMenuItem_Click);
             // 
             // renderLeavesToolStripMenuItem
             // 
             this.renderLeavesToolStripMenuItem.Name = "renderLeavesToolStripMenuItem";
-            this.renderLeavesToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.renderLeavesToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.renderLeavesToolStripMenuItem.Text = "Render &Leaves";
             this.renderLeavesToolStripMenuItem.Click += new System.EventHandler(this.renderLeavesToolStripMenuItem_Click);
             // 
@@ -545,28 +546,28 @@ namespace Multiverse.Tools.WorldEditor
             // 
             this.cameraFollowsTerrainToolStripMenuItem.CheckOnClick = true;
             this.cameraFollowsTerrainToolStripMenuItem.Name = "cameraFollowsTerrainToolStripMenuItem";
-            this.cameraFollowsTerrainToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.cameraFollowsTerrainToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.cameraFollowsTerrainToolStripMenuItem.Text = "Camera Follo&ws Terrain";
             this.cameraFollowsTerrainToolStripMenuItem.Click += new System.EventHandler(this.cameraFollowsTerrainToolStripMenuItem_clicked);
             // 
             // cameraAboveTerrainToolStripMenuItem
             // 
             this.cameraAboveTerrainToolStripMenuItem.Name = "cameraAboveTerrainToolStripMenuItem";
-            this.cameraAboveTerrainToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.cameraAboveTerrainToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.cameraAboveTerrainToolStripMenuItem.Text = "Camera Stays A&bove Terrain";
             this.cameraAboveTerrainToolStripMenuItem.Click += new System.EventHandler(this.cameraAboveTerrainToolStripMenuItem_Click);
             // 
             // setCameraNearDistanceToolStripMenuItem
             // 
             this.setCameraNearDistanceToolStripMenuItem.Name = "setCameraNearDistanceToolStripMenuItem";
-            this.setCameraNearDistanceToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.setCameraNearDistanceToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.setCameraNearDistanceToolStripMenuItem.Text = "Set Camera &Near Distance";
             this.setCameraNearDistanceToolStripMenuItem.Click += new System.EventHandler(this.setCameraNearDistanceToolStripMenuItem_Click);
             // 
             // setMaximumFramesPerSecondToolStripMenuItem
             // 
             this.setMaximumFramesPerSecondToolStripMenuItem.Name = "setMaximumFramesPerSecondToolStripMenuItem";
-            this.setMaximumFramesPerSecondToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.setMaximumFramesPerSecondToolStripMenuItem.Size = new System.Drawing.Size(277, 22);
             this.setMaximumFramesPerSecondToolStripMenuItem.Text = "Set Ma&ximum Frames Per Second";
             this.setMaximumFramesPerSecondToolStripMenuItem.Click += new System.EventHandler(this.setMaximumFramesPerSecondToolStripMenuItem_Click);
             // 
@@ -578,34 +579,34 @@ namespace Multiverse.Tools.WorldEditor
             this.aboutWorldEditorToolStripMenuItem,
             this.aboutWorldEditorToolStripMenuItem1});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(209, 22);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(212, 22);
             this.helpToolStripMenuItem1.Text = "&Launch Online Help";
             this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem_clicked);
             // 
             // releaseNotesToolStripMenuItem
             // 
             this.releaseNotesToolStripMenuItem.Name = "releaseNotesToolStripMenuItem";
-            this.releaseNotesToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.releaseNotesToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.releaseNotesToolStripMenuItem.Text = "&Release Notes";
             this.releaseNotesToolStripMenuItem.Click += new System.EventHandler(this.releaseNotesToolStripMenuItem_click);
             // 
             // aboutWorldEditorToolStripMenuItem
             // 
             this.aboutWorldEditorToolStripMenuItem.Name = "aboutWorldEditorToolStripMenuItem";
-            this.aboutWorldEditorToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.aboutWorldEditorToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.aboutWorldEditorToolStripMenuItem.Text = "&Submit Feedback or a Bug";
             this.aboutWorldEditorToolStripMenuItem.Click += new System.EventHandler(this.feedbackMenuItem_clicked);
             // 
             // aboutWorldEditorToolStripMenuItem1
             // 
             this.aboutWorldEditorToolStripMenuItem1.Name = "aboutWorldEditorToolStripMenuItem1";
-            this.aboutWorldEditorToolStripMenuItem1.Size = new System.Drawing.Size(209, 22);
+            this.aboutWorldEditorToolStripMenuItem1.Size = new System.Drawing.Size(212, 22);
             this.aboutWorldEditorToolStripMenuItem1.Text = "&About World Editor";
             this.aboutWorldEditorToolStripMenuItem1.Click += new System.EventHandler(this.AboutMenuItem_clicked);
             // 
@@ -628,7 +629,8 @@ namespace Multiverse.Tools.WorldEditor
             this.undoButton,
             this.redoButton,
             this.cameraSpeedAccelDropDownButton,
-            this.mouseWheelMultiplierDropDownButton});
+            this.mouseWheelMultiplierDropDownButton,
+            this.btnDebugWorld});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1016, 39);
@@ -1047,8 +1049,8 @@ namespace Multiverse.Tools.WorldEditor
             this.positionXTextBox.Name = "positionXTextBox";
             this.positionXTextBox.Size = new System.Drawing.Size(58, 20);
             this.positionXTextBox.TabIndex = 3;
-            this.positionXTextBox.Leave += new System.EventHandler(this.positionXTextBox_Leave);
             this.positionXTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.positionXTextBox_KeyPress);
+            this.positionXTextBox.Leave += new System.EventHandler(this.positionXTextBox_Leave);
             // 
             // positionZTextBox
             // 
@@ -1056,8 +1058,8 @@ namespace Multiverse.Tools.WorldEditor
             this.positionZTextBox.Name = "positionZTextBox";
             this.positionZTextBox.Size = new System.Drawing.Size(58, 20);
             this.positionZTextBox.TabIndex = 5;
-            this.positionZTextBox.Leave += new System.EventHandler(this.positionZTextBox_Leave);
             this.positionZTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.positionZTextBox_KeyPress);
+            this.positionZTextBox.Leave += new System.EventHandler(this.positionZTextBox_Leave);
             // 
             // PositionXLabel
             // 
@@ -1074,8 +1076,8 @@ namespace Multiverse.Tools.WorldEditor
             this.positionYTextBox.Name = "positionYTextBox";
             this.positionYTextBox.Size = new System.Drawing.Size(58, 20);
             this.positionYTextBox.TabIndex = 4;
-            this.positionYTextBox.Leave += new System.EventHandler(this.positionYTextBox_Leave);
             this.positionYTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.positionYTextBox_KeyPress);
+            this.positionYTextBox.Leave += new System.EventHandler(this.positionYTextBox_Leave);
             // 
             // positionYLabel
             // 
@@ -1194,8 +1196,8 @@ namespace Multiverse.Tools.WorldEditor
             this.scaleTextBox.Name = "scaleTextBox";
             this.scaleTextBox.Size = new System.Drawing.Size(84, 20);
             this.scaleTextBox.TabIndex = 1;
-            this.scaleTextBox.Leave += new System.EventHandler(this.scaleTextBox_Leave);
             this.scaleTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.scaleTextBox_KeyPress);
+            this.scaleTextBox.Leave += new System.EventHandler(this.scaleTextBox_Leave);
             // 
             // scaleLabel
             // 
@@ -1234,7 +1236,7 @@ namespace Multiverse.Tools.WorldEditor
             this.rotationTrackBar.Maximum = 180;
             this.rotationTrackBar.Minimum = -180;
             this.rotationTrackBar.Name = "rotationTrackBar";
-            this.rotationTrackBar.Size = new System.Drawing.Size(197, 42);
+            this.rotationTrackBar.Size = new System.Drawing.Size(197, 45);
             this.rotationTrackBar.TabIndex = 2;
             this.rotationTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.rotationTrackBar.Scroll += new System.EventHandler(this.rotationTrackBar_Scroll);
@@ -1247,8 +1249,8 @@ namespace Multiverse.Tools.WorldEditor
             this.rotationTextBox.Size = new System.Drawing.Size(83, 20);
             this.rotationTextBox.TabIndex = 1;
             this.rotationTextBox.Text = "0";
-            this.rotationTextBox.Leave += new System.EventHandler(this.rotationTextBox_Leave);
             this.rotationTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rotationTextBox_KeyPress);
+            this.rotationTextBox.Leave += new System.EventHandler(this.rotationTextBox_Leave);
             // 
             // rotationLabel
             // 
@@ -1290,7 +1292,7 @@ namespace Multiverse.Tools.WorldEditor
             this.orientationRotationTrackBar.Maximum = 180;
             this.orientationRotationTrackBar.Minimum = -180;
             this.orientationRotationTrackBar.Name = "orientationRotationTrackBar";
-            this.orientationRotationTrackBar.Size = new System.Drawing.Size(197, 42);
+            this.orientationRotationTrackBar.Size = new System.Drawing.Size(197, 45);
             this.orientationRotationTrackBar.TabIndex = 14;
             this.orientationRotationTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.orientationRotationTrackBar.Scroll += new System.EventHandler(this.orientationRotationTrackBar_Scroll);
@@ -1320,7 +1322,7 @@ namespace Multiverse.Tools.WorldEditor
             this.inclinationTrackbar.Maximum = 90;
             this.inclinationTrackbar.Minimum = -90;
             this.inclinationTrackbar.Name = "inclinationTrackbar";
-            this.inclinationTrackbar.Size = new System.Drawing.Size(197, 42);
+            this.inclinationTrackbar.Size = new System.Drawing.Size(197, 45);
             this.inclinationTrackbar.TabIndex = 15;
             this.inclinationTrackbar.TickStyle = System.Windows.Forms.TickStyle.None;
             this.inclinationTrackbar.Scroll += new System.EventHandler(this.inclincationTrackbar_Scroll);
@@ -1372,8 +1374,8 @@ namespace Multiverse.Tools.WorldEditor
             this.worldTreeView.SelectedNodes = ((System.Collections.Generic.List<Multiverse.ToolBox.MultiSelectTreeNode>)(resources.GetObject("worldTreeView.SelectedNodes")));
             this.worldTreeView.Size = new System.Drawing.Size(278, 350);
             this.worldTreeView.TabIndex = 4;
-            this.worldTreeView.DoubleClick += new System.EventHandler(this.worldTreeView_DoubleClick);
             this.worldTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.worldTreeView_AfterSelect);
+            this.worldTreeView.DoubleClick += new System.EventHandler(this.worldTreeView_DoubleClick);
             this.worldTreeView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.treeView_KeyDown);
             // 
             // mainSplitContainer
@@ -1407,6 +1409,16 @@ namespace Multiverse.Tools.WorldEditor
             this.designateAssetRepository.Size = new System.Drawing.Size(36, 36);
             this.designateAssetRepository.Text = "Designate Asset Repository";
             // 
+            // btnDebugWorld
+            // 
+            this.btnDebugWorld.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnDebugWorld.Image = ((System.Drawing.Image)(resources.GetObject("btnDebugWorld.Image")));
+            this.btnDebugWorld.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDebugWorld.Name = "btnDebugWorld";
+            this.btnDebugWorld.Size = new System.Drawing.Size(36, 36);
+            this.btnDebugWorld.Text = "Debug World";
+            this.btnDebugWorld.Click += new System.EventHandler(this.btnDebugWorld_Click);
+            // 
             // WorldEditor
             // 
             this.AllowDrop = true;
@@ -1421,14 +1433,14 @@ namespace Multiverse.Tools.WorldEditor
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "WorldEditor";
-            this.Deactivate += new System.EventHandler(this.worldEditor_deactivated);
             this.Activated += new System.EventHandler(this.worldEditor_activated);
+            this.Deactivate += new System.EventHandler(this.worldEditor_deactivated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WorldEditor_FormClosing);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.worldEditor_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.worldEditor_DragEnter);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.WorldEditor_KeyUp);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.WorldEditor_FormClosing);
-            this.Resize += new System.EventHandler(this.WorldEditor_Resize);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.WorldEditor_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.WorldEditor_KeyUp);
+            this.Resize += new System.EventHandler(this.WorldEditor_Resize);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -1585,6 +1597,7 @@ namespace Multiverse.Tools.WorldEditor
         private System.Windows.Forms.ToolStripMenuItem mWMMenuItemPreset3;
         private System.Windows.Forms.ToolStripMenuItem mWMMenuItemPreset4;
         private System.Windows.Forms.ToolStripMenuItem displayPointLightAttenuationCirclesMenuItem;
+        private System.Windows.Forms.ToolStripButton btnDebugWorld;
     }
 }
 

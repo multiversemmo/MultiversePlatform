@@ -1,0 +1,76 @@
+<html>
+<head>
+
+<title>Multiverse | User Registration</title>
+
+<%@ include file="/includes/meta.jsp" %>
+
+<link rel="stylesheet" href="/styles/common.css">
+<script language="JavaScript" src="/jscripts/common.js"></script>
+</head>
+<body bgcolor="#000000" marginheight="0" marginwidth="0" bottommargin="0" topmargin="0">
+
+<div align="center">
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+<td><a href="/index.html"><img src="../images/logo.gif" alt="Multiverse - changing the < virtual > world" width="222" height="82" border="0"></a></td>
+</tr>
+<tr>
+<td bgcolor="#7FC738">
+
+<%@ include file="/includes/topnav.jsp" %>
+
+</td>
+</tr>
+<tr>
+<td bgcolor="#FFFFFF" width="100%" valign="top">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr>
+
+<%@ include file="/includes/sidenav.jsp" %>
+
+<td width="26"><img src="../images/spacer.gif" width="26" height="1" border="0"></td>
+
+<!-- START Copy Area -->
+<td class="text">
+<img src="../images/spacer.gif" width="564" height="34" border="0"><br>
+
+<table border="0" cellpadding="0" cellspacing="0" width="95%">
+<tr>
+<td class="text">
+
+<!-- TITLE STARTS HERE -->
+<font class="title">USER REGISTRATION</font><br>
+<br>
+<!-- TITLE ENDS HERE -->
+
+<!-- BODY TEXT STARTS HERE -->
+
+<%@ include file="regform.jsp" %>
+
+<!-- BODY TEXT ENDS HERE -->
+
+<br>
+<br>
+<br>
+<br>
+</td></tr>
+</table>
+
+</td>
+<!-- END Copy Area -->
+
+</tr>
+</table>
+
+</td>
+</tr>
+
+<%@ include file="/includes/footer.jsp" %>
+
+</table>
+</div>
+
+</body>
+</html>

@@ -10,7 +10,7 @@ namespace Multiverse.ToolBox
 {
 	public partial class NameValueDialog : Form
 	{
-        protected static string helpURL = "http://update.multiverse.net/wiki/index.php/Using_World_Editor_Version_1.0";
+        protected static string helpURL = "http://www.multiversemmo.com/wiki/Using_World_Editor";
 		NameValueObject nameValueCollection = new NameValueObject();
 		NameValueTemplateCollection temColl;
         string[] validAddTypes = { "String", "Int", "Uint", "Float", "Boolean" };

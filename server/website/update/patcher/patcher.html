@@ -1,0 +1,265 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  <head>
+    <title>Updating Multiverse World Browser</title>
+<style type="text/css" MEDIA="screen, projection">
+<!--
+body,td,div,p,a,font,span {font-family: arial,sans-serif; color: white }
+
+body { background-color: black }
+
+.tl {padding: 0; width: 4; text-align: left; vertical-align: top }
+.tr {padding: 0; width: 4; text-align: right; vertical-align: top }
+.bl {padding: 0; width: 4; text-align: left; vertical-align: bottom }
+.br {padding: 0; width: 4; text-align: right; vertical-align: bottom }
+
+.caption {color:#000000; white-space:nowrap; background:#E8EEFA; text-align:center }
+
+.form-noindent {background-color: #ffffff; border: #C3D9FF 1px solid }
+
+.mv.label { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.mv.value { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.mv.button { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.mv.remember { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+
+.errormsg { color: red; font-size: smaller; font-family:arial,sans-serif; }
+.statusmsg { color: white; font-size: smaller; font-family:arial,sans-serif; }
+.logmsg { color: white; font-size: 9px; font-family:arial,sans-serif;overflow:auto;width:300px;height:65px; }
+// -->
+</style>
+
+<script>
+var bytes_fetched = 0;
+var bytes_needed = 1;
+var files_fetched = 0;
+var files_needed = 1;
+var log_visible = false;
+
+function SetStatus(portion) {
+  var bar_elem = document.getElementById('progress_foreground');
+  var pix_width = 398 * portion;
+  bar_elem.style.width = pix_width + 'px';
+}
+
+function SetStatusMessage(msg) {
+  var status_elem = document.getElementById("status");
+  if (status_elem) {
+    while (status_elem.childNodes.length > 0) {
+      status_elem.removeChild(status_elem.childNodes[0]);
+    }
+    status_elem.appendChild(document.createTextNode(msg));
+  }
+}
+
+function UpdateProgress() {
+  var elem;
+  elem = document.getElementById('bytes_fetched')
+  if (elem) {
+    elem.value = bytes_fetched;
+  }
+  elem = document.getElementById('bytes_needed')
+  if (elem) {
+    elem.value = bytes_needed;
+  }
+  elem = document.getElementById('files_fetched')
+  if (elem) {
+    elem.value = files_fetched;
+  }
+  elem = document.getElementById('files_needed')
+  if (elem) {
+    elem.value = files_needed;
+  }
+
+  var portion = 0.0;
+  portion += bytes_fetched;
+  portion /= bytes_needed;
+  SetStatus(portion);
+}
+
+function HandleLoad() {
+  var elem = document.getElementById('ok_button');
+  //alert('in here' + elem);
+  //elem.style.enabled = false;
+  bytes_fetched = 0;
+  bytes_needed = 0;
+  files_fetched = 0;
+  files_needed = 0;
+  log_visible = false;
+
+  //var button_elem = document.getElementById('log_button');
+  var log_elem = document.getElementById('log');
+  //button_elem.value = 'Show Log';
+  log_elem.style.display = 'none';
+
+  SetStatusMessage('Preparing to update');
+  if (window.external) {
+    window.external.OnLoaded();
+  }
+}
+
+function HandleUpdateStarted(bytes, files) {
+  bytes_needed = bytes;
+  files_needed = files;
+}
+
+function HandleUpdateCompleted(bytes, files) {
+  // Set the progress bar to the end
+  SetStatus(1);
+  // Enable the OK button
+  var ok_elem = document.getElementById('ok_button');
+  if (ok_elem) {
+    ok_elem.disabled = false;
+    ok_elem.focus();
+  }
+}
+function HandleFileFetchStarted(file, len) {
+  // alert('in handle file fetch started');
+  SetStatusMessage('Downloading file: ' + file);
+}
+function HandleFileFetchEnded(file, len) {
+  // alert('fetched: ' + file + ' with length type ' + typeof len);
+  bytes_fetched += len;
+  files_fetched += 1;
+  SetStatusMessage('Downloaded file: ' + file);
+  UpdateProgress();
+}
+function HandleFileAdded(file, len) {
+  SetStatusMessage('Downloaded file: ' + file);
+  AddLogEntry('Added file: ' + file);
+}
+function HandleFileModified(file, len) {
+  SetStatusMessage('Downloaded file: ' + file);
+  AddLogEntry('Modified file: ' + file);
+}
+function HandleFileIgnored(file, len) {
+  AddLogEntry('Ignored file: ' + file);
+}
+function HandleFileRemoved(file, len) {
+  SetStatusMessage('Removed file: ' + file);
+  AddLogEntry('Removed file: ' + file);
+}
+function HandleStateChanged(state) {
+  // alert('in handle state changed' + state);
+
+  switch (state) {
+    case 1: // UpdateStarted
+      SetStatusMessage('Updating Client ...');
+      break;
+    case 2: // UpdateEnded
+      SetStatusMessage('Update Completed');
+      break;
+    case 3: // FetchingManifest
+      SetStatusMessage('Retrieving Manifest');
+      break;
+    case 4: // ScanningFiles
+      SetStatusMessage('Scanning Local Files ...');
+      break;
+    case 5: // UpdatingFiles
+      SetStatusMessage('Updating Files ...');
+      break;
+    default:
+      SetStatusMessage('Invalid State: ' + state);
+      alert('Invalid State: ' + state)
+      break;
+  }
+}
+
+function AddLogEntry(log_msg) {
+  var log_elem = document.getElementById("log");
+  if (log_elem) {
+    if (log_elem.childNodes.length > 0) {
+      log_elem.appendChild(document.createElement('br'));
+    }
+    log_elem.appendChild(document.createTextNode(log_msg));
+  }
+}
+
+/*
+function ToggleLog() {
+  var button_elem = document.getElementById('log_button');
+  var log_elem = document.getElementById('log');
+  if (log_visible) {
+    button_elem.value = 'Show Log';
+    log_elem.style.display = 'none';
+    log_visible = false;
+  } else {
+    button_elem.value = 'Hide Log';
+    log_elem.style.display = 'block';
+    log_visible = true;
+  }
+}
+*/
+</script>
+
+  </head>
+
+<body onload="HandleLoad()">
+
+<div align="center">
+<br>
+<br>
+
+<h3>Please wait while the Multiverse World Browser <br>updates itself.</h3>
+<br>
+<table width="400" cellpadding=4 border=0>
+ <!-- <tr>
+  <td colspan="3" align="center"><h3>Please wait while the Multiverse World Browser updates itself.</h3></td>
+ </tr>
+ -->
+ <tr>
+  <td colspan="3"> <div id="status" class="statusmsg">Initial status</div> </td>
+
+ </tr>
+
+ <tr>
+  <td colspan="3">
+   <div id="progress_bar" style="position:relative; background-color:navy; width:400px; height:15px; font-size:1px;">
+     <div id="progress_background" style="position:absolute; top:1px; left:1px; width:398px; height:13px; background-color:lightgrey; font-size:1px;"></div>
+      <div id="progress_foreground" style="position:absolute; top:1px; left:1px; width:0px; height:13px; background-color:darkgreen; font-size:1px;"></div>
+    </div>
+  </td>
+ </tr>
+
+
+<!--
+  <tr>
+    <td>
+<form>
+<input type="button" id="log_button" value="Show Log" class="mv button" onclick="ToggleLog()">
+</td>
+    <td align="center">
+     <input type="button" id="cancel_button" value="Cancel" class="mv button" onclick="window.external.Abort()">
+&nbsp;&nbsp;
+     <input type="button" id="ok_button" value="OK" class="mv button" disabled="true" onclick="window.external.OK()">
+</form>
+     </td>
+    <td></td>
+
+  </tr>
+-->
+</table>
+<br>
+
+<form>
+<!--
+  <input type="button" id="cancel_button" value="Cancel" class="mv button" onclick="window.external.Abort()">
+&nbsp;&nbsp;
+-->
+  <input type="button" id="ok_button" value="   OK   " class="mv button" disabled="true" onclick="window.external.OK()">
+</form>
+
+</div>
+
+<div id="log" class="logmsg">
+</div>
+<br>
+
+<div style="display: none">
+<br>
+Bytes: <input type="text" id="bytes_fetched">/<input type="text" id="bytes_needed">
+<br>
+Files: <input type="text" id="files_fetched">/<input type="text" id="files_needed">
+</div>
+  </body>
+</html>

@@ -1463,12 +1463,12 @@ public class MarshallingRuntime {
         java.text.DateFormat dateFormat = new java.text.SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         java.util.Date date = new java.util.Date();
         String dateString = dateFormat.format(date);
-        try {
+        //try {
         	//out.write("# This is a generated file - - do not edit!  Written at " + dateString + "\n");
-        }
-        catch (IOException e) {
-        	Log.exception("MarshallingRuntime.injectAllClasses: Exception writing typenum file", e);
-        }
+        //}
+        //catch (IOException e) {
+        //	Log.exception("MarshallingRuntime.injectAllClasses: Exception writing typenum file", e);
+        //}
         for (Map.Entry<String, ClassProperties> entry : classToClassProperties.entrySet()) {
             String className = entry.getKey();
             ClassProperties props = entry.getValue();

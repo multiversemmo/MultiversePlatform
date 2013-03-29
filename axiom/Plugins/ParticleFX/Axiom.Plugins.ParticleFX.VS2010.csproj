@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E763AAC7-530A-48CF-A846-5423A83FA669}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Axiom.Plugins.ParticleFX</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Axiom.Plugins.ParticleFX</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <RemoveIntegerChecks>
+    </RemoveIntegerChecks>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.Xml</Name>
+      <Private>True</Private>
+    </Reference>
+    <ProjectReference Include="..\..\Engine\Axiom.Engine.csproj">
+      <Project>{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.Engine</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MathLib\Axiom.MathLib.csproj">
+      <Project>{48EAC066-47F2-44A5-9454-DFA718DCB55E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+      <Name>Axiom.MathLib</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AreaEmitter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BoxEmitter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorFaderAffector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorFaderAffector2.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorImageAffector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ColorInterpolatorAffector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CylinderEmitter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EllipsoidEmitter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HollowEllipsoidEmitter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LinearForceAffector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParticleFX.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PointEmitter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RingEmitter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RotationAffector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ScaleAffector.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\BoxEmitterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\ColorFaderAffector2Factory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\ColorFaderAffectorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\ColorImageAffectorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\ColorInterpolatorAffectorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\CylinderEmitterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\EllipsoidEmitterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\HollowEllipsoidEmitterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\LinearForceAffectorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\PointEmitterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\RingEmitterFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\RotationAffectorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Factories\ScaleAffectorFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSHARP.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

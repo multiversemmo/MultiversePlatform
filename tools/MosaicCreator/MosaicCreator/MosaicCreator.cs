@@ -164,13 +164,13 @@ namespace Multiverse.Tools.MosaicCreator
 
         private void launchOnlineHelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string target = "http://update.multiverse.net/wiki/index.php/Using_Mosaic_Creator_Version_1.0";
+            string target = "http://www.multiversemmo.com/wiki/Using_Mosaic_Creator";
             System.Diagnostics.Process.Start(target);
         }
 
         private void launchReleaseNotesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string releaseNotesURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.0_Release_Notes";
+            string releaseNotesURL = "http://www.multiversemmo.com/wiki/Tools_Version_1.5_Release_Notes";
             System.Diagnostics.Process.Start(releaseNotesURL); 
         }
 
@@ -183,7 +183,7 @@ namespace Multiverse.Tools.MosaicCreator
         private void aboutMosaicCreatorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            string msg = string.Format("Multiverse Mosaic Creator\n\nVersion: {0}\n\nCopyright 2006-2007 The Multiverse Network, Inc.\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
+            string msg = string.Format("Multiverse Mosaic Creator\n\nVersion: {0}\n\nCopyright 2012 The Multiverse Software Foundation\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
             DialogResult result = MessageBox.Show(this, msg, "About Multiverse Mosaic Creator", MessageBoxButtons.OK, MessageBoxIcon.Information); 
         }
 

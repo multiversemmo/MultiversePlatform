@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{634DC086-4A1E-41FB-8E8C-BBBD8EA86537}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Multiverse.Tools.WorldEditor</RootNamespace>
+    <AssemblyName>WorldEditor</AssemblyName>
+    <ApplicationIcon>WorldEditor.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Axiom\Dependencies\Managed\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddAmbientLightCommand.cs" />
+    <Compile Include="AddAmbientLightCommandFactory.cs" />
+    <Compile Include="AddAmbientLightDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAmbientLightDialog.Designer.cs">
+      <DependentUpon>AddAmbientLightDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddDirectionalLightCommand.cs" />
+    <Compile Include="AddDirectionalLightCommandFactory.cs" />
+    <Compile Include="AddDirectionalLightDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDirectionalLightDialog.Designer.cs">
+      <DependentUpon>AddDirectionalLightDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMarkerAtCameraCommand.cs" />
+    <Compile Include="AddRegionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRegionDialog.Designer.cs">
+      <DependentUpon>AddRegionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddFogCommand.cs" />
+    <Compile Include="AddFogCommandFactory.cs" />
+    <Compile Include="AddFogDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFogDialog.Designer.cs">
+      <DependentUpon>AddFogDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForestCommand.cs" />
+    <Compile Include="AddForestCommandFactory.cs" />
+    <Compile Include="AddForestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForestDialog.designer.cs">
+      <DependentUpon>AddForestDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGrassCommand.cs" />
+    <Compile Include="AddGrassCommandFactory.cs" />
+    <Compile Include="AddMarkerCommand.cs" />
+    <Compile Include="AddMobDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMobDialog.Designer.cs">
+      <DependentUpon>AddMobDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMobToMarkerCommand.cs" />
+    <Compile Include="AddMobToRegionCommand.cs" />
+    <Compile Include="AddMobToRegionCommandFactory.cs" />
+    <Compile Include="AddMobToMarkerCommandFactory.cs" />
+    <Compile Include="AddObjectCommand.cs" />
+    <Compile Include="AddObjectCommandFactory.cs" />
+    <Compile Include="AddObjectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddObjectDialog.Designer.cs">
+      <DependentUpon>AddObjectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddObjectParticleEffectCommand.cs" />
+    <Compile Include="AddObjectParticleEffectCommandFactory.cs" />
+    <Compile Include="AddParticleFXDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddParticleFXDialog.Designer.cs">
+      <DependentUpon>AddParticleFXDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPlantTypeCommand.cs" />
+    <Compile Include="AddPlantTypeCommandFactory.cs" />
+    <Compile Include="AddPlantTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPlantTypeDialog.Designer.cs">
+      <DependentUpon>AddPlantTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPointCommand.cs" />
+    <Compile Include="AddPointLightCommand.cs" />
+    <Compile Include="AddPointLightCommandFactory.cs" />
+    <Compile Include="AddPointLightDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPointLightDialog.Designer.cs">
+      <DependentUpon>AddPointLightDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddRegionCommand.cs" />
+    <Compile Include="AddRoadCommand.cs" />
+    <Compile Include="AddRoadCommandFactory.cs" />
+    <Compile Include="AddSoundCommand.cs" />
+    <Compile Include="AddSoundCommandFactory.cs" />
+    <Compile Include="AddTerrainDecalCommand.cs" />
+    <Compile Include="AddTerrainDecalCommandFactory.cs" />
+    <Compile Include="AddTerrainDecalDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTerrainDecalDialog.Designer.cs">
+      <DependentUpon>AddTerrainDecalDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddTreeCommand.cs" />
+    <Compile Include="AddTreeCommandFactory.cs" />
+    <Compile Include="AddTreeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTreeDialog.designer.cs">
+      <DependentUpon>AddTreeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddWaterCommand.cs" />
+    <Compile Include="AddWaterCommandFactory.cs" />
+    <Compile Include="AddWaypointParticleEffectCommand.cs" />
+    <Compile Include="AddWaypointParticleEffectCommandFactory.cs" />
+    <Compile Include="AlphaSplatTerrainDisplay.cs" />
+    <Compile Include="AmbientLight.cs" />
+    <Compile Include="AssetCollection.cs" />
+    <Compile Include="AssetDesc.cs" />
+    <Compile Include="AssetListConverter.cs" />
+    <Compile Include="AutoSplatTerrainDisplay.cs" />
+    <Compile Include="AxiomControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AxiomControl.Designer.cs">
+      <DependentUpon>AxiomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Boundary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AddMarkerCommandFactory.cs" />
+    <Compile Include="AddRegionCommandFactory.cs" />
+    <Compile Include="AddMarkerAtCameraCommandFactory.cs" />
+    <Compile Include="IObjectCameraLockable.cs" />
+    <Compile Include="ChangeCollectionCommand.cs" />
+    <Compile Include="ChangeCollectionCommandFactory.cs" />
+    <Compile Include="ChangePositionsCommand.cs" />
+    <Compile Include="ChangePositionsCommandFactory.cs" />
+    <Compile Include="ClipboardObject.cs" />
+    <Compile Include="CopyToClipboardCommand.cs" />
+    <Compile Include="CopyToClipboardCommandFactory.cs" />
+    <Compile Include="CutToClipboardCommand.cs" />
+    <Compile Include="CutToClipboardCommandFactory.cs" />
+    <Compile Include="DragCollection.cs" />
+    <Compile Include="DragMPPointCommand.cs" />
+    <Compile Include="DragMPPointCommandFactory.cs" />
+    <Compile Include="DragObjectsFromMenuCommand.cs" />
+    <Compile Include="DragObjectsFromMenuCommandFactory.cs" />
+    <Compile Include="DragObjectsInWorldCommand.cs" />
+    <Compile Include="DragObjectsInWorldCommandFactory.cs" />
+    <Compile Include="IObjectCutCopy.cs" />
+    <Compile Include="LoadCollectionCommand.cs" />
+    <Compile Include="LoadCollectionCommandFactory.cs" />
+    <Compile Include="OrientationChangeCommandFactory.cs" />
+    <Compile Include="PasteFromClipboardCommand.cs" />
+    <Compile Include="PasteFromClipboardCommandFactory.cs" />
+    <Compile Include="PreferencesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreferencesDialog.Designer.cs">
+      <DependentUpon>PreferencesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpeedTreeLicenseDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpeedTreeLicenseDialog.Designer.cs">
+      <DependentUpon>SpeedTreeLicenseDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TerrainDecal.cs" />
+    <Compile Include="CreateObjectCollectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateObjectCollectionDialog.Designer.cs">
+      <DependentUpon>CreateObjectCollectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteObjectCommand.cs" />
+    <Compile Include="DeleteObjectCommandFactory.cs" />
+    <Compile Include="DeletePointsCommand.cs" />
+    <Compile Include="DeletePointsCommandFactory.cs" />
+    <Compile Include="IObjectChangeCollection.cs" />
+    <Compile Include="IObjectCollectionParent.cs" />
+    <Compile Include="IObjectDelete.cs" />
+    <Compile Include="PathObjectTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PathObjectTypeDialog.Designer.cs">
+      <DependentUpon>PathObjectTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PathObjectTypes.cs" />
+    <Compile Include="DirectionalLight.cs" />
+    <Compile Include="GenerateModelPathsCommand.cs" />
+    <Compile Include="GlobalAmbientLight.cs" />
+    <Compile Include="GlobalDirectionalLight.cs" />
+    <Compile Include="GlobalFog.cs" />
+    <Compile Include="IObjectOrientation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OrientationChangeCommand.cs" />
+    <Compile Include="PointLight.cs" />
+    <Compile Include="ColorValueUITypeEditor.cs" />
+    <Compile Include="DeleteObjectsCommand.cs" />
+    <Compile Include="DeleteObjectsCommandFactory.cs" />
+    <Compile Include="DeletePointCommand.cs" />
+    <Compile Include="DeletePointCommandFactory.cs" />
+    <Compile Include="DisplayParticleSystem.cs" />
+    <Compile Include="ErrorHelper.cs" />
+    <Compile Include="Fog.cs" />
+    <Compile Include="Forest.cs" />
+    <Compile Include="Grass.cs" />
+    <Compile Include="ImageNameUITypeEditor.cs" />
+    <Compile Include="InsertPointsCommand.cs" />
+    <Compile Include="InsertPointsCommandFactory.cs" />
+    <Compile Include="IObjectInsert.cs" />
+    <Compile Include="IntersectionHelperClass.cs" />
+    <Compile Include="IObjectPosition.cs" />
+    <Compile Include="IObjectRotation.cs" />
+    <Compile Include="IObjectScale.cs" />
+    <Compile Include="IObjectDrag.cs" />
+    <Compile Include="Mob.cs" />
+    <Compile Include="MultiPointInsertHelper.cs" />
+    <Compile Include="Ocean.cs" />
+    <Compile Include="ParticleEffect.cs" />
+    <Compile Include="ParticleEffectNameUITypeEditor.cs" />
+    <Compile Include="PlantType.cs" />
+    <Compile Include="PositionChangeCommand.cs" />
+    <Compile Include="RoadObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NameValueUITypeEditor.cs" />
+    <Compile Include="DragHelper.cs" />
+    <Compile Include="MPPoint.cs" />
+    <Compile Include="MultiPointPlacementHelper.cs" />
+    <Compile Include="ComboBoxPromptDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComboBoxPromptDialog.Designer.cs">
+      <DependentUpon>ComboBoxPromptDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandMenuBuilder.cs" />
+    <Compile Include="CreateWorldCollectionCommand.cs" />
+    <Compile Include="CreateWorldCollectionCommandFactory.cs" />
+    <Compile Include="DisplayObject.cs" />
+    <Compile Include="AddRoadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRoadDialog.Designer.cs">
+      <DependentUpon>AddRoadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PointCollection.cs" />
+    <Compile Include="PropertyChangeCommand.cs" />
+    <Compile Include="RotationChangeCommand.cs" />
+    <Compile Include="SaveMaxFPSDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveMaxFPSDialog.Designer.cs">
+      <DependentUpon>SaveMaxFPSDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScaleChangeCommand.cs" />
+    <Compile Include="SearchDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchDialog.Designer.cs">
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetAssetRepositoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAssetRepositoryDialog.Designer.cs">
+      <DependentUpon>SetAssetRepositoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetCameraNear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetCameraNear.Designer.cs">
+      <DependentUpon>SetCameraNear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowPathDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowPathDialog.Designer.cs">
+      <DependentUpon>ShowPathDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Skybox.cs" />
+    <Compile Include="Sound.cs" />
+    <Compile Include="SpeedWindFileListUITypeEditor.cs" />
+    <Compile Include="SubMeshDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubMeshDialog.Designer.cs">
+      <DependentUpon>SubMeshDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ICommand.cs" />
+    <Compile Include="ICommandFactory.cs" />
+    <Compile Include="IWorldContainer.cs" />
+    <Compile Include="IWorldObject.cs" />
+    <Compile Include="LoadTerrainCommand.cs" />
+    <Compile Include="LoadTerrainCommandFactory.cs" />
+    <Compile Include="StaticObject.cs" />
+    <Compile Include="SubMesh.cs" />
+    <Compile Include="SubmeshUITypeEditor.cs" />
+    <Compile Include="TerrainDisplayTypeConverter.cs" />
+    <Compile Include="TextPromptDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextPromptDialog.Designer.cs">
+      <DependentUpon>TextPromptDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TexturePickerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TexturePickerDialog.Designer.cs">
+      <DependentUpon>TexturePickerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextureSelectorTypeEditor.cs" />
+    <Compile Include="tree.cs" />
+    <Compile Include="TreeDescriptionFilenameUITypeEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UndoRedo.cs" />
+    <Compile Include="UnloadCollectionCommand.cs" />
+    <Compile Include="UnloadCollectionCommandFactory.cs" />
+    <Compile Include="Vector3TypeConverter.cs" />
+    <Compile Include="Water.cs" />
+    <Compile Include="Waypoint.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorldEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WorldEditor.Designer.cs">
+      <DependentUpon>WorldEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddAmbientLightDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddAmbientLightDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddDirectionalLightDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddDirectionalLightDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRegionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddRegionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddFogDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddFogDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForestDialog.resx">
+      <DependentUpon>AddForestDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMobDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddMobDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddObjectDialog.resx">
+      <DependentUpon>AddObjectDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddParticleFXDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddParticleFXDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPlantTypeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddPlantTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPointLightDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddPointLightDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTerrainDecalDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddTerrainDecalDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddTreeDialog.resx">
+      <DependentUpon>AddTreeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRoadDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddRoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComboBoxPromptDialog.resx">
+      <DependentUpon>ComboBoxPromptDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateObjectCollectionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CreateObjectCollectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PathObjectTypeDialog.resx">
+      <DependentUpon>PathObjectTypeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreferencesDialog.resx">
+      <DependentUpon>PreferencesDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveMaxFPSDialog.resx">
+      <DependentUpon>SaveMaxFPSDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SearchDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetAssetRepositoryDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetAssetRepositoryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetCameraNear.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetCameraNear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowPathDialog.resx">
+      <DependentUpon>ShowPathDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpeedTreeLicenseDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpeedTreeLicenseDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubMeshDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SubMeshDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextPromptDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TextPromptDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TexturePickerDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TexturePickerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorldEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WorldEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WorldEditorConfig.cs" />
+    <Compile Include="WorldObjectCollection.cs" />
+    <Compile Include="WorldRoot.cs" />
+    <Compile Include="WorldTerrain.cs" />
+    <Compile Include="WorldTreeNode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Axiom\Engine\Axiom.Engine.VS2010.csproj">
+      <Project>{85F3D412-09B1-4E0B-8685-F78DEF29C5CE}</Project>
+      <Name>Axiom.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\MathLib\Axiom.MathLib.VS2010.csproj">
+      <Project>{48EAC066-47F2-44A5-9454-DFA718DCB55E}</Project>
+      <Name>Axiom.MathLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\Platforms\Win32\Axiom.Platforms.Win32.VS2010.csproj">
+      <Project>{5E123EF9-47A1-49BA-BF0A-57B32156B2A1}</Project>
+      <Name>Axiom.Platforms.Win32</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\Plugins\CgProgramManager\Axiom.Plugins.CgProgramManager.VS2010.csproj">
+      <Project>{519EF06F-12B1-43C4-AB84-765EAB4E5B59}</Project>
+      <Name>Axiom.Plugins.CgProgramManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\Plugins\ParticleFX\Axiom.Plugins.ParticleFX.VS2010.csproj">
+      <Project>{E763AAC7-530A-48CF-A846-5423A83FA669}</Project>
+      <Name>Axiom.Plugins.ParticleFX</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Axiom\RenderSystems\DirectX9\Axiom.RenderSystems.DirectX9.VS2010.csproj">
+      <Project>{CB7A661F-83B9-416D-B204-C1096DC7CF75}</Project>
+      <Name>Axiom.RenderSystems.DirectX9</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\AssetRepository\Multiverse.AssetRepository.VS2010.csproj">
+      <Project>{A938BCF5-10B9-45A2-9553-550B2BDBF7CF}</Project>
+      <Name>Multiverse.AssetRepository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\Generator\Multiverse.Generator.VS2010.csproj">
+      <Project>{61BBF284-FC72-4D15-9783-263CE4BB940C}</Project>
+      <Name>Multiverse.Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\HeightfieldGenerator\HeightfieldGenerator.VS2010.csproj">
+      <Project>{35F25073-16AD-49C6-A15D-7E5AF51CE004}</Project>
+      <Name>HeightfieldGenerator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\LogUtil\Multiverse.Lib.LogUtil.VS2010.csproj">
+      <Project>{68B78196-2567-4E0F-99E6-F577B2CAAB9A}</Project>
+      <Name>Multiverse.Lib.LogUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\MultiselectTreeView\MultiselectTreeView\MultiselectTreeView.VS2010.csproj">
+      <Project>{DAF70A2F-D9D6-4874-93BE-359808AFF463}</Project>
+      <Name>MultiselectTreeView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\NameValuePairs\NameValuePairs\NameValuePairs.VS2010.csproj">
+      <Project>{87E569A5-D0D9-4478-A247-ECA6BBCE1AFA}</Project>
+      <Name>NameValuePairs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\UserCommand\UserCommand\UserCommand.VS2010.csproj">
+      <Project>{703BA62E-E2DB-49AF-AC54-7490633C87A5}</Project>
+      <Name>UserCommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\ValidityHelper\ValidityHelper\ValidityHelper.VS2010.csproj">
+      <Project>{E61FC0EB-B635-4BB0-B397-73559397682C}</Project>
+      <Name>ValidityHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\XmlHelper\XmlHelper.VS2010.csproj">
+      <Project>{D538B777-424F-4D7F-98E2-F5EE2D3F7D2B}</Project>
+      <Name>XmlHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MultiverseClient\CollisionLib\Multiverse.CollisionLib.VS2010.csproj">
+      <Project>{EB687263-4BFD-4EC0-A987-055148C056DD}</Project>
+      <Name>Multiverse.CollisionLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MultiverseClient\Gui\Multiverse.Gui.VS2010.csproj">
+      <Project>{DAE8ED1B-8A27-45A3-AC0C-1626C388AE92}</Project>
+      <Name>Multiverse.Gui</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MultiverseClient\Interface\Multiverse.Interface.VS2010.csproj">
+      <Project>{62CED69E-5849-4502-8134-020D2EE00FC1}</Project>
+      <Name>Multiverse.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MultiverseClient\Movie\Multiverse.Movie.VS2010.csproj">
+      <Project>{0D916361-D10F-4A4C-9775-1E69A15EF774}</Project>
+      <Name>Multiverse.Movie</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MultiverseClient\Serialization\Multiverse.Serialization.VS2010.csproj">
+      <Project>{AE280269-9891-428E-A2E0-8774F2BEAF24}</Project>
+      <Name>Multiverse.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\mvsm\Axiom.SceneManagers.Multiverse.VS2010.csproj">
+      <Project>{1634B8A5-A73F-4814-809D-CD8E107D2C65}</Project>
+      <Name>Axiom.SceneManagers.Multiverse</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_fog.bmp" />
+    <None Include="Resources\save_world_02.bmp" />
+    <None Include="Resources\add_forest_02.bmp" />
+    <None Include="Resources\add_grass_02.bmp" />
+    <None Include="Resources\add_marker_02.bmp" />
+    <None Include="Resources\add_mob_06.bmp" />
+    <None Include="Resources\add_object_01.bmp" />
+    <None Include="Resources\add_region_04.bmp" />
+    <None Include="Resources\add_road_05.bmp" />
+    <None Include="Resources\add_sound_03.bmp" />
+    <None Include="Resources\add_tree_03.bmp" />
+    <None Include="Resources\add_water_02.bmp" />
+    <None Include="Resources\attach_particle_10.bmp" />
+    <None Include="Resources\create_object_collection_02.bmp" />
+    <None Include="Resources\delete_02.bmp" />
+    <None Include="Resources\designate_asset_repository_06.bmp" />
+    <None Include="Resources\help_04.bmp" />
+    <None Include="Resources\load_terrain_03.bmp" />
+    <None Include="Resources\load_world_03.bmp" />
+    <None Include="Resources\new_world_03.bmp" />
+    <None Include="Resources\above.bmp" />
+    <None Include="Resources\above_05.bmp" />
+    <None Include="Resources\add_ambient_light_15.bmp" />
+    <None Include="Resources\add_spawn_generator_03.bmp" />
+    <None Include="Resources\add_directional_light_04.bmp" />
+    <None Include="Resources\add_plant_type_05.bmp" />
+    <None Include="Resources\insert_new_points_04.bmp" />
+    <None Include="Resources\edit_object_path_type_03.bmp" />
+    <None Include="Resources\north_05.bmp" />
+    <None Include="Resources\south_04.bmp" />
+    <None Include="Resources\east_07.bmp" />
+    <None Include="Resources\west_07.bmp" />
+    <None Include="Resources\add_ambient_light_14.bmp" />
+    <None Include="Resources\help_06.bmp" />
+    <None Include="Resources\add_marker_03.bmp" />
+    <None Include="Resources\attach_particle_11.bmp" />
+    <None Include="Resources\designate_asset_repository_07.bmp" />
+    <None Include="Resources\load_world_05.bmp" />
+    <None Include="Resources\new_world_04.bmp" />
+    <None Include="Resources\redo_04.bmp" />
+    <None Include="Resources\save_world_03.bmp" />
+    <None Include="Resources\undo_04.bmp" />
+    <None Include="Resources\copy_description_02.bmp" />
+    <None Include="Resources\attach_decal_02.bmp" />
+    <None Include="Resources\drag_object.bmp" />
+    <None Include="Resources\drag_object_01.bmp" />
+    <None Include="Resources\tinycube.bmp" />
+    <None Include="Resources\unload_collection.bmp" />
+    <None Include="Resources\add_collection.bmp" />
+    <None Include="Resources\load_collection_03.bmp" />
+    <None Include="Resources\remove_collection_04.bmp" />
+    <None Include="Resources\not_loaded.bmp" />
+    <None Include="Resources\loaded.bmp" />
+    <None Include="Resources\loaded_not-visible.bmp" />
+    <None Include="Resources\mouseSensitivity_icon.bmp" />
+    <None Include="Resources\cameraAcceleration_icon.bmp" />
+    <None Include="Resources\cameraSpeed_icon.bmp" />
+    <Content Include="Resources\cam_pos_marker_02.bmp" />
+    <Content Include="WorldEditor.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

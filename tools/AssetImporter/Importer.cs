@@ -41,9 +41,9 @@ namespace AssetImporter
     public partial class Importer : Form
     {
         private int genOffset = 0;
-        private string baseHelpURL = "http://update.multiverse.net/wiki/index.php/Using_Asset_Importer_Version_1.5";
-        private string baseReleaseNoteURL = "http://update.multiverse.net/wiki/index.php/Tools_Version_1.5_Release_Notes";
-        private string feedbackURL = "http://update.multiverse.net/custportal/login.php";
+        private string baseHelpURL = "http://www.multiversemmo.com/wiki/Using_Asset_Importer";
+        private string baseReleaseNoteURL = "http://www.multiversemmo.com/wiki/Tools_Version_1.5_Release_Notes";
+        private string feedbackURL = "http://multiverse.forumotion.co.uk/";
         
         public Importer()
         {
@@ -847,7 +847,7 @@ namespace AssetImporter
 
         private void aboutAssetImporterToolStripMenuItem_Click(object sender, EventArgs e) {
             string assemblyVersion = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            string msg = string.Format("Multiverse Asset Importer\n\nVersion: {0}\n\nCopyright 2006-2007 The Multiverse Network, Inc.\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
+            string msg = string.Format("Multiverse Asset Importer\n\nVersion: {0}\n\nCopyright 2012 The Multiverse Software Foundation\n\nPortions of this software are covered by additional copyrights and license agreements which can be found in the Licenses folder in this program's install folder.\n\nPortions of this software utilize SpeedTree technology.  Copyright 2001-2006 Interactive Data Visualization, Inc.  All rights reserved.", assemblyVersion);
             DialogResult result = MessageBox.Show(this, msg, "About Multiverse Asset Importer", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

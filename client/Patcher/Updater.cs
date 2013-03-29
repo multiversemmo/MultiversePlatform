@@ -1101,6 +1101,9 @@ namespace Multiverse.Patcher {
             excludes.Add(new IgnoreEntry(repInfo, pattern));
         }
 
+        /// <summary>
+        /// Main updater method.  Fetches the manifest and then processes its contents.
+        /// </summary>
         public void Update() {
             FileFetcher fetcher = new FileFetcher();
             try {
@@ -1123,8 +1126,9 @@ namespace Multiverse.Patcher {
                 BuildManifest(prefixDirectory, fullScan, targetExcludePatterns);
                 ProcessManifest(fetcher);
             } catch (Exception e) {
-                Trace.TraceError("Error updating media: {0}", e.StackTrace);
-                error = string.Format("Error updating media: {0}", e.Message);
+                Trace.TraceError("Error updating media: {0}.", e.StackTrace);
+                error = string.Format("Error updating media: {0} Source URL: '{1}', manifest name: '{2}'. ",
+                    e.Message, sourceUrl, NewManifest);
                 if (log != null)
                     log.Write(error);
                 UpdaterStatus status = new UpdaterStatus();

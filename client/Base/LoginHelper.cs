@@ -96,7 +96,7 @@ namespace Multiverse.Base {
         }
 
         public void ReloadSettings() {
-            ParseConfig("../Config/login_settings.xml");
+            ParseConfig("../config/login_settings.xml");
         }
 
         public void LoginMaster(string worldId) {
