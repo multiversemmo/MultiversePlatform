@@ -1,0 +1,51 @@
+# Dev Files #
+###################
+/preferences.cs
+*.dso
+*.edso
+*.user
+*.sdf
+*.suo
+*.dir
+*.opensdf
+*.idea
+*.dSYM
+*.res
+*.cache
+*.exports
+*.opt
+*.tmp
+    
+# Compiled source #
+###################
+*.com
+*.class
+*.o
+*.a
+*.so
+*.obj
+*.lib
+*.idb
+*.pdb
+*.ilk
+*.ipch
+*.lastbuildstate
+*.unsuccessfulbuild
+*.manifest
+*.tlog
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db

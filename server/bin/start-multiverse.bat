@@ -257,6 +257,8 @@ echo Starting message domain server
 @ echo off
 START /B java  %JAVA_FLAGS% ^
     -Dmultiverse.loggername=domain ^
+    :: 20130428 CobaltBlues * Adding patch so worldname is passed to jar modules
+    -Dmultiverse.worldname=%MV_WORLDNAME% ^
     multiverse.msgsys.DomainServer ^
     %CMDLINE_PROPS% ^
     -t %MV_COMMON%\typenumbers.txt ^
@@ -268,6 +270,8 @@ START /B java ^
     %JAVA_FLAGS% ^
     -Dmultiverse.agenttype=wmgr ^
     -Dmultiverse.loggername=wmgr ^
+    :: 20130428 CobaltBlues * Adding patch so worldname is passed to jar modules
+    -Dmultiverse.worldname=%MV_WORLDNAME% ^
     multiverse.server.engine.Engine ^
     %CMDLINE_PROPS% ^
     -i wmgr_local1.py ^
@@ -283,6 +287,8 @@ echo Starting combat server
 START /B java ^
     %JAVA_FLAGS% ^
     -Dmultiverse.loggername=combat ^
+    :: 20130428 CobaltBlues * Adding patch so worldname is passed to jar modules
+    -Dmultiverse.worldname=%MV_WORLDNAME% ^    
     multiverse.server.engine.Engine ^
     %CMDLINE_PROPS% ^
     -i wmgr_local1.py ^
@@ -307,6 +313,8 @@ echo Starting instance server
 START /B java ^
     %JAVA_FLAGS% ^
     -Dmultiverse.loggername=instance ^
+    :: 20130428 CobaltBlues * Adding patch so worldname is passed to jar modules
+    -Dmultiverse.worldname=%MV_WORLDNAME% ^
     multiverse.server.engine.Engine ^
     %CMDLINE_PROPS% ^
     -i %MV_COMMON%\mvmessages.py ^
@@ -321,6 +329,8 @@ echo Starting object manager
 START /B java ^
     %JAVA_FLAGS% ^
     -Dmultiverse.loggername=objmgr ^
+    :: 20130428 CobaltBlues * Adding patch so worldname is passed to jar modules
+    -Dmultiverse.worldname=%MV_WORLDNAME% ^
     multiverse.server.engine.Engine ^
     %CMDLINE_PROPS% ^
     -i wmgr_local1.py ^
@@ -339,6 +349,8 @@ echo Starting login manager
 START /B java ^
     %JAVA_FLAGS% ^
     -Dmultiverse.loggername=login_manager ^
+    :: 20130428 CobaltBlues * Adding patch so worldname is passed to jar modules
+    -Dmultiverse.worldname=%MV_WORLDNAME% ^
     multiverse.server.engine.Engine ^
     %CMDLINE_PROPS% ^
     -i %MV_COMMON%\mvmessages.py ^
@@ -355,6 +367,8 @@ START /B java  ^
     %JAVA_FLAGS% ^
     -Dmultiverse.loggername=proxy ^
     -Dmultiverse.agenttype=proxy ^
+    :: 20130428 CobaltBlues * Adding patch so worldname is passed to jar modules
+    -Dmultiverse.worldname=%MV_WORLDNAME% ^
     multiverse.server.engine.Engine ^
     %CMDLINE_PROPS% ^
     -i proxy.py ^
@@ -371,6 +385,8 @@ echo Starting mob server
 START /B java ^
     %JAVA_FLAGS% ^
     -Dmultiverse.loggername=mobserver ^
+    :: 20130428 CobaltBlues * Adding patch so worldname is passed to jar modules
+    -Dmultiverse.worldname=%MV_WORLDNAME% ^
     multiverse.server.engine.Engine ^
     %CMDLINE_PROPS% ^
     -i mobserver_local.py ^
@@ -391,6 +407,8 @@ echo Starting voice server
 START /B java ^
     %JAVA_FLAGS% ^
     -Dmultiverse.loggername=voiceserver ^
+    :: 20130428 CobaltBlues * Adding patch so worldname is passed to jar modules
+    -Dmultiverse.worldname=%MV_WORLDNAME% ^
     multiverse.server.engine.Engine ^
     %CMDLINE_PROPS% ^
     -i %MV_COMMON%\mvmessages.py ^
